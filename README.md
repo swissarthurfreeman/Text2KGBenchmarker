@@ -7,6 +7,13 @@ The main change is simply that the data is all kept in `jsonl` files in the foll
 hierarchy instead of scattered across multiple jsonl folders, `jsonl` and `txt` files. This
 data should probably be eventually uploaded to Hugging face datasets.
 
+Another sizeable change is the modification of the ontology files to remove ghost wikidata IDs
+which did not have the corresponding property or entity name within the ontology file and the
+addition of missing domain and range classes to certain entities, to avoid for instance, describing
+a publication date via `publication_date(film,)`, instead we add `date` as range to yield
+`publication_date(film, date)`. 
+
+### File Hierarchy
 
 ```
 Benchmarker
@@ -80,3 +87,5 @@ See the original paper's details. Test sentences contain the `"similars"` list o
 sentence was manually checked to ensure the triples were extractable. Note that we don't have validation data, indeed the original dataset only 
 has some for TekGen, but every sentence only contains one triple, and it's not in the same format as the rest of the data. It seems the authors didn't 
 have the time to correctly format it, clean it and generate the triples list. 
+
+##

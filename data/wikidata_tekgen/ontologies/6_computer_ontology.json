@@ -3,63 +3,63 @@
   "id": "ont_6_computer",
   "concepts": [
     {
-      "qid": "Q68",
+      "qid": "computer",
       "label": "computer"
     },
     {
-      "qid": "Q7397",
+      "qid": "software",
       "label": "software"
     },
     {
-      "qid": "Q3966",
+      "qid": "computer hardware",
       "label": "computer hardware"
     },
     {
-      "qid": "Q9143",
+      "qid": "programming language",
       "label": "programming language"
     },
     {
-      "qid": "Q8513",
+      "qid": "database",
       "label": "database"
     },
     {
-      "qid": "Q1301371",
+      "qid": "computer network",
       "label": "computer network"
     },
     {
-      "qid": "Q189210",
+      "qid": "web application",
       "label": "web application"
     },
     {
-      "qid": "Q41455",
+      "qid": "computer science",
       "label": "computer science"
     },
     {
-      "qid": "Q8366",
+      "qid": "algorithm",
       "label": "algorithm"
     },
     {
-      "qid": "Q166142",
+      "qid": "application",
       "label": "application"
     },
     {
-      "qid": "Q215627",
+      "qid": "person",
       "label": "person"
     },
     {
-      "qid": "Q5",
+      "qid": "human",
       "label": "human"
     },
     {
-      "qid": "Q55990535",
+      "qid": "computer model",
       "label": "computer model"
     },
     {
-      "qid": "Q1709010",
+      "qid": "software engineer",
       "label": "software engineer"
     },
     {
-      "qid": "Q9135",
+      "qid": "operating system",
       "label": "operating system"
     }
   ],
@@ -67,26 +67,26 @@
     {
       "pid": "P178",
       "label": "developer",
-      "domain": "Q7397",
-      "range": "Q4830453"
+      "domain": "software",
+      "range": "business"
     },
     {
       "pid": "P170",
       "label": "creator",
-      "domain": "Q166142",
-      "range": "Q5"
+      "domain": "application",
+      "range": "human"
     },
     {
       "pid": "P400",
       "label": "platform",
-      "domain": "Q7397",
-      "range": "Q68"
+      "domain": "software",
+      "range": "computer"
     },
     {
       "pid": "P306",
       "label": "operating system",
-      "domain": "Q55990535",
-      "range": "Q9135"
+      "domain": "computer model",
+      "range": "operating system"
     }
   ]
 }

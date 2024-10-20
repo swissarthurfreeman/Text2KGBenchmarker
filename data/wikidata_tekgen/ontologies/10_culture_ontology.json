@@ -3,63 +3,63 @@
     "id": "ont_10_culture",
     "concepts": [
         {
-            "qid": "Q5",
+            "qid": "human",
             "label": "human"
         },
         {
-            "qid": "Q11042",
+            "qid": "culture",
             "label": "culture"
         },
         {
-            "qid": "Q735",
+            "qid": "art",
             "label": "art"
         },
         {
-            "qid": "Q34770",
+            "qid": "language",
             "label": "language"
         },
         {
-            "qid": "Q618123",
+            "qid": "geographical feature",
             "label": "geographical feature"
         },
         {
-            "qid": "Q309",
+            "qid": "history",
             "label": "history"
         },
         {
-            "qid": "Q9174",
+            "qid": "religion",
             "label": "religion"
         },
         {
-            "qid": "Q251777",
+            "qid": "custom",
             "label": "custom"
         },
         {
-            "qid": "Q82821",
+            "qid": "tradition",
             "label": "tradition"
         },
         {
-            "qid": "Q2434238",
+            "qid": "heritage",
             "label": "heritage"
         },
         {
-            "qid": "Q1778821",
+            "qid": "cuisine",
             "label": "cuisine"
         },
         {
-            "qid": "Q11639",
+            "qid": "dance",
             "label": "dance"
         },
         {
-            "qid": "Q41710",
+            "qid": "ethnic group",
             "label": "ethnic group"
         },
         {
-            "qid": "Q8242",
+            "qid": "literature",
             "label": "literature"
         },
         {
-            "qid": "Q132241",
+            "qid": "festival",
             "label": "festival"
         }
     ],
@@ -67,50 +67,50 @@
         {
             "pid": "P172",
             "label": "ethnic group",
-            "domain": "Q5",
-            "range": "Q41710"
+            "domain": "human",
+            "range": "ethnic group"
         },
         {
             "pid": "P611",
             "label": "religious order",
-            "domain": "Q9174",
-            "range": "Q9174"
+            "domain": "religion",
+            "range": "religion"
         },
         {
             "pid": "P1412",
             "label": "languages spoken, written or signed",
-            "domain": "Q5",
-            "range": "Q34770"
+            "domain": "human",
+            "range": "language"
         },
         {
             "pid": "P571",
             "label": "inception",
-            "domain": "Q8242",
-            "range": ""
+            "domain": "literature",
+            "range": "time"
         },
         {
             "pid": "P580",
             "label": "start time",
-            "domain": "Q132241",
-            "range": ""
+            "domain": "festival",
+            "range": "time"
         },
         {
             "pid": "P825",
             "label": "dedicated to",
-            "domain": "Q735",
-            "range": "Q5"
+            "domain": "art",
+            "range": "human"
         },
         {
             "pid": "P4185",
             "label": "iconographic symbol",
-            "domain": "Q5",
-            "range": ""
+            "domain": "human",
+            "range": "symbol"
         },
         {
             "pid": "P2341",
             "label": "indigenous to",
-            "domain": "Q11639",
-            "range": ""
+            "domain": "dance",
+            "range": "placeOrEthnicGroup"
         }
     ]
 }

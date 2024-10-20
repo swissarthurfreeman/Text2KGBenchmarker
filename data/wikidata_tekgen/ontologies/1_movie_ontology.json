@@ -3,51 +3,51 @@
 	"id": "ont_1_movie",
 	"concepts": [
 		{
-			"qid": "Q5",
+			"qid": "human",
 			"label": "human"
 		},
 		{
-			"qid": "Q515",
+			"qid": "city",
 			"label": "city"
 		},
 		{
-			"qid": "Q6256",
+			"qid": "country",
 			"label": "country"
 		},
 		{
-			"qid": "Q11424",
+			"qid": "film",
 			"label": "film"
 		},
 		{
-			"qid": "Q201658",
+			"qid": "film genre",
 			"label": "film genre"
 		},
 		{
-			"qid": "Q483394",
+			"qid": "genre",
 			"label": "genre"
 		},
 		{
-			"qid": "Q1762059",
+			"qid": "film production company",
 			"label": "film production company"
 		},
 		{
-			"qid": "Q4220917",
+			"qid": "film award",
 			"label": "film award"
 		},
 		{
-			"qid": "Q618779",
+			"qid": "award",
 			"label": "award"
 		},
 		{
-			"qid": "Q47461344",
+			"qid": "written work",
 			"label": "written work"
 		},
 		{
-			"qid": "Q15773347",
+			"qid": "film character",
 			"label": "film character"
 		},
 		{
-			"qid": "Q104649845",
+			"qid": "film organization",
 			"label": "film organization"
 		}
 	],
@@ -55,92 +55,92 @@
 		{
 			"pid": "P57",
 			"label": "director",
-			"domain": "Q11424",
-			"range": "Q5"
+			"domain": "film",
+			"range": "human"
 		},
 		{
 			"pid": "P58",
 			"label": "screenwriter",
-			"domain": "Q11424",
-			"range": "Q5"
+			"domain": "film",
+			"range": "human"
 		},
 		{
 			"pid": "P136",
 			"label": "genre",
-			"domain": "Q11424",
-			"range": "Q483394"
+			"domain": "film",
+			"range": "film genre"
 		},
 		{
 			"pid": "P144",
 			"label": "based on",
-			"domain": "Q11424",
-			"range": "Q47461344"
+			"domain": "film",
+			"range": "written work"
 		},
 		{
 			"pid": "P161",
 			"label": "cast member",
-			"domain": "Q11424",
-			"range": "Q5"
+			"domain": "film",
+			"range": "human"
 		},
 		{
 			"pid": "P166",
 			"label": "award received",
-			"domain": "Q11424",
-			"range": "Q618779"
+			"domain": "film",
+			"range": "award"
 		},
 		{
 			"pid": "P272",
 			"label": "production company",
-			"domain": "Q11424",
-			"range": "Q1762059"
+			"domain": "film",
+			"range": "film production company"
 		},
 		{
 			"pid": "P495",
 			"label": "country of origin",
-			"domain": "Q11424",
-			"range": "Q6256"
+			"domain": "film",
+			"range": "country"
 		},
 		{
 			"pid": "P577",
 			"label": "publication date",
-			"domain": "Q11424",
-			"range": ""
+			"domain": "film",
+			"range": "date"
 		},
 		{
 			"pid": "P674",
 			"label": "characters",
-			"domain": "Q11424",
-			"range": "Q15773347"
+			"domain": "film",
+			"range": "film character"
 		},
 		{
 			"pid": "P840",
 			"label": "narrative location",
-			"domain": "Q11424",
-			"range": "Q515"
+			"domain": "film",
+			"range": "city"
 		},
 		{
 			"pid": "P915",
 			"label": "filming location",
-			"domain": "Q11424",
-			"range": "Q515"
+			"domain": "film",
+			"range": "city"
 		},
 		{
 			"pid": "P921",
 			"label": "main subject",
-			"domain": "Q11424",
-			"range": ""
+			"domain": "film",
+			"range": "subject"
 		},
 		{
 			"pid": "P1411",
 			"label": "nominated for",
-			"domain": "Q11424",
-			"range": "Q618779"
+			"domain": "film",
+			"range": "award"
 		},
 		{
 			"pid": "P2130",
 			"label": "cost",
-			"domain": "Q11424",
-			"range": ""
+			"domain": "film",
+			"range": "number"
 		}
 	]
 }

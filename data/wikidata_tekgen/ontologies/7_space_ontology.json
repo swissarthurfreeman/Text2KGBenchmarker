@@ -3,63 +3,63 @@
   "id": "ont_7_space",
   "concepts": [
     {
-      "qid": "Q4169",
+      "qid": "outer space",
       "label": "outer space"
     },
     {
-      "qid": "Q634",
+      "qid": "planet",
       "label": "planet"
     },
     {
-      "qid": "Q2488",
+      "qid": "spiral galaxy",
       "label": "spiral galaxy"
     },
     {
-      "qid": "Q8928",
+      "qid": "constellation",
       "label": "constellation"
     },
     {
-      "qid": "Q109228604",
+      "qid": "Celestial bodies",
       "label": "Celestial bodies"
     },
     {
-      "qid": "Q3863",
+      "qid": "asteroid",
       "label": "asteroid"
     },
     {
-      "qid": "Q205892",
+      "qid": "calendar date",
       "label": "calendar date"
     },
     {
-      "qid": "Q11631",
+      "qid": "astronaut",
       "label": "astronaut"
     },
     {
-      "qid": "Q2133344",
+      "qid": "space mission",
       "label": "space mission"
     },
     {
-      "qid": "Q62832",
+      "qid": "observatory",
       "label": "observatory"
     },
     {
-      "qid": "Q40218",
+      "qid": "Spacecraft",
       "label": "Spacecraft"
     },
     {
-      "qid": "Q5916",
+      "qid": "spaceflight",
       "label": "spaceflight"
     },
     {
-      "qid": "Q17444909",
+      "qid": "astronomical object type",
       "label": "astronomical object type"
     },
     {
-      "qid": "Q5",
+      "qid": "human",
       "label": "human"
     },
     {
-      "qid": "Q82794",
+      "qid": "geographic region",
       "label": "geographic region"
     }
   ],
@@ -67,44 +67,44 @@
     {
       "pid": "P65",
       "label": "site of astronomical discovery",
-      "domain": "Q3863",
-      "range": "Q62832"
+      "domain": "asteroid",
+      "range": "observatory"
     },
     {
       "pid": "P196",
       "label": "minor planet group",
-      "domain": "Q3863",
-      "range": "Q17444909"
+      "domain": "asteroid",
+      "range": "astronomical object type"
     },
     {
       "pid": "P59",
       "label": "constellation",
-      "domain": "Q2488",
-      "range": "Q8928"
+      "domain": "spiral galaxy",
+      "range": "constellation"
     },
     {
       "pid": "P450",
       "label": "astronaut mission",
-      "domain": "Q5",
-      "range": "Q5916"
+      "domain": "human",
+      "range": "spaceflight"
     },
     {
       "pid": "P622",
       "label": "spacecraft docking/undocking date",
-      "domain": "Q40218",
-      "range": ""
+      "domain": "Spacecraft",
+      "range": "date"
     },
     {
       "pid": "P3015",
       "label": "backup or reserve team or crew",
-      "domain": "Q5916",
-      "range": "Q5"
+      "domain": "spaceflight",
+      "range": "human"
     },
     {
       "pid": "P1158",
       "label": "location of landing",
-      "domain": "Q40218",
-      "range": "Q82794"
+      "domain": "Spacecraft",
+      "range": "geographic region"
     }
   ]
 }

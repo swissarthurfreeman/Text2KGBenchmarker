@@ -3,59 +3,59 @@
     "id": "ont_9_nature",
     "concepts": [
         {
-            "qid": "Q15091377",
+            "qid": "cycling race",
             "label": "cycling race"
         },
         {
-            "qid": "Q618123",
+            "qid": "geographical feature",
             "label": "geographical feature"
         },
         {
-            "qid": "Q131681",
+            "qid": "reservoir",
             "label": "reservoir"
         },
         {
-            "qid": "Q52105",
+            "qid": "Habitat",
             "label": "Habitat"
         },
         {
-            "qid": "Q12323",
+            "qid": "dam",
             "label": "dam"
         },
         {
-            "qid": "Q166620",
+            "qid": "drainage basin",
             "label": "drainage basin"
         },
         {
-            "qid": "Q46831",
+            "qid": "mountain range",
             "label": "mountain range"
         },
         {
-            "qid": "Q8502",
+            "qid": "mountain",
             "label": "mountain"
         },
         {
-            "qid": "Q16521",
+            "qid": "taxon",
             "label": "taxon"
         },
         {
-            "qid": "Q355304",
+            "qid": "watercourse",
             "label": "watercourse"
         },
         {
-            "qid": "Q82673",
+            "qid": "conservation status",
             "label": "conservation status"
         },
         {
-            "qid": "Q15324",
+            "qid": "body of water",
             "label": "body of water"
         },
         {
-            "qid": "Q5",
+            "qid": "human",
             "label": "human"
         },
         {
-            "qid": "Q1040689",
+            "qid": "synonym",
             "label": "synonym"
         }
     ],
@@ -63,80 +63,80 @@
         {
             "pid": "P171",
             "label": "parent taxon",
-            "domain": "Q16521",
-            "range": "Q16521"
+            "domain": "taxon",
+            "range": "taxon"
         },
         {
             "pid": "P4552",
             "label": "mountain range",
-            "domain": "Q8502",
-            "range": "Q46831"
+            "domain": "mountain",
+            "range": "mountain range"
         },
         {
             "pid": "P3137",
             "label": "parent peak",
-            "domain": "Q8502",
-            "range": "Q8502"
+            "domain": "mountain",
+            "range": "mountain"
         },
         {
             "pid": "P1843",
             "label": "taxon common name",
-            "domain": "Q7432",
-            "range": ""
+            "domain": "species",
+            "range": "name"
         },
         {
             "pid": "P974",
             "label": "tributary",
-            "domain": "Q355304",
-            "range": "Q355304"
+            "domain": "watercourse",
+            "range": "watercourse"
         },
         {
             "pid": "P885",
             "label": "origin of the watercourse",
-            "domain": "Q355304",
-            "range": "Q15324"
+            "domain": "watercourse",
+            "range": "body of water"
         },
         {
             "pid": "P403",
             "label": "mouth of the watercourse",
-            "domain": "Q355304",
-            "range": "Q355304"
+            "domain": "watercourse",
+            "range": "watercourse"
         },
         {
             "pid": "P141",
             "label": "IUCN conservation status",
-            "domain": "Q16521",
-            "range": "Q82673"
+            "domain": "taxon",
+            "range": "conservation status"
         },
         {
             "pid": "P1420",
             "label": "taxon synonym",
-            "domain": "Q16521",
-            "range": "Q1040689"
+            "domain": "taxon",
+            "range": "synonym"
         },
         {
             "pid": "P4661",
             "label": "reservoir created",
-            "domain": "Q12323",
-            "range": "Q131681"
+            "domain": "dam",
+            "range": "reservoir"
         },
         {
             "pid": "P4614",
             "label": "drainage basin",
-            "domain": "Q355304",
-            "range": "Q166620"
+            "domain": "watercourse",
+            "range": "drainage basin"
         },
         {
             "pid": "P4320",
             "label": "mountains classification ",
-            "domain": "Q15091377",
-            "range": "Q5"
+            "domain": "cycling race",
+            "range": "human"
         },
         {
             "pid": "P2974",
             "label": "Habitat",
-            "domain": "Q16521",
-            "range": "Q15324"
+            "domain": "taxon",
+            "range": "body of water"
         }
     ]
 }

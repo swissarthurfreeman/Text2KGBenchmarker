@@ -3,83 +3,83 @@
   "id": "ont_3_sport",
   "concepts": [
     {
-      "qid": "Q5",
+      "qid": "human",
       "label": "human"
     },
     {
-      "qid": "Q50995749",
+      "qid": "sportsperson",
       "label": "sportsperson"
     },
     {
-      "qid": "Q327245",
+      "qid": "team",
       "label": "team"
     },
     {
-      "qid": "Q2066131",
+      "qid": "athlete",
       "label": "athlete"
     },
     {
-      "qid": "Q349",
+      "qid": "sport",
       "label": "sport"
     },
     {
-      "qid": "Q6256",
+      "qid": "country",
       "label": "country"
     },
     {
-      "qid": "Q4438121",
+      "qid": "sports organization",
       "label": "sports organization"
     },
     {
-      "qid": "Q27020041",
+      "qid": "sports team season",
       "label": "sports team season"
     },
     {
-      "qid": "Q847017",
+      "qid": "sports club",
       "label": "sports club"
     },
     {
-      "qid": "Q1154710",
+      "qid": "association football venue",
       "label": "association football venue"
     },
     {
-      "qid": "Q16510064",
+      "qid": "sporting event",
       "label": "sporting event"
     },
     {
-      "qid": "Q167170",
+      "qid": "multi-sport event",
       "label": "multi-sport event"
     },
     {
-      "qid": "Q2485448",
+      "qid": "sports governing body",
       "label": "sports governing body"
     },
     {
-      "qid": "Q747883",
+      "qid": "physical activity",
       "label": "physical activity"
     },
     {
-      "qid": "Q2312410",
+      "qid": "sports discipline",
       "label": "sports discipline"
     },
     {
-      "qid": "Q27020041",
+      "qid": "sports team season",
       "label": "sports season"
     },
     {
-      "qid": "Q15991290",
+      "qid": "professionnal sports league",
       "label": "professional sports league"
     },
     {
-      "qid": "Q13406554",
+      "qid": "sports competition",
       "label": "sports competition"
     },
     {
-      "qid": "Q847017",
+      "qid": "sports club",
       "label": "sports club"
     },
     {
-      "qid": "Q1539532",
+      "qid": "sports season of a sports club",
       "label": "sports season of a sports club"
     }
   ],
@@ -87,67 +87,67 @@
     {
       "pid": "P106",
       "label": "occupation",
-      "domain": "Q5",
-      "range": "Q2066131"
+      "domain": "human",
+      "range": "athlete"
     },
     {
       "pid": "P641",
       "label": "sport",
-      "domain": "Q13406554",
-      "range": "Q349"
+      "domain": "sports competition",
+      "range": "sport"
     },
     {
       "pid": "P54",
       "label": "member of sports team",
-      "domain": "Q5",
-      "range": "Q847017"
+      "domain": "human",
+      "range": "sports club"
     },
     {
       "pid": "P1532",
       "label": "country for sport",
-      "domain": "Q5",
-      "range": "Q6256"
+      "domain": "human",
+      "range": "country"
     },
     {
       "pid": "P3450",
       "label": "sports season of league or competition",
-      "domain": "Q27020041",
-      "range": "Q500834"
+      "domain": "sports team season",
+      "range": "human00834"
     },
     {
       "pid": "P6087",
       "label": "coach of sports team",
-      "domain": "Q5",
-      "range": "Q847017"
+      "domain": "human",
+      "range": "sports club"
     },
     {
       "pid": "P118",
       "label": "league",
-      "domain": "Q5",
-      "range": "Q15991290"
+      "domain": "human",
+      "range": "professionnal sports league"
     },
     {
       "pid": "P159",
       "label": "home venue",
-      "domain": "Q847017",
-      "range": "Q23764314"
+      "domain": "sports club",
+      "range": "sports location"
     },
     {
       "pid": "P495",
       "label": "country of origin ",
-      "domain": "Q349",
-      "range": "Q6256"
+      "domain": "sport",
+      "range": "country"
     },
     {
       "pid": "P118",
       "label": "league",
-      "domain": "Q5",
-      "range": "Q623109"
+      "domain": "human",
+      "range": "sports league"
     },
     {
       "pid": "P2094",
       "label": "competition class",
-      "domain": "Q4438121",
+      "domain": "sports organization",
       "range": ""
     }
   ]

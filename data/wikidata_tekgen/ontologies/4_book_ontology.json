@@ -3,83 +3,83 @@
     "id": "ont_4_book",
     "concepts": [
         {
-            "qid": "Q571",
+            "qid": "book",
             "label": "book"
         },
         {
-            "qid": "Q7725634",
+            "qid": "literary work",
             "label": "literary work"
         },
         {
-            "qid": "Q482980",
+            "qid": "author",
             "label": "author"
         },
         {
-            "qid": "Q2085381",
+            "qid": "publisher",
             "label": "publisher"
         },
         {
-            "qid": "Q33057",
+            "qid": "International Standard Book Number",
             "label": "International Standard Book Number"
         },
         {
-            "qid": "Q7075",
+            "qid": "library",
             "label": "library"
         },
         {
-            "qid": "Q205892",
+            "qid": "calendar date",
             "label": "calender date"
         },
         {
-            "qid": "Q11424",
+            "qid": "film",
             "label": "film"
         },
         {
-            "qid": "Q95074",
+            "qid": "fictional character",
             "label": "fictional character"
         },
         {
-            "qid": "Q36180",
+            "qid": "writer",
             "label": "writer"
         },
         {
-            "qid": "Q5633421",
+            "qid": "scientific journal",
             "label": "scientific journal"
         },
         {
-            "qid": "Q191067",
+            "qid": "article",
             "label": "article"
         },
         {
-            "qid": "Q5",
+            "qid": "human",
             "label": "human"
         },
         {
-            "qid": "Q223393",
+            "qid": "literary genre",
             "label": "literary genre"
         },
         {
-            "qid": "Q732577",
+            "qid": "publication",
             "label": "publication"
         },
         {
-            "qid": "Q685935",
+            "qid": "trade magazine",
             "label": "trade magazine"
         },
         {
-            "qid": "Q34770",
+            "qid": "language",
             "label": "language"
         },
         {
-            "qid": "Q15621286",
+            "qid": "intellectual work",
             "label": "intellectual work"
         },
         {
-            "qid": "Q6256",
+            "qid": "country",
             "label": "country"
         },
         {
-            "qid": "Q4835091",
+            "qid": "territory",
             "label": "territory"
         }
     ],
@@ -87,74 +87,74 @@
         {
             "pid": "P110",
             "label": "illustrator",
-            "domain": "Q47461344",
-            "range": "Q5"
+            "domain": "written work",
+            "range": "human"
         },
         {
             "pid": "P156",
             "label": "followed by",
-            "domain": "Q47461344",
-            "range": "Q47461344"
+            "domain": "written work",
+            "range": "written work"
         },
         {
             "pid": "P577",
             "label": "publication date",
-            "domain": "Q571",
-            "range": ""
+            "domain": "book",
+            "range": "date"
         },
         {
             "pid": "P50",
             "label": "author",
-            "domain": "Q571",
-            "range": "Q5"
+            "domain": "book",
+            "range": "human"
         },
         {
             "pid": "P123",
             "label": "publisher",
-            "domain": "Q571",
-            "range": "Q2085381"
+            "domain": "book",
+            "range": "publisher"
         },
         {
             "pid": "P674",
             "label": "characters",
-            "domain": "Q7725634",
-            "range": "Q95074"
+            "domain": "literary work",
+            "range": "fictional character"
         },
         {
             "pid": "P98",
             "label": "editor",
-            "domain": "Q685935",
-            "range": "Q5"
+            "domain": "trade magazine",
+            "range": "human"
         },
         {
             "pid": "P291",
             "label": "place of publication",
-            "domain": "Q47461344",
-            "range": "Q82794"
+            "domain": "written work",
+            "range": "geographic region"
         },
         {
             "pid": "P840",
             "label": "narrative location",
-            "domain": "Q7725634",
-            "range": "Q4835091"
+            "domain": "literary work",
+            "range": "territory"
         },
         {
             "pid": "P136",
             "label": "genre",
-            "domain": "Q7725634",
-            "range": "Q223393"
+            "domain": "literary work",
+            "range": "literary genre"
         },
         {
             "pid": "P407",
             "label": "language of work or name",
-            "domain": "Q7725634",
-            "range": "Q34770"
+            "domain": "literary work",
+            "range": "language"
         },
         {
             "pid": "P180",
             "label": "depicts",
-            "domain": "Q47461344",
-            "range": ""
+            "domain": "written work",
+            "range": "thing"
         }
     ]
 }

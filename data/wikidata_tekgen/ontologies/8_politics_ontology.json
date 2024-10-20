@@ -3,55 +3,55 @@
   "id": "ont_8_politics",
   "concepts": [
     {
-      "qid": "Q7188",
+      "qid": "government",
       "label": "government"
     },
     {
-      "qid": "Q4164871",
+      "qid": "position",
       "label": "position"
     },
     {
-      "qid": "Q48352",
+      "qid": "head of state",
       "label": "head of state"
     },
     {
-      "qid": "Q2285706",
+      "qid": "head of government",
       "label": "head of government"
     },
     {
-      "qid": "Q7278",
+      "qid": "political party",
       "label": "political party"
     },
     {
-      "qid": "Q40231",
+      "qid": "Public election",
       "label": "Public election"
     },
     {
-      "qid": "Q7275",
+      "qid": "state",
       "label": "state"
     },
     {
-      "qid": "Q5",
+      "qid": "human",
       "label": "human"
     },
     {
-      "qid": "Q28819924",
+      "qid": "political alignment",
       "label": "political alignment"
     },
     {
-      "qid": "Q43229",
+      "qid": "organization",
       "label": "organization"
     },
     {
-      "qid": "Q30461",
+      "qid": "president",
       "label": "president"
     },
     {
-      "qid": "Q6256",
+      "qid": "country",
       "label": "country"
     },
     {
-      "qid": "Q12909644",
+      "qid": "political ideology",
       "label": "political ideology"
     }
   ],
@@ -59,56 +59,56 @@
     {
       "pid": "P35",
       "label": "head of state",
-      "domain": "Q6256",
-      "range": "Q5"
+      "domain": "country",
+      "range": "human"
     },
     {
       "pid": "P6",
       "label": "head of government",
-      "domain": "Q6256",
-      "range": "Q5"
+      "domain": "country",
+      "range": "human"
     },
     {
       "pid": "P39",
       "label": "position held",
-      "domain": "Q5",
-      "range": "Q30461"
+      "domain": "human",
+      "range": "president"
     },
     {
       "pid": "P463",
       "label": "Member of",
-      "domain": "Q5",
-      "range": "Q43229"
+      "domain": "human",
+      "range": "organization"
     },
     {
       "pid": "P1387",
       "label": "political alignment",
-      "domain": "Q7278",
-      "range": "Q28819924"
+      "domain": "political party",
+      "range": "political alignment"
     },
     {
       "pid": "P102",
       "label": "member of political party",
-      "domain": "Q5",
-      "range": "Q7278"
+      "domain": "human",
+      "range": "political party"
     },
     {
       "pid": "P2715",
       "label": "elected in",
-      "domain": "Q5",
-      "range": "Q40231"
+      "domain": "human",
+      "range": "Public election"
     },
     {
       "pid": "P3602",
       "label": "candidacy in election",
-      "domain": "Q5",
-      "range": "Q40231"
+      "domain": "human",
+      "range": "Public election"
     },
     {
       "pid": "P1142",
       "label": "political ideology",
-      "domain": "Q7278",
-      "range": "Q12909644"
+      "domain": "political party",
+      "range": "political ideology"
     }
   ]
 }
