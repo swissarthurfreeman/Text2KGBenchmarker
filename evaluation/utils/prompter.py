@@ -85,21 +85,22 @@ class Prompter:
         
         Parameters
         ----------
-        - test_sentence: dict
+        - test_sentence_id: dict
         - n_examples: int
         """
         res = self.getSystemInstructions() + "\n\nCONTEXT:\n\n"
         res += self.ontology_description
         test_sentence = self.test_sentences[test_sentence_id]
         
-        # n_examples is larger than the ones available, we just take all we have
+        # TODO : if n_examples is larger than len(test_sentence[similars]) we should sample non similar sentence from train data.
         for idx in range(len(test_sentence["similars"][:n_examples])):
             train_sent_id = test_sentence["similars"][idx]
             train_sentence, train_triples = self.train_sentences[train_sent_id]["sent"], self.train_sentences[train_sent_id]["triples"]
             res += "\n\nExample Sentence : " +  train_sentence + "\n\nExample Output:\n"
             for triple in train_triples:
                 res += triple["rel"].replace(" ", "_") + "(" + triple["sub"] + ", " + triple["obj"] + ")" + "\n"
-            
+        
+        res += "\n\nTest Sentence: " + test_sentence["sent"] + "\n\nTest Output: "
         return res
 
     def getAllTestPrompts(n_examples: int) -> dict[str, str]:
@@ -130,17 +131,24 @@ class Prompter:
         return res[:-2]     # ignore extra comma
 
     def getSystemInstructions(self) -> str:
-        return """Given the following ontology and sentences, please extract the triples from the sentence according to the relations in the ontology. In the output, only include the triples in the given output format."""
+        return """Given the following ontology and sentences, please extract the triples from the sentence according to the relations in the ontology. \nIn the output, only include the triples in the given output format."""
 
 
 if __name__ == "__main__":
-    prompter = Prompter(
+    wikidata_prompter = Prompter(
         "../../data/wikidata_tekgen/ontologies/1_movie_ontology.json",
         "../../data/wikidata_tekgen/train/ont_1_movie_train.jsonl",
         "../../data/wikidata_tekgen/test/ont_1_movie_test.jsonl"
     )
     
-    print(prompter.getPromptOf("ont_1_movie_test_53", n_examples=3))
+    #print(wikidata_prompter.getPromptOf("ont_1_movie_test_1", n_examples=3))
+
+    dpedia_webnlg_prompter = Prompter(
+        "../../data/dpedia_webnlg/ontologies/6_politician_ontology.json",
+        "../../data/dpedia_webnlg/train/ont_6_politician_train.jsonl",
+        "../../data/dpedia_webnlg/test/ont_6_politician_test.jsonl"
+    )
+    print(dpedia_webnlg_prompter.getPromptOf("ont_6_politician_test_1", n_examples=3))
 
 
 """

@@ -1,17 +1,15 @@
 ## Benchmarker : Text2KGBench
 
 This is a Text2KGBench cleaned dataset with a rerwite of utility functions to fix technical debt
-from the original repository to make working with the dataset difficult easier. 
+from the original repository to make working with the dataset easier. 
 
-The main change is simply that the data is all kept in `jsonl` files in the following simple
-hierarchy instead of scattered across multiple jsonl folders, `jsonl` and `txt` files. This
-data should probably be eventually uploaded to Hugging face datasets.
+The list of changes is as follows : 
+- data is all kept in `jsonl` files in the hierarchy below, instead of a mix of data across multiple `jsonl` and `txt` files.
+- ontology files were edited to remove ghost wikidata IDs which did not a corresponding property or entity label within the file.
+- addition of missing domain and range classes to certain properties, to avoid for instance, describing a publication date via `publication_date(film,)`, instead we add `date` as range to yield `publication_date(film, date)`.
+- folded all duplicate sentences in `wikidata_tekgen` test and train datasets, aggregating into the same list the facts from train. Indeed, in the train files, certain objects with different ids had the same sentences but with different facts, they were folded into a single id and their facts were concatenated into a list following the same format as `dbpedia_webnlg`. The same processing was done on the `test` data of `wikidata_tekgen` where additionally the `similars` list was updated with the new id folds, replacing the removed sentences by the id of the sentence folded to.  
+- `wikidata_tekgen` dataset still has many problems. There are a lot of triples missing, for example with the sentence `The Prize Pest is a 1951 Warner Bros. Looney Tunes cartoon directed by Robert McKimson, and written by Tedd Pierce.` we only have a single fact `screenwriter(The Prize Pest, Tedd Pierce)`, we added `director(The Prize Pest, Robert McKimson)` which is valid and follows the ontology, but there are hundreds of such cases. This data should be manually reviewed and eventually uploaded to Hugging face datasets.
 
-Another sizeable change is the modification of the ontology files to remove ghost wikidata IDs
-which did not have the corresponding property or entity name within the ontology file and the
-addition of missing domain and range classes to certain entities, to avoid for instance, describing
-a publication date via `publication_date(film,)`, instead we add `date` as range to yield
-`publication_date(film, date)`. 
 
 ### File Hierarchy
 
@@ -25,12 +23,12 @@ Benchmarker
 │   └───dbpedia_webnlg
 |   |   |
 |   |   └───train
-|   |   |       ont_1_train_movie_sentences.jsonl
-|   |   |       ont_2_train_music_sentences.jsonl
+|   |   |       ont_1_train_movie_train.jsonl
+|   |   |       ont_2_train_music_train.jsonl
 |   |   |       ...
 |   |   └───test
-|   |   |       ont_1_test_movie_sentences.jsonl
-|   |   |       ont_1_test_music_sentences.jsonl
+|   |   |       ont_1_test_movie_test.jsonl
+|   |   |       ont_1_test_music_test.jsonl
 |   |   |       ...
 |   |   └───ontologies
 |   |           ont_1_movie_ontology.json
@@ -40,12 +38,12 @@ Benchmarker
 │   └───wikidata_tekgen
 |       |
 |       └───train
-|       |       ont_1_train_university_sentences.jsonl
-|       |       ont_2_train_musicalwork_sentences.jsonl
+|       |       ont_1_train_university_train.jsonl
+|       |       ont_2_train_musicalwork_train.jsonl
 |       |       ...
 |       └───test
-|       |       ont_1_test_university_sentences.jsonl
-|       |       ont_2_test_musicalwork_sentences.jsonl
+|       |       ont_1_test_university_test.jsonl
+|       |       ont_2_test_musicalwork_test.jsonl
 |       |       ...
 |       |
 |       |
@@ -71,11 +69,10 @@ An example of a json object in the `wikidata_tekgen` test sentences files is the
     "unseen": false, 
     "verified": true, 
     "similars": [
+        "ont_1_movie_train_119", 
         "ont_1_movie_train_27", 
-        "ont_1_movie_train_612", 
-        "ont_1_movie_train_715", 
         "ont_1_movie_train_67", 
-        "ont_1_movie_train_119"
+        "ont_1_movie_train_715"
     ]
 }
 ```
@@ -88,4 +85,3 @@ sentence was manually checked to ensure the triples were extractable. Note that 
 has some for TekGen, but every sentence only contains one triple, and it's not in the same format as the rest of the data. It seems the authors didn't 
 have the time to correctly format it, clean it and generate the triples list. 
 
-##
