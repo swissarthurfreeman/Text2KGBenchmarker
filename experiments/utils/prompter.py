@@ -90,7 +90,11 @@ class Prompter:
         """
         res = self.getSystemInstructions() + "\n\nCONTEXT:\n\n"
         res += self.ontology_description
-        test_sentence = self.test_sentences[test_sentence_id]
+        try:
+            test_sentence = self.test_sentences[test_sentence_id]
+        except KeyError:
+            print("Test sentence id " + test_sentence_id + " doesn't exist in " + self.test_sent_path + " file.")
+            exit(1)
         
         # TODO : if n_examples is larger than len(test_sentence[similars]) we should sample non similar sentence from train data.
         for idx in range(len(test_sentence["similars"][:n_examples])):
@@ -102,10 +106,6 @@ class Prompter:
         
         res += "\n\nTest Sentence: " + test_sentence["sent"] + "\n\nTest Output: "
         return res
-
-    def getAllTestPrompts(n_examples: int) -> dict[str, str]:
-        """Get dict {"sent_id": "prompt"} of all prompts of test sentences of dataset with `n_examples` train examples."""
-        pass
 
     def _getOntologyDescription(self, ontology_path) -> str:
         res = ""
@@ -141,33 +141,12 @@ if __name__ == "__main__":
         "../../data/wikidata_tekgen/test/ont_1_movie_test.jsonl"
     )
     
-    #print(wikidata_prompter.getPromptOf("ont_1_movie_test_1", n_examples=3))
+    print(wikidata_prompter.getPromptOf("ont_1_movie_unseen_test_1", n_examples=3))
 
     dpedia_webnlg_prompter = Prompter(
         "../../data/dpedia_webnlg/ontologies/6_politician_ontology.json",
         "../../data/dpedia_webnlg/train/ont_6_politician_train.jsonl",
         "../../data/dpedia_webnlg/test/ont_6_politician_test.jsonl"
     )
-    print(dpedia_webnlg_prompter.getPromptOf("ont_6_politician_test_1", n_examples=3))
-
-
-"""
-{
-    "id": "ont_1_movie_test_1", 
-    "sent": "Bleach: Hell Verse (Japanese: BLEACH , Hepburn: Bur\u00c4\u00abchi Jigoku-Hen) is a 2010 Japanese animated film directed by Noriyuki Abe.", 
-    "triples": [
-        {"sub": "Bleach : Hell Verse", "rel": "director", "obj": "Noriyuki Abe"}, 
-        {"sub": "Bleach : Hell Verse", "rel": "publication date", "obj": "01 January 2010"}
-    ], 
-    "unseen": false, 
-    "verified": true, 
-    "similars": [
-        "ont_1_movie_train_27", 
-        "ont_1_movie_train_612", 
-        "ont_1_movie_train_715", 
-        "ont_1_movie_train_67", 
-        "ont_1_movie_train_119"
-    ]
-}
-"""
-
+    
+    #print(dpedia_webnlg_prompter.getPromptOf("ont_6_politician_test_1", n_examples=3))
