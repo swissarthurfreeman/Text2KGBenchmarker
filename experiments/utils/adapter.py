@@ -1,6 +1,6 @@
 from openai import OpenAI
 from typing import override
-
+import re
 
 class LLMResponse:
     def __init__(self, sent_id: str, response: str, triples: list):
@@ -13,7 +13,7 @@ class LLMAdapter:
     """
     This interface allows prompting an extracting responses from a model.
     """
-    def __init__(self):
+    def __init__(self, model_name: str):
         """
         Configure the LLM, for Vicuna and Alpaca it'll check if 
         "../models/model_name" exists and wether the model files 
@@ -24,8 +24,8 @@ class LLMAdapter:
         
         For OpenAI models, only an API-key and model names are required. 
         """
-        raise NotImplementedError()
-    
+        self.model_name = model_name
+
     def queryLLM(self, sent_id: str, prompt: str) -> LLMResponse:
         """
         For our own custom models, the method `queryLLM` allows us to 
@@ -34,12 +34,34 @@ class LLMAdapter:
         """
         raise NotImplementedError()
     
+    def getTriplesOf(self, response: str) -> list[dict[str, str]]: 
+        triples_raw_strings = response.split("\n")
+        triples: list[dict[str, str]] = []
+        
+        for triple_str in triples_raw_strings:
+            # Apply regex
+            match = re.match(r"(.+)\((.+),(.+)\)", triple_str)
+            if match:
+                relation, subject, object_ = match.groups()
+                triples.append({"sub": subject, "rel": relation, "obj": object_})
+
+        return triples
     
     
 class OpenAIAdapter(LLMAdapter):
-    @override
     def __init__(self, openai_key: str, model_name: str):
-        pass
+        super.__init__(model_name)
+        self.client = OpenAI(openai_key)
+        self.model_name = model_name
     
+    @override
     def queryLLM(self, sent_id: str, prompt: str) -> LLMResponse:
-        pass
+        chat_completion = self.client.chat.completions.create(
+            model=self.model_name,
+            messages=[{"role": "user", "content": prompt}],
+        )
+        return LLMResponse(
+            sent_id, 
+            chat_completion.choices[0].message.content.strip(),
+            self.getTriplesOf(chat_completion.choices[0].message.content.strip()) 
+        )
