@@ -42,4 +42,4 @@ class OpenAIAdapter(LLMAdapter):
         pass
     
     def queryLLM(self, sent_id: str, prompt: str) -> LLMResponse:
-        
+        pass
