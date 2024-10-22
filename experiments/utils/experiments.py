@@ -26,7 +26,7 @@ if __name__ == "__main__":
             "../../data/wikidata_tekgen/train/" + ontology_name + "_train.jsonl",
             "../../data/wikidata_tekgen/test/" + ontology_name + "_test.jsonl",
             "../../data/wikidata_tekgen/ontologies/" + ontology_name + ".json",
-            2,
+            1,
             OpenAIAdapter(os.getenv('OPEN_API_KEY'), 'gpt-4o')
         )
         

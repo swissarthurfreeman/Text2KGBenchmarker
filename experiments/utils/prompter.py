@@ -1,6 +1,19 @@
 from typing import List
 import pprint as pp
+import random
 import json
+
+def load_jsonl_as_dict(path: str) -> dict[str, dict[str, bool|list[str]|list[dict[str, str]]]]:
+    with open(path, "r") as f:
+        sent_dicts = [json.loads(line) for line in f]
+        
+        res = {}
+        for sent_dict in sent_dicts:
+            res[sent_dict['id']] = {}
+            for key in sent_dict:
+                res[sent_dict['id']][key] = sent_dict[key]
+                
+        return res
 
 class Prompter:
     """
@@ -63,21 +76,9 @@ class Prompter:
     def __init__(self, ontology_path: str, train_sent_path: str, test_sent_path: str): 
         self.ontology_description: str = self._getOntologyDescription(ontology_path)
         self.train_sent_path = train_sent_path
-        self.train_sentences = self.load_jsonl_as_dict(self.train_sent_path)
+        self.train_sentences = load_jsonl_as_dict(self.train_sent_path)
         self.test_sent_path = test_sent_path
-        self.test_sentences = self.load_jsonl_as_dict(self.test_sent_path)
-
-    def load_jsonl_as_dict(self, path: str) -> dict[str, dict[str, bool|list[str]|list[dict[str, str]]]]:
-        with open(path, "r") as f:
-            sent_dicts = [json.loads(line) for line in f]
-            
-            res = {}
-            for sent_dict in sent_dicts:
-                res[sent_dict['id']] = {}
-                for key in sent_dict:
-                    res[sent_dict['id']][key] = sent_dict[key]
-                    
-            return res
+        self.test_sentences = load_jsonl_as_dict(self.test_sent_path)
                     
 
     def getPromptOf(self, test_sentence_id: str, n_examples: int) -> str:
@@ -97,9 +98,16 @@ class Prompter:
             exit(1)
         
         # TODO : if n_examples is larger than len(test_sentence[similars]) we should sample non similar sentence from train data.
-        for idx in range(len(test_sentence["similars"][:n_examples])):
-            train_sent_id = test_sentence["similars"][idx]
-            train_sentence, train_triples = self.train_sentences[train_sent_id]["sent"], self.train_sentences[train_sent_id]["triples"]
+        similar_train_sent_ids: list[str] = test_sentence["similars"][:n_examples]
+        if n_examples > len(test_sentence["similars"]):
+            print("WARNING: " + test_sentence["id"] + " does not have ", n_examples, " similars, sampling missing examples from train data instead")
+            for _ in range(n_examples - len(test_sentence["similars"])):
+                # append a bunch of random sentences
+                random_train_sent_id = list(self.train_sentences.keys())[random.randint(0, len(self.train_sentences.keys()))]
+                similar_train_sent_ids.append(self.train_sentences[random_train_sent_id]["id"])
+        
+        for similar_train_sent_id in similar_train_sent_ids:
+            train_sentence, train_triples = self.train_sentences[similar_train_sent_id]["sent"], self.train_sentences[similar_train_sent_id]["triples"]
             res += "\n\nExample Sentence : " +  train_sentence + "\n\nExample Output:\n"
             for triple in train_triples:
                 res += triple["rel"].strip().replace(" ", "_") + "(" + triple["sub"].strip() + ", " + triple["obj"].strip() + ")" + "\n"
@@ -136,17 +144,19 @@ class Prompter:
 
 if __name__ == "__main__":
     wikidata_prompter = Prompter(
-        "../../data/wikidata_tekgen/ontologies/9_nature_ontology.json",
+        "../../data/wikidata_tekgen/ontologies/ont_9_nature.json",
         "../../data/wikidata_tekgen/train/ont_9_nature_train.jsonl",
         "../../data/wikidata_tekgen/test/ont_9_nature_test.jsonl"
     )
     
-    print(wikidata_prompter.getPromptOf("ont_9_nature_unseen_test_19", n_examples=3))
-
+    print(wikidata_prompter.getPromptOf("ont_9_nature_unseen_test_19", n_examples=10))
+    
+    """
     dpedia_webnlg_prompter = Prompter(
-        "../../data/dpedia_webnlg/ontologies/6_politician_ontology.json",
+        "../../data/dpedia_webnlg/ontologies/ont_6_politician.json",
         "../../data/dpedia_webnlg/train/ont_6_politician_train.jsonl",
         "../../data/dpedia_webnlg/test/ont_6_politician_test.jsonl"
     )
+    """
     
     #print(dpedia_webnlg_prompter.getPromptOf("ont_6_politician_test_1", n_examples=3))

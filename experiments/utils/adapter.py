@@ -2,7 +2,7 @@ from openai import OpenAI
 from typing import override
 import re
 
-class LLMResponse:
+class LLMResponse(object):
     def __init__(self, sent_id: str, response: str, triples: list):
         self.sent_id = sent_id
         self.response = response
@@ -46,8 +46,8 @@ class LLMAdapter:
                 triples.append({"sub": subject.strip(), "rel": relation.strip(), "obj": object_.strip()})
 
         return triples
-    
-    
+
+
 class OpenAIAdapter(LLMAdapter):
     def __init__(self, openai_key: str, model_name: str):
         super().__init__(model_name)
