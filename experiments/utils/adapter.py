@@ -43,15 +43,15 @@ class LLMAdapter:
             match = re.match(r"(.+)\((.+),(.+)\)", triple_str)
             if match:
                 relation, subject, object_ = match.groups()
-                triples.append({"sub": subject, "rel": relation, "obj": object_})
+                triples.append({"sub": subject.strip(), "rel": relation.strip(), "obj": object_.strip()})
 
         return triples
     
     
 class OpenAIAdapter(LLMAdapter):
     def __init__(self, openai_key: str, model_name: str):
-        super.__init__(model_name)
-        self.client = OpenAI(openai_key)
+        super().__init__(model_name)
+        self.client = OpenAI(api_key=openai_key)
         self.model_name = model_name
     
     @override
@@ -59,6 +59,7 @@ class OpenAIAdapter(LLMAdapter):
         chat_completion = self.client.chat.completions.create(
             model=self.model_name,
             messages=[{"role": "user", "content": prompt}],
+            timeout=5
         )
         return LLMResponse(
             sent_id, 

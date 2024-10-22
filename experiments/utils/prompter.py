@@ -102,7 +102,7 @@ class Prompter:
             train_sentence, train_triples = self.train_sentences[train_sent_id]["sent"], self.train_sentences[train_sent_id]["triples"]
             res += "\n\nExample Sentence : " +  train_sentence + "\n\nExample Output:\n"
             for triple in train_triples:
-                res += triple["rel"].replace(" ", "_") + "(" + triple["sub"] + ", " + triple["obj"] + ")" + "\n"
+                res += triple["rel"].strip().replace(" ", "_") + "(" + triple["sub"].strip() + ", " + triple["obj"].strip() + ")" + "\n"
         
         res += "\n\nTest Sentence: " + test_sentence["sent"] + "\n\nTest Output: "
         return res
@@ -120,28 +120,28 @@ class Prompter:
     def getConceptsOf(self, concepts: List[dict]) -> str:
         res = ""
         for concept in concepts:
-            res += concept["label"] + ", "
+            res += concept["label"].strip() + ", "
         return res[:-2]     # ignore extra comma
     
     
     def getRelationsOf(self, relations: List[dict]) -> str:
         res = ""
         for relation in relations:
-            res += relation["label"].replace(" ", "_") + "(" + relation["domain"] + ", " + relation["range"] + "), "
+            res += relation["label"].strip().replace(" ", "_") + "(" + relation["domain"] + ", " + relation["range"] + "), "
         return res[:-2]     # ignore extra comma
 
     def getSystemInstructions(self) -> str:
-        return """Given the following ontology and sentences, please extract the triples from the sentence according to the relations in the ontology. \nIn the output, only include the triples in the given output format."""
+        return """Given the following ontology and sentences, please extract the triples from the sentence according to the relations in the ontology. \nIn the output, only include the triples in the given output format, if you can't extract triples, leave the output empty. Do not include any formatting backticks like ``` or any notes or remarks. Extract as many triples as possible."""
 
 
 if __name__ == "__main__":
     wikidata_prompter = Prompter(
-        "../../data/wikidata_tekgen/ontologies/1_movie_ontology.json",
-        "../../data/wikidata_tekgen/train/ont_1_movie_train.jsonl",
-        "../../data/wikidata_tekgen/test/ont_1_movie_test.jsonl"
+        "../../data/wikidata_tekgen/ontologies/9_nature_ontology.json",
+        "../../data/wikidata_tekgen/train/ont_9_nature_train.jsonl",
+        "../../data/wikidata_tekgen/test/ont_9_nature_test.jsonl"
     )
     
-    print(wikidata_prompter.getPromptOf("ont_1_movie_unseen_test_1", n_examples=3))
+    print(wikidata_prompter.getPromptOf("ont_9_nature_unseen_test_19", n_examples=3))
 
     dpedia_webnlg_prompter = Prompter(
         "../../data/dpedia_webnlg/ontologies/6_politician_ontology.json",

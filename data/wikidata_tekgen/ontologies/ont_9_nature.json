@@ -128,7 +128,7 @@
         },
         {
             "pid": "P4320",
-            "label": "mountains classification ",
+            "label": "mountains classification",
             "domain": "cycling race",
             "range": "human"
         },
