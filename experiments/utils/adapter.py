@@ -59,7 +59,7 @@ class OpenAIAdapter(LLMAdapter):
         chat_completion = self.client.chat.completions.create(
             model=self.model_name,
             messages=[{"role": "user", "content": prompt}],
-            timeout=5
+            timeout=10
         )
         return LLMResponse(
             sent_id, 

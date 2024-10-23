@@ -103,7 +103,7 @@ class Prompter:
             print("WARNING: " + test_sentence["id"] + " does not have ", n_examples, " similars, sampling missing examples from train data instead")
             for _ in range(n_examples - len(test_sentence["similars"])):
                 # append a bunch of random sentences
-                random_train_sent_id = list(self.train_sentences.keys())[random.randint(0, len(self.train_sentences.keys()))]
+                random_train_sent_id = list(self.train_sentences.keys())[random.randint(0, len(self.train_sentences.keys())-1)]
                 similar_train_sent_ids.append(self.train_sentences[random_train_sent_id]["id"])
         
         for similar_train_sent_id in similar_train_sent_ids:

@@ -83,7 +83,7 @@ An example of a json object in the `wikidata_tekgen` test sentences files is the
 with the `dbpedia_webnlg` dataset, the format differs by the lack of the `"unseen"` and `"verified"` keys, as they're not part of this peculiar dataset.
 See the original paper's details. Test sentences contain the `"similars"` list of ids of sentences that are similar to the test one in the training set. 
 
-`"unseen": true` means the data comes from some datasource like wikipedia which an LLM may have already seen in pretraining, and `verified` means the 
+`"unseen": false` means the data comes from some datasource like wikipedia which an LLM may have already seen in pretraining, and `verified` means the 
 sentence was manually checked to ensure the triples were extractable. Note that we don't have validation data, indeed the original dataset only 
 has some for TekGen, but every sentence only contains one triple, and it's not in the same format as the rest of the data. It seems the authors didn't 
 have the time to correctly format it, clean it and generate the triples list. 

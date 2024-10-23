@@ -6,6 +6,7 @@ from adapter import LLMResponse
 from prompter import load_jsonl_as_dict
 from nltk.tokenize import word_tokenize
 from nltk.stem import PorterStemmer
+from experiments import wikidata_tekgen_files, dpedia_webnlg_files
 
 class LLMMetrics():
     """
@@ -122,7 +123,7 @@ class LLMMetrics():
 
         print(ground_truth)
         print(llm_triples)
-        if len(llm_triples) == 0: return 0, 0, 0
+        if len(llm_triples) == 0 or len(ground_truth) == 0: return 0, 0, 0
         
         P = len(ground_truth.intersection(llm_triples)) / len(llm_triples)
         R = len(ground_truth.intersection(llm_triples)) / len(ground_truth)
@@ -241,12 +242,19 @@ class LLMMetrics():
     
     
 if __name__ ==  "__main__": 
-    l = LLMMetrics(
-        "../../data/wikidata_tekgen/ontologies/ont_1_movie.json",
-        "../../data/wikidata_tekgen/test/ont_1_movie_test.jsonl"
-    )
-    l.computeMetricsPerReponseOf("../results/llm_responses/gpt-4o/ont_1_movie-test_wikidata_tekgen-train_wikidata_tekgen-n_examples_2.jsonl")
     
+    for ontology_name in dpedia_webnlg_files:
+        
+        l = LLMMetrics(
+            "../../data/dpedia_webnlg/ontologies/" + ontology_name + ".json",
+            "../../data/dpedia_webnlg/test/" + ontology_name + "_test.jsonl"
+        )
+        
+        files = glob.glob("../results/llm_responses/gpt-4o/" + ontology_name + "-*")
+        for llm_response_files_for_ontology_n_examples in files:
+            l.computeMetricsPerReponseOf(llm_response_files_for_ontology_n_examples)
+    
+        
     #l = LLMMetrics(
     #    "../../data/wikidata_tekgen/ontologies/ont_2_music.json",
     #    "../../data/wikidata_tekgen/test/ont_2_music_test.jsonl"
