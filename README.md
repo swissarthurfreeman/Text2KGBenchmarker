@@ -87,3 +87,7 @@ See the original paper's details. Test sentences contain the `"similars"` list o
 sentence was manually checked to ensure the triples were extractable. Note that we don't have validation data, indeed the original dataset only 
 has some for TekGen, but every sentence only contains one triple, and it's not in the same format as the rest of the data. It seems the authors didn't 
 have the time to correctly format it, clean it and generate the triples list. 
+
+## Yggdrasil
+
+Run `module load GCCcore/13.2.0 Python/3.11.5` to load up python, then `pipenv install && pipenv shell` from the root directory. 

@@ -1,9 +1,7 @@
-from adapter import OpenAIAdapter
-from dotenv import load_dotenv
+from adapter import OpenAIAdapter, RebelAdapter
+#from dotenv import load_dotenv
 from run import LLMRunConfig
 from run import LLMRun
-import glob
-import os
 
 dpedia_webnlg_files = [
     "ont_1_university",
@@ -41,19 +39,17 @@ wikidata_tekgen_files = [
 ]
 
 if __name__ == "__main__":
-    load_dotenv("../../.env")
     
-    for ontology_name in dpedia_webnlg_files:
-        for n_examples in [1, 2, 3, 4, 5, 6]:
-            conf = LLMRunConfig(
-                "../../data/dpedia_webnlg/train/" + ontology_name + "_train.jsonl",
-                "../../data/dpedia_webnlg/test/" + ontology_name + "_test.jsonl",
-                "../../data/dpedia_webnlg/ontologies/" + ontology_name + ".json",
-                n_examples,
-                OpenAIAdapter(os.getenv('OPEN_API_KEY'), 'gpt-4o')
-            )
-            
-            runner = LLMRun(conf)
-            runner.run()
+    for ontology_name in wikidata_tekgen_files:
+        conf = LLMRunConfig(
+            "../../data/wikidata_tekgen/train/" + ontology_name + "_train.jsonl",
+            "../../data/wikidata_tekgen/test/" + ontology_name + "_test.jsonl",
+            "../../data/wikidata_tekgen/ontologies/" + ontology_name + ".json",
+            1,
+            RebelAdapter("Babelscape/rebel-large")
+        )
+        
+        runner = LLMRun(conf)
+        runner.run()
         
     
