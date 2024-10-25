@@ -7,8 +7,10 @@ name = "pypi"
 openai = "*"
 python-dotenv = "*"
 nltk = "*"
+transformers = "*"
+torch = "*"
 
 [dev-packages]
 
 [requires]
-python_version = "3.12"
+python_version = "3.11.5"
