@@ -284,7 +284,7 @@ if __name__ ==  "__main__":
             "../../data/dpedia_webnlg/test/" + ontology_name + "_test.jsonl"
         )
         
-        files = glob.glob("../results/llm_responses/Babelscape.rebel-large/" + ontology_name + "-*")
+        files = glob.glob("../results/llm_responses/Babelscape.rebel-large.normalized/all-MiniLM-L6-v2/" + ontology_name + "-*")
         for llm_response_files_for_ontology_n_examples in files:
             l.computeMetricsPerReponseOf(llm_response_files_for_ontology_n_examples)
     
