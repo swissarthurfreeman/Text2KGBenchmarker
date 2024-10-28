@@ -2,11 +2,46 @@ import os
 import glob
 import json
 import re
-from adapter import LLMResponse
 from prompter import load_jsonl_as_dict
 from nltk.tokenize import word_tokenize
 from nltk.stem import PorterStemmer
-from experiments import wikidata_tekgen_files, dpedia_webnlg_files
+import nltk
+nltk.download('punkt_tab')
+
+dpedia_webnlg_files = [
+    "ont_1_university",
+    "ont_2_musicalwork",
+    "ont_3_airport",
+    "ont_4_building",
+    "ont_5_athlete",
+    "ont_6_politician",
+    "ont_7_company",
+    "ont_8_celestialbody",
+    "ont_9_astronaut",
+    "ont_10_comicscharacter",
+    "ont_11_meanoftransportation",
+    "ont_12_monument",
+    "ont_13_food",
+    "ont_14_writtenwork",
+    "ont_15_sportsteam",
+    "ont_16_city",
+    "ont_17_artist",
+    "ont_18_scientist",
+    "ont_19_film"
+]
+
+wikidata_tekgen_files = [
+    "ont_1_movie",
+    "ont_2_music",
+    "ont_3_sport",
+    "ont_4_book",
+    "ont_5_military",
+    "ont_6_computer",
+    "ont_7_space",
+    "ont_8_politics",
+    "ont_9_nature",
+    "ont_10_culture"
+]
 
 class LLMMetrics():
     """
@@ -242,7 +277,6 @@ class LLMMetrics():
     
     
 if __name__ ==  "__main__": 
-    
     for ontology_name in dpedia_webnlg_files:
         
         l = LLMMetrics(
@@ -250,16 +284,20 @@ if __name__ ==  "__main__":
             "../../data/dpedia_webnlg/test/" + ontology_name + "_test.jsonl"
         )
         
-        files = glob.glob("../results/llm_responses/gpt-4o/" + ontology_name + "-*")
+        files = glob.glob("../results/llm_responses/Babelscape.rebel-large/" + ontology_name + "-*")
         for llm_response_files_for_ontology_n_examples in files:
             l.computeMetricsPerReponseOf(llm_response_files_for_ontology_n_examples)
     
+    
+    for ontology_name in wikidata_tekgen_files:
+        l = LLMMetrics(
+            "../../data/wikidata_tekgen/ontologies/" + ontology_name + ".json",
+            "../../data/wikidata_tekgen/test/" + ontology_name + "_test.jsonl"
+        )
         
-    #l = LLMMetrics(
-    #    "../../data/wikidata_tekgen/ontologies/ont_2_music.json",
-    #    "../../data/wikidata_tekgen/test/ont_2_music_test.jsonl"
-    #)
-    #l.computeMetricsPerReponseOf("../results/llm_responses/gpt-4o/ont_2_music-test_wikidata_tekgen-train_wikidata_tekgen-n_examples_3.jsonl")
+        files = glob.glob("../results/llm_responses/Babelscape.rebel-large/" + ontology_name + "-*")
+        for llm_response_files_for_ontology_n_examples in files:
+            l.computeMetricsPerReponseOf(llm_response_files_for_ontology_n_examples)
     
     """
     def computeAllMetrics(self) -> None:
