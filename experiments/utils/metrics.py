@@ -61,10 +61,11 @@ class LLMMetrics():
             for concept in ontology["concepts"]:
                 concepts.append(concept["label"])
             
-            for rel in ontology["relations"]:
-                relations.append(rel["label"])
+            for rel in ontology["relations"]:   # if camel case, will convert
+                relations.append(" ".join(re.sub('([A-Z][a-z]+)', r' \1', re.sub('([A-Z]+)', r' \1', rel["label"])).split()).lower())
             self.onto_concepts: list[str] = concepts
             self.onto_relations: list[str] = relations
+            print(self.onto_relations)
         
     def computeMetricsPerReponseOf(self, llm_response_file_path: str) -> None:
         """Open `llm_response_file` read all sentences, compute metrics for every sentence,
@@ -264,9 +265,9 @@ class LLMMetrics():
         if len(response["triples"]) == 0:
             return 1, 0
         # replace spaces with underscores in the ontology relations
-        ont_rels = [rel.replace(" ", "_") for rel in self.onto_relations]
+        #ont_rels = [rel.replace(" ", "_") for rel in self.onto_relations]
         # count the number of system triples relations that are in the ontology
-        num_rels_conformant = len([tr for tr in response["triples"] if tr["rel"] in ont_rels])
+        num_rels_conformant = len([tr for tr in response["triples"] if tr["rel"] in self.onto_relations])
 
         # ontology conformance is the number of system triples relations in the ontology divided by the total number of system triples
         ont_conformance = num_rels_conformant / len(response["triples"])
@@ -284,7 +285,7 @@ if __name__ ==  "__main__":
             "../../data/dpedia_webnlg/test/" + ontology_name + "_test.jsonl"
         )
         
-        files = glob.glob("../results/llm_responses/Babelscape.rebel-large.normalized/all-MiniLM-L6-v2/" + ontology_name + "-*")
+        files = glob.glob("../results/llm_responses/Babelscape.rebel-large.normalized-complex/" + ontology_name + "-*")
         for llm_response_files_for_ontology_n_examples in files:
             l.computeMetricsPerReponseOf(llm_response_files_for_ontology_n_examples)
     
@@ -295,7 +296,7 @@ if __name__ ==  "__main__":
             "../../data/wikidata_tekgen/test/" + ontology_name + "_test.jsonl"
         )
         
-        files = glob.glob("../results/llm_responses/Babelscape.rebel-large/" + ontology_name + "-*")
+        files = glob.glob("../results/llm_responses/Babelscape.rebel-large.normalized-complex/" + ontology_name + "-*")
         for llm_response_files_for_ontology_n_examples in files:
             l.computeMetricsPerReponseOf(llm_response_files_for_ontology_n_examples)
     

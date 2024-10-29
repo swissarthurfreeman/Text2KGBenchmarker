@@ -1,0 +1,167 @@
+{"sent_id": "ont_10_culture_test_1", "response": "<s><triplet> Louise Meriwether <subj> May 8, 1923 <obj> date of birth</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_2", "response": "<s><triplet> Rothari <subj> Arodus <obj> family</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_3", "response": "<s><triplet> Augusta Savage <subj> African Americans <obj> ethnic group</s>", "triples": [{"sub": "Augusta Savage", "rel": "ethnic group", "obj": "African Americans"}]}
+{"sent_id": "ont_10_culture_test_4", "response": "<s><triplet> Percy Lavon Julian <subj> African Americans <obj> ethnic group</s>", "triples": [{"sub": "Percy Lavon Julian", "rel": "ethnic group", "obj": "African Americans"}]}
+{"sent_id": "ont_10_culture_test_5", "response": "<s><triplet> Sarah Dudley Petteys <subj> African American <obj> ethnic group</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_6", "response": "<s><triplet> Edna Meade Colson <subj> October 7, 1888 <obj> date of birth <subj> January 17, 1985 <obj> date of death</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_7", "response": "<s><triplet> Charlotte E. Ray <subj> African Americans <obj> ethnic group</s>", "triples": [{"sub": "Charlotte E. Ray", "rel": "ethnic group", "obj": "African Americans"}]}
+{"sent_id": "ont_10_culture_test_8", "response": "<s><triplet> South <subj> North <obj> shares border with <triplet> North <subj> South <obj> shares border with</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_9", "response": "<s><triplet> James Reese Europe <subj> African Americans <obj> ethnic group</s>", "triples": [{"sub": "James Reese Europe", "rel": "ethnic group", "obj": "African Americans"}]}
+{"sent_id": "ont_10_culture_test_10", "response": "<s><triplet> Anatole Broyard <subj> African Americans <obj> ethnic group</s>", "triples": [{"sub": "Anatole Broyard", "rel": "ethnic group", "obj": "African Americans"}]}
+{"sent_id": "ont_10_culture_test_11", "response": "<s><triplet> Harry S. Cummings <subj> University of Maryland School of Law <obj> educated at</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_12", "response": "<s><triplet> Benjamin Franklin Butler <subj> American Civil War <obj> conflict</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_13", "response": "<s><triplet> African-American <subj> African Americans <obj> different from <triplet> African Americans <subj> African-American <obj> different from</s>", "triples": [{"sub": "African-American", "rel": "ethnic group", "obj": "African Americans"}, {"sub": "African Americans", "rel": "ethnic group", "obj": "African-American"}]}
+{"sent_id": "ont_10_culture_test_14", "response": "<s><triplet> Charles Spurgeon Johnson <subj> July 24, 1893 <obj> date of birth <subj> October 27, 1956 <obj> date of death <triplet> Fisk University <subj> historically black <obj> instance of</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_15", "response": "<s><triplet> William Wells Brown <subj> African Americans in the Revolutionary War <obj> notable work <triplet> African Americans in the Revolutionary War <subj> 1867 <obj> publication date <subj> William Wells Brown <obj> author</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_16", "response": "<s><triplet> Dwelle Infirmary <subj> Atlanta <obj> located in the administrative territorial entity</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_17", "response": "<s><triplet> Mkrtich Khrimian <subj> 4 April 1820 <obj> date of birth <subj> 29 October 1907 <obj> date of death <subj> Catholicos of All Armenians <obj> position held</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_18", "response": "<s><triplet> Reconstruction Era <subj> Florida <obj> participant</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_19", "response": "<s><triplet> civil rights movement <subj> African Americans <obj> has part</s>", "triples": [{"sub": "civil rights movement", "rel": "ethnic group", "obj": "African Americans"}]}
+{"sent_id": "ont_10_culture_test_20", "response": "<s><triplet> Roy DeCarava <subj> African Americans <obj> ethnic group</s>", "triples": [{"sub": "Roy DeCarava", "rel": "ethnic group", "obj": "African Americans"}]}
+{"sent_id": "ont_10_culture_test_21", "response": "<s><triplet> John Patterson Green <subj> Republican <obj> member of political party</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_22", "response": "<s><triplet> Mary Burnett Talbert <subj> African American <obj> ethnic group</s>", "triples": [{"sub": "Mary Burnett Talbert", "rel": "ethnic group", "obj": "African American"}]}
+{"sent_id": "ont_10_culture_test_23", "response": "<s><triplet> Little Rock crisis <subj> desegregation <obj> facet of</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_24", "response": "<s><triplet> collage <subj> painting <obj> subclass of</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_25", "response": "<s><triplet> 100 Greatest African Americans <subj> Molefi Kete Asante <obj> author</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_26", "response": "<s><triplet> Armenian National Council of Tiflis <subj> First Republic of Armenia <obj> country <triplet> Armenian National Council <subj> First Republic of Armenia <obj> country</s>", "triples": [{"sub": "Armenian National Council", "rel": "ethnic group", "obj": "First Republic of Armenia"}]}
+{"sent_id": "ont_10_culture_test_27", "response": "<s><triplet> The Hope of Liberty <subj> George Moses Horton <obj> author <subj> 1829 <obj> publication date</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_28", "response": "<s><triplet> Fairfax County <subj> Virginia <obj> located in the administrative territorial entity <triplet> Virginia <subj> Fairfax County <obj> contains administrative territorial entity</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_29", "response": "<s><triplet> Mandubracius <subj> Trinovantes <obj> ethnic group</s>", "triples": [{"sub": "Mandubracius", "rel": "ethnic group", "obj": "Trinovantes"}]}
+{"sent_id": "ont_10_culture_test_30", "response": "<s><triplet> LaDonna Vita Tabbytite Harris <subj> February 26, 1931 <obj> date of birth</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_31", "response": "<s><triplet> United States <subj> African Americans <obj> ethnic group</s>", "triples": [{"sub": "United States", "rel": "ethnic group", "obj": "African Americans"}]}
+{"sent_id": "ont_10_culture_test_32", "response": "<s><triplet> Ovid <subj> Virgil <obj> influenced by <subj> Horace <obj> influenced by <subj> three canonical poets <obj> part of <triplet> Virgil <subj> Ovid <obj> influenced by <subj> Horace <obj> influenced by <subj> three canonical poets <obj> part of <triplet> Horace <subj> Ovid <obj> influenced by <subj> Virgil <obj> influenced by <subj> three canonical poets <obj> part of <triplet> three canonical poets <subj> Ovid <obj> has part <subj> Virgil <obj> has part <subj> Horace <obj> has part</s>", "triples": [{"sub": "Ovid", "rel": "inception", "obj": "Virgil"}]}
+{"sent_id": "ont_10_culture_test_33", "response": "<s><triplet> Theodore Bibliander <subj> Bischofszell <obj> place of birth</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_34", "response": "<s><triplet> Kaliningrad <subj> Russia <obj> country <triplet> Razgrad <subj> Bulgaria <obj> country <triplet> Messina <subj> Italy <obj> country</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_35", "response": "<s><triplet> Cato the Elder <subj> Latin <obj> field of work</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_36", "response": "<s><triplet> Franz Neumayr <subj> 17 January 1697 <obj> date of birth <subj> 1 May 1765 <obj> date of death <subj> Jesuit <obj> religious order</s>", "triples": [{"sub": "Franz Neumayr", "rel": "religious order", "obj": "Jesuit"}]}
+{"sent_id": "ont_10_culture_test_37", "response": "<s><triplet> Johann Wigand <subj> 1523 <obj> date of birth <subj> 21 October 1587 <obj> date of death <subj> Lutheran <obj> religion</s>", "triples": [{"sub": "Johann Wigand", "rel": "religious order", "obj": "Lutheran"}]}
+{"sent_id": "ont_10_culture_test_38", "response": "<s><triplet> Esperanto <subj> constructed language <obj> instance of</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_39", "response": "<s><triplet> Konrad Pellikan <subj> January 8, 1478 <obj> date of birth <subj> Rouffach <obj> place of birth <subj> 6 May 1556 <obj> date of death <subj> Zurich <obj> place of death</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_40", "response": "<s><triplet> Francesco Filelfo <subj> July 25, 1398 <obj> date of birth <subj> July 31, 1481 <obj> date of death</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_41", "response": "<s><triplet> Humphrey Tonkin <subj> Esperanto studies <obj> field of work</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_42", "response": "<s><triplet> Poliespo <subj> constructed language <obj> instance of</s>", "triples": [{"sub": "Poliespo", "rel": "languages spoken, written or signed", "obj": "constructed language"}]}
+{"sent_id": "ont_10_culture_test_43", "response": "<s><triplet> Macedonian <subj> Serbo-Croatian <obj> part of</s>", "triples": [{"sub": "Macedonian", "rel": "indigenous to", "obj": "Serbo-Croatian"}]}
+{"sent_id": "ont_10_culture_test_44", "response": "<s><triplet> Ljudmila Novak <subj> Esperanto <obj> field of work</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_45", "response": "<s><triplet> J\u00e1no\u0161\u00edk <subj> Miloslav Schmidt <obj> cast member <subj> 1921 <obj> publication date</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_46", "response": "<s><triplet> Hendrik Jan Bulthuis <subj> 15 September 1865 <obj> date of birth <subj> Warffum <obj> place of birth <subj> 27 April 1945 <obj> date of death <subj> Noordbroek <obj> place of death</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_47", "response": "<s><triplet> Poliziano <subj> 14 July 1454 <obj> date of birth <subj> 24 September 1494 <obj> date of death</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_48", "response": "<s><triplet> Wilhelm Fabry <subj> Bern <obj> place of death</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_49", "response": "<s><triplet> Ramon Llull <subj> 1232 <obj> date of birth</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_50", "response": "<s><triplet> Johann(es) Werner <subj> February 14, 1468 <obj> date of birth <subj> May 1522 <obj> date of death <subj> mathematician <obj> occupation</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_51", "response": "<s><triplet> Vilho V\u00e4is\u00e4l\u00e4 <subj> Esperanto <obj> field of work</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_52", "response": "<s><triplet> Edward Saxton Payson <subj> Esperanto <obj> field of work</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_53", "response": "<s><triplet> Henry Montagu Butler <subj> First World War <obj> conflict</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_54", "response": "<s><triplet> anal abscess <subj> haemorrhoids <obj> subclass of</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_55", "response": "<s><triplet> Han Moo-hyup <subj> major general <obj> military rank</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_56", "response": "<s><triplet> epigrammatist <subj> epigram <obj> studies <triplet> epigram <subj> epigrammatist <obj> studied by</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_57", "response": "<s><triplet> La Homa Lingvo (\"The Human Language\") <subj> 1927 <obj> publication date</s>", "triples": [{"sub": "La Homa Lingvo (\"The Human Language\")", "rel": "languages spoken, written or signed", "obj": "1927"}]}
+{"sent_id": "ont_10_culture_test_58", "response": "<s><triplet> Li Shijun <subj> Esperanto <obj> field of work</s>", "triples": [{"sub": "Li Shijun", "rel": "languages spoken, written or signed", "obj": "Esperanto"}]}
+{"sent_id": "ont_10_culture_test_59", "response": "<s><triplet> Johann Jakob Reiske <subj> December 25, 1716 <obj> date of birth <subj> August 14, 1774 <obj> date of death</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_60", "response": "<s><triplet> Dante Alighieri <subj> Latin <obj> language of work or name</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_61", "response": "<s><triplet> Lithuania <subj> Esperanto <obj> language used</s>", "triples": [{"sub": "Lithuania", "rel": "languages spoken, written or signed", "obj": "Esperanto"}]}
+{"sent_id": "ont_10_culture_test_62", "response": "<s><triplet> Katsumu Kuroita <subj> Esperanto <obj> field of work</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_63", "response": "<s><triplet> Conrad Celtes <subj> 1 February 1459 <obj> date of birth <subj> 4 February 1508 <obj> date of death <triplet> Franconia <subj> Bavaria <obj> part of</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_64", "response": "<s><triplet> Copernicus <subj> De Revolutionibus Orbium Coelestium <obj> notable work <triplet> De Revolutionibus Orbium Coelestium <subj> Copernicus <obj> author</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_65", "response": "<s><triplet> Virgil <subj> ancient Roman <obj> time period</s>", "triples": [{"sub": "Virgil", "rel": "inception", "obj": "ancient Roman"}]}
+{"sent_id": "ont_10_culture_test_66", "response": "<s><triplet> Alain de Lille <subj> 1202 <obj> date of death</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_67", "response": "<s><triplet> Esperanto <subj> 1924 <obj> inception</s>", "triples": [{"sub": "Esperanto", "rel": "languages spoken, written or signed", "obj": "1924"}]}
+{"sent_id": "ont_10_culture_test_68", "response": "<s><triplet> Gerrit Berveling <subj> 1 April 1944 <obj> date of birth <subj> Vlaardingen <obj> place of birth <subj> Esperanto <obj> field of work</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_69", "response": "<s><triplet> Thomas Naogeorgus <subj> 21 December 1508 <obj> date of birth <subj> 29 December 1563 <obj> date of death</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_70", "response": "<s><triplet> Claude Piron <subj> Esperanto <obj> field of work</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_71", "response": "<s><triplet> Felix Stone Moscheles <subj> 8 February 1833 <obj> date of birth <subj> 22 December 1917 <obj> date of death</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_72", "response": "<s><triplet> Nilto Maciel <subj> Esperanto <obj> language of work or name</s>", "triples": [{"sub": "Nilto Maciel", "rel": "languages spoken, written or signed", "obj": "Esperanto"}]}
+{"sent_id": "ont_10_culture_test_73", "response": "<s><triplet> Langues d'o\u00c3\u00afl <subj> Middle High German <obj> subclass of</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_74", "response": "<s><triplet> Vilma Sindona Eichholz <subj> July 15, 1995 <obj> date of death</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_75", "response": "<s><triplet> Johannes Waldemar Karsch <subj> Estraro <obj> member of</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_76", "response": "<s><triplet> elegist <subj> poet <obj> subclass of</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_77", "response": "<s><triplet> Lidia Zamenhof <subj> Esperanto <obj> field of work</s>", "triples": [{"sub": "Lidia Zamenhof", "rel": "languages spoken, written or signed", "obj": "Esperanto"}]}
+{"sent_id": "ont_10_culture_test_78", "response": "<s><triplet> Max Talmey <subj> AIL <obj> notable work <subj> Arulo <obj> notable work <subj> Gloro <obj> notable work <triplet> AIL <subj> Max Talmey <obj> creator <triplet> Arulo <subj> Max Talmey <obj> creator <triplet> Gloro <subj> Max Talmey <obj> creator</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_79", "response": "<s><triplet> Max Mangold <subj> Esperanto <obj> field of work</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_80", "response": "<s><triplet> ether <subj> Valerius Cordus <obj> discoverer or inventor</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_81", "response": "<s><triplet> Georg Fabricius <subj> 23 April 1516 <obj> date of birth <subj> 17 July 1571 <obj> date of death</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_82", "response": "<s><triplet> sixth World Esperanto Congress <subj> 1910 <obj> point in time</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_83", "response": "<s><triplet> Geoffrey of Monmouth <subj> 1095 <obj> date of birth</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_84", "response": "<s><triplet> Ferdinand Duviard <subj> Esperantist <obj> occupation</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_85", "response": "<s><triplet> Augustine of Hippo <subj> Church Fathers <obj> part of <triplet> Church Fathers <subj> Augustine of Hippo <obj> has part <subj> Patristic Period <obj> part of <triplet> Patristic Period <subj> Church Fathers <obj> has part</s>", "triples": [{"sub": "Augustine of Hippo", "rel": "religious order", "obj": "Church Fathers"}, {"sub": "Church Fathers", "rel": "religious order", "obj": "Augustine of Hippo"}, {"sub": "Church Fathers", "rel": "religious order", "obj": "Patristic Period"}, {"sub": "Patristic Period", "rel": "religious order", "obj": "Church Fathers"}]}
+{"sent_id": "ont_10_culture_test_86", "response": "<s><triplet> Nadia Hordijenko Andrianova <subj> 1921 <obj> date of birth</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_87", "response": "<s><triplet> Trevor Steele <subj> 1940 <obj> date of birth</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_88", "response": "<s><triplet> Georges Lagrange <subj> Esperanto <obj> language of work or name</s>", "triples": [{"sub": "Georges Lagrange", "rel": "languages spoken, written or signed", "obj": "Esperanto"}]}
+{"sent_id": "ont_10_culture_test_89", "response": "<s><triplet> Oliviero Carafa <subj> cardinal <obj> position held</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_90", "response": "<s><triplet> Edgar de Wahl <subj> Esperanto <obj> field of work</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_91", "response": "<s><triplet> Ossetic <subj> Iranian languages <obj> subclass of</s>", "triples": [{"sub": "Ossetic", "rel": "languages spoken, written or signed", "obj": "Iranian languages"}]}
+{"sent_id": "ont_10_culture_test_92", "response": "<s><triplet> Antiviral Chemistry & Chemotherapy <subj> January 1990 <obj> inception <subj> Blackwell Publishing <obj> publisher</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_93", "response": "<s><triplet> British Journal of Sports Medicine <subj> 1964 <obj> inception</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_94", "response": "<s><triplet> Veterinary Record <subj> 1888 <obj> inception</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_95", "response": "<s><triplet> The Clinical Investigator <subj> 1992 <obj> inception</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_96", "response": "<s><triplet> Vascular Pharmacology <subj> 1970 <obj> inception</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_97", "response": "<s><triplet> Physician and Sportsmedicine <subj> 1973 <obj> inception</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_98", "response": "<s><triplet> European Journal of Medicinal Chemistry <subj> 1966 <obj> inception</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_99", "response": "<s><triplet> Hong-yu Li <subj> 1995 <obj> work period (start)</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_100", "response": "<s><triplet> Current Medical Research and Opinion <subj> medical journal <obj> instance of <subj> 1972 <obj> inception</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_101", "response": "<s><triplet> Journal of Inherited Metabolic Disease <subj> 1978 <obj> inception</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_102", "response": "<s><triplet> Palle Holmstrup <subj> University of Copenhagen <obj> employer</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_103", "response": "<s><triplet> Glenn McGee <subj> 1999 <obj> inception</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_104", "response": "<s><triplet> Takeda Pharmaceuticals International <subj> 2008 <obj> inception</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_105", "response": "<s><triplet> Dermatology Online Journal <subj> medical journal <obj> instance of <subj> 1995 <obj> inception</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_106", "response": "<s><triplet> Ophthalmic Record <subj> 1917 <obj> inception</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_107", "response": "<s><triplet> The American Journal of Pathology <subj> 1999 <obj> inception</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_108", "response": "<s><triplet> Arthritis & Rheumatology <subj> 1958 <obj> inception</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_109", "response": "<s><triplet> JAMA Surgery <subj> 1920 <obj> inception</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_110", "response": "<s><triplet> Journal of Musculoskeletal Research <subj> 1997 <obj> inception <subj> World Scientific <obj> publisher</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_111", "response": "<s><triplet> Annals of Behavioral Medicine <subj> Society of Behavioral Medicine <obj> publisher <subj> 1979 <obj> inception</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_112", "response": "<s><triplet> International Journal of Nephrology and Renovascular Disease <subj> 2008 <obj> inception <subj> Dove Medical Press <obj> publisher</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_113", "response": "<s><triplet> Journal of Medical Physics <subj> 1976 <obj> inception</s>", "triples": [{"sub": "Journal of Medical Physics", "rel": "inception", "obj": "1976"}]}
+{"sent_id": "ont_10_culture_test_114", "response": "<s><triplet> Dove Medical Press <subj> 2009 <obj> inception</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_115", "response": "<s><triplet> American Journal of Hematology <subj> 1976 <obj> inception</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_116", "response": "<s><triplet> International Journal of Chronic Obstructive Pulmonary Disease <subj> 2006 <obj> inception</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_117", "response": "<s><triplet> child health issues <subj> paediatrics <obj> studied by <triplet> paediatrics <subj> child health issues <obj> studies</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_118", "response": "<s><triplet> Annals of Surgery <subj> 1885 <obj> inception</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_119", "response": "<s><triplet> Annals of Tropical Paediatrics <subj> 1981 <obj> inception</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_120", "response": "<s><triplet> Annals of Family Medicine <subj> 2003 <obj> inception</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_121", "response": "<s><triplet> Toxicologic Pathology <subj> 1972 <obj> inception <subj> SAGE Publications <obj> publisher <triplet> Toxicologic Pathology <subj> 1972 <obj> inception <subj> SAGE Publications <obj> publisher <triplet> Toxicologic Pathology <subj> 1972 <obj> inception <subj> SAGE Publications <obj> publisher</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_122", "response": "<s><triplet> Annals of Saudi Medicine <subj> 1981 <obj> inception</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_123", "response": "<s><triplet> Clinical Gastroenterology and Hepatology <subj> January 2003 <obj> inception</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_124", "response": "<s><triplet> 1975 <subj> 1975 <obj> point in time</s>", "triples": [{"sub": "1975", "rel": "inception", "obj": "1975"}]}
+{"sent_id": "ont_10_culture_test_125", "response": "<s><triplet> Infection, Genetics and Evolution <subj> scientific journal <obj> instance of <subj> 2001 <obj> inception <triplet> scientific journal <subj> peer-reviewed <obj> uses</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_126", "response": "<s><triplet> Asian Journal of Andrology <subj> 1999 <obj> inception</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_127", "response": "<s><triplet> British Journal of Nutrition <subj> 1947 <obj> inception <subj> Cambridge University Press <obj> publisher</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_128", "response": "<s><triplet> Comprehensive Therapy <subj> 1975 <obj> inception <subj> Humana Press <obj> publisher</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_129", "response": "<s><triplet> European Journal of Cancer Prevention <subj> 1991 <obj> inception <subj> Lippincott Williams & Wilkins <obj> publisher</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_130", "response": "<s><triplet> Age and Ageing <subj> 1972 <obj> inception <subj> Oxford University Press <obj> publisher</s>", "triples": [{"sub": "Age and Ageing", "rel": "inception", "obj": "1972"}, {"sub": "Age and Ageing", "rel": "inception", "obj": "Oxford University Press"}]}
+{"sent_id": "ont_10_culture_test_131", "response": "<s><triplet> Journal of Indian Association of Pediatric Surgeons <subj> 1995 <obj> inception</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_132", "response": "<s><triplet> Journal of Orthopaedic Research <subj> 1983 <obj> inception</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_133", "response": "<s><triplet> 1985 <subj> 1985 <obj> point in time</s>", "triples": [{"sub": "1985", "rel": "inception", "obj": "1985"}]}
+{"sent_id": "ont_10_culture_test_134", "response": "<s><triplet> Journal of Experimental & Clinical Cancer Research <subj> 1982 <obj> inception <subj> BioMed Central <obj> publisher</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_135", "response": "<s><triplet> International Journal of General Medicine <subj> 2008 <obj> inception <subj> Dove Medical Press <obj> publisher</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_136", "response": "<s><triplet> Journal of Oncology Practice <subj> 2005 <obj> inception <subj> American Society of Clinical Oncology <obj> publisher</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_137", "response": "<s><triplet> Abraham Jacobi <subj> editor-in-chief <obj> position held</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_138", "response": "<s><triplet> Test Output <subj> 2002 <obj> inception</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_139", "response": "<s><triplet> Journal of Medical Ethics <subj> academic journal <obj> instance of <subj> bioethics <obj> main subject <subj> 1975 <obj> inception <triplet> academic journal <subj> peer-reviewed <obj> uses</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_140", "response": "<s><triplet> Applied and Environmental Microbiology <subj> 1953 <obj> inception</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_141", "response": "<s><triplet> Dove Medical Press <subj> 2008 <obj> inception</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_142", "response": "<s><triplet> Dove Medical Press <subj> 2007 <obj> inception</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_143", "response": "<s><triplet> AIDS Research and Human Retroviruses <subj> 1983 <obj> inception</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_144", "response": "<s><triplet> Journal of Occupational and Environmental Medicine <subj> 1959 <obj> inception</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_145", "response": "<s><triplet> Human Mutation <subj> 1992 <obj> inception</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_146", "response": "<s><triplet> Journal of Orthopaedic & Sports Physical Therapy <subj> 1979 <obj> inception</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_147", "response": "<s><triplet> Scientific World Journal <subj> 2001 <obj> inception <subj> Hindawi Publishing Corporation <obj> publisher</s>", "triples": [{"sub": "Scientific World Journal", "rel": "inception", "obj": "2001"}]}
+{"sent_id": "ont_10_culture_test_148", "response": "<s><triplet> Vascular and Endovascular Surgery <subj> 1967 <obj> inception <subj> Sage Publications <obj> publisher</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_149", "response": "<s><triplet> International Journal of Obesity <subj> 1977 <obj> inception</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_150", "response": "<s><triplet> Endocrine Journal <subj> 1925 <obj> inception</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_151", "response": "<s><triplet> European Journal of Pain <subj> 1997 <obj> inception <subj> Wiley-Blackwell <obj> publisher</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_152", "response": "<s><triplet> 1994 concert <subj> 1994 <obj> point in time</s>", "triples": [{"sub": "1994 concert", "rel": "start time", "obj": "1994"}]}
+{"sent_id": "ont_10_culture_test_153", "response": "<s><triplet> Beovizija <subj> music festival <obj> instance of <subj> 2003 <obj> inception</s>", "triples": [{"sub": "Beovizija", "rel": "start time", "obj": "music festival"}]}
+{"sent_id": "ont_10_culture_test_154", "response": "<s><triplet> Ultra <subj> Depeche Mode <obj> performer</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_155", "response": "<s><triplet> grand final <subj> 21 December 2013 <obj> point in time</s>", "triples": [{"sub": "grand final", "rel": "start time", "obj": "21 December 2013"}]}
+{"sent_id": "ont_10_culture_test_156", "response": "<s><triplet> Freddie Mercury <subj> Queen <obj> member of <subj> Bohemian Rhapsody <obj> notable work <subj> Radio Ga Ga <obj> notable work <subj> Killer Queen <obj> notable work <triplet> Queen <subj> Freddie Mercury <obj> has part <subj> Bohemian Rhapsody <obj> notable work <subj> Radio Ga Ga <obj> notable work <subj> Killer Queen <obj> notable work <triplet> Bohemian Rhapsody <subj> Queen <obj> performer <triplet> Radio Ga Ga <subj> Queen <obj> performer <triplet> Killer Queen <subj> Queen <obj> performer</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_157", "response": "<s><triplet> Shabuhragan <subj> Mani <obj> author <triplet> Manichaean <subj> Mani <obj> founded by <triplet> Mani <subj> Shabuhragan <obj> notable work <subj> Manichaean <obj> religion</s>", "triples": [{"sub": "Manichaean", "rel": "indigenous to", "obj": "Mani"}, {"sub": "Mani", "rel": "religious order", "obj": "Manichaean"}]}
+{"sent_id": "ont_10_culture_test_158", "response": "<s><triplet> Bartholomew the Apostle <subj> beheaded <obj> instance of</s>", "triples": []}
+{"sent_id": "ont_10_culture_test_159", "response": "<s><triplet> Mount Etna <subj> Sicily <obj> located on terrain feature</s>", "triples": []}
+{"sent_id": "ont_10_culture_unseen_test_1", "response": "<s><triplet> Augusta Savage <subj> Armenians <obj> ethnic group</s>", "triples": [{"sub": "Augusta Savage", "rel": "ethnic group", "obj": "Armenians"}]}
+{"sent_id": "ont_10_culture_unseen_test_2", "response": "<s><triplet> Lombards <subj> James Reese Europe <obj> has part</s>", "triples": []}
+{"sent_id": "ont_10_culture_unseen_test_3", "response": "<s><triplet> Cato the Elder <subj> Esperanto <obj> field of work</s>", "triples": [{"sub": "Cato the Elder", "rel": "languages spoken, written or signed", "obj": "Esperanto"}]}
+{"sent_id": "ont_10_culture_unseen_test_4", "response": "<s><triplet> Vilho V\u00e4is\u00e4l\u00e4 <subj> Latin movement <obj> movement</s>", "triples": [{"sub": "Vilho V\u00e4is\u00e4l\u00e4", "rel": "indigenous to", "obj": "Latin movement"}]}
+{"sent_id": "ont_10_culture_unseen_test_5", "response": "<s><triplet> American Journal of Bioethics <subj> 1999 <obj> inception</s>", "triples": []}
+{"sent_id": "ont_10_culture_unseen_test_6", "response": "<s><triplet> Veterinary Record <subj> 1888 <obj> inception</s>", "triples": []}
+{"sent_id": "ont_10_culture_unseen_test_7", "response": "<s><triplet> Bartholomew the Apostle <subj> symbol of breast <obj> depicts</s>", "triples": [{"sub": "Bartholomew the Apostle", "rel": "iconographic symbol", "obj": "symbol of breast"}]}
+{"sent_id": "ont_10_culture_unseen_test_8", "response": "<s><triplet> symbol knife <subj> iconographic <obj> subclass of</s>", "triples": [{"sub": "symbol knife", "rel": "iconographic symbol", "obj": "iconographic"}]}
