@@ -91,3 +91,10 @@ have the time to correctly format it, clean it and generate the triples list.
 ## Yggdrasil
 
 Run `module load GCCcore/13.2.0 Python/3.11.5` to load up python, then `pipenv install && pipenv shell` from the root directory. 
+
+## REBEL Fine tuning
+
+### Hydra
+
+Idea is to compose configuration across a folder and `.yaml` hierarchy of files.
+See the [intro](https://hydra.cc/docs/intro/).

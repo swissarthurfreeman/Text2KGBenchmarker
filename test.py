@@ -1,4 +1,6 @@
-from transformers import pipeline
+print("Import transformers...")
+from transformers import pipeline   # this takes ~2:30 on yggdrasil, why ?
+print("import openai...")
 from openai import OpenAI
 import re
 
@@ -68,13 +70,16 @@ class OpenAIAdapter(LLMAdapter):
 
 
 class RebelAdapter(LLMAdapter):
-    def __init__(self, model_name: str, device: str = "cuda"):
+    def __init__(self, model_name: str):
         self.model_name = model_name.replace("/", ".")
-        self.rebel_pipeline = pipeline('text2text-generation', model=model_name, tokenizer=model_name, device=device)
-        
+        print("Loading Rebel Pipeline...")
+        self.rebel_pipeline = pipeline('text2text-generation', model=model_name, tokenizer=model_name, device="cuda")
+        print("Done, device is ", self.rebel_pipeline.device)
+    
     def queryLLM(self, sent_id: str, prompt: str) -> LLMResponse:
         test_sentence = prompt[prompt.find("Test Sentence:")+len("Test Sentence:"):]
         
+        print(test_sentence)
         # returns a list [{"generated_token_ids": tensor([0, 5205, ...])}, ...] for every element of list of inputs passed to pipeline, in this case just one.
         raw_token_idx_tensors = self.rebel_pipeline(test_sentence, return_tensors=True, return_text=False)[0]['generated_token_ids']
         extracted_text: list[str] = self.rebel_pipeline.tokenizer.batch_decode([raw_token_idx_tensors])
@@ -119,8 +124,9 @@ class RebelAdapter(LLMAdapter):
 
 
 if __name__ == '__main__':
-    rebel = RebelAdapter("Babelscape/rebel-large", "cpu")
-    response: LLMResponse = rebel.queryLLM("bogus_id", "Test Sentence: Carouge is a municipality in Geneva, Switzerland.")
-    print(response.triples)
-    response: LLMResponse = rebel.queryLLM("bogus_id", "Test Sentence: Pully is a municipality in the canton of Vaud, Switzerland.")
-    print(response.triples)
+    rebel = RebelAdapter("Babelscape/rebel-large")
+    response = rebel.queryLLM("bogus_id", "Test Sentence: Carouge is a municipality in Geneva, Switzerland.")
+    print(response)
+    
+    response = rebel.queryLLM("bogus_id", "Test Sentence: Pully is a municipality in the canton of Vaud, Switzerland.")
+    print(response)

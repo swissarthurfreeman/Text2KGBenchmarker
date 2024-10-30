@@ -10,6 +10,15 @@ nltk = "*"
 transformers = "*"
 torch = "*"
 sentence-transformers = "*"
+pytorch-lightning = "*"
+omegaconf = "*"
+hydra-core = "*"
+neptune-client = "*"
+datasets = "*"
+rouge-score = "*"
+sacrebleu = "*"
+wandb = "*"
+streamlit = "*"
 
 [dev-packages]
 
