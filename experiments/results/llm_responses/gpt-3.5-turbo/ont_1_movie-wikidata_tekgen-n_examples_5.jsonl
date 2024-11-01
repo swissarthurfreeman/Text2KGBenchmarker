@@ -1,0 +1,2 @@
+{"id": "ont_1_movie_test_1", "response": "director(Bleach: Hell Verse, Noriyuki Abe)", "triples": [{"sub": "Bleach: Hell Verse", "rel": "director", "obj": "Noriyuki Abe"}]}
+{"id": "ont_1_movie_test_2", "response": "production_company(Keyboard Cat, Charlie Schmidt)\npublication_date(Keyboard Cat, 1984)", "triples": [{"sub": "Keyboard Cat", "rel": "production_company", "obj": "Charlie Schmidt"}, {"sub": "Keyboard Cat", "rel": "publication_date", "obj": "1984"}]}

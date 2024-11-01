@@ -1,20 +1,7 @@
-from typing import List
-import pprint as pp
-import random
 import json
+import random
+from utils import getOntologyConceptsList, getOntologyRelationsList, load_jsonl_as_dict
 
-
-def load_jsonl_as_dict(path: str) -> dict[str, dict[str, bool|list[str]|list[dict[str, str]]]]:
-    with open(path, "r") as f:
-        sent_dicts = [json.loads(line) for line in f]
-        
-        res = {}
-        for sent_dict in sent_dicts:
-            res[sent_dict['id']] = {}
-            for key in sent_dict:
-                res[sent_dict['id']][key] = sent_dict[key]
-                
-        return res
 
 class Prompter:
     """
@@ -25,13 +12,9 @@ class Prompter:
     
     Usage
     -----
-    >>> prompter = Prompter(
-            "../data/wikidata_tekgen/ontologies/1_movie_ontology.json"
-            "../data/wikidata_tekgen/train/ont_1_movie_train.jsonl"
-            "../data/wikidata_tekgen/test/ont_1_movie_test.jsonl"
-        )
+    >>> wikidata_prompter = Prompter("wikidata_tekgen", "ont_9_nature")
 
-    >>> prompter.getPromptOf("ont_1_movie_test_53", n_examples=2)
+    >>> wikidata_prompter.getPromptOf("ont_1_movie_test_53", n_examples=2)
     ```
     Given the following ontology and sentences, please extract the triples from the
     sentence  according to the relations in the ontology. In the output, only include
@@ -71,26 +54,27 @@ class Prompter:
 
     Test Output:
     ```
-    
-
     """
-    def __init__(self, ontology_path: str, train_sent_path: str, test_sent_path: str): 
-        self.ontology_description: str = self._getOntologyDescription(ontology_path)
-        self.train_sent_path = train_sent_path
+    def __init__(self, dataset_name: str, ontology_name: str): 
+        self._dataset_name, self._ontology_name = dataset_name, ontology_name
+        self.ontology_description: str = self._getOntologyDescription()
+        self.train_sent_path = "../../data/" + dataset_name + "/train/" + ontology_name + "_train.jsonl"
         self.train_sentences = load_jsonl_as_dict(self.train_sent_path)
-        self.test_sent_path = test_sent_path
+        self.test_sent_path = "../../data/" + dataset_name + "/test/" + ontology_name + "_test.jsonl"
         self.test_sentences = load_jsonl_as_dict(self.test_sent_path)
                     
 
     def getPromptOf(self, test_sentence_id: str, n_examples: int) -> str:
         """
+        Get prompt for LLM, explains the ontology concepts and relation as well as the triple 
+        extraction task with `n_examples` examples. 
         
         Parameters
         ----------
         - test_sentence_id: dict
         - n_examples: int
         """
-        res = self.getSystemInstructions() + "\n\nCONTEXT:\n\n"
+        res = self._getSystemInstructions() + "\n\nCONTEXT:\n\n"
         res += self.ontology_description
         try:
             test_sentence = self.test_sentences[test_sentence_id]
@@ -98,9 +82,9 @@ class Prompter:
             print("Test sentence id " + test_sentence_id + " doesn't exist in " + self.test_sent_path + " file.")
             exit(1)
         
-        # TODO : if n_examples is larger than len(test_sentence[similars]) we should sample non similar sentence from train data.
         similar_train_sent_ids: list[str] = test_sentence["similars"][:n_examples]
         if n_examples > len(test_sentence["similars"]):
+            # if n_examples is larger than len(test_sentence[similars]) we sample non similar sentence from train data.
             print("WARNING: " + test_sentence["id"] + " does not have ", n_examples, " similars, sampling missing examples from train data instead")
             for _ in range(n_examples - len(test_sentence["similars"])):
                 # append a bunch of random sentences
@@ -116,48 +100,24 @@ class Prompter:
         res += "\n\nTest Sentence: " + test_sentence["sent"] + "\n\nTest Output: "
         return res
 
-    def _getOntologyDescription(self, ontology_path) -> str:
+    def _getOntologyDescription(self) -> str:
         res = ""
-        with open(ontology_path, "r") as onto_f:
-            onto = json.load(onto_f)
-            res = "Ontology Concepts:\n"
-            res += self.getConceptsOf(onto["concepts"])
-            res += "\n\nOntology Relations:\n"
-            res += self.getRelationsOf(onto["relations"])
+        res = "Ontology Concepts:\n"
+        res += ", ".join(getOntologyConceptsList(self._ontology_name, self._dataset_name))
+        res += "\n\nOntology Relations:\n"
+        res += ", ".join(getOntologyRelationsList(self._ontology_name, self._dataset_name))
         return res
         
-    def getConceptsOf(self, concepts: List[dict]) -> str:
-        res = ""
-        for concept in concepts:
-            res += concept["label"].strip() + ", "
-        return res[:-2]     # ignore extra comma
-    
-    
-    def getRelationsOf(self, relations: List[dict]) -> str:
-        res = ""
-        for relation in relations:
-            res += relation["label"].strip().replace(" ", "_") + "(" + relation["domain"] + ", " + relation["range"] + "), "
-        return res[:-2]     # ignore extra comma
-
-    def getSystemInstructions(self) -> str:
+    def _getSystemInstructions(self) -> str:
         return """Given the following ontology and sentences, please extract the triples from the sentence according to the relations in the ontology. \nIn the output, only include the triples in the given output format, if you can't extract triples, leave the output empty. Do not include any formatting backticks like ``` or any notes or remarks. Extract as many triples as possible."""
 
 
 if __name__ == "__main__":
-    wikidata_prompter = Prompter(
-        "../../data/wikidata_tekgen/ontologies/ont_9_nature.json",
-        "../../data/wikidata_tekgen/train/ont_9_nature_train.jsonl",
-        "../../data/wikidata_tekgen/test/ont_9_nature_test.jsonl"
-    )
+    #wikidata_prompter = Prompter("wikidata_tekgen", "ont_9_nature")
+    #print(wikidata_prompter.getPromptOf("ont_9_nature_unseen_test_19", n_examples=5))
     
-    print(wikidata_prompter.getPromptOf("ont_9_nature_unseen_test_19", n_examples=10))
     
-    """
-    dpedia_webnlg_prompter = Prompter(
-        "../../data/dpedia_webnlg/ontologies/ont_6_politician.json",
-        "../../data/dpedia_webnlg/train/ont_6_politician_train.jsonl",
-        "../../data/dpedia_webnlg/test/ont_6_politician_test.jsonl"
-    )
-    """
+    dpedia_prompter = Prompter("dpedia_webnlg", "ont_4_building")
+    print(dpedia_prompter.getPromptOf("ont_4_building_test_1", n_examples=5))
     
-    #print(dpedia_webnlg_prompter.getPromptOf("ont_6_politician_test_1", n_examples=3))
+    

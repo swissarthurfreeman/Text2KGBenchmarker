@@ -1,7 +1,9 @@
-from prompter import Prompter
-from adapter import LLMAdapter, LLMResponse
 import os
 import json
+from prompter import Prompter
+from adapter import LLMAdapter, LLMResponse, OpenAIAdapter, RebelAdapter
+from utils import WIKIDATA_TEKGEN_ONT_NAMES, DPEDIA_WEBNLG_ONT_NAMES, load_jsonl_as_list
+
 
 class LLMRunConfig:
     """
@@ -11,12 +13,12 @@ class LLMRunConfig:
     - `ontology_file_path` path towards the ontology definition of the train/test files
     - `adapter` LLMAdapter instance, with loaded LLM configuration
     """
-    def __init__(self, train_file_path: str, test_file_path: str, ontology_file_path: str, n_train_examples: int, adapter: LLMAdapter):
-        self.train_file_path = train_file_path
-        self.test_file_path = test_file_path
-        self.ontology_file_path = ontology_file_path
+    def __init__(self, dataset_name: str, ontology_name: str, adapter: LLMAdapter, n_train_examples: int | None = None):
+        self.dataset_name = dataset_name
+        self.ontology_name = ontology_name
         self.n_train_examples = n_train_examples
         self.adapter = adapter
+
 
 class LLMRun:
     """
@@ -26,17 +28,25 @@ class LLMRun:
     def __init__(self, config: LLMRunConfig):
         self.llm_responses: list[LLMResponse] = []
         self.config = config
-        self.prompter = Prompter(self.config.ontology_file_path, self.config.train_file_path, self.config.test_file_path)
+        self.prompter = Prompter(self.config.dataset_name, self.config.ontology_name)
+        self.test_sentence_ids = list(self.prompter.test_sentences.keys())
         
-        with open(config.test_file_path, "r") as test_sent_f:
-            self.test_sentence_ids: list[str] = [json.loads(line)['id'] for line in test_sent_f]
+        self.llm_response_dir = "../results/llm_responses/" + self.config.adapter.model_name
+        if self.config.n_train_examples != None:
+            self.llm_response_dir += "-n_examples=" + str(self.config.n_train_examples)
+        
+        if not os.path.exists(self.llm_response_dir): 
+            os.makedirs(self.llm_response_dir)
     
     def run(self):
-        print("Starting LLM run for ontology at: " + self.config.ontology_file_path + "\nwith model: " + self.config.adapter.model_name + "\nn_train_examples: " + str(self.config.n_train_examples))
-        res_file_path = self.resolveResultsFilePath()
+        """Run inference for all test ids of configuration, pick-up at last inference if interrupted."""
+        print("Starting LLM run for ontology : " + self.config.ontology_name + "\ndataset : " + self.config.dataset_name + "\nwith model: " + self.config.adapter.model_name + "\nn_train_examples: " + str(self.config.n_train_examples))
+        
+        res_file_path = self.llm_response_dir + "/" + self.config.ontology_name + "-" + self.config.dataset_name + ".jsonl"
+         
         print("Saving responses to " + res_file_path)
         
-        # if file already exist, picup from where we left off
+        # if file already exist, pick-up from where we left off
         start_idx = 0
         if os.path.exists(res_file_path):
             with open(res_file_path, "r") as f:    
@@ -53,27 +63,28 @@ class LLMRun:
             with open(res_file_path, "a") as f:
                 f.write(json.dumps(vars(response)) + "\n")
         
-        print("Done")
+        print("done")
+
+
+if __name__ == "__main__":
+    def run_inference_on(dataset_name: str, ontology_name: str, adapter: LLMAdapter):
+        conf = LLMRunConfig(
+            dataset_name=dataset_name,
+            ontology_name=ontology_name,
+            adapter=adapter,
+            n_train_examples=4
+        )
         
-    def resolveResultsFilePath(self) -> str:
-        """For example, ../results/llm_responses/gpt-4o/1_movie_ontology.test_wikidata_tekgen.train_wikidata_tekgen.n_examples_4"""
-        res_file_path = ["../results/llm_responses/" + self.config.adapter.model_name + "/"]
+        runner = LLMRun(conf)
+        runner.run()
+    
+    
+    #model_adapter = RebelAdapter("Babelscape/rebel-large")
+    model_adapter = OpenAIAdapter(os.environ['OPEN_API_KEY'], "gpt-3.5-turbo")
+    for ontology_name in WIKIDATA_TEKGEN_ONT_NAMES:
+        run_inference_on("wikidata_tekgen", ontology_name, model_adapter)
         
-        if not os.path.exists("../results/llm_responses/" + self.config.adapter.model_name):
-            os.makedirs("../results/llm_responses/" + self.config.adapter.model_name)
-        
-        # append ontology name
-        res_file_path.append(self.config.ontology_file_path.split("/")[-1][:-5])
-        
-        res_file_path = ["".join(res_file_path)]
-        
-        if "wikidata_tekgen" in self.config.test_file_path: res_file_path.append("test_wikidata_tekgen")
-        if "wikidata_tekgen" in self.config.train_file_path: res_file_path.append("train_wikidata_tekgen")
-        
-        if "dpedia_webnlg" in self.config.test_file_path: res_file_path.append("test_dpedia_webnlg")
-        if "dpedia_webnlg" in self.config.train_file_path: res_file_path.append("train_dpedia_webnlg")
-        
-        res_file_path.append("n_examples_" + str(self.config.n_train_examples))
-        return "-".join(res_file_path) + ".jsonl"
+    for ontology_name in DPEDIA_WEBNLG_ONT_NAMES:
+        run_inference_on("dpedia_webnlg", ontology_name, model_adapter)
         
         

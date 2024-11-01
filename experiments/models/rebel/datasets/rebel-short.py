@@ -39,8 +39,6 @@ _URLS = {
     "test": _URL + "en_test.jsonl",
 }
 
-print(_URLS)
-
 
 class RebelConfig(datasets.BuilderConfig):
     """BuilderConfig for REBEL."""
@@ -75,14 +73,15 @@ class Rebel(datasets.GeneratorBasedBuilder):
                     "triplets": datasets.Value("string"),
                 }
             ),
-            supervised_keys=None, # No default supervised_keys (as we have to pass both question and context as input).
+            # No default supervised_keys (as we have to pass both question
+            # and context as input).
+            supervised_keys=None,
+            # homepage="",
+#             citation=_CITATION,
         )
 
     def _split_generators(self, dl_manager):
-        print(self.config)
         if self.config.data_files:
-            
-            # TODO : investigate why we had to add self.config.data_files['relations'][0] to this crap
             downloaded_files = {
                 "train": self.config.data_files["train"][0], # self.config.data_dir + "en_train.jsonl",
                 "dev": self.config.data_files["dev"][0], #self.config.data_dir + "en_val.jsonl",
@@ -100,8 +99,6 @@ class Rebel(datasets.GeneratorBasedBuilder):
     def _generate_examples(self, filepath):
         """This function returns the examples in the raw (text) form."""
         logging.info("generating examples from = %s", filepath)
-        
-        # TODO : investigate why we had to add self.config.data_files['relations'][0] to this crap
         relations_df = pd.read_csv(self.config.data_files['relations'][0], header = None, sep='\t')
         relations = list(relations_df[0])
 
@@ -140,8 +137,8 @@ class Rebel(datasets.GeneratorBasedBuilder):
                             text = ''
                             continue
 
-                        #text = re.sub('([\[\].,!?()])', r' \1 ', text.replace('()', ''))
-                        #text = re.sub('\s{2,}', ' ', text)
+                        text = re.sub('([\[\].,!?()])', r' \1 ', text.replace('()', ''))
+                        text = re.sub('\s{2,}', ' ', text)
 
                         yield article['uri'] + '-' + str(count), {
                             "title": article['title'],

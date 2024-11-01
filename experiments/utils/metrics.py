@@ -1,310 +1,238 @@
 import os
+import re
 import glob
 import json
-import re
-from prompter import load_jsonl_as_dict
-from nltk.tokenize import word_tokenize
-from nltk.stem import PorterStemmer
 import nltk
 nltk.download('punkt_tab')
-
-dpedia_webnlg_files = [
-    "ont_1_university",
-    "ont_2_musicalwork",
-    "ont_3_airport",
-    "ont_4_building",
-    "ont_5_athlete",
-    "ont_6_politician",
-    "ont_7_company",
-    "ont_8_celestialbody",
-    "ont_9_astronaut",
-    "ont_10_comicscharacter",
-    "ont_11_meanoftransportation",
-    "ont_12_monument",
-    "ont_13_food",
-    "ont_14_writtenwork",
-    "ont_15_sportsteam",
-    "ont_16_city",
-    "ont_17_artist",
-    "ont_18_scientist",
-    "ont_19_film"
-]
-
-wikidata_tekgen_files = [
-    "ont_1_movie",
-    "ont_2_music",
-    "ont_3_sport",
-    "ont_4_book",
-    "ont_5_military",
-    "ont_6_computer",
-    "ont_7_space",
-    "ont_8_politics",
-    "ont_9_nature",
-    "ont_10_culture"
-]
+from nltk.stem import PorterStemmer
+from nltk.tokenize import word_tokenize
+from utils import DPEDIA_WEBNLG_ONT_NAMES, WIKIDATA_TEKGEN_ONT_NAMES
+from utils import load_jsonl_as_dict, getOntologyConceptsList, getOntologyRelationsList, camelCaseToSpaces, load_jsonl_as_list
 
 class LLMMetrics():
     """
-    Helper class to compute all metrics for a single run like wikidata_tekgen train / test n_examples 2 on movie ontology.
+    Helper class to compute all metrics for a single ontology of a given dataset.
+    An instance should only be used once via it's `generate()` method and
+    then discarded. 
     """
-    def __init__(self, onto_path: str, test_sent_path: str):
-        
-        
-        self.test_sent_path = test_sent_path
+    def __init__(self, llm_responses_folder_name: str, ontology_name: str, dataset_name: str):
+        self.llm_responses_folder_name, self.ontology_name, self.dataset_name = llm_responses_folder_name, ontology_name, dataset_name
+        self.test_sent_path = "../../data/" + dataset_name + "/test/" + ontology_name + "_test.jsonl" 
         self.test_sentences: dict = load_jsonl_as_dict(self.test_sent_path)
         
-        with open(onto_path, "r") as onto_f:
-            concepts = []
-            relations = []
-            ontology = json.load(onto_f)
-            
-            for concept in ontology["concepts"]:
-                concepts.append(concept["label"])
-            
-            for rel in ontology["relations"]:   # if camel case, will convert
-                relations.append(" ".join(re.sub('([A-Z][a-z]+)', r' \1', re.sub('([A-Z]+)', r' \1', rel["label"])).split()).lower())
-            self.onto_concepts: list[str] = concepts
-            self.onto_relations: list[str] = relations
-            print(self.onto_relations)
+        self.n_unseen, self.n_verified = 0, 0
+        for test_sent in self.test_sentences.values():
+            if ("unseen" in test_sent) and test_sent["unseen"]: self.n_unseen += 1
+            if ("verified" in test_sent) and test_sent["verified"]: self.n_verified += 1
         
-    def computeMetricsPerReponseOf(self, llm_response_file_path: str) -> None:
-        """Open `llm_response_file` read all sentences, compute metrics for every sentence,
-        add average over all sentences of the ontology to the averages file."""
-        model_name = llm_response_file_path.split("/")[-2]
-        test_data_name = llm_response_file_path.split("/")[-1].split("-")[1]
-        train_data_name = llm_response_file_path.split("/")[-1].split("-")[2]
-        n_examples = int(llm_response_file_path.split("/")[-1].split("_")[-1][0])
-        ontology_name = llm_response_file_path.split("/")[-1].split("-")[0]
+        self.onto_concepts: list[str] = getOntologyConceptsList(ontology_name, dataset_name)
+        """list of raw ontology concepts, surface form words seperated by spaces, no camelcase."""
+        self.onto_relations: list[str] = getOntologyRelationsList(ontology_name, dataset_name)
+        """list of ontology relations, surface form words seperated by spaces."""
         
-        with open(llm_response_file_path) as llm_response_f:
-            llm_responses: list[dict] = [json.loads(line) for line in llm_response_f]
-            for response in llm_responses:
-                r: dict = self.addMetricsToResponse(response)
-                if not os.path.exists("../results/metrics/" + model_name):
-                    os.mkdir("../results/metrics/" + model_name)
-                
-                with open("../results/metrics/" + model_name + "/" + llm_response_file_path.split("/")[-1][:-6] + "_metrics.jsonl", "a") as out_f:
-                    out_f.write(json.dumps(r) + "\n")
-                
-                self.test_sentences[r["id"]]["precision"] = r["precision"]        # keep track of metrics in self
-                self.test_sentences[r["id"]]["recall"] = r["recall"]
-                self.test_sentences[r["id"]]["f1"] = r["f1"]
-                self.test_sentences[r["id"]]["onto_conf"] = r["onto_conf"]
-                self.test_sentences[r["id"]]["sub_halluc"] = r["sub_halluc"]
-                self.test_sentences[r["id"]]["rel_halluc"] = r["rel_halluc"]
-                self.test_sentences[r["id"]]["obj_halluc"] = r["obj_halluc"]
+        # if few shot setting, llm_results will have one folder per n_shot, e.g. gpt-4o-n_examples=4, considered as a seperate technique.
+        self.llm_responses_path = "../results/llm_responses/" + self.llm_responses_folder_name + "/" + self.ontology_name + "-" + self.dataset_name + ".jsonl"
+        self.metrics_dir = "../results/metrics/" + llm_responses_folder_name
+        self.avg_met_path = self.metrics_dir + "/" + self.dataset_name + "_avg.jsonl"
+        if not os.path.exists(self.metrics_dir): os.mkdir(self.metrics_dir)
         
-        average_metrics_path = "../results/metrics/" + model_name + "/" + "-".join([test_data_name, train_data_name]) + "-n_examples_" + str(n_examples) + "_averages.jsonl"
-        self.computeAverageMetrics(ontology_name, average_metrics_path)
-    
-    def computeAverageMetrics(self, ontology_name: str, average_metrics_path: str) -> None:
-        metrics = {
-            "onto": ontology_name,
-            "unseen": {"n_sentences": self.get_nUnseen(), "avg_precision": 0, "avg_recall": 0, "avg_f1": 0, "avg_onto_conf": 0, "avg_sub_halluc": 0, "avg_rel_halluc": 0, "avg_obj_halluc": 0}, 
-            "verified": {"n_sentences": self.get_nVerified(), "avg_precision": 0, "avg_recall": 0, "avg_f1": 0, "avg_onto_conf": 0, "avg_sub_halluc": 0, "avg_rel_halluc": 0, "avg_obj_halluc": 0}, 
+        self.avg_met = {
+            "onto": self.ontology_name,
+            "unseen": {"n_sentences": self.n_unseen, "avg_precision": 0, "avg_recall": 0, "avg_f1": 0, "avg_onto_conf": 0, "avg_sub_halluc": 0, "avg_rel_halluc": 0, "avg_obj_halluc": 0}, 
+            "verified": {"n_sentences": self.n_verified, "avg_precision": 0, "avg_recall": 0, "avg_f1": 0, "avg_onto_conf": 0, "avg_sub_halluc": 0, "avg_rel_halluc": 0, "avg_obj_halluc": 0}, 
             "all": {"n_sentences": len(self.test_sentences.keys()), "avg_precision": 0, "avg_recall": 0, "avg_f1": 0, "avg_onto_conf": 0, "avg_sub_halluc": 0, "avg_rel_halluc": 0, "avg_obj_halluc": 0}
         }
-        
-        def _average(test_sent_w_metrics, metrics, sent_type):
-            metrics[sent_type]["avg_precision"] += test_sent_w_metrics["precision"] / metrics[sent_type]["n_sentences"]
-            metrics[sent_type]["avg_recall"] += test_sent_w_metrics["recall"] / metrics[sent_type]["n_sentences"]
-            metrics[sent_type]["avg_f1"] += test_sent_w_metrics["f1"] / metrics[sent_type]["n_sentences"]
+        """Average metrics for the specified llm_responses, ontology and dataset."""
+        self.ps = PorterStemmer()
+                    
+    def generate(self) -> None:
+        """Compute performance metrics for specified `llm_responses_folder_name`, `ontology_name` and `dataset_name`, store
+        metrics within `../results/metrics/llm_responses_folder_name/ontology_name-dataset_name.jsonl`, add average metrics 
+        line to `../results/metrics/llm_responses_folder/dataset_name_avg.jsonl`"""
+    
+        llm_responses: list[dict] = load_jsonl_as_list(self.llm_responses_path)
+        for response in llm_responses:
+            response: dict = self._add_metrics_to(response)
             
-            metrics[sent_type]["avg_onto_conf"] += test_sent_w_metrics["onto_conf"] / metrics[sent_type]["n_sentences"] 
-            metrics[sent_type]["avg_sub_halluc"] += test_sent_w_metrics["sub_halluc"] / metrics[sent_type]["n_sentences"]
-            metrics[sent_type]["avg_rel_halluc"] += test_sent_w_metrics["rel_halluc"] / metrics[sent_type]["n_sentences"] 
-            metrics[sent_type]["avg_obj_halluc"] += test_sent_w_metrics["obj_halluc"] / metrics[sent_type]["n_sentences"]
-
-        
-        for test_sent_w_metrics in self.test_sentences.values():
-            if ("unseen" in test_sent_w_metrics.keys()) and test_sent_w_metrics["unseen"]: _average(test_sent_w_metrics, metrics, "unseen")
-            if ("verified" in test_sent_w_metrics.keys()) and test_sent_w_metrics["verified"]: _average(test_sent_w_metrics, metrics, "verified")
-            _average(test_sent_w_metrics, metrics, "all")
-                
-        with open(average_metrics_path, "a") as avg_f:
-            avg_f.write(json.dumps(metrics) + "\n")
+            with open(self.metrics_dir + "/" + self.ontology_name + "-" + self.dataset_name + ".jsonl", "a") as out_f:
+                out_f.write(json.dumps(response) + "\n")
             
-    def get_nUnseen(self) -> int:
-        res = 0
-        for test_sent in self.test_sentences.values():
-            if ("unseen" in test_sent) and test_sent["unseen"]:
-                res += 1
+            self._add_to_average(response)
+    
+        with open(self.avg_met_path, "a") as avg_f:
+            avg_f.write(json.dumps(self.avg_met) + "\n")
+    
+    def _add_to_average(self, test_sent_w_metrics):
+        for typ in ["unseen", "verified", "all"]:
+            if(self.avg_met[typ]["n_sentences"] == 0): continue
+            self.avg_met[typ]["avg_precision"] += test_sent_w_metrics["precision"] / self.avg_met[typ]["n_sentences"]
+            self.avg_met[typ]["avg_recall"] += test_sent_w_metrics["recall"] / self.avg_met[typ]["n_sentences"]
+            self.avg_met[typ]["avg_f1"] += test_sent_w_metrics["f1"] / self.avg_met[typ]["n_sentences"]
+            
+            self.avg_met[typ]["avg_onto_conf"] += test_sent_w_metrics["onto_conf"] / self.avg_met[typ]["n_sentences"] 
+            self.avg_met[typ]["avg_sub_halluc"] += test_sent_w_metrics["sub_halluc"] / self.avg_met[typ]["n_sentences"]
+            self.avg_met[typ]["avg_rel_halluc"] += test_sent_w_metrics["rel_halluc"] / self.avg_met[typ]["n_sentences"] 
+            self.avg_met[typ]["avg_obj_halluc"] += test_sent_w_metrics["obj_halluc"] / self.avg_met[typ]["n_sentences"]            
+    
+    def _add_metrics_to(self, res: dict) -> dict:
+        """Add performance metrics as keys to response dict, P, R, F1, OC, SH, RH, OH."""
+        res["precision"], res["recall"], res["f1"] = self._compute_prec(res)
+        res["onto_conf"], res["rel_halluc"] = self._get_ontology_conformance_RH(res) 
+        res["sub_halluc"], res["obj_halluc"] = self._get_subject_object_hallucinations(res)
         return res
     
-    def get_nVerified(self) -> int:
-        res = 0
-        for test_sent in self.test_sentences.values():
-            if ("verified" in test_sent) and test_sent["verified"]:
-                res += 1
-        return res
-    
-    def normalize_triple(self, sub: str, rel: str, obj: str) -> str:
-        # remove spaces and underscores and make lower case
-        sub_n = re.sub(r"(_|\s+)", '', sub).lower()
-        rel_n = re.sub(r"(_|\s+)", '', rel).lower()
-        obj_n = re.sub(r"(_|\s+)", '', obj).lower()
-        # concatenate them to a single string
-        return f"{sub_n}{rel_n}{obj_n}"
-    
-    def makeNormalizedSet(self, triples: list[dict]) -> set[str]:
-        res = set()
-        for triple in triples:
-            triple_string = self.normalize_triple(triple["sub"], triple["rel"], triple["obj"])
-            res.add(triple_string)
-        return res
-    
-    def computePRF1(self, response: dict) -> tuple[float, float, float]:
-        ground_truth: set[str] = self.makeNormalizedSet(self.test_sentences[response["sent_id"]]["triples"])
-        llm_triples: set[str] = self.makeNormalizedSet(response["triples"])
+    def _compute_prec(self, response: dict) -> tuple[float, float, float]:
+        """Compute and return classical precision measures, Precision, Recall, F1."""
+        ground_truth: set[str] = self._get_normalized_triple_set(self.test_sentences[response["id"]]["triples"])
+        llm_triples: set[str] = self._get_normalized_triple_set(response["triples"])
 
-        print(ground_truth)
-        print(llm_triples)
         if len(llm_triples) == 0 or len(ground_truth) == 0: return 0, 0, 0
         
         P = len(ground_truth.intersection(llm_triples)) / len(llm_triples)
         R = len(ground_truth.intersection(llm_triples)) / len(ground_truth)
         
-        if P + R > 0:
-            F1 = 2 *((P*R) / (P + R))
-        else:
-            F1 = 0
+        F1 = 2 *((P*R) / (P + R)) if P + R > 0 else F1 = 0
         return P, R, F1
     
-    def addMetricsToResponse(self, response: dict) -> dict:
-        P, R, F1, OC, SH, RH, OH = self.computeMetricsOf(response)
-        r = {}
-        r["id"] = response["sent_id"]
-        r["llm_triples"] = response["triples"]
-        r["precision"] = P
-        r["recall"] = R
-        r["f1"] = F1
-        r["onto_conf"] = OC
-        r["rel_halluc"] = RH
-        r["sub_halluc"] = SH
-        r["obj_halluc"] = OH
-        return r
+    def _get_normalized_triple_set(self, triples: list[dict]) -> set[str]:
+        """Return clean set of triples, where every triple is cleaned via `_normalize_triple`"""
+        res = set()
+        for triple in triples:
+            triple_string = self._normalize_triple(triple["sub"], triple["rel"], triple["obj"])
+            res.add(triple_string)
+        return res
     
-    def computeOCSHRHOH(self, response: dict) -> tuple[float, float, float, float]:
-        OC, RH = self.get_ontology_conformance(response)
-        SH, OH = self.get_subject_object_hallucinations(response) 
-        return OC, SH, RH, OH
+    def _normalize_triple(self, sub: str, rel: str, obj: str) -> str:
+        """Remove spaces/underscores and make lower case sub, rel, obj, return a single string."""
+        sub_n = re.sub(r"(_|\s+)", '', sub).lower()
+        rel_n = re.sub(r"(_|\s+)", '', rel).lower()
+        obj_n = re.sub(r"(_|\s+)", '', obj).lower()
+        return f"{sub_n}{rel_n}{obj_n}"                 # concatenate them to a single string
     
-    def computeMetricsOf(self, response: dict) -> tuple[float, float, float, float, float, float, float]:
-        """Return P, R, F1, OC, SH, RH, OH"""
-        P, R, F1 = self.computePRF1(response)
-        OC, SH, RH, OH = self.computeOCSHRHOH(response)
-        return P, R, F1, OC, SH, RH, OH
-    
-    def get_subject_object_hallucinations(self, response: dict) -> tuple[float, float]:
-        """
-        Calculate subject and object hallucinations metrics. As the context for calculating hallucinations, we consider the
-        test sentence and the ontology concepts as relevant tokens.
-        :param ps: stemmer for stemming words before checking for hallucinations
-        :param ontology: ontology to take into account with the concepts and relations
-        :param test_sentence: test sentences for which the triples are generated
-        :param triples: a set of triples generated by the system
-        :return:
-            subj_hallucination: float - subject hallucination metric
-            obj_hallucination: float - object hallucination metric
-        """
-        ps = PorterStemmer()
-
-        # if the set of triples are empty, we return 0
-        if len(response["triples"]) == 0:
-            return 0, 0
+    def _get_subject_object_hallucinations(self, response: dict) -> tuple[float, float]:
+        """Calculate subject and object hallucinations metrics, return `SH, OH`. SH/OH check if the 
+        tokenized/stemmed subject/object are present in the tokenized/stemmed original sentence or 
+        in the tokenized/stemmed ontology concepts."""
+        if len(response["triples"]) == 0: return 0, 0
 
         # append the test sentence with concepts from the ontology
-        test_sentence = self.test_sentences[response["sent_id"]]["sent"]
-        test_sentence += " ".join(self.onto_concepts)
-        # stem each word in the test sentence concatenated with the ontology concepts
-        stemmed_sentence = "".join([ps.stem(word) for word in word_tokenize(test_sentence)])
-        # normalize the text to remove white spaces and underscores
-        normalized_stemmed_sentence = re.sub(r"(_|\s+)", '', stemmed_sentence).lower()
+        test_sentence = self.test_sentences[response["id"]]["sent"] + " ".join(self.onto_concepts)  # concat original_sentence|onto_concepts
+        stemmed_sentence = "".join([self.ps.stem(word) for word in word_tokenize(test_sentence)])   # stem test_sentence|onto_concepts 
+        normalized_stemmed_sentence = re.sub(r"(_|\s+)", '', stemmed_sentence).lower()              # remove white spaces and underscores
 
         # count the number of subject and object hallucinations
         num_subj_hallucinations, num_obj_hallucinations = 0, 0
         for triple in response["triples"]:
             # clean and normalize subject and object noun phrases the same way as the test sentence
-            normalized_stemmed_subject = self.clean_entity_string(ps, triple["sub"])
-            normalized_stemmed_object = self.clean_entity_string(ps, triple["obj"])
+            normalized_stemmed_subject = self._clean_entity_string(triple["sub"])
+            normalized_stemmed_object = self._clean_entity_string(triple["obj"])
 
             # check if the subject/object is found in the stemmed sentence/context text. If not found, mark it as a hallucination
-            if normalized_stemmed_sentence.find(normalized_stemmed_subject) == -1:
-                num_subj_hallucinations += 1
-            if normalized_stemmed_sentence.find(normalized_stemmed_object) == -1:
-                num_obj_hallucinations += 1
+            if normalized_stemmed_sentence.find(normalized_stemmed_subject) == -1: num_subj_hallucinations += 1
+            if normalized_stemmed_sentence.find(normalized_stemmed_object) == -1: num_obj_hallucinations += 1
 
-        # divide the number of hallucinations by the number of triples to calculate the hallucination metrics
         subj_hallucination = num_subj_hallucinations / len(response["triples"])
         obj_hallucination = num_obj_hallucinations / len(response["triples"])
         return subj_hallucination, obj_hallucination
 
-    def clean_entity_string(self, ps, entity: str) -> str:
-        """
-        Utility method to clean subject and object strings of triples
-        :param ps: stemmer for stemming words before checking for hallucinations
-        :param entity: subject or object string
-        :return: the cleaned and normalized string
-        """
-        # stem every word for better matches
-        stemmed_entity = "".join([ps.stem(word) for word in word_tokenize(entity)])
-        # normalizing the string by removing white spaces, underscores and then converting to lower case
-        normalized_stemmed_entity = re.sub(r"(_|\s+)", '', stemmed_entity).lower()
-        # special handling for string with years to remove January 01
-        return normalized_stemmed_entity.replace("01januari", "")
+    def _clean_entity_string(self, entity: str) -> str:
+        """Clean subject and object strings of triples by stemming every token from 
+        nltk tokenization and removing spaces/underscores and mapping to lowercase"""
+        entity = entity.replace("_", " ")                                                    # do not tokenize with underscores !
+        stemmed_entity = "".join([self.ps.stem(word) for word in word_tokenize(entity)])     # stem every word for better matches
+        normalized_stemmed_entity = re.sub(r"(_|\s+)", '', stemmed_entity).lower()           # remove spaces/underscores and then converting to lower case
+        return normalized_stemmed_entity.replace("01januari", "")                            # special handling for string with years to remove January 01
 
-    def get_ontology_conformance(self, response: dict) -> tuple[float, float]:
-        """
-        Calculate the ontology conformance and relation hallucination metrics.
-        :param ontology: ontology to take into account with the concepts and relations
-        :param triples: a set of triples generated by the system
-        :return:
-            ont_conformance: float - ontology conformance metric
-            rel_hallucination: float - relation hallucination metric = 1 - ontology conformance
-        """
-        if len(response["triples"]) == 0:
-            return 1, 0
-        # replace spaces with underscores in the ontology relations
-        #ont_rels = [rel.replace(" ", "_") for rel in self.onto_relations]
+    def _get_ontology_conformance_RH(self, response: dict) -> tuple[float, float]:
+        """Compute the OC and RH and relation hallucination metrics, return OC, 1-OC=RH.
+        OC is the #of output triples conforming to ontology/#of llm triples, a triple
+        conforms to the ontology if relation is one of the canonical relations of the ontology."""
+        if len(response["triples"]) == 0: return 1, 0
         # count the number of system triples relations that are in the ontology
-        num_rels_conformant = len([tr for tr in response["triples"] if tr["rel"] in self.onto_relations])
-
+        num_rels_conformant = 0
+        for triple in response["triples"]:
+            clean_rel = " ".join(camelCaseToSpaces(triple["rel"])).lower().strip()
+            if clean_rel in self.onto_relations: num_rels_conformant += 1
+            
         # ontology conformance is the number of system triples relations in the ontology divided by the total number of system triples
         ont_conformance = num_rels_conformant / len(response["triples"])
         # relation hallucination is 1 - ontology conformance
         rel_hallucination = 1 - ont_conformance
         return ont_conformance, rel_hallucination
     
+
+
+def computeAverageAcrossAllOntologies(average_metrics_path):
+    # compute average over all ontologies
+    data = []
+    with open(average_metrics_path, "r") as avg_f:
+        data = [json.loads(line) for line in avg_f]
+    
+    with open(average_metrics_path, "a") as avg_f:
+        metrics = {
+            "onto": "global_average",
+            "unseen": {"avg_precision": 0, "avg_recall": 0, "avg_f1": 0, "avg_onto_conf": 0, "avg_sub_halluc": 0, "avg_rel_halluc": 0, "avg_obj_halluc": 0}, 
+            "verified": {"avg_precision": 0, "avg_recall": 0, "avg_f1": 0, "avg_onto_conf": 0, "avg_sub_halluc": 0, "avg_rel_halluc": 0, "avg_obj_halluc": 0}, 
+            "all": {"avg_precision": 0, "avg_recall": 0, "avg_f1": 0, "avg_onto_conf": 0, "avg_sub_halluc": 0, "avg_rel_halluc": 0, "avg_obj_halluc": 0}
+        }
+        
+        for ont_metrics in data:
+            metrics["unseen"]["avg_precision"] += ont_metrics["unseen"]["avg_precision"] / len(data)
+            metrics["unseen"]["avg_recall"] += ont_metrics["unseen"]["avg_recall"] / len(data)
+            metrics["unseen"]["avg_f1"] += ont_metrics["unseen"]["avg_f1"] / len(data)
+            metrics["unseen"]["avg_onto_conf"] += ont_metrics["unseen"]["avg_onto_conf"]  / len(data)
+            metrics["unseen"]["avg_sub_halluc"] += ont_metrics["unseen"]["avg_sub_halluc"]  / len(data)
+            metrics["unseen"]["avg_rel_halluc"] += ont_metrics["unseen"]["avg_rel_halluc"] / len(data)
+            metrics["unseen"]["avg_obj_halluc"] += ont_metrics["unseen"]["avg_obj_halluc"]  / len(data)
+            
+            metrics["verified"]["avg_precision"] += ont_metrics["verified"]["avg_precision"] / len(data)
+            metrics["verified"]["avg_recall"] += ont_metrics["verified"]["avg_recall"] / len(data)
+            metrics["verified"]["avg_f1"] += ont_metrics["verified"]["avg_f1"] / len(data)
+            metrics["verified"]["avg_onto_conf"] += ont_metrics["verified"]["avg_onto_conf"]  / len(data)
+            metrics["verified"]["avg_sub_halluc"] += ont_metrics["verified"]["avg_sub_halluc"]  / len(data)
+            metrics["verified"]["avg_rel_halluc"] += ont_metrics["verified"]["avg_rel_halluc"] / len(data)
+            metrics["verified"]["avg_obj_halluc"] += ont_metrics["verified"]["avg_obj_halluc"]  / len(data)
+            
+            metrics["all"]["avg_precision"] += ont_metrics["all"]["avg_precision"] / len(data)
+            metrics["all"]["avg_recall"] += ont_metrics["all"]["avg_recall"] / len(data)
+            metrics["all"]["avg_f1"] += ont_metrics["all"]["avg_f1"] / len(data)
+            metrics["all"]["avg_onto_conf"] += ont_metrics["all"]["avg_onto_conf"]  / len(data)
+            metrics["all"]["avg_sub_halluc"] += ont_metrics["all"]["avg_sub_halluc"]  / len(data)
+            metrics["all"]["avg_rel_halluc"] += ont_metrics["all"]["avg_rel_halluc"] / len(data)
+            metrics["all"]["avg_obj_halluc"] += ont_metrics["all"]["avg_obj_halluc"]  / len(data)
+        
+        avg_f.write(json.dumps(metrics))
     
     
 if __name__ ==  "__main__": 
-    for ontology_name in dpedia_webnlg_files:
+    
+    for ontology_name in DPEDIA_WEBNLG_ONT_NAMES:
         
         l = LLMMetrics(
             "../../data/dpedia_webnlg/ontologies/" + ontology_name + ".json",
             "../../data/dpedia_webnlg/test/" + ontology_name + "_test.jsonl"
         )
         
-        files = glob.glob("../results/llm_responses/Babelscape.rebel-large.normalized-complex/" + ontology_name + "-*")
+        files = glob.glob("../results/llm_responses/gpt-4o/" + ontology_name + "-*")
         for llm_response_files_for_ontology_n_examples in files:
-            l.computeMetricsPerReponseOf(llm_response_files_for_ontology_n_examples)
+            l.generate(llm_response_files_for_ontology_n_examples)
     
     
-    for ontology_name in wikidata_tekgen_files:
+    for ontology_name in WIKIDATA_TEKGEN_ONT_NAMES:
         l = LLMMetrics(
             "../../data/wikidata_tekgen/ontologies/" + ontology_name + ".json",
             "../../data/wikidata_tekgen/test/" + ontology_name + "_test.jsonl"
         )
         
-        files = glob.glob("../results/llm_responses/Babelscape.rebel-large.normalized-complex/" + ontology_name + "-*")
+        files = glob.glob("../results/llm_responses/gpt-4o/" + ontology_name + "-*")
         for llm_response_files_for_ontology_n_examples in files:
-            l.computeMetricsPerReponseOf(llm_response_files_for_ontology_n_examples)
+            l.generate(llm_response_files_for_ontology_n_examples)
     
+    
+    #################################################### Compute average of averages
     """
-    def computeAllMetrics(self) -> None:
-        for n_examples in [1, 2, 3, 4, 5, 6]:
-            llm_response_file_paths = glob.glob(self.llm_responses_folder_path + "/*n_examples_" + str(n_examples) + ".jsonl")
-        
-            for llm_response_file_path in llm_response_file_paths:
-                self.computeMetricsPerReponseOf(llm_response_file_path)
+    files = glob.glob("../results/metrics/Babelscape.rebel-large.normalized-complex/" + "test_*_averages.jsonl" )
+    print(files)
+    for avg_file_path in files:
+        computeAverageAcrossAllOntologies(avg_file_path)
     """

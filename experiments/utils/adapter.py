@@ -4,7 +4,7 @@ import re
 
 class LLMResponse(object):
     def __init__(self, sent_id: str, response: str, triples: list):
-        self.sent_id = sent_id
+        self.id = sent_id
         self.response = response
         self.triples = triples
             
@@ -122,5 +122,6 @@ if __name__ == '__main__':
     rebel = RebelAdapter("Babelscape/rebel-large", "cpu")
     response: LLMResponse = rebel.queryLLM("bogus_id", "Test Sentence: Carouge is a municipality in Geneva, Switzerland.")
     print(response.triples)
+    
     response: LLMResponse = rebel.queryLLM("bogus_id", "Test Sentence: Pully is a municipality in the canton of Vaud, Switzerland.")
     print(response.triples)

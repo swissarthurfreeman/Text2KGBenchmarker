@@ -1,6 +1,7 @@
 import hydra
 from omegaconf import DictConfig, OmegaConf
 
+"""
 import omegaconf        # yaml based configuration support
 import hydra            # hierarchical folder based yaml configuration (uses omegaconf)
 
@@ -18,12 +19,14 @@ from pytorch_lightning.loggers.wandb import WandbLogger
 
 from pytorch_lightning.callbacks import LearningRateMonitor
 from generate_samples import GenerateTextSamplesCallback
+"""
 
 
-
-@hydra.main(version_base=None, config_path="conf", config_name="config")
+@hydra.main(version_base=None, config_path="conf", config_name="root")
 def my_app(cfg : DictConfig) -> None:
     print(OmegaConf.to_yaml(cfg))
+    
+    print(cfg.train.prop1)
 
 if __name__ == "__main__":
     my_app()

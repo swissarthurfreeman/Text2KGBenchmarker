@@ -1,5 +1,0 @@
-db:
-  driver: postgresql
-  pass: test
-  timeout: 20
-  user: postgres_user
