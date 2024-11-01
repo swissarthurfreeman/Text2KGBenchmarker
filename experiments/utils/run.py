@@ -55,7 +55,7 @@ class LLMRun:
         
         for test_id in self.test_sentence_ids[start_idx:]:
             print("Querying " + test_id)
-            response = self.config.adapter.queryLLM(
+            response: LLMResponse = self.config.adapter.queryLLM(
                     test_id, 
                     self.prompter.getPromptOf(test_id, self.config.n_train_examples)
                 )

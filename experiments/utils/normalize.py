@@ -10,13 +10,14 @@ from utils import WIKIDATA_TEKGEN_ONT_NAMES, DPEDIA_WEBNLG_ONT_NAMES, load_jsonl
 
 # TODO : rename output fiels to format below, change code in prompter and in rest of files to deal with this
 # rigid file format.
-# ll_response files always follow this format : ontname-datasetname-n_examples?.jsonl and are always evaluated on
+# ll_response files always follow this format : /model_name-n-shot_specifier?/ontname-datasetname.jsonl and are always evaluated on
 # the test data.
 def getOntologyNameFrom(path: str) -> str:
         return path.split("/")[-1].split("-")[0]
     
 def getDatasetNameFrom(path: str) -> str:
     return path.split("/")[-1].split("-")[1][:-6]
+
 
 class Normalizer:
     """
@@ -128,6 +129,6 @@ if __name__ == "__main__":
     sim_normalizer.generateNormalizedData()
     
     # you can then add another layer of normalization via, 
-    sent_entailement_model = pipeline(model='roberta-large-mnli', device="cuda")
+    sent_entailement_model = pipeline(model='roberta-large-mnli', device=device)
     ent_normalizer = Entailement("Babelscape.rebel-large.normalized-similarity", "Babelscape.rebel-large.normalized-similarity-entailement", sent_entailement_model, 0.55)
     ent_normalizer.generateNormalizedData()

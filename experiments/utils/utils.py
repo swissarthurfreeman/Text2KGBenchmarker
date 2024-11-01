@@ -60,7 +60,7 @@ def getOntologyConceptsList(ontology_name: str, dataset_name: str) -> list[str]:
         onto = json.load(ont_f)
         res = []
         for concept in onto["concepts"]:
-            res.append(" ".join(camelCaseToSpaces(concept["label"])).split()).lower().strip()
+            res.append(" ".join(camelCaseToSpaces(concept["label"]).split()).lower().strip())
         return res
     
 def getOntologyRelationsList(ontology_name: str, dataset_name: str) -> list[str]:

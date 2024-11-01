@@ -1,4 +1,5 @@
 import os
+from pprint import pprint
 import re
 import glob
 import json
@@ -8,6 +9,7 @@ from nltk.stem import PorterStemmer
 from nltk.tokenize import word_tokenize
 from utils import DPEDIA_WEBNLG_ONT_NAMES, WIKIDATA_TEKGEN_ONT_NAMES
 from utils import load_jsonl_as_dict, getOntologyConceptsList, getOntologyRelationsList, camelCaseToSpaces, load_jsonl_as_list
+
 
 class LLMMetrics():
     """
@@ -63,7 +65,10 @@ class LLMMetrics():
             avg_f.write(json.dumps(self.avg_met) + "\n")
     
     def _add_to_average(self, test_sent_w_metrics):
-        for typ in ["unseen", "verified", "all"]:
+        types = ["all"]
+        if "unseen" in self.test_sentences[test_sent_w_metrics['id']].keys() and self.test_sentences[test_sent_w_metrics['id']]["unseen"]: types.append("unseen")        # if the sentence is unseen or verified
+        if "verified" in self.test_sentences[test_sent_w_metrics['id']].keys() and self.test_sentences[test_sent_w_metrics['id']]["verified"]: types.append("verified")    # we'll add to the averages of that slice
+        for typ in types:
             if(self.avg_met[typ]["n_sentences"] == 0): continue
             self.avg_met[typ]["avg_precision"] += test_sent_w_metrics["precision"] / self.avg_met[typ]["n_sentences"]
             self.avg_met[typ]["avg_recall"] += test_sent_w_metrics["recall"] / self.avg_met[typ]["n_sentences"]
@@ -91,7 +96,8 @@ class LLMMetrics():
         P = len(ground_truth.intersection(llm_triples)) / len(llm_triples)
         R = len(ground_truth.intersection(llm_triples)) / len(ground_truth)
         
-        F1 = 2 *((P*R) / (P + R)) if P + R > 0 else F1 = 0
+        if P + R > 0: F1 = 2 *((P*R) / (P + R)) 
+        else: F1 = 0
         return P, R, F1
     
     def _get_normalized_triple_set(self, triples: list[dict]) -> set[str]:
@@ -151,7 +157,7 @@ class LLMMetrics():
         # count the number of system triples relations that are in the ontology
         num_rels_conformant = 0
         for triple in response["triples"]:
-            clean_rel = " ".join(camelCaseToSpaces(triple["rel"])).lower().strip()
+            clean_rel = " ".join(camelCaseToSpaces(triple["rel"]).split()).lower().strip().replace("_", " ")
             if clean_rel in self.onto_relations: num_rels_conformant += 1
             
         # ontology conformance is the number of system triples relations in the ontology divided by the total number of system triples
@@ -159,80 +165,57 @@ class LLMMetrics():
         # relation hallucination is 1 - ontology conformance
         rel_hallucination = 1 - ont_conformance
         return ont_conformance, rel_hallucination
-    
 
 
-def computeAverageAcrossAllOntologies(average_metrics_path):
-    # compute average over all ontologies
-    data = []
-    with open(average_metrics_path, "r") as avg_f:
-        data = [json.loads(line) for line in avg_f]
+def generate_global_averages(llm_metrics_folder_name: str):
+    avg_files = glob.glob("../results/metrics/" + llm_metrics_folder_name + "/*_avg.jsonl")
+    avg_metrics_dpedia_webnlg = {
+        "all": { "n_sentences": 0, "avg_precision": 0, "avg_recall": 0, "avg_f1": 0, "avg_onto_conf": 0, "avg_sub_halluc": 0, "avg_rel_halluc": 0, "avg_obj_halluc": 0}
+    }
     
-    with open(average_metrics_path, "a") as avg_f:
-        metrics = {
-            "onto": "global_average",
-            "unseen": {"avg_precision": 0, "avg_recall": 0, "avg_f1": 0, "avg_onto_conf": 0, "avg_sub_halluc": 0, "avg_rel_halluc": 0, "avg_obj_halluc": 0}, 
-            "verified": {"avg_precision": 0, "avg_recall": 0, "avg_f1": 0, "avg_onto_conf": 0, "avg_sub_halluc": 0, "avg_rel_halluc": 0, "avg_obj_halluc": 0}, 
-            "all": {"avg_precision": 0, "avg_recall": 0, "avg_f1": 0, "avg_onto_conf": 0, "avg_sub_halluc": 0, "avg_rel_halluc": 0, "avg_obj_halluc": 0}
-        }
+    avg_metrics_wikidata_tekgen = {
+        "unseen": { "n_sentences": 0, "avg_precision": 0, "avg_recall": 0, "avg_f1": 0, "avg_onto_conf": 0, "avg_sub_halluc": 0, "avg_rel_halluc": 0, "avg_obj_halluc": 0}, 
+        "verified": { "n_sentences": 0, "avg_precision": 0, "avg_recall": 0, "avg_f1": 0, "avg_onto_conf": 0, "avg_sub_halluc": 0, "avg_rel_halluc": 0, "avg_obj_halluc": 0}, 
+        "all": { "n_sentences": 0, "avg_precision": 0, "avg_recall": 0, "avg_f1": 0, "avg_onto_conf": 0, "avg_sub_halluc": 0, "avg_rel_halluc": 0, "avg_obj_halluc": 0}
+    }
+
+    for avg_file_path in avg_files:
+        averages = load_jsonl_as_list(avg_file_path)
         
-        for ont_metrics in data:
-            metrics["unseen"]["avg_precision"] += ont_metrics["unseen"]["avg_precision"] / len(data)
-            metrics["unseen"]["avg_recall"] += ont_metrics["unseen"]["avg_recall"] / len(data)
-            metrics["unseen"]["avg_f1"] += ont_metrics["unseen"]["avg_f1"] / len(data)
-            metrics["unseen"]["avg_onto_conf"] += ont_metrics["unseen"]["avg_onto_conf"]  / len(data)
-            metrics["unseen"]["avg_sub_halluc"] += ont_metrics["unseen"]["avg_sub_halluc"]  / len(data)
-            metrics["unseen"]["avg_rel_halluc"] += ont_metrics["unseen"]["avg_rel_halluc"] / len(data)
-            metrics["unseen"]["avg_obj_halluc"] += ont_metrics["unseen"]["avg_obj_halluc"]  / len(data)
-            
-            metrics["verified"]["avg_precision"] += ont_metrics["verified"]["avg_precision"] / len(data)
-            metrics["verified"]["avg_recall"] += ont_metrics["verified"]["avg_recall"] / len(data)
-            metrics["verified"]["avg_f1"] += ont_metrics["verified"]["avg_f1"] / len(data)
-            metrics["verified"]["avg_onto_conf"] += ont_metrics["verified"]["avg_onto_conf"]  / len(data)
-            metrics["verified"]["avg_sub_halluc"] += ont_metrics["verified"]["avg_sub_halluc"]  / len(data)
-            metrics["verified"]["avg_rel_halluc"] += ont_metrics["verified"]["avg_rel_halluc"] / len(data)
-            metrics["verified"]["avg_obj_halluc"] += ont_metrics["verified"]["avg_obj_halluc"]  / len(data)
-            
-            metrics["all"]["avg_precision"] += ont_metrics["all"]["avg_precision"] / len(data)
-            metrics["all"]["avg_recall"] += ont_metrics["all"]["avg_recall"] / len(data)
-            metrics["all"]["avg_f1"] += ont_metrics["all"]["avg_f1"] / len(data)
-            metrics["all"]["avg_onto_conf"] += ont_metrics["all"]["avg_onto_conf"]  / len(data)
-            metrics["all"]["avg_sub_halluc"] += ont_metrics["all"]["avg_sub_halluc"]  / len(data)
-            metrics["all"]["avg_rel_halluc"] += ont_metrics["all"]["avg_rel_halluc"] / len(data)
-            metrics["all"]["avg_obj_halluc"] += ont_metrics["all"]["avg_obj_halluc"]  / len(data)
+        for average in averages:
+            for typ in average.keys():        
+                if typ in ["unseen", "all", "verified"]:
+                    for key in average[typ].keys():
+                        if "wikidata_tekgen" in avg_file_path:
+                            avg_metrics_wikidata_tekgen[typ][key] += average[typ][key] / len(averages)
+                        if "dpedia_webnlg" in avg_file_path and typ == "all":
+                            avg_metrics_dpedia_webnlg[typ][key] += average[typ][key] / len(averages)
+    
+    with open("../results/metrics/" + llm_metrics_folder_name + "/global_avg.csv", "w") as table_f:
+        table_f.write("dataset, subset, P, R, F1, OC, SH, RH, OH\n")
+        for typ in avg_metrics_wikidata_tekgen.keys():
+            if typ in ["unseen", "all", "verified"]:
+                table_f.write(f"wikidata_tekgen, {typ}, {avg_metrics_wikidata_tekgen[typ]["avg_precision"]:.2f}, {avg_metrics_wikidata_tekgen[typ]["avg_recall"]:.2f}, ")
+                table_f.write(f"{avg_metrics_wikidata_tekgen[typ]["avg_f1"]:.2f}, {avg_metrics_wikidata_tekgen[typ]["avg_onto_conf"]:.2f}, ")
+                table_f.write(f"{avg_metrics_wikidata_tekgen[typ]["avg_sub_halluc"]:.2f}, {avg_metrics_wikidata_tekgen[typ]["avg_rel_halluc"]:.2f}, ")
+                table_f.write(f"{avg_metrics_wikidata_tekgen[typ]["avg_obj_halluc"]:.2f}\n")
         
-        avg_f.write(json.dumps(metrics))
-    
-    
-if __name__ ==  "__main__": 
-    
+        for typ in avg_metrics_dpedia_webnlg.keys():
+            if typ in ["unseen", "all", "verified"]:
+                table_f.write(f"dpedia_webnlg, {typ}, {avg_metrics_dpedia_webnlg[typ]["avg_precision"]:.2f}, {avg_metrics_dpedia_webnlg[typ]["avg_recall"]:.2f}, ")
+                table_f.write(f"{avg_metrics_dpedia_webnlg[typ]["avg_f1"]:.2f}, {avg_metrics_dpedia_webnlg[typ]["avg_onto_conf"]:.2f}, ")
+                table_f.write(f"{avg_metrics_dpedia_webnlg[typ]["avg_sub_halluc"]:.2f}, {avg_metrics_dpedia_webnlg[typ]["avg_rel_halluc"]:.2f}, ")
+                table_f.write(f"{avg_metrics_dpedia_webnlg[typ]["avg_obj_halluc"]:.2f}\n")
+
+
+if __name__ ==  "__main__":
+    llm_response_folder_name = "rebel-large-rel-map-sent-entail" 
     for ontology_name in DPEDIA_WEBNLG_ONT_NAMES:
-        
-        l = LLMMetrics(
-            "../../data/dpedia_webnlg/ontologies/" + ontology_name + ".json",
-            "../../data/dpedia_webnlg/test/" + ontology_name + "_test.jsonl"
-        )
-        
-        files = glob.glob("../results/llm_responses/gpt-4o/" + ontology_name + "-*")
-        for llm_response_files_for_ontology_n_examples in files:
-            l.generate(llm_response_files_for_ontology_n_examples)
-    
+        l = LLMMetrics(llm_response_folder_name, ontology_name, "dpedia_webnlg")
+        l.generate()
     
     for ontology_name in WIKIDATA_TEKGEN_ONT_NAMES:
-        l = LLMMetrics(
-            "../../data/wikidata_tekgen/ontologies/" + ontology_name + ".json",
-            "../../data/wikidata_tekgen/test/" + ontology_name + "_test.jsonl"
-        )
-        
-        files = glob.glob("../results/llm_responses/gpt-4o/" + ontology_name + "-*")
-        for llm_response_files_for_ontology_n_examples in files:
-            l.generate(llm_response_files_for_ontology_n_examples)
-    
-    
-    #################################################### Compute average of averages
-    """
-    files = glob.glob("../results/metrics/Babelscape.rebel-large.normalized-complex/" + "test_*_averages.jsonl" )
-    print(files)
-    for avg_file_path in files:
-        computeAverageAcrossAllOntologies(avg_file_path)
-    """
+        l = LLMMetrics(llm_response_folder_name, ontology_name, "wikidata_tekgen")
+        l.generate()
+
+    generate_global_averages(llm_response_folder_name)
