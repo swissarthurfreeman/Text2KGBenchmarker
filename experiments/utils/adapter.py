@@ -1,12 +1,17 @@
-from transformers import pipeline
+from transformers import AutoConfig, AutoModelForSeq2SeqLM, AutoTokenizer, pipeline
+from pprint import pprint
 from openai import OpenAI
+from time import time
 import re
 
 class LLMResponse(object):
-    def __init__(self, sent_id: str, response: str, triples: list):
+    def __init__(self, sent_id: str, response: str, triples: list, time: float = None):
         self.id = sent_id
         self.response = response
         self.triples = triples
+        if time != None:
+            self.time = time
+            """seconds it took to run the inference"""
             
 
 class LLMAdapter:
@@ -40,7 +45,7 @@ class LLMAdapter:
         
         for triple_str in triples_raw_strings:
             # Apply regex
-            match = re.match(r"(.+)\((.+),(.+)\)", triple_str)
+            match = re.match(r"([^()]+)\((.+)\|(.+)\)", triple_str)
             if match:
                 relation, subject, object_ = match.groups()
                 triples.append({"sub": subject.strip(), "rel": relation.strip(), "obj": object_.strip()})
@@ -68,22 +73,39 @@ class OpenAIAdapter(LLMAdapter):
 
 
 class RebelAdapter(LLMAdapter):
-    def __init__(self, model_name: str, device: str = "cuda"):
+    def __init__(self, model_name: str, device: str = "cuda", n_beams: int = 1, n_return_sequences: int = 1):
         self.model_name = model_name.replace("/", ".")
-        self.rebel_pipeline = pipeline('text2text-generation', model=model_name, tokenizer=model_name, device=device)
+        
+        self.tokenizer = AutoTokenizer.from_pretrained(model_name)
+        self.model = AutoModelForSeq2SeqLM.from_pretrained(model_name).to(device)
+        
+        self.gen_kwargs = {
+            "max_length": 256,
+            "length_penalty": 0,
+            "num_beams": n_beams,
+            "num_return_sequences": n_return_sequences,
+        }
         
     def queryLLM(self, sent_id: str, prompt: str) -> LLMResponse:
+        start = time()
         test_sentence = prompt[prompt.find("Test Sentence:")+len("Test Sentence:"):]
-        
-        # returns a list [{"generated_token_ids": tensor([0, 5205, ...])}, ...] for every element of list of inputs passed to pipeline, in this case just one.
-        raw_token_idx_tensors = self.rebel_pipeline(test_sentence, return_tensors=True, return_text=False)[0]['generated_token_ids']
-        extracted_text: list[str] = self.rebel_pipeline.tokenizer.batch_decode([raw_token_idx_tensors])
-        extracted_triples = self.getTriplesOf(extracted_text[0])
+        model_inputs = self.tokenizer(test_sentence, padding=True, truncation=True, return_tensors='pt')
+        generated_tokens = self.model.generate(
+            model_inputs["input_ids"].to(self.model.device),
+            attention_mask=model_inputs["attention_mask"].to(self.model.device),
+            **self.gen_kwargs
+        )
+
+        decoded_preds = self.tokenizer.batch_decode(generated_tokens, skip_special_tokens=False)
+        triples = [] 
+        for beam in decoded_preds:
+            triples += self.getTriplesOf(beam)
         
         return LLMResponse(
             sent_id,
-            extracted_text[0],
-            extracted_triples
+            "".join(decoded_preds),
+            triples,
+            time() - start 
         )
     
     def getTriplesOf(self, response: str) -> list[dict[str, str]]:
@@ -119,7 +141,7 @@ class RebelAdapter(LLMAdapter):
 
 
 if __name__ == '__main__':
-    rebel = RebelAdapter("Babelscape/rebel-large", "cpu")
+    rebel = RebelAdapter("Babelscape/rebel-large", "cpu", 4, 2)
     response: LLMResponse = rebel.queryLLM("bogus_id", "Test Sentence: Carouge is a municipality in Geneva, Switzerland.")
     print(response.triples)
     

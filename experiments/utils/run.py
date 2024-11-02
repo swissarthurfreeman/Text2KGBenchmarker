@@ -13,12 +13,13 @@ class LLMRunConfig:
     - `ontology_file_path` path towards the ontology definition of the train/test files
     - `adapter` LLMAdapter instance, with loaded LLM configuration
     """
-    def __init__(self, dataset_name: str, ontology_name: str, adapter: LLMAdapter, n_train_examples: int | None = None):
+    def __init__(self, dataset_name: str, ontology_name: str, adapter: LLMAdapter, n_train_examples: int | None = None, n_beams: int | None = None):
         self.dataset_name = dataset_name
         self.ontology_name = ontology_name
-        self.n_train_examples = n_train_examples
         self.adapter = adapter
-
+        self.n_train_examples = n_train_examples
+        self.n_beams = n_beams
+        
 
 class LLMRun:
     """
@@ -33,7 +34,10 @@ class LLMRun:
         
         self.llm_response_dir = "../results/llm_responses/" + self.config.adapter.model_name
         if self.config.n_train_examples != None:
-            self.llm_response_dir += "-n_examples=" + str(self.config.n_train_examples)
+            self.llm_response_dir += "-" + str(self.config.n_train_examples) + "-shot"
+        
+        if self.config.n_beams != None:
+            self.llm_response_dir += "-" + str(self.config.n_beams) + "-beams"
         
         if not os.path.exists(self.llm_response_dir): 
             os.makedirs(self.llm_response_dir)
@@ -67,24 +71,25 @@ class LLMRun:
 
 
 if __name__ == "__main__":
-    def run_inference_on(dataset_name: str, ontology_name: str, adapter: LLMAdapter):
-        conf = LLMRunConfig(
-            dataset_name=dataset_name,
-            ontology_name=ontology_name,
-            adapter=adapter,
-            n_train_examples=4
-        )
-        
-        runner = LLMRun(conf)
-        runner.run()
+    def run_inference_on(dataset_name: str, ontology_name: str, adapter: LLMAdapter, i: int):
+            conf = LLMRunConfig(
+                dataset_name=dataset_name,
+                ontology_name=ontology_name,
+                adapter=adapter,
+                n_train_examples=i
+            )
+            
+            runner = LLMRun(conf)
+            runner.run()
     
+    for i in [1, 2, 3, 5, 6]:    
+        model_adapter = OpenAIAdapter(os.environ['OPEN_API_KEY'], "gpt-3.5-turbo")
+        
+        for ontology_name in DPEDIA_WEBNLG_ONT_NAMES:
+            run_inference_on("dpedia_webnlg_clean", ontology_name, model_adapter, i)
+        
+        for ontology_name in WIKIDATA_TEKGEN_ONT_NAMES:
+            run_inference_on("wikidata_tekgen", ontology_name, model_adapter, i)
+        
     
-    #model_adapter = RebelAdapter("Babelscape/rebel-large")
-    model_adapter = OpenAIAdapter(os.environ['OPEN_API_KEY'], "gpt-3.5-turbo")
-    for ontology_name in WIKIDATA_TEKGEN_ONT_NAMES:
-        run_inference_on("wikidata_tekgen", ontology_name, model_adapter)
-        
-    for ontology_name in DPEDIA_WEBNLG_ONT_NAMES:
-        run_inference_on("dpedia_webnlg", ontology_name, model_adapter)
-        
         

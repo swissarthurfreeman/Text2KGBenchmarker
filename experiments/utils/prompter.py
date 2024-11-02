@@ -95,7 +95,7 @@ class Prompter:
             train_sentence, train_triples = self.train_sentences[similar_train_sent_id]["sent"], self.train_sentences[similar_train_sent_id]["triples"]
             res += "\n\nExample Sentence : " +  train_sentence + "\n\nExample Output:\n"
             for triple in train_triples:
-                res += triple["rel"].strip().replace(" ", "_") + "(" + triple["sub"].strip() + ", " + triple["obj"].strip() + ")" + "\n"
+                res += triple["rel"].strip().replace(" ", "_") + "(" + triple["sub"].strip() + " | " + triple["obj"].strip() + ")" + "\n"
         
         res += "\n\nTest Sentence: " + test_sentence["sent"] + "\n\nTest Output: "
         return res
@@ -117,7 +117,7 @@ if __name__ == "__main__":
     #print(wikidata_prompter.getPromptOf("ont_9_nature_unseen_test_19", n_examples=5))
     
     
-    dpedia_prompter = Prompter("dpedia_webnlg", "ont_4_building")
+    dpedia_prompter = Prompter("dpedia_webnlg_clean", "ont_4_building")
     print(dpedia_prompter.getPromptOf("ont_4_building_test_1", n_examples=5))
     
     

@@ -33,7 +33,9 @@ class LLMMetrics():
         """list of ontology relations, surface form words seperated by spaces."""
         
         # if few shot setting, llm_results will have one folder per n_shot, e.g. gpt-4o-n_examples=4, considered as a seperate technique.
-        self.llm_responses_path = "../results/llm_responses/" + self.llm_responses_folder_name + "/" + self.ontology_name + "-" + self.dataset_name + ".jsonl"
+        # TODO : here we replace "_clean" with "", this should only be used for REBEL, or anywhere ontology is not provided to the model
+        # this is for the sake of computing performance of REBEL with cleaned webnlg dataset instead of camelcase/underscore one.
+        self.llm_responses_path = "../results/llm_responses/" + self.llm_responses_folder_name + "/" + self.ontology_name + "-" + self.dataset_name.replace("_clean", "") + ".jsonl"
         self.metrics_dir = "../results/metrics/" + llm_responses_folder_name
         self.avg_met_path = self.metrics_dir + "/" + self.dataset_name + "_avg.jsonl"
         if not os.path.exists(self.metrics_dir): os.mkdir(self.metrics_dir)
@@ -211,7 +213,10 @@ def generate_global_averages(llm_metrics_folder_name: str):
 if __name__ ==  "__main__":
     llm_response_folder_name = "rebel-large-rel-map-sent-entail" 
     for ontology_name in DPEDIA_WEBNLG_ONT_NAMES:
-        l = LLMMetrics(llm_response_folder_name, ontology_name, "dpedia_webnlg")
+        # NOTE : using dpedia_webnlg_clean or dpedia_webnlg on rebel performance should
+        # not make any difference since we remove underscores and camelcasing in the code
+        # before computing comparison metrics.
+        l = LLMMetrics(llm_response_folder_name, ontology_name, "dpedia_webnlg_clean")
         l.generate()
     
     for ontology_name in WIKIDATA_TEKGEN_ONT_NAMES:
