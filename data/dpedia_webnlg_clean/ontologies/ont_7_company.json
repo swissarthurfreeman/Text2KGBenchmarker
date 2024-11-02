@@ -1,0 +1,216 @@
+{
+    "title": "Company Ontology",
+    "id": "ont_7_company",
+    "concepts": [
+        {
+            "qid": "company",
+            "label": "company"
+        },
+        {
+            "qid": "company type",
+            "label": "company type"
+        },
+        {
+            "qid": "country",
+            "label": "country"
+        },
+        {
+            "qid": "city",
+            "label": "city"
+        },
+        {
+            "qid": "product",
+            "label": "product"
+        },
+        {
+            "qid": "place",
+            "label": "place"
+        },
+        {
+            "qid": "ethnic group",
+            "label": "ethnic group"
+        },
+        {
+            "qid": "industry",
+            "label": "industry"
+        },
+        {
+            "qid": "service",
+            "label": "service"
+        },
+        {
+            "qid": "person",
+            "label": "person"
+        }
+    ],
+    "relations": [
+        {
+            "pid": "revenue",
+            "label": "revenue",
+            "domain": "company",
+            "range": "number"
+        },
+        {
+            "pid": "net income",
+            "label": "net income",
+            "domain": "company",
+            "range": "number"
+        },
+        {
+            "pid": "type",
+            "label": "type",
+            "domain": "company",
+            "range": "company type"
+        },
+        {
+            "pid": "capital",
+            "label": "capital",
+            "domain": "country",
+            "range": "city"
+        },
+        {
+            "pid": "parent company",
+            "label": "parent company",
+            "domain": "company",
+            "range": "company"
+        },
+        {
+            "pid": "product",
+            "label": "product",
+            "domain": "company",
+            "range": "product"
+        },
+        {
+            "pid": "operating income",
+            "label": "operating income",
+            "domain": "company",
+            "range": "number"
+        },
+        {
+            "pid": "number of locations",
+            "label": "number of locations",
+            "domain": "company",
+            "range": "number"
+        },
+        {
+            "pid": "founding date",
+            "label": "founding date",
+            "domain": "company",
+            "range": "date"
+        },
+        {
+            "pid": "location",
+            "label": "location",
+            "domain": "company",
+            "range": "place"
+        },
+        {
+            "pid": "number of employees",
+            "label": "number of employees",
+            "domain": "company",
+            "range": "number"
+        },
+        {
+            "pid": "region served",
+            "label": "region served",
+            "domain": "company",
+            "range": "place"
+        },
+        {
+            "pid": "subsidiary",
+            "label": "subsidiary",
+            "domain": "company",
+            "range": "company"
+        },
+        {
+            "pid": "leader title",
+            "label": "leader title",
+            "domain": "person",
+            "range": "string"
+        },
+        {
+            "pid": "ethnic group",
+            "label": "ethnic group",
+            "domain": "company",
+            "range": "ethnic group"
+        },
+        {
+            "pid": "city",
+            "label": "city",
+            "domain": "company",
+            "range": "city"
+        },
+        {
+            "pid": "industry",
+            "label": "industry",
+            "domain": "company",
+            "range": "industry"
+        },
+        {
+            "pid": "long name",
+            "label": "long name",
+            "domain": "company",
+            "range": "string"
+        },
+        {
+            "pid": "is part of",
+            "label": "is part of",
+            "domain": "company",
+            "range": "company"
+        },
+        {
+            "pid": "area total",
+            "label": "area total",
+            "domain": "place",
+            "range": "number"
+        },
+        {
+            "pid": "leader",
+            "label": "leader",
+            "domain": "company",
+            "range": "person"
+        },
+        {
+            "pid": "elevation above the sea level",
+            "label": "elevation above the sea level",
+            "domain": "place",
+            "range": "number"
+        },
+        {
+            "pid": "foundation place",
+            "label": "foundation place",
+            "domain": "company",
+            "range": "place"
+        },
+        {
+            "pid": "country",
+            "label": "country",
+            "domain": "company",
+            "range": "country"
+        },
+        {
+            "pid": "population total",
+            "label": "population total",
+            "domain": "company",
+            "range": "number"
+        },
+        {
+            "pid": "service",
+            "label": "service",
+            "domain": "company",
+            "range": "service"
+        },
+        {
+            "pid": "leader party",
+            "label": "leader party",
+            "domain": "person",
+            "range": "party"
+        },
+        {
+            "pid": "key person",
+            "label": "key person",
+            "domain": "company",
+            "range": "person"
+        }
+    ]
+}

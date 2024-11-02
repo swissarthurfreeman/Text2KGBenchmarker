@@ -1,0 +1,322 @@
+{
+    "title": "Artist Ontology",
+    "id": "ont_17_artist",
+    "concepts": [
+        {
+            "qid": "artist",
+            "label": "artist"
+        },
+        {
+            "qid": "record label",
+            "label": "record label"
+        },
+        {
+            "qid": "field",
+            "label": "field"
+        },
+        {
+            "qid": "genre",
+            "label": "genre"
+        },
+        {
+            "qid": "place",
+            "label": "place"
+        },
+        {
+            "qid": "demonym",
+            "label": "demonym"
+        },
+        {
+            "qid": "country",
+            "label": "country"
+        },
+        {
+            "qid": "training",
+            "label": "training"
+        },
+        {
+            "qid": "company",
+            "label": "company"
+        },
+        {
+            "qid": "anthem",
+            "label": "anthem"
+        },
+        {
+            "qid": "currency",
+            "label": "currency"
+        },
+        {
+            "qid": "ethnic group",
+            "label": "ethnic group"
+        },
+        {
+            "qid": "country",
+            "label": "country"
+        },
+        {
+            "qid": "band",
+            "label": "band"
+        },
+        {
+            "qid": "city",
+            "label": "city"
+        },
+        {
+            "qid": "occupation",
+            "label": "occupation"
+        },
+        {
+            "qid": "musical work",
+            "label": "musical work"
+        },
+        {
+            "qid": "instrument",
+            "label": "instrument"
+        },
+        {
+            "qid": "background",
+            "label": "background"
+        },
+        {
+            "qid": "language",
+            "label": "language"
+        }
+    ],
+    "relations": [
+        {
+            "pid": "record label",
+            "label": "record label",
+            "domain": "artist",
+            "range": "record label"
+        },
+        {
+            "pid": "professional field",
+            "label": "professional field",
+            "domain": "artist",
+            "range": "field"
+        },
+        {
+            "pid": "death date",
+            "label": "death date",
+            "domain": "artist",
+            "range": "date"
+        },
+        {
+            "pid": "genre",
+            "label": "genre",
+            "domain": "artist",
+            "range": "genre"
+        },
+        {
+            "pid": "alternative name",
+            "label": "alternative name",
+            "domain": "artist",
+            "range": "string"
+        },
+        {
+            "pid": "birth place",
+            "label": "birth place",
+            "domain": "artist",
+            "range": "place"
+        },
+        {
+            "pid": "demonym",
+            "label": "demonym",
+            "domain": "artist",
+            "range": "demonym"
+        },
+        {
+            "pid": "training",
+            "label": "training",
+            "domain": "artist",
+            "range": "training"
+        },
+        {
+            "pid": "nationality",
+            "label": "nationality",
+            "domain": "artist",
+            "range": "country"
+        },
+        {
+            "pid": "death place",
+            "label": "death place",
+            "domain": "artist",
+            "range": "place"
+        },
+        {
+            "pid": "founding date",
+            "label": "founding date",
+            "domain": "company",
+            "range": "date"
+        },
+        {
+            "pid": "postal code",
+            "label": "postal code",
+            "domain": "city",
+            "range": "string"
+        },
+        {
+            "pid": "location",
+            "label": "location",
+            "domain": "company",
+            "range": "place"
+        },
+        {
+            "pid": "stylistic origin",
+            "label": "stylistic origin",
+            "domain": "artist",
+            "range": "country"
+        },
+        {
+            "pid": "anthem",
+            "label": "anthem",
+            "domain": "country",
+            "range": "anthem"
+        },
+        {
+            "pid": "currency",
+            "label": "currency",
+            "domain": "country",
+            "range": "currency"
+        },
+        {
+            "pid": "origin",
+            "label": "origin",
+            "domain": "artist",
+            "range": "country"
+        },
+        {
+            "pid": "leader title",
+            "label": "leader title",
+            "domain": "country",
+            "range": "string"
+        },
+        {
+            "pid": "ethnic group",
+            "label": "ethnic group",
+            "domain": "artist",
+            "range": "ethnic group"
+        },
+        {
+            "pid": "leader",
+            "label": "leader",
+            "domain": "country",
+            "range": "leader"
+        },
+        {
+            "pid": "is part of",
+            "label": "is part of",
+            "domain": "artist",
+            "range": "band"
+        },
+        {
+            "pid": "long name",
+            "label": "long name",
+            "domain": "artist",
+            "range": "string"
+        },
+        {
+            "pid": "area total",
+            "label": "area total",
+            "domain": "city",
+            "range": "number"
+        },
+        {
+            "pid": "music fusion genre",
+            "label": "music fusion genre",
+            "domain": "artist",
+            "range": "genre"
+        },
+        {
+            "pid": "associated band/associated musical artist",
+            "label": "associated band/associated musical artist",
+            "domain": "artist",
+            "range": "band"
+        },
+        {
+            "pid": "active years start year",
+            "label": "active years start year",
+            "domain": "artist",
+            "range": "year"
+        },
+        {
+            "pid": "elevation above the sea level",
+            "label": "elevation above the sea level",
+            "domain": "city",
+            "range": "number"
+        },
+        {
+            "pid": "occupation",
+            "label": "occupation",
+            "domain": "artist",
+            "range": "occupation"
+        },
+        {
+            "pid": "meaning",
+            "label": "meaning",
+            "domain": "musical work",
+            "range": "string"
+        },
+        {
+            "pid": "instrument",
+            "label": "instrument",
+            "domain": "musical work",
+            "range": "instrument"
+        },
+        {
+            "pid": "music subgenre",
+            "label": "music subgenre",
+            "domain": "musical work",
+            "range": "genre"
+        },
+        {
+            "pid": "country",
+            "label": "country",
+            "domain": "artist",
+            "range": "country"
+        },
+        {
+            "pid": "birth year",
+            "label": "birth year",
+            "domain": "artist",
+            "range": "year"
+        },
+        {
+            "pid": "language",
+            "label": "language",
+            "domain": "musical work",
+            "range": "language"
+        },
+        {
+            "pid": "background",
+            "label": "background",
+            "domain": "artist",
+            "range": "background"
+        },
+        {
+            "pid": "derivative",
+            "label": "derivative",
+            "domain": "musical work",
+            "range": "musical work"
+        },
+        {
+            "pid": "birth date",
+            "label": "birth date",
+            "domain": "artist",
+            "range": "date"
+        },
+        {
+            "pid": "population density",
+            "label": "population density",
+            "domain": "city",
+            "range": "number"
+        },
+        {
+            "pid": "official language",
+            "label": "official language",
+            "domain": "country",
+            "range": "language"
+        }
+    ]
+}

@@ -1,0 +1,156 @@
+{
+    "title": "ComicsCharacter Ontology",
+    "id": "ont_10_comicscharacter",
+    "concepts": [
+        {
+            "qid": "comics character",
+            "label": "comics character"
+        },
+        {
+            "qid": "voice",
+            "label": "voice"
+        },
+        {
+            "qid": "country",
+            "label": "country"
+        },
+        {
+            "qid": "city",
+            "label": "city"
+        },
+        {
+            "qid": "place",
+            "label": "place"
+        },
+        {
+            "qid": "film",
+            "label": "film"
+        },
+        {
+            "qid": "organisation",
+            "label": "organisation"
+        },
+        {
+            "qid": "award",
+            "label": "award"
+        },
+        {
+            "qid": "person",
+            "label": "person"
+        },
+        {
+            "qid": "series",
+            "label": "series"
+        }
+    ],
+    "relations": [
+        {
+            "pid": "voice",
+            "label": "voice",
+            "domain": "comics character",
+            "range": "voice"
+        },
+        {
+            "pid": "city",
+            "label": "city",
+            "domain": "comics character",
+            "range": "city"
+        },
+        {
+            "pid": "nationality",
+            "label": "nationality",
+            "domain": "comics character",
+            "range": "country"
+        },
+        {
+            "pid": "first aired",
+            "label": "first aired",
+            "domain": "film",
+            "range": "date"
+        },
+        {
+            "pid": "distributor",
+            "label": "distributor",
+            "domain": "film",
+            "range": "organisation"
+        },
+        {
+            "pid": "award",
+            "label": "award",
+            "domain": "film",
+            "range": "award"
+        },
+        {
+            "pid": "last aired",
+            "label": "last aired",
+            "domain": "film",
+            "range": "date"
+        },
+        {
+            "pid": "key person",
+            "label": "key person",
+            "domain": "organisation",
+            "range": "person"
+        },
+        {
+            "pid": "founded by",
+            "label": "founded by",
+            "domain": "organisation",
+            "range": "person"
+        },
+        {
+            "pid": "creator",
+            "label": "creator",
+            "domain": "comics character",
+            "range": "person"
+        },
+        {
+            "pid": "starring",
+            "label": "starring",
+            "domain": "film",
+            "range": "comics character"
+        },
+        {
+            "pid": "series",
+            "label": "series",
+            "domain": "film",
+            "range": "series"
+        },
+        {
+            "pid": "first appearance in film",
+            "label": "first appearance in film",
+            "domain": "comics character",
+            "range": "date"
+        },
+        {
+            "pid": "full name",
+            "label": "full name",
+            "domain": "comics character",
+            "range": "string"
+        },
+        {
+            "pid": "child",
+            "label": "child",
+            "domain": "comics character",
+            "range": "comics character"
+        },
+        {
+            "pid": "alternative name",
+            "label": "alternative name",
+            "domain": "comics character",
+            "range": "string"
+        },
+        {
+            "pid": "birth place",
+            "label": "birth place",
+            "domain": "comics character",
+            "range": "place"
+        },
+        {
+            "pid": "broadcasted by",
+            "label": "broadcasted by",
+            "domain": "comics character",
+            "range": "organisation"
+        }
+    ]
+}

@@ -1,0 +1,200 @@
+{
+    "title": "Food Ontology",
+    "id": "ont_13_food",
+    "concepts": [
+        {
+            "qid": "food",
+            "label": "food"
+        },
+        {
+            "qid": "country",
+            "label": "country"
+        },
+        {
+            "qid": "city",
+            "label": "city"
+        },
+        {
+            "qid": "language",
+            "label": "language"
+        },
+        {
+            "qid": "food family",
+            "label": "food family"
+        },
+        {
+            "qid": "division",
+            "label": "division"
+        },
+        {
+            "qid": "person",
+            "label": "person"
+        },
+        {
+            "qid": "place",
+            "label": "place"
+        },
+        {
+            "qid": "ethnic group",
+            "label": "ethnic group"
+        },
+        {
+            "qid": "currency",
+            "label": "currency"
+        },
+        {
+            "qid": "demonym",
+            "label": "demonym"
+        },
+        {
+            "qid": "genus",
+            "label": "genus"
+        }
+    ],
+    "relations": [
+        {
+            "pid": "carbohydrate",
+            "label": "carbohydrate",
+            "domain": "food",
+            "range": "number"
+        },
+        {
+            "pid": "protein",
+            "label": "protein",
+            "domain": "food",
+            "range": "number"
+        },
+        {
+            "pid": "main ingredient",
+            "label": "main ingredient",
+            "domain": "food",
+            "range": "ingredient"
+        },
+        {
+            "pid": "capital",
+            "label": "capital",
+            "domain": "country",
+            "range": "city"
+        },
+        {
+            "pid": "genus",
+            "label": "genus",
+            "domain": "food",
+            "range": "genus"
+        },
+        {
+            "pid": "alternative name",
+            "label": "alternative name",
+            "domain": "food",
+            "range": "string"
+        },
+        {
+            "pid": "demonym",
+            "label": "demonym",
+            "domain": "country",
+            "range": "demonym"
+        },
+        {
+            "pid": "currency",
+            "label": "currency",
+            "domain": "country",
+            "range": "currency"
+        },
+        {
+            "pid": "order",
+            "label": "order",
+            "domain": "food",
+            "range": "number"
+        },
+        {
+            "pid": "leader title",
+            "label": "leader title",
+            "domain": "country",
+            "range": "string"
+        },
+        {
+            "pid": "ethnic group",
+            "label": "ethnic group",
+            "domain": "food",
+            "range": "ethnic group"
+        },
+        {
+            "pid": "leader",
+            "label": "leader",
+            "domain": "country",
+            "range": "person"
+        },
+        {
+            "pid": "is part of",
+            "label": "is part of",
+            "domain": "food",
+            "range": "food"
+        },
+        {
+            "pid": "region",
+            "label": "region",
+            "domain": "food",
+            "range": "place"
+        },
+        {
+            "pid": "course",
+            "label": "course",
+            "domain": "food",
+            "range": "food"
+        },
+        {
+            "pid": "dish variation",
+            "label": "dish variation",
+            "domain": "food",
+            "range": "food"
+        },
+        {
+            "pid": "creator",
+            "label": "creator",
+            "domain": "food",
+            "range": "person"
+        },
+        {
+            "pid": "country",
+            "label": "country",
+            "domain": "food",
+            "range": "country"
+        },
+        {
+            "pid": "division",
+            "label": "division",
+            "domain": "food",
+            "range": "division"
+        },
+        {
+            "pid": "fat",
+            "label": "fat",
+            "domain": "food",
+            "range": "number"
+        },
+        {
+            "pid": "family",
+            "label": "family",
+            "domain": "food",
+            "range": "food family"
+        },
+        {
+            "pid": "language",
+            "label": "language",
+            "domain": "country",
+            "range": "language"
+        },
+        {
+            "pid": "serving temperature",
+            "label": "serving temperature",
+            "domain": "food",
+            "range": "number"
+        },
+        {
+            "pid": "ingredient",
+            "label": "ingredient",
+            "domain": "food",
+            "range": "ingredient"
+        }
+    ]
+}

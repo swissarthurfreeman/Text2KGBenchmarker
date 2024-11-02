@@ -1,0 +1,208 @@
+{
+    "title": "SportsTeam Ontology",
+    "id": "ont_15_sportsteam",
+    "concepts": [
+        {
+            "qid": "sports team",
+            "label": "sports team"
+        },
+        {
+            "qid": "athlete",
+            "label": "athlete"
+        },
+        {
+            "qid": "country",
+            "label": "country"
+        },
+        {
+            "qid": "city",
+            "label": "city"
+        },
+        {
+            "qid": "person",
+            "label": "person"
+        },
+        {
+            "qid": "place",
+            "label": "place"
+        },
+        {
+            "qid": "demonym",
+            "label": "demonym"
+        },
+        {
+            "qid": "league",
+            "label": "league"
+        },
+        {
+            "qid": "tenant",
+            "label": "tenant"
+        },
+        {
+            "qid": "language",
+            "label": "language"
+        },
+        {
+            "qid": "season",
+            "label": "season"
+        },
+        {
+            "qid": "state",
+            "label": "state"
+        },
+        {
+            "qid": "ground",
+            "label": "ground"
+        },
+        {
+            "qid": "company",
+            "label": "company"
+        }
+    ],
+    "relations": [
+        {
+            "pid": "club",
+            "label": "club",
+            "domain": "athlete",
+            "range": "sports team"
+        },
+        {
+            "pid": "capital",
+            "label": "capital",
+            "domain": "country",
+            "range": "city"
+        },
+        {
+            "pid": "full name",
+            "label": "full name",
+            "domain": "athlete",
+            "range": "string"
+        },
+        {
+            "pid": "mayor",
+            "label": "mayor",
+            "domain": "city",
+            "range": "person"
+        },
+        {
+            "pid": "birth place",
+            "label": "birth place",
+            "domain": "person",
+            "range": "place"
+        },
+        {
+            "pid": "demonym",
+            "label": "demonym",
+            "domain": "country",
+            "range": "demonym"
+        },
+        {
+            "pid": "champions",
+            "label": "champions",
+            "domain": "league",
+            "range": "sports team"
+        },
+        {
+            "pid": "location",
+            "label": "location",
+            "domain": "sports team",
+            "range": "place"
+        },
+        {
+            "pid": "owner",
+            "label": "owner",
+            "domain": "sports team",
+            "range": "person"
+        },
+        {
+            "pid": "nickname",
+            "label": "nickname",
+            "domain": "person",
+            "range": "string"
+        },
+        {
+            "pid": "number of members",
+            "label": "number of members",
+            "domain": "sports team",
+            "range": "number"
+        },
+        {
+            "pid": "tenant",
+            "label": "tenant",
+            "domain": "sports team",
+            "range": "tenant"
+        },
+        {
+            "pid": "leader",
+            "label": "leader",
+            "domain": "country",
+            "range": "person"
+        },
+        {
+            "pid": "city",
+            "label": "city",
+            "domain": "sports team",
+            "range": "city"
+        },
+        {
+            "pid": "is part of",
+            "label": "is part of",
+            "domain": "city",
+            "range": "country"
+        },
+        {
+            "pid": "chairman title",
+            "label": "chairman title",
+            "domain": "sports team",
+            "range": "string"
+        },
+        {
+            "pid": "league",
+            "label": "league",
+            "domain": "sports team",
+            "range": "league"
+        },
+        {
+            "pid": "country",
+            "label": "country",
+            "domain": "city",
+            "range": "country"
+        },
+        {
+            "pid": "language",
+            "label": "language",
+            "domain": "country",
+            "range": "language"
+        },
+        {
+            "pid": "season",
+            "label": "season",
+            "domain": "sports team",
+            "range": "season"
+        },
+        {
+            "pid": "state",
+            "label": "state",
+            "domain": "city",
+            "range": "state"
+        },
+        {
+            "pid": "ground",
+            "label": "ground",
+            "domain": "sports team",
+            "range": "ground"
+        },
+        {
+            "pid": "operator",
+            "label": "operator",
+            "domain": "sports team",
+            "range": "company"
+        },
+        {
+            "pid": "manager",
+            "label": "manager",
+            "domain": "sports team",
+            "range": "person"
+        }
+    ]
+}

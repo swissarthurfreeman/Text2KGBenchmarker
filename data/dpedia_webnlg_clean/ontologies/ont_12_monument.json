@@ -1,0 +1,220 @@
+{
+    "title": "Monument Ontology",
+    "id": "ont_12_monument",
+    "concepts": [
+        {
+            "qid": "monument",
+            "label": "monument"
+        },
+        {
+            "qid": "place",
+            "label": "place"
+        },
+        {
+            "qid": "city",
+            "label": "city"
+        },
+        {
+            "qid": "country",
+            "label": "country"
+        },
+        {
+            "qid": "person",
+            "label": "person"
+        },
+        {
+            "qid": "religion",
+            "label": "religion"
+        },
+        {
+            "qid": "material",
+            "label": "material"
+        },
+        {
+            "qid": "municipality",
+            "label": "municipality"
+        },
+        {
+            "qid": "currency",
+            "label": "currency"
+        },
+        {
+            "qid": "ethnic group",
+            "label": "ethnic group"
+        },
+        {
+            "qid": "state",
+            "label": "state"
+        },
+        {
+            "qid": "language",
+            "label": "language"
+        },
+        {
+            "qid": "category",
+            "label": "category"
+        },
+        {
+            "qid": "organisation",
+            "label": "organisation"
+        }
+    ],
+    "relations": [
+        {
+            "pid": "has to its southeast",
+            "label": "has to its southeast",
+            "domain": "monument",
+            "range": "place"
+        },
+        {
+            "pid": "has to its west",
+            "label": "has to its west",
+            "domain": "monument",
+            "range": "place"
+        },
+        {
+            "pid": "established",
+            "label": "established",
+            "domain": "monument",
+            "range": "date"
+        },
+        {
+            "pid": "capital",
+            "label": "capital",
+            "domain": "country",
+            "range": "city"
+        },
+        {
+            "pid": "designer",
+            "label": "designer",
+            "domain": "monument",
+            "range": "person"
+        },
+        {
+            "pid": "has to its north",
+            "label": "has to its north",
+            "domain": "monument",
+            "range": "place"
+        },
+        {
+            "pid": "has to its southwest",
+            "label": "has to its southwest",
+            "domain": "monument",
+            "range": "place"
+        },
+        {
+            "pid": "religion",
+            "label": "religion",
+            "domain": "monument",
+            "range": "religion"
+        },
+        {
+            "pid": "material",
+            "label": "material",
+            "domain": "monument",
+            "range": "material"
+        },
+        {
+            "pid": "location",
+            "label": "location",
+            "domain": "monument",
+            "range": "place"
+        },
+        {
+            "pid": "municipality",
+            "label": "municipality",
+            "domain": "monument",
+            "range": "municipality"
+        },
+        {
+            "pid": "currency",
+            "label": "currency",
+            "domain": "country",
+            "range": "currency"
+        },
+        {
+            "pid": "leader title",
+            "label": "leader title",
+            "domain": "country",
+            "range": "string"
+        },
+        {
+            "pid": "dedicated to",
+            "label": "dedicated to",
+            "domain": "monument",
+            "range": "person"
+        },
+        {
+            "pid": "ethnic group",
+            "label": "ethnic group",
+            "domain": "country",
+            "range": "ethnic group"
+        },
+        {
+            "pid": "leader",
+            "label": "leader",
+            "domain": "country",
+            "range": "person"
+        },
+        {
+            "pid": "district",
+            "label": "district",
+            "domain": "country",
+            "range": "place"
+        },
+        {
+            "pid": "inauguration date",
+            "label": "inauguration date",
+            "domain": "monument",
+            "range": "date"
+        },
+        {
+            "pid": "country",
+            "label": "country",
+            "domain": "monument",
+            "range": "country"
+        },
+        {
+            "pid": "largest city",
+            "label": "largest city",
+            "domain": "country",
+            "range": "city"
+        },
+        {
+            "pid": "state",
+            "label": "state",
+            "domain": "monument",
+            "range": "state"
+        },
+        {
+            "pid": "language",
+            "label": "language",
+            "domain": "country",
+            "range": "language"
+        },
+        {
+            "pid": "category",
+            "label": "category",
+            "domain": "monument",
+            "range": "category"
+        },
+        {
+            "pid": "native name",
+            "label": "native name",
+            "domain": "monument",
+            "range": "string"
+        },
+        {
+            "pid": "nearest city",
+            "label": "nearest city",
+            "domain": "monument",
+            "range": "city"
+        },
+        {
+            "pid": "owning organisation",
+            "label": "owning organisation",
+            "domain": "monument",
+            "range": "organisation"
+        }
+    ]
+}

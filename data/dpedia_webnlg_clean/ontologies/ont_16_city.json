@@ -1,0 +1,190 @@
+{
+    "title": "City Ontology",
+    "id": "ont_16_city",
+    "concepts": [
+        {
+            "qid": "city",
+            "label": "city"
+        },
+        {
+            "qid": "city type",
+            "label": "city type"
+        },
+        {
+            "qid": "country",
+            "label": "country"
+        },
+        {
+            "qid": "demonym",
+            "label": "demonym"
+        },
+        {
+            "qid": "county",
+            "label": "county"
+        },
+        {
+            "qid": "timezone",
+            "label": "timezone"
+        },
+        {
+            "qid": "place",
+            "label": "place"
+        },
+        {
+            "qid": "ethnic group",
+            "label": "ethnic group"
+        },
+        {
+            "qid": "government type",
+            "label": "government type"
+        },
+        {
+            "qid": "language",
+            "label": "language"
+        },
+        {
+            "qid": "state",
+            "label": "state"
+        }
+    ],
+    "relations": [
+        {
+            "pid": "type",
+            "label": "type",
+            "domain": "city",
+            "range": "city type"
+        },
+        {
+            "pid": "area code",
+            "label": "area code",
+            "domain": "city",
+            "range": "string"
+        },
+        {
+            "pid": "capital",
+            "label": "capital",
+            "domain": "country",
+            "range": "city"
+        },
+        {
+            "pid": "population metro",
+            "label": "population metro",
+            "domain": "city",
+            "range": "number"
+        },
+        {
+            "pid": "demonym",
+            "label": "demonym",
+            "domain": "country",
+            "range": "demonym"
+        },
+        {
+            "pid": "county seat",
+            "label": "county seat",
+            "domain": "city",
+            "range": "county"
+        },
+        {
+            "pid": "time zone",
+            "label": "time zone",
+            "domain": "city",
+            "range": "timezone"
+        },
+        {
+            "pid": "postal code",
+            "label": "postal code",
+            "domain": "city",
+            "range": "string"
+        },
+        {
+            "pid": "location",
+            "label": "location",
+            "domain": "city",
+            "range": "place"
+        },
+        {
+            "pid": "leader title",
+            "label": "leader title",
+            "domain": "country",
+            "range": "string"
+        },
+        {
+            "pid": "ethnic group",
+            "label": "ethnic group",
+            "domain": "city",
+            "range": "ethnic group"
+        },
+        {
+            "pid": "leader",
+            "label": "leader",
+            "domain": "city",
+            "range": "person"
+        },
+        {
+            "pid": "is part of",
+            "label": "is part of",
+            "domain": "city",
+            "range": "country"
+        },
+        {
+            "pid": "area total",
+            "label": "area total",
+            "domain": "city",
+            "range": "number"
+        },
+        {
+            "pid": "elevation above the sea level",
+            "label": "elevation above the sea level",
+            "domain": "city",
+            "range": "number"
+        },
+        {
+            "pid": "country",
+            "label": "country",
+            "domain": "city",
+            "range": "country"
+        },
+        {
+            "pid": "largest city",
+            "label": "largest city",
+            "domain": "country",
+            "range": "city"
+        },
+        {
+            "pid": "government type",
+            "label": "government type",
+            "domain": "city",
+            "range": "government type"
+        },
+        {
+            "pid": "area of land",
+            "label": "area of land",
+            "domain": "city",
+            "range": "number"
+        },
+        {
+            "pid": "language",
+            "label": "language",
+            "domain": "city",
+            "range": "language"
+        },
+        {
+            "pid": "state",
+            "label": "state",
+            "domain": "city",
+            "range": "state"
+        },
+        {
+            "pid": "utc offset",
+            "label": "utc offset",
+            "domain": "city",
+            "range": "number"
+        },
+        {
+            "pid": "population density",
+            "label": "population density",
+            "domain": "city",
+            "range": "number"
+        }
+    ]
+}

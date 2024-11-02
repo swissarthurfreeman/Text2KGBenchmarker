@@ -1,0 +1,344 @@
+{
+    "title": "University Ontology",
+    "id": "ont_1_university",
+    "concepts": [
+        {
+            "qid": "university",
+            "label": "university"
+        },
+        {
+            "qid": "person",
+            "label": "person"
+        },
+        {
+            "qid": "sport",
+            "label": "sport"
+        },
+        {
+            "qid": "city",
+            "label": "city"
+        },
+        {
+            "qid": "religion",
+            "label": "religion"
+        },
+        {
+            "qid": "colour",
+            "label": "colour"
+        },
+        {
+            "qid": "organization",
+            "label": "organization"
+        },
+        {
+            "qid": "state",
+            "label": "state"
+        },
+        {
+            "qid": "country",
+            "label": "country"
+        },
+        {
+            "qid": "campus",
+            "label": "campus"
+        },
+        {
+            "qid": "ethnic group",
+            "label": "ethnic group"
+        },
+        {
+            "qid": "river",
+            "label": "river"
+        },
+        {
+            "qid": "anthem",
+            "label": "anthem"
+        },
+        {
+            "qid": "saint",
+            "label": "saint"
+        },
+        {
+            "qid": "place",
+            "label": "place"
+        }
+    ],
+    "relations": [
+        {
+            "pid": "director",
+            "label": "director",
+            "domain": "university",
+            "range": "person"
+        },
+        {
+            "pid": "sports offered",
+            "label": "sports offered",
+            "domain": "university",
+            "range": "sport"
+        },
+        {
+            "pid": "latin name",
+            "label": "latin name",
+            "domain": "university",
+            "range": "string"
+        },
+        {
+            "pid": "has to its west",
+            "label": "has to its west",
+            "domain": "university",
+            "range": "place"
+        },
+        {
+            "pid": "number of postgraduate students",
+            "label": "number of postgraduate students",
+            "domain": "university",
+            "range": "number"
+        },
+        {
+            "pid": "established",
+            "label": "established",
+            "domain": "university",
+            "range": "date"
+        },
+        {
+            "pid": "capital",
+            "label": "capital",
+            "domain": "university",
+            "range": "city"
+        },
+        {
+            "pid": "headquarter",
+            "label": "headquarter",
+            "domain": "university",
+            "range": "city"
+        },
+        {
+            "pid": "has to its northeast",
+            "label": "has to its northeast",
+            "domain": "university",
+            "range": "place"
+        },
+        {
+            "pid": "religion",
+            "label": "religion",
+            "domain": "university",
+            "range": "religion"
+        },
+        {
+            "pid": "postal code",
+            "label": "postal code",
+            "domain": "university",
+            "range": "string"
+        },
+        {
+            "pid": "motto",
+            "label": "motto",
+            "domain": "university",
+            "range": "string"
+        },
+        {
+            "pid": "was given the technical campus status by",
+            "label": "was given the technical campus status by",
+            "domain": "university",
+            "range": "organization"
+        },
+        {
+            "pid": "location",
+            "label": "location",
+            "domain": "university",
+            "range": "place"
+        },
+        {
+            "pid": "has to its northwest",
+            "label": "has to its northwest",
+            "domain": "university",
+            "range": "place"
+        },
+        {
+            "pid": "patron saint",
+            "label": "patron saint",
+            "domain": "university",
+            "range": "saint"
+        },
+        {
+            "pid": "number of students",
+            "label": "number of students",
+            "domain": "university",
+            "range": "number"
+        },
+        {
+            "pid": "affiliation",
+            "label": "affiliation",
+            "domain": "university",
+            "range": "university"
+        },
+        {
+            "pid": "anthem",
+            "label": "anthem",
+            "domain": "university",
+            "range": "anthem"
+        },
+        {
+            "pid": "nickname",
+            "label": "nickname",
+            "domain": "university",
+            "range": "string"
+        },
+        {
+            "pid": "river",
+            "label": "river",
+            "domain": "university",
+            "range": "river"
+        },
+        {
+            "pid": "number of undergraduate students",
+            "label": "number of undergraduate students",
+            "domain": "university",
+            "range": "number"
+        },
+        {
+            "pid": "leader title",
+            "label": "leader title",
+            "domain": "university",
+            "range": "string"
+        },
+        {
+            "pid": "staff",
+            "label": "staff",
+            "domain": "university",
+            "range": ""
+        },
+        {
+            "pid": "ethnic group",
+            "label": "ethnic group",
+            "domain": "university",
+            "range": "ethnic group"
+        },
+        {
+            "pid": "legislature",
+            "label": "legislature",
+            "domain": "university",
+            "range": "country"
+        },
+        {
+            "pid": "city",
+            "label": "city",
+            "domain": "university",
+            "range": "city"
+        },
+        {
+            "pid": "leader",
+            "label": "leader",
+            "domain": "university",
+            "range": "person"
+        },
+        {
+            "pid": "is part of",
+            "label": "is part of",
+            "domain": "university",
+            "range": "university"
+        },
+        {
+            "pid": "long name",
+            "label": "long name",
+            "domain": "university",
+            "range": "string"
+        },
+        {
+            "pid": "academic staff size",
+            "label": "academic staff size",
+            "domain": "university",
+            "range": "number"
+        },
+        {
+            "pid": "president",
+            "label": "president",
+            "domain": "university",
+            "range": "person"
+        },
+        {
+            "pid": "rector",
+            "label": "rector",
+            "domain": "university",
+            "range": "person"
+        },
+        {
+            "pid": "outlook ranking",
+            "label": "outlook ranking",
+            "domain": "university",
+            "range": "number"
+        },
+        {
+            "pid": "neighboring municipality",
+            "label": "neighboring municipality",
+            "domain": "university",
+            "range": "city"
+        },
+        {
+            "pid": "elevation above the sea level",
+            "label": "elevation above the sea level",
+            "domain": "university",
+            "range": "number"
+        },
+        {
+            "pid": "campus",
+            "label": "campus",
+            "domain": "university",
+            "range": "campus"
+        },
+        {
+            "pid": "dean",
+            "label": "dean",
+            "domain": "university",
+            "range": "person"
+        },
+        {
+            "pid": "country",
+            "label": "country",
+            "domain": "university",
+            "range": "country"
+        },
+        {
+            "pid": "largest city",
+            "label": "largest city",
+            "domain": "university",
+            "range": "city"
+        },
+        {
+            "pid": "government type",
+            "label": "government type",
+            "domain": "university",
+            "range": "organization"
+        },
+        {
+            "pid": "state",
+            "label": "state",
+            "domain": "university",
+            "range": "state"
+        },
+        {
+            "pid": "sport governing body",
+            "label": "sport governing body",
+            "domain": "university",
+            "range": "organization"
+        },
+        {
+            "pid": "official school colour",
+            "label": "official school colour",
+            "domain": "university",
+            "range": "colour"
+        },
+        {
+            "pid": "founder",
+            "label": "founder",
+            "domain": "university",
+            "range": "person"
+        },
+        {
+            "pid": "number of doctoral students",
+            "label": "number of doctoral students",
+            "domain": "university",
+            "range": "number"
+        }
+    ]
+}

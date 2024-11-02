@@ -1,0 +1,350 @@
+{
+    "title": "Scientist Ontology",
+    "id": "ont_18_scientist",
+    "concepts": [
+        {
+            "qid": "scientist",
+            "label": "scientist"
+        },
+        {
+            "qid": "country",
+            "label": "country"
+        },
+        {
+            "qid": "field",
+            "label": "field"
+        },
+        {
+            "qid": "type",
+            "label": "type"
+        },
+        {
+            "qid": "city",
+            "label": "city"
+        },
+        {
+            "qid": "university",
+            "label": "university"
+        },
+        {
+            "qid": "place",
+            "label": "place"
+        },
+        {
+            "qid": "demonym",
+            "label": "demonym"
+        },
+        {
+            "qid": "organisation",
+            "label": "organisation"
+        },
+        {
+            "qid": "timezone",
+            "label": "timezone"
+        },
+        {
+            "qid": "currency",
+            "label": "currency"
+        },
+        {
+            "qid": "school",
+            "label": "school"
+        },
+        {
+            "qid": "language",
+            "label": "language"
+        },
+        {
+            "qid": "written work",
+            "label": "written work"
+        },
+        {
+            "qid": "award",
+            "label": "award"
+        }
+    ],
+    "relations": [
+        {
+            "pid": "citizenship",
+            "label": "citizenship",
+            "domain": "scientist",
+            "range": "country"
+        },
+        {
+            "pid": "professional field",
+            "label": "professional field",
+            "domain": "scientist",
+            "range": "field"
+        },
+        {
+            "pid": "type",
+            "label": "type",
+            "domain": "scientist",
+            "range": "type"
+        },
+        {
+            "pid": "area code",
+            "label": "area code",
+            "domain": "city",
+            "range": "string"
+        },
+        {
+            "pid": "death date",
+            "label": "death date",
+            "domain": "scientist",
+            "range": "date"
+        },
+        {
+            "pid": "chancellor",
+            "label": "chancellor",
+            "domain": "university",
+            "range": "person"
+        },
+        {
+            "pid": "capital",
+            "label": "capital",
+            "domain": "country",
+            "range": "city"
+        },
+        {
+            "pid": "residence",
+            "label": "residence",
+            "domain": "scientist",
+            "range": "place"
+        },
+        {
+            "pid": "population metro density",
+            "label": "population metro density",
+            "domain": "city",
+            "range": "number"
+        },
+        {
+            "pid": "demonym",
+            "label": "demonym",
+            "domain": "scientist",
+            "range": "demonym"
+        },
+        {
+            "pid": "birth place",
+            "label": "birth place",
+            "domain": "scientist",
+            "range": "place"
+        },
+        {
+            "pid": "nationality",
+            "label": "nationality",
+            "domain": "scientist",
+            "range": "country"
+        },
+        {
+            "pid": "founding date",
+            "label": "founding date",
+            "domain": "organisation",
+            "range": "date"
+        },
+        {
+            "pid": "death place",
+            "label": "death place",
+            "domain": "scientist",
+            "range": "place"
+        },
+        {
+            "pid": "postal code",
+            "label": "postal code",
+            "domain": "city",
+            "range": "string"
+        },
+        {
+            "pid": "motto",
+            "label": "motto",
+            "domain": "university",
+            "range": "string"
+        },
+        {
+            "pid": "time zone",
+            "label": "time zone",
+            "domain": "city",
+            "range": "timezone"
+        },
+        {
+            "pid": "religion",
+            "label": "religion",
+            "domain": "scientist",
+            "range": "religion"
+        },
+        {
+            "pid": "area metro",
+            "label": "area metro",
+            "domain": "city",
+            "range": "number"
+        },
+        {
+            "pid": "affiliation",
+            "label": "affiliation",
+            "domain": "scientist",
+            "range": "university"
+        },
+        {
+            "pid": "vice chancellor",
+            "label": "vice chancellor",
+            "domain": "university",
+            "range": "person"
+        },
+        {
+            "pid": "currency",
+            "label": "currency",
+            "domain": "country",
+            "range": "currency"
+        },
+        {
+            "pid": "dissolution year",
+            "label": "dissolution year",
+            "domain": "organisation",
+            "range": "year"
+        },
+        {
+            "pid": "leader title",
+            "label": "leader title",
+            "domain": "country",
+            "range": "string"
+        },
+        {
+            "pid": "known for",
+            "label": "known for",
+            "domain": "scientist",
+            "range": "thing"
+        },
+        {
+            "pid": "grid reference",
+            "label": "grid reference",
+            "domain": "city",
+            "range": "string"
+        },
+        {
+            "pid": "leader",
+            "label": "leader",
+            "domain": "country",
+            "range": "leader"
+        },
+        {
+            "pid": "is part of",
+            "label": "is part of",
+            "domain": "city",
+            "range": "country"
+        },
+        {
+            "pid": "region",
+            "label": "region",
+            "domain": "scientist",
+            "range": "place"
+        },
+        {
+            "pid": "area total",
+            "label": "area total",
+            "domain": "city",
+            "range": "number"
+        },
+        {
+            "pid": "long name",
+            "label": "long name",
+            "domain": "scientist",
+            "range": "string"
+        },
+        {
+            "pid": "doctoral advisor",
+            "label": "doctoral advisor",
+            "domain": "scientist",
+            "range": "scientist"
+        },
+        {
+            "pid": "spouse",
+            "label": "spouse",
+            "domain": "scientist",
+            "range": "person"
+        },
+        {
+            "pid": "alma mater",
+            "label": "alma mater",
+            "domain": "scientist",
+            "range": "school"
+        },
+        {
+            "pid": "country",
+            "label": "country",
+            "domain": "scientist",
+            "range": "country"
+        },
+        {
+            "pid": "area of water",
+            "label": "area of water",
+            "domain": "place",
+            "range": "number"
+        },
+        {
+            "pid": "government type",
+            "label": "government type",
+            "domain": "country",
+            "range": "government type"
+        },
+        {
+            "pid": "birth name",
+            "label": "birth name",
+            "domain": "scientist",
+            "range": "string"
+        },
+        {
+            "pid": "population total",
+            "label": "population total",
+            "domain": "city",
+            "range": "number"
+        },
+        {
+            "pid": "language",
+            "label": "language",
+            "domain": "written work",
+            "range": "language"
+        },
+        {
+            "pid": "award",
+            "label": "award",
+            "domain": "scientist",
+            "range": "award"
+        },
+        {
+            "pid": "percentage of area water",
+            "label": "percentage of area water",
+            "domain": "place",
+            "range": "number"
+        },
+        {
+            "pid": "birth date",
+            "label": "birth date",
+            "domain": "scientist",
+            "range": "date"
+        },
+        {
+            "pid": "utc offset",
+            "label": "utc offset",
+            "domain": "place",
+            "range": "number"
+        },
+        {
+            "pid": "influenced by",
+            "label": "influenced by",
+            "domain": "scientist",
+            "range": "scientist"
+        },
+        {
+            "pid": "founding year",
+            "label": "founding year",
+            "domain": "organisation",
+            "range": "year"
+        },
+        {
+            "pid": "official language",
+            "label": "official language",
+            "domain": "country",
+            "range": "language"
+        }
+    ]
+}

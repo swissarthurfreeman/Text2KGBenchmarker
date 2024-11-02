@@ -1,0 +1,312 @@
+{
+    "title": "WrittenWork Ontology",
+    "id": "ont_14_writtenwork",
+    "concepts": [
+        {
+            "qid": "written work",
+            "label": "written work"
+        },
+        {
+            "qid": "genre",
+            "label": "genre"
+        },
+        {
+            "qid": "country",
+            "label": "country"
+        },
+        {
+            "qid": "city",
+            "label": "city"
+        },
+        {
+            "qid": "media type",
+            "label": "media type"
+        },
+        {
+            "qid": "company",
+            "label": "company"
+        },
+        {
+            "qid": "person",
+            "label": "person"
+        },
+        {
+            "qid": "place",
+            "label": "place"
+        },
+        {
+            "qid": "organisation",
+            "label": "organisation"
+        },
+        {
+            "qid": "academic discipline",
+            "label": "academic discipline"
+        }
+    ],
+    "relations": [
+        {
+            "pid": "number of pages",
+            "label": "number of pages",
+            "domain": "written work",
+            "range": "number"
+        },
+        {
+            "pid": "genre",
+            "label": "genre",
+            "domain": "written work",
+            "range": "genre"
+        },
+        {
+            "pid": "capital",
+            "label": "capital",
+            "domain": "country",
+            "range": "city"
+        },
+        {
+            "pid": "media type",
+            "label": "media type",
+            "domain": "written work",
+            "range": "media type"
+        },
+        {
+            "pid": "parent company",
+            "label": "parent company",
+            "domain": "company",
+            "range": "company"
+        },
+        {
+            "pid": "residence",
+            "label": "residence",
+            "domain": "person",
+            "range": "city"
+        },
+        {
+            "pid": "release date",
+            "label": "release date",
+            "domain": "written work",
+            "range": "date"
+        },
+        {
+            "pid": "headquarter",
+            "label": "headquarter",
+            "domain": "company",
+            "range": "city"
+        },
+        {
+            "pid": "birth place",
+            "label": "birth place",
+            "domain": "person",
+            "range": "place"
+        },
+        {
+            "pid": "impact factor",
+            "label": "impact factor",
+            "domain": "written work",
+            "range": "number"
+        },
+        {
+            "pid": "issn number",
+            "label": "issn number",
+            "domain": "written work",
+            "range": "number"
+        },
+        {
+            "pid": "isbn number",
+            "label": "isbn number",
+            "domain": "written work",
+            "range": "number"
+        },
+        {
+            "pid": "nationality",
+            "label": "nationality",
+            "domain": "person",
+            "range": "country"
+        },
+        {
+            "pid": "abbreviation",
+            "label": "abbreviation",
+            "domain": "written work",
+            "range": "string"
+        },
+        {
+            "pid": "region served",
+            "label": "region served",
+            "domain": "written work",
+            "range": "place"
+        },
+        {
+            "pid": "affiliation",
+            "label": "affiliation",
+            "domain": "person",
+            "range": "organisation"
+        },
+        {
+            "pid": "oclc number",
+            "label": "oclc number",
+            "domain": "written work",
+            "range": "number"
+        },
+        {
+            "pid": "literary genre",
+            "label": "literary genre",
+            "domain": "written work",
+            "range": "genre"
+        },
+        {
+            "pid": "libraryof congress classification",
+            "label": "libraryof congress classification",
+            "domain": "written work",
+            "range": "string"
+        },
+        {
+            "pid": "leader title",
+            "label": "leader title",
+            "domain": "country",
+            "range": "string"
+        },
+        {
+            "pid": "academic discipline",
+            "label": "academic discipline",
+            "domain": "written work",
+            "range": "academic discipline"
+        },
+        {
+            "pid": "ethnic group",
+            "label": "ethnic group",
+            "domain": "country",
+            "range": "ethnic group"
+        },
+        {
+            "pid": "first publication year",
+            "label": "first publication year",
+            "domain": "written work",
+            "range": "year"
+        },
+        {
+            "pid": "author",
+            "label": "author",
+            "domain": "written work",
+            "range": "person"
+        },
+        {
+            "pid": "leader",
+            "label": "leader",
+            "domain": "country",
+            "range": "person"
+        },
+        {
+            "pid": "city",
+            "label": "city",
+            "domain": "company",
+            "range": "city"
+        },
+        {
+            "pid": "notable work",
+            "label": "notable work",
+            "domain": "person",
+            "range": "written work"
+        },
+        {
+            "pid": "followed by",
+            "label": "followed by",
+            "domain": "written work",
+            "range": "written work"
+        },
+        {
+            "pid": "president",
+            "label": "president",
+            "domain": "country",
+            "range": "person"
+        },
+        {
+            "pid": "preceded by",
+            "label": "preceded by",
+            "domain": "written work",
+            "range": "written work"
+        },
+        {
+            "pid": "doctoral advisor",
+            "label": "doctoral advisor",
+            "domain": "person",
+            "range": "person"
+        },
+        {
+            "pid": "frequency",
+            "label": "frequency",
+            "domain": "written work",
+            "range": "number"
+        },
+        {
+            "pid": "spoken in",
+            "label": "spoken in",
+            "domain": "language",
+            "range": "country"
+        },
+        {
+            "pid": "alma mater",
+            "label": "alma mater",
+            "domain": "person",
+            "range": "school"
+        },
+        {
+            "pid": "country",
+            "label": "country",
+            "domain": "written work",
+            "range": "country"
+        },
+        {
+            "pid": "publisher",
+            "label": "publisher",
+            "domain": "written work",
+            "range": "company"
+        },
+        {
+            "pid": "editor",
+            "label": "editor",
+            "domain": "written work",
+            "range": "person"
+        },
+        {
+            "pid": "lccn_number",
+            "label": "lccn_number",
+            "domain": "written work",
+            "range": "number"
+        },
+        {
+            "pid": "language",
+            "label": "language",
+            "domain": "written work",
+            "range": "language"
+        },
+        {
+            "pid": "coden code",
+            "label": "coden code",
+            "domain": "written work",
+            "range": "string"
+        },
+        {
+            "pid": "state",
+            "label": "state",
+            "domain": "city",
+            "range": "state"
+        },
+        {
+            "pid": "birth date",
+            "label": "birth date",
+            "domain": "person",
+            "range": "date"
+        },
+        {
+            "pid": "founder",
+            "label": "founder",
+            "domain": "company",
+            "range": "person"
+        },
+        {
+            "pid": "influenced by",
+            "label": "influenced by",
+            "domain": "person",
+            "range": "person"
+        }
+    ]
+}
