@@ -1,0 +1,41 @@
+Map:   0%|                                                                                                          | 0/56196 [00:00<?, ? examples/s]
+Error executing job with overrides: ['model=rebel_model', 'data=nyt_data', 'train=nyt_train']
+Traceback (most recent call last):
+  File "/home/gordon/Documents/edu/gordon_ms/Project/Benchmarker/experiments/rebel/src/train.py", line 116, in main
+    train(conf)
+  File "/home/gordon/Documents/edu/gordon_ms/Project/Benchmarker/experiments/rebel/src/train.py", line 107, in train
+    trainer.fit(pl_module, datamodule=pl_data_module, ckpt_path=conf.checkpoint_path)
+  File "/home/gordon/.local/share/virtualenvs/Benchmarker-GEiCH7pv/lib/python3.12/site-packages/pytorch_lightning/trainer/trainer.py", line 538, in fit
+    call._call_and_handle_interrupt(
+  File "/home/gordon/.local/share/virtualenvs/Benchmarker-GEiCH7pv/lib/python3.12/site-packages/pytorch_lightning/trainer/call.py", line 47, in _call_and_handle_interrupt
+    return trainer_fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gordon/.local/share/virtualenvs/Benchmarker-GEiCH7pv/lib/python3.12/site-packages/pytorch_lightning/trainer/trainer.py", line 574, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "/home/gordon/.local/share/virtualenvs/Benchmarker-GEiCH7pv/lib/python3.12/site-packages/pytorch_lightning/trainer/trainer.py", line 941, in _run
+    self._data_connector.prepare_data()
+  File "/home/gordon/.local/share/virtualenvs/Benchmarker-GEiCH7pv/lib/python3.12/site-packages/pytorch_lightning/trainer/connectors/data_connector.py", line 93, in prepare_data
+    call._call_lightning_datamodule_hook(trainer, "prepare_data")
+  File "/home/gordon/.local/share/virtualenvs/Benchmarker-GEiCH7pv/lib/python3.12/site-packages/pytorch_lightning/trainer/call.py", line 189, in _call_lightning_datamodule_hook
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/gordon/Documents/edu/gordon_ms/Project/Benchmarker/experiments/rebel/src/lightning_data_modules.py", line 63, in prepare_data
+    self.train_dataset = self.train_dataset.map(
+                         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gordon/.local/share/virtualenvs/Benchmarker-GEiCH7pv/lib/python3.12/site-packages/datasets/arrow_dataset.py", line 560, in wrapper
+    out: Union["Dataset", "DatasetDict"] = func(self, *args, **kwargs)
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gordon/.local/share/virtualenvs/Benchmarker-GEiCH7pv/lib/python3.12/site-packages/datasets/arrow_dataset.py", line 3055, in map
+    for rank, done, content in Dataset._map_single(**dataset_kwargs):
+  File "/home/gordon/.local/share/virtualenvs/Benchmarker-GEiCH7pv/lib/python3.12/site-packages/datasets/arrow_dataset.py", line 3458, in _map_single
+    batch = apply_function_on_filtered_inputs(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gordon/.local/share/virtualenvs/Benchmarker-GEiCH7pv/lib/python3.12/site-packages/datasets/arrow_dataset.py", line 3320, in apply_function_on_filtered_inputs
+    processed_inputs = function(*fn_args, *additional_args, **fn_kwargs)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gordon/Documents/edu/gordon_ms/Project/Benchmarker/experiments/rebel/src/lightning_data_modules.py", line 144, in preprocess_function
+    inputs = [self.prefix + inp for inp in inputs]
+              ^^^^^^^^^^^
+AttributeError: 'BaseLightningDataModule' object has no attribute 'prefix'
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.

@@ -1,0 +1,241 @@
+_wandb:
+    value:
+        cli_version: 0.18.5
+        m:
+            - "1": trainer/global_step
+              "6":
+                - 3
+              "7": []
+        python_version: 3.12.3
+        t:
+            "1":
+                - 1
+                - 5
+                - 9
+                - 11
+                - 49
+                - 50
+                - 51
+                - 53
+                - 55
+                - 100
+                - 103
+            "2":
+                - 1
+                - 5
+                - 9
+                - 11
+                - 49
+                - 50
+                - 51
+                - 53
+                - 55
+                - 100
+                - 103
+            "3":
+                - 7
+                - 13
+                - 23
+                - 55
+                - 66
+            "4": 3.12.3
+            "5": 0.18.5
+            "6": 4.46.1
+            "8":
+                - 5
+            "12": 0.18.5
+            "13": linux-x86_64
+adafactor:
+    value: false
+adam_beta1:
+    value: 0.9
+adam_beta2:
+    value: 0.999
+adam_epsilon:
+    value: 1e-08
+amp_level:
+    value: null
+apply_early_stopping:
+    value: true
+attention_dropout:
+    value: null
+cache_dir:
+    value: null
+checkpoint_path:
+    value: null
+classifier:
+    value: false
+config_name:
+    value: /home/gordon/Documents/edu/gordon_ms/Project/Benchmarker/experiments/rebel/Rebel-large
+dataloader_drop_last:
+    value: false
+dataloader_num_workers:
+    value: 0
+dataloader_pin_memory:
+    value: true
+dataset_name:
+    value: /home/gordon/Documents/edu/gordon_ms/Project/rebel/datasets/nyt_typed.py
+decoder_layerdrop:
+    value: null
+deepspeed:
+    value: null
+disable_tqdm:
+    value: null
+do_eval:
+    value: true
+do_predict:
+    value: false
+do_train:
+    value: true
+dropout:
+    value: 0.1
+eval_accumulation_steps:
+    value: null
+eval_batch_size:
+    value: 16
+eval_beams:
+    value: 3
+eval_steps:
+    value: null
+evaluation_strategy:
+    value: "no"
+finetune:
+    value: false
+fp16_backend:
+    value: auto
+fp16_opt_level:
+    value: O1
+gpus:
+    value: 1
+gradient_acc_steps:
+    value: 1
+gradient_accumulation_steps:
+    value: 1
+gradient_clip_value:
+    value: 10
+greater_is_better:
+    value: null
+group_by_length:
+    value: false
+ignore_data_skip:
+    value: false
+ignore_pad_token_for_loss:
+    value: true
+label_names:
+    value: null
+label_smoothing:
+    value: 0
+label_smoothing_factor:
+    value: 0
+learning_rate:
+    value: 2.5e-05
+load_best_model_at_end:
+    value: false
+local_rank:
+    value: -1
+lr_scheduler:
+    value: linear
+max_grad_norm:
+    value: 1
+max_source_length:
+    value: 1024
+max_steps:
+    value: 100000
+max_target_length:
+    value: 128
+max_test_samples:
+    value: null
+max_train_samples:
+    value: null
+max_val_samples:
+    value: null
+metric_for_best_model:
+    value: null
+model_name:
+    value: nyt
+model_name_or_path:
+    value: /home/gordon/Documents/edu/gordon_ms/Project/Benchmarker/experiments/rebel/Rebel-large
+model_revision:
+    value: main
+monitor_var:
+    value: val_F1_micro
+monitor_var_mode:
+    value: max
+num_beams:
+    value: null
+num_train_epochs:
+    value: 7
+num_workers:
+    value: 8
+offline_mode:
+    value: false
+overwrite_cache:
+    value: false
+pad_to_max_length:
+    value: false
+past_index:
+    value: -1
+patience:
+    value: 5
+per_device_eval_batch_size:
+    value: 8
+per_device_train_batch_size:
+    value: 8
+per_gpu_eval_batch_size:
+    value: null
+per_gpu_train_batch_size:
+    value: null
+precision:
+    value: 16
+predict_with_generate:
+    value: false
+prediction_loss_only:
+    value: false
+preprocessing_num_workers:
+    value: null
+relations_file:
+    value: null
+remove_unused_columns:
+    value: true
+run_name:
+    value: null
+samples_interval:
+    value: 1000
+save_top_k:
+    value: 1
+seed:
+    value: 42
+sharded_ddp:
+    value: false
+sortish_sampler:
+    value: false
+source_prefix:
+    value: null
+target_column:
+    value: triplets
+test_file:
+    value: /home/gordon/Documents/edu/gordon_ms/Project/rebel/data/nyt/test.json
+text_column:
+    value: context
+tokenizer_name:
+    value: /home/gordon/Documents/edu/gordon_ms/Project/Benchmarker/experiments/rebel/Rebel-large
+train_batch_size:
+    value: 24
+train_file:
+    value: /home/gordon/Documents/edu/gordon_ms/Project/rebel/data/nyt/train.json
+use_auth_token:
+    value: false
+use_fast_tokenizer:
+    value: true
+val_check_interval:
+    value: 1
+val_max_target_length:
+    value: 256
+val_percent_check:
+    value: 1
+validation_file:
+    value: /home/gordon/Documents/edu/gordon_ms/Project/rebel/data/nyt/dev.json
+warmup_steps:
+    value: 8000
+weight_decay:
+    value: 0.1
