@@ -99,7 +99,7 @@ class RebelAdapter(LLMAdapter):
         decoded_preds = self.tokenizer.batch_decode(generated_tokens, skip_special_tokens=False)
         triples = [] 
         for beam in decoded_preds:
-            triples += self.getTriplesOf(beam)
+            triples += self.getTriplesOf(beam)  # aggregate all beam triples into list
         
         return LLMResponse(
             sent_id,

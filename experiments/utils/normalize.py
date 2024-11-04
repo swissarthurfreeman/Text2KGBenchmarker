@@ -6,12 +6,8 @@ import torch
 import numpy as np
 from transformers import pipeline
 from sentence_transformers import SentenceTransformer
-from utils import WIKIDATA_TEKGEN_ONT_NAMES, DPEDIA_WEBNLG_ONT_NAMES, load_jsonl_as_list, load_jsonl_as_dict
+from utils import load_jsonl_as_list, load_jsonl_as_dict
 
-# TODO : rename output fiels to format below, change code in prompter and in rest of files to deal with this
-# rigid file format.
-# ll_response files always follow this format : /model_name-n-shot_specifier?/ontname-datasetname.jsonl and are always evaluated on
-# the test data.
 def getOntologyNameFrom(path: str) -> str:
         return path.split("/")[-1].split("-")[0]
     
@@ -25,7 +21,8 @@ class Normalizer:
     create a new folder in `llm_results/model_name_normalized/` with the normalized responses. 
     Normalization means can mean replacing the relation by closest relation in ontology and 
     or filtering out response triples based on relation quality and entailment from the raw text.
-    Exact implementation logic is left to the user in the `normalize(triple: dict[str, str])` method.
+    Exact implementation logic is left to the user in the `normalize(triple, sentence, ont_relations)` 
+    method.
     """
     def __init__(self, model_to_normalize_name: str, normalized_model_name: str):
         """Normalizer('gpt-4o', 'gpt-4o-normalized')"""
@@ -61,13 +58,11 @@ class Normalizer:
             
             ground_truths = load_jsonl_as_dict("../../data/" + dataset_name + "/test/" + ontology_name + "_test.jsonl")
             
-            normalized_responses = []
             for response in responses:
                 sentence = ground_truths[response["id"]]["sent"]
-                normalized_responses.append(self.normalize(response, sentence, ont_relations))
-                
-            for normalized_response in normalized_responses:
-                with open(self.normalized_llm_responses_dir + "/" + ontology_name + "-" + dataset_name + ".jsonl", "w") as f_out:
+                normalized_response = self.normalize(response, sentence, ont_relations)    
+                print(response["id"])
+                with open(self.normalized_llm_responses_dir + "/" + ontology_name + "-" + dataset_name + ".jsonl", "a") as f_out:
                     f_out.write(json.dumps(normalized_response) + "\n")
             
 
@@ -79,15 +74,13 @@ class Similarity(Normalizer):
         self.sent_embedder = sent_embedder
         self.threshold = threshold
     
-    def getClosestOntologyRelationTo(self, llm_relation: dict[str, str], ont_relations: list[dict[str, str]]) -> dict[str, str] | None:
+    def getClosestOntologyRelationTo(self, llm_relation: dict[str, str], ont_relations: list[dict[str, str]], relation_embeddings) -> dict[str, str] | None:
         llm_relation_embedding = self.sent_embedder.encode(" ".join([llm_relation["sub"], llm_relation["rel"], llm_relation["obj"]]))
         similarities: list[float] = []
         
-        for ont_relation in ont_relations:
-            ont_relation_embedding = self.sent_embedder.encode(" ".join([ont_relation["domain"], ont_relation["rel"], ont_relation["range"]]))
+        for ont_relation_embedding in relation_embeddings:
             similarities.append(self.sent_embedder.similarity(llm_relation_embedding, ont_relation_embedding))
         
-        #print("Closest relation to", prettyString(llm_relation), "is", prettyString(ont_relations[np.argmax(similarities)]), "similarity :", max(similarities).item())
         if max(similarities) < self.threshold: return None    # if low confidence, don't bother
         return ont_relations[np.argmax(similarities)]
     
@@ -95,12 +88,16 @@ class Similarity(Normalizer):
         """Normalize all triples in response, this method can drop triples."""
         res = {"id": response["id"], "response": response["response"], "triples": []}
         
+        ont_relation_embeddings = []
+        for relation in relations:
+            ont_relation_embeddings.append(self.sent_embedder.encode(" ".join([relation["domain"], relation["rel"], relation["range"]])))
+            
         for triple in response["triples"]:
-            closest_rel: dict[str, str] = self.getClosestOntologyRelationTo(triple, relations)    # {"sub": "human", "rel": "screenwriter", "obj": "film"}
+            closest_rel: dict[str, str] = self.getClosestOntologyRelationTo(triple, relations, ont_relation_embeddings)    # {"sub": "human", "rel": "screenwriter", "obj": "film"}
             if closest_rel != None:
                 triple["rel"] = closest_rel["rel"]
                 res["triples"].append(triple)
-        return response
+        return res
         
 
 class Entailement(Normalizer):
@@ -123,12 +120,13 @@ class Entailement(Normalizer):
             
 if __name__ == "__main__":    
     device = "cuda" if torch.cuda.is_available() else "cpu"
+    llm_response_folder_name = "Babelscape.rebel-large-6-beams"
     
     sent_comp_model = SentenceTransformer('sentence-transformers/all-mpnet-base-v2', device=device)
-    sim_normalizer = Similarity("Babelscape.rebel-large", "Babelscape.rebel-large.normalized-similarity", 0.3, sent_comp_model)
+    sim_normalizer = Similarity(llm_response_folder_name, llm_response_folder_name + "-rel-map", 0.3, sent_comp_model)
     sim_normalizer.generateNormalizedData()
     
     # you can then add another layer of normalization via, 
-    sent_entailement_model = pipeline(model='roberta-large-mnli', device=device)
-    ent_normalizer = Entailement("Babelscape.rebel-large.normalized-similarity", "Babelscape.rebel-large.normalized-similarity-entailement", sent_entailement_model, 0.55)
-    ent_normalizer.generateNormalizedData()
+    #sent_entailement_model = pipeline(model='roberta-large-mnli', device=device)
+    #ent_normalizer = Entailement(llm_response_folder_name + "-rel-map", llm_response_folder_name + "-entail", sent_entailement_model, 0.55)
+    #ent_normalizer.generateNormalizedData()
