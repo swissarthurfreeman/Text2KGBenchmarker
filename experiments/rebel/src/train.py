@@ -1,6 +1,7 @@
 import omegaconf
 from omegaconf import OmegaConf
 import hydra
+import torch
 
 import pytorch_lightning as pl
 from pytorch_lightning.callbacks import EarlyStopping, ModelCheckpoint
@@ -88,9 +89,12 @@ def train(conf: omegaconf.DictConfig) -> None:
     )
     callbacks_store.append(GenerateTextSamplesCallback(conf.samples_interval))
     callbacks_store.append(LearningRateMonitor(logging_interval='step'))
+    
+    
+    device = "cuda" if torch.cuda.is_available() else "cpu"
     # trainer
     trainer = pl.Trainer(
-        accelerator="cpu",
+        accelerator=device,
         accumulate_grad_batches=conf.gradient_acc_steps,
         gradient_clip_val=conf.gradient_clip_value,
         val_check_interval=conf.val_check_interval,

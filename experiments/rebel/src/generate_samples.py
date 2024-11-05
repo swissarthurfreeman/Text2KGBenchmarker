@@ -28,11 +28,11 @@ class GenerateTextSamplesCallback(Callback):  # pragma: no cover
         outputs: Sequence,
         batch: Sequence,
         batch_idx: int,
-        dataloader_idx: int,
+        dataloader_idx: int = 0,
     ) -> None:
         wandb_table = wandb.Table(columns=["Source", "Pred", "Gold"])
         # pl_module.logger.info("Executing translation callback")
-        if (trainer.batch_idx + 1) % self.logging_batch_interval != 0:  # type: ignore[attr-defined]
+        if (batch_idx + 1) % self.logging_batch_interval != 0:  # type: ignore[attr-defined]
             return
         labels = batch.pop("labels")
         gen_kwargs = {

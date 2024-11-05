@@ -1,4 +1,3 @@
-from typing import override
 import torch
 from datasets import Dataset
 import pytorch_lightning as pl
@@ -59,7 +58,6 @@ class BaseLightningDataModule(LightningDataModule):
         else:
             self.data_collator = DataCollatorForSeq2Seq(self.tokenizer, self.model, label_pad_token_id=label_pad_token_id)
 
-    @override
     def prepare_data(self, *args, **kwargs):
         self.train_dataset = self.datasets["train"]
         if "train" not in self.datasets:

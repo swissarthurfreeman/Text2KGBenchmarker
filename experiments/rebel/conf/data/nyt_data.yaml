@@ -3,10 +3,10 @@
 num_workers: 8
 text_column: 'context'
 target_column: 'triplets'
-dataset_name: '/home/gordon/Documents/edu/gordon_ms/Project/rebel/datasets/nyt_typed.py'
-train_file: '/home/gordon/Documents/edu/gordon_ms/Project/rebel/data/nyt/train.json'
-validation_file: '/home/gordon/Documents/edu/gordon_ms/Project/rebel/data/nyt/dev.json'
-test_file: '/home/gordon/Documents/edu/gordon_ms/Project/rebel/data/nyt/test.json'
+dataset_name: '/home/users/f/freemana/Text2KGBenchmarker/experiments/rebel/datasets/nyt_typed.py'
+train_file: '/home/users/f/freemana/Text2KGBenchmarker/experiments/rebel/data/nyt/train.json'
+validation_file: '/home/users/f/freemana/Text2KGBenchmarker/experiments/rebel/data/nyt/dev.json'
+test_file: '/home/users/f/freemana/Text2KGBenchmarker/experiments/rebel/data/nyt/test.json'
 overwrite_cache: False
 preprocessing_num_workers: 
 max_source_length: 1024

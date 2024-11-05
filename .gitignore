@@ -1,2 +1,3 @@
 .env
 experiments/rebel/Rebel-large/pytorch_model.bin
+/outputs/
