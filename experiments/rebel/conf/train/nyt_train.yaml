@@ -45,6 +45,7 @@ adam_beta2: 0.999
 adam_epsilon: 0.00000001
 max_grad_norm: 1.0
 
+# this parameter isn't used, the max_steps is instead
 num_train_epochs: 7.0
 
 seed: 42

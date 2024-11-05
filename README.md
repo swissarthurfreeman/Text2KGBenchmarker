@@ -94,7 +94,63 @@ Run `module load GCCcore/13.2.0 Python/3.11.5` to load up python, then `pipenv i
 
 ## REBEL Fine tuning
 
+### NYT Fine Tune
+
+Fine tune REBEL on NYT dataset from within the `src` folder with :
+```
+train.py model=rebel_model data=nyt_data train=nyt_train
+```
+
+```
+python3 test.py model=rebel_model data=nyt_data train=nyt_train do_predict=True checkpoint_path='/home/users/f/freemana/Text2KGBenchmarker/experiments/rebel/src/outputs/2024-11-05/12-06-55/experiments/nyt/epoch\=8-step\=21078.ckpt'
+```
+
+Possible output is, 
+
+```
+        ALL      TP: 7402;      FP: 751;        FN: 711
+                (m avg): precision: 90.79;      recall: 91.24;  f1: 91.01 (micro)
+                (M avg): precision: 79.41;      recall: 78.35;  f1: 78.77 (Macro)
+
+        country of citizenship:         TP: 511;        FP: 82; FN: 37; precision: 86.17;       recall: 93.25;  f1: 89.57;      593
+        headquarters location:  TP: 17; FP: 1;  FN: 0;  precision: 94.44;       recall: 100.00; f1: 97.14;      18
+        contains administrative territorial entity:     TP: 501;        FP: 13; FN: 25; precision: 97.47;       recall: 95.25;  f1: 96.35;      514
+        shareholders:   TP: 30; FP: 1;  FN: 2;  precision: 96.77;       recall: 93.75;  f1: 95.24;      31
+        country of origin:      TP: 1;  FP: 0;  FN: 0;  precision: 100.00;      recall: 100.00; f1: 100.00;     1
+        denonym:        TP: 0;  FP: 0;  FN: 1;  precision: 0.00;        recall: 0.00;   f1: 0.00;       0
+        major shareholder:      TP: 31; FP: 1;  FN: 1;  precision: 96.88;       recall: 96.88;  f1: 96.88;      32
+        location:       TP: 3570;       FP: 320;        FN: 261;        precision: 91.77;       recall: 93.19;  f1: 92.48;      3890
+        founded by:     TP: 46; FP: 13; FN: 15; precision: 77.97;       recall: 75.41;  f1: 76.67;      59
+        employer:       TP: 373;        FP: 53; FN: 44; precision: 87.56;       recall: 89.45;  f1: 88.49;      426
+        advisors:       TP: 3;  FP: 0;  FN: 0;  precision: 100.00;      recall: 100.00; f1: 100.00;     3
+        place of death:         TP: 88; FP: 27; FN: 43; precision: 76.52;       recall: 67.18;  f1: 71.54;      115
+        industry:       TP: 0;  FP: 0;  FN: 0;  precision: 0.00;        recall: 0.00;   f1: 0.00;       0
+        ethnicity:      TP: 1;  FP: 0;  FN: 0;  precision: 100.00;      recall: 100.00; f1: 100.00;     1
+        place of birth:         TP: 170;        FP: 87; FN: 90; precision: 66.15;       recall: 65.38;  f1: 65.76;      257
+        country:        TP: 507;        FP: 18; FN: 17; precision: 96.57;       recall: 96.76;  f1: 96.66;      525
+        residence:      TP: 479;        FP: 95; FN: 118;        precision: 83.45;       recall: 80.23;  f1: 81.81;      574
+        member of sports team:  TP: 17; FP: 1;  FN: 0;  precision: 94.44;       recall: 100.00; f1: 97.14;      18
+        child:  TP: 33; FP: 7;  FN: 7;  precision: 82.50;       recall: 82.50;  f1: 82.50;      40
+        religion:       TP: 5;  FP: 0;  FN: 0;  precision: 100.00;      recall: 100.00; f1: 100.00;     5
+        neighborhood of:        TP: 345;        FP: 21; FN: 29; precision: 94.26;       recall: 92.25;  f1: 93.24;      366
+        capital:        TP: 653;        FP: 7;  FN: 7;  precision: 98.94;       recall: 98.94;  f1: 98.94;      660
+        location of formation:  TP: 21; FP: 4;  FN: 14; precision: 84.00;       recall: 60.00;  f1: 70.00;      25
+        occupation:     TP: 0;  FP: 0;  FN: 0;  precision: 0.00;        recall: 0.00;   f1: 0.00;       0
+Testing DataLoader 0: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 313/313 [05:10<00:00,  1.01it/s]
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃        Test metric        ┃       DataLoader 0        ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│       test_F1_micro       │     91.01192474365234     │
+│         test_loss         │    0.07760083675384521    │
+│      test_prec_micro      │     90.78866577148438     │
+│     test_recall_micro     │     91.23628997802734     │
+└───────────────────────────┴───────────────────────────┘
+```
+
+
 ### Hydra
 
 Idea is to compose configuration across a folder and `.yaml` hierarchy of files.
 See the [intro](https://hydra.cc/docs/intro/).
+
+

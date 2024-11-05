@@ -1,3 +1,6 @@
 .env
-experiments/rebel/Rebel-large/pytorch_model.bin
-/outputs/
+**/outputs/
+**/experiments/rebel/data/nyt
+**/experiments/rebel/data/rebel
+**/experiments/rebel/Rebel-large/pytorch_model.bin
+**/experiments/rebel/data/rebel/rebel_dataset.zip
