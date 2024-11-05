@@ -1,0 +1,18 @@
+/home/gordon/.local/share/virtualenvs/Benchmarker-GEiCH7pv/lib/python3.12/site-packages/transformers/optimization.py:591: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+
+  | Name    | Type                         | Params | Mode
+-----------------------------------------------------------------
+0 | model   | BartForConditionalGeneration | 406 M  | eval
+1 | loss_fn | CrossEntropyLoss             | 0      | train
+-----------------------------------------------------------------
+406 M     Trainable params
+0         Non-trainable params
+406 M     Total params
+1,625.207 Total estimated model params size (MB)
+1         Modules in train mode
+348       Modules in eval mode
+Sanity Checking DataLoader 0:   0%|                                                                                                                                       | 0/2 [00:00<?, ?it/s]
+/home/gordon/.local/share/virtualenvs/Benchmarker-GEiCH7pv/lib/python3.12/site-packages/pytorch_lightning/trainer/connectors/data_connector.py:424: The 'val_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=15` in the `DataLoader` to improve performance.
+
+Detected KeyboardInterrupt, attempting graceful shutdown ...

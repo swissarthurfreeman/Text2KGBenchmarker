@@ -10,7 +10,11 @@ from transformers import AutoConfig, AutoModelForSeq2SeqLM, AutoTokenizer
 from transformers import  DataCollatorForSeq2Seq, default_data_collator, set_seed
 
 class BaseLightningDataModule(LightningDataModule):
-    """Override prepare_data, setup, train_dataloader, val_dataloader, test_dataloader methods."""
+    """ DataModule standardizes the training, val, test splits, data preparation and transforms. 
+    The main advantage is consistent data splits, data preparation and transforms across models.
+    Override prepare_data, setup, train_dataloader, val_dataloader, test_dataloader methods.
+    This class should be instantiated with a configuration, a tokenizer and the model and provided
+    to the pytorch lightning fit() method."""
     
     def __init__(self, conf: DictConfig, tokenizer: AutoTokenizer, model: AutoModelForSeq2SeqLM):
         super().__init__()
