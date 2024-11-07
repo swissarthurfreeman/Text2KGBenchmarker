@@ -3,7 +3,7 @@
 num_workers: 8
 text_column: 'context'
 target_column: 'triplets'
-dataset_name: '/home/users/f/freemana/Text2KGBenchmarker/experiments/rebel/datasets/nyt_typed.py'
+dataset_name: '/home/gordon/Documents/edu/gordon_ms/Project/Benchmarker/experiments/rebel/datasets/text2kgbench.py'
 train_file: '/home/gordon/Documents/edu/gordon_ms/Project/Benchmarker/data/wikidata_tekgen/train/ont_1_movie_train.jsonl'
 validation_file: 'home/gordon/Documents/edu/gordon_ms/Project/Benchmarker/data/wikidata_tekgen/validation/ont_1_movie_validation.jsonl'
 test_file: '/home/gordon/Documents/edu/gordon_ms/Project/Benchmarker/data/wikidata_tekgen/test/ont_1_movie_test.jsonl'

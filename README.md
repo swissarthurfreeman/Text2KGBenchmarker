@@ -105,6 +105,12 @@ train.py model=rebel_model data=nyt_data train=nyt_train
 python3 test.py model=rebel_model data=nyt_data train=nyt_train do_predict=True checkpoint_path='/home/users/f/freemana/Text2KGBenchmarker/experiments/rebel/src/outputs/2024-11-05/12-06-55/experiments/nyt/epoch\=8-step\=21078.ckpt'
 ```
 
+### Fine Tune on Wikidata Movie Ontology
+
+```
+python3 train.py model=rebel_model data=text2kgbench_data train=text2kgbench_train
+```
+
 Possible output is, 
 
 ```
