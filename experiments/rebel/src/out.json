@@ -1,0 +1,529 @@
+[
+    {
+        "predictions": [
+            [
+                {
+                    "head": "The Fantastic Flying Books of Mr. Morris Lessmore",
+                    "type": "publication date",
+                    "tail": "2011"
+                }
+            ],
+            [
+                {
+                    "head": "One Piece Film",
+                    "type": "director",
+                    "tail": "Munehisa Sakai"
+                }
+            ],
+            [
+                {
+                    "head": "Mickey Mouse",
+                    "type": "creator",
+                    "tail": "Walt Disney Studios"
+                }
+            ],
+            [
+                {
+                    "head": "The Cat Returns",
+                    "type": "author",
+                    "tail": "Aoi Hiiragi"
+                }
+            ],
+            [
+                {
+                    "head": "Hayao Miyazaki",
+                    "type": "field of work",
+                    "tail": "animated"
+                }
+            ],
+            [
+                {
+                    "head": "Popeye the Sailor Meets Sindbad the Sailor",
+                    "type": "producer",
+                    "tail": "Max Fleischer"
+                },
+                {
+                    "head": "Popeye the Sailor Meets Sindbad the Sailor",
+                    "type": "director",
+                    "tail": "Dave Fleischer"
+                },
+                {
+                    "head": "Popeye the Sailor Meets Sindbad the Sailor",
+                    "type": "composer",
+                    "tail": "Sammy Timberg"
+                }
+            ],
+            [
+                {
+                    "head": "Scooby-Doo 2",
+                    "type": "follows",
+                    "tail": "Scooby-Doo"
+                },
+                {
+                    "head": "Scooby-Doo 2",
+                    "type": "director",
+                    "tail": "Raja Gosnell"
+                },
+                {
+                    "head": "Scooby-Doo 2",
+                    "type": "screenwriter",
+                    "tail": "James Gunn"
+                },
+                {
+                    "head": "Scooby-Doo 2",
+                    "type": "distributed by",
+                    "tail": "Warner Bros. Pictures"
+                },
+                {
+                    "head": "Scooby-Doo",
+                    "type": "followed by",
+                    "tail": "Scooby-Doo 2"
+                }
+            ],
+            [
+                {
+                    "head": "Truth or Dare",
+                    "type": "publication date",
+                    "tail": "1991"
+                },
+                {
+                    "head": "Truth or Dare",
+                    "type": "director",
+                    "tail": "Alek Keshishian"
+                },
+                {
+                    "head": "Truth or Dare",
+                    "type": "cast member",
+                    "tail": "Madonna"
+                },
+                {
+                    "head": "Truth or Dare",
+                    "type": "publication date",
+                    "tail": "1991"
+                },
+                {
+                    "head": "Truth or Dare",
+                    "type": "director",
+                    "tail": "Alek Keshishian"
+                },
+                {
+                    "head": "Truth or Dare",
+                    "type": "cast member",
+                    "tail": "Madonna"
+                },
+                {
+                    "head": "Truth or Dare",
+                    "type": "publication date",
+                    "tail": "1991"
+                },
+                {
+                    "head": "Truth or Dare",
+                    "type": "director",
+                    "tail": "Alek Keshishian"
+                },
+                {
+                    "head": "Truth or Dare",
+                    "type": "cast member",
+                    "tail": "Madonna"
+                }
+            ],
+            [
+                {
+                    "head": "Curse of the Lake Monster",
+                    "type": "publication date",
+                    "tail": "2010"
+                },
+                {
+                    "head": "Curse of the Lake Monster",
+                    "type": "instance of",
+                    "tail": "made-for-television"
+                },
+                {
+                    "head": "Curse of the Lake Monster",
+                    "type": "director",
+                    "tail": "Brian Levant"
+                },
+                {
+                    "head": "Curse of the Lake Monster",
+                    "type": "publication date",
+                    "tail": "2010"
+                },
+                {
+                    "head": "Curse of the Lake Monster",
+                    "type": "instance of",
+                    "tail": "made-for-television"
+                },
+                {
+                    "head": "Curse of the Lake Monster",
+                    "type": "director",
+                    "tail": "Brian Levant"
+                },
+                {
+                    "head": "Scooby-Doo",
+                    "type": "production company",
+                    "tail": "Hanna-Barbera"
+                }
+            ],
+            [
+                {
+                    "head": "The Road to Dishonour",
+                    "type": "publication date",
+                    "tail": "1930"
+                },
+                {
+                    "head": "The Road to Dishonour",
+                    "type": "genre",
+                    "tail": "drama film"
+                },
+                {
+                    "head": "The Road to Dishonour",
+                    "type": "director",
+                    "tail": "Richard Eichberg"
+                },
+                {
+                    "head": "The Road to Dishonour",
+                    "type": "cast member",
+                    "tail": "Anna May Wong"
+                },
+                {
+                    "head": "The Road to Dishonour",
+                    "type": "cast member",
+                    "tail": "Francis Lederer"
+                },
+                {
+                    "head": "The Road to Dishonour",
+                    "type": "cast member",
+                    "tail": "Georg H. Schnell"
+                }
+            ],
+            [
+                {
+                    "head": "5 Centimeters per Second",
+                    "type": "publication date",
+                    "tail": "2007"
+                },
+                {
+                    "head": "5 Centimeters per Second",
+                    "type": "director",
+                    "tail": "Makoto Shinkai"
+                }
+            ],
+            [
+                {
+                    "head": "original net animation",
+                    "type": "subclass of",
+                    "tail": "anime"
+                }
+            ],
+            [
+                {
+                    "head": "Elizabeth Montgomery",
+                    "type": "spouse",
+                    "tail": "William Asher"
+                },
+                {
+                    "head": "William Asher",
+                    "type": "spouse",
+                    "tail": "Elizabeth Montgomery"
+                }
+            ],
+            [
+                {
+                    "head": "Seiji Mizushima",
+                    "type": "occupation",
+                    "tail": "stage-show"
+                }
+            ],
+            [
+                {
+                    "head": "Pour la suite du monde",
+                    "type": "publication date",
+                    "tail": "1963"
+                },
+                {
+                    "head": "Pour la suite du monde",
+                    "type": "genre",
+                    "tail": "documentary film"
+                },
+                {
+                    "head": "Pour la suite du monde",
+                    "type": "director",
+                    "tail": "Michel Brault"
+                },
+                {
+                    "head": "Pour la suite du monde",
+                    "type": "director",
+                    "tail": "Marcel CarriÃ¨re"
+                },
+                {
+                    "head": "Pour la suite du monde",
+                    "type": "director",
+                    "tail": "Pierre Perrault"
+                }
+            ],
+            [
+                {
+                    "head": "The Secret Life of Pets",
+                    "type": "director",
+                    "tail": "Chris Renaud"
+                }
+            ],
+            [
+                {
+                    "head": "William Nigh",
+                    "type": "occupation",
+                    "tail": "Directed"
+                }
+            ],
+            [
+                {
+                    "head": "Bullet in a Bible",
+                    "type": "director",
+                    "tail": "Samuel Bayer"
+                }
+            ],
+            [
+                {
+                    "head": "Iblard Jikan",
+                    "type": "director",
+                    "tail": "Naohisa Inoue"
+                }
+            ],
+            [
+                {
+                    "head": "Perfect Blue",
+                    "type": "publication date",
+                    "tail": "1997"
+                },
+                {
+                    "head": "Perfect Blue",
+                    "type": "director",
+                    "tail": "Satoshi Kon"
+                },
+                {
+                    "head": "Perfect Blue",
+                    "type": "screenwriter",
+                    "tail": "Sadayuki Murai"
+                }
+            ],
+            [
+                {
+                    "head": "Gunbuster",
+                    "type": "director",
+                    "tail": "Hideaki Anno"
+                },
+                {
+                    "head": "Hideaki Anno",
+                    "type": "notable work",
+                    "tail": "Neon Genesis Evangelion"
+                },
+                {
+                    "head": "Neon Genesis Evangelion",
+                    "type": "director",
+                    "tail": "Hideaki Anno"
+                }
+            ],
+            [
+                {
+                    "head": "Walky Talky Hawky",
+                    "type": "publication date",
+                    "tail": "1946"
+                },
+                {
+                    "head": "Walky Talky Hawky",
+                    "type": "director",
+                    "tail": "Robert McKimson"
+                },
+                {
+                    "head": "Merrie Melodies",
+                    "type": "distributed by",
+                    "tail": "Warner Bros."
+                }
+            ],
+            [
+                {
+                    "head": "Isao Takahata",
+                    "type": "employer",
+                    "tail": "Studio Ghibli"
+                },
+                {
+                    "head": "Studio Ghibli",
+                    "type": "owned by",
+                    "tail": "Tokuma Shoten"
+                }
+            ],
+            [
+                {
+                    "head": "Matt Groening",
+                    "type": "has part",
+                    "tail": "David X. Cohen"
+                }
+            ],
+            [
+                {
+                    "head": "Yankee Doodle Daffy",
+                    "type": "part of the series",
+                    "tail": "Looney Tunes"
+                },
+                {
+                    "head": "Yankee Doodle Daffy",
+                    "type": "director",
+                    "tail": "Friz Freleng"
+                },
+                {
+                    "head": "Yankee Doodle Daffy",
+                    "type": "screenwriter",
+                    "tail": "Tedd Pierce"
+                },
+                {
+                    "head": "Looney Tunes",
+                    "type": "distributed by",
+                    "tail": "Warner Bros."
+                },
+                {
+                    "head": "Looney Tunes",
+                    "type": "director",
+                    "tail": "Friz Freleng"
+                }
+            ],
+            [
+                {
+                    "head": "Majed al-Esa",
+                    "type": "country of citizenship",
+                    "tail": "Saudi"
+                }
+            ],
+            [
+                {
+                    "head": "The Ducktators",
+                    "type": "publication date",
+                    "tail": "1942"
+                },
+                {
+                    "head": "The Ducktators",
+                    "type": "distributed by",
+                    "tail": "Warner Bros."
+                },
+                {
+                    "head": "The Ducktators",
+                    "type": "part of the series",
+                    "tail": "Looney Tunes"
+                },
+                {
+                    "head": "The Ducktators",
+                    "type": "director",
+                    "tail": "Norman McCabe"
+                },
+                {
+                    "head": "Looney Tunes",
+                    "type": "distributed by",
+                    "tail": "Warner Bros."
+                }
+            ],
+            [
+                {
+                    "head": "The Wise Little Hen",
+                    "type": "director",
+                    "tail": "Wilfred Jackson"
+                }
+            ],
+            [
+                {
+                    "head": "Ups 'n Downs",
+                    "type": "director",
+                    "tail": "Rudolf Ising"
+                }
+            ],
+            [
+                {
+                    "head": "Tokio Jokio",
+                    "type": "publication date",
+                    "tail": "1943"
+                },
+                {
+                    "head": "Tokio Jokio",
+                    "type": "part of the series",
+                    "tail": "Looney Tunes"
+                },
+                {
+                    "head": "Tokio Jokio",
+                    "type": "director",
+                    "tail": "Norman McCabe"
+                }
+            ],
+            [
+                {
+                    "head": "Purr-Chance to Dream",
+                    "type": "publication date",
+                    "tail": "1967"
+                },
+                {
+                    "head": "Purr-Chance to Dream",
+                    "type": "part of the series",
+                    "tail": "Tom and Jerry"
+                },
+                {
+                    "head": "Purr-Chance to Dream",
+                    "type": "production company",
+                    "tail": "MGM Animation/Visual Arts"
+                },
+                {
+                    "head": "Purr-Chance to Dream",
+                    "type": "director",
+                    "tail": "Ben Washam"
+                },
+                {
+                    "head": "Purr-Chance to Dream",
+                    "type": "producer",
+                    "tail": "Chuck Jones"
+                }
+            ],
+            [
+                {
+                    "head": "Dug's Special Mission",
+                    "type": "production company",
+                    "tail": "Pixar"
+                },
+                {
+                    "head": "Dug's Special Mission",
+                    "type": "director",
+                    "tail": "Ronnie del Carmen"
+                }
+            ]
+        ],
+        "labels": [
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            []
+        ]
+    }
+]

@@ -194,6 +194,7 @@ class BaseLightningModule(pl.LightningModule):
 
         decoded_preds = self.tokenizer.batch_decode(generated_tokens, skip_special_tokens=False)
         decoded_labels = self.tokenizer.batch_decode(torch.where(labels != -100, labels, self.config.pad_token_id), skip_special_tokens=False)
+        
         if self.hparams.dataset_name.split('/')[-1] == 'conll04_typed.py':
             return [extract_triplets_typed(rel) for rel in decoded_preds], [extract_triplets_typed(rel) for rel in decoded_labels]
         elif self.hparams.dataset_name.split('/')[-1] == 'nyt_typed.py':
@@ -202,7 +203,15 @@ class BaseLightningModule(pl.LightningModule):
             return [extract_triplets_typed(rel, {'<loc>': 'LOC', '<misc>': 'MISC', '<per>': 'PER', '<num>': 'NUM', '<time>': 'TIME', '<org>': 'ORG'}) for rel in decoded_preds], [extract_triplets_typed(rel, {'<loc>': 'LOC', '<misc>': 'MISC', '<per>': 'PER', '<num>': 'NUM', '<time>': 'TIME', '<org>': 'ORG'}) for rel in decoded_labels]
         
         # text2kgbench will use default untyped triple extraction
-        return [extract_triplets(rel) for rel in decoded_preds], [extract_triplets(rel) for rel in decoded_labels]
+        #print("\n\n\n\n\n\n###############################################################")
+        #print("decoded_preds", decoded_preds, "\n\ndecoded_labels", decoded_labels, "\n\n", batch.keys())
+        #print("###############################################################\n\n\n\n\n\n\n\n\n\n")
+        #print("############################################################################\n")
+        #print("predictions =", [extract_triplets(rel) for rel in decoded_preds])
+        #print("\n\nground truth =", [extract_triplets(rel.replace("<sub>", "<subj>")) for rel in decoded_labels])
+        #exit(0)
+        # BUG : Why do we need to replace <sub> with <subj> in linearized triples ? We're already using <subj> in text2kgbench.py dataset script
+        return [extract_triplets(rel) for rel in decoded_preds], [extract_triplets(rel.replace("<sub>", "<subj>")) for rel in decoded_labels]
 
     def generate_samples(self,
         # model,
@@ -320,6 +329,7 @@ class BaseLightningModule(pl.LightningModule):
             self.log(key, metrics[key])
 
         outputs = {}
+        # BUG : why is labels empty list with text2kgbench.py ?
         outputs['predictions'], outputs['labels'] = self.generate_triples(batch, labels)
         self.val_predictions.append(outputs)
         return outputs
@@ -394,13 +404,24 @@ class BaseLightningModule(pl.LightningModule):
                 scores, precision, recall, f1 = re_score([item for pred in self.val_predictions for item in pred['predictions']], [item for pred in self.val_predictions for item in pred['labels']], ['killed by', 'residence', 'location', 'headquarters location', 'employer'], "strict")
             elif self.hparams.dataset_name.split('/')[-1] == 'ade.py':
                 scores, precision, recall, f1 = re_score([item for pred in self.val_predictions for item in pred['predictions']], [item for pred in self.val_predictions for item in pred['labels']], ['has effect'])
+            
             elif self.hparams.dataset_name.split('/')[-1] == 'nyt_typed.py':
-                scores, precision, recall, f1 = re_score([item for pred in self.val_predictions for item in pred['predictions']], [item for pred in self.val_predictions for item in pred['labels']], list(relations_nyt.values()), "strict")
+                scores, precision, recall, f1 = re_score([item for pred in self.val_predictions for item in pred['predictions']], 
+                                                         [item for pred in self.val_predictions for item in pred['labels']], 
+                                                         list(relations_nyt.values()), "strict")
+            
+            
+            elif self.hparams.dataset_name.split('/')[-1] == 'text2kgbench.py':
+                print("######################\n\n\n", self.val_predictions[0:3], "\n\n\n####################3")
+                scores, precision, recall, f1 = re_score([item for pred in self.val_predictions for item in pred['predictions']], 
+                                                         [item for pred in self.val_predictions for item in pred['labels']], 
+                                                         relations_wikidata_movies)
+            
+            
             elif self.hparams.dataset_name.split('/')[-1] == 'docred_typed.py':
                 relations_docred = {"P6": "head of government", "P17": "country", "P19": "place of birth", "P20": "place of death", "P22": "father", "P25": "mother", "P26": "spouse", "P27": "country of citizenship", "P30": "continent", "P31": "instance of", "P35": "head of state", "P36": "capital", "P37": "official language", "P39": "position held", "P40": "child", "P50": "author", "P54": "member of sports team", "P57": "director", "P58": "screenwriter", "P69": "educated at", "P86": "composer", "P102": "member of political party", "P108": "employer", "P112": "founded by", "P118": "league", "P123": "publisher", "P127": "owned by", "P131": "located in the administrative territorial entity", "P136": "genre", "P137": "operator", "P140": "religion", "P150": "contains administrative territorial entity", "P155": "follows", "P156": "followed by", "P159": "headquarters location", "P161": "cast member", "P162": "producer", "P166": "award received", "P170": "creator", "P171": "parent taxon", "P172": "ethnic group", "P175": "performer", "P176": "manufacturer", "P178": "developer", "P179": "series", "P190": "sister city", "P194": "legislative body", "P205": "basin country", "P206": "located in or next to body of water", "P241": "military branch", "P264": "record label", "P272": "production company", "P276": "location", "P279": "subclass of", "P355": "subsidiary", "P361": "part of", "P364": "original language of work", "P400": "platform", "P403": "mouth of the watercourse", "P449": "original network", "P463": "member of", "P488": "chairperson", "P495": "country of origin", "P527": "has part", "P551": "residence", "P569": "date of birth", "P570": "date of death", "P571": "inception", "P576": "dissolved, abolished or demolished", "P577": "publication date", "P580": "start time", "P582": "end time", "P585": "point in time", "P607": "conflict", "P674": "characters", "P676": "lyrics by", "P706": "located on terrain feature", "P710": "participant", "P737": "influenced by", "P740": "location of formation", "P749": "parent organization", "P800": "notable work", "P807": "separated from", "P840": "narrative location", "P937": "work location", "P1001": "applies to jurisdiction", "P1056": "product or material produced", "P1198": "unemployment rate", "P1336": "territory claimed by", "P1344": "participant of", "P1365": "replaces", "P1366": "replaced by", "P1376": "capital of", "P1412": "languages spoken, written or signed", "P1441": "present in work", "P3373": "sibling"}
                 scores, precision, recall, f1 = re_score([item for pred in self.val_predictions for item in pred['predictions']], [item for pred in self.val_predictions for item in pred['labels']], list(relations_docred.values()), "strict")            
-            elif self.hparams.dataset_name.split('/')[-1] == 'text2kgbench.py':
-                scores, precision, recall, f1 = re_score([item for pred in self.val_predictions for item in pred['predictions']], [item for pred in self.val_predictions for item in pred['labels']], relations_wikidata_movies, "strict")
+            
             else:
                 scores, precision, recall, f1 = re_score([item for pred in self.val_predictions for item in pred['predictions']], [item for pred in self.val_predictions for item in pred['labels']], ['killed by', 'residence', 'location', 'headquarters location', 'employer'])
             self.log('val_prec_micro', precision)
@@ -441,7 +462,7 @@ class BaseLightningModule(pl.LightningModule):
                 relations_docred = {"P6": "head of government", "P17": "country", "P19": "place of birth", "P20": "place of death", "P22": "father", "P25": "mother", "P26": "spouse", "P27": "country of citizenship", "P30": "continent", "P31": "instance of", "P35": "head of state", "P36": "capital", "P37": "official language", "P39": "position held", "P40": "child", "P50": "author", "P54": "member of sports team", "P57": "director", "P58": "screenwriter", "P69": "educated at", "P86": "composer", "P102": "member of political party", "P108": "employer", "P112": "founded by", "P118": "league", "P123": "publisher", "P127": "owned by", "P131": "located in the administrative territorial entity", "P136": "genre", "P137": "operator", "P140": "religion", "P150": "contains administrative territorial entity", "P155": "follows", "P156": "followed by", "P159": "headquarters location", "P161": "cast member", "P162": "producer", "P166": "award received", "P170": "creator", "P171": "parent taxon", "P172": "ethnic group", "P175": "performer", "P176": "manufacturer", "P178": "developer", "P179": "series", "P190": "sister city", "P194": "legislative body", "P205": "basin country", "P206": "located in or next to body of water", "P241": "military branch", "P264": "record label", "P272": "production company", "P276": "location", "P279": "subclass of", "P355": "subsidiary", "P361": "part of", "P364": "original language of work", "P400": "platform", "P403": "mouth of the watercourse", "P449": "original network", "P463": "member of", "P488": "chairperson", "P495": "country of origin", "P527": "has part", "P551": "residence", "P569": "date of birth", "P570": "date of death", "P571": "inception", "P576": "dissolved, abolished or demolished", "P577": "publication date", "P580": "start time", "P582": "end time", "P585": "point in time", "P607": "conflict", "P674": "characters", "P676": "lyrics by", "P706": "located on terrain feature", "P710": "participant", "P737": "influenced by", "P740": "location of formation", "P749": "parent organization", "P800": "notable work", "P807": "separated from", "P840": "narrative location", "P937": "work location", "P1001": "applies to jurisdiction", "P1056": "product or material produced", "P1198": "unemployment rate", "P1336": "territory claimed by", "P1344": "participant of", "P1365": "replaces", "P1366": "replaced by", "P1376": "capital of", "P1412": "languages spoken, written or signed", "P1441": "present in work", "P3373": "sibling"}
                 scores, precision, recall, f1 = re_score([item for pred in self.test_predictions for item in pred['predictions']], [item for pred in self.test_predictions for item in pred['labels']], list(relations_docred.values()), "strict")            
             elif self.hparams.dataset_name.split('/')[-1] == 'text2kgbench.py':
-                scores, precision, recall, f1 = re_score([item for pred in self.test_predictions for item in pred['predictions']], [item for pred in self.test_predictions for item in pred['labels']], relations_wikidata_movies, "strict")
+                scores, precision, recall, f1 = re_score([item for pred in self.test_predictions for item in pred['predictions']], [item for pred in self.test_predictions for item in pred['labels']], relations_wikidata_movies)
             else:
                 scores, precision, recall, f1 = re_score([item for pred in self.test_predictions for item in pred['predictions']], [item for pred in self.test_predictions for item in pred['labels']], ['killed by', 'residence', 'location', 'headquarters location', 'employer'])
             self.log('test_prec_micro', precision)

@@ -7,11 +7,34 @@ class Text2KGBenchWikidataConfig(datasets.BuilderConfig):
 
 class Text2KGBenchWikidata(datasets.GeneratorBasedBuilder):
     
+    BUILDER_CONFIGS = [
+        Text2KGBenchWikidataConfig(
+            name = "plain_text",
+            version = datasets.Version("1.0.0", ""),
+            description = "Plain text",
+        )
+    ]
+    
+    def _info(self):
+        return datasets.DatasetInfo(
+            description="Text2KGBench dataset!",
+            features=datasets.Features(
+                {
+                    "id": datasets.Value("string"),
+                    "title": datasets.Value("string"),
+                    "context": datasets.Value("string"),
+                    "triplets": datasets.Value("string"),
+                }
+            ),
+            supervised_keys=None
+        )
+    
+    
     def _split_generators(self, dl_manager: datasets.DownloadManager | datasets.StreamingDownloadManager) -> list[datasets.SplitGenerator]:
         return [
-            datasets.SplitGenerator(name = datasets.Split.TEST, gen_kwargs={"filepath": "/home/gordon/Documents/edu/gordon_ms/Project/Benchmarker/data/wikidata_tekgen/test/ont_1_movie_test.jsonl"}),
-            datasets.SplitGenerator(name = datasets.Split.TRAIN, gen_kwargs={"filepath": "/home/gordon/Documents/edu/gordon_ms/Project/Benchmarker/data/wikidata_tekgen/train/ont_1_movie_train.jsonl"}),
-            datasets.SplitGenerator(name = datasets.Split.VALIDATION, gen_kwargs={"filepath": "/home/gordon/Documents/edu/gordon_ms/Project/Benchmarker/data/wikidata_tekgen/validation/ont_1_movie_validation.jsonl"})
+            datasets.SplitGenerator(name = datasets.Split.TRAIN, gen_kwargs={"filepath": "/home/users/f/freemana/Text2KGBenchmarker/data/wikidata_tekgen/train/ont_1_movie_train.jsonl"}),
+            datasets.SplitGenerator(name = datasets.Split.VALIDATION, gen_kwargs={"filepath": "/home/users/f/freemana/Text2KGBenchmarker/data/wikidata_tekgen/validation/ont_1_movie_validation.jsonl"}),
+            datasets.SplitGenerator(name = datasets.Split.TEST, gen_kwargs={"filepath": "/home/users/f/freemana/Text2KGBenchmarker/data/wikidata_tekgen/test/ont_1_movie_test.jsonl"})
         ]
         
     def _generate_examples(self, filepath):
@@ -29,16 +52,16 @@ class Text2KGBenchWikidata(datasets.GeneratorBasedBuilder):
                         continue
                     
                 # sort triples by order of appearance of subject in sentence
-                relations_sorted: list[dict] = sorted(sent['triplets'], key=lambda s: sent['sent'].find(s['sub']))     
+                relations_sorted: list[dict] = sorted(sent['triples'], key=lambda s: sent['sent'].find(s['sub']))     
                 
                 for relation in relations_sorted:
                     if prev_head == relation['sub']:            # continuation of triple
-                        lin_triplets += f' <sub> ' + relation['obj'] + ' <obj> ' + relation['rel']
+                        lin_triplets += f' <subj> ' + relation['obj'] + ' <obj> ' + relation['rel']
                     elif prev_head == None:                     # first triple
-                        lin_triplets += '<triplet> ' + relation['sub'] + ' <sub> ' + relation['obj'] + ' <obj> ' + relation['rel']
+                        lin_triplets += '<triplet> ' + relation['sub'] + ' <subj> ' + relation['obj'] + ' <obj> ' + relation['rel']
                         prev_head = relation['sub']
                     else:                                       # new triple
-                        lin_triplets += ' <triplet> ' + relation['sub'] + ' <sub> ' + relation['obj'] + ' <obj> ' + relation['rel']
+                        lin_triplets += ' <triplet> ' + relation['sub'] + ' <subj> ' + relation['obj'] + ' <obj> ' + relation['rel']
                         prev_head = relation['sub']
                 
                 yield sent['id'], {

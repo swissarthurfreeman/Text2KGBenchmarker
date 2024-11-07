@@ -1,11 +1,11 @@
 # @package _global_
 
 # optimization
-train_batch_size: 24
-eval_batch_size: 16
+train_batch_size: 32
+eval_batch_size: 32
 gradient_acc_steps: 1
 gradient_clip_value: 10.0
-max_steps: 2000
+max_steps: 200000
 
 # evaluation and persistence
 apply_early_stopping: True
@@ -14,7 +14,7 @@ val_percent_check: 1.0
 monitor_var: 'val_F1_micro'
 monitor_var_mode: 'max'
 patience: 5
-model_name: 'nyt'
+model_name: 'text2kgbench'
 save_top_k: 1
 
 # core
