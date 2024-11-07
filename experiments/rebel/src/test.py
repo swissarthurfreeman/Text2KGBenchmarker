@@ -79,6 +79,7 @@ def train(conf: omegaconf.DictConfig) -> None:
         conf.tokenizer_name if conf.tokenizer_name else conf.model_name_or_path,
         **tokenizer_kwargs
     )
+    # add typing tokens
     if conf.dataset_name.split('/')[-1] == 'conll04_typed.py':
         tokenizer.add_tokens(['<peop>', '<org>', '<other>', '<loc>'], special_tokens = True)
     if conf.dataset_name.split('/')[-1] == 'nyt_typed.py':

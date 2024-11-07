@@ -211,7 +211,7 @@ def generate_global_averages(llm_metrics_folder_name: str):
 
 
 if __name__ ==  "__main__":
-    llm_response_folder_name = "Babelscape.rebel-large-12-beams-rel-map" 
+    llm_response_folder_name = "Babelscape.rebel-large-6-beams-rel-map" 
     for ontology_name in DPEDIA_WEBNLG_ONT_NAMES:
         # NOTE : using dpedia_webnlg_clean or dpedia_webnlg on rebel performance should
         # not make any difference since we remove underscores and camelcasing in the code

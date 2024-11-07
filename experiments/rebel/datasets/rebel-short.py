@@ -121,7 +121,12 @@ class Rebel(datasets.GeneratorBasedBuilder):
                         entities = sorted([entity for entity in article['entities'] if prev_len < entity['boundaries'][1] <= len(text)+prev_len], key=lambda tup: tup['boundaries'][0])
                         decoder_output = '<triplet> '
                         for int_ent, entity in enumerate(entities):
-                            triplets = sorted([triplet for triplet in article['triples'] if triplet['subject'] == entity and prev_len< triplet['subject']['boundaries'][1]<=len(text) + prev_len and prev_len< triplet['object']['boundaries'][1]<=len(text)+ prev_len and triplet['predicate']['surfaceform'] in relations], key=lambda tup: tup['object']['boundaries'][0])
+                            triplets = sorted([triplet for triplet in article['triples'] 
+                                               if triplet['subject'] == entity and 
+                                               prev_len< triplet['subject']['boundaries'][1]<=len(text) + prev_len and 
+                                               prev_len< triplet['object']['boundaries'][1]<=len(text)+ prev_len and 
+                                               triplet['predicate']['surfaceform'] in relations]
+                                            , key=lambda tup: tup['object']['boundaries'][0])
                             if len(triplets) == 0:
                                 continue
                             decoder_output += entity['surfaceform'] + ' <subj> '

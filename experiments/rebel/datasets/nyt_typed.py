@@ -105,7 +105,7 @@ class NYT(datasets.GeneratorBasedBuilder):
 
     # override of parent _generate_examples, which takes **kwargs as argument, no typing specified.
     # these arguments are forwarded from the split generator
-    def _generate_examples(self, filepath: list[str]):
+    def _generate_examples(self, filepath):
         """This function returns the examples in the raw (text) form."""
         print("\n\n##################\n\ngenerating examples from = ", str(filepath), "\n\n##################\n\n")
 
