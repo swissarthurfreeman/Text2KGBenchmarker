@@ -100,7 +100,6 @@ def train(conf: omegaconf.DictConfig) -> None:
         val_check_interval=conf.val_check_interval,
         callbacks=callbacks_store,
         max_steps=conf.max_steps,
-        # max_steps=total_steps,
         precision=conf.precision,
         logger=wandb_logger,
         enable_checkpointing=True,

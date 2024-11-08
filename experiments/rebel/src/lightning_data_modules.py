@@ -36,6 +36,7 @@ class BaseLightningDataModule(LightningDataModule):
             data_files['relations'] = conf.relations_file     
             
         self.datasets: dict[str, Dataset] = load_dataset(conf.dataset_name, data_files=data_files)
+        train_data = self.datasets["train"]
         """A dataset is a directory that contains data files in generic formats (JSON, CSV...) + a 
         dataset script if requires code to read data files, Dataset hugging face class is a table."""
     
@@ -69,7 +70,7 @@ class BaseLightningDataModule(LightningDataModule):
             batched=True,
             num_proc=self.conf.preprocessing_num_workers,
             remove_columns=self.column_names,
-            load_from_cache_file=not self.conf.overwrite_cache,
+            load_from_cache_file=False, #not self.conf.overwrite_cache,
             cache_file_name=self.conf.train_file.replace('.jsonl', '-') + self.conf.dataset_name.split('/')[-1].replace('.py', '.cache'),
         )
 
@@ -85,7 +86,7 @@ class BaseLightningDataModule(LightningDataModule):
                 batched=True,
                 num_proc=self.conf.preprocessing_num_workers,
                 remove_columns=self.column_names,
-                load_from_cache_file=not self.conf.overwrite_cache,
+                load_from_cache_file=False, #not self.conf.overwrite_cache,
                 cache_file_name=self.conf.validation_file.replace('.jsonl', '-') + self.conf.dataset_name.split('/')[-1].replace('.py', '.cache'),
             )
 
@@ -101,7 +102,7 @@ class BaseLightningDataModule(LightningDataModule):
                 batched=True,
                 num_proc=self.conf.preprocessing_num_workers,
                 remove_columns=self.column_names,
-                load_from_cache_file=not self.conf.overwrite_cache,
+                load_from_cache_file=False, #not self.conf.overwrite_cache,
                 cache_file_name=self.conf.test_file.replace('.jsonl', '-') + self.conf.dataset_name.split('/')[-1].replace('.py', '.cache'),
             )
 

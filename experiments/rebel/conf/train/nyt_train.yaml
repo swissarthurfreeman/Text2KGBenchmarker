@@ -29,15 +29,10 @@ evaluation_strategy: "no"
 prediction_loss_only: False
 checkpoint_path: 
 
-per_device_train_batch_size: 8
-per_device_eval_batch_size: 8
-
-per_gpu_train_batch_size: 
-per_gpu_eval_batch_size: 
-
 gradient_accumulation_steps: 1
 eval_accumulation_steps: 
 
+lr_scheduler: "inverse_square_root"
 learning_rate: 0.000025
 weight_decay: 0.1
 adam_beta1: 0.9
@@ -57,11 +52,6 @@ local_rank: -1
 dataloader_drop_last: False
 eval_steps: 
 dataloader_num_workers: 0
-
-past_index: -1
-
-run_name: 
-disable_tqdm: 
 
 remove_unused_columns: True
 label_names: 
@@ -85,7 +75,6 @@ predict_with_generate: False
 decoder_layerdrop: 
 dropout: 0.1
 attention_dropout: 
-lr_scheduler: "linear"
 warmup_steps: 8000
 classifier: False
 # Callbacks

@@ -85,6 +85,15 @@ relations_nyt = {'/people/person/nationality': 'country of citizenship', '/sport
                     '/location/country/capital': 'capital', '/business/company/place_founded': 'location of formation', 
                     '/people/person/profession': 'occupation'}
 
+"""
+relations_wikidata_movies = ["record label", "professional field", "death date", "genre", "alternative name", "birth place", "demonym",
+    "nationality", "death place", "founding date", "postal code", "location", "stylistic origin", "anthem", "currency", "origin",
+    "leader title", "ethnic group", "is part of", "long name", "area total", "music fusion genre", "associated band/associated musical artist",
+    "active years start year", "elevation above the sea level", "occupation", "meaning", "instrument", "music subgenre", "country", "birth year",
+    "language", "background", "derivative", "birth date", "population density", "official language"
+]
+"""
+
 relations_wikidata_movies = ["director", "screenwriter", "genre", "based on", "cast member", "award received", "production company", "country of origin", "publication date", "characters", "narrative location", "filming location", "main subject", "nominated for", "cost"]
 
 
@@ -203,13 +212,9 @@ class BaseLightningModule(pl.LightningModule):
             return [extract_triplets_typed(rel, {'<loc>': 'LOC', '<misc>': 'MISC', '<per>': 'PER', '<num>': 'NUM', '<time>': 'TIME', '<org>': 'ORG'}) for rel in decoded_preds], [extract_triplets_typed(rel, {'<loc>': 'LOC', '<misc>': 'MISC', '<per>': 'PER', '<num>': 'NUM', '<time>': 'TIME', '<org>': 'ORG'}) for rel in decoded_labels]
         
         # text2kgbench will use default untyped triple extraction
-        #print("\n\n\n\n\n\n###############################################################")
-        #print("decoded_preds", decoded_preds, "\n\ndecoded_labels", decoded_labels, "\n\n", batch.keys())
-        #print("###############################################################\n\n\n\n\n\n\n\n\n\n")
-        #print("############################################################################\n")
-        #print("predictions =", [extract_triplets(rel) for rel in decoded_preds])
-        #print("\n\nground truth =", [extract_triplets(rel.replace("<sub>", "<subj>")) for rel in decoded_labels])
-        #exit(0)
+        #print("\n\n###############################################################")
+        #print("decoded_preds", decoded_preds[0], "\ndecoded_labels", decoded_labels[0], "\n", batch.keys())
+        #print("###############################################################\n\n")
         # BUG : Why do we need to replace <sub> with <subj> in linearized triples ? We're already using <subj> in text2kgbench.py dataset script
         return [extract_triplets(rel) for rel in decoded_preds], [extract_triplets(rel.replace("<sub>", "<subj>")) for rel in decoded_labels]
 
@@ -412,7 +417,6 @@ class BaseLightningModule(pl.LightningModule):
             
             
             elif self.hparams.dataset_name.split('/')[-1] == 'text2kgbench.py':
-                print("######################\n\n\n", self.val_predictions[0:3], "\n\n\n####################3")
                 scores, precision, recall, f1 = re_score([item for pred in self.val_predictions for item in pred['predictions']], 
                                                          [item for pred in self.val_predictions for item in pred['labels']], 
                                                          relations_wikidata_movies)
@@ -555,7 +559,6 @@ class BaseLightningModule(pl.LightningModule):
                 optimizer, num_warmup_steps=self.hparams.warmup_steps, num_training_steps=num_training_steps
             )
         return scheduler
-
 
     def compute_metrics(self, preds, labels):
         metric_name = "rouge" # if self.hparams.task.startswith("summarization") else "sacrebleu"

@@ -97,7 +97,9 @@ def train(conf: omegaconf.DictConfig) -> None:
     # data module declaration
     pl_data_module = BaseLightningDataModule(conf, tokenizer, model)
     # main module declaration
-    pl_module = BaseLightningModule.load_from_checkpoint(checkpoint_path = conf.checkpoint_path, config=config, tokenizer=tokenizer, model=model)
+    pl_module = BaseLightningModule(conf, config, tokenizer, model)
+    #pl_module = BaseLightningModule.load_from_checkpoint(checkpoint_path = conf.checkpoint_path, config=config, tokenizer=tokenizer, model=model)
+    
     # pl_module.hparams.predict_with_generate = True
     pl_module.hparams.test_file = pl_data_module.conf.test_file
     # trainer
@@ -112,7 +114,7 @@ def train(conf: omegaconf.DictConfig) -> None:
     trainer.test(pl_module, dataloaders=pl_data_module.test_dataloader())
 
 
-@hydra.main(config_path='../conf', config_name='root')
+@hydra.main(config_path='../conf', config_name='root', version_base="1.1")
 def main(conf: omegaconf.DictConfig):
     train(conf)
 

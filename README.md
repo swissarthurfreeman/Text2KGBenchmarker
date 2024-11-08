@@ -91,10 +91,15 @@ have the time to correctly format it, clean it and generate the triples list.
 ## Yggdrasil
 
 Run `module load GCCcore/13.2.0 Python/3.11.5` to load up python, then `pipenv install && pipenv shell` from the root directory. 
+`salloc --ntasks 1 --gpus 1 --mem 20G --time 2:00:00 --partition shared-gpu`
 
 ## REBEL Fine tuning
 
 ### NYT Fine Tune
+
+To fine tune correctly, update the file paths in `text2kgbench_data.yml` and `text2kgbench.py`.
+Update the `relations` array in `score.py`, update the `relations_wikidata_movies` array in 
+`lightning_modules.py`. Delete all `.cache` files. 
 
 Fine tune REBEL on NYT dataset from within the `src` folder with :
 ```

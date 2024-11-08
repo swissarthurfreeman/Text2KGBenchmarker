@@ -11,6 +11,7 @@ import numpy as np
 
 NO_RELATION = "no relation"
 
+"""
 relations = ['no_relation',
 'org:alternate_names',
 'org:city_of_headquarters',
@@ -53,6 +54,9 @@ relations = ['no_relation',
 'per:stateorprovince_of_death',
 'per:stateorprovinces_of_residence',
 'per:title']
+"""
+
+relations = ["director", "screenwriter", "genre", "based on", "cast member", "award received", "production company", "country of origin", "publication date", "characters", "narrative location", "filming location", "main subject", "nominated for", "cost"]
 
 def parse_arguments():
     parser = argparse.ArgumentParser(description='Score a prediction file using the gold labels.')
@@ -155,6 +159,10 @@ def re_score(pred_relations, gt_relations, relation_types, mode="boundaries"):
 
     assert mode in ["strict", "boundaries"]
     relation_types = relations if relation_types is None else relation_types
+
+    print("\n\n score\n", pred_relations[0], "\n", gt_relations[0])
+    print("relations", relations)
+    print("\n\n")
     # relation_types = [v for v in relation_types if not v == "None"]
     scores = {rel: {"tp": 0, "fp": 0, "fn": 0} for rel in relation_types + ["ALL"]}
 
@@ -243,7 +251,7 @@ def re_score(pred_relations, gt_relations, relation_types, mode="boundaries"):
             scores["ALL"]["Macro_f1"]))
 
     for rel_type in relation_types:
-        print("\t{}: \tTP: {};\tFP: {};\tFN: {};\tprecision: {:.2f};\trecall: {:.2f};\tf1: {:.2f};\t{}".format(
+        print("\t{}: \t\t\tTP: {};\tFP: {};\tFN: {};\tprecision: {:.2f};\trecall: {:.2f};\tf1: {:.2f};\t{}".format(
             rel_type,
             scores[rel_type]["tp"],
             scores[rel_type]["fp"],

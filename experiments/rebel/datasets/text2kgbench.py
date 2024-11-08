@@ -32,9 +32,9 @@ class Text2KGBenchWikidata(datasets.GeneratorBasedBuilder):
     
     def _split_generators(self, dl_manager: datasets.DownloadManager | datasets.StreamingDownloadManager) -> list[datasets.SplitGenerator]:
         return [
-            datasets.SplitGenerator(name = datasets.Split.TRAIN, gen_kwargs={"filepath": "/home/users/f/freemana/Text2KGBenchmarker/data/wikidata_tekgen/train/ont_1_movie_train.jsonl"}),
-            datasets.SplitGenerator(name = datasets.Split.VALIDATION, gen_kwargs={"filepath": "/home/users/f/freemana/Text2KGBenchmarker/data/wikidata_tekgen/validation/ont_1_movie_validation.jsonl"}),
-            datasets.SplitGenerator(name = datasets.Split.TEST, gen_kwargs={"filepath": "/home/users/f/freemana/Text2KGBenchmarker/data/wikidata_tekgen/test/ont_1_movie_test.jsonl"})
+            datasets.SplitGenerator(name = datasets.Split.TRAIN, gen_kwargs={"filepath":      "/home/users/f/freemana/Text2KGBenchmarker/data/wikidata_tekgen/train/ont_1_movie_train.jsonl"}),
+            datasets.SplitGenerator(name = datasets.Split.VALIDATION, gen_kwargs={"filepath": "/home/users/f/freemana/Text2KGBenchmarker/data/wikidata_tekgen/test/ont_1_movie_test.jsonl"}),
+            datasets.SplitGenerator(name = datasets.Split.TEST, gen_kwargs={"filepath":       "/home/users/f/freemana/Text2KGBenchmarker/data/wikidata_tekgen/test/ont_1_movie_test.jsonl"})
         ]
         
     def _generate_examples(self, filepath):
@@ -64,6 +64,8 @@ class Text2KGBenchWikidata(datasets.GeneratorBasedBuilder):
                         lin_triplets += ' <triplet> ' + relation['sub'] + ' <subj> ' + relation['obj'] + ' <obj> ' + relation['rel']
                         prev_head = relation['sub']
                 
+                print("\n\n#################### text2kgbench datasetGenerator output \n", "sent :", sent['sent'], "\n triples :", sent['triples'], "\n linearized :", lin_triplets)
+                print("\n\n")
                 yield sent['id'], {
                     'title': sent['id'],
                     'id': sent['id'],
