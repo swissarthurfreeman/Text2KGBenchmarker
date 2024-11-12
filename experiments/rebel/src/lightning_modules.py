@@ -139,7 +139,7 @@ class BaseLightningModule(pl.LightningModule):
         self.test_predictions = []
         self.sent_embedder = SentenceTransformer('sentence-transformers/all-mpnet-base-v2', device="cuda")
         
-        self.threshold = self.config.sim_threshold
+        self.threshold = self.hparams.sim_threshold
         self.ont_relation_embeddings = self.sent_embedder.encode([" ".join([relation["domain"], relation["label"], relation["range"]]) for relation in relations_wikidata_movie_schemas])
 
     def forward(self, inputs, labels, **kwargs) -> dict:

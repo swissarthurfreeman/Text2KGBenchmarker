@@ -63,7 +63,7 @@ def train(conf: omegaconf.DictConfig) -> None:
 
     wandb_run_name = f"wkda-mov-{conf.warmup_steps}-warm-{conf.dropout}-drop-{conf.num_return_sequences}-beam-{conf.train_batch_size}-tbs-{conf.eval_batch_size}-ebs"
     if conf.relation_mapping:
-        wandb_run_name += "{conf.sim_threshold}-rel-map"
+        wandb_run_name += f"{conf.sim_threshold}-rel-map"
     
     # main module declaration
     pl_module = BaseLightningModule(conf=conf, config=config, tokenizer=tokenizer, model=model, wandb_run_name=wandb_run_name)
