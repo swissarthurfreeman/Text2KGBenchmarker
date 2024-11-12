@@ -1,9 +1,17 @@
 # @package _global_
 
+trust_remote_code: true
 lr_scheduler: "inverse_square_root"
-warmup_steps: 1000
-dropout: 0.1
 
+eval_beams: 10
+num_return_sequences: 10
+warmup_steps: 115
+dropout: 0.10
+relation_mapping: true
+sim_threshold: 0.32
+
+# initial learning rate will be lower, it'll warm up to this
+# learning rate and then drop using lr_scheduler policy
 learning_rate: 0.00005
 weight_decay: 0.1
 adam_beta1: 0.9
@@ -11,12 +19,13 @@ adam_beta2: 0.999
 adam_epsilon: 0.00000001
 max_grad_norm: 1.0
 
-# optimization
+# optimization, careful not to have a batch size that's too large, with multiple
+# beams this can lead to an out of memory
 train_batch_size: 64
 eval_batch_size: 32
 gradient_acc_steps: 1
 gradient_clip_value: 10.0
-max_steps: 100000
+max_steps: 300
 
 # evaluation and persistence
 apply_early_stopping: False
@@ -25,12 +34,12 @@ val_percent_check: 1.0
 monitor_var: 'val_F1_micro'
 monitor_var_mode: 'max'
 patience: 20
-model_name: 'nyt'
+model_name: 'text2kgbench'
 save_top_k: 1
 
 # core
 gpus: 1
-precision: 32
+precision: "16-mixed"
 amp_level: 
 
 do_train: True
@@ -64,7 +73,7 @@ dataloader_num_workers: 0
 past_index: -1
 
 run_name: 
-disable_tqdm: 
+disable_tqdm: true 
 
 remove_unused_columns: True
 label_names: 

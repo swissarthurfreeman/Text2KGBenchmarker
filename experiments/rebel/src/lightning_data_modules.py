@@ -140,9 +140,6 @@ class BaseLightningDataModule(LightningDataModule):
             pin_memory=self.conf.dataloader_pin_memory,
         )
 
-    # def transfer_batch_to_device(self, batch: Any, device: torch.device) -> Any:
-    #     raise NotImplementedError
-
     def preprocess_function(self, examples):
         inputs = examples[self.text_column]
         targets = examples[self.summary_column]

@@ -138,8 +138,8 @@ def shift_tokens_left(input_ids: torch.Tensor, pad_token_id: int):
 
     return shifted_input_ids
 
-def extract_triplets(text):
-    triplets = []
+def extract_triplets(text) -> list[dict]:
+    triplets: list[dict] = []
     relation, subject, relation, object_ = '', '', '', ''
     text = text.strip()
     current = 'x'

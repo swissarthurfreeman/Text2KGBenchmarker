@@ -3,9 +3,12 @@ import nltk
 import json
 import pytorch_lightning as pl
 import torch
+torch.cuda.empty_cache()
 import numpy as np
 import pandas as pd
+from torch import Tensor
 from score import score, re_score
+from sentence_transformers import SentenceTransformer
 from transformers import AutoConfig, AutoModelForSeq2SeqLM, AutoTokenizer
 from transformers.optimization import (
     Adafactor,
@@ -95,16 +98,33 @@ relations_wikidata_movies = ["record label", "professional field", "death date",
 """
 
 relations_wikidata_movies = ["director", "screenwriter", "genre", "based on", "cast member", "award received", "production company", "country of origin", "publication date", "characters", "narrative location", "filming location", "main subject", "nominated for", "cost"]
-
+relations_wikidata_movie_schemas = [
+    {"pid": "P57", "label": "director", "domain": "film","range": "human"},
+	{"pid": "P58", "label": "screenwriter", "domain": "film", "range": "human"},
+	{"pid": "P136", "label": "genre", "domain": "film", "range": "film genre"},
+	{"pid": "P144", "label": "based on", "domain": "film", "range": "written work"},
+	{"pid": "P161", "label": "cast member", "domain": "film", "range": "human"},
+	{"pid": "P166", "label": "award received", "domain": "film", "range": "award"},
+	{"pid": "P272", "label": "production company", "domain": "film", "range": "film production company"},
+    {"pid": "P495", "label": "country of origin", "domain": "film", "range": "country"},
+	{"pid": "P577", "label": "publication date", "domain": "film", "range": "date"},
+	{"pid": "P674", "label": "characters", "domain": "film", "range": "film character"},
+	{"pid": "P840", "label": "narrative location", "domain": "film", "range": "city"},
+    {"pid": "P915", "label": "filming location", "domain": "film", "range": "city"},
+	{"pid": "P921", "label": "main subject", "domain": "film", "range": "subject"},
+	{"pid": "P1411", "label": "nominated for", "domain": "film", "range": "award"},
+	{"pid": "P2130", "label": "cost", "domain": "film","range": "number"}
+]
 
 class BaseLightningModule(pl.LightningModule):
 
-    def __init__(self, conf, config: AutoConfig, tokenizer: AutoTokenizer, model: AutoModelForSeq2SeqLM, *args, **kwargs) -> None:
+    def __init__(self, conf, config: AutoConfig, tokenizer: AutoTokenizer, model: AutoModelForSeq2SeqLM, wandb_run_name: str, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.save_hyperparameters(conf)
         self.tokenizer = tokenizer
         self.model = model
         self.config = config
+        self.wandb_run_name = wandb_run_name
         if self.model.config.decoder_start_token_id is None:
             raise ValueError("Make sure that `config.decoder_start_token_id` is correctly defined")
 
@@ -117,6 +137,10 @@ class BaseLightningModule(pl.LightningModule):
             self.loss_fn = label_smoothed_nll_loss
         self.val_predictions = []
         self.test_predictions = []
+        self.sent_embedder = SentenceTransformer('sentence-transformers/all-mpnet-base-v2', device="cuda")
+        
+        self.threshold = self.config.sim_threshold
+        self.ont_relation_embeddings = self.sent_embedder.encode([" ".join([relation["domain"], relation["label"], relation["range"]]) for relation in relations_wikidata_movie_schemas])
 
     def forward(self, inputs, labels, **kwargs) -> dict:
         """
@@ -192,6 +216,7 @@ class BaseLightningModule(pl.LightningModule):
             "length_penalty": 0,
             "no_repeat_ngram_size": 0,
             "num_beams": self.hparams.eval_beams if self.hparams.eval_beams is not None else self.config.num_beams,
+            "num_return_sequences": self.hparams.num_return_sequences if self.hparams.num_return_sequences is not None else self.config.num_beams
         }
 
         generated_tokens = self.model.generate(
@@ -201,8 +226,17 @@ class BaseLightningModule(pl.LightningModule):
             **gen_kwargs,
         )
 
+        # yields a flattened list of size num_ret_sequences * len(decoded_labels)
         decoded_preds = self.tokenizer.batch_decode(generated_tokens, skip_special_tokens=False)
         decoded_labels = self.tokenizer.batch_decode(torch.where(labels != -100, labels, self.config.pad_token_id), skip_special_tokens=False)
+        
+        rel_preds = []
+        for i in range(0, len(decoded_preds), int(len(decoded_preds) / len(decoded_labels))):
+            rel_preds.append("".join(decoded_preds[i:i+int(len(decoded_preds) / len(decoded_labels))]))
+
+        # decoded_preds becomes list of length len(decoded_labels), every
+        # element contains the concatenation of all evaluation beams output 
+        decoded_preds = rel_preds
         
         if self.hparams.dataset_name.split('/')[-1] == 'conll04_typed.py':
             return [extract_triplets_typed(rel) for rel in decoded_preds], [extract_triplets_typed(rel) for rel in decoded_labels]
@@ -212,9 +246,26 @@ class BaseLightningModule(pl.LightningModule):
             return [extract_triplets_typed(rel, {'<loc>': 'LOC', '<misc>': 'MISC', '<per>': 'PER', '<num>': 'NUM', '<time>': 'TIME', '<org>': 'ORG'}) for rel in decoded_preds], [extract_triplets_typed(rel, {'<loc>': 'LOC', '<misc>': 'MISC', '<per>': 'PER', '<num>': 'NUM', '<time>': 'TIME', '<org>': 'ORG'}) for rel in decoded_labels]
         
         # text2kgbench will use default untyped triple extraction
-        #print("\n\n###############################################################")
-        #print("decoded_preds", decoded_preds[0], "\ndecoded_labels", decoded_labels[0], "\n", batch.keys())
-        #print("###############################################################\n\n")
+        if self.hparams.relation_mapping:
+            result = []
+            for beam_pred in decoded_preds:
+                triplets: np.array[dict] = np.array(extract_triplets(beam_pred))
+                triple_embeddings: Tensor = self.sent_embedder.encode( [triple["head"] + " " + triple["type"] + " " + triple["tail"] for triple in triplets] )
+
+                # similarities is tensor of similarities (n_triples, n_relations)
+                similarities: Tensor = self.sent_embedder.similarity(triple_embeddings, self.ont_relation_embeddings)
+                vals, idxs = similarities.max(dim=-1)
+                # filter out those with maximum similarity greater than threshold
+                filtered_triples: list[dict] = triplets[vals > self.threshold].tolist()
+                
+                # map their relations to said closest relation in schema
+                for (triple, idx) in zip(filtered_triples, idxs):
+                    triple["type"] = relations_wikidata_movie_schemas[idx]["label"]
+                
+                result.append(filtered_triples)
+                
+            return result, [extract_triplets(rel.replace("<sub>", "<subj>")) for rel in decoded_labels]
+        
         # BUG : Why do we need to replace <sub> with <subj> in linearized triples ? We're already using <subj> in text2kgbench.py dataset script
         return [extract_triplets(rel) for rel in decoded_preds], [extract_triplets(rel.replace("<sub>", "<subj>")) for rel in decoded_labels]
 
@@ -285,6 +336,7 @@ class BaseLightningModule(pl.LightningModule):
         return [rel.strip() for rel in decoded_preds]
 
     def validation_step(self, batch: dict, batch_idx: int) -> None:
+        print("wandb_run_name :", self.wandb_run_name)
         gen_kwargs = {
             "max_length": self.hparams.val_max_target_length
             if self.hparams.val_max_target_length is not None

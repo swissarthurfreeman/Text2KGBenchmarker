@@ -1,0 +1,138 @@
+{
+  "title": "Music Ontology",
+  "id": "ont_2_music",
+  "concepts": [
+    {
+      "qid": "human",
+      "label": "human"
+    },
+    {
+      "qid": "music",
+      "label": "music"
+    },
+    {
+      "qid": "musical work",
+      "label": "musical work"
+    },
+    {
+      "qid": "record producer",
+      "label": "record producer"
+    },
+    {
+      "qid": "composed musical work",
+      "label": "composed musical work"
+    },
+    {
+      "qid": "composer",
+      "label": "composer"
+    },
+    {
+      "qid": "language",
+      "label": "language"
+    },
+    {
+      "qid": "music genre",
+      "label": "music genre"
+    },
+    {
+      "qid": "voice",
+      "label": "voice"
+    },
+    {
+      "qid": "musicology",
+      "label": "musicology"
+    },
+    {
+      "qid": "music industry",
+      "label": "music industry"
+    },
+    {
+      "qid": "album",
+      "label": "album"
+    },
+    {
+      "qid": "award",
+      "label": "award "
+    }
+  ],
+  "relations": [
+    {
+      "pid": "P86",
+      "label": "composer",
+      "domain": "musical work",
+      "range": "human"
+    },
+    {
+      "pid": "P361",
+      "label": "part of",
+      "domain": "musical work",
+      "range": "album"
+    },
+    {
+      "pid": "P676",
+      "label": "lyrics by",
+      "domain": "musical work",
+      "range": "human"
+    },
+    {
+      "pid": "P577",
+      "label": "publication date",
+      "domain": "musical work",
+      "range": "date"
+    },
+    {
+      "pid": "P407",
+      "label": "language of work or name",
+      "domain": "musical work",
+      "range": "language"
+    },
+    {
+      "pid": "P412",
+      "label": "voice type",
+      "domain": "human",
+      "range": "voice"
+    },
+    {
+      "pid": "P870",
+      "label": "instrumentation",
+      "domain": "musical work",
+      "range": "thing"
+    },
+    {
+      "pid": "P658",
+      "label": "tracklist",
+      "domain": "album",
+      "range": "musical work"
+    },
+    {
+      "pid": "P136",
+      "label": "genre",
+      "domain": "musical work",
+      "range": "music genre"
+    },
+    {
+      "pid": "P175",
+      "label": "performer",
+      "domain": "musical work",
+      "range": "performer"
+    },
+    {
+      "pid": "P162",
+      "label": "producer",
+      "domain": "album",
+      "range": "producer"
+    },
+    {
+      "pid": "P1411",
+      "label": "nominated for",
+      "domain": "album",
+      "range": "award"
+    },
+    {
+      "pid": "P264",
+      "label": "record label",
+      "domain": "album",
+      "range": "record_label"
+    }
+  ]
+}

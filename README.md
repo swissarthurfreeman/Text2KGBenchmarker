@@ -91,7 +91,7 @@ have the time to correctly format it, clean it and generate the triples list.
 ## Yggdrasil
 
 Run `module load GCCcore/13.2.0 Python/3.11.5` to load up python, then `pipenv install && pipenv shell` from the root directory. 
-`salloc --ntasks 1 --gpus 1 --mem 20G --time 2:00:00 --partition shared-gpu`
+`salloc --ntasks 1 --gpus 1 --mem 20G --time 4:00:00 --partition shared-gpu`
 
 ## REBEL Fine tuning
 
@@ -103,7 +103,13 @@ Update the `relations` array in `score.py`, update the `relations_wikidata_movie
 
 Fine tune REBEL on NYT dataset from within the `src` folder with :
 ```
-train.py model=rebel_model data=nyt_data train=nyt_train
+python3 train.py model=rebel_model data=nyt_data train=nyt_train
+```
+
+Try via srun,
+
+```
+srun --gpus=1 --mem-per-gpu=32G --partition=shared-gpu --time=1:00:00 python3 train.py model=rebel_model data=text2kgbench_data train=text2kgbench_train
 ```
 
 ```

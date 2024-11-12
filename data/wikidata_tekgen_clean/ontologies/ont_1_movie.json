@@ -1,0 +1,146 @@
+{
+	"title": "Movie Ontology",
+	"id": "ont_1_movie",
+	"concepts": [
+		{
+			"qid": "human",
+			"label": "human"
+		},
+		{
+			"qid": "city",
+			"label": "city"
+		},
+		{
+			"qid": "country",
+			"label": "country"
+		},
+		{
+			"qid": "film",
+			"label": "film"
+		},
+		{
+			"qid": "film genre",
+			"label": "film genre"
+		},
+		{
+			"qid": "genre",
+			"label": "genre"
+		},
+		{
+			"qid": "film production company",
+			"label": "film production company"
+		},
+		{
+			"qid": "film award",
+			"label": "film award"
+		},
+		{
+			"qid": "award",
+			"label": "award"
+		},
+		{
+			"qid": "written work",
+			"label": "written work"
+		},
+		{
+			"qid": "film character",
+			"label": "film character"
+		},
+		{
+			"qid": "film organization",
+			"label": "film organization"
+		}
+	],
+	"relations": [
+		{
+			"pid": "P57",
+			"label": "director",
+			"domain": "film",
+			"range": "human"
+		},
+		{
+			"pid": "P58",
+			"label": "screenwriter",
+			"domain": "film",
+			"range": "human"
+		},
+		{
+			"pid": "P136",
+			"label": "genre",
+			"domain": "film",
+			"range": "film genre"
+		},
+		{
+			"pid": "P144",
+			"label": "based on",
+			"domain": "film",
+			"range": "written work"
+		},
+		{
+			"pid": "P161",
+			"label": "cast member",
+			"domain": "film",
+			"range": "human"
+		},
+		{
+			"pid": "P166",
+			"label": "award received",
+			"domain": "film",
+			"range": "award"
+		},
+		{
+			"pid": "P272",
+			"label": "production company",
+			"domain": "film",
+			"range": "film production company"
+		},
+		{
+			"pid": "P495",
+			"label": "country of origin",
+			"domain": "film",
+			"range": "country"
+		},
+		{
+			"pid": "P577",
+			"label": "publication date",
+			"domain": "film",
+			"range": "date"
+		},
+		{
+			"pid": "P674",
+			"label": "characters",
+			"domain": "film",
+			"range": "film character"
+		},
+		{
+			"pid": "P840",
+			"label": "narrative location",
+			"domain": "film",
+			"range": "city"
+		},
+		{
+			"pid": "P915",
+			"label": "filming location",
+			"domain": "film",
+			"range": "city"
+		},
+		{
+			"pid": "P921",
+			"label": "main subject",
+			"domain": "film",
+			"range": "subject"
+		},
+		{
+			"pid": "P1411",
+			"label": "nominated for",
+			"domain": "film",
+			"range": "award"
+		},
+		{
+			"pid": "P2130",
+			"label": "cost",
+			"domain": "film",
+			"range": "number"
+		}
+	]
+}

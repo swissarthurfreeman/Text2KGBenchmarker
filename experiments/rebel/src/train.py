@@ -60,10 +60,17 @@ def train(conf: omegaconf.DictConfig) -> None:
     # data module declaration
     pl_data_module = BaseLightningDataModule(conf, tokenizer, model)
 
-    # main module declaration
-    pl_module = BaseLightningModule(conf, config, tokenizer, model)
 
-    wandb_logger = WandbLogger(project = conf.dataset_name.split('/')[-1].replace('.py', ''), name = conf.model_name_or_path.split('/')[-1])
+    wandb_run_name = f"wkda-mov-{conf.warmup_steps}-warm-{conf.dropout}-drop-{conf.num_return_sequences}-beam-{conf.train_batch_size}-tbs-{conf.eval_batch_size}-ebs"
+    if conf.relation_mapping:
+        wandb_run_name += "{conf.sim_threshold}-rel-map"
+    
+    # main module declaration
+    pl_module = BaseLightningModule(conf=conf, config=config, tokenizer=tokenizer, model=model, wandb_run_name=wandb_run_name)
+
+    wandb_logger = WandbLogger(
+        project = conf.dataset_name.split('/')[-1].replace('.py', ''), 
+        name = wandb_run_name)
 
     callbacks_store = []
 
@@ -114,7 +121,7 @@ def train(conf: omegaconf.DictConfig) -> None:
 # will make hydra use rebel_model, nyt_data, nyt_train configs and 
 # merge them together into one large list of parameters instead of
 # a nested hierarchy
-@hydra.main(config_path='../conf', config_name='root')
+@hydra.main(config_path='../conf', config_name='root', version_base="1.1")
 def main(conf: omegaconf.DictConfig):
     train(conf)
 

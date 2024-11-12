@@ -64,8 +64,8 @@ class Text2KGBenchWikidata(datasets.GeneratorBasedBuilder):
                         lin_triplets += ' <triplet> ' + relation['sub'] + ' <subj> ' + relation['obj'] + ' <obj> ' + relation['rel']
                         prev_head = relation['sub']
                 
-                print("\n\n#################### text2kgbench datasetGenerator output \n", "sent :", sent['sent'], "\n triples :", sent['triples'], "\n linearized :", lin_triplets)
-                print("\n\n")
+                #print("\n\n#################### text2kgbench datasetGenerator output \n", "sent :", sent['sent'], "\n triples :", sent['triples'], "\n linearized :", lin_triplets)
+                #print("\n\n")
                 yield sent['id'], {
                     'title': sent['id'],
                     'id': sent['id'],
