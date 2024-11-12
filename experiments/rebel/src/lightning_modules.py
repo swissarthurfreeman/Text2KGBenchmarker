@@ -9,7 +9,7 @@ import pandas as pd
 from torch import Tensor
 from score import score, re_score
 from sentence_transformers import SentenceTransformer
-from transformers import AutoConfig, AutoModelForSeq2SeqLM, AutoTokenizer
+from transformers import AutoConfig, AutoModelForSeq2SeqLM, AutoTokenizer, pipeline
 from transformers.optimization import (
     Adafactor,
     AdamW,
@@ -137,10 +137,14 @@ class BaseLightningModule(pl.LightningModule):
             self.loss_fn = label_smoothed_nll_loss
         self.val_predictions = []
         self.test_predictions = []
-        self.sent_embedder = SentenceTransformer('sentence-transformers/all-mpnet-base-v2', device="cuda")
         
-        self.threshold = self.hparams.sim_threshold
-        self.ont_relation_embeddings = self.sent_embedder.encode([" ".join([relation["domain"], relation["label"], relation["range"]]) for relation in relations_wikidata_movie_schemas])
+        if self.hparams.relation_mapping:
+            self.sent_embedder = SentenceTransformer('sentence-transformers/all-mpnet-base-v2', device="cuda")
+            self.threshold = self.hparams.sim_threshold
+            self.ont_relation_embeddings = self.sent_embedder.encode([" ".join([relation["domain"], relation["label"], relation["range"]]) for relation in relations_wikidata_movie_schemas])
+
+        if self.hparams.entailement_filtering:
+            self.entail_model = pipeline(model='roberta-large-mnli', device="cuda")
 
     def forward(self, inputs, labels, **kwargs) -> dict:
         """
@@ -225,6 +229,8 @@ class BaseLightningModule(pl.LightningModule):
             use_cache = True,
             **gen_kwargs,
         )
+        
+        original_sentences = self.tokenizer.batch_decode(batch["input_ids"], skip_special_tokens=True)
 
         # yields a flattened list of size num_ret_sequences * len(decoded_labels)
         decoded_preds = self.tokenizer.batch_decode(generated_tokens, skip_special_tokens=False)
@@ -246,28 +252,56 @@ class BaseLightningModule(pl.LightningModule):
             return [extract_triplets_typed(rel, {'<loc>': 'LOC', '<misc>': 'MISC', '<per>': 'PER', '<num>': 'NUM', '<time>': 'TIME', '<org>': 'ORG'}) for rel in decoded_preds], [extract_triplets_typed(rel, {'<loc>': 'LOC', '<misc>': 'MISC', '<per>': 'PER', '<num>': 'NUM', '<time>': 'TIME', '<org>': 'ORG'}) for rel in decoded_labels]
         
         # text2kgbench will use default untyped triple extraction
-        if self.hparams.relation_mapping:
-            result = []
-            for beam_pred in decoded_preds:
-                triplets: np.array[dict] = np.array(extract_triplets(beam_pred))
+        
+        final_beam_preds = []
+        for bidx, beams_prediction in enumerate(decoded_preds):
+            splitted_beam_preds = beams_prediction.split("<s>")
+            splitted_beam_preds.pop(0)
+            triples_per_beam = [ extract_triplets("<s>"+beam_pred) for beam_pred in splitted_beam_preds ]
+            res = []
+            for a in triples_per_beam:
+                res += a
+                
+            triplets: np.array[dict] = np.array(res)
+            
+                
+            if self.hparams.relation_mapping:
                 triple_embeddings: Tensor = self.sent_embedder.encode( [triple["head"] + " " + triple["type"] + " " + triple["tail"] for triple in triplets] )
 
                 # similarities is tensor of similarities (n_triples, n_relations)
                 similarities: Tensor = self.sent_embedder.similarity(triple_embeddings, self.ont_relation_embeddings)
                 vals, idxs = similarities.max(dim=-1)
                 # filter out those with maximum similarity greater than threshold
-                filtered_triples: list[dict] = triplets[vals > self.threshold].tolist()
+                triplets = np.array(triplets)
+                triplets: list[dict] = triplets[vals > self.threshold].tolist()
                 
                 # map their relations to said closest relation in schema
-                for (triple, idx) in zip(filtered_triples, idxs):
+                for (triple, idx) in zip(triplets, idxs):
                     triple["type"] = relations_wikidata_movie_schemas[idx]["label"]
+                    
+            if self.hparams.entailement_filtering:
+                keep_mask = []
+                nli_batch: list[str] = []
+                for triple in triplets:
+                    nli_batch.append(original_sentences[bidx] + " " + triple["head"] + " " + triple["type"] + " " + triple["tail"] + ".")
                 
-                result.append(filtered_triples)
-                
-            return result, [extract_triplets(rel.replace("<sub>", "<subj>")) for rel in decoded_labels]
+                ent_results = self.entail_model(nli_batch)
+                for res in ent_results:
+                    if res['label'] == "ENTAILMENT":
+                        keep_mask.append(True)
+                    else:
+                        keep_mask.append(False)
+                # only keep triplets entailed by the original sentence
+                triplets = np.array(triplets)
+                triplets = triplets[keep_mask]    
+        
+            final_beam_preds.append(triplets)
+            
+        return final_beam_preds, [extract_triplets(rel.replace("<sub>", "<subj>")) for rel in decoded_labels]
+        
         
         # BUG : Why do we need to replace <sub> with <subj> in linearized triples ? We're already using <subj> in text2kgbench.py dataset script
-        return [extract_triplets(rel) for rel in decoded_preds], [extract_triplets(rel.replace("<sub>", "<subj>")) for rel in decoded_labels]
+        #return [extract_triplets(rel) for rel in decoded_preds], [extract_triplets(rel.replace("<sub>", "<subj>")) for rel in decoded_labels]
 
     def generate_samples(self,
         # model,

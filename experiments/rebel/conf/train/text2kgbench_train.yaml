@@ -10,6 +10,8 @@ dropout: 0.10
 relation_mapping: true
 sim_threshold: 0.3
 
+entailement_filtering: true
+
 # initial learning rate will be lower, it'll warm up to this
 # learning rate and then drop using lr_scheduler policy
 learning_rate: 0.00005
@@ -25,7 +27,7 @@ train_batch_size: 64
 eval_batch_size: 32
 gradient_acc_steps: 1
 gradient_clip_value: 10.0
-max_steps: 300
+max_steps: 200
 
 # evaluation and persistence
 apply_early_stopping: False
