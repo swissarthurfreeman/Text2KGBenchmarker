@@ -171,3 +171,37 @@ Idea is to compose configuration across a folder and `.yaml` hierarchy of files.
 See the [intro](https://hydra.cc/docs/intro/).
 
 
+### Relational Mapping Issues
+
+>>> from sentence_transformers import SentenceTransformer
+>>> sent_embedder = SentenceTransformer('sentence-transformers/all-mpnet-base-v2', device="cpu")
+>>> llm_triples = ["Hunt screenwriter Michael", "Hunt director Michael"]
+>>> ont_relations = ["film director human", "film cost human"]
+>>> llm_triples_embed = sent_embedder.encode(llm_triples)
+>>> ont_relations_embed = sent_embedder.encode(ont_relations)
+>>> sent_embedder.similarity(llm_triples_embed, ont_relations_embed)
+tensor([[0.4243, 0.2038],
+        [0.4454, 0.2597]])
+>>> sent_embedder.similarity(llm_triples_embed[1], ont_relations_embed[0])
+tensor([[0.4454]])
+>>> sent_embedder.similarity(llm_triples_embed[0], ont_relations_embed[1])
+tensor([[0.2038]])
+>>> sent_embedder.similarity(llm_triples_embed[0], ont_relations_embed[0])
+tensor([[0.4243]])
+>>> 
+
+Not sensitive enough, it seems sentence embeddings work better on longer sentences,
+
+```python
+from sentence_transformers import SentenceTransformer
+sent_embedder = SentenceTransformer('sentence-transformers/all-mpnet-base-v2', device="cpu")
+def sent_similarity(sent1, sent2): 
+    return sent_embedder.similarity(sent_embedder.encode(sent1), sent_embedder.encode(sent2))
+
+>>> sent_similarity("film screenwriter human", "the film Hunt has as cast member Michael Bay")
+tensor([[0.2190]])
+>>> sent_similarity("film screenwriter human", "the film Hunt has as screenwriter Michael Bay")
+tensor([[0.3998]])
+```
+
+
