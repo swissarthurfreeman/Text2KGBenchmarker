@@ -21,8 +21,10 @@ wandb = "*"
 streamlit = "*"
 psutil = "*"
 evaluate = "*"
+sparqlwrapper = {git = "https://github.com/rdflib/sparqlwrapper"}
 
 [dev-packages]
+ipykernel = "*"
 
 [requires]
 python_version = "3.12.3"
