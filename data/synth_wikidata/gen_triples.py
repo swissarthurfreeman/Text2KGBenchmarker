@@ -1,7 +1,31 @@
+from multiprocessing.pool import ThreadPool
 from SPARQLWrapper import SPARQLWrapper, JSON
 from pandas import json_normalize
 from pprint import pprint
+from time import time
 import json
+
+def getEntitiesOfType(qid: str, n: int) -> list[dict]:
+        """retrieve list of n wikidata instances of entity qid, P31 is instance of."""
+        sparqlwd_caller = SPARQLWrapper("https://query.wikidata.org/sparql", agent='TripleSentenceGeneratorBot/0.0 (https://github.com/swissarthurfreeman/; arthur.freeman@unige.ch)')
+        sparqlwd_caller.setReturnFormat(JSON)
+        q = f"""
+        SELECT ?item ?itemLabel WHERE {{
+            ?item wdt:P31 ?x.
+            ?x wdt:P279 wd:{qid}.
+            SERVICE wikibase:label {{ bd:serviceParam wikibase:language "en". }}
+        }}
+        LIMIT {n}
+        """
+        
+        sparqlwd_caller.setQuery(q)
+        raw_results = sparqlwd_caller.query().convert()['results']['bindings']
+        entities = [{
+            "qid": res['item']['value'].split("/")[-1], 
+            "label": res['itemLabel']['value']
+        } for res in raw_results]
+        return entities
+    
 
 def list_to_dict(dicts: list[dict], key: str) -> dict[dict[str, str]]:
     res = {}
@@ -23,7 +47,7 @@ class WKEntity:
 
 
 class TripleGenerator:
-    def __init__(self, user_agent: str, ontology_path: str):
+    def __init__(self, user_agent: str, ontology_path: str, entities: list[dict]):
         self.user_agent = user_agent
         self.sparqlwd_caller = SPARQLWrapper("https://query.wikidata.org/sparql", agent=user_agent)
         self.sparqlwd_caller.setReturnFormat(JSON)
@@ -34,38 +58,35 @@ class TripleGenerator:
             self.concepts: dict[WKEntity] = {e['qid']: WKEntity(e['label'], e['qid']) for e in ontology['concepts']}
             self.relations: dict[WKProperty] = { e['pid']: WKProperty(e['label'], e['pid'], e['domain'], e['range']) for e in ontology['relations'] }
 
-        self.root_entities: list[dict] = []
-    
-    def getEntitiesOfType(self, qid: str) -> list[dict]:
-        """retrieve list of wikidata instances of entity qid"""
-        q = f"""
-        SELECT ?item ?itemLabel WHERE {{
-            ?item wdt:P31 wd:{qid}.
-            SERVICE wikibase:label {{ bd:serviceParam wikibase:language "en". }}
-        }}
-        LIMIT 10
-        """
-        self.sparqlwd_caller.setQuery(q)
-        raw_results = self.sparqlwd_caller.query().convert()['results']['bindings']
-        self.entities = [{
-            "qid": res['item']['value'].split("/")[-1], 
-            "label": res['itemLabel']['value']
-        } for res in raw_results]
-        return self.entities
-    
+        self.root_entities: list[dict] = entities
+        
+    def generate(self) -> None:
+        """Generate n triple sets for type_qid qid class instance."""
+        for entity in self.root_entities: 
+            try:
+                # if a wikidata id, don't take the entity
+                int(entity['label'].split("Q")[-1])
+                continue
+            except:
+                triples = { 'triples': self.getTriplesOfEntity(entity) }
+                # if entity has some relevant triples, keep it
+                if len(triples['triples']) == 0:
+                    continue
+                with open("./" + self.ontology_path.split("/")[-1] + "l", "a") as f:
+                    f.write(json.dumps(triples) + "\n")
+            
     def getTriplesOfEntity(self, entity: dict) -> list[dict]:
         """retrieve all triples with qid as subject"""
-        print("get triples of ", entity)
         triples: list[dict] = []
         
         for pid in self.relations.keys():
-            # select all objects from in prop_with_pid(entity, object)
+            # select all objects from in prop_with_pid(entity, object), max 5, (for instance, cast member(movie, human), 5 is enough)
             q = f"""
             SELECT ?object ?objectLabel WHERE {{
                 wd:{entity['qid']} wdt:{pid} ?object.
                 SERVICE wikibase:label {{ bd:serviceParam wikibase:language "en". }}
             }}
-            LIMIT 10
+            LIMIT 5
             """
             self.sparqlwd_caller.setQuery(q)
             raw_results = self.sparqlwd_caller.query().convert()['results']['bindings']
@@ -76,8 +97,11 @@ class TripleGenerator:
                 if self.followsOntology(entity, self.relations[pid], obj['object']['value'].split("/")[-1]):
                     triple = {
                         'sub': entity['label'],
+                        'sqid': entity['qid'],
                         'rel': self.relations[pid].label,
-                        'obj': obj['objectLabel']['value']
+                        'rpid': pid,
+                        'obj': obj['objectLabel']['value'],
+                        'oqid': obj['object']['value'].split("/")[-1]
                     }
                     triples.append(triple)
                     
@@ -138,7 +162,6 @@ class TripleGenerator:
             SERVICE wikibase:label {{ bd:serviceParam wikibase:language "en". }}
         }}
         """
-        print("query", q)
         self.sparqlwd_caller.setQuery(q)
         raw_results = self.sparqlwd_caller.query().convert()['results']['bindings']
         classes_of_obj = [res['class']['value'].split("/")[-1] for res in raw_results]
@@ -148,19 +171,44 @@ class TripleGenerator:
                 return True
         return False 
             
-    
-    
+
+def worker(i, n_threads, entities):
+    generator = TripleGenerator(
+            'TripleSentenceGeneratorBot/0.0 (https://github.com/swissarthurfreeman/; arthur.freeman@unige.ch)',
+            '../wikidata_tekgen/ontologies/ont_1_movie.json',
+            entities=entities[i*(len(entities)//n_threads):(i+1)*(len(entities)//n_threads)]
+        )
+    generator.generate()
 
 if __name__ == "__main__":
-    generator = TripleGenerator(
-        'TripleSentenceGeneratorBot/0.0 (https://github.com/swissarthurfreeman/; arthur.freeman@unige.ch)',
-        '../wikidata_tekgen/ontologies/ont_1_movie.json'
-    )
+    start = time()
+    
+    n_threads = 10
+    pool = ThreadPool(n_threads)
+    n_samples = 21_000
+    entities = getEntitiesOfType("Q11424", n_samples)[20_000:]
+    print(len(entities))
+    for i in range(n_threads):
+        pool.apply_async(worker, (i,  n_threads, entities))
+    
+    pool.close()
+    pool.join()
+    
+    end = time() - start
+    print("This took", end / 60, "minutes for", n_samples, "samples")
     
     # Q11424 is film entity, root entity is the main entity of interest
     # of the ontology, like for the UN it would be a resolution
-    intouchables = generator.getEntitiesOfType("Q11424")[2]
-    pprint(intouchables)
+    # intouchables = generator.getEntitiesOfType("Q11424")[3]
+    # pprint(intouchables)
     
-    pprint(generator.getTriplesOfEntity(intouchables))
+    #pprint(generator.getTriplesOfEntity(intouchables))
     
+    """
+    (Benchmarker) (base) gordon@whisky:~/Documents/edu/gordon_ms/Project/Benchmarker/data/synth_wikidata$ python3 gen_triples.py 
+    This took 1.1518104116121928 minutes for 5 samples
+    (Benchmarker) (base) gordon@whisky:~/Documents/edu/gordon_ms/Project/Benchmarker/data/synth_wikidata$ python3 gen_triples.py 
+    This took 3.8452227314313254 minutes for 5 samples
+    
+    This took 94.5345106045405 minutes for 1000 samples
+    """
