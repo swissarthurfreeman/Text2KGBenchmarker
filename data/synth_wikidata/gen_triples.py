@@ -180,7 +180,27 @@ def worker(i, n_threads, entities):
         )
     generator.generate()
 
+def removeDuplicates(triples: list[dict]) -> list[dict]:
+    res = []
+    for triple in triples:
+        if triple not in res:
+            res.append(triple)
+    return res
+
+
+def fold_triples(path: str) -> None:
+    res: dict[str, list[dict]] = {}
+    with open(path) as f:
+        data = [json.loads(line) for line in f]
+        for line in data:
+            res[line['triples'][0]['sqid']] = removeDuplicates(line['triples'])
+    
+    with open(path + "_clean", "a") as f:
+        for key in res:
+            f.write(json.dumps({ 'id': "ont_2_music_train_" + key, 'triples': res[key] }) + "\n")
+
 if __name__ == "__main__":
+    """
     start = time()
     
     n_threads = 10
@@ -196,19 +216,10 @@ if __name__ == "__main__":
     
     end = time() - start
     print("This took", end / 60, "minutes for", n_samples, "samples")
-    
-    # Q11424 is film entity, root entity is the main entity of interest
-    # of the ontology, like for the UN it would be a resolution
-    # intouchables = generator.getEntitiesOfType("Q11424")[3]
-    # pprint(intouchables)
-    
-    #pprint(generator.getTriplesOfEntity(intouchables))
-    
     """
-    (Benchmarker) (base) gordon@whisky:~/Documents/edu/gordon_ms/Project/Benchmarker/data/synth_wikidata$ python3 gen_triples.py 
-    This took 1.1518104116121928 minutes for 5 samples
-    (Benchmarker) (base) gordon@whisky:~/Documents/edu/gordon_ms/Project/Benchmarker/data/synth_wikidata$ python3 gen_triples.py 
-    This took 3.8452227314313254 minutes for 5 samples
     
-    This took 94.5345106045405 minutes for 1000 samples
-    """
+    fold_triples("./ont_2_music.jsonl")
+    
+    
+    # todo, keep folding the triples, find a way to deal with the dates, see if
+    
