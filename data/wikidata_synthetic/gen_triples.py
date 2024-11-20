@@ -1,3 +1,7 @@
+# Utility script to generate triples for a given ontology with a root entity
+# for the music ontology, the root is musical work (Q2188189), for the movie 
+# ontology, it's film (Q11424). This script extracts triples from wikidata. 
+
 from multiprocessing.pool import ThreadPool
 from SPARQLWrapper import SPARQLWrapper, JSON
 from pandas import json_normalize
@@ -6,8 +10,11 @@ from time import time
 import json
 
 def getEntitiesOfType(qid: str, n: int) -> list[dict]:
-        """retrieve list of n wikidata instances of entity qid, P31 is instance of."""
-        sparqlwd_caller = SPARQLWrapper("https://query.wikidata.org/sparql", agent='TripleSentenceGeneratorBot/0.0 (https://github.com/swissarthurfreeman/; arthur.freeman@unige.ch)')
+        """retrieve list of n wikidata instances of entity qid, P31 is instance of, P279 is subclass of."""
+        sparqlwd_caller = SPARQLWrapper(
+            "https://query.wikidata.org/sparql", 
+            agent='TripleSentenceGeneratorBot; (github.com/swissarthurfreeman/; arthur.freeman@unige.ch)'
+        )
         sparqlwd_caller.setReturnFormat(JSON)
         q = f"""
         SELECT ?item ?itemLabel WHERE {{
@@ -28,6 +35,7 @@ def getEntitiesOfType(qid: str, n: int) -> list[dict]:
     
 
 def list_to_dict(dicts: list[dict], key: str) -> dict[dict[str, str]]:
+    """convert list [{key :..., key1 :...}, ...] to dict {key : {key : ..., key1: ...}, key1: ...}"""
     res = {}
     for dic in dicts:
         res[dic[key]] = dic
@@ -200,13 +208,12 @@ def fold_triples(path: str) -> None:
             f.write(json.dumps({ 'id': "ont_2_music_train_" + key, 'triples': res[key] }) + "\n")
 
 if __name__ == "__main__":
-    """
     start = time()
     
     n_threads = 10
     pool = ThreadPool(n_threads)
-    n_samples = 21_000
-    entities = getEntitiesOfType("Q11424", n_samples)[20_000:]
+    n_samples = 1000
+    entities = getEntitiesOfType("Q11424", n_samples)
     print(len(entities))
     for i in range(n_threads):
         pool.apply_async(worker, (i,  n_threads, entities))
@@ -216,7 +223,7 @@ if __name__ == "__main__":
     
     end = time() - start
     print("This took", end / 60, "minutes for", n_samples, "samples")
-    """
+    
     
     fold_triples("./ont_2_music.jsonl")
     

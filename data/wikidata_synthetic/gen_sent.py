@@ -1,5 +1,7 @@
+# Utility script to generate sentences from triples by building
+# a prompt for an OpenAI GPT. A random, connex subset of the 
+# available triples is chosen to provide in the prompt for the model. 
 from openai import OpenAI
-from pprint import pprint
 import random
 import json
 import os
@@ -55,6 +57,7 @@ Triples:\n
     return prompt, triples
 
 def getIdx():
+    """TODO : clean this up, not needed anymore."""
     with open("./ont_2_music_train.jsonl") as f:
         return len(f.readlines())
 
@@ -83,9 +86,3 @@ if __name__ == "__main__":
         with open("./ont_2_music_train.jsonl", "a", encoding='utf-8') as f:
             f.write(json.dumps(res) + "\n")
       
-    # you can instruct the prompter to convert dates to natural language, we need
-    # to think how this will impact performance, what should we teach REBEL to 
-    # predict, should he predict the ISO string directly ? We probably have enough data
-    # for him to be able to do that..., the advantage is non ambiguitiy in triple evaluation
-    # REBEL should learn to predict the canonical form. 
-    # note, for properties with multiple values, we do nothing, just ask gpt to include multiple publication dates.
