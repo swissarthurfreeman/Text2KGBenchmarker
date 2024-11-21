@@ -1,0 +1,26 @@
+# @package _global_
+
+num_workers: 8
+text_column:     'context'
+target_column:   'triplets'
+ontology_name:   'movie'
+dataset_name:    '/home/users/f/freemana/Text2KGBenchmarker/experiments/rebel/datasets/wikidata_synthetic.py'
+train_file:      '/home/users/f/freemana/Text2KGBenchmarker/data/wikidata_synthetic/train/ont_1_movie_train.jsonl'
+validation_file: '/home/users/f/freemana/Text2KGBenchmarker/data/wikidata_synthetic/test/ont_1_movie_test.jsonl'
+test_file:       '/home/users/f/freemana/Text2KGBenchmarker/data/wikidata_synthetic/test/ont_1_movie_test.jsonl'
+
+# dangerous, this will re-read from cache, even if dataset changes
+overwrite_cache: True
+preprocessing_num_workers: 
+max_source_length: 1024
+max_target_length: 128
+val_max_target_length: 256
+pad_to_max_length: False
+max_train_samples:
+max_val_samples: 
+max_test_samples: 
+num_beams: 
+ignore_pad_token_for_loss: True
+source_prefix: 
+relations_file: 
+
