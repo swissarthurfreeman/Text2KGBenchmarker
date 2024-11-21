@@ -8,3 +8,8 @@ data/wikidata_tekgen/train/ont_1_movie_train-text2kgbench.cache
 data/wikidata_tekgen/validation/ont_1_movie_validation-text2kgbench.cache
 data/wikidata_tekgen/test/ont_1_movie_test-text2kgbench.cache
 data/wikidata_tekgen/test/ont_1_movie_test-text2kgbench.cache
+data/wikidata_synthetic/test/ont_1_movie_test-wikidata_synthetic.cache
+data/wikidata_synthetic/train/ont_1_movie_train-wikidata_synthetic.cache
+.gitignore
+data/wikidata_tekgen/test/ont_1_movie_test-text2kgbench.cache
+data/wikidata_tekgen/test/ont_1_movie_test-text2kgbench.cache

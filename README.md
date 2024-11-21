@@ -99,7 +99,8 @@ Run `module load GCCcore/13.2.0 Python/3.11.5` to load up python, then `pipenv i
 
 To fine tune correctly, update the file paths in `text2kgbench_data.yml` and `text2kgbench.py`.
 Update the `relations` array in `score.py`, update the `relations_wikidata_movies` array in 
-`lightning_modules.py`. Delete all `.cache` files. 
+`lightning_modules.py`. Delete all `.cache` files, update the dataset script filename in
+`lightnin_modules.py` at lines 510 and 559, 
 
 Fine tune REBEL on NYT dataset from within the `src` folder with :
 ```
@@ -204,4 +205,6 @@ tensor([[0.2190]])
 tensor([[0.3998]])
 ```
 
-
+```
+srun --gpus=1 --mem-per-gpu=32G --partition=shared-gpu --time=1:00:00 python3 train.py model=rebel_model data=wikidata_synthetic_data train=wikidata_synthetic_train +trust_remote_code=True
+```

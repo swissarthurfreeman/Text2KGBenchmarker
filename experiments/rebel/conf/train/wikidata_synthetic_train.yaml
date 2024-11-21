@@ -1,11 +1,20 @@
 # @package _global_
 
+eval_beams: 12
+num_return_sequences: 12
+
+relation_mapping: true
+sim_threshold: 0.3
+entailement_filtering: false
+
 # optimization
-train_batch_size: 24
+train_batch_size: 32
 eval_batch_size: 16
 gradient_acc_steps: 1
 gradient_clip_value: 10.0
-max_steps: 10000
+max_steps: 10000 
+warmup_steps: 4000
+dropout: 0.1
 
 lr_scheduler: "inverse_square_root"
 learning_rate: 0.000025
@@ -22,7 +31,7 @@ val_percent_check: 1.0
 monitor_var: 'val_F1_micro'
 monitor_var_mode: 'max'
 patience: 5
-model_name: 'nyt'
+model_name: 'wikidata_synthetic'
 save_top_k: 1
 
 # core
@@ -73,10 +82,8 @@ dataloader_pin_memory: True
 label_smoothing: 0.0
 sortish_sampler: False
 predict_with_generate: False
-decoder_layerdrop: 
-dropout: 0.1
-attention_dropout: 
-warmup_steps: 8000
+decoder_layerdrop:
+attention_dropout:
 classifier: False
 # Callbacks
 samples_interval: 1000
