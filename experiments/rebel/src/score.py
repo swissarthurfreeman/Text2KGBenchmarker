@@ -170,6 +170,8 @@ def re_score(pred_relations, gt_relations, relation_types, mode="boundaries"):
     # Count GT relations and Predicted relations
     n_sents = len(gt_relations)
     n_rels = sum([len([rel for rel in sent]) for sent in gt_relations])
+    
+    # BUG : multi beam concatenation is hurting precision, since the metric here doesn't merge triples... 
     n_found = sum([len([rel for rel in sent]) for sent in pred_relations])
 
     # Count TP, FP and FN per type

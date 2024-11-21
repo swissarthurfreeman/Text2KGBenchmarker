@@ -35,7 +35,7 @@ class BaseLightningDataModule(LightningDataModule):
         if conf.relations_file:
             data_files['relations'] = conf.relations_file     
             
-        self.datasets: dict[str, Dataset] = load_dataset(conf.dataset_name, data_files=data_files)
+        self.datasets: dict[str, Dataset] = load_dataset(conf.dataset_name, data_files=data_files, trust_remote_code=True)
         train_data = self.datasets["train"]
         """A dataset is a directory that contains data files in generic formats (JSON, CSV...) + a 
         dataset script if requires code to read data files, Dataset hugging face class is a table."""
