@@ -47,7 +47,7 @@ def getPrompt(triples: list[dict]) -> tuple[str, list[dict]]:
 3) If no currency or timezone are specified, do not include them.
 4) Do not put the musical work title between quotation marks like " or ' unless absolutely necessary.
 5) Use varied turn of phrases, for example, don't always start the sentence with the name of musical work, and use coreference instead of repeating the title. 
-6) Make the output no longer than a small paragraph.
+6) Make the output no longer than a small paragraph, vary the sizes, sometimes a single sentence, sometimes a paragraph.
 
 Triples:\n
 """
@@ -58,13 +58,13 @@ Triples:\n
 
 def getIdx():
     """TODO : clean this up, not needed anymore."""
-    with open("./ont_2_music_train.jsonl") as f:
+    with open("./ont_1_movie_train.jsonl") as f:
         return len(f.readlines())
 
 if __name__ == "__main__":
     
     data = []
-    with open("./ont_2_music.jsonl") as f:
+    with open("./ont_1_movie.jsonl") as f:
         data = [json.loads(line) for line in f]
 
     print("Querying GPT...")
@@ -83,6 +83,6 @@ if __name__ == "__main__":
         )
         
         res = {'id': line['id'], 'sent': chat_completion.choices[0].message.content.strip(), 'triples': chosen_triples}
-        with open("./ont_2_music_train.jsonl", "a", encoding='utf-8') as f:
+        with open("./ont_1_movie_train.jsonl", "a", encoding='utf-8') as f:
             f.write(json.dumps(res) + "\n")
       

@@ -10,17 +10,19 @@ from time import time
 import json
 
 def getEntitiesOfType(qid: str, n: int) -> list[dict]:
-        """retrieve list of n wikidata instances of entity qid, P31 is instance of, P279 is subclass of."""
+        """retrieve list of n wikidata instances of entity qid, P31 is instance of, P279 is subclass of,
+        this function will filter out triples for the which we don't have a label."""
         sparqlwd_caller = SPARQLWrapper(
             "https://query.wikidata.org/sparql", 
             agent='TripleSentenceGeneratorBot; (github.com/swissarthurfreeman/; arthur.freeman@unige.ch)'
         )
         sparqlwd_caller.setReturnFormat(JSON)
         q = f"""
-        SELECT ?item ?itemLabel WHERE {{
-            ?item wdt:P31 ?x.
-            ?x wdt:P279 wd:{qid}.
-            SERVICE wikibase:label {{ bd:serviceParam wikibase:language "en". }}
+        SELECT ?item ?itemLabel
+        WHERE {{
+            ?item wdt:P31/wdt:P279* wd:{qid};
+                    rdfs:label ?itemLabel;
+            FILTER (lang(?itemLabel) = "en").
         }}
         LIMIT {n}
         """
@@ -31,6 +33,12 @@ def getEntitiesOfType(qid: str, n: int) -> list[dict]:
             "qid": res['item']['value'].split("/")[-1], 
             "label": res['itemLabel']['value']
         } for res in raw_results]
+        
+        qids = []
+        with open("ont_1_movie.jsonl") as f:
+            qids = [json.loads(line)['triples'][0]['sqid'] for line in f] 
+        
+        entities = [ent for ent in entities if ent['qid'] not in qids]
         return entities
     
 
@@ -70,7 +78,8 @@ class TripleGenerator:
         
     def generate(self) -> None:
         """Generate n triple sets for type_qid qid class instance."""
-        for entity in self.root_entities: 
+        while len(self.root_entities) > 0:
+            entity = self.root_entities.pop(0)
             try:
                 # if a wikidata id, don't take the entity
                 int(entity['label'].split("Q")[-1])
@@ -81,6 +90,7 @@ class TripleGenerator:
                 if len(triples['triples']) == 0:
                     continue
                 with open("./" + self.ontology_path.split("/")[-1] + "l", "a") as f:
+                    print("Writing at", time() / 60, "minutes.")
                     f.write(json.dumps(triples) + "\n")
             
     def getTriplesOfEntity(self, entity: dict) -> list[dict]:
@@ -205,14 +215,15 @@ def fold_triples(path: str) -> None:
     
     with open(path + "_clean", "a") as f:
         for key in res:
-            f.write(json.dumps({ 'id': "ont_2_music_train_" + key, 'triples': res[key] }) + "\n")
+            f.write(json.dumps({ 'id': "ont_1_movie_train_" + key, 'triples': res[key] }) + "\n")
 
 if __name__ == "__main__":
     start = time()
     
-    n_threads = 10
+    n_threads = 30
     pool = ThreadPool(n_threads)
-    n_samples = 1000
+    n_samples = 100000
+    
     entities = getEntitiesOfType("Q11424", n_samples)
     print(len(entities))
     for i in range(n_threads):
@@ -225,7 +236,7 @@ if __name__ == "__main__":
     print("This took", end / 60, "minutes for", n_samples, "samples")
     
     
-    fold_triples("./ont_2_music.jsonl")
+    fold_triples("./ont_1_movie.jsonl")
     
     
     # todo, keep folding the triples, find a way to deal with the dates, see if

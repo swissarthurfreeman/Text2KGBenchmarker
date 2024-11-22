@@ -31,9 +31,9 @@ class SyntheticWikidata(datasets.GeneratorBasedBuilder):
     
     def _split_generators(self, dl_manager: datasets.DownloadManager | datasets.StreamingDownloadManager) -> list[datasets.SplitGenerator]:
         return [
-            datasets.SplitGenerator(name = datasets.Split.TRAIN, gen_kwargs={"filepath":      "/home/users/f/freemana/Text2KGBenchmarker/data/wikidata_synthetic/train/ont_1_movie_train.jsonl"}),
-            datasets.SplitGenerator(name = datasets.Split.VALIDATION, gen_kwargs={"filepath": "/home/users/f/freemana/Text2KGBenchmarker/data/wikidata_synthetic/test/ont_1_movie_test.jsonl"}),
-            datasets.SplitGenerator(name = datasets.Split.TEST, gen_kwargs={"filepath":       "/home/users/f/freemana/Text2KGBenchmarker/data/wikidata_synthetic/test/ont_1_movie_test.jsonl"})
+            datasets.SplitGenerator(name = datasets.Split.TRAIN, gen_kwargs={"filepath":      "/home/gordon/Documents/edu/gordon_ms/Project/Benchmarker/data/wikidata_synthetic/train/ont_1_movie_train.jsonl"}),
+            datasets.SplitGenerator(name = datasets.Split.VALIDATION, gen_kwargs={"filepath": "/home/gordon/Documents/edu/gordon_ms/Project/Benchmarker/data/wikidata_synthetic/test/ont_1_movie_test.jsonl"}),
+            datasets.SplitGenerator(name = datasets.Split.TEST, gen_kwargs={"filepath":       "/home/gordon/Documents/edu/gordon_ms/Project/Benchmarker/data/wikidata_synthetic/test/ont_1_movie_test.jsonl"})
         ]
         
     def _generate_examples(self, filepath):

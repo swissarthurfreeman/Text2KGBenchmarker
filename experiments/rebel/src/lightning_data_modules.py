@@ -54,7 +54,7 @@ class BaseLightningDataModule(LightningDataModule):
 
         # Data collator
         label_pad_token_id = -100 if conf.ignore_pad_token_for_loss else self.tokenizer.pad_token_id
-        if conf.pad_to_max_length:
+        if conf.pad_to_max_length:  # always False
             self.data_collator = default_data_collator
         else:
             self.data_collator = DataCollatorForSeq2Seq(self.tokenizer, self.model, label_pad_token_id=label_pad_token_id)

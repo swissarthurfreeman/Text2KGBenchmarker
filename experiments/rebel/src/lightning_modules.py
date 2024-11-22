@@ -431,7 +431,6 @@ class BaseLightningModule(pl.LightningModule):
             self.log(key, metrics[key])
 
         outputs = {}
-        # BUG : why is labels empty list with text2kgbench.py ?
         outputs['predictions'], outputs['labels'] = self.generate_triples(batch, labels)
         self.val_predictions.append(outputs)
         return outputs
