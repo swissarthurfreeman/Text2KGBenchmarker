@@ -1,0 +1,8 @@
+# @package _global_
+
+# folder containing all Rebel-large files, weights, embeddings etc.
+pretrained_model_name_or_path: '/home/gordon/Documents/edu/gordon_ms/Project/Benchmarker/experiments/rebel/Rebel-large'
+
+# by default, we use the same tokenizer as REBEL, e.g. as BART
+tokenizer_name_or_path: '/home/gordon/Documents/edu/gordon_ms/Project/Benchmarker/experiments/rebel/Rebel-large'
+

@@ -1,0 +1,27 @@
+# @package _global_
+
+# dataset configuration
+dataset_script_path: '/home/gordon/Documents/edu/gordon_ms/Project/Benchmarker/experiments/bench-rebel/datasets/wkdata_synth_movie.py'
+train_file:      '/home/gordon/Documents/edu/gordon_ms/Project/Benchmarker/data/wikidata_synthetic/train/ont_1_movie_train.jsonl'
+val_file: '/home/gordon/Documents/edu/gordon_ms/Project/Benchmarker/data/wikidata_synthetic/test/ont_1_movie_test.jsonl'
+test_file:       '/home/gordon/Documents/edu/gordon_ms/Project/Benchmarker/data/wikidata_synthetic/test/ont_1_movie_test.jsonl'
+
+text_key: 'sent'
+target_key: 'triples'
+
+train_batch_size: 32
+val_batch_size: 24
+test_batch_size: 24
+
+# model usage configuration
+pretrained_model_name_or_path: '/home/gordon/Documents/edu/gordon_ms/Project/Benchmarker/experiments/rebel/Rebel-large'
+# used for evaluation of model on test data
+do_test_predict: false
+pl_seed: 42
+
+# model hyperparameters
+dropout: 0.1
+
+# optimization hyperparameters
+
+

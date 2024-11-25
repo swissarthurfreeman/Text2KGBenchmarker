@@ -23,10 +23,10 @@ def train(conf: omegaconf.DictConfig) -> None:
     config = AutoConfig.from_pretrained(
         conf.config_name if conf.config_name else conf.model_name_or_path,
         decoder_start_token_id = 0,
-        early_stopping = False,
-        no_repeat_ngram_size = 0,
+        early_stopping = False,     # doesn't exist in BartConfig class
+        no_repeat_ngram_size = 0,   # not in BartConfig avoids repeating n_grams of size 0, gets passed to generate method
         dropout=conf.dropout,
-        forced_bos_token_id=None,
+        forced_bos_token_id=None,   # doesn't exist in BartConfig class
     )
     
     tokenizer_kwargs = {

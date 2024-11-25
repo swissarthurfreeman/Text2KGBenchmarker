@@ -4,6 +4,8 @@ import torch
 from pytorch_lightning import Callback, LightningModule, Trainer
 import wandb
 
+# if think this is to display some extraction results during the training,
+# this gets sent to wandb as part of experiment monitoring.
 
 class GenerateTextSamplesCallback(Callback):  # pragma: no cover
     """

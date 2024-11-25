@@ -39,6 +39,10 @@ def getEntitiesOfType(qid: str, n: int) -> list[dict]:
             qids = [json.loads(line)['triples'][0]['sqid'] for line in f] 
         
         entities = [ent for ent in entities if ent['qid'] not in qids]
+        
+        with open("./" + qid + ".jsonl", "a") as f:
+            for entity in entities:
+                f.write(json.dumps(entity) + "\n")
         return entities
     
 
@@ -76,25 +80,29 @@ class TripleGenerator:
 
         self.root_entities: list[dict] = entities
         
-    def generate(self) -> None:
+    def generate(self, thread=0) -> None:
         """Generate n triple sets for type_qid qid class instance."""
         while len(self.root_entities) > 0:
+            print("T", thread, len(self.root_entities), "entities to go")
             entity = self.root_entities.pop(0)
-            try:
-                # if a wikidata id, don't take the entity
-                int(entity['label'].split("Q")[-1])
+            print("T", thread, "Query triples of", json.dumps(entity))
+            # if a wikidata id, don't take the entity
+            if entity['label'].split("Q")[-1].isdigit():
+                print("continue, is digit")
                 continue
-            except:
-                triples = { 'triples': self.getTriplesOfEntity(entity) }
-                # if entity has some relevant triples, keep it
-                if len(triples['triples']) == 0:
-                    continue
-                with open("./" + self.ontology_path.split("/")[-1] + "l", "a") as f:
-                    print("Writing at", time() / 60, "minutes.")
-                    f.write(json.dumps(triples) + "\n")
+            
+            triples = { 'triples': self.getTriplesOfEntity(entity) }
+            # if entity has some relevant triples, keep it
+            if len(triples['triples']) == 0:
+                print("continue, no triples")
+                continue
+            with open("./" + self.ontology_path.split("/")[-1] + "l", "a") as f:
+                print("Writing at", time() / 60, "minutes.")
+                f.write(json.dumps(triples) + "\n")
             
     def getTriplesOfEntity(self, entity: dict) -> list[dict]:
         """retrieve all triples with qid as subject"""
+        print("Get triples of", json.dumps(entity))
         triples: list[dict] = []
         
         for pid in self.relations.keys():
@@ -108,6 +116,7 @@ class TripleGenerator:
             """
             self.sparqlwd_caller.setQuery(q)
             raw_results = self.sparqlwd_caller.query().convert()['results']['bindings']
+            print("Obtained raw results", json.dumps(raw_results))
             
             for obj in raw_results:
                 # only keep triples that follow the ontology, award_received(film, award), entity needs to be
@@ -192,11 +201,11 @@ class TripleGenerator:
 
 def worker(i, n_threads, entities):
     generator = TripleGenerator(
-            'TripleSentenceGeneratorBot/0.0 (https://github.com/swissarthurfreeman/; arthur.freeman@unige.ch)',
+            'TripGen/3.0 (https://github.com/swissarthurfreeman/; arthur.freeman@unige.ch)',
             '../wikidata_tekgen/ontologies/ont_1_movie.json',
             entities=entities[i*(len(entities)//n_threads):(i+1)*(len(entities)//n_threads)]
         )
-    generator.generate()
+    generator.generate(i)
 
 def removeDuplicates(triples: list[dict]) -> list[dict]:
     res = []
@@ -220,11 +229,33 @@ def fold_triples(path: str) -> None:
 if __name__ == "__main__":
     start = time()
     
-    n_threads = 30
+    n_threads = 5
     pool = ThreadPool(n_threads)
-    n_samples = 100000
     
-    entities = getEntitiesOfType("Q11424", n_samples)
+    qids = []
+    with open("ont_1_movie.jsonl") as f:
+        qids = [json.loads(line)['triples'][0]['sqid'] for line in f] 
+            
+    entities = []
+    with open("Q11424.jsonl") as f:
+        for line in f:
+            ent = json.loads(line)
+            if ent['qid'] not in qids:
+                entities.append(ent)
+    
+    #entities = entities[:30_000]
+    #emtities = entities[25_000:30_000]
+    #entities = [json.loads(line) for line in f]
+    #entities = [ent for ent in entities if ent['qid'] not in qids]
+    
+    print("Querying...")
+    #generator = TripleGenerator(
+    #        'TripleSentenceGeneratorBot/2.1 (https://github.com/swissarthurfreeman/; arthur.freeman@unige.ch)',
+    #        '../wikidata_tekgen/ontologies/ont_1_movie.json',
+    #        entities=entities
+    #    )
+    #generator.generate()
+    
     print(len(entities))
     for i in range(n_threads):
         pool.apply_async(worker, (i,  n_threads, entities))
@@ -233,10 +264,10 @@ if __name__ == "__main__":
     pool.join()
     
     end = time() - start
-    print("This took", end / 60, "minutes for", n_samples, "samples")
+    print("This took", end / 60, "minutes for", len(entities), "samples")
     
     
-    fold_triples("./ont_1_movie.jsonl")
+    #fold_triples("./ont_1_movie.jsonl")
     
     
     # todo, keep folding the triples, find a way to deal with the dates, see if

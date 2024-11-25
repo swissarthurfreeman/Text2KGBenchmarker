@@ -1,4 +1,8 @@
 defaults:
-  - train: default_train
-  - model: default_model
-  - data: default_data
+  - _self_
+  - data: wkdata_synth_movie
+  - model: rebel_model
+
+hydra:
+  job:
+    chdir: True
