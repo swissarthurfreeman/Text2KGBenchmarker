@@ -15,6 +15,9 @@ test_batch_size: 24
 
 # model usage configuration
 pretrained_model_name_or_path: '/home/gordon/Documents/edu/gordon_ms/Project/Benchmarker/experiments/rebel/Rebel-large'
+relation_mapping: False
+sentence_entailement: False
+
 # used for evaluation of model on test data
 do_test_predict: false
 pl_seed: 42
@@ -22,6 +25,24 @@ pl_seed: 42
 # model hyperparameters
 dropout: 0.1
 
+# generation hyperparameters
+max_target_length: 256        # maximum generated linearized triples output length
+eval_beams: 12                # number of beams to use during generation
+num_return_sequences: 12      # top likeliest number of beams kept in output (beams get folded into one predicted triple set)
+
+# trainer parameters
+val_check_interval: 1.0       # check validation metric at every training epoch (0.5 would mean every time a half of the train data is seen, check validation metrics)
+max_steps: 10_000
+
 # optimization hyperparameters
+warmup_steps: 1000
+gradient_acc_steps: 4
+gradient_clip_value: 10.0
 
-
+lr_scheduler: "inverse_square_root"
+learning_rate: 0.000025
+weight_decay: 0.1
+adam_beta1: 0.9
+adam_beta2: 0.999
+adam_epsilon: 0.00000001
+max_grad_norm: 1.0

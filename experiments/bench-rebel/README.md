@@ -104,15 +104,7 @@ in charge of taking these rich embeddings and output a distribution of logits ov
 
 ```python
 output = self.model(input_ids, ...) # output is Tuple | Seq2SeqModelOutput
-lm_logits = self.lm_head(outputs[0])
-lm_logits = lm_logits + self.final_logits_bias.to(lm_logits.device)
-...
-labels = labels.to(lm_logits.device)
-loss_fct = CrossEntropyLoss()
-masked_lm_loss = loss_fct(lm_logits.view(-1, self.config.vocab_size), labels.view(-1))
-```
-
-here `lm_logits` appears to be of size `(B, seqlen, 50272)` and the loss is then computed between that and the labels variable, which is of size `(B, seqlen)` where each entry is an index in the vocabulary. Recall that `nn.CrossEntropyLoss` really just is a wrapper for `F.cross_entropy(input, target)` where the input `(B, seqlen, 50272)` are predicted logits and target `(B*seqlen)` are the class indices. 
+lm_logits = self.lm_head(outputs[0])modeljust is a wrapper for `F.cross_entropy(input, target)` where the input `(B, seqlen, 50272)` are predicted logits and target `(B*seqlen)` are the class indices. 
 
 
 ## Tokenizer

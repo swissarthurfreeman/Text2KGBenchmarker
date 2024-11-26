@@ -1,5 +1,6 @@
 import hydra
 import omegaconf
+import torch
 from typing import cast
 import pytorch_lightning as pl
 from omegaconf import DictConfig
@@ -8,6 +9,10 @@ from transformers.models.bart.configuration_bart import BartConfig
 from transformers.models.bart.tokenization_bart_fast import BartTokenizerFast
 from transformers.models.bart.modeling_bart import BartForConditionalGeneration
 from lightning_data_module import BaseLightningDataModule
+from lightning_module import BaseLightningModule
+from pytorch_lightning.loggers.wandb import WandbLogger
+import warnings
+warnings.filterwarnings("ignore", ".*does not have many workers.*")
 
 
 def train(conf: DictConfig):
@@ -46,9 +51,35 @@ def train(conf: DictConfig):
         config=model_config     # forwarded to BartForConditionalGeneration's constructor
     ))
     """transformers.models.bart.modeling_bart.BartForConditionalGeneration"""
+    
+    model.resize_token_embeddings(len(tokenizer))
     #print(type(model), model.config)
     
     pl_data_module = BaseLightningDataModule(conf, tokenizer, model)
+    
+    
+    pl_module = BaseLightningModule(conf=conf, config=model_config, tokenizer=tokenizer, model=model, 
+                                    ontology_path="/home/gordon/Documents/edu/gordon_ms/Project/Benchmarker/data/wikidata_tekgen/ontologies/ont_1_movie.json", 
+                                    wandb_run_name="")
+
+    
+    #wandb_logger = WandbLogger(project="bench-rebel-rewrite", name="bench-rebel-rewrite")
+    
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    
+    trainer = pl.Trainer(
+        accelerator=device,
+        accumulate_grad_batches=conf.gradient_acc_steps,
+        gradient_clip_val=conf.gradient_clip_value,
+        val_check_interval=conf.val_check_interval,
+        max_steps=conf.max_steps,
+        precision='bf16-mixed',
+        enable_checkpointing=False,
+        logger=False
+    )
+    
+    trainer.fit(pl_module, datamodule=pl_data_module)
+    
 
 @hydra.main(config_path="../conf", config_name="root", version_base="1.1")
 def main(conf: DictConfig):

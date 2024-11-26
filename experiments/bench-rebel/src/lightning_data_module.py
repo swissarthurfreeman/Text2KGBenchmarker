@@ -25,7 +25,7 @@ class BaseLightningDataModule(pl.LightningDataModule):
         super().__init__()
         self.conf = conf
         """data yaml configuration, dataset_name, train_file, test_file, val_file..."""
-        self.tokenizer = tokenizer
+        self.tokenizer: BartTokenizerFast = tokenizer
         """tokenization will be applied in pre-processing to every element in dataset."""
         self.model = model
         """we keep this for the DataCollator because model has a maximum input size constraints."""
@@ -91,8 +91,7 @@ class BaseLightningDataModule(pl.LightningDataModule):
         # it'll literally just trunkate the resulting input_ids and attention_mask arrays to 1024 in length
         model_inputs = self.tokenizer(inputs, max_length=1024, padding=False, truncation=True)
         
-        with self.tokenizer.as_target_tokenizer():
-            labels = self.tokenizer(targets, max_length=1024, padding=False, truncation=True)
+        labels = self.tokenizer(text_target=targets, max_length=1024, padding=False, truncation=True)
             
         model_inputs["labels"] = labels["input_ids"]
         
@@ -127,7 +126,6 @@ class BaseLightningDataModule(pl.LightningDataModule):
             pin_memory=True
         )
         
-
 
 if __name__ == '__main__':
     """Simple tests for the sake of comprehension"""

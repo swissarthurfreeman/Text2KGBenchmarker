@@ -227,6 +227,7 @@ def fold_triples(path: str) -> None:
             f.write(json.dumps({ 'id': "ont_1_movie_train_" + key, 'triples': res[key] }) + "\n")
 
 if __name__ == "__main__":
+    """
     start = time()
     
     n_threads = 5
@@ -242,19 +243,8 @@ if __name__ == "__main__":
             ent = json.loads(line)
             if ent['qid'] not in qids:
                 entities.append(ent)
-    
-    #entities = entities[:30_000]
-    #emtities = entities[25_000:30_000]
-    #entities = [json.loads(line) for line in f]
-    #entities = [ent for ent in entities if ent['qid'] not in qids]
-    
+                
     print("Querying...")
-    #generator = TripleGenerator(
-    #        'TripleSentenceGeneratorBot/2.1 (https://github.com/swissarthurfreeman/; arthur.freeman@unige.ch)',
-    #        '../wikidata_tekgen/ontologies/ont_1_movie.json',
-    #        entities=entities
-    #    )
-    #generator.generate()
     
     print(len(entities))
     for i in range(n_threads):
@@ -265,10 +255,7 @@ if __name__ == "__main__":
     
     end = time() - start
     print("This took", end / 60, "minutes for", len(entities), "samples")
+    """
     
-    
-    #fold_triples("./ont_1_movie.jsonl")
-    
-    
-    # todo, keep folding the triples, find a way to deal with the dates, see if
+    fold_triples("./ont_1_movie.jsonl")
     

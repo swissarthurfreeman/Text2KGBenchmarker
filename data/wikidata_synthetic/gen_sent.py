@@ -41,14 +41,14 @@ def getRandomNTriplesFrom(triples: list[dict], max_n: int) -> list[dict]:
     return res
 
 def getPrompt(triples: list[dict]) -> tuple[str, list[dict]]:
-    prompt = f"""Please generate sentences on the subject of music from the triples below following these precise instructions :
-1) Make the sentences natural, as they would appear in text or conversation.
-2) The triples can be explicit in the sentence or implied, include all the triples.
+    prompt = f"""Your task is to generate varied, accurate, sentences about movies from a list of triples following these precise instructions :
+1) Make the sentences natural, as they would appear in text or conversation, wikipedia, imdb or the internet.
+2) The triples can be explicit in the sentence or implied, include all the triples provided, do not invent additional facts. 
 3) If no currency or timezone are specified, do not include them.
 4) Do not put the musical work title between quotation marks like " or ' unless absolutely necessary.
-5) Use varied turn of phrases, for example, don't always start the sentence with the name of musical work, and use coreference instead of repeating the title. 
-6) Make the output no longer than a small paragraph, vary the sizes, sometimes a single sentence, sometimes a paragraph.
-
+5) Use varied turn of phrases, don't always start the sentence with the name of a movie, use coreference instead of repeating the title. 
+6) Vary the output size, sometimes a single sentence, sometimes a small paragraph, not more than a couple of sentences.
+7) Avoid repetitions of turns of phrases like 'movie hails from', instead vary using turns of phrases like 'Brazilian Movie', 'this British film' etc. 
 Triples:\n
 """
     n_triples = random.randint(3, 12)
@@ -56,33 +56,37 @@ Triples:\n
     prompt += getTextTriplesList(triples)
     return prompt, triples
 
-def getIdx():
+def getIdx(filepath: str):
     """TODO : clean this up, not needed anymore."""
-    with open("./ont_1_movie_train.jsonl") as f:
-        return len(f.readlines())
-
+    if os.path.exists(filepath):
+        with open(filepath) as f:
+            return len(f.readlines())
+    return 0
 if __name__ == "__main__":
     
+    triples_file_path = "ont_1_movie.jsonl" 
+    
     data = []
-    with open("./ont_1_movie.jsonl") as f:
+    with open(triples_file_path) as f:
         data = [json.loads(line) for line in f]
 
     print("Querying GPT...")
     client = OpenAI(api_key=os.environ['OPEN_API_KEY'])
     
-    idx = getIdx()
+    output_file_path = triples_file_path.split(".")[0] + "_train.jsonl"
+    idx = getIdx(output_file_path)
     
     for line in data[idx:]:
         print("Getting prompt and triples for", line['id'])
         prompt, chosen_triples = getPrompt(line['triples'])
         print("Prompting...")
         chat_completion = client.chat.completions.create(
-            model="gpt-4o",
+            model="gpt-4o-mini",
             messages=[{"role": "user", "content": prompt}],
             timeout=10
         )
         
         res = {'id': line['id'], 'sent': chat_completion.choices[0].message.content.strip(), 'triples': chosen_triples}
-        with open("./ont_1_movie_train.jsonl", "a", encoding='utf-8') as f:
+        with open(output_file_path, "a", encoding='utf-8') as f:
             f.write(json.dumps(res) + "\n")
       
