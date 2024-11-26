@@ -2,7 +2,6 @@
 **/outputs/
 **/experiments/rebel/data/nyt
 **/experiments/rebel/data/rebel
-**/experiments/rebel/Rebel-large/pytorch_model.bin
 **/experiments/rebel/data/rebel/rebel_dataset.zip
 data/wikidata_tekgen/train/ont_1_movie_train-text2kgbench.cache
 data/wikidata_tekgen/validation/ont_1_movie_validation-text2kgbench.cache
