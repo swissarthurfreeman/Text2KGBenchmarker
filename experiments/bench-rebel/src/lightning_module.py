@@ -186,13 +186,20 @@ class BaseLightningModule(pl.LightningModule):
         }
         """model inference arguments, passed to `generate()`"""
     
-    def forward(self, inputs, labels) -> dict:
+    def forward(self, inputs: dict[str, torch.Tensor], labels: torch.Tensor) -> dict:
         """
         Inference method, to be called by the module in training_step,
         validation_step and test_step functions. This method computes the
         model output given a tokenized batch of input sentences, `inputs`
         and their aligned, tokenized batch of linearized triples `labels`.
         
+        Parameters
+        ----------
+        - inputs, dict with `'input_ids'`, `'attention_mask'`, `'decoder_input_ids'` keys
+        of values with sizes `(24, 116), (24, 116), (24, 145)` where 24 is `val_batch_size`,
+        116 the maximum tokenized sentence length of batch, 145 the maximum number of tokens 
+        in the linearized triples of the batch. 
+        - labels is a tensor of size `(24, 145)`.
         Returns
         -------
         - output_dict containing predicted logits
@@ -200,8 +207,14 @@ class BaseLightningModule(pl.LightningModule):
         # in original code they used ignore_pad_token_for_loss if, this is obviously always True.
         
         print("\n\nFORWARD OF LIGHTNING MODULE HERE\n\n")
-        exit(0)
+        print("inputs", inputs['input_ids'].size(), inputs['attention_mask'].size(), 
+              inputs['decoder_input_ids'].size())
+        print("labels", labels, labels.size())
         outputs = self.model(**inputs, return_dict=True, output_hidden_states=True)
+        
+        print("Output", outputs)
+        exit(0)
+        
         logits = outputs['logits']
         loss = self.loss_fn(logits.view(-1, logits.shape[-1]), labels.view(-1)) 
         return {'loss': loss, 'logits': logits}

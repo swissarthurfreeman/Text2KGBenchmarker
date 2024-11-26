@@ -10,7 +10,7 @@ text_key: 'sent'
 target_key: 'triples'
 
 train_batch_size: 32
-val_batch_size: 24
+val_batch_size: 26
 test_batch_size: 24
 
 # model usage configuration
