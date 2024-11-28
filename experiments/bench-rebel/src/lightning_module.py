@@ -2,16 +2,17 @@ import json
 import torch
 import numpy as np
 from numpy import ndarray
-import pytorch_lightning as pl
-from sentence_transformers import SentenceTransformer
-from transformers import AutoConfig, AutoTokenizer, AutoModelForSeq2SeqLM, pipeline
-from transformers.models.bart.modeling_bart import BartForConditionalGeneration
-from transformers.models.bart.tokenization_bart_fast import BartTokenizerFast
+
+from metrics import re_score
 from torch.optim import AdamW
+import pytorch_lightning as pl
+from torch.optim.lr_scheduler import LambdaLR
+from sentence_transformers import SentenceTransformer
+from transformers.models.bart.tokenization_bart_fast import BartTokenizerFast
+from transformers.models.bart.modeling_bart import BartForConditionalGeneration
+from transformers import AutoConfig, AutoTokenizer, AutoModelForSeq2SeqLM, pipeline
 from transformers.optimization import get_constant_schedule, get_constant_schedule_with_warmup, get_cosine_schedule_with_warmup
 from transformers.optimization import get_cosine_with_hard_restarts_schedule_with_warmup, get_linear_schedule_with_warmup, get_polynomial_decay_schedule_with_warmup
-
-from torch.optim.lr_scheduler import LambdaLR
 
 def get_inverse_square_root_schedule_with_warmup(optimizer, num_warmup_steps, warmup_init_lr=-1, last_epoch=-1):
     """
@@ -73,22 +74,15 @@ arg_to_scheduler = {
 
 def shift_tokens_left(input_ids: torch.Tensor, pad_token_id: int):
     """
-    Shift input ids one token to the right, pad the start.
+    Shift input ids one token to the left, pad the last position.
+    [[1, 2, 4, 5]       -> [[2, 4, 5, pad_token_id
+     [5, 6, 7, 4]]      ->   6, 7, 4, pad_token_id]]
     """
     shifted_input_ids = input_ids.new_zeros(input_ids.shape)
     shifted_input_ids[:, :-1] = input_ids[:, 1:].clone()
     shifted_input_ids[:, -1] = pad_token_id
     assert pad_token_id is not None, "self.model.config.pad_token_id has to be defined."
     return shifted_input_ids
-
-
-def pad_tensors_to_max_len(tensor: torch.Tensor, max_length: int, pad_token_id: int):
-    # If PAD token is not defined at least EOS token has to be defined
-    padded_tensor = pad_token_id * torch.ones(
-        (tensor.shape[0], max_length), dtype=tensor.dtype, device=tensor.device
-    )
-    padded_tensor[:, : tensor.shape[-1]] = tensor
-    return padded_tensor
 
 def extract_triplets(text) -> list[dict]:
     triplets: list[dict] = []
@@ -144,7 +138,7 @@ class BaseLightningModule(pl.LightningModule):
             self.concepts: dict[str, str] = {k:v for rel_dic in ontology["concepts"] for (k,v) in rel_dic.items()}
             """concepts dictionary of ontology `{'wikidata_id': 'label'...}`"""
             
-        self.save_hyperparameters(conf)     # adds conf dict to self.hparams
+        self.save_hyperparameters(conf)                     # adds conf dict to self.hparams
         self.tokenizer: BartTokenizerFast = tokenizer
         self.model: BartForConditionalGeneration = model
         
@@ -152,6 +146,9 @@ class BaseLightningModule(pl.LightningModule):
         """`facebook/BART` json configuration file"""
         self.wandb_run_name = wandb_run_name
         
+        # for the model, the <pad> token id is 1, but the data collator pads the batches with -100, 
+        # and -100 indices are ignored by pytorch for loss computation for the tokenizer,
+        # whenever we decode indices, we have to replace -100 by config.pad_token_id, via torch.where() 
         self.loss_fn = torch.nn.CrossEntropyLoss(ignore_index=-100)
         
         self.val_preds: list[dict] =  []
@@ -174,8 +171,102 @@ class BaseLightningModule(pl.LightningModule):
         
         if self.hparams.sentence_entailement:
             self.entailment_model = pipeline(model='roberta-large-mnli', device=device)
+    
+    def forward(self, inputs: dict[str, torch.Tensor]) -> dict[str, torch.Tensor]:
+        """Run the inputs through the model and retrieve the loss and logits in output.
+        To be called in `training_step()`, `validation_step()` and `test_step()` functions.
+        
+        Parameters
+        ----------
+        
+        - inputs, dictionary with keys `input_ids`, `attention_mask`, `labels`, where :
+            - inputs['input_ids'].size()      is (batch_size, max_length_of_tokenized_sent_of_batch)
+            - inputs['attention_mask'].size() is (batch_size, max_length_of_tokenized_sent_of_batch)
+            - inputs['labels'].size()         is (batch_size, max_length_of_tokenized_linearized_triples_of_batch)
             
-        self.gen_kwargs = {
+          `input_ids` are the indices of the tokens of the tokenized sentences, `attention_mask` is a binary vector
+          used to ignore <pad> tokens in attention, and `labels` are the linearized tokenized target triples.
+        
+        Returns
+        -------
+        - a dictionary with a `logits` and `loss` keys, where `loss` is the cross entropy loss over the batch, and 
+        `logits` is a tensor of size (batch_size, max_target_sequence_length, vocabulary_size) 
+        """
+        original_labels = inputs.pop("labels")
+        """See BART_INPUTS_DOCSTRING in modeling_bart.py, shifting left gets rid of first <s> token, decoder_input_ids 
+        is the decoder's teacher forcing baseline. From the DOCSTRING : 
+        > "For translation and summarization training, `decoder_input_ids` should be provided. If no `decoder_input_ids` 
+        > is provided, the model will create this tensor by shifting the `input_ids` to the right for denoising pre-training 
+        > following the paper."
+        So decoder_input_ids is used during training, from Jurafsky Chapter 13 : 
+        > As in that case, we use teacher forcing in the decoder. Recall that in teacher forcing, at each time step in 
+        > decoding y_{t+1} we force the system to use the gold target token from training as the next input x_{t+1}, rather than 
+        > allowing it to rely on the (possibly erroneous) decoder output y_t (autoregressivaly generated target token n°t), 
+        here x is `decoder_input_ids` !
+        """
+        inputs["decoder_input_ids"] = torch.where(original_labels != -100, original_labels, self.config.pad_token_id)
+        
+        outputs = self.model(
+            input_ids = inputs['input_ids'], 
+            attention_mask = inputs['attention_mask'], 
+            decoder_input_ids = inputs['decoder_input_ids'], 
+            use_cache = False,
+            return_dict=True
+        )
+        """outputs is a dictionary with a `logits` key, where outputs['logits'] is of size (batch_size, 
+        max_length_of_tokenized_linearized_triples_of_batch, vocabulary_size)"""
+        
+        logits = outputs['logits']
+        
+        labels = shift_tokens_left(original_labels, -100)
+        loss = self.loss_fn(logits.view(-1, logits.shape[-1]), labels.view(-1)) 
+        inputs["labels"] = original_labels
+        return {'loss': loss, 'logits': logits}
+    
+    def training_step(self, batch: dict) -> dict[str, torch.Tensor]:        
+        forward_output = self.forward(batch)
+        self.log('loss', forward_output['loss'])
+        return forward_output['loss']
+    
+    def inference_step(self, batch: dict) -> dict:
+        """Compute loss of model over batch without training and return predictions.
+        
+        Parameters
+        ----------
+        - batch, a dictionary with `labels`, `input_ids` and `attention_mask` keys.
+        
+        Return
+        ------
+        - dict, with `loss`, `predictions` and `labels` keys.
+        """
+        with torch.no_grad():
+            forward_output = self.forward(batch)
+            
+        outputs = {'loss': forward_output['loss'].mean().detach()}
+        outputs['predictions'], outputs['labels'] = self.generate_triples(batch)
+        return outputs
+        
+    def validation_step(self, batch: dict) -> dict:
+        """Compute validation loss and predictions for batch, return `loss`, `predictions`, `labels`."""
+        outputs = self.inference_step(batch)
+        self.log('val_loss', outputs['loss'])
+        
+        print("Predicted triples list length for batch", len(outputs['predictions'][0]))
+        self.val_preds.append(outputs)
+        return outputs        
+        
+    def test_step(self, batch: dict[str, torch.Tensor]) -> None:
+        """Same as `validation_step()` but on test data."""
+        outputs = self.inference_step(batch)
+        self.log('test_loss', outputs['loss'])
+        #self.test_preds.append(outputs)
+        return outputs        
+    
+    def generate_triples(self, batch: dict[str, torch.Tensor]) -> tuple:
+        """generate the triples for a batch of encoded natural language sentences"""
+        # yields a torch long tensor of size (num_return_sequences x B x max_length), 
+        # where max_length is generate() parameter
+        gen_kwargs = {
             "max_length": self.hparams.max_target_length    # TODO : check if output will be padded to max_length
             if self.hparams.max_target_length is not None else self.config.max_length,
             "early_stopping": False,
@@ -185,138 +276,26 @@ class BaseLightningModule(pl.LightningModule):
             "num_return_sequences": self.hparams.num_return_sequences
         }
         """model inference arguments, passed to `generate()`"""
-    
-    def forward(self, inputs: dict[str, torch.Tensor], labels: torch.Tensor) -> dict:
-        """
-        Inference method, to be called by the module in training_step,
-        validation_step and test_step functions. This method computes the
-        model output given a tokenized batch of input sentences, `inputs`
-        and their aligned, tokenized batch of linearized triples `labels`.
         
-        Parameters
-        ----------
-        - inputs, dict with `'input_ids'`, `'attention_mask'`, `'decoder_input_ids'` keys
-        of values with sizes `(24, 116), (24, 116), (24, 145)` where 24 is `val_batch_size`,
-        116 the maximum tokenized sentence length of batch, 145 the maximum number of tokens 
-        in the linearized triples of the batch. 
-        - labels is a tensor of size `(24, 145)`.
-        Returns
-        -------
-        - output_dict containing predicted logits
-        """
-        # in original code they used ignore_pad_token_for_loss if, this is obviously always True.
-        
-        print("\n\nFORWARD OF LIGHTNING MODULE HERE\n\n")
-        print("inputs", inputs['input_ids'].size(), inputs['attention_mask'].size(), 
-              inputs['decoder_input_ids'].size())
-        print("labels", labels, labels.size())
-        outputs = self.model(**inputs, return_dict=True, output_hidden_states=True)
-        
-        print("Output", outputs)
-        exit(0)
-        
-        logits = outputs['logits']
-        loss = self.loss_fn(logits.view(-1, logits.shape[-1]), labels.view(-1)) 
-        return {'loss': loss, 'logits': logits}
-    
-    def training_step(self, batch: dict, batch_idx: int) -> dict[str, torch.Tensor]:
-        """
-        Here you compute and return the training loss and some additional metrics for e.g. the progress bar or logger.
-
-        Args
-        -----
-        - batch The output of your data iterable, normally a ~torch.utils.data.DataLoader.
-        - batch_idx The index of this batch.
-        - dataloader_idx The index of the dataloader that produced this batch. (only if multiple dataloaders used)
-
-        Return:
-        -------
-        - dict - A dictionary which can include any keys, but must include the key 'loss' in the case of automatic optimization.
-        In this step you'd normally do the forward pass and calculate the loss for a batch. You can also do fancier things like multiple forward passes or something model specific.
-        """
-        
-        labels = batch.pop("labels")
-        labels_original = labels.clone()
-        
-        # pad_token_id in facebook/BART is 1
-        batch["decoder_input_ids"] = torch.where(labels != -100, labels, self.config.pad_token_id)
-        labels = shift_tokens_left(labels, -100)
-        
-        forward_output = self.forward(batch, labels)
-        self.log('loss', forward_output['loss'])
-        
-        batch['labels'] = labels_original
-        return forward_output['loss']
-    
-    def inference_step(self, batch: dict) -> dict:
-        labels = batch.pop("labels")
-        batch["decoder_input_ids"] = torch.where(labels != -100, labels, self.config.pad_token_id)
-        labels = shift_tokens_left(labels, -100)
-        
-        with torch.no_grad():
-            forward_output = self.forward(batch, labels)
-            
-        forward_output['loss'] = forward_output['loss'].mean().detach()
-        
-        if labels.shape[-1] < self.gen_kwargs["max_length"]:
-            forward_output['labels'] = pad_tensors_to_max_len(labels, self.gen_kwargs["max_length"])
-        else:
-            forward_output['labels'] = labels
-        
-        
-        outputs = {'loss': forward_output['loss']}
-        outputs['predictions'], outputs['labels'] = self.generate_triples(batch, labels)
-        return outputs
-        
-    def validation_step(self, batch: dict) -> None:
-        """
-        Operates on a single batch of data from the validation set. 
-        In this step you'd might generate examples or calculate anything of interest like accuracy.
-        Here, we do inference over the batch to predict the linearized triples for every sample, 
-        we log the loss and we add the predicted triples to the `self.val_preds` array, on the which
-        Precision and Accuracy will be computed in the `on_validation_epoch_end()` hook. 
-
-        Args
-        ----
-        - batch The output of your data iterable, normally a ~torch.utils.data.DataLoader.
-    
-        Return:
-        -------
-        - dict - A dictionary. Can include any keys, but must include the key 'loss'.
-        """
-        outputs = self.inference_step(batch)
-        self.log('val_loss', outputs['loss'])
-        self.val_preds.append(outputs)
-        return outputs        
-        
-    def test_step(self, batch: dict[str, torch.Tensor], batch_idx: int) -> None:
-        """Same as `validation_step()` but on test data."""
-        outputs = self.inference_step(batch)
-        self.log('test_loss', outputs['loss'])
-        self.test_preds.append(outputs)
-        return outputs        
-    
-    def generate_triples(self, batch: dict[str, torch.Tensor], labels: torch.Tensor) -> tuple:
-        """generate the triples for a batch of encoded natural language sentences"""
-        # yields a torch long tensor of size (num_return_sequences x B x max_length), 
-        # where max_length is generate() parameter
         generated_tokens = self.model.generate(
             batch["input_ids"].to(self.model.device),      # tensor of encoded input sentences size B x max_length_of_sentence_in_batch (collator padded)
             attention_mask=batch["attention_mask"].to(self.model.device),
-            use_cache=True                                 # speeds up decoding
+            use_cache=False,                                 # speeds up decoding
+            **gen_kwargs
         )
         
         # yields a flattened list of size num_return_sequences*B linearized triple outputs
         decoded_preds = self.tokenizer.batch_decode(generated_tokens, skip_special_tokens=False)
+        print("generated tokens [0]", generated_tokens)
         
-        # yields a list of tokenized linearized triples of length B*max_length
-        decoded_labels: list[str] = self.tokenizer.batch_decode(
-            torch.where(labels != -100, labels, self.config.pad_token_id), 
+        # yields a list of target ground truth tokenized linearized triples of length B*max_length
+        gt_decoded_labels: list[str] = self.tokenizer.batch_decode(
+            torch.where(batch['labels'] != -100, batch['labels'], self.config.pad_token_id), 
             skip_special_tokens=False
         )
-        
+        # might be because predicting nothing will yield loss of 0 as sentence will only have <pad> tokens, ignored by the loss...?
         rel_preds = []
-        block_size = int(len(decoded_preds) / len(decoded_labels))
+        block_size = int(len(decoded_preds) / len(gt_decoded_labels))
         for i in range(0, len(decoded_preds), block_size):
             rel_preds.append("".join(decoded_preds[i:i+block_size]))
         
@@ -324,7 +303,7 @@ class BaseLightningModule(pl.LightningModule):
         
         # list of length B
         original_sentences = []
-        if self.hparams.entailement_filtering:
+        if self.hparams.sentence_entailement:
             original_sentences: list[str] = self.tokenizer.batch_decode(batch['input_ids'], skip_special_tokens=True)
         
         final_beam_preds = []
@@ -348,13 +327,27 @@ class BaseLightningModule(pl.LightningModule):
             if self.hparams.relation_mapping:
                 pass
             
-            if self.hparams.entailement_filtering:
+            if self.hparams.sentence_entailement:
                 pass
             
             final_beam_preds.append(triplets)
             
-        return final_beam_preds, [extract_triplets(rel.replace("<sub>", "<subj>")) for rel in decoded_labels]
+        return final_beam_preds, [extract_triplets(rel.replace("<sub>", "<subj>")) for rel in gt_decoded_labels]
+    
+    def on_validation_epoch_end(self):
         
+        scores, precision, recall, f1 = re_score(
+            [item for pred in self.val_preds for item in pred['predictions']],
+            [item for pred in self.val_preds for item in pred['labels']],
+            relation_types=[rel['label'] for rel in self.relations]
+        )
+        
+        self.log("val_prec_micro", precision)
+        self.log("val_recall_micro", recall)
+        self.log("val_F1_micro", f1)
+        
+        # empty validation predictions list, making space for new batch.
+        self.val_preds.clear()
     
     def configure_optimizers(self):
         no_decay = ["bias", "LayerNorm.weight"]
@@ -400,4 +393,4 @@ class BaseLightningModule(pl.LightningModule):
     # TODO : run the code and do prints line by line to figure to understand the dimensions involved
     # in generate_triples and add appropriate typing.
     # TODO : add implementations of on_validation_epoch_end(), on_test_epoch_end(), compute_metrics()
-    # _get_lr_scheduler()m configure_optimizers()
+    

@@ -333,7 +333,7 @@ class BaseLightningModule(pl.LightningModule):
             "num_beams": self.hparams.eval_beams if self.hparams.eval_beams is not None else self.config.num_beams,
         }
         relation_start = labels == 50265
-        relation_start = torch.roll(relation_start, 1, 1)
+        relation_start = torch.roll(relation_start, 1, 1)generate_samples
         relation_start = torch.cumsum(relation_start, dim=1)
         labels_decoder = torch.where(relation_start == 1, self.tokenizer.pad_token_id, labels)
         labels_decoder[:,-1] = 2

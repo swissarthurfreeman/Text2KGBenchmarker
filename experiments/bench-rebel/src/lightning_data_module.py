@@ -55,28 +55,37 @@ class BaseLightningDataModule(pl.LightningDataModule):
         this allows making sure all sentences in the batch have a same length, for matrix multiplication and model
         maximum input length compatibility."""
         
+        self.column_names = self.datasets['train'].column_names
+        
     def prepare_data(self) -> None:
         self.train_dataset = self.datasets['train'].map(
             self.preprocess_function,                           # apply this function to every sample
             batched=True,                                       # in batch mode, provides speedup
-            remove_columns=self.datasets['train'].column_names, # output will contains tokenized sentence and triples
-            load_from_cache_file=False                          # under keys 'input_ids' and 'labels', but no more original data
+            batch_size=100,
+            remove_columns=self.column_names, # output will contains tokenized sentence and triples
+            #load_from_cache_file=True,                          # under keys 'input_ids' and 'labels', but no more original data
+            #cache_file_name=self.conf.train_file.replace('jsonl', '-') + self.conf.dataset_script_path.split("/")[-1].replace('.py', '.cache')
         )
         
         self.eval_dataset = self.datasets["validation"].map(
             self.preprocess_function,
             batched=True,
-            remove_columns=self.datasets["validation"].column_names,
-            load_from_cache_file=False
+            batch_size=100,
+            remove_columns=self.column_names,
+            #load_from_cache_file=True,                          # under keys 'input_ids' and 'labels', but no more original data
+            #cache_file_name=self.conf.val_file.replace('jsonl', '-') + self.conf.dataset_script_path.split("/")[-1].replace('.py', '.cache')
         )
         
         if self.conf.do_test_predict:
             self.test_dataset = self.datasets["test"].map(
                 self.preprocess_function,
                 batched=True,
-                remove_columns=self.datasets["test"].column_names,
-                load_from_cache_file=False
+                batch_size=100,
+                remove_columns=self.column_names,
+                #load_from_cache_file=True,                          # under keys 'input_ids' and 'labels', but no more original data
+                #cache_file_name=self.conf.test_file.replace('jsonl', '-') + self.conf.dataset_script_path.split("/")[-1].replace('.py', '.cache')
             )
+        print("Done preparing data, lightning data module ready")
         
     def preprocess_function(self, batch: dict[str, list[str]]) -> dict[str, torch.Tensor]:
         """function to apply to every element of dataset, an element is {id: [...], sent: [...], triples:[...]},
@@ -112,7 +121,7 @@ class BaseLightningDataModule(pl.LightningDataModule):
         
     def val_dataloader(self) -> DataLoader:
         return DataLoader(
-            dataset=self.train_dataset,
+            dataset=self.eval_dataset,
             batch_size=self.conf.val_batch_size,
             collate_fn=self.data_collator,
             pin_memory=True

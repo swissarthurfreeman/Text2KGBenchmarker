@@ -1,20 +1,20 @@
 # @package _global_
 
 # dataset configuration
-dataset_script_path: '/home/gordon/Documents/edu/gordon_ms/Project/Benchmarker/experiments/bench-rebel/datasets/wkdata_synth_movie.py'
-train_file:      '/home/gordon/Documents/edu/gordon_ms/Project/Benchmarker/data/wikidata_synthetic/train/ont_1_movie_train.jsonl'
-val_file: '/home/gordon/Documents/edu/gordon_ms/Project/Benchmarker/data/wikidata_synthetic/test/ont_1_movie_test.jsonl'
-test_file:       '/home/gordon/Documents/edu/gordon_ms/Project/Benchmarker/data/wikidata_synthetic/test/ont_1_movie_test.jsonl'
+dataset_script_path: '/home/users/f/freemana/Text2KGBenchmarker/experiments/bench-rebel/datasets/wkdata_synth_movie.py'
+train_file:      '/home/users/f/freemana/Text2KGBenchmarker/data/wikidata_synthetic/train/ont_1_movie_train.jsonl'
+val_file: '/home/users/f/freemana/Text2KGBenchmarker/data/wikidata_synthetic/test/ont_1_movie_test.jsonl'
+test_file:       '/home/users/f/freemana/Text2KGBenchmarker/data/wikidata_synthetic/test/ont_1_movie_test.jsonl'
 
 text_key: 'sent'
 target_key: 'triples'
 
-train_batch_size: 32
-val_batch_size: 26
-test_batch_size: 24
+train_batch_size: 24
+val_batch_size: 16
+test_batch_size: 8
 
 # model usage configuration
-pretrained_model_name_or_path: '/home/gordon/Documents/edu/gordon_ms/Project/Benchmarker/experiments/rebel/Rebel-large'
+pretrained_model_name_or_path: '/home/users/f/freemana/Text2KGBenchmarker/experiments/rebel/Rebel-large'
 relation_mapping: False
 sentence_entailement: False
 
@@ -35,9 +35,9 @@ val_check_interval: 1.0       # check validation metric at every training epoch 
 max_steps: 10_000
 
 # optimization hyperparameters
-warmup_steps: 1000
-gradient_acc_steps: 4
-gradient_clip_value: 10.0
+warmup_steps: 500
+gradient_acc_steps: 1
+gradient_clip_value: 5.0
 
 lr_scheduler: "inverse_square_root"
 learning_rate: 0.000025

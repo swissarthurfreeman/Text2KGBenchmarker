@@ -32,9 +32,9 @@ class SyntheticWikidata(datasets.GeneratorBasedBuilder):
     
     def _split_generators(self, dl_manager: datasets.DownloadManager | datasets.StreamingDownloadManager) -> list[datasets.SplitGenerator]:
         return [
-            datasets.SplitGenerator(name = datasets.Split.TRAIN, gen_kwargs={"filepath":      "/home/gordon/Documents/edu/gordon_ms/Project/Benchmarker/data/wikidata_synthetic/train/ont_1_movie_train.jsonl"}),
-            datasets.SplitGenerator(name = datasets.Split.VALIDATION, gen_kwargs={"filepath": "/home/gordon/Documents/edu/gordon_ms/Project/Benchmarker/data/wikidata_synthetic/test/ont_1_movie_test.jsonl"}),
-            datasets.SplitGenerator(name = datasets.Split.TEST, gen_kwargs={"filepath":       "/home/gordon/Documents/edu/gordon_ms/Project/Benchmarker/data/wikidata_synthetic/test/ont_1_movie_test.jsonl"})
+            datasets.SplitGenerator(name = datasets.Split.TRAIN, gen_kwargs={"filepath":      "/home/users/f/freemana/Text2KGBenchmarker/data/wikidata_synthetic/train/ont_1_movie_train.jsonl"}),
+            datasets.SplitGenerator(name = datasets.Split.VALIDATION, gen_kwargs={"filepath": "/home/users/f/freemana/Text2KGBenchmarker/data/wikidata_synthetic/test/ont_1_movie_test.jsonl"}),
+            datasets.SplitGenerator(name = datasets.Split.TEST, gen_kwargs={"filepath":       "/home/users/f/freemana/Text2KGBenchmarker/data/wikidata_synthetic/test/ont_1_movie_test.jsonl"})
         ]
         
     def _generate_examples(self, filepath):
@@ -43,9 +43,11 @@ class SyntheticWikidata(datasets.GeneratorBasedBuilder):
         data: list[dict[str, str | bool | dict[str, str]]] = []
         
         with open(filepath) as json_file:
+            print("Open file", filepath, "...")
             # list of dictionaries {id:str, sent: str, verified: bool, unseen:bool, triples:list[{sub:str, rel:str, obj:str}]}
             data = [json.loads(line) for line in json_file]
         
+        print("Done opening and parsing", filepath)
         for sent in data:
             lin_triplets: str = ""
             prev_head = None

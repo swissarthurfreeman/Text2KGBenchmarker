@@ -11,7 +11,12 @@ from transformers.models.bart.modeling_bart import BartForConditionalGeneration
 from lightning_data_module import BaseLightningDataModule
 from lightning_module import BaseLightningModule
 from pytorch_lightning.loggers.wandb import WandbLogger
+
 import warnings
+
+torch.cuda.empty_cache()
+torch.set_float32_matmul_precision('high')
+
 warnings.filterwarnings("ignore", ".*does not have many workers.*")
 
 
@@ -53,18 +58,16 @@ def train(conf: DictConfig):
     """transformers.models.bart.modeling_bart.BartForConditionalGeneration"""
     
     model.resize_token_embeddings(len(tokenizer))
-    #print(type(model), model.config)
     
     pl_data_module = BaseLightningDataModule(conf, tokenizer, model)
+    pl_data_module.prepare_data()
     
     
     pl_module = BaseLightningModule(conf=conf, config=model_config, tokenizer=tokenizer, model=model, 
-                                    ontology_path="/home/gordon/Documents/edu/gordon_ms/Project/Benchmarker/data/wikidata_tekgen/ontologies/ont_1_movie.json", 
+                                    ontology_path="/home/users/f/freemana/Text2KGBenchmarker/data/wikidata_tekgen/ontologies/ont_1_movie.json", 
                                     wandb_run_name="")
-
     
-    #wandb_logger = WandbLogger(project="bench-rebel-rewrite", name="bench-rebel-rewrite")
-    
+    wandb_logger = WandbLogger(project="bench-rebel-rewrite", name="bench-rebel-rewrite")
     device = "cuda" if torch.cuda.is_available() else "cpu"
     
     trainer = pl.Trainer(
@@ -73,14 +76,14 @@ def train(conf: DictConfig):
         gradient_clip_val=conf.gradient_clip_value,
         val_check_interval=conf.val_check_interval,
         max_steps=conf.max_steps,
-        precision='bf16-mixed',
+        precision='16-mixed',
         enable_checkpointing=False,
-        logger=False
+        logger=wandb_logger
     )
     
     trainer.fit(pl_module, datamodule=pl_data_module)
     
-
+    
 @hydra.main(config_path="../conf", config_name="root", version_base="1.1")
 def main(conf: DictConfig):
     #print("conf")
@@ -88,4 +91,4 @@ def main(conf: DictConfig):
     train(conf)
 
 if __name__ == '__main__':
-    main()
+    main() 
