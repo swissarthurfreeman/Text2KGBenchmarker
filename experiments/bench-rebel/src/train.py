@@ -11,7 +11,7 @@ from transformers.models.bart.modeling_bart import BartForConditionalGeneration
 from lightning_data_module import BaseLightningDataModule
 from lightning_module import BaseLightningModule
 from pytorch_lightning.loggers.wandb import WandbLogger
-
+from pytorch_lightning.callbacks import EarlyStopping, ModelCheckpoint, LearningRateMonitor
 import warnings
 
 torch.cuda.empty_cache()
@@ -62,13 +62,28 @@ def train(conf: DictConfig):
     pl_data_module = BaseLightningDataModule(conf, tokenizer, model)
     pl_data_module.prepare_data()
     
-    
     pl_module = BaseLightningModule(conf=conf, config=model_config, tokenizer=tokenizer, model=model, 
-                                    ontology_path="/home/users/f/freemana/Text2KGBenchmarker/data/wikidata_tekgen/ontologies/ont_1_movie.json", 
-                                    wandb_run_name="")
+                                    ontology_path="/home/users/f/freemana/Text2KGBenchmarker/data/wikidata_tekgen/ontologies/ont_1_movie.json")
     
-    wandb_logger = WandbLogger(project="bench-rebel-rewrite", name="bench-rebel-rewrite")
+    wandb_run_name = get_wandb_run_name(conf)
+    wandb_logger = WandbLogger(project="wikidata-movies", name=wandb_run_name)
     device = "cuda" if torch.cuda.is_available() else "cpu"
+    
+    
+    callbacks_list = []
+    callbacks_list.append(ModelCheckpoint(
+        monitor=conf.monitor_var,                # monitor val_F1_micro
+        save_top_k=1,
+        dirpath='wikidata_movies_' + wandb_run_name
+    ))
+    
+    callbacks_list.append(EarlyStopping(
+        monitor=conf.monitor_var,               # stop the training if this value doesn't improve
+        mode='max',                             
+        patience=5                              # for 5 epochs
+    ))
+    
+    callbacks_list.append(LearningRateMonitor(logging_interval='step'))
     
     trainer = pl.Trainer(
         accelerator=device,
@@ -77,13 +92,28 @@ def train(conf: DictConfig):
         val_check_interval=conf.val_check_interval,
         max_steps=conf.max_steps,
         precision='16-mixed',
-        enable_checkpointing=False,
-        logger=wandb_logger
+        logger=wandb_logger,
+        enable_checkpointing=True,
+        callbacks=callbacks_list
     )
     
     trainer.fit(pl_module, datamodule=pl_data_module)
     
+
+def get_wandb_run_name(conf: DictConfig) -> str:
+    res = str(conf.num_return_sequences) + "_ret_seq_"
+    res += "warm_steps=" + str(conf.warmup_steps) + "_"
+    res += "tbs=" + str(conf.train_batch_size) + "_"
+    res += "drop=" + str(conf.dropout) + "_"
     
+    if conf.relation_mapping:
+        res += "rel_map_"
+    if conf.sentence_entailement:
+        res += "sent_entail_"
+        
+    return res
+    
+
 @hydra.main(config_path="../conf", config_name="root", version_base="1.1")
 def main(conf: DictConfig):
     #print("conf")

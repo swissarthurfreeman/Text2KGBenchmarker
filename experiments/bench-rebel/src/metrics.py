@@ -15,10 +15,10 @@ def re_score(pred_relations, gt_relations, relation_types, mode="boundaries"):
 
     assert mode in ["strict", "boundaries"]
     
-    print("Computing re_score, len(pred_relations), len(gt_relations)", len(pred_relations), len(gt_relations))
-    print("\n\n pred_relations[0] len\n", pred_relations[0], len(pred_relations[0]), "\n gt_relations[0], len", gt_relations[0], len(gt_relations[0]))
-    print("relations", relation_types)
-    print("\n\n")
+    #print("Computing re_score, len(pred_relations), len(gt_relations)", len(pred_relations), len(gt_relations))
+    #print("\n\n pred_relations[0] len\n", pred_relations[0], len(pred_relations[0]), "\n gt_relations[0], len", gt_relations[0], len(gt_relations[0]))
+    #print("relations", relation_types)
+    #print("\n\n")
     # relation_types = [v for v in relation_types if not v == "None"]
     scores = {rel: {"tp": 0, "fp": 0, "fn": 0} for rel in relation_types + ["ALL"]}
 

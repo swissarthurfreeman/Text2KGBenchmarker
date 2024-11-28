@@ -117,7 +117,7 @@ def extract_triplets(text) -> list[dict]:
 
 
 class BaseLightningModule(pl.LightningModule):
-    def __init__(self, conf, config: AutoConfig, tokenizer: AutoTokenizer, model: AutoModelForSeq2SeqLM, ontology_path: str, wandb_run_name: str, *args, **kwargs):
+    def __init__(self, conf, config: AutoConfig, tokenizer: AutoTokenizer, model: AutoModelForSeq2SeqLM, ontology_path: str, *args, **kwargs):
         """
         REBEL experiment lightning module
         https://lightning.ai/docs/pytorch/LTS/common/lightning_module.html
@@ -144,7 +144,6 @@ class BaseLightningModule(pl.LightningModule):
         
         self.config = config
         """`facebook/BART` json configuration file"""
-        self.wandb_run_name = wandb_run_name
         
         # for the model, the <pad> token id is 1, but the data collator pads the batches with -100, 
         # and -100 indices are ignored by pytorch for loss computation for the tokenizer,
@@ -251,7 +250,7 @@ class BaseLightningModule(pl.LightningModule):
         outputs = self.inference_step(batch)
         self.log('val_loss', outputs['loss'])
         
-        print("Predicted triples list length for batch", len(outputs['predictions'][0]))
+        #print("Predicted triples list length for batch", len(outputs['predictions'][0]))
         self.val_preds.append(outputs)
         return outputs        
         
@@ -280,13 +279,13 @@ class BaseLightningModule(pl.LightningModule):
         generated_tokens = self.model.generate(
             batch["input_ids"].to(self.model.device),      # tensor of encoded input sentences size B x max_length_of_sentence_in_batch (collator padded)
             attention_mask=batch["attention_mask"].to(self.model.device),
-            use_cache=False,                                 # speeds up decoding
+            use_cache=False,                               # speeds up decoding
             **gen_kwargs
         )
         
         # yields a flattened list of size num_return_sequences*B linearized triple outputs
         decoded_preds = self.tokenizer.batch_decode(generated_tokens, skip_special_tokens=False)
-        print("generated tokens [0]", generated_tokens)
+        #print("generated tokens [0]", generated_tokens)
         
         # yields a list of target ground truth tokenized linearized triples of length B*max_length
         gt_decoded_labels: list[str] = self.tokenizer.batch_decode(
