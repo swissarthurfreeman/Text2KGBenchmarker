@@ -90,8 +90,8 @@ have the time to correctly format it, clean it and generate the triples list.
 
 ## Yggdrasil
 
-Run `module load GCCcore/13.2.0 Python/3.11.5` to load up python, then `pipenv install && pipenv shell` from the root directory. 
-`salloc --ntasks 1 --mem=45G --gpus=ampere --time 2:00:00 --partition shared-gpu`
+Run `module load GCCcore/13.2.0 Python/3.11.5 && pipenv shell` to load up python, then `pipenv install && pipenv shell` from the root directory. 
+`salloc --ntasks 1 --mem=25G --time=2:00:00 --partition=shared-gpu --gres=gpu:1,VramPerGpu:24G`
 YOU HAVE TO SPECIFY MEMORY, OR ELSE IT'LL JUST ALLOCATE 2G, YOU WON'T BE ABLE TO PROCESS THE DATA, check actual memory allocated
 with `nvidia-smi` every time, slurm has a tendency not to respect `--mem` parameter, actual VRAM allocated is unknown.
 ## REBEL Fine tuning

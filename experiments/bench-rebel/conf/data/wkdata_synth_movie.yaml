@@ -33,6 +33,8 @@ num_return_sequences: 12      # top likeliest number of beams kept in output (be
 # trainer parameters
 val_check_interval: 1.0       # check validation metric at every training epoch (0.5 would mean every time a half of the train data is seen, check validation metrics)
 max_steps: 10_000
+monitor_var: 'val_F1_micro'
+
 
 # optimization hyperparameters
 warmup_steps: 500
