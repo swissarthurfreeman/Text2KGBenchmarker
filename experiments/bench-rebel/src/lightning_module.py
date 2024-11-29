@@ -117,7 +117,7 @@ def extract_triplets(text) -> list[dict]:
 
 
 class BaseLightningModule(pl.LightningModule):
-    def __init__(self, conf, config: AutoConfig, tokenizer: AutoTokenizer, model: AutoModelForSeq2SeqLM, ontology_path: str, *args, **kwargs):
+    def __init__(self, conf, config: AutoConfig, tokenizer: AutoTokenizer, model: AutoModelForSeq2SeqLM, test_ids: list[str] = None, *args, **kwargs):
         """
         REBEL experiment lightning module
         https://lightning.ai/docs/pytorch/LTS/common/lightning_module.html
@@ -131,7 +131,7 @@ class BaseLightningModule(pl.LightningModule):
         - wandb_run_name, used to log the different training metrics
         """
         super().__init__(*args, **kwargs)
-        with open(ontology_path) as ont_f:
+        with open(conf.repo_path + conf.ontology_path) as ont_f:
             ontology = json.load(ont_f)
             self.relations: list[dict] = ontology["relations"]
             """list of ontology relations `[{'pid': ..., 'label': ..., 'range': 'r_qid', 'domain': 'd_qid'}...]`"""
@@ -170,6 +170,8 @@ class BaseLightningModule(pl.LightningModule):
         
         if self.hparams.sentence_entailement:
             self.entailment_model = pipeline(model='roberta-large-mnli', device=device)
+            
+        self.test_ids = test_ids
     
     def forward(self, inputs: dict[str, torch.Tensor]) -> dict[str, torch.Tensor]:
         """Run the inputs through the model and retrieve the loss and logits in output.
@@ -243,6 +245,7 @@ class BaseLightningModule(pl.LightningModule):
             
         outputs = {'loss': forward_output['loss'].mean().detach()}
         outputs['predictions'], outputs['labels'] = self.generate_triples(batch)
+        
         return outputs
         
     def validation_step(self, batch: dict) -> dict:
@@ -258,7 +261,9 @@ class BaseLightningModule(pl.LightningModule):
         """Same as `validation_step()` but on test data."""
         outputs = self.inference_step(batch)
         self.log('test_loss', outputs['loss'])
-        #self.test_preds.append(outputs)
+        
+        #print("outputs =", outputs)
+        self.test_preds.append(outputs)
         return outputs        
     
     def generate_triples(self, batch: dict[str, torch.Tensor]) -> tuple:
@@ -279,7 +284,7 @@ class BaseLightningModule(pl.LightningModule):
         generated_tokens = self.model.generate(
             batch["input_ids"].to(self.model.device),      # tensor of encoded input sentences size B x max_length_of_sentence_in_batch (collator padded)
             attention_mask=batch["attention_mask"].to(self.model.device),
-            use_cache=False,                               # speeds up decoding
+            use_cache=True,                               # speeds up decoding
             **gen_kwargs
         )
         
@@ -347,6 +352,34 @@ class BaseLightningModule(pl.LightningModule):
         
         # empty validation predictions list, making space for new batch.
         self.val_preds.clear()
+        
+    def on_test_epoch_end(self):
+        # we just save the file here without ids to avoid technical debt,
+        # if you want to fully evaluate properly, re-use the model via a
+        # an extra adpater in utils that loads from a trained checkpoint.
+        with open(self.hparams.repo_path + self.hparams.output_file_path, 'a') as out_f:
+            idx = 0
+            for pred in self.test_preds:
+                for llm_triples, gt in zip(pred['predictions'], pred['labels']):
+                    out_f.write(json.dumps({
+                        'id': self.test_ids[idx],
+                        'predictions': list(llm_triples),
+                        'labels':list(gt),
+                    }) + "\n")
+                    
+                    idx += 1
+        
+        scores, precision, recall, f1 = re_score(
+            [item for pred in self.test_preds for item in pred['predictions']],
+            [item for pred in self.test_preds for item in pred['labels']],
+            relation_types=[rel['label'] for rel in self.relations]
+        )
+        
+        self.log("test_prec_micro", precision)
+        self.log("test_recall_micro", recall)
+        self.log("test_F1_micro", f1)
+        
+        self.test_preds.clear()
     
     def configure_optimizers(self):
         no_decay = ["bias", "LayerNorm.weight"]

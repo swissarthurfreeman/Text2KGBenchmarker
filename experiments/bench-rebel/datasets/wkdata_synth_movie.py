@@ -8,12 +8,12 @@ class SyntheticWikidataConfig(datasets.BuilderConfig):
         super(SyntheticWikidataConfig, self).__init__(**kwargs)
 
 class SyntheticWikidata(datasets.GeneratorBasedBuilder):
-    
+    # https://huggingface.co/docs/datasets/en/dataset_script   
+     
     BUILDER_CONFIGS = [
         SyntheticWikidataConfig(
-            name = "plain_text",
-            version = datasets.Version("1.0.0", ""),
-            description = "Plain text",
+            name = "wikidata_synthetic",
+            version = datasets.Version("1.0.0")
         )
     ]
     
@@ -24,30 +24,31 @@ class SyntheticWikidata(datasets.GeneratorBasedBuilder):
                 {
                     "id": datasets.Value("string"),
                     "sent": datasets.Value("string"),
-                    "triples": datasets.Value("string"),
+                    "triples": datasets.Value("string")
                 }
-            ),
-            supervised_keys=None
+            )
         )
     
     def _split_generators(self, dl_manager: datasets.DownloadManager | datasets.StreamingDownloadManager) -> list[datasets.SplitGenerator]:
+        # BUG : when passing data_files via load_dataset(), the values are put into lists...
         return [
-            datasets.SplitGenerator(name = datasets.Split.TRAIN, gen_kwargs={"filepath":      "/home/users/f/freemana/Text2KGBenchmarker/data/wikidata_synthetic/train/ont_1_movie_train.jsonl"}),
-            datasets.SplitGenerator(name = datasets.Split.VALIDATION, gen_kwargs={"filepath": "/home/users/f/freemana/Text2KGBenchmarker/data/wikidata_synthetic/test/ont_1_movie_test.jsonl"}),
-            datasets.SplitGenerator(name = datasets.Split.TEST, gen_kwargs={"filepath":       "/home/users/f/freemana/Text2KGBenchmarker/data/wikidata_synthetic/test/ont_1_movie_test.jsonl"})
+            datasets.SplitGenerator(name = datasets.Split.TRAIN, gen_kwargs={"filepath": self.config.data_files['train'].pop(0)}),
+            datasets.SplitGenerator(name = datasets.Split.VALIDATION, gen_kwargs={"filepath": self.config.data_files['dev'].pop(0)}),
+            datasets.SplitGenerator(name = datasets.Split.TEST, gen_kwargs={"filepath": self.config.data_files['test'].pop(0)})
         ]
-        
+    
     def _generate_examples(self, filepath):
         """return a generator of a linearized text2kgbench examples, when _generate_examples is called, it's code
         isn't run, it just returns a generator which has to be iterated upon, each iteration computes the value on the fly."""
         data: list[dict[str, str | bool | dict[str, str]]] = []
         
         with open(filepath) as json_file:
-            print("Open file", filepath, "...")
             # list of dictionaries {id:str, sent: str, verified: bool, unseen:bool, triples:list[{sub:str, rel:str, obj:str}]}
-            data = [json.loads(line) for line in json_file]
-        
-        print("Done opening and parsing", filepath)
+            data = []
+            for line in json_file:
+                json_line = json.loads(line)
+                data.append(json_line)
+            
         for sent in data:
             lin_triplets: str = ""
             prev_head = None

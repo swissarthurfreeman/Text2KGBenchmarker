@@ -1,0 +1,110 @@
+{
+  "title": "Space Ontology",
+  "id": "ont_7_space",
+  "concepts": [
+    {
+      "qid": "outer space",
+      "label": "outer space"
+    },
+    {
+      "qid": "planet",
+      "label": "planet"
+    },
+    {
+      "qid": "spiral galaxy",
+      "label": "spiral galaxy"
+    },
+    {
+      "qid": "constellation",
+      "label": "constellation"
+    },
+    {
+      "qid": "Celestial bodies",
+      "label": "Celestial bodies"
+    },
+    {
+      "qid": "asteroid",
+      "label": "asteroid"
+    },
+    {
+      "qid": "calendar date",
+      "label": "calendar date"
+    },
+    {
+      "qid": "astronaut",
+      "label": "astronaut"
+    },
+    {
+      "qid": "space mission",
+      "label": "space mission"
+    },
+    {
+      "qid": "observatory",
+      "label": "observatory"
+    },
+    {
+      "qid": "Spacecraft",
+      "label": "Spacecraft"
+    },
+    {
+      "qid": "spaceflight",
+      "label": "spaceflight"
+    },
+    {
+      "qid": "astronomical object type",
+      "label": "astronomical object type"
+    },
+    {
+      "qid": "human",
+      "label": "human"
+    },
+    {
+      "qid": "geographic region",
+      "label": "geographic region"
+    }
+  ],
+  "relations": [
+    {
+      "pid": "P65",
+      "label": "site of astronomical discovery",
+      "domain": "asteroid",
+      "range": "observatory"
+    },
+    {
+      "pid": "P196",
+      "label": "minor planet group",
+      "domain": "asteroid",
+      "range": "astronomical object type"
+    },
+    {
+      "pid": "P59",
+      "label": "constellation",
+      "domain": "spiral galaxy",
+      "range": "constellation"
+    },
+    {
+      "pid": "P450",
+      "label": "astronaut mission",
+      "domain": "human",
+      "range": "spaceflight"
+    },
+    {
+      "pid": "P622",
+      "label": "spacecraft docking/undocking date",
+      "domain": "Spacecraft",
+      "range": "date"
+    },
+    {
+      "pid": "P3015",
+      "label": "backup or reserve team or crew",
+      "domain": "spaceflight",
+      "range": "human"
+    },
+    {
+      "pid": "P1158",
+      "label": "location of landing",
+      "domain": "Spacecraft",
+      "range": "geographic region"
+    }
+  ]
+}

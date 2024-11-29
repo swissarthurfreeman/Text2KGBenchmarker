@@ -1,5 +1,6 @@
 *.bin
-
+data/wikidata_synthetic/raw/ont_1_movie_triples.jsonl
+ont_1_movie_triples
 .env
 **/outputs/
 **/experiments/rebel/data/nyt

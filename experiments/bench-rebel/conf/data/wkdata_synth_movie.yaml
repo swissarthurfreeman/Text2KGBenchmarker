@@ -1,25 +1,28 @@
 # @package _global_
 
 # dataset configuration
-dataset_script_path: '/home/users/f/freemana/Text2KGBenchmarker/experiments/bench-rebel/datasets/wkdata_synth_movie.py'
-train_file:      '/home/users/f/freemana/Text2KGBenchmarker/data/wikidata_synthetic/train/ont_1_movie_train.jsonl'
-val_file: '/home/users/f/freemana/Text2KGBenchmarker/data/wikidata_synthetic/test/ont_1_movie_test.jsonl'
-test_file:       '/home/users/f/freemana/Text2KGBenchmarker/data/wikidata_synthetic/test/ont_1_movie_test.jsonl'
+dataset_script_path: 'experiments/bench-rebel/datasets/wkdata_synth_movie.py'
+ontology_path:       'data/wikidata_synthetic/ontologies/ont_1_movie.json'
+train_file:          'data/wikidata_synthetic/train/ont_1_movie_train.jsonl'
+val_file:            'data/wikidata_synthetic/validation/ont_1_movie_val.jsonl'
+test_file:           'data/wikidata_synthetic/test/ont_1_movie_test.jsonl'
 
-text_key: 'sent'
+text_key:   'sent'
 target_key: 'triples'
 
 train_batch_size: 24
-val_batch_size: 16
-test_batch_size: 8
+val_batch_size:   16
+test_batch_size:  16
 
 # model usage configuration
-pretrained_model_name_or_path: '/home/users/f/freemana/Text2KGBenchmarker/experiments/rebel/Rebel-large'
+pretrained_model_name_or_path: 'experiments/bench-rebel/Rebel-large'
 relation_mapping: False
 sentence_entailement: False
 
 # used for evaluation of model on test data
-do_test_predict: false
+do_test_predict:  false
+#checkpoint_path:  'experiments/bench-rebel/src/outputs/2024-11-28/21-57-35/wikidata_movies_12_ret_seq_warm_steps=500_tbs=24_drop=0.1_/epoch=0-step=199.ckpt'
+#output_file_path: 'experiments/bench-rebel/src/llm_responses/wikidata_movies_predictions.jsonl'
 pl_seed: 42
 
 # model hyperparameters
@@ -41,7 +44,7 @@ warmup_steps: 500
 gradient_acc_steps: 1
 gradient_clip_value: 5.0
 
-lr_scheduler: "inverse_square_root"
+lr_scheduler: 'inverse_square_root'
 learning_rate: 0.000025
 weight_decay: 0.1
 adam_beta1: 0.9

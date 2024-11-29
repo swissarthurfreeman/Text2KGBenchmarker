@@ -1,3 +1,7 @@
+# all filepaths have to be absolute, specify the path to the 
+# repository here. 
+repo_path: '/home/users/f/freemana/Text2KGBenchmarker/'
+
 defaults:
   - _self_
   - data: wkdata_synth_movie

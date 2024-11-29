@@ -1,0 +1,114 @@
+{
+  "title": "Military Ontology",
+  "id": "ont_5_military",
+  "concepts": [
+    {
+      "qid": "rank",
+      "label": "rank"
+    },
+    {
+      "qid": "military rank",
+      "label": "military rank"
+    },
+    {
+      "qid": "military vehicle",
+      "label": "military vehicle"
+    },
+    {
+      "qid": "military unit",
+      "label": "military unit"
+    },
+    {
+      "qid": "human",
+      "label": "human"
+    },
+    {
+      "qid": "country",
+      "label": "country"
+    },
+    {
+      "qid": "military casualty classification",
+      "label": "military casualty classification"
+    },
+    {
+      "qid": "armed organization",
+      "label": "armed organization"
+    },
+    {
+      "qid": "command",
+      "label": "command"
+    },
+    {
+      "qid": "military museum",
+      "label": "military museum"
+    },
+    {
+      "qid": "organization",
+      "label": "organization"
+    },
+    {
+      "qid": "military personnel",
+      "label": "military personnel"
+    },
+    {
+      "qid": "military equipment",
+      "label": "military equipment"
+    }
+  ],
+  "relations": [
+    {
+      "pid": "P410",
+      "label": "military rank",
+      "domain": "human",
+      "range": "military rank"
+    },
+    {
+      "pid": "P241",
+      "label": "military branch",
+      "domain": "human",
+      "range": "military unit"
+    },
+    {
+      "pid": "P1347",
+      "label": "military casualty classification ",
+      "domain": "human",
+      "range": "military casualty classification"
+    },
+    {
+      "pid": "P287",
+      "label": "designed by",
+      "domain": "military equipment",
+      "range": "organization"
+    },
+    {
+      "pid": "P287",
+      "label": "designed by",
+      "domain": "military vehicle",
+      "range": "organization"
+    },
+    {
+      "pid": "P4791",
+      "label": "commanded by",
+      "domain": "command",
+      "range": "human"
+    },
+    {
+      "pid": "P3730",
+      "label": "next higher rank",
+      "domain": "military rank",
+      "range": "rank"
+    },
+    {
+      "pid": "P3461",
+      "label": "designated as terrorist by",
+      "domain": "armed organization",
+      "range": "country"
+    },
+    {
+      "pid": "P1654",
+      "label": "wing configuration",
+      "domain": "aircraft",
+      "range": "thing"
+    }
+  ]
+}

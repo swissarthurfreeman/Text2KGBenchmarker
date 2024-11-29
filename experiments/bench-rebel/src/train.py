@@ -24,11 +24,11 @@ def train(conf: DictConfig):
     pl.seed_everything(conf.pl_seed, verbose=False)
     
     model_config = AutoConfig.from_pretrained(
-        pretrained_model_name_or_path=conf.pretrained_model_name_or_path,
+        pretrained_model_name_or_path=conf.repo_path + conf.pretrained_model_name_or_path,
         decoder_start_token_id = 0,         # this option is in BartConfig but undocumented, what it does is unclear
         dropout = conf.dropout,             # it has something to do with BART token shifting.
         forced_bos_token_id=None,           # TODO : potentially removable, not in BartConfig, documented parameters will be added as members of config 
-        no_repeat_ngram_size=0,             # model.generate() parameter
+        no_repeat_ngram_size=0,             # model.generate() https://huggingface.co/docs/transformers/en/main_classes/text_generation
         early_stopping=False                # model.generate() parameter
     )
     """
@@ -44,7 +44,7 @@ def train(conf: DictConfig):
     #print(type(model_config), model_config.no_repeat_ngram_size)
     
     tokenizer = AutoTokenizer.from_pretrained(
-        pretrained_model_name_or_path=conf.tokenizer_name_or_path,
+        pretrained_model_name_or_path=conf.repo_path + conf.tokenizer_name_or_path,
         use_fast=True,
         additional_special_tokens=['<obj>', '<subj>', '<triplet>', '<head>', '</head>', '<tail>', '</tail>']
     )
@@ -52,7 +52,7 @@ def train(conf: DictConfig):
     #print(type(tokenizer))
     
     model: BartForConditionalGeneration = cast(BartForConditionalGeneration, AutoModelForSeq2SeqLM.from_pretrained(
-        pretrained_model_name_or_path=conf.pretrained_model_name_or_path,
+        pretrained_model_name_or_path=conf.repo_path + conf.pretrained_model_name_or_path,
         config=model_config     # forwarded to BartForConditionalGeneration's constructor
     ))
     """transformers.models.bart.modeling_bart.BartForConditionalGeneration"""
@@ -62,8 +62,7 @@ def train(conf: DictConfig):
     pl_data_module = BaseLightningDataModule(conf, tokenizer, model)
     pl_data_module.prepare_data()
     
-    pl_module = BaseLightningModule(conf=conf, config=model_config, tokenizer=tokenizer, model=model, 
-                                    ontology_path="/home/users/f/freemana/Text2KGBenchmarker/data/wikidata_tekgen/ontologies/ont_1_movie.json")
+    pl_module = BaseLightningModule(conf=conf, config=model_config, tokenizer=tokenizer, model=model)
     
     wandb_run_name = get_wandb_run_name(conf)
     wandb_logger = WandbLogger(project="wikidata-movies", name=wandb_run_name)

@@ -1,22 +1,24 @@
 import hydra
 import torch
 import omegaconf
-from datasets import disable_caching
-disable_caching()
-from pprint import pprint
 from typing import cast
+from pprint import pprint
 from datasets import Dataset
 import pytorch_lightning as pl
 from omegaconf import DictConfig
 from datasets import load_dataset
+from datasets import disable_caching
+disable_caching()
 from torch.utils.data import DataLoader
 from transformers import DataCollatorForSeq2Seq
+from datasets.formatting.formatting import LazyBatch
 from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
-from transformers import AutoConfig, AutoTokenizer, AutoModelForSeq2SeqLM
 from transformers.models.bart.configuration_bart import BartConfig
+from transformers import AutoConfig, AutoTokenizer, AutoModelForSeq2SeqLM
 from transformers.models.bart.tokenization_bart_fast import BartTokenizerFast
 from transformers.models.bart.modeling_bart import BartForConditionalGeneration
-from datasets.formatting.formatting import LazyBatch
+
+
 
 class BaseLightningDataModule(pl.LightningDataModule):
     """pytorch_lightning data module that prepares data, pre-processes it and dynamically pads it,
@@ -29,10 +31,13 @@ class BaseLightningDataModule(pl.LightningDataModule):
         """tokenization will be applied in pre-processing to every element in dataset."""
         self.model = model
         """we keep this for the DataCollator because model has a maximum input size constraints."""
-        
+
         self.datasets: dict[str, Dataset] = load_dataset(
-            conf.dataset_script_path, 
-            data_files={'train': conf.train_file, 'dev': conf.val_file, 'test': conf.test_file}, 
+            path=conf.repo_path + conf.dataset_script_path, 
+            data_files={
+                'train': conf.repo_path + conf.train_file, 
+                'dev': conf.repo_path + conf.val_file, 
+                'test': conf.repo_path+ conf.test_file}, 
             trust_remote_code=True
         )
         """A dataset is a directory that contains data files in generic formats (JSON, CSV...) + a 
@@ -62,7 +67,7 @@ class BaseLightningDataModule(pl.LightningDataModule):
             self.preprocess_function,                           # apply this function to every sample
             batched=True,                                       # in batch mode, provides speedup
             batch_size=100,
-            remove_columns=self.column_names, # output will contains tokenized sentence and triples
+            remove_columns=self.column_names,                    # output will contains tokenized sentence and triples
             #load_from_cache_file=True,                          # under keys 'input_ids' and 'labels', but no more original data
             #cache_file_name=self.conf.train_file.replace('jsonl', '-') + self.conf.dataset_script_path.split("/")[-1].replace('.py', '.cache')
         )
@@ -77,6 +82,8 @@ class BaseLightningDataModule(pl.LightningDataModule):
         )
         
         if self.conf.do_test_predict:
+            self.test_ids: list[str] = self.datasets["test"]["id"]
+            
             self.test_dataset = self.datasets["test"].map(
                 self.preprocess_function,
                 batched=True,
@@ -85,11 +92,11 @@ class BaseLightningDataModule(pl.LightningDataModule):
                 #load_from_cache_file=True,                          # under keys 'input_ids' and 'labels', but no more original data
                 #cache_file_name=self.conf.test_file.replace('jsonl', '-') + self.conf.dataset_script_path.split("/")[-1].replace('.py', '.cache')
             )
-        print("Done preparing data, lightning data module ready")
         
     def preprocess_function(self, batch: dict[str, list[str]]) -> dict[str, torch.Tensor]:
         """function to apply to every element of dataset, an element is {id: [...], sent: [...], triples:[...]},
-        returns a sample with {'input_ids': [...], 'labels': [...]}"""
+        returns a sample with {'id': [...], 'input_ids': [...], 'labels': [...]}"""
+        
         inputs = batch[self.text_key]          # batch size of 1000, this is a list of sentences
         targets = batch[self.target_key]       # this is the list of it's linearized triples
         
@@ -146,12 +153,12 @@ if __name__ == '__main__':
         )
         
         tokenizer = AutoTokenizer.from_pretrained(
-            pretrained_model_name_or_path=conf.tokenizer_name_or_path, use_fast=True,
+            pretrained_model_name_or_path=conf.repo_path + conf.tokenizer_name_or_path, use_fast=True,
             additional_special_tokens=['<obj>', '<subj>', '<triplet>', '<head>', '</head>', '<tail>', '</tail>']
         )
         
         model: BartForConditionalGeneration = cast(BartForConditionalGeneration, AutoModelForSeq2SeqLM.from_pretrained(
-            pretrained_model_name_or_path=conf.pretrained_model_name_or_path,
+            pretrained_model_name_or_path=conf.repo_path + conf.pretrained_model_name_or_path,
             config=model_config     # forwarded to BartForConditionalGeneration's constructor
         ))
         
