@@ -74,6 +74,8 @@ def train(conf: DictConfig):
     callbacks_list.append(ModelCheckpoint(
         monitor=conf.monitor_var,                # monitor val_F1_micro
         save_top_k=1,
+        verbose=True,
+        save_last=True,
         dirpath='wikidata_movies_' + wandb_run_name
     ))
     

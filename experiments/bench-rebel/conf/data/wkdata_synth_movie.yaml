@@ -12,7 +12,7 @@ target_key: 'triples'
 
 train_batch_size: 24
 val_batch_size:   16
-test_batch_size:  16
+test_batch_size:  10
 
 pretrained_model_name_or_path: 'experiments/bench-rebel/Rebel-large'
 
@@ -27,6 +27,8 @@ output_file_path: 'experiments/bench-rebel/src/llm_responses/ont_1_movie_test_pr
 # triple processing
 relation_mapping: False
 sentence_entailement: False
+
+# set this to 0 to not drop any triples with relation mapping
 similarity_threshold: 0.3
 
 pl_seed: 42
@@ -40,13 +42,13 @@ eval_beams: 12                # number of beams to use during generation
 num_return_sequences: 12      # top likeliest number of beams kept in output (beams get folded into one predicted triple set)
 
 # trainer parameters
-val_check_interval: 1.0       # check validation metric at every training epoch (0.5 would mean every time a half of the train data is seen, check validation metrics)
-max_steps: 100_000
+val_check_interval: 0.5       # check validation metric at every training epoch (0.5 would mean every time a half of the train data is seen, check validation metrics)
+max_steps: 20_000
 monitor_var: 'val_F1_micro'
 
 
 # optimization hyperparameters
-warmup_steps: 8000
+warmup_steps: 3000
 gradient_acc_steps: 1
 gradient_clip_value: 10
 

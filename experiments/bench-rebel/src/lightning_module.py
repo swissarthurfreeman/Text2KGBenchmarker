@@ -288,52 +288,79 @@ class BaseLightningModule(pl.LightningModule):
             use_cache=True,                               # speeds up decoding
             **gen_kwargs
         )
+        """outputs a tensor of size num_return_sequences*batch_size x max_length_of_linearized_triples_output_in_batch"""
         
-        # yields a flattened list of size num_return_sequences*B linearized triple outputs
-        decoded_preds = self.tokenizer.batch_decode(generated_tokens, skip_special_tokens=False)
-        #print("generated tokens [0]", generated_tokens)
-        
-        # yields a list of target ground truth tokenized linearized triples of length B*max_length
+        # yields of length batch_size, containing the padded ground truth linearized triples
         gt_decoded_labels: list[str] = self.tokenizer.batch_decode(
             torch.where(batch['labels'] != -100, batch['labels'], self.config.pad_token_id), 
             skip_special_tokens=False
         )
-        # might be because predicting nothing will yield loss of 0 as sentence will only have <pad> tokens, ignored by the loss...?
-        rel_preds = []
-        block_size = int(len(decoded_preds) / len(gt_decoded_labels))
-        for i in range(0, len(decoded_preds), block_size):
-            rel_preds.append("".join(decoded_preds[i:i+block_size]))
         
-        decoded_preds = rel_preds
-        
-        # list of length B
+        # yields a flattened list of size num_return_sequences*batch_size
+        # containing the linearized triple outputs, we need to fuse beams for a same target together. 
+        decoded_preds = self.tokenizer.batch_decode(generated_tokens, skip_special_tokens=False)
+
+        # list of length batch_size containing original input sentences
         original_sentences = []
         if self.hparams.sentence_entailement:
             original_sentences: list[str] = self.tokenizer.batch_decode(batch['input_ids'], skip_special_tokens=True)
         
-        final_beam_preds = []
-        for _, beams_prediction in enumerate(decoded_preds):
-            splitted_beam_preds = beams_prediction.split("<s>")
-            splitted_beam_preds.pop(0)
-            triples_per_beam = [ extract_triplets("<s>"+beam_pred) for beam_pred in splitted_beam_preds ]
-            res = []
-            for a in triples_per_beam:
-                res += a
+        # list of length batch_size, containing every triple list per sample
+        # where every return sequence for a same sample was fused into a single list, duplicate triples removed.  
+        final_beam_preds: list[list[dict]] = []
+        
+        # i will change value batch_size times, batch_idx=i//self.hparams.num_return_sequences
+        for i in range(0, len(decoded_preds), self.hparams.num_return_sequences):
             
-            dset = set()
-            for dic in res:
-                dset.add(json.dumps(dic, sort_keys=True))
+            # list of size num_return_sequences for sample i/num_return_sequences] of batch
+            preds_of_sample: list[str] = decoded_preds[i:i+self.hparams.num_return_sequences]
+            triples_for_sample: set[str] = set()
             
-            res = [json.loads(dic_str) for dic_str in dset]
-            triplets: np.array[dict] = np.array(res)
+            # for every return sequence
+            for ret_seq in preds_of_sample:
+                triples: list[dict] = extract_triplets(ret_seq)                 # get it's triples
+                for triple in triples:
+                    triples_for_sample.add(json.dumps(triple, sort_keys=True))  # add them to the dictionary
             
-            # TODO : implement these ifs, add relation_mapping and sentence entailement logic.
+            # make a numpy array to be able to use array slicing with another array
+            triplets: np.array[dict] = np.array([json.loads(dic_trip) for dic_trip in triples_for_sample])  # extract the clean array of triples
+            
+            # TODO : implement OR/AND logic, currently this is an AND, we should be able to have triples
+            # either retained by relation filtering or by sentence entailement
+            # investigate also the scatter plot options.
             if self.hparams.relation_mapping:
-                pass
-                #triple_embeddings: torch.Tensor = 
+                # tensor of size len(triplets) x embedding_dim
+                triple_embeddings: torch.Tensor = self.sent_embedder.encode([triple['head'] + " " + triple['rel'] + triple['tail'] for triple in triplets])
+                # tensor of size len(triplets) x N_RELATIONS_IN_ONTOLOGY
+                similarities : torch.Tensor = self.sent_embedder.similarity(triple_embeddings, self.ont_relation_embeddings)
+                
+                # both vals and idxs are of shape len(triplets)
+                # vals[i] is the value of maximum similarity between triplets[i] and the closest relation
+                # idxs[i] is the index of the closest relation in self.relations
+                vals, idxs = similarities.max(dim=-1)
+                
+                triplets: list[dict] = triplets[vals > self.similarity_threshold].tolist()
+                
+                for (triple, idx) in zip(triplets, idxs):
+                    triple['type'] = self.relations[idx]['label']       # map relation to closest one
             
             if self.hparams.sentence_entailement:
-                pass
+                batch_idx=i//self.hparams.num_return_sequences
+                keep_mask: list[bool] = []  # list of length len(triplets), saying which passed the filtering
+                nli_batch: list[str]  = []  # list of original_sentence. triple. pairs 
+                
+                for triple in triplets:
+                    nli_batch.append(original_sentences[batch_idx] + " " + triple['head'] + " " + triple['type'] + " " + triple['tail'] + ".")
+                
+                entail_results = self.entailment_model(nli_batch)
+                for res in entail_results:
+                    if res['label'] == 'entailment':
+                        keep_mask.append(True)
+                    else:
+                        keep_mask.append(False)
+                
+                triplets = np.array(triplets)
+                triplets = triplets[keep_mask]                
             
             final_beam_preds.append(triplets)
             

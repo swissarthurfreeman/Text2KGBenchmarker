@@ -63,24 +63,6 @@ class BaseLightningDataModule(pl.LightningDataModule):
         self.column_names = self.datasets['train'].column_names
         
     def prepare_data(self) -> None:
-        self.train_dataset = self.datasets['train'].map(
-            self.preprocess_function,                           # apply this function to every sample
-            batched=True,                                       # in batch mode, provides speedup
-            batch_size=100,
-            remove_columns=self.column_names,                    # output will contains tokenized sentence and triples
-            #load_from_cache_file=True,                          # under keys 'input_ids' and 'labels', but no more original data
-            #cache_file_name=self.conf.train_file.replace('jsonl', '-') + self.conf.dataset_script_path.split("/")[-1].replace('.py', '.cache')
-        )
-        
-        self.eval_dataset = self.datasets["validation"].map(
-            self.preprocess_function,
-            batched=True,
-            batch_size=100,
-            remove_columns=self.column_names,
-            #load_from_cache_file=True,                          # under keys 'input_ids' and 'labels', but no more original data
-            #cache_file_name=self.conf.val_file.replace('jsonl', '-') + self.conf.dataset_script_path.split("/")[-1].replace('.py', '.cache')
-        )
-        
         if self.conf.do_test_predict:
             self.test_ids: list[str] = self.datasets["test"]["id"]
             
@@ -92,6 +74,25 @@ class BaseLightningDataModule(pl.LightningDataModule):
                 #load_from_cache_file=True,                          # under keys 'input_ids' and 'labels', but no more original data
                 #cache_file_name=self.conf.test_file.replace('jsonl', '-') + self.conf.dataset_script_path.split("/")[-1].replace('.py', '.cache')
             )
+        else:
+            self.train_dataset = self.datasets['train'].map(
+                self.preprocess_function,                           # apply this function to every sample
+                batched=True,                                       # in batch mode, provides speedup
+                batch_size=100,
+                remove_columns=self.column_names,                    # output will contains tokenized sentence and triples
+                #load_from_cache_file=True,                          # under keys 'input_ids' and 'labels', but no more original data
+                #cache_file_name=self.conf.train_file.replace('jsonl', '-') + self.conf.dataset_script_path.split("/")[-1].replace('.py', '.cache')
+            )
+            
+            self.eval_dataset = self.datasets["validation"].map(
+                self.preprocess_function,
+                batched=True,
+                batch_size=100,
+                remove_columns=self.column_names,
+                #load_from_cache_file=True,                          # under keys 'input_ids' and 'labels', but no more original data
+                #cache_file_name=self.conf.val_file.replace('jsonl', '-') + self.conf.dataset_script_path.split("/")[-1].replace('.py', '.cache')
+            )
+        
         
     def preprocess_function(self, batch: dict[str, list[str]]) -> dict[str, torch.Tensor]:
         """function to apply to every element of dataset, an element is {id: [...], sent: [...], triples:[...]},
