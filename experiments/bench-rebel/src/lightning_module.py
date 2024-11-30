@@ -172,6 +172,7 @@ class BaseLightningModule(pl.LightningModule):
             self.entailment_model = pipeline(model='roberta-large-mnli', device=device)
             
         self.test_ids = test_ids
+        """list of test_ids to be used when writing `self.test_preds` to file, dataloader doesn't keep ids."""
     
     def forward(self, inputs: dict[str, torch.Tensor]) -> dict[str, torch.Tensor]:
         """Run the inputs through the model and retrieve the loss and logits in output.
@@ -271,7 +272,7 @@ class BaseLightningModule(pl.LightningModule):
         # yields a torch long tensor of size (num_return_sequences x B x max_length), 
         # where max_length is generate() parameter
         gen_kwargs = {
-            "max_length": self.hparams.max_target_length    # TODO : check if output will be padded to max_length
+            "max_length": self.hparams.max_target_length
             if self.hparams.max_target_length is not None else self.config.max_length,
             "early_stopping": False,
             "no_repeat_ngram_size": 0,
@@ -319,7 +320,6 @@ class BaseLightningModule(pl.LightningModule):
             for a in triples_per_beam:
                 res += a
             
-            # TODO : see if list(set(res)) impacts precision, it might depending on the score computation logic.
             dset = set()
             for dic in res:
                 dset.add(json.dumps(dic, sort_keys=True))
@@ -327,9 +327,10 @@ class BaseLightningModule(pl.LightningModule):
             res = [json.loads(dic_str) for dic_str in dset]
             triplets: np.array[dict] = np.array(res)
             
-            # TODO : implement these ifs.
+            # TODO : implement these ifs, add relation_mapping and sentence entailement logic.
             if self.hparams.relation_mapping:
                 pass
+                #triple_embeddings: torch.Tensor = 
             
             if self.hparams.sentence_entailement:
                 pass
@@ -421,8 +422,4 @@ class BaseLightningModule(pl.LightningModule):
                 optimizer, num_warmup_steps=self.hparams.warmup_steps, num_training_steps=num_training_steps
             )
         return scheduler
-    
-    # TODO : run the code and do prints line by line to figure to understand the dimensions involved
-    # in generate_triples and add appropriate typing.
-    # TODO : add implementations of on_validation_epoch_end(), on_test_epoch_end(), compute_metrics()
     

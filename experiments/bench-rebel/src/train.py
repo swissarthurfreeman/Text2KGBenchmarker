@@ -65,6 +65,7 @@ def train(conf: DictConfig):
     pl_module = BaseLightningModule(conf=conf, config=model_config, tokenizer=tokenizer, model=model)
     
     wandb_run_name = get_wandb_run_name(conf)
+    # TODO : use ontology name here instead of project
     wandb_logger = WandbLogger(project="wikidata-movies", name=wandb_run_name)
     device = "cuda" if torch.cuda.is_available() else "cpu"
     

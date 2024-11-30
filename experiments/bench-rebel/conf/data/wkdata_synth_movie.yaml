@@ -5,7 +5,7 @@ dataset_script_path: 'experiments/bench-rebel/datasets/wkdata_synth_movie.py'
 ontology_path:       'data/wikidata_synthetic/ontologies/ont_1_movie.json'
 train_file:          'data/wikidata_synthetic/train/ont_1_movie_train.jsonl'
 val_file:            'data/wikidata_synthetic/validation/ont_1_movie_val.jsonl'
-test_file:           'data/wikidata_synthetic/test/ont_1_movie_test.jsonl'
+
 
 text_key:   'sent'
 target_key: 'triples'
@@ -14,15 +14,21 @@ train_batch_size: 24
 val_batch_size:   16
 test_batch_size:  16
 
-# model usage configuration
 pretrained_model_name_or_path: 'experiments/bench-rebel/Rebel-large'
+
+# used for evaluation of model on test data, set do_test_predict to true and update
+# test file to 'data/wikidata_tekgen/test/ont_1_movie_test.jsonl' and retrieve responses
+# retrieve responses from experiments/bench-rebel/src/llm_responses
+do_test_predict:  false
+test_file:        'data/wikidata_synthetic/test/ont_1_movie_test.jsonl'
+checkpoint_path:  'experiments/bench-rebel/src/outputs/2024-11-28/21-57-35/wikidata_movies_12_ret_seq_warm_steps=500_tbs=24_drop=0.1_/epoch=0-step=199.ckpt'
+output_file_path: 'experiments/bench-rebel/src/llm_responses/ont_1_movie_test_predictions.jsonl'
+
+# triple processing
 relation_mapping: False
 sentence_entailement: False
+similarity_threshold: 0.3
 
-# used for evaluation of model on test data
-do_test_predict:  false
-#checkpoint_path:  'experiments/bench-rebel/src/outputs/2024-11-28/21-57-35/wikidata_movies_12_ret_seq_warm_steps=500_tbs=24_drop=0.1_/epoch=0-step=199.ckpt'
-#output_file_path: 'experiments/bench-rebel/src/llm_responses/wikidata_movies_predictions.jsonl'
 pl_seed: 42
 
 # model hyperparameters
@@ -35,14 +41,14 @@ num_return_sequences: 12      # top likeliest number of beams kept in output (be
 
 # trainer parameters
 val_check_interval: 1.0       # check validation metric at every training epoch (0.5 would mean every time a half of the train data is seen, check validation metrics)
-max_steps: 10_000
+max_steps: 100_000
 monitor_var: 'val_F1_micro'
 
 
 # optimization hyperparameters
-warmup_steps: 500
+warmup_steps: 8000
 gradient_acc_steps: 1
-gradient_clip_value: 5.0
+gradient_clip_value: 10
 
 lr_scheduler: 'inverse_square_root'
 learning_rate: 0.000025
