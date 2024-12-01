@@ -1,5 +1,6 @@
 import hydra
 import omegaconf
+from omegaconf import OmegaConf
 import torch
 from typing import cast
 import pytorch_lightning as pl
@@ -21,6 +22,8 @@ warnings.filterwarnings("ignore", ".*does not have many workers.*")
 
 
 def train(conf: DictConfig):
+    
+    print("Starting train run with config :\n", OmegaConf.to_yaml(conf))
     pl.seed_everything(conf.pl_seed, verbose=False)
     
     model_config = AutoConfig.from_pretrained(
@@ -75,14 +78,13 @@ def train(conf: DictConfig):
         monitor=conf.monitor_var,                # monitor val_F1_micro
         save_top_k=1,
         verbose=True,
-        save_last=True,
         dirpath='wikidata_movies_' + wandb_run_name
     ))
     
     callbacks_list.append(EarlyStopping(
         monitor=conf.monitor_var,               # stop the training if this value doesn't improve
         mode='max',                             
-        patience=5                              # for 5 epochs
+        patience=2                              # for 5 epochs
     ))
     
     callbacks_list.append(LearningRateMonitor(logging_interval='step'))

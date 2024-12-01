@@ -1,4 +1,5 @@
 import json
+from typing import Any, Dict, Mapping
 import torch
 import numpy as np
 from numpy import ndarray
@@ -117,7 +118,7 @@ def extract_triplets(text) -> list[dict]:
 
 
 class BaseLightningModule(pl.LightningModule):
-    def __init__(self, conf, config: AutoConfig, tokenizer: AutoTokenizer, model: AutoModelForSeq2SeqLM, test_ids: list[str] = None, *args, **kwargs):
+    def __init__(self, conf, config: AutoConfig, tokenizer: AutoTokenizer, model: AutoModelForSeq2SeqLM, test_ids: list[str] = None, sent_entailer=None, *args, **kwargs):
         """
         REBEL experiment lightning module
         https://lightning.ai/docs/pytorch/LTS/common/lightning_module.html
@@ -131,12 +132,15 @@ class BaseLightningModule(pl.LightningModule):
         - wandb_run_name, used to log the different training metrics
         """
         super().__init__(*args, **kwargs)
+        self.strict_loading = False
         with open(conf.repo_path + conf.ontology_path) as ont_f:
             ontology = json.load(ont_f)
             self.relations: list[dict] = ontology["relations"]
             """list of ontology relations `[{'pid': ..., 'label': ..., 'range': 'r_qid', 'domain': 'd_qid'}...]`"""
-            self.concepts: dict[str, str] = {k:v for rel_dic in ontology["concepts"] for (k,v) in rel_dic.items()}
+            self.concepts: dict[str, str] = {'': 'value'}   # literal value 
             """concepts dictionary of ontology `{'wikidata_id': 'label'...}`"""
+            for concept_dict in ontology['concepts']:
+                self.concepts[concept_dict['qid']] = concept_dict['label']
             
         self.save_hyperparameters(conf)                     # adds conf dict to self.hparams
         self.tokenizer: BartTokenizerFast = tokenizer
@@ -158,7 +162,7 @@ class BaseLightningModule(pl.LightningModule):
         if self.hparams.relation_mapping:
             self.sent_embedder = SentenceTransformer('sentence-transformers/all-mpnet-base-v2', device=device)
             self.threshold = self.hparams.similarity_threshold
-            
+            print(self.concepts)
             # encoding of list ['d1 p1 o1', 'd2 p2 o2', ...], size N_RELATIONS x EMBEDDING_DIM
             self.ont_relation_embeddings: ndarray = self.sent_embedder.encode(
                 [" ".join([
@@ -325,12 +329,9 @@ class BaseLightningModule(pl.LightningModule):
             # make a numpy array to be able to use array slicing with another array
             triplets: np.array[dict] = np.array([json.loads(dic_trip) for dic_trip in triples_for_sample])  # extract the clean array of triples
             
-            # TODO : implement OR/AND logic, currently this is an AND, we should be able to have triples
-            # either retained by relation filtering or by sentence entailement
-            # investigate also the scatter plot options.
             if self.hparams.relation_mapping:
                 # tensor of size len(triplets) x embedding_dim
-                triple_embeddings: torch.Tensor = self.sent_embedder.encode([triple['head'] + " " + triple['rel'] + triple['tail'] for triple in triplets])
+                triple_embeddings: torch.Tensor = self.sent_embedder.encode([triple['head'] + " " + triple['type'] + triple['tail'] for triple in triplets])
                 # tensor of size len(triplets) x N_RELATIONS_IN_ONTOLOGY
                 similarities : torch.Tensor = self.sent_embedder.similarity(triple_embeddings, self.ont_relation_embeddings)
                 
@@ -339,10 +340,15 @@ class BaseLightningModule(pl.LightningModule):
                 # idxs[i] is the index of the closest relation in self.relations
                 vals, idxs = similarities.max(dim=-1)
                 
-                triplets: list[dict] = triplets[vals > self.similarity_threshold].tolist()
+                rel_map_kept_triplets: list[dict] = triplets[vals > self.hparams.similarity_threshold].tolist()
                 
-                for (triple, idx) in zip(triplets, idxs):
+                for (triple, idx) in zip(rel_map_kept_triplets, idxs):
                     triple['type'] = self.relations[idx]['label']       # map relation to closest one
+                
+                rel_map_kept_triplets: set = {json.dumps(trip, sort_keys=True) for trip in rel_map_kept_triplets}
+                
+                if not self.hparams.sentence_entailement:
+                    final_beam_preds.append([json.loads(trip) for trip in rel_map_kept_triplets])
             
             if self.hparams.sentence_entailement:
                 batch_idx=i//self.hparams.num_return_sequences
@@ -352,17 +358,32 @@ class BaseLightningModule(pl.LightningModule):
                 for triple in triplets:
                     nli_batch.append(original_sentences[batch_idx] + " " + triple['head'] + " " + triple['type'] + " " + triple['tail'] + ".")
                 
+                print("nli_batch", nli_batch)
+                # avoids load from checkpoint dict trying to load roberta state error, seems it can't be part of lightning module
                 entail_results = self.entailment_model(nli_batch)
                 for res in entail_results:
-                    if res['label'] == 'entailment':
+                    if res['label'] == 'ENTAILMENT':
                         keep_mask.append(True)
                     else:
                         keep_mask.append(False)
                 
-                triplets = np.array(triplets)
-                triplets = triplets[keep_mask]                
+                #print("keep mask", keep_mask)
+                sent_entail_triplets: set = { json.dumps(trip, sort_keys=True) for trip in triplets[keep_mask] }                
             
-            final_beam_preds.append(triplets)
+                if not self.hparams.relation_mapping:
+                    final_beam_preds.append([json.loads(trip) for trip in sent_entail_triplets])  
+                elif self.hparams.combine_operator == 'AND':
+                    
+                    triplets_to_append = [json.loads(trip) for trip in rel_map_kept_triplets.intersection(sent_entail_triplets)]
+                    final_beam_preds.append(triplets_to_append)
+                    
+                elif self.hparams.combine_operator == 'OR':
+                    final_beam_preds.append([json.loads(trip) for trip in rel_map_kept_triplets.union(sent_entail_triplets)])
+                else:
+                    raise ValueError('combine_operator value: ' + self.hparams.combine_operator + ' is not supported')
+            
+            if not self.hparams.relation_mapping and not self.hparams.sentence_entailement:
+                final_beam_preds.append(triplets)
             
         return final_beam_preds, [extract_triplets(rel.replace("<sub>", "<subj>")) for rel in gt_decoded_labels]
     

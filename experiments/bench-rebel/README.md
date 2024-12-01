@@ -252,3 +252,16 @@ The first 4 tokens are facebook BART specific tokens. They're used to delimit pa
 
 `*args` is a list of arguments that are passed to the constructor but not explicitely listed, without name, `*kwargs` is a dictionary of arguments passed that aren't known to the constructor, but that were provided a name, see [this post](https://stackoverflow.com/questions/3394835/use-of-args-and-kwargs) for more details. Hugging face makes heavy use of this to pass arguments from one base class to other said base class might use.
 
+
+nli_batch [
+  'Trouble at Timpetill, directed by Nicolas Bary, is a captivating blend of fantasy and adventure. The film features a talented cast, including Lola Créton, François Damiens, and Carole Bouquet, who bring the enchanting story to life. With its imaginative storyline and impressive performances, this film promises an engaging experience for viewers of all ages. Trouble at Timpetill cast member François Damiens.', 
+  
+  'Trouble at Timpetill, directed by Nicolas Bary, is a captivating blend of fantasy and adventure. The film features a talented cast, including Lola Créton, François Damiens, and Carole Bouquet, who bring the enchanting story to life. With its imaginative storyline and impressive performances, this film promises an engaging experience for viewers of all ages. Trouble at Timpetill cast member Carole Bouquet.', 
+  
+  'Trouble at Timpetill, directed by Nicolas Bary, is a captivating blend of fantasy and adventure. The film features a talented cast, including Lola Créton, François Damiens, and Carole Bouquet, who bring the enchanting story to life. With its imaginative storyline and impressive performances, this film promises an engaging experience for viewers of all ages. Trouble at Timpetill cast member Lola Créton.', 
+  
+  'Trouble at Timpetill, directed by Nicolas Bary, is a captivating blend of fantasy and adventure. The film features a talented cast, including Lola Créton, François Damiens, and Carole Bouquet, who bring the enchanting story to life. With its imaginative storyline and impressive performances, this film promises an engaging experience for viewers of all ages. Trouble at Timpetill genre adventure film.', 
+  
+  'Trouble at Timpetill, directed by Nicolas Bary, is a captivating blend of fantasy and adventure. The film features a talented cast, including Lola Créton, François Damiens, and Carole Bouquet, who bring the enchanting story to life. With its imaginative storyline and impressive performances, this film promises an engaging experience for viewers of all ages. Trouble at Timpetill director Nicolas Bary.'
+]
+
