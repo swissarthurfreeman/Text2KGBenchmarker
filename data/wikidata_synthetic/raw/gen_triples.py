@@ -10,6 +10,7 @@ from time import time
 from time import sleep
 import json
 import sys
+import os
 
 def getEntitiesOfType(ent_file_path: str, triples_path: str, qid: str, n: int) -> list[dict]:
         """retrieve list of n wikidata instances of entity qid, P31 is instance of, P279 is subclass of,
@@ -25,7 +26,7 @@ def getEntitiesOfType(ent_file_path: str, triples_path: str, qid: str, n: int) -
         WHERE {{
             ?item wdt:P31/wdt:P279* wd:{qid};
                     rdfs:label ?itemLabel;
-                    wdt:P2094 ?whatever;
+                    wdt:P1843 ?whatever;
             FILTER (lang(?itemLabel) = "en").
         }}
         LIMIT {n+1}
@@ -41,6 +42,12 @@ def getEntitiesOfType(ent_file_path: str, triples_path: str, qid: str, n: int) -
         qids = []
         with open(triples_path) as f:
             qids = [json.loads(line)['triples'][0]['sqid'] for line in f] 
+        
+        entities = [ent for ent in entities if ent['qid'] not in qids]
+        
+        if os.path.exists(ent_file_path):
+            with open(ent_file_path, "r") as f:
+                qids = [json.loads(line)['qid'] for line in f]
         
         entities = [ent for ent in entities if ent['qid'] not in qids]
         
@@ -208,8 +215,7 @@ class TripleGenerator:
         for relation in self.relations:
             if self.relations[relation].domain_qid in classes_of_obj:
                 return True
-        return False 
-            
+        return False
 
 def worker(i, onto_path, n_threads, entities):
     generator = TripleGenerator(
@@ -248,9 +254,11 @@ if __name__ == "__main__":
     # python3 gen_triples.py ont_5_military Q5 Q1184840 Q18643213 Q2008856 Q17149090
     # python3 gen_triples.py ont_3_sport Q5 Q27020041 Q4438121
     # python3 gen_triples.py ont_6_computer Q7397 Q166142 Q55990535
-    #root_qid = 'Q4438121'
+    # python3 gen_triples.py ont_7_space Q5 Q2488 Q3863 Q5916 Q40218
+    # python3 gen_triples.py ont_9_nature Q16521 Q8502 Q355304 Q12323 Q15091377 Q7432
+    #root_qid = 'Q482994'
     #root_ent_path = f"{onto_name}_root_entities_{root_qid}.jsonl"
-    #getEntitiesOfType(root_ent_path, onto_name + ".jsonl", root_qid, 5_000)
+    #getEntitiesOfType(root_ent_path, onto_name + ".jsonl", root_qid, 15_000)
     #exit(0)
     
     start = time()
