@@ -94,6 +94,8 @@ View jobs via squeue -u freemana
 scontrol show jobid [JOBID]
 Care ful not to use = signs in #SBATCH instructions
 
+
+`salloc --ntasks=64 --mem=20G --time=4:00:00 --partition=shared-cpu && module load GCCcore/13.2.0 Python/3.11.5 && pipenv shell`
 Run `module load GCCcore/13.2.0 Python/3.11.5 && pipenv shell` to load up python, then `pipenv install && pipenv shell` from the root directory. 
 `salloc --ntasks 1 --mem=25G --time=2:00:00 --partition=shared-gpu --gres=gpu:1,VramPerGpu:24G`
 YOU HAVE TO SPECIFY MEMORY, OR ELSE IT'LL JUST ALLOCATE 2G, YOU WON'T BE ABLE TO PROCESS THE DATA, check actual memory allocated

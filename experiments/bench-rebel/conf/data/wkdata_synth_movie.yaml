@@ -3,8 +3,10 @@
 # dataset configuration
 dataset_script_path: 'experiments/bench-rebel/datasets/wkdata_synth_movie.py'
 ontology_path:       'data/wikidata_synthetic/ontologies/ont_1_movie.json'
-train_file:          'data/wikidata_synthetic/train/ont_1_movie_train.jsonl'
-val_file:            'data/wikidata_synthetic/validation/ont_1_movie_val.jsonl'
+
+train_file:          'data/wikidata_tekgen/train/ont_1_movie_train.jsonl'
+
+val_file:            'data/wikidata_tekgen/test/ont_1_movie_test.jsonl'
 
 
 text_key:   'sent'
@@ -19,20 +21,22 @@ pretrained_model_name_or_path: 'experiments/bench-rebel/Rebel-large'
 # used for evaluation of model on test data, set do_test_predict to true and update
 # test file to 'data/wikidata_tekgen/test/ont_1_movie_test.jsonl' and retrieve responses
 # retrieve responses from experiments/bench-rebel/src/llm_responses
-do_test_predict:  true
-test_file:        'data/wikidata_synthetic/test/ont_1_movie_test.jsonl'
-checkpoint_path:  'experiments/bench-rebel/src/outputs/2024-12-01/17-25-58/wikidata_movies_12_ret_seq_warm_steps=3000_tbs=24_drop=0.1_/epoch=0-step=1875.ckpt'
-output_file_path: 'experiments/bench-rebel/src/llm_responses/ont_1_movie_test_predictions.jsonl'
+do_test_predict:  false
+test_file:        'data/wikidata_tekgen/test/ont_1_movie_test.jsonl'
+checkpoint_path:  'experiments/bench-rebel/src/outputs/2024-12-01/19-36-40/wikidata_movies_4_ret_seq_warm_steps=2000_tbs=24_drop=0.1_/epoch=0-step=1500.ckpt'
+output_file_path: 'experiments/bench-rebel/src/llm_responses/oidsjglfdskjgfdsj.jsonl'
 
 # triple processing
-relation_mapping: true
-sentence_entailement: true
+relation_mapping: false
+sentence_entailement: false
 # if 'AND', will apply interesection between set of triples kept by rel_map and sent_entail
 # if 'OR' will apply union between set of triples kept by rel_map and sent_entail
-combine_operator: 'AND'
+combine_operator: 'OR'
 
 # set this to 0 to not drop any triples with relation mapping
-similarity_threshold: 0
+similarity_threshold: 0.3
+
+num_return_sequences: 3      # top likeliest number of beams kept in output (beams get folded into one predicted triple set)
 
 pl_seed: 42
 
@@ -42,20 +46,19 @@ dropout: 0.1
 # generation hyperparameters
 max_target_length: 256        # maximum generated linearized triples output length
 eval_beams: 12                # number of beams to use during generation
-num_return_sequences: 12       # top likeliest number of beams kept in output (beams get folded into one predicted triple set)
 
 # trainer parameters
-val_check_interval: 0.5       # check validation metric at every training epoch (0.5 would mean every time a half of the train data is seen, check validation metrics)
+val_check_interval: 1       # check validation metric at every training epoch (0.5 would mean every time a half of the train data is seen, check validation metrics)
 max_steps: 20_000
 monitor_var: 'val_F1_micro'
 
 
 # optimization hyperparameters
-warmup_steps: 3000
+warmup_steps: 2000
 gradient_acc_steps: 1
 gradient_clip_value: 10
 
-lr_scheduler: 'inverse_square_root'
+lr_scheduler: 'linear'
 learning_rate: 0.000025
 weight_decay: 0.1
 adam_beta1: 0.9

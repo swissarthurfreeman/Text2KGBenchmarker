@@ -22,6 +22,7 @@ streamlit = "*"
 psutil = "*"
 evaluate = "*"
 sparqlwrapper = {git = "https://github.com/rdflib/sparqlwrapper"}
+python-dateutil = "*"
 
 [dev-packages]
 ipykernel = "*"

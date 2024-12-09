@@ -3,7 +3,7 @@ from typing import Any, Dict, Mapping
 import torch
 import numpy as np
 from numpy import ndarray
-
+from dateutil import parser
 from metrics import re_score
 from torch.optim import AdamW
 import pytorch_lightning as pl
@@ -136,6 +136,10 @@ class BaseLightningModule(pl.LightningModule):
         with open(conf.repo_path + conf.ontology_path) as ont_f:
             ontology = json.load(ont_f)
             self.relations: list[dict] = ontology["relations"]
+            self.relations_list: list[str] = []
+            for rel in self.relations:
+                self.relations_list.append(rel['label'])
+            
             """list of ontology relations `[{'pid': ..., 'label': ..., 'range': 'r_qid', 'domain': 'd_qid'}...]`"""
             self.concepts: dict[str, str] = {'': 'value'}   # literal value 
             """concepts dictionary of ontology `{'wikidata_id': 'label'...}`"""
@@ -320,11 +324,11 @@ class BaseLightningModule(pl.LightningModule):
             preds_of_sample: list[str] = decoded_preds[i:i+self.hparams.num_return_sequences]
             triples_for_sample: set[str] = set()
             
-            # for every return sequence
+            # for every return sequence, add triples to a same set, fuse them together 
             for ret_seq in preds_of_sample:
                 triples: list[dict] = extract_triplets(ret_seq)                 # get it's triples
                 for triple in triples:
-                    triples_for_sample.add(json.dumps(triple, sort_keys=True))  # add them to the dictionary
+                    triples_for_sample.add(json.dumps(triple, sort_keys=True).lower())  # lower() is essential, multiple beams will vary on capitals !!
             
             # make a numpy array to be able to use array slicing with another array
             triplets: np.array[dict] = np.array([json.loads(dic_trip) for dic_trip in triples_for_sample])  # extract the clean array of triples
@@ -358,7 +362,7 @@ class BaseLightningModule(pl.LightningModule):
                 for triple in triplets:
                     nli_batch.append(original_sentences[batch_idx] + " " + triple['head'] + " " + triple['type'] + " " + triple['tail'] + ".")
                 
-                print("nli_batch", nli_batch)
+                #print("nli_batch", nli_batch)
                 # avoids load from checkpoint dict trying to load roberta state error, seems it can't be part of lightning module
                 entail_results = self.entailment_model(nli_batch)
                 for res in entail_results:
@@ -388,10 +392,38 @@ class BaseLightningModule(pl.LightningModule):
         return final_beam_preds, [extract_triplets(rel.replace("<sub>", "<subj>")) for rel in gt_decoded_labels]
     
     def on_validation_epoch_end(self):
-        
+        for pred in self.val_preds:
+                for llm_triples, gt in zip(pred['predictions'], pred['labels']):
+                    
+                    print("------ llm triples ----------")
+                    for pred in llm_triples:
+                        
+                        pred['head'] = pred['head'].lower()
+                        pred['tail'] = pred['tail'].lower()
+                        pred['type'] = pred['type'].lower()
+                        
+                        if pred['type'] == 'publication date':
+                            try:
+                                dt = parser.parse(pred['tail'])     # parse iso string as simple date   
+                                pred['tail'] = dt.strftime('%d %B %Y').lower()  # 01 January 2020
+                            except:
+                                pass
+                        print(pred)
+                    
+                    print("------ ground truth ----------")
+                    for pred in gt:
+                        pred['head'] = pred['head'].lower()
+                        pred['tail'] = pred['tail'].lower()
+                        pred['type'] = pred['type'].lower()
+                        print(pred)
+
+        # BUG : re_score does not normalize to lowercase
+        pred_relations = [item for pred in self.val_preds for item in pred['predictions']]
+        gt_relations = [item for pred in self.val_preds for item in pred['labels']]
+            
         scores, precision, recall, f1 = re_score(
-            [item for pred in self.val_preds for item in pred['predictions']],
-            [item for pred in self.val_preds for item in pred['labels']],
+            pred_relations,
+            gt_relations,
             relation_types=[rel['label'] for rel in self.relations]
         )
         
@@ -403,12 +435,47 @@ class BaseLightningModule(pl.LightningModule):
         self.val_preds.clear()
         
     def on_test_epoch_end(self):
+        # BUG : re_score does not normalize to lowercase, so we do that here.
+        for pred in self.test_preds:
+                for llm_triples, gt in zip(pred['predictions'], pred['labels']):
+                    for pred in llm_triples:
+                        pred['head'] = pred['head'].lower()
+                        pred['tail'] = pred['tail'].lower()
+                        pred['type'] = pred['type'].lower()
+                        
+                        if pred['type'] == 'publication date':
+                            try:
+                                dt = parser.parse(pred['tail'])     # parse iso string as simple date   
+                                pred['tail'] = dt.strftime('%d %B %Y').lower()  # 01 January 2020
+                            except:
+                                pass
+                    
+                    for pred in gt:
+                        pred['head'] = pred['head'].lower()
+                        pred['tail'] = pred['tail'].lower()
+                        pred['type'] = pred['type'].lower()
+
         # we just save the file here without ids to avoid technical debt,
         # if you want to fully evaluate properly, re-use the model via a
         # an extra adpater in utils that loads from a trained checkpoint.
         with open(self.hparams.repo_path + self.hparams.output_file_path, 'a') as out_f:
             idx = 0
             for pred in self.test_preds:
+                res: list = []
+                for llm_triples in pred['predictions']:
+                    triples: list = []
+                    for triple in llm_triples:
+                        if triple['type'] == 'publication date':
+                            try:
+                                dt = parser.parse(pred['tail'])     # parse iso string as simple date   
+                                triple['tail'] = dt.strftime('%d %B %Y').lower()  # 01 January 2020
+                            except:
+                                pass
+                        if triple['type'] in self.relations_list:   # filter out triples not in ontology, NOTE : not useful, this can be removed
+                            triples.append(triple)
+                    res.append(triples)
+                pred['predictions'] = res
+                
                 for llm_triples, gt in zip(pred['predictions'], pred['labels']):
                     out_f.write(json.dumps({
                         'id': self.test_ids[idx],
@@ -418,9 +485,14 @@ class BaseLightningModule(pl.LightningModule):
                     
                     idx += 1
         
+        pred_relations = [item for pred in self.test_preds for item in pred['predictions']]
+        
+        #print("pred relations\n\n", pred_relations)
+        gt_relations = [item for pred in self.test_preds for item in pred['labels']]
+        
         scores, precision, recall, f1 = re_score(
-            [item for pred in self.test_preds for item in pred['predictions']],
-            [item for pred in self.test_preds for item in pred['labels']],
+            pred_relations,
+            gt_relations,
             relation_types=[rel['label'] for rel in self.relations]
         )
         

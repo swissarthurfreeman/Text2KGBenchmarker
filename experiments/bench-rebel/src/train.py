@@ -67,16 +67,18 @@ def train(conf: DictConfig):
     
     pl_module = BaseLightningModule(conf=conf, config=model_config, tokenizer=tokenizer, model=model)
     
-    wandb_run_name = get_wandb_run_name(conf)
+    wandb_run_name = f"train={conf.train_file.split("/")[-1][:-6]}-val={conf.val_file.split("/")[-1][:-6]}"
+    
     # TODO : use ontology name here instead of project
-    wandb_logger = WandbLogger(project="wikidata-movies", name=wandb_run_name)
+    wandb_logger = WandbLogger(project="wikidata-movies", name=wandb_run_name, config=OmegaConf.to_object(conf))
     device = "cuda" if torch.cuda.is_available() else "cpu"
     
     
     callbacks_list = []
     callbacks_list.append(ModelCheckpoint(
-        monitor=conf.monitor_var,                # monitor val_F1_micro
-        save_top_k=1,
+        #monitor=conf.monitor_var,                # monitor val_F1_micro
+        save_top_k=-1,
+        every_n_train_steps=1500,
         verbose=True,
         dirpath='wikidata_movies_' + wandb_run_name
     ))
@@ -84,7 +86,7 @@ def train(conf: DictConfig):
     callbacks_list.append(EarlyStopping(
         monitor=conf.monitor_var,               # stop the training if this value doesn't improve
         mode='max',                             
-        patience=2                              # for 5 epochs
+        patience=5                              # for 5 epochs
     ))
     
     callbacks_list.append(LearningRateMonitor(logging_interval='step'))
@@ -101,7 +103,8 @@ def train(conf: DictConfig):
         callbacks=callbacks_list
     )
     
-    trainer.fit(pl_module, datamodule=pl_data_module)
+    print("Resume training from checkpoint", conf.repo_path + conf.checkpoint_path)
+    trainer.fit(pl_module, datamodule=pl_data_module, ckpt_path=conf.repo_path + conf.checkpoint_path)
     
 
 def get_wandb_run_name(conf: DictConfig) -> str:

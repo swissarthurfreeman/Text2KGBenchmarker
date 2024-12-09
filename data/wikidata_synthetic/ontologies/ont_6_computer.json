@@ -2,91 +2,18 @@
   "title": "Computer Ontology",
   "id": "ont_6_computer",
   "concepts": [
-    {
-      "qid": "computer",
-      "label": "computer"
-    },
-    {
-      "qid": "software",
-      "label": "software"
-    },
-    {
-      "qid": "computer hardware",
-      "label": "computer hardware"
-    },
-    {
-      "qid": "programming language",
-      "label": "programming language"
-    },
-    {
-      "qid": "database",
-      "label": "database"
-    },
-    {
-      "qid": "computer network",
-      "label": "computer network"
-    },
-    {
-      "qid": "web application",
-      "label": "web application"
-    },
-    {
-      "qid": "computer science",
-      "label": "computer science"
-    },
-    {
-      "qid": "algorithm",
-      "label": "algorithm"
-    },
-    {
-      "qid": "application",
-      "label": "application"
-    },
-    {
-      "qid": "person",
-      "label": "person"
-    },
-    {
-      "qid": "human",
-      "label": "human"
-    },
-    {
-      "qid": "computer model",
-      "label": "computer model"
-    },
-    {
-      "qid": "software engineer",
-      "label": "software engineer"
-    },
-    {
-      "qid": "operating system",
-      "label": "operating system"
-    }
+    {"qid": "Q55990535", "label": "computer model"},
+    {"qid": "Q7397", "label": "software"},
+    {"qid": "Q166142", "label": "application"},
+    {"qid": "Q68", "label": "computer"},
+    {"qid": "Q5", "label": "human"},
+    {"qid": "Q9135", "label": "operating system"},
+    {"qid": "Q4830453", "label": "business"}
   ],
   "relations": [
-    {
-      "pid": "P178",
-      "label": "developer",
-      "domain": "software",
-      "range": "business"
-    },
-    {
-      "pid": "P170",
-      "label": "creator",
-      "domain": "application",
-      "range": "human"
-    },
-    {
-      "pid": "P400",
-      "label": "platform",
-      "domain": "software",
-      "range": "computer"
-    },
-    {
-      "pid": "P306",
-      "label": "operating system",
-      "domain": "computer model",
-      "range": "operating system"
-    }
+    {"pid": "P178", "label": "developer", "domain": "Q7397", "range": "Q4830453"},
+    {"pid": "P170", "label": "creator", "domain": "Q166142", "range": "Q5"},
+    {"pid": "w", "label": "platform", "domain": "Q7397", "range": "Q68"},
+    {"pid": "P306", "label": "operating system", "domain": "Q55990535", "range": "Q9135"}
   ]
 }

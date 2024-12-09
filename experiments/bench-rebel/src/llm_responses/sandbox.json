@@ -1,0 +1,18 @@
+
+
+{
+    "sent": """Kentar\u014d \u014ctani directed the Japanese film Thirty Lies or So, 
+    which was released on January 1, 2004. Featuring a notable performance by Miki Nakatani, 
+    this film explores the intricacies of relationships through its engaging narrative.""",
+    "id": "ont_1_movie_train_Q3524715", 
+    "predictions": [
+        {"head": "Thirty Lies or So", "tail": "Kentar\u014d \u014ctani", "type": "director"}, 
+        {"head": "Thirty Lies or So", "tail": "2004-01-01T00:00:00Z", "type": "publication date"}, 
+        {"head": "Thirty Lies or So", "tail": "Miki Nakatani", "type": "cast member"}, 
+        {"head": "Thirty Lies or So", "tail": "Japan", "type": "country of origin"}], 
+    "labels": [
+        {"head": "Thirty Lies or So", "type": "director", "tail": "Kentar\u014d \u014ctani"}, 
+        {"head": "Thirty Lies or So", "type": "cast member", "tail": "Miki Nakatani"}, 
+        {"head": "Thirty Lies or So", "type": "publication date", "tail": "2004-01-01T00:00:00Z"}
+    ]
+}

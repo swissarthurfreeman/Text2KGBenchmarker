@@ -1,0 +1,443 @@
+{"qid": "Q16833834", "label": "Arnold"}
+{"qid": "Q173136", "label": "Blender"}
+{"qid": "Q195946", "label": "LilyPond"}
+{"qid": "Q272597", "label": "Maya"}
+{"qid": "Q207656", "label": "Apache Wave"}
+{"qid": "Q219136", "label": "Outlook.com"}
+{"qid": "Q9334", "label": "Gmail"}
+{"qid": "Q868165", "label": "Yahoo! Mail"}
+{"qid": "Q3903488", "label": "Hotmail"}
+{"qid": "Q1860793", "label": "Scream Tracker"}
+{"qid": "Q3773423", "label": "Google Public Data Explorer"}
+{"qid": "Q1951595", "label": "MuPAD"}
+{"qid": "Q795066", "label": "GeoGebra"}
+{"qid": "Q487834", "label": "Gecko"}
+{"qid": "Q190434", "label": "Moodle"}
+{"qid": "Q967570", "label": "PowerDVD"}
+{"qid": "Q90902620", "label": "Synapse Media Player"}
+{"qid": "Q64692742", "label": "Little Sound Disk Jockey"}
+{"qid": "Q17355735", "label": "Proton Mail"}
+{"qid": "Q1778544", "label": "Mesa"}
+{"qid": "Q885580", "label": "BlueGriffon"}
+{"qid": "Q17055454", "label": "HoTMetaL"}
+{"qid": "Q157758", "label": "Nvu"}
+{"qid": "Q590890", "label": "WorldWideWeb"}
+{"qid": "Q156197", "label": "SeaMonkey"}
+{"qid": "Q8038", "label": "GIMP"}
+{"qid": "Q129793", "label": "Adobe Photoshop"}
+{"qid": "Q171186", "label": "Blogger"}
+{"qid": "Q206904", "label": "R"}
+{"qid": "Q599894", "label": "ERC"}
+{"qid": "Q1321700", "label": "Firebug"}
+{"qid": "Q1122325", "label": "Gears"}
+{"qid": "Q108267084", "label": "Wwwyzzerdd"}
+{"qid": "Q65072923", "label": "Procreate"}
+{"qid": "Q94572564", "label": "AVIM for Firefox"}
+{"qid": "Q115867394", "label": "Graze for Mastodon"}
+{"qid": "Q5204274", "label": "GNU Dap"}
+{"qid": "Q74667091", "label": "HOUDINI"}
+{"qid": "Q1848165", "label": "GNU PSPP"}
+{"qid": "Q2296465", "label": "Yahoo! 360\u00b0"}
+{"qid": "Q74587961", "label": "MaxThink"}
+{"qid": "Q126945830", "label": "Riece"}
+{"qid": "Q126946316", "label": "Liece"}
+{"qid": "Q105436640", "label": "Circe"}
+{"qid": "Q113585511", "label": "R"}
+{"qid": "Q2246312", "label": "GNU Freetalk"}
+{"qid": "Q17940363", "label": "LibreJS"}
+{"qid": "Q1533310", "label": "Gnus"}
+{"qid": "Q63064965", "label": "mu"}
+{"qid": "Q7120024", "label": "POPmail"}
+{"qid": "Q58327261", "label": "Photopea"}
+{"qid": "Q38352586", "label": "Unpaywall"}
+{"qid": "Q119931", "label": "Stellarium"}
+{"qid": "Q197520", "label": "NumPy"}
+{"qid": "Q223679", "label": "GNU Octave"}
+{"qid": "Q253509", "label": "more"}
+{"qid": "Q307263", "label": "fish"}
+{"qid": "Q333618", "label": "Snapchat"}
+{"qid": "Q307228", "label": "Org-mode"}
+{"qid": "Q345096", "label": "less"}
+{"qid": "Q839063", "label": "Oddmuse"}
+{"qid": "Q648357", "label": "FaceTime"}
+{"qid": "Q526699", "label": "XWiki"}
+{"qid": "Q4345795", "label": "1C:Accounting"}
+{"qid": "Q5259636", "label": "Dentrix"}
+{"qid": "Q1144644", "label": "TiddlyWiki"}
+{"qid": "Q1064516", "label": "C shell"}
+{"qid": "Q1211204", "label": "The Ballad of Sexual Dependency"}
+{"qid": "Q1954324", "label": "Perl Shell"}
+{"qid": "Q2932442", "label": "Cabri Geometry"}
+{"qid": "Q937466", "label": "GNU Mailman project"}
+{"qid": "Q3723813", "label": "Emacs/W3"}
+{"qid": "Q1639816", "label": "Video Disk Recorder"}
+{"qid": "Q3038439", "label": "GNU Dr. Geo"}
+{"qid": "Q15967387", "label": "pandas"}
+{"qid": "Q11233469", "label": "Mitaka"}
+{"qid": "Q24415127", "label": "Hugo"}
+{"qid": "Q30339330", "label": "XDM"}
+{"qid": "Q62845380", "label": "GNU MPC"}
+{"qid": "Q71445065", "label": "GNU Astronomy Utilities"}
+{"qid": "Q368338", "label": "Microsoft Publisher"}
+{"qid": "Q76185133", "label": "JACAL"}
+{"qid": "Q91904395", "label": "mu4e"}
+{"qid": "Q105704249", "label": "Text-to-speech browser extension: Intelligent Speaker"}
+{"qid": "Q118609660", "label": "To Put Oneself in Between"}
+{"qid": "Q126728391", "label": "Jgraph"}
+{"qid": "Q94979732", "label": "Zoom"}
+{"qid": "Q113571627", "label": "Bower"}
+{"qid": "Q5996014", "label": "ikiwiki"}
+{"qid": "Q10852203", "label": "PukiWiki"}
+{"qid": "Q13231451", "label": "Google Hangouts"}
+{"qid": "Q7307078", "label": "RefTeX"}
+{"qid": "Q15616276", "label": "Telegram"}
+{"qid": "Q19598118", "label": "ncdu"}
+{"qid": "Q64821135", "label": "gited"}
+{"qid": "Q65645666", "label": "Janeway"}
+{"qid": "Q67139565", "label": "GNU Hyperbole"}
+{"qid": "Q114072315", "label": "notmuch-indicator"}
+{"qid": "Q115323166", "label": "racket-mode"}
+{"qid": "Q116046779", "label": "emacs-embark"}
+{"qid": "Q125699400", "label": "Berty"}
+{"qid": "Q113488668", "label": "emacs-consult"}
+{"qid": "Q114425373", "label": "emacs-hcel"}
+{"qid": "Q116542083", "label": "emacs-poke"}
+{"qid": "Q113049853", "label": "CDLaTeX"}
+{"qid": "Q115039724", "label": "emacs-hydra"}
+{"qid": "Q127120197", "label": "poke-mode"}
+{"qid": "Q113848674", "label": "Emacs PHP Mode"}
+{"qid": "Q117151276", "label": "emacs-denote-menu"}
+{"qid": "Q117151495", "label": "emacs-denote"}
+{"qid": "Q117301856", "label": "Elpher"}
+{"qid": "Q117881550", "label": "emacs-marginalia"}
+{"qid": "Q121079826", "label": "sed-mode"}
+{"qid": "Q124726177", "label": "emacs-htmlize"}
+{"qid": "Q125199103", "label": "MPDired"}
+{"qid": "Q125929196", "label": "emacs-devdocs"}
+{"qid": "Q125939237", "label": "Org-remark"}
+{"qid": "Q125940122", "label": "omn-mode"}
+{"qid": "Q126936463", "label": "Notes-Mode"}
+{"qid": "Q127023029", "label": "org-translate"}
+{"qid": "Q127066341", "label": "emacs-persist"}
+{"qid": "Q130459509", "label": "emacs-slime-volleyball"}
+{"qid": "Q91239960", "label": "Rt.live COVID-19 Dashboard"}
+{"qid": "Q105047347", "label": "kiwix.el"}
+{"qid": "Q78514485", "label": "SourceHut"}
+{"qid": "Q101111314", "label": "Scheme Scribe"}
+{"qid": "Q91216054", "label": "nCoV2019 Coronavirus Dashboard"}
+{"qid": "Q91237975", "label": "COVID-19 Saudi Dashboard"}
+{"qid": "Q91240484", "label": "COVID-19 Tunisian Dashboard"}
+{"qid": "Q100702000", "label": "Coronalert"}
+{"qid": "Q91222048", "label": "COVID-19 Virginia Dashboard"}
+{"qid": "Q91224964", "label": "Tableau's Coronavirus Data Resource Hub"}
+{"qid": "Q91225484", "label": "COVID-19 India Dashboard"}
+{"qid": "Q91217102", "label": "Florida's COVID-19 Data and Surveillance Dashboard"}
+{"qid": "Q91218774", "label": "COVID-19 French Dashboard"}
+{"qid": "Q91239084", "label": "Milwaukee County COVID-19 Dashboard"}
+{"qid": "Q111367937", "label": "emacs-rec-mode"}
+{"qid": "Q111817520", "label": "gtags-mode"}
+{"qid": "Q107168920", "label": "Kulturdata Bot"}
+{"qid": "Q103994532", "label": "Obsidian"}
+{"qid": "Q73512921", "label": "Siril"}
+{"qid": "Q67955064", "label": "CESim"}
+{"qid": "Q91224234", "label": "Bing COVID-19 Tracker"}
+{"qid": "Q91226288", "label": "COVID-19 Singapore Dashboard"}
+{"qid": "Q91226743", "label": "COVID-19 ADHS Dashboard"}
+{"qid": "Q91227376", "label": "COVID-19 Louisiana Dashboard"}
+{"qid": "Q90793934", "label": "COVID19 Dashboard"}
+{"qid": "Q91145719", "label": "SARS-CoV-2-Queries"}
+{"qid": "Q91219501", "label": "COVID-19 European Dashboard"}
+{"qid": "Q91220200", "label": "COVID-19 Pakistani Dashboard"}
+{"qid": "Q91222568", "label": "COVID-19 VHHA Dashboard"}
+{"qid": "Q91223483", "label": "COVID-19 ZA Dashboard"}
+{"qid": "Q91228269", "label": "Travis Austin County COVID-19 Public Dashboard"}
+{"qid": "Q91228975", "label": "COVID-19 Michigan Dashboard"}
+{"qid": "Q101112047", "label": "Skribilo"}
+{"qid": "Q90796598", "label": "Coronavirus Research Center"}
+{"qid": "Q91229763", "label": "COVID-19 Australian Dashboard"}
+{"qid": "Q283992", "label": "ed"}
+{"qid": "Q5530385", "label": "Gelato"}
+{"qid": "Q17280647", "label": "MAPS.ME"}
+{"qid": "Q56221667", "label": "StreetComplete"}
+{"qid": "Q108429209", "label": "csharp-mode"}
+{"qid": "Q113107632", "label": "Emacs Org-Babel"}
+{"qid": "Q110304860", "label": "js2-mode"}
+{"qid": "Q113578745", "label": "emacs-web-mode"}
+{"qid": "Q110216643", "label": "emacs-gnugo"}
+{"qid": "Q111172756", "label": "emacs-osm"}
+{"qid": "Q111043241", "label": "emacs-code-cells"}
+{"qid": "Q125635476", "label": "Project IDX"}
+{"qid": "Q126327732", "label": "csv2ledger"}
+{"qid": "Q110475818", "label": "Mentor"}
+{"qid": "Q110315224", "label": "cflow-mode"}
+{"qid": "Q113027239", "label": "ada-mode"}
+{"qid": "Q113110920", "label": "Emacs Artist Mode"}
+{"qid": "Q12013", "label": "Google Maps"}
+{"qid": "Q91246289", "label": "Worldometer COVID-19 Dashboard"}
+{"qid": "Q91241668", "label": "COVID-19 Zoho Dashboard"}
+{"qid": "Q91267386", "label": "Tracking the spread of coronavirus cases in the US and worldwide"}
+{"qid": "Q91323148", "label": "US Health Wealth Map"}
+{"qid": "Q91243798", "label": "COVID-19 Palestinian Dashboard"}
+{"qid": "Q91266351", "label": "Datawrapper Coronavirus Charts"}
+{"qid": "Q91317897", "label": "CDC's COVID-19 Travel Recommendations by Country"}
+{"qid": "Q91319837", "label": "HealthMap COVID-19 news dashboard"}
+{"qid": "Q91242139", "label": "COVID-19 New Jersey Dashboard"}
+{"qid": "Q91243003", "label": "COVID-19 New Mexico Dashboard"}
+{"qid": "Q91324115", "label": "Urban Footprint COVID-19 dashboard"}
+{"qid": "Q91241285", "label": "COVID-19 MENA Dashboard"}
+{"qid": "Q91264052", "label": "COVID19 Infodemics Observatory"}
+{"qid": "Q91326536", "label": "COVID-19 Africa CDC Dashboard"}
+{"qid": "Q91336649", "label": "The Insidious Big Brother Database"}
+{"qid": "Q97385617", "label": "Florida COVID Action Dashboard"}
+{"qid": "Q91319283", "label": "HealthMap COVID-19 dashboard"}
+{"qid": "Q100414803", "label": "DC Historic Sites"}
+{"qid": "Q91242433", "label": "COVID-19 Surveillance Dashboard"}
+{"qid": "Q91243426", "label": "COVID-19 North Ireland Dashboard"}
+{"qid": "Q91244331", "label": "COVID-19 Global Cases - Open Source Version"}
+{"qid": "Q91245835", "label": "IBM Global COVID-19 Statistics"}
+{"qid": "Q91267039", "label": "Coronavirus in the U.S.: Latest Map and Case Count"}
+{"qid": "Q191782", "label": "Audacity"}
+{"qid": "Q185037", "label": "Amarok"}
+{"qid": "Q165777", "label": "Windows Movie Maker"}
+{"qid": "Q193493", "label": "Winamp"}
+{"qid": "Q201904", "label": "Qt"}
+{"qid": "Q640004", "label": "Ardour"}
+{"qid": "Q371060", "label": "Google Reader"}
+{"qid": "Q723030", "label": "AsciiDoc"}
+{"qid": "Q820849", "label": "Berkeley packet filter"}
+{"qid": "Q5301", "label": "TeX"}
+{"qid": "Q461", "label": "Internet Archive"}
+{"qid": "Q1937419", "label": "Sequel"}
+{"qid": "Q6944813", "label": "MyEnvironment"}
+{"qid": "Q1141484", "label": "WEB"}
+{"qid": "Q7838011", "label": "Trello"}
+{"qid": "Q1237350", "label": "North Rhine-Westphalian Bibliography"}
+{"qid": "Q2659957", "label": "IPython"}
+{"qid": "Q3415130", "label": "RDoc"}
+{"qid": "Q214743", "label": "vi"}
+{"qid": "Q188876", "label": "ping"}
+{"qid": "Q18125760", "label": "HTML5test"}
+{"qid": "Q22944330", "label": "Slovn\u00edk \u010desk\u00fdch nakladatelstv\u00ed 1848\u20131949"}
+{"qid": "Q25706819", "label": "DGLux5"}
+{"qid": "Q24960556", "label": "Palbin"}
+{"qid": "Q283302", "label": "grep"}
+{"qid": "Q42309254", "label": "ConedaKOR"}
+{"qid": "Q28969703", "label": "Vegas Pro"}
+{"qid": "Q55090238", "label": "Science Stories"}
+{"qid": "Q2033", "label": "Notepad++"}
+{"qid": "Q42274", "label": "Google Earth"}
+{"qid": "Q648266", "label": "Wayback Machine"}
+{"qid": "Q300883", "label": "sudo"}
+{"qid": "Q286306", "label": "curl"}
+{"qid": "Q288684", "label": "groff"}
+{"qid": "Q292952", "label": "Gretl"}
+{"qid": "Q115259353", "label": "openstreetmap-website"}
+{"qid": "Q110792952", "label": "Eshell"}
+{"qid": "Q114295241", "label": "GNUe DCL"}
+{"qid": "Q109930698", "label": "Forest Watcher"}
+{"qid": "Q111589693", "label": "Open Access Dashboard"}
+{"qid": "Q114970374", "label": "Compiler Explorer"}
+{"qid": "Q117050720", "label": "Cynthiune"}
+{"qid": "Q122946004", "label": "MyMoneySense"}
+{"qid": "Q69060303", "label": "Google Play Music Desktop Player"}
+{"qid": "Q112144378", "label": "Omniverse"}
+{"qid": "Q306101", "label": "GNU nano"}
+{"qid": "Q784762", "label": "Auto-Tune"}
+{"qid": "Q189722", "label": "Emacs"}
+{"qid": "Q220993", "label": "Gnumeric"}
+{"qid": "Q274098", "label": "Notepad"}
+{"qid": "Q4892130", "label": "Berkeley Yacc"}
+{"qid": "Q3093296", "label": "GNU SASL"}
+{"qid": "Q3887925", "label": "Pandora Archive"}
+{"qid": "Q3482882", "label": "Siag Office"}
+{"qid": "Q3093286", "label": "GNU Generic Security Service"}
+{"qid": "Q5204308", "label": "Discrete Anisotropic Radiative Transfer"}
+{"qid": "Q878713", "label": "BitTorrent"}
+{"qid": "Q1325930", "label": "type"}
+{"qid": "Q1147042", "label": "GCompris"}
+{"qid": "Q430526", "label": "Evernote"}
+{"qid": "Q130426667", "label": "Human Settlements Database of Argentine Republic"}
+{"qid": "Q131354730", "label": "Py-ChemShell"}
+{"qid": "Q110798857", "label": "Econometrics Software Library"}
+{"qid": "Q90364561", "label": "OpenBSD rpki-client"}
+{"qid": "Q99459795", "label": "Bolio"}
+{"qid": "Q105319881", "label": "PolyAnalyst"}
+{"qid": "Q115453201", "label": "Luwak"}
+{"qid": "Q97644687", "label": "farmOS"}
+{"qid": "Q64619287", "label": "Libtasn1"}
+{"qid": "Q122815546", "label": "Gal\u00e8ne"}
+{"qid": "Q76186445", "label": "GNU Shishi"}
+{"qid": "Q110943978", "label": "Yeshayahu Ilan Archive"}
+{"qid": "Q72271604", "label": "GNU Datamash"}
+{"qid": "Q108810443", "label": "Linkurious Enterprise"}
+{"qid": "Q62398084", "label": "Gazebo simulator"}
+{"qid": "Q1023126", "label": "CDS/ISIS"}
+{"qid": "Q864889", "label": "OneDrive"}
+{"qid": "Q1102277", "label": "Clonezilla"}
+{"qid": "Q1464634", "label": "GNU TeXmacs"}
+{"qid": "Q1544957", "label": "SAGA GIS"}
+{"qid": "Q1305902", "label": "UltraEdit"}
+{"qid": "Q1252773", "label": "GNU Emacs"}
+{"qid": "Q56062145", "label": "Joe's Abstract Machine"}
+{"qid": "Q28401317", "label": "youtube-dl"}
+{"qid": "Q56071786", "label": "Turbo Erlang Abstract Machine"}
+{"qid": "Q14636918", "label": "Adobe Creative Cloud"}
+{"qid": "Q25379882", "label": "GHTopo"}
+{"qid": "Q55840137", "label": "Sophox"}
+{"qid": "Q2331162", "label": "GNU LibreDWG"}
+{"qid": "Q1486221", "label": "GNU Parted"}
+{"qid": "Q1760409", "label": "LDraw"}
+{"qid": "Q3093278", "label": "GNU Dico"}
+{"qid": "Q2373116", "label": "Cisco Packet Tracer"}
+{"qid": "Q3063241", "label": "FINE"}
+{"qid": "Q3339150", "label": "Newsbeuter"}
+{"qid": "Q3045931", "label": "EINE"}
+{"qid": "Q3093311", "label": "GNU moe"}
+{"qid": "Q4537980", "label": "Yandex Maps"}
+{"qid": "Q4119396", "label": "vile"}
+{"qid": "Q5840968", "label": "NoteTab"}
+{"qid": "Q7489484", "label": "ShareLaTeX"}
+{"qid": "Q4537986", "label": "Yandex.Map Editor"}
+{"qid": "Q16723302", "label": "Yandex Taxi"}
+{"qid": "Q15893711", "label": "Gboard"}
+{"qid": "Q19834616", "label": "Google Pay"}
+{"qid": "Q18340732", "label": "Meduza"}
+{"qid": "Q107004065", "label": "Second-Climacs"}
+{"qid": "Q24817375", "label": "Xi"}
+{"qid": "Q104731385", "label": "Guile's VM"}
+{"qid": "Q28758126", "label": "JOT"}
+{"qid": "Q116908121", "label": "OpenStreetMap U.S. Tasking Manager"}
+{"qid": "Q74679064", "label": "TransText"}
+{"qid": "Q24835387", "label": "Toutiao"}
+{"qid": "Q76184851", "label": "GTick"}
+{"qid": "Q113441443", "label": "QEmacs"}
+{"qid": "Q30612706", "label": "Files"}
+{"qid": "Q56318723", "label": "Yuka"}
+{"qid": "Q48806004", "label": "Patatap"}
+{"qid": "Q27435045", "label": "FindFace"}
+{"qid": "Q698", "label": "Firefox"}
+{"qid": "Q22079675", "label": "Beme"}
+{"qid": "Q25874683", "label": "Nextcloud"}
+{"qid": "Q27063359", "label": "Omni"}
+{"qid": "Q540", "label": "Hyphanet"}
+{"qid": "Q9340", "label": "Google Drive"}
+{"qid": "Q109942901", "label": "Itzuli"}
+{"qid": "Q106752451", "label": "fabulAPP"}
+{"qid": "Q107168924", "label": "NMSee"}
+{"qid": "Q100885109", "label": "Inspiredly"}
+{"qid": "Q111947460", "label": "BeReal"}
+{"qid": "Q107168891", "label": "berlinHistory"}
+{"qid": "Q108555800", "label": "Ad Altum"}
+{"qid": "Q108297356", "label": "Meta Meme"}
+{"qid": "Q108929265", "label": "MyGNUHealth"}
+{"qid": "Q111467112", "label": "Patriot"}
+{"qid": "Q114414086", "label": "Proton Drive"}
+{"qid": "Q111968678", "label": "Speak (What They Speak When They Speak to Me)"}
+{"qid": "Q82268", "label": "Eclipse"}
+{"qid": "Q142539", "label": "Dropbox"}
+{"qid": "Q41525", "label": "JDeveloper"}
+{"qid": "Q87068904", "label": "ToposText"}
+{"qid": "Q97379831", "label": "Diia"}
+{"qid": "Q65210790", "label": "AMUSE"}
+{"qid": "Q90575594", "label": "Caixa Aux\u00edlio Emergencial"}
+{"qid": "Q95598020", "label": "VIA Rail app"}
+{"qid": "Q65212817", "label": "DreamLab"}
+{"qid": "Q72188926", "label": "Fearless"}
+{"qid": "Q71224475", "label": "Bom Perfil"}
+{"qid": "Q65158665", "label": "Yandex.Eda"}
+{"qid": "Q83947651", "label": "elia.eus"}
+{"qid": "Q784816", "label": "AutoHotkey"}
+{"qid": "Q243720", "label": "GameMaker"}
+{"qid": "Q488886", "label": "Flock"}
+{"qid": "Q509075", "label": "OpenVPN"}
+{"qid": "Q4798119", "label": "RStudio"}
+{"qid": "Q386283", "label": "Folding@home"}
+{"qid": "Q848618", "label": "Google Notebook"}
+{"qid": "Q1053535", "label": "Processing"}
+{"qid": "Q1011979", "label": "Google Latitude"}
+{"qid": "Q1422754", "label": "Poedit"}
+{"qid": "Q2009630", "label": "GNU IceCat"}
+{"qid": "Q5513172", "label": "GENESIS"}
+{"qid": "Q3093304", "label": "GNU gcal"}
+{"qid": "Q2703769", "label": "GNU Health"}
+{"qid": "Q5514035", "label": "GNUmed"}
+{"qid": "Q4994212", "label": "Hypertext Editing System"}
+{"qid": "Q5615425", "label": "Guide"}
+{"qid": "Q22906900", "label": "Brave"}
+{"qid": "Q5514024", "label": "GNU MIX Development Kit"}
+{"qid": "Q5448331", "label": "File Retrieval and Editing System"}
+{"qid": "Q1575", "label": "Internet Explorer"}
+{"qid": "Q336251", "label": "Evolution"}
+{"qid": "Q285939", "label": "Fetchmail"}
+{"qid": "Q55080330", "label": "Arduino IDE"}
+{"qid": "Q114127561", "label": "Ladybird"}
+{"qid": "Q104853343", "label": "Firefox Lite"}
+{"qid": "Q54392719", "label": "Beaker"}
+{"qid": "Q114357863", "label": "Sweeprolog"}
+{"qid": "Q70860987", "label": "TVEDIT"}
+{"qid": "Q124960427", "label": "Supermium"}
+{"qid": "Q29351168", "label": "The Web Stalker"}
+{"qid": "Q111967621", "label": "VSCodium"}
+{"qid": "Q7201347", "label": "Emacs planner"}
+{"qid": "Q21592138", "label": "Sonic Pi"}
+{"qid": "Q15427600", "label": "GNU ddrescue"}
+{"qid": "Q17074748", "label": "PhET Interactive Simulations"}
+{"qid": "Q1165026", "label": "Sigil"}
+{"qid": "Q1160381", "label": "WinSCP"}
+{"qid": "Q1340000", "label": "GNU Midnight Commander"}
+{"qid": "Q1330685", "label": "Windows Meeting Space"}
+{"qid": "Q1171880", "label": "Dasher"}
+{"qid": "Q1368325", "label": "GNU Aspell"}
+{"qid": "Q2068555", "label": "Pen"}
+{"qid": "Q1856463", "label": "WorkXplore 3D"}
+{"qid": "Q1386527", "label": "FAR Manager"}
+{"qid": "Q94994727", "label": "HTML Slidy"}
+{"qid": "Q104837478", "label": "manim"}
+{"qid": "Q110288566", "label": "DAMASK"}
+{"qid": "Q108004230", "label": "rtnf"}
+{"qid": "Q122375804", "label": "Gifski"}
+{"qid": "Q124753693", "label": "OO-Browser"}
+{"qid": "Q76185169", "label": "GNU Java Training Wheels"}
+{"qid": "Q74878673", "label": "snapcraft"}
+{"qid": "Q60918612", "label": "GNU Complexity"}
+{"qid": "Q63995574", "label": "X3watch"}
+{"qid": "Q76184166", "label": "Sqltutor"}
+{"qid": "Q6512657", "label": "Ledger"}
+{"qid": "Q5416930", "label": "Evercookie"}
+{"qid": "Q3400976", "label": "Microsoft PowerToys"}
+{"qid": "Q3898244", "label": "MediaInfo"}
+{"qid": "Q5296989", "label": "Doodle Kids"}
+{"qid": "Q7072787", "label": "OOFEM"}
+{"qid": "Q7207919", "label": "PointTracker"}
+{"qid": "Q26879061", "label": "i-Pathways"}
+{"qid": "Q1145324", "label": "Windows Live Toolbar"}
+{"qid": "Q948619", "label": "F-Spot"}
+{"qid": "Q7784249", "label": "ThinThread"}
+{"qid": "Q19881587", "label": "uBlock Origin"}
+{"qid": "Q130689601", "label": "Playground"}
+{"qid": "Q114419986", "label": "AdNauseam"}
+{"qid": "Q115557933", "label": "New Belarus"}
+{"qid": "Q111610305", "label": "Bitmoji"}
+{"qid": "Q116200240", "label": "Convoz"}
+{"qid": "Q125499727", "label": "Google Assistant"}
+{"qid": "Q125492419", "label": "Google Earth"}
+{"qid": "Q115566488", "label": "Epson iPrint"}
+{"qid": "Q115800460", "label": "TILA App"}
+{"qid": "Q116101300", "label": "NauNau"}
+{"qid": "Q122224301", "label": "Viator (app)"}
+{"qid": "Q125252763", "label": "Nheengatu App"}
+{"qid": "Q125807217", "label": "Mechanismus von Antikythera"}
+{"qid": "Q125929167", "label": "OpenProfile"}
+{"qid": "Q130710766", "label": "Around Us"}
+{"qid": "Q125807176", "label": "Schifffahrtsmuseum Rostock"}
+{"qid": "Q121140358", "label": "Proton Mail"}
+{"qid": "Q105078662", "label": "DALL-E"}
+{"qid": "Q65618849", "label": "xinput"}
+{"qid": "Q65621316", "label": "hoverboard-sdl"}
+{"qid": "Q67144468", "label": "Bridgefy"}
+{"qid": "Q106936118", "label": "Nosh"}
+{"qid": "Q106967222", "label": "Authority Toolkit: Create and Modify Authority Records"}
+{"qid": "Q108570389", "label": "Jeremy Renner Official"}
+{"qid": "Q110438392", "label": "mu4e-dashboard"}
+{"qid": "Q115010482", "label": "Cobudget"}
+{"qid": "Q115648255", "label": "ledger2beancount"}

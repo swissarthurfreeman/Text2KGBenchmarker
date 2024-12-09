@@ -197,31 +197,31 @@ def generate_global_averages(llm_metrics_folder_name: str):
         table_f.write("dataset, subset, P, R, F1, OC, SH, RH, OH\n")
         for typ in avg_metrics_wikidata_tekgen.keys():
             if typ in ["unseen", "all", "verified"]:
-                table_f.write(f"wikidata_tekgen, {typ}, {avg_metrics_wikidata_tekgen[typ]["avg_precision"]:.2f}, {avg_metrics_wikidata_tekgen[typ]["avg_recall"]:.2f}, ")
-                table_f.write(f"{avg_metrics_wikidata_tekgen[typ]["avg_f1"]:.2f}, {avg_metrics_wikidata_tekgen[typ]["avg_onto_conf"]:.2f}, ")
-                table_f.write(f"{avg_metrics_wikidata_tekgen[typ]["avg_sub_halluc"]:.2f}, {avg_metrics_wikidata_tekgen[typ]["avg_rel_halluc"]:.2f}, ")
-                table_f.write(f"{avg_metrics_wikidata_tekgen[typ]["avg_obj_halluc"]:.2f}\n")
+                table_f.write(f"wikidata_tekgen, {typ}, {avg_metrics_wikidata_tekgen[typ]['avg_precision']:.2f}, {avg_metrics_wikidata_tekgen[typ]['avg_recall']:.2f}, ")
+                table_f.write(f"{avg_metrics_wikidata_tekgen[typ]['avg_f1']:.2f}, {avg_metrics_wikidata_tekgen[typ]['avg_onto_conf']:.2f}, ")
+                table_f.write(f"{avg_metrics_wikidata_tekgen[typ]['avg_sub_halluc']:.2f}, {avg_metrics_wikidata_tekgen[typ]['avg_rel_halluc']:.2f}, ")
+                table_f.write(f"{avg_metrics_wikidata_tekgen[typ]['avg_obj_halluc']:.2f}\n")
         
         for typ in avg_metrics_dpedia_webnlg.keys():
-            if typ in ["unseen", "all", "verified"]:
-                table_f.write(f"dpedia_webnlg, {typ}, {avg_metrics_dpedia_webnlg[typ]["avg_precision"]:.2f}, {avg_metrics_dpedia_webnlg[typ]["avg_recall"]:.2f}, ")
-                table_f.write(f"{avg_metrics_dpedia_webnlg[typ]["avg_f1"]:.2f}, {avg_metrics_dpedia_webnlg[typ]["avg_onto_conf"]:.2f}, ")
-                table_f.write(f"{avg_metrics_dpedia_webnlg[typ]["avg_sub_halluc"]:.2f}, {avg_metrics_dpedia_webnlg[typ]["avg_rel_halluc"]:.2f}, ")
-                table_f.write(f"{avg_metrics_dpedia_webnlg[typ]["avg_obj_halluc"]:.2f}\n")
+            if typ in ['unseen', 'all', 'verified']:
+                table_f.write(f"dpedia_webnlg, {typ}, {avg_metrics_dpedia_webnlg[typ]['avg_precision']:.2f}, {avg_metrics_dpedia_webnlg[typ]['avg_recall']:.2f}, ")
+                table_f.write(f"{avg_metrics_dpedia_webnlg[typ]['avg_f1']:.2f}, {avg_metrics_dpedia_webnlg[typ]['avg_onto_conf']:.2f}, ")
+                table_f.write(f"{avg_metrics_dpedia_webnlg[typ]['avg_sub_halluc']:.2f}, {avg_metrics_dpedia_webnlg[typ]['avg_rel_halluc']:.2f}, ")
+                table_f.write(f"{avg_metrics_dpedia_webnlg[typ]['avg_obj_halluc']:.2f}\n")
 
 
 if __name__ ==  "__main__":
-    llm_response_folder_name = "Babelscape.rebel-large-6-beams-rel-map" 
-    for ontology_name in DPEDIA_WEBNLG_ONT_NAMES:
-        # NOTE : using dpedia_webnlg_clean or dpedia_webnlg on rebel performance should
-        # not make any difference since we remove underscores and camelcasing in the code
-        # before computing comparison metrics.
-        l = LLMMetrics(llm_response_folder_name, ontology_name, "dpedia_webnlg_clean")
-        l.generate()
+    llm_response_folder_name = "rebel-fine-tune-2-ret-seq" 
+    #for ontology_name in DPEDIA_WEBNLG_ONT_NAMES:
+    #    # NOTE : using dpedia_webnlg_clean or dpedia_webnlg on rebel performance should
+    #    # not make any difference since we remove underscores and camelcasing in the code
+    #    # before computing comparison metrics.
+    #    l = LLMMetrics(llm_response_folder_name, ontology_name, "dpedia_webnlg_clean")
+    #    l.generate()
     
-    for ontology_name in WIKIDATA_TEKGEN_ONT_NAMES:
-        l = LLMMetrics(llm_response_folder_name, ontology_name, "wikidata_tekgen")
-        l.generate()
+    #for ontology_name in WIKIDATA_TEKGEN_ONT_NAMES:
+    l = LLMMetrics(llm_response_folder_name, "ont_1_movie", "wikidata_tekgen")
+    l.generate()
 
     generate_global_averages(llm_response_folder_name)
     

@@ -7,24 +7,28 @@ from SPARQLWrapper import SPARQLWrapper, JSON
 from pandas import json_normalize
 from pprint import pprint
 from time import time
+from time import sleep
 import json
+import sys
 
-def getEntitiesOfType(qid: str, n: int) -> list[dict]:
+def getEntitiesOfType(ent_file_path: str, triples_path: str, qid: str, n: int) -> list[dict]:
         """retrieve list of n wikidata instances of entity qid, P31 is instance of, P279 is subclass of,
         this function will filter out triples for the which we don't have a label."""
+        
         sparqlwd_caller = SPARQLWrapper(
             "https://query.wikidata.org/sparql", 
             agent='TripleSentenceGeneratorBot; (github.com/swissarthurfreeman/; arthur.freeman@unige.ch)'
         )
         sparqlwd_caller.setReturnFormat(JSON)
         q = f"""
-        SELECT ?item ?itemLabel
+        SELECT DISTINCT ?item ?itemLabel
         WHERE {{
             ?item wdt:P31/wdt:P279* wd:{qid};
                     rdfs:label ?itemLabel;
+                    wdt:P2094 ?whatever;
             FILTER (lang(?itemLabel) = "en").
         }}
-        LIMIT {n}
+        LIMIT {n+1}
         """
         
         sparqlwd_caller.setQuery(q)
@@ -35,14 +39,15 @@ def getEntitiesOfType(qid: str, n: int) -> list[dict]:
         } for res in raw_results]
         
         qids = []
-        with open("ont_1_movie.jsonl") as f:
+        with open(triples_path) as f:
             qids = [json.loads(line)['triples'][0]['sqid'] for line in f] 
         
         entities = [ent for ent in entities if ent['qid'] not in qids]
         
-        with open("./" + qid + ".jsonl", "a") as f:
+        with open(ent_file_path, "a") as f:
             for entity in entities:
-                f.write(json.dumps(entity) + "\n")
+                if len(entity['label']) < 70:
+                    f.write(json.dumps(entity) + "\n")
         return entities
     
 
@@ -82,10 +87,12 @@ class TripleGenerator:
         
     def generate(self, thread=0) -> None:
         """Generate n triple sets for type_qid qid class instance."""
+        count = 0
+        
         while len(self.root_entities) > 0:
-            print("T", thread, len(self.root_entities), "entities to go")
+            #print("T", thread, len(self.root_entities), "entities to go")
             entity = self.root_entities.pop(0)
-            print("T", thread, "Query triples of", json.dumps(entity))
+            #print("T", thread, "Query triples of", json.dumps(entity))
             # if a wikidata id, don't take the entity
             if entity['label'].split("Q")[-1].isdigit():
                 print("continue, is digit")
@@ -97,12 +104,18 @@ class TripleGenerator:
                 print("continue, no triples")
                 continue
             with open("./" + self.ontology_path.split("/")[-1] + "l", "a") as f:
-                print("Writing at", time() / 60, "minutes.")
+                print("T", thread, " writing at", time() / 60, "minutes, count", count, "left", len(self.root_entities))
                 f.write(json.dumps(triples) + "\n")
+                count += 1
+            
+            if count % 50 == 0:
+                print("T", thread, "goes to sleep.")
+                sleep(60)       # sleep 5 minutes, then continue to avoid overloading request wise
+        print("T", thread, "is done.")
             
     def getTriplesOfEntity(self, entity: dict) -> list[dict]:
         """retrieve all triples with qid as subject"""
-        print("Get triples of", json.dumps(entity))
+        #print("Get triples of", json.dumps(entity))
         triples: list[dict] = []
         
         for pid in self.relations.keys():
@@ -116,7 +129,6 @@ class TripleGenerator:
             """
             self.sparqlwd_caller.setQuery(q)
             raw_results = self.sparqlwd_caller.query().convert()['results']['bindings']
-            print("Obtained raw results", json.dumps(raw_results))
             
             for obj in raw_results:
                 # only keep triples that follow the ontology, award_received(film, award), entity needs to be
@@ -199,10 +211,10 @@ class TripleGenerator:
         return False 
             
 
-def worker(i, n_threads, entities):
+def worker(i, onto_path, n_threads, entities):
     generator = TripleGenerator(
             'TripGen/3.0 (https://github.com/swissarthurfreeman/; arthur.freeman@unige.ch)',
-            '../wikidata_tekgen/ontologies/ont_1_movie.json',
+            onto_path,
             entities=entities[i*(len(entities)//n_threads):(i+1)*(len(entities)//n_threads)]
         )
     generator.generate(i)
@@ -227,35 +239,50 @@ def fold_triples(path: str) -> None:
             f.write(json.dumps({ 'id': "ont_1_movie_train_" + key, 'triples': res[key] }) + "\n")
 
 if __name__ == "__main__":
-    """
+    onto_name = sys.argv[1]         #'ont_5_military'
+    root_qids = sys.argv[2:]        #['Q5', 'Q1184840', 'Q18643213', 'Q2008856', 'Q17149090']
+    print(root_qids)
+    # for sports, Q5 Q27020041 Q4438121
+    onto_path = f'../ontologies/{onto_name}.json'
+    
+    # python3 gen_triples.py ont_5_military Q5 Q1184840 Q18643213 Q2008856 Q17149090
+    # python3 gen_triples.py ont_3_sport Q5 Q27020041 Q4438121
+    # python3 gen_triples.py ont_6_computer Q7397 Q166142 Q55990535
+    #root_qid = 'Q4438121'
+    #root_ent_path = f"{onto_name}_root_entities_{root_qid}.jsonl"
+    #getEntitiesOfType(root_ent_path, onto_name + ".jsonl", root_qid, 5_000)
+    #exit(0)
+    
     start = time()
     
-    n_threads = 5
+    n_threads = 8
     pool = ThreadPool(n_threads)
     
-    qids = []
-    with open("ont_1_movie.jsonl") as f:
+    qids = []   # root qids for which triples have already been fetched
+    with open(f"{onto_name}.jsonl") as f:
         qids = [json.loads(line)['triples'][0]['sqid'] for line in f] 
             
-    entities = []
-    with open("Q11424.jsonl") as f:
-        for line in f:
-            ent = json.loads(line)
-            if ent['qid'] not in qids:
-                entities.append(ent)
+    entities = []   # entities for the which triples haven't yet been fetched
+    for root_qid in root_qids:
+        with open(f"{onto_name}_root_entities_{root_qid}.jsonl") as f:
+            for line in f:
+                ent = json.loads(line)
+                if ent['qid'] not in qids:
+                    entities.append(ent)
                 
     print("Querying...")
-    
+    #entities = entities[:len(entities) - (len(entities) % n_threads)]
     print(len(entities))
+    #worker(0, 1, entities)
     for i in range(n_threads):
-        pool.apply_async(worker, (i,  n_threads, entities))
+        pool.apply_async(worker, (i, onto_path, n_threads, entities))
     
     pool.close()
     pool.join()
     
     end = time() - start
     print("This took", end / 60, "minutes for", len(entities), "samples")
-    """
     
-    fold_triples("./ont_1_movie.jsonl")
+    
+    #fold_triples("./ont_1_movie.jsonl")
     

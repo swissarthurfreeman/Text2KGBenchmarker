@@ -1,0 +1,4 @@
+{"onto": "ont_1_movie", 
+"unseen": {"n_sentences": 26, "avg_precision": 0.1487179487179487, "avg_recall": 0.3846153846153846, "avg_f1": 0.20201465201465202, "avg_onto_conf": 0.9999999999999996, "avg_sub_halluc": 0.019230769230769232, "avg_rel_halluc": 0.0, "avg_obj_halluc": 0.09551282051282052}, 
+"verified": {"n_sentences": 195, "avg_precision": 0.3089336589336586, "avg_recall": 0.4852347652347646, "avg_f1": 0.35654108656728306, "avg_onto_conf": 0.9999999999999976, "avg_sub_halluc": 0.028205128205128206, "avg_rel_halluc": 0.0, "avg_obj_halluc": 0.11818681318681314}, 
+"all": {"n_sentences": 820, "avg_precision": 0.26464215323971435, "avg_recall": 0.39227461901242416, "avg_f1": 0.30001121047268103, "avg_onto_conf": 1.0000000000000007, "avg_sub_halluc": 0.0191869918699187, "avg_rel_halluc": 0.0, "avg_obj_halluc": 0.1122876412205682}}
