@@ -153,6 +153,7 @@ if __name__ == '__main__':
             forced_bos_token_id=None, no_repeat_ngram_size=0, early_stopping=False                
         )
         
+        # additional_special_tokens adds the provided tokens to the vocabulary
         tokenizer = AutoTokenizer.from_pretrained(
             pretrained_model_name_or_path=conf.repo_path + conf.tokenizer_name_or_path, use_fast=True,
             additional_special_tokens=['<obj>', '<subj>', '<triplet>', '<head>', '</head>', '<tail>', '</tail>']

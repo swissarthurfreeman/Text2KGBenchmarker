@@ -254,7 +254,7 @@ if __name__ == "__main__":
     # python3 gen_triples.py ont_5_military Q5 Q1184840 Q18643213 Q2008856 Q17149090
     # python3 gen_triples.py ont_3_sport Q5 Q27020041 Q4438121
     # python3 gen_triples.py ont_6_computer Q7397 Q166142 Q55990535
-    # python3 gen_triples.py ont_7_space Q5 Q2488 Q3863 Q5916 Q40218
+    # python3 gen_triples.py ont_7_space Q2488 Q3863 Q5916 Q40218 Q5
     # python3 gen_triples.py ont_9_nature Q16521 Q8502 Q355304 Q12323 Q15091377 Q7432
     #root_qid = 'Q482994'
     #root_ent_path = f"{onto_name}_root_entities_{root_qid}.jsonl"
@@ -263,7 +263,7 @@ if __name__ == "__main__":
     
     start = time()
     
-    n_threads = 8
+    n_threads = 10
     pool = ThreadPool(n_threads)
     
     qids = []   # root qids for which triples have already been fetched
