@@ -1,3 +1,4 @@
+import re
 import json
 import random
 from utils import getOntologyConceptsList, getOntologyRelationsList, load_jsonl_as_dict
@@ -62,7 +63,14 @@ class Prompter:
         self.train_sentences = load_jsonl_as_dict(self.train_sent_path)
         self.test_sent_path = "../../data/" + dataset_name + "/test/" + ontology_name + "_test.jsonl"
         self.test_sentences = load_jsonl_as_dict(self.test_sent_path)
-                    
+        
+        self.concepts: dict[str, str] = {}
+        
+        with open("../../data/" + dataset_name + "/ontologies/" + ontology_name + ".json") as f:
+            ont = json.load(f)
+            for concept in ont['concepts']:
+                self.concepts[concept['qid']] = concept['label']
+                
 
     def getPromptOf(self, test_sentence_id: str, n_examples: int) -> str:
         """
@@ -95,8 +103,10 @@ class Prompter:
             train_sentence, train_triples = self.train_sentences[similar_train_sent_id]["sent"], self.train_sentences[similar_train_sent_id]["triples"]
             res += "\n\nExample Sentence : " +  train_sentence + "\n\nExample Output:\n"
             for triple in train_triples:
-                res += triple["rel"].strip().replace(" ", "_") + "(" + triple["sub"].strip() + " | " + triple["obj"].strip() + ")" + "\n"
-        
+                res += triple["rel"].strip().replace(" ", "_") + "("
+                res += triple["sub"].strip() + " | "    
+                res += triple["obj"].strip() + ")" + "\n"
+                    
         res += "\n\nTest Sentence: " + test_sentence["sent"] + "\n\nTest Output: "
         return res
 
@@ -113,11 +123,10 @@ class Prompter:
 
 
 if __name__ == "__main__":
-    #wikidata_prompter = Prompter("wikidata_tekgen", "ont_9_nature")
-    #print(wikidata_prompter.getPromptOf("ont_9_nature_unseen_test_19", n_examples=5))
+    #wikidata_prompter = Prompter("wikidata_tekgen", "ont_1_movie")
+    #print(wikidata_prompter.getPromptOf("ont_1_movie_test_1", n_examples=5))
+    #dpedia_prompter = Prompter("dpedia_webnlg_clean", "ont_4_building")
+    #print(dpedia_prompter.getPromptOf("ont_4_building_test_1", n_examples=2))
     
-    
-    dpedia_prompter = Prompter("dpedia_webnlg_clean", "ont_4_building")
-    print(dpedia_prompter.getPromptOf("ont_4_building_test_1", n_examples=5))
-    
-    
+    wikidata_prompter = Prompter("wikidata_tekgen", "ont_1_movie")
+    print(wikidata_prompter.getPromptOf("ont_1_movie_test_53", n_examples=2))

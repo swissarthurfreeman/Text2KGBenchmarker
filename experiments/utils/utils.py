@@ -69,9 +69,21 @@ def getOntologyRelationsList(ontology_name: str, dataset_name: str) -> list[str]
     """
     with open("../../data/" + dataset_name + "/ontologies/" + ontology_name + ".json", "r") as ont_f:
         onto = json.load(ont_f)
+        
+        concepts: dict[str, str] = {}
+        for concept in onto['concepts']:
+                concepts[concept['qid']] = concept['label']
+                
         res = []
         for relation in onto["relations"]:
-            res.append(" ".join(camelCaseToSpaces(relation["label"]).split()).lower().strip())
+            rel_label = " ".join(camelCaseToSpaces(relation["label"]).lower().strip().replace(" ", "_").split())
+            domain_label = concepts[relation['domain']]
+            if relation['range'] == '': 
+                range_label = 'Literal'
+            else:
+                range_label = concepts[relation['range']]
+                
+            res.append(f"{rel_label}({domain_label} | {range_label})")
         return res
 
 def camelCaseToSpaces(word: str) -> str: 
