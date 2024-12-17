@@ -79,14 +79,14 @@ def getOntologyRelationsList(ontology_name: str, dataset_name: str) -> list[str]
             rel_label = " ".join(camelCaseToSpaces(relation["label"]).lower().strip().replace(" ", "_").split())
             domain_label = concepts[relation['domain']]
             if relation['range'] == '': 
-                range_label = 'Literal'
+                range_label = 'literal'
             else:
                 range_label = concepts[relation['range']]
                 
             res.append(f"{rel_label}({domain_label} | {range_label})")
         return res
 
-def camelCaseToSpaces(word: str) -> str: 
+def camelCaseToSpaces(word: str) -> str:
     """Split camel cases to spaces, e.g. 'CamelCaseString Hello hello' -> '  Camel  Case  String   Hello hello'
     all this function does is replace every capital letter 'X' by ' X'."""
     return re.sub('([A-Z][a-z]+)', r' \1', re.sub('([A-Z]+)', r' \1', word))

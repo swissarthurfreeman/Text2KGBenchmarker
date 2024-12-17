@@ -68,8 +68,7 @@ class Prompter:
         
         with open("../../data/" + dataset_name + "/ontologies/" + ontology_name + ".json") as f:
             ont = json.load(f)
-            for concept in ont['concepts']:
-                self.concepts[concept['qid']] = concept['label']
+            
                 
 
     def getPromptOf(self, test_sentence_id: str, n_examples: int) -> str:
@@ -128,5 +127,9 @@ if __name__ == "__main__":
     #dpedia_prompter = Prompter("dpedia_webnlg_clean", "ont_4_building")
     #print(dpedia_prompter.getPromptOf("ont_4_building_test_1", n_examples=2))
     
-    wikidata_prompter = Prompter("wikidata_tekgen", "ont_1_movie")
-    print(wikidata_prompter.getPromptOf("ont_1_movie_test_53", n_examples=2))
+    ont = "ont_10_culture"
+    wikidata_prompter = Prompter("wikidata_tekgen", f"{ont}")
+    print(wikidata_prompter.getPromptOf(f"{ont}_test_5", n_examples=2))
+    
+    #wikidata_prompter = Prompter("wikidata_tekgen", "ont_1_movie")
+    #print(wikidata_prompter.getPromptOf("ont_1_movie_test_53", n_examples=2))
