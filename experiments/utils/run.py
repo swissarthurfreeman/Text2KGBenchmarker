@@ -82,14 +82,14 @@ if __name__ == "__main__":
             runner = LLMRun(conf)
             runner.run()
     
-    for i in [1, 2, 3, 5, 6]:    
-        model_adapter = OpenAIAdapter(os.environ['OPEN_API_KEY'], "gpt-3.5-turbo")
+    for i in [4]:
+        model_adapter = OpenAIAdapter("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", "gpt-4o")
         
         for ontology_name in DPEDIA_WEBNLG_ONT_NAMES:
             run_inference_on("dpedia_webnlg_clean", ontology_name, model_adapter, i)
         
-        for ontology_name in WIKIDATA_TEKGEN_ONT_NAMES:
-            run_inference_on("wikidata_tekgen", ontology_name, model_adapter, i)
+        #for ontology_name in WIKIDATA_TEKGEN_ONT_NAMES:
+        #    run_inference_on("wikidata_tekgen", ontology_name, model_adapter, i)
         
     
         

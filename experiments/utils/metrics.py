@@ -211,19 +211,28 @@ def generate_global_averages(llm_metrics_folder_name: str):
 
 
 if __name__ ==  "__main__":
-    llm_response_folder_name = "rebel-fine-tune-2-ret-seq" 
+    for i in [1, 2, 3, 4, 5, 6]:
+        # note, we only use dpedia_webnlg_clean, for the sake of having comparable datasets,
+        # so we re-ran once gpt-4o on this dataset because it used the dirty one previously.
+        llm_response_folder_name = f"gpt-4o-{i}-shot"
+        
+        for ontology_name in DPEDIA_WEBNLG_ONT_NAMES:
+            l = LLMMetrics(llm_response_folder_name, ontology_name, "dpedia_webnlg_clean")
+            l.generate()
+            
+        for ontology_name in WIKIDATA_TEKGEN_ONT_NAMES:
+            l = LLMMetrics(llm_response_folder_name, ontology_name, "wikidata_tekgen")
+            l.generate()
+        
+        generate_global_averages(llm_response_folder_name)
+    
     #for ontology_name in DPEDIA_WEBNLG_ONT_NAMES:
     #    # NOTE : using dpedia_webnlg_clean or dpedia_webnlg on rebel performance should
     #    # not make any difference since we remove underscores and camelcasing in the code
     #    # before computing comparison metrics.
     #    l = LLMMetrics(llm_response_folder_name, ontology_name, "dpedia_webnlg_clean")
     #    l.generate()
-    
-    #for ontology_name in WIKIDATA_TEKGEN_ONT_NAMES:
-    l = LLMMetrics(llm_response_folder_name, "ont_1_movie", "wikidata_tekgen")
-    l.generate()
-
-    generate_global_averages(llm_response_folder_name)
+    # generate_global_averages(llm_response_folder_name)
     
     # note, for rebel-large-8..12-beams, do_sample was set to True, this wasn't the case with
     # beams 2-6.
