@@ -77,11 +77,19 @@ def getOntologyRelationsList(ontology_name: str, dataset_name: str) -> list[str]
         res = []
         for relation in onto["relations"]:
             rel_label = " ".join(camelCaseToSpaces(relation["label"]).lower().strip().replace(" ", "_").split())
-            domain_label = concepts[relation['domain']]
+            
+            if re.match("Q[0-9]+", relation['domain']):
+                domain_label = concepts[relation['domain']]
+            else:
+                domain_label = relation['domain']
+            
             if relation['range'] == '': 
                 range_label = 'literal'
             else:
-                range_label = concepts[relation['range']]
+                if re.match("Q[0-9]+", relation["range"]):
+                    range_label = concepts[relation['range']]
+                else:
+                    range_label = relation['range']
                 
             res.append(f"{rel_label}({domain_label} | {range_label})")
         return res

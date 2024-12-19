@@ -13,45 +13,58 @@ class Prompter:
     
     Usage
     -----
-    >>> wikidata_prompter = Prompter("wikidata_tekgen", "ont_9_nature")
-
-    >>> wikidata_prompter.getPromptOf("ont_1_movie_test_53", n_examples=2)
+    >>> ont = "ont_1_movie"
+    >>> wikidata_prompter = Prompter("wikidata_tekgen", f"{ont}")
+    >>> print(wikidata_prompter.getPromptOf(f"{ont}_test_20", n_examples=4))
     ```
-    Given the following ontology and sentences, please extract the triples from the
-    sentence  according to the relations in the ontology. In the output, only include
-    the triples in the given output format.
-    
+    WARNING: ont_1_movie_test_20 does not have  4  similars, sampling missing examples from train data instead
+    Given the following ontology and sentences, please extract the triples from the sentence according to the relations in the ontology. 
+    In the output, only include the triples in the given output format, if you can't extract triples, leave the output empty. 
+    Do not include any formatting backticks like ``` or any notes or remarks. Extract as many triples as possible.
+
     CONTEXT:
 
-    Ontology Concepts: 
-    human, city, country, film, film genre, genre, film production company, 
-    film award, award,  written work, film character, film organization
-    
-    Ontology Relations: 
-    director(film,human), screenwriter(film,human), genre(film,genre), 
-    based_on(film,written work), cast_member(film,human), award_received(film,award), 
-    production_company(film,film production company), country_of_origin(film,country), 
-    publication_date(film,), characters(film,film character), 
-    narrative_location(film,city), filming_location(film,city), 
-    main_subject(film,), nominated_for(film,award), cost(film,)
-    
-    Example Sentence: 
-    Knighty Knight Bugs is a 1958 Warner Bros. Looney Tunes cartoon directed 
-    by Friz Freleng, The short was released on August 23, 1958, and stars Bugs Bunny.
+    Ontology Concepts:
+    human, city, country, film, film genre, genre, film production company, film award, award, written work, film character, film organization
+
+    Ontology Relations:
+    director(film | human), screenwriter(film | human), genre(film | genre), based_on(film | written work), cast_member(film | human), 
+    award_received(film | award), production_company(film | film production company), country_of_origin(film | country), 
+    publication_date(film | literal), characters(film | film character), narrative_location(film | city), filming_location(film | city), 
+    main_subject(film | literal), nominated_for(film | award), cost(film | literal)
+
+    Example Sentence : The film also features the return of Adrienne King, Betsy Palmer and Walt Gorney, who respectively portrayed Alice Hardy, 
+    Pamela Voorhees, and Crazy Ralph in the prior installment.
 
     Example Output:
-    director(Knighty Knight Bugs,Friz Freleng)
+    characters(Friday the 13th Part 2 | Pamela Voorhees)
 
-    Example Sentence:
-    The Prize Pest is a 1951 Warner Bros. Looney Tunes cartoon directed by 
-    Robert McKimson, and written by Tedd Pierce.
-    
+
+    Example Sentence : The film stars Roy Scheider (replacing William Sylvester), Helen Mirren, Bob Balaban and John Lithgow, 
+    along with Keir Dullea and Douglas Rain of the cast of the previous film.
+
     Example Output:
-    screenwriter(The Prize Pest,Tedd Pierce)
+    cast_member(2010: The Year We Make Contact | Douglas Rain)
+    cast_member(2010: The Year We Make Contact | Bob Balaban)
+    cast_member(2010: The Year We Make Contact | John Lithgow)
 
-    Test Sentence: 
-    Yankee Doodle Bugs is a 1954 Warner Bros. Looney Tunes cartoon short, 
-    written by Warren Foster and directed by Friz Freleng.
+
+    Example Sentence : Mouna Ragam was the first film produced by Venkateswaran's Sujatha Films, and was shot primarily in Madras, 
+    with additional filming taking place in Delhi and Agra.
+
+    Example Output:
+    filming_location(Mouna Ragam | Delhi)
+
+
+    Example Sentence : Set in the late 19th century, the novel recounts the adventures of Anne Shirley, an 11-year-old orphan girl, 
+    who is mistakenly sent to two middle-aged siblings, Matthew and Marilla Cuthbert, who had originally intended to adopt a boy to 
+    help them on Anne of Green Gables's farm in the fictional town of Avonlea on Prince Edward Island, Canada.
+
+    Example Output:
+    country_of_origin(Anne of Green Gables | Canada)
+
+
+    Test Sentence: The film is directed by Raja Gosnell, who helmed the first, with all the main cast returning.
 
     Test Output:
     ```
@@ -63,12 +76,6 @@ class Prompter:
         self.train_sentences = load_jsonl_as_dict(self.train_sent_path)
         self.test_sent_path = "../../data/" + dataset_name + "/test/" + ontology_name + "_test.jsonl"
         self.test_sentences = load_jsonl_as_dict(self.test_sent_path)
-        
-        self.concepts: dict[str, str] = {}
-        
-        with open("../../data/" + dataset_name + "/ontologies/" + ontology_name + ".json") as f:
-            ont = json.load(f)
-            
                 
 
     def getPromptOf(self, test_sentence_id: str, n_examples: int) -> str:
@@ -118,18 +125,15 @@ class Prompter:
         return res
         
     def _getSystemInstructions(self) -> str:
-        return """Given the following ontology and sentences, please extract the triples from the sentence according to the relations in the ontology. \nIn the output, only include the triples in the given output format, if you can't extract triples, leave the output empty. Do not include any formatting backticks like ``` or any notes or remarks. Extract as many triples as possible."""
+        return """Given the following ontology and sentences, please extract the triples from the sentence according to the relations in the ontology. \n Makes sure to respect domain and range constraints. \nIn the output, only include the triples in the given output format, if you can't extract triples, leave the output empty. Do not include any formatting backticks like ``` or any notes or remarks. Extract as many triples as possible."""
 
 
 if __name__ == "__main__":
-    #wikidata_prompter = Prompter("wikidata_tekgen", "ont_1_movie")
-    #print(wikidata_prompter.getPromptOf("ont_1_movie_test_1", n_examples=5))
-    #dpedia_prompter = Prompter("dpedia_webnlg_clean", "ont_4_building")
-    #print(dpedia_prompter.getPromptOf("ont_4_building_test_1", n_examples=2))
+    ont = "ont_6_computer"
     
-    ont = "ont_10_culture"
+    #dpedia_prompter = Prompter("dpedia_webnlg_clean", ont)
+    #print(dpedia_prompter.getPromptOf(f"{ont}_test_2", n_examples=2))
+    
     wikidata_prompter = Prompter("wikidata_tekgen", f"{ont}")
-    print(wikidata_prompter.getPromptOf(f"{ont}_test_5", n_examples=2))
+    print(wikidata_prompter.getPromptOf(f"{ont}_test_3", n_examples=3))
     
-    #wikidata_prompter = Prompter("wikidata_tekgen", "ont_1_movie")
-    #print(wikidata_prompter.getPromptOf("ont_1_movie_test_53", n_examples=2))

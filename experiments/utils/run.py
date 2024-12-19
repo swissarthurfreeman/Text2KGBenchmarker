@@ -59,9 +59,15 @@ class LLMRun:
         
         for test_id in self.test_sentence_ids[start_idx:]:
             print("Querying " + test_id)
+            prompt = self.prompter.getPromptOf(test_id, self.config.n_train_examples)
+            
+            k = int( test_id.split("_")[-1] )
+            if k % 50 == 0:
+                print(prompt)
+            
             response: LLMResponse = self.config.adapter.queryLLM(
                     test_id, 
-                    self.prompter.getPromptOf(test_id, self.config.n_train_examples)
+                    prompt
                 )
             
             with open(res_file_path, "a") as f:
@@ -82,14 +88,14 @@ if __name__ == "__main__":
             runner = LLMRun(conf)
             runner.run()
     
-    for i in [4]:
-        model_adapter = OpenAIAdapter("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", "gpt-4o")
+    for i in [1, 2, 3, 4, 5, 6]:
+        model_adapter = OpenAIAdapter("", "gpt-4o")
         
         for ontology_name in DPEDIA_WEBNLG_ONT_NAMES:
             run_inference_on("dpedia_webnlg_clean", ontology_name, model_adapter, i)
         
-        #for ontology_name in WIKIDATA_TEKGEN_ONT_NAMES:
-        #    run_inference_on("wikidata_tekgen", ontology_name, model_adapter, i)
+        for ontology_name in WIKIDATA_TEKGEN_ONT_NAMES:
+            run_inference_on("wikidata_tekgen", ontology_name, model_adapter, i)
         
     
         
