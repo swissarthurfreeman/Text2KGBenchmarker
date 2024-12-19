@@ -211,10 +211,10 @@ def generate_global_averages(llm_metrics_folder_name: str):
 
 
 if __name__ ==  "__main__":
-    for i in [2, 4, 6, 8, 10, 12]:
+    for i in [1, 2, 3, 4, 5, 6]:
         # note, we only use dpedia_webnlg_clean, for the sake of having comparable datasets,
         # so we re-ran once gpt-4o on this dataset because it used the dirty one previously.
-        llm_response_folder_name = f"Babelscape.rebel-large-{i}-beams-rel-map"
+        llm_response_folder_name = f"gpt-3.5-turbo-{i}-shot"
         
         for ontology_name in DPEDIA_WEBNLG_ONT_NAMES:
             l = LLMMetrics(llm_response_folder_name, ontology_name, "dpedia_webnlg_clean")
