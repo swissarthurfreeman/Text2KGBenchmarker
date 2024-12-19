@@ -2,6 +2,8 @@
 # a prompt for an OpenAI GPT. A random, connex subset of the 
 # available triples is chosen to provide in the prompt for the model. 
 from openai import OpenAI
+from dotenv import load_dotenv
+load_dotenv()
 import random
 import json
 import os
@@ -31,7 +33,7 @@ def getRandomNTriplesFrom(triples: list[dict], max_n: int) -> list[dict]:
     if len(triples) < max_n:
         return triples
     
-    while len(res) != max_n:
+    while len(res) != max_n and len(queue) > 0:
         queue += [triple for triple in triples if ( triple['sqid'] == curr['sqid'] or triple['sqid'] == curr['oqid']) and triple not in res]
         random.shuffle(queue)
         
@@ -41,17 +43,16 @@ def getRandomNTriplesFrom(triples: list[dict], max_n: int) -> list[dict]:
     return res
 
 def getPrompt(triples: list[dict]) -> tuple[str, list[dict]]:
-    prompt = f"""Your task is to generate varied, accurate, sentences about movies from a list of triples following these precise instructions :
-1) Make the sentences natural, as they would appear in text or conversation, wikipedia, imdb or the internet.
+    prompt = f"""Your task is to generate varied, accurate, sentences about music from a list of triples following these precise instructions :
+1) Make the sentences natural, as they would appear in text or conversation, wikipedia, news or the internet.
 2) The triples can be explicit in the sentence or implied, include all the triples provided, do not invent additional facts. 
 3) If no currency or timezone are specified, do not include them.
-4) Do not put the musical work title between quotation marks like " or ' unless absolutely necessary.
-5) Use varied turn of phrases, don't always start the sentence with the name of a movie, use coreference instead of repeating the title. 
+4) Do not put musical work titles between quotation marks like " or ' unless absolutely necessary.
+5) Use varied turn of phrases, don't always start the sentence with the name of a musical work, vary using coreference instead of repeating the title. 
 6) Vary the output size, sometimes a single sentence, sometimes a small paragraph, not more than a couple of sentences.
-7) Avoid repetitions of turns of phrases like 'movie hails from', instead vary using turns of phrases like 'Brazilian Movie', 'this British film' etc. 
 Triples:\n
 """
-    n_triples = random.randint(3, 12)
+    n_triples = random.randint(3, 9)
     triples = getRandomNTriplesFrom(triples, n_triples)
     prompt += getTextTriplesList(triples)
     return prompt, triples
@@ -64,7 +65,7 @@ def getIdx(filepath: str):
     return 0
 if __name__ == "__main__":
     
-    triples_file_path = "ont_1_movie.jsonl" 
+    triples_file_path = "ont_2_music.jsonl" 
     
     data = []
     with open(triples_file_path) as f:
@@ -76,7 +77,8 @@ if __name__ == "__main__":
     output_file_path = triples_file_path.split(".")[0] + "_train.jsonl"
     idx = getIdx(output_file_path)
     
-    for line in data[idx:]:
+    for i, line in enumerate(data[idx:]):
+        line['id'] = f"ont_2_music_train_{i+1+idx}"
         print("Getting prompt and triples for", line['id'])
         prompt, chosen_triples = getPrompt(line['triples'])
         print("Prompting...")
