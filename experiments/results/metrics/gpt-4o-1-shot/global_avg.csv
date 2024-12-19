@@ -1,5 +1,5 @@
 dataset, subset, P, R, F1, OC, SH, RH, OH
-wikidata_tekgen, unseen, 0.43, 0.46, 0.44, 0.12, 0.01, 0.88, 0.06
-wikidata_tekgen, verified, 0.48, 0.45, 0.45, 0.05, 0.02, 0.95, 0.03
-wikidata_tekgen, all, 0.42, 0.38, 0.39, 0.07, 0.02, 0.93, 0.03
-dpedia_webnlg, all, 0.52, 0.42, 0.45, 0.01, 0.08, 0.99, 0.14
+wikidata_tekgen, unseen, 0.43, 0.46, 0.44, 0.98, 0.01, 0.02, 0.06
+wikidata_tekgen, verified, 0.48, 0.45, 0.45, 0.99, 0.02, 0.01, 0.03
+wikidata_tekgen, all, 0.42, 0.38, 0.39, 1.00, 0.02, 0.00, 0.03
+dpedia_webnlg, all, 0.52, 0.42, 0.45, 1.00, 0.08, 0.00, 0.14

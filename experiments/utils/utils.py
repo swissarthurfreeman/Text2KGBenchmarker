@@ -65,7 +65,7 @@ def getOntologyConceptsList(ontology_name: str, dataset_name: str) -> list[str]:
     
 def getOntologyRelationsList(ontology_name: str, dataset_name: str) -> list[str]:
     """return list of relations, with surface forms words seperated by spaces, splitting on camel case and lowercased.
-    given relations: startedInYear, architect, return -> ['started in year', 'architect']. 
+    given relations: startedInYear, architect, return -> ['started_in_year(domain | range)', 'architect(domain | range)']. 
     """
     with open("../../data/" + dataset_name + "/ontologies/" + ontology_name + ".json", "r") as ont_f:
         onto = json.load(ont_f)
@@ -93,6 +93,14 @@ def getOntologyRelationsList(ontology_name: str, dataset_name: str) -> list[str]
                 
             res.append(f"{rel_label}({domain_label} | {range_label})")
         return res
+
+def getOntologyRelationsListLabels(ontology_name: str, dataset_name: str) -> list[str]:
+    rels: list[str] = getOntologyRelationsList(ontology_name, dataset_name)
+    res : list[str] = []
+    
+    for rel in rels:
+        res.append(rel[0:rel.find("(")])
+    return res
 
 def camelCaseToSpaces(word: str) -> str:
     """Split camel cases to spaces, e.g. 'CamelCaseString Hello hello' -> '  Camel  Case  String   Hello hello'

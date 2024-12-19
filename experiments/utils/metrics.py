@@ -8,7 +8,7 @@ nltk.download('punkt_tab')
 from nltk.stem import PorterStemmer
 from nltk.tokenize import word_tokenize
 from utils import DPEDIA_WEBNLG_ONT_NAMES, WIKIDATA_TEKGEN_ONT_NAMES
-from utils import load_jsonl_as_dict, getOntologyConceptsList, getOntologyRelationsList, camelCaseToSpaces, load_jsonl_as_list
+from utils import load_jsonl_as_dict, getOntologyConceptsList, getOntologyRelationsListLabels, camelCaseToSpaces, load_jsonl_as_list
 
 
 class LLMMetrics():
@@ -29,7 +29,7 @@ class LLMMetrics():
         
         self.onto_concepts: list[str] = getOntologyConceptsList(ontology_name, dataset_name)
         """list of raw ontology concepts, surface form words seperated by spaces, no camelcase."""
-        self.onto_relations: list[str] = getOntologyRelationsList(ontology_name, dataset_name)
+        self.onto_relations: list[str] = getOntologyRelationsListLabels(ontology_name, dataset_name)
         """list of ontology relations, surface form words seperated by spaces."""
         
         # if few shot setting, llm_results will have one folder per n_shot, e.g. gpt-4o-n_examples=4, considered as a seperate technique.
@@ -159,7 +159,8 @@ class LLMMetrics():
         # count the number of system triples relations that are in the ontology
         num_rels_conformant = 0
         for triple in response["triples"]:
-            clean_rel = " ".join(camelCaseToSpaces(triple["rel"]).split()).lower().strip().replace("_", " ")
+            clean_rel = " ".join(camelCaseToSpaces(triple["rel"]).split()).lower().strip()
+            
             if clean_rel in self.onto_relations: num_rels_conformant += 1
             
         # ontology conformance is the number of system triples relations in the ontology divided by the total number of system triples
@@ -216,13 +217,14 @@ if __name__ ==  "__main__":
         # so we re-ran once gpt-4o on this dataset because it used the dirty one previously.
         llm_response_folder_name = f"gpt-3.5-turbo-{i}-shot"
         
+        for ontology_name in WIKIDATA_TEKGEN_ONT_NAMES:
+            l = LLMMetrics(llm_response_folder_name, ontology_name, "wikidata_tekgen")
+            l.generate()
+        
         for ontology_name in DPEDIA_WEBNLG_ONT_NAMES:
             l = LLMMetrics(llm_response_folder_name, ontology_name, "dpedia_webnlg_clean")
             l.generate()
             
-        for ontology_name in WIKIDATA_TEKGEN_ONT_NAMES:
-            l = LLMMetrics(llm_response_folder_name, ontology_name, "wikidata_tekgen")
-            l.generate()
         
         generate_global_averages(llm_response_folder_name)
     
