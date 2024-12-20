@@ -32,12 +32,13 @@ class BaseLightningDataModule(pl.LightningDataModule):
         self.model = model
         """we keep this for the DataCollator because model has a maximum input size constraints."""
 
+        print(conf.train_files)
         self.datasets: dict[str, Dataset] = load_dataset(
             path=conf.repo_path + conf.dataset_script_path, 
             data_files={
-                'train': conf.repo_path + conf.train_file, 
-                'dev': conf.repo_path + conf.val_file, 
-                'test': conf.repo_path+ conf.test_file}, 
+                'train': [ conf.repo_path + path for path in conf.train_files ], 
+                'dev':   [ conf.repo_path + path for path in conf.val_files ], 
+                'test':  [ conf.repo_path + path for path in conf.test_files ]}, 
             trust_remote_code=True
         )
         """A dataset is a directory that contains data files in generic formats (JSON, CSV...) + a 
@@ -149,7 +150,7 @@ if __name__ == '__main__':
     @hydra.main(config_path="../conf", config_name="root", version_base="1.1")
     def main(conf: DictConfig):
         model_config = AutoConfig.from_pretrained(
-            conf.pretrained_model_name_or_path, decoder_start_token_id = 0, dropout = conf.dropout, 
+            conf.repo_path + conf.pretrained_model_name_or_path, decoder_start_token_id = 0, dropout = conf.dropout, 
             forced_bos_token_id=None, no_repeat_ngram_size=0, early_stopping=False                
         )
         

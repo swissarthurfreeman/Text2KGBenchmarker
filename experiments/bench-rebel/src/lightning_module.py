@@ -161,24 +161,6 @@ class BaseLightningModule(pl.LightningModule):
         self.val_preds: list[dict] =  []
         self.test_preds: list[dict] = []
         
-        device = "cuda" if torch.cuda.is_available() else "cpu"
-    
-        if self.hparams.relation_mapping:
-            self.sent_embedder = SentenceTransformer('sentence-transformers/all-mpnet-base-v2', device=device)
-            self.threshold = self.hparams.similarity_threshold
-            print(self.concepts)
-            # encoding of list ['d1 p1 o1', 'd2 p2 o2', ...], size N_RELATIONS x EMBEDDING_DIM
-            self.ont_relation_embeddings: ndarray = self.sent_embedder.encode(
-                [" ".join([
-                    self.concepts[relation['domain']], 
-                    relation['label'], 
-                    self.concepts[relation['range']]]) 
-                 for relation in self.relations]
-            )
-        
-        if self.hparams.sentence_entailement:
-            self.entailment_model = pipeline(model='roberta-large-mnli', device=device)
-            
         self.test_ids = test_ids
         """list of test_ids to be used when writing `self.test_preds` to file, dataloader doesn't keep ids."""
     
@@ -310,9 +292,6 @@ class BaseLightningModule(pl.LightningModule):
 
         # list of length batch_size containing original input sentences
         original_sentences = []
-        if self.hparams.sentence_entailement:
-            original_sentences: list[str] = self.tokenizer.batch_decode(batch['input_ids'], skip_special_tokens=True)
-        
         # list of length batch_size, containing every triple list per sample
         # where every return sequence for a same sample was fused into a single list, duplicate triples removed.  
         final_beam_preds: list[list[dict]] = []
@@ -332,62 +311,7 @@ class BaseLightningModule(pl.LightningModule):
             
             # make a numpy array to be able to use array slicing with another array
             triplets: np.array[dict] = np.array([json.loads(dic_trip) for dic_trip in triples_for_sample])  # extract the clean array of triples
-            
-            if self.hparams.relation_mapping:
-                # tensor of size len(triplets) x embedding_dim
-                triple_embeddings: torch.Tensor = self.sent_embedder.encode([triple['head'] + " " + triple['type'] + triple['tail'] for triple in triplets])
-                # tensor of size len(triplets) x N_RELATIONS_IN_ONTOLOGY
-                similarities : torch.Tensor = self.sent_embedder.similarity(triple_embeddings, self.ont_relation_embeddings)
-                
-                # both vals and idxs are of shape len(triplets)
-                # vals[i] is the value of maximum similarity between triplets[i] and the closest relation
-                # idxs[i] is the index of the closest relation in self.relations
-                vals, idxs = similarities.max(dim=-1)
-                
-                rel_map_kept_triplets: list[dict] = triplets[vals > self.hparams.similarity_threshold].tolist()
-                
-                for (triple, idx) in zip(rel_map_kept_triplets, idxs):
-                    triple['type'] = self.relations[idx]['label']       # map relation to closest one
-                
-                rel_map_kept_triplets: set = {json.dumps(trip, sort_keys=True) for trip in rel_map_kept_triplets}
-                
-                if not self.hparams.sentence_entailement:
-                    final_beam_preds.append([json.loads(trip) for trip in rel_map_kept_triplets])
-            
-            if self.hparams.sentence_entailement:
-                batch_idx=i//self.hparams.num_return_sequences
-                keep_mask: list[bool] = []  # list of length len(triplets), saying which passed the filtering
-                nli_batch: list[str]  = []  # list of original_sentence. triple. pairs 
-                
-                for triple in triplets:
-                    nli_batch.append(original_sentences[batch_idx] + " " + triple['head'] + " " + triple['type'] + " " + triple['tail'] + ".")
-                
-                #print("nli_batch", nli_batch)
-                # avoids load from checkpoint dict trying to load roberta state error, seems it can't be part of lightning module
-                entail_results = self.entailment_model(nli_batch)
-                for res in entail_results:
-                    if res['label'] == 'ENTAILMENT':
-                        keep_mask.append(True)
-                    else:
-                        keep_mask.append(False)
-                
-                #print("keep mask", keep_mask)
-                sent_entail_triplets: set = { json.dumps(trip, sort_keys=True) for trip in triplets[keep_mask] }                
-            
-                if not self.hparams.relation_mapping:
-                    final_beam_preds.append([json.loads(trip) for trip in sent_entail_triplets])  
-                elif self.hparams.combine_operator == 'AND':
-                    
-                    triplets_to_append = [json.loads(trip) for trip in rel_map_kept_triplets.intersection(sent_entail_triplets)]
-                    final_beam_preds.append(triplets_to_append)
-                    
-                elif self.hparams.combine_operator == 'OR':
-                    final_beam_preds.append([json.loads(trip) for trip in rel_map_kept_triplets.union(sent_entail_triplets)])
-                else:
-                    raise ValueError('combine_operator value: ' + self.hparams.combine_operator + ' is not supported')
-            
-            if not self.hparams.relation_mapping and not self.hparams.sentence_entailement:
-                final_beam_preds.append(triplets)
+            final_beam_preds.append(triplets)
             
         return final_beam_preds, [extract_triplets(rel.replace("<sub>", "<subj>")) for rel in gt_decoded_labels]
     

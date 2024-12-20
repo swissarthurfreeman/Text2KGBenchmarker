@@ -26,13 +26,6 @@ test_file:        'data/wikidata_tekgen/test/ont_1_movie_test.jsonl'
 checkpoint_path:  'experiments/bench-rebel/src/outputs/2024-12-01/19-36-40/wikidata_movies_4_ret_seq_warm_steps=2000_tbs=24_drop=0.1_/epoch=0-step=1500.ckpt'
 output_file_path: 'experiments/bench-rebel/src/llm_responses/oidsjglfdskjgfdsj.jsonl'
 
-# triple processing
-relation_mapping: false
-sentence_entailement: false
-# if 'AND', will apply interesection between set of triples kept by rel_map and sent_entail
-# if 'OR' will apply union between set of triples kept by rel_map and sent_entail
-combine_operator: 'OR'
-
 # set this to 0 to not drop any triples with relation mapping
 similarity_threshold: 0.3
 

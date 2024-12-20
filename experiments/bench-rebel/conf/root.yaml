@@ -4,7 +4,7 @@ repo_path: '/home/users/f/freemana/Text2KGBenchmarker/'
 
 defaults:
   - _self_
-  - data: wkdata_synth_movie
+  - data: wikidata_synthetic
   - model: rebel_model
 
 hydra:
