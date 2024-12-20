@@ -1,6 +1,6 @@
 import json
 
-with open("ont_2_music_train.jsonl", "r") as f:
+with open("ont_2_music_val.jsonl", "r") as f:
     data = [json.loads(line) for line in f]
     
     res = {}
