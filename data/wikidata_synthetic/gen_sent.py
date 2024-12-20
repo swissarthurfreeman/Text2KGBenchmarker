@@ -1,11 +1,14 @@
 # Utility script to generate sentences from triples by building
 # a prompt for an OpenAI GPT. A random, connex subset of the 
 # available triples is chosen to provide in the prompt for the model. 
-from openai import OpenAI
+
+from multiprocessing.pool import ThreadPool
 from dotenv import load_dotenv
+from openai import OpenAI
 load_dotenv()
 import random
 import json
+import sys
 import os
 
 
@@ -42,13 +45,13 @@ def getRandomNTriplesFrom(triples: list[dict], max_n: int) -> list[dict]:
             res.append(curr)
     return res
 
-def getPrompt(triples: list[dict]) -> tuple[str, list[dict]]:
-    prompt = f"""Your task is to generate varied, accurate, sentences about music from a list of triples following these precise instructions :
+def getPrompt(triples: list[dict], subject: str) -> tuple[str, list[dict]]:
+    prompt = f"""Your task is to generate varied, accurate, sentences about {subject} from a list of triples following these precise instructions :
 1) Make the sentences natural, as they would appear in text or conversation, wikipedia, news or the internet.
 2) The triples can be explicit in the sentence or implied, include all the triples provided, do not invent additional facts. 
 3) If no currency or timezone are specified, do not include them.
-4) Do not put musical work titles between quotation marks like " or ' unless absolutely necessary.
-5) Use varied turn of phrases, don't always start the sentence with the name of a musical work, vary using coreference instead of repeating the title. 
+4) Do not put names or titles between quotation marks like " or ' unless absolutely necessary.
+5) Use varied turn of phrases, don't always start the sentence with the name of the main subject, vary using coreference instead of repeating the title. 
 6) Vary the output size, sometimes a single sentence, sometimes a small paragraph, not more than a couple of sentences.
 Triples:\n
 """
@@ -57,31 +60,20 @@ Triples:\n
     prompt += getTextTriplesList(triples)
     return prompt, triples
 
-def getIdx(filepath: str):
-    """TODO : clean this up, not needed anymore."""
-    if os.path.exists(filepath):
-        with open(filepath) as f:
-            return len(f.readlines())
-    return 0
-if __name__ == "__main__":
-    
-    triples_file_path = "ont_2_music.jsonl" 
-    
-    data = []
-    with open(triples_file_path) as f:
-        data = [json.loads(line) for line in f]
 
-    print("Querying GPT...")
-    client = OpenAI(api_key=os.environ['OPEN_API_KEY'])
+def worker(i, raw_triples, output_file_path, subject):
+    print(f"T{i} deals with", len(raw_triples), "triples, first triple sqid", raw_triples[0]['triples'][0]['sqid'])
+    client = OpenAI(api_key="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")
     
-    output_file_path = triples_file_path.split(".")[0] + "_train.jsonl"
-    idx = getIdx(output_file_path)
-    
-    for i, line in enumerate(data[idx:]):
-        line['id'] = f"ont_2_music_train_{i+1+idx}"
-        print("Getting prompt and triples for", line['id'])
-        prompt, chosen_triples = getPrompt(line['triples'])
-        print("Prompting...")
+    for line in raw_triples:
+        line['id'] = f"ont_2_music_train_{line['triples'][0]['sqid']}"
+        
+        if line['id'] in ids_already_in_output_file:
+            continue
+        
+        print(f"T{i} Getting prompt and triples for", line['id'])
+        prompt, chosen_triples = getPrompt(line['triples'], subject)
+        
         chat_completion = client.chat.completions.create(
             model="gpt-4o-mini",
             messages=[{"role": "user", "content": prompt}],
@@ -92,3 +84,29 @@ if __name__ == "__main__":
         with open(output_file_path, "a", encoding='utf-8') as f:
             f.write(json.dumps(res) + "\n")
       
+
+if __name__ == "__main__":
+    
+    triples_file_path = sys.argv[-3] # "ont_2_music.jsonl" 
+    output_file_path = sys.argv[-2]  # "ont_2_music_train.jsonl"
+    subject = sys.argv[-1]
+    
+    ids_already_in_output_file = []
+    with open(output_file_path) as f:
+        ids_already_in_output_file = [json.loads(line)['id'].split("_")[-1] for line in f]
+        
+    
+    raw_triples = []
+    with open(triples_file_path) as f:
+        raw_triples = [json.loads(line) for line in f]
+    
+    raw_triples = [line for line in raw_triples if line['triples'][0]['sqid'] not in ids_already_in_output_file]
+    
+    n_threads = 4
+    pool = ThreadPool(n_threads)
+    
+    for i in range(n_threads):
+        pool.apply_async(worker, (i, raw_triples[i*(len(raw_triples)//n_threads):(i+1)*(len(raw_triples)//n_threads)], output_file_path, subject))
+    
+    pool.close()
+    pool.join()
