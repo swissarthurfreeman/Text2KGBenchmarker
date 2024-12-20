@@ -31,8 +31,7 @@ class BaseLightningDataModule(pl.LightningDataModule):
         """tokenization will be applied in pre-processing to every element in dataset."""
         self.model = model
         """we keep this for the DataCollator because model has a maximum input size constraints."""
-
-        print(conf.train_files)
+        
         self.datasets: dict[str, Dataset] = load_dataset(
             path=conf.repo_path + conf.dataset_script_path, 
             data_files={
