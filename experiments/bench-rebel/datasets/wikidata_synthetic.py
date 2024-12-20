@@ -32,26 +32,26 @@ class SyntheticWikidata(datasets.GeneratorBasedBuilder):
     
     def _split_generators(self, dl_manager: datasets.DownloadManager | datasets.StreamingDownloadManager) -> list[datasets.SplitGenerator]:
         # BUG : when passing data_files via load_dataset(), the values are put into lists...
-        print("Train :", self.config.data_files['train'])
-        exit(0)
+        # note, for datasets.SplitGenerator gen_kwargs are arguments to forward to the DatasetBuilder._generate_examples method of the builder.
+        # https://huggingface.co/docs/datasets/en/package_reference/builder_classes
         return [
-            datasets.SplitGenerator(name = datasets.Split.TRAIN, gen_kwargs={"filepath": self.config.data_files['train'].pop(0)}),
-            datasets.SplitGenerator(name = datasets.Split.VALIDATION, gen_kwargs={"filepath": self.config.data_files['dev'].pop(0)}),
-            datasets.SplitGenerator(name = datasets.Split.TEST, gen_kwargs={"filepath": self.config.data_files['test'].pop(0)})
+            datasets.SplitGenerator(name = datasets.Split.TRAIN, gen_kwargs={"filepaths": self.config.data_files['train']}),
+            datasets.SplitGenerator(name = datasets.Split.VALIDATION, gen_kwargs={"filepaths": self.config.data_files['dev']}),
+            datasets.SplitGenerator(name = datasets.Split.TEST, gen_kwargs={"filepaths": self.config.data_files['test']})
         ]
     
-    def _generate_examples(self, filepath):
+    def _generate_examples(self, filepaths: list[str]):
         """return a generator of a linearized text2kgbench examples, when _generate_examples is called, it's code
         isn't run, it just returns a generator which has to be iterated upon, each iteration computes the value on the fly."""
         data: list[dict[str, str | bool | dict[str, str]]] = []
         
-        with open(filepath) as json_file:
-            # list of dictionaries {id:str, sent: str, verified: bool, unseen:bool, triples:list[{sub:str, rel:str, obj:str}]}
-            data = []
-            for line in json_file:
-                json_line = json.loads(line)
-                data.append(json_line)
-            
+        for filepath in filepaths:
+            with open(filepath) as json_file:
+                # list of dictionaries {id:str, sent: str, verified: bool, unseen:bool, triples:list[{sub:str, rel:str, obj:str}]}
+                for line in json_file:
+                    json_line = json.loads(line)
+                    data.append(json_line)
+                
         for sent in data:
             lin_triplets: str = ""
             prev_head = None
