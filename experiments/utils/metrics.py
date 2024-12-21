@@ -4,6 +4,7 @@ import re
 import glob
 import json
 import nltk
+import numpy as np
 nltk.download('punkt_tab')
 from nltk.stem import PorterStemmer
 from nltk.tokenize import word_tokenize
@@ -211,22 +212,90 @@ def generate_global_averages(llm_metrics_folder_name: str):
                 table_f.write(f"{avg_metrics_dpedia_webnlg[typ]['avg_obj_halluc']:.2f}\n")
 
 
+def generate_global_median_quartiles(llm_metrics_folder_name: str):
+    mediam_metrics_dpedia_webnlg = {
+        "all": { "precision": [], "recall": [], "f1": [], "onto_conf": [], "sub_halluc": [], "rel_halluc": [], "obj_halluc": []}
+    }
+    
+    mediam_metrics_wikidata_tekgen = {
+        "unseen": { "precision": [], "recall": [], "f1": [], "onto_conf": [], "sub_halluc": [], "rel_halluc": [], "obj_halluc": []}, 
+        "verified": { "precision": [], "recall": [], "f1": [], "onto_conf": [], "sub_halluc": [], "rel_halluc": [], "obj_halluc": []}, 
+        "all": { "precision": [], "recall": [], "f1": [], "onto_conf": [], "sub_halluc": [], "rel_halluc": [], "obj_halluc": []}
+    }
+    
+    for avg_file_path in ["../results/metrics/" + llm_metrics_folder_name + "/dpedia_webnlg_clean_avg.jsonl", "../results/metrics/" + llm_metrics_folder_name + "/wikidata_tekgen_avg.jsonl"]:
+        onto_averages = load_jsonl_as_list(avg_file_path)
+        
+        for onto_average in onto_averages:
+            for variant in onto_average.keys():        
+                if variant in ["unseen", "all", "verified"]:
+                    for metric in onto_average[variant].keys():
+                        if metric != "n_sentences":
+                            if "wikidata_tekgen" in avg_file_path:
+                                mediam_metrics_wikidata_tekgen[variant][metric.replace("avg_", "")].append(onto_average[variant][metric])
+                            
+                            if "dpedia_webnlg" in avg_file_path and variant == "all":
+                                mediam_metrics_dpedia_webnlg[variant][metric.replace("avg_", "")].append(onto_average[variant][metric])
+    
+    for variant in mediam_metrics_wikidata_tekgen.keys():
+        for metric in mediam_metrics_wikidata_tekgen[variant].keys():
+            values = np.array(mediam_metrics_wikidata_tekgen[variant][metric])
+            values.sort()
+             
+            mediam_metrics_wikidata_tekgen[variant][metric] = {
+                "median": np.median(values),
+                "p-25": np.percentile(values, 25),
+                "p-75": np.percentile(values, 75)
+            }
+    
+    for variant in mediam_metrics_dpedia_webnlg.keys():
+        for metric in mediam_metrics_dpedia_webnlg[variant].keys():
+            values = np.array(mediam_metrics_dpedia_webnlg[variant][metric])
+            values.sort()
+             
+            mediam_metrics_dpedia_webnlg[variant][metric] = {
+                "median": np.median(values),
+                "p-25": np.percentile(values, 25),
+                "p-75": np.percentile(values, 75)
+            }
+    
+    with open("../results/metrics/" + llm_metrics_folder_name + "/global_median.csv", "w") as table_f:
+        for statistic in ["median", "p-25", "p-75"]:
+            table_f.write(statistic + "\n")
+            table_f.write("dataset, subset, P, R, F1, OC, SH, RH, OH\n")
+            for variant in mediam_metrics_wikidata_tekgen.keys():
+                if variant in ["unseen", "all", "verified"]:
+                    table_f.write(f"wikidata_tekgen, {variant}, {mediam_metrics_wikidata_tekgen[variant]['precision'][statistic]:2f}, {mediam_metrics_wikidata_tekgen[variant]['recall'][statistic]:2f}, ")
+                    table_f.write(f"{mediam_metrics_wikidata_tekgen[variant]['f1'][statistic]:2f}, {mediam_metrics_wikidata_tekgen[variant]['onto_conf'][statistic]:2f}, ")
+                    table_f.write(f"{mediam_metrics_wikidata_tekgen[variant]['sub_halluc'][statistic]:2f}, {mediam_metrics_wikidata_tekgen[variant]['rel_halluc'][statistic]:2f}, ")
+                    table_f.write(f"{mediam_metrics_wikidata_tekgen[variant]['obj_halluc'][statistic]:2f}\n")
+            
+            for variant in mediam_metrics_dpedia_webnlg.keys():
+                if variant in ['unseen', 'all', 'verified']:
+                    table_f.write(f"dpedia_webnlg, {variant}, {mediam_metrics_dpedia_webnlg[variant]['precision'][statistic]:2f}, {mediam_metrics_dpedia_webnlg[variant]['recall'][statistic]:2f}, ")
+                    table_f.write(f"{mediam_metrics_dpedia_webnlg[variant]['f1'][statistic]:2f}, {mediam_metrics_dpedia_webnlg[variant]['onto_conf'][statistic]:2f}, ")
+                    table_f.write(f"{mediam_metrics_dpedia_webnlg[variant]['sub_halluc'][statistic]:2f}, {mediam_metrics_dpedia_webnlg[variant]['rel_halluc'][statistic]:2f}, ")
+                    table_f.write(f"{mediam_metrics_dpedia_webnlg[variant]['obj_halluc'][statistic]:2f}\n")
+
+            table_f.write("\n")
+
+
 if __name__ ==  "__main__":
     for i in [1, 2, 3, 4, 5, 6]:
         # note, we only use dpedia_webnlg_clean, for the sake of having comparable datasets,
         # so we re-ran once gpt-4o on this dataset because it used the dirty one previously.
-        llm_response_folder_name = f"gpt-3.5-turbo-{i}-shot"
+        llm_response_folder_name = f"gpt-4o-{i}-shot"
         
-        for ontology_name in WIKIDATA_TEKGEN_ONT_NAMES:
-            l = LLMMetrics(llm_response_folder_name, ontology_name, "wikidata_tekgen")
-            l.generate()
+        #for ontology_name in WIKIDATA_TEKGEN_ONT_NAMES:
+        #    l = LLMMetrics(llm_response_folder_name, ontology_name, "wikidata_tekgen")
+        #    l.generate()
         
-        for ontology_name in DPEDIA_WEBNLG_ONT_NAMES:
-            l = LLMMetrics(llm_response_folder_name, ontology_name, "dpedia_webnlg_clean")
-            l.generate()
+        #for ontology_name in DPEDIA_WEBNLG_ONT_NAMES:
+        #    l = LLMMetrics(llm_response_folder_name, ontology_name, "dpedia_webnlg_clean")
+        #    l.generate()
             
         
-        generate_global_averages(llm_response_folder_name)
+        generate_global_median_quartiles(llm_response_folder_name)
     
     #for ontology_name in DPEDIA_WEBNLG_ONT_NAMES:
     #    # NOTE : using dpedia_webnlg_clean or dpedia_webnlg on rebel performance should

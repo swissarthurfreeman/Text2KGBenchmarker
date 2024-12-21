@@ -81,7 +81,7 @@ max_target_length: 256        # maximum generated linearized triples output leng
 eval_beams: 12                # number of beams to use during generation
 
 # trainer parameters
-val_check_interval: 0.95       # check validation metric at every training epoch (0.5 would mean every time a half of the train data is seen, check validation metrics)
+val_check_interval: 0.5       # check validation metric at every training epoch (0.5 would mean every time a half of the train data is seen, check validation metrics)
 max_steps: 100_000
 monitor_var: 'val_F1_micro'
 
