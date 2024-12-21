@@ -67,10 +67,10 @@ def train(conf: DictConfig):
     
     pl_module = BaseLightningModule(conf=conf, config=model_config, tokenizer=tokenizer, model=model)
     
-    wandb_run_name = f"train={conf.train_file.split("/")[-1][:-6]}-val={conf.val_file.split("/")[-1][:-6]}"
+    wandb_run_name = f"all-ontologies-default-params"
     
     # TODO : use ontology name here instead of project
-    wandb_logger = WandbLogger(project="wikidata-movies", name=wandb_run_name, config=OmegaConf.to_object(conf))
+    wandb_logger = WandbLogger(project="wikidata-synthetic", name=wandb_run_name, config=OmegaConf.to_object(conf))
     device = "cuda" if torch.cuda.is_available() else "cpu"
     
     
@@ -78,7 +78,7 @@ def train(conf: DictConfig):
     callbacks_list.append(ModelCheckpoint(
         #monitor=conf.monitor_var,                # monitor val_F1_micro
         save_top_k=-1,
-        every_n_train_steps=1500,
+        every_n_train_steps=10_000,
         verbose=True,
         dirpath='wikidata_movies_' + wandb_run_name
     ))
@@ -103,8 +103,11 @@ def train(conf: DictConfig):
         callbacks=callbacks_list
     )
     
-    print("Resume training from checkpoint", conf.repo_path + conf.checkpoint_path)
-    trainer.fit(pl_module, datamodule=pl_data_module, ckpt_path=conf.repo_path + conf.checkpoint_path)
+    if conf.checkpoint_path:
+        print("Resume training from checkpoint", conf.repo_path + conf.checkpoint_path)
+        trainer.fit(pl_module, datamodule=pl_data_module, ckpt_path=conf.repo_path + conf.checkpoint_path)
+    else:
+        trainer.fit(pl_module, datamodule=pl_data_module)
     
 
 def get_wandb_run_name(conf: DictConfig) -> str:

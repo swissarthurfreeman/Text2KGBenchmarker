@@ -120,8 +120,7 @@ def extract_triplets(text) -> list[dict]:
 class BaseLightningModule(pl.LightningModule):
     def __init__(self, conf, config: AutoConfig, tokenizer: AutoTokenizer, model: AutoModelForSeq2SeqLM, test_ids: list[str] = None, sent_entailer=None, *args, **kwargs):
         """
-        REBEL experiment lightning module
-        https://lightning.ai/docs/pytorch/LTS/common/lightning_module.html
+        REBEL experiment lightning module https://lightning.ai/docs/pytorch/LTS/common/lightning_module.html
         
         Parameters
         ----------
@@ -133,19 +132,17 @@ class BaseLightningModule(pl.LightningModule):
         """
         super().__init__(*args, **kwargs)
         self.strict_loading = False
-        with open(conf.repo_path + conf.ontology_path) as ont_f:
-            ontology = json.load(ont_f)
-            self.relations: list[dict] = ontology["relations"]
-            self.relations_list: list[str] = []
-            for rel in self.relations:
-                self.relations_list.append(rel['label'])
-            
-            """list of ontology relations `[{'pid': ..., 'label': ..., 'range': 'r_qid', 'domain': 'd_qid'}...]`"""
-            self.concepts: dict[str, str] = {'': 'value'}   # literal value 
-            """concepts dictionary of ontology `{'wikidata_id': 'label'...}`"""
-            for concept_dict in ontology['concepts']:
-                self.concepts[concept_dict['qid']] = concept_dict['label']
-            
+        
+        self.relations: list[str] = []
+        """list of relation labels of all ontologies in ontology_paths."""
+                
+        for ontology_path in conf.ontology_paths:
+            with open(conf.repo_path + ontology_path) as ont_f:
+                ontology = json.load(ont_f)
+                for rel in ontology["relations"]:
+                    self.relations.append(rel['label'])
+                
+                
         self.save_hyperparameters(conf)                     # adds conf dict to self.hparams
         self.tokenizer: BartTokenizerFast = tokenizer
         self.model: BartForConditionalGeneration = model
@@ -348,7 +345,7 @@ class BaseLightningModule(pl.LightningModule):
         scores, precision, recall, f1 = re_score(
             pred_relations,
             gt_relations,
-            relation_types=[rel['label'] for rel in self.relations]
+            relation_types=self.relations
         )
         
         self.log("val_prec_micro", precision)
@@ -395,7 +392,7 @@ class BaseLightningModule(pl.LightningModule):
                                 triple['tail'] = dt.strftime('%d %B %Y').lower()  # 01 January 2020
                             except:
                                 pass
-                        if triple['type'] in self.relations_list:   # filter out triples not in ontology, NOTE : not useful, this can be removed
+                        if triple['type'] in self.relations:   # filter out triples not in ontology, NOTE : not useful, this can be removed
                             triples.append(triple)
                     res.append(triples)
                 pred['predictions'] = res

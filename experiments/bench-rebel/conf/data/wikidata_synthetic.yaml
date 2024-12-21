@@ -44,7 +44,7 @@ target_key: 'triples'
 
 train_batch_size: 24
 val_batch_size:   16
-test_batch_size:  10
+test_batch_size:  16
 
 pretrained_model_name_or_path: 'experiments/bench-rebel/Rebel-large'
 
@@ -65,14 +65,11 @@ test_files:
   - 'data/wikidata_synthetic/test/ont_9_nature_test.jsonl'
   - 'data/wikidata_synthetic/test/ont_10_culture_test.jsonl'
 
+# uncomment this if resuming training from a checkpoint or evaluating it.
+checkpoint_path:  #'experiments/bench-rebel/src/outputs/2024-12-01/19-36-40/wikidata_movies_4_ret_seq_warm_steps=2000_tbs=24_drop=0.1_/epoch=0-step=1500.ckpt'
+output_file_path: #'experiments/bench-rebel/src/llm_responses/oidsjglfdskjgfdsj.jsonl'
 
-checkpoint_path:  'experiments/bench-rebel/src/outputs/2024-12-01/19-36-40/wikidata_movies_4_ret_seq_warm_steps=2000_tbs=24_drop=0.1_/epoch=0-step=1500.ckpt'
-output_file_path: 'experiments/bench-rebel/src/llm_responses/oidsjglfdskjgfdsj.jsonl'
-
-# set this to 0 to not drop any triples with relation mapping
-similarity_threshold: 0.3
-
-num_return_sequences: 3      # top likeliest number of beams kept in output (beams get folded into one predicted triple set)
+num_return_sequences: 1      # top likeliest number of beams kept in output (beams get folded into one predicted triple set)
 
 pl_seed: 42
 
@@ -84,8 +81,8 @@ max_target_length: 256        # maximum generated linearized triples output leng
 eval_beams: 12                # number of beams to use during generation
 
 # trainer parameters
-val_check_interval: 1       # check validation metric at every training epoch (0.5 would mean every time a half of the train data is seen, check validation metrics)
-max_steps: 20_000
+val_check_interval: 0.95       # check validation metric at every training epoch (0.5 would mean every time a half of the train data is seen, check validation metrics)
+max_steps: 100_000
 monitor_var: 'val_F1_micro'
 
 
