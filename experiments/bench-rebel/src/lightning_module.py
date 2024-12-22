@@ -316,7 +316,7 @@ class BaseLightningModule(pl.LightningModule):
         for pred in self.val_preds:
                 for llm_triples, gt in zip(pred['predictions'], pred['labels']):
                     
-                    print("------ llm triples ----------")
+                    #print("------ llm triples ----------")
                     for pred in llm_triples:
                         
                         pred['head'] = pred['head'].lower()
@@ -329,14 +329,14 @@ class BaseLightningModule(pl.LightningModule):
                                 pred['tail'] = dt.strftime('%d %B %Y').lower()  # 01 January 2020
                             except:
                                 pass
-                        print(pred)
+                        #print(pred)
                     
-                    print("------ ground truth ----------")
+                    #print("------ ground truth ----------")
                     for pred in gt:
                         pred['head'] = pred['head'].lower()
                         pred['tail'] = pred['tail'].lower()
                         pred['type'] = pred['type'].lower()
-                        print(pred)
+                        #print(pred)
 
         # BUG : re_score does not normalize to lowercase
         pred_relations = [item for pred in self.val_preds for item in pred['predictions']]

@@ -68,9 +68,10 @@ def train(conf: DictConfig):
     pl_module = BaseLightningModule(conf=conf, config=model_config, tokenizer=tokenizer, model=model)
     
     wandb_run_name = f"all-ontologies-default-params"
+    wandb_project_name = "wikidata-synthetic"
     
     # TODO : use ontology name here instead of project
-    wandb_logger = WandbLogger(project="wikidata-synthetic", name=wandb_run_name, config=OmegaConf.to_object(conf))
+    wandb_logger = WandbLogger(project=wandb_project_name, name=wandb_run_name, config=OmegaConf.to_object(conf))
     device = "cuda" if torch.cuda.is_available() else "cpu"
     
     
@@ -80,14 +81,15 @@ def train(conf: DictConfig):
         save_top_k=-1,
         every_n_train_steps=10_000,
         verbose=True,
-        dirpath='wikidata_movies_' + wandb_run_name
+        dirpath=wandb_project_name + "-" + wandb_run_name
     ))
     
-    callbacks_list.append(EarlyStopping(
-        monitor=conf.monitor_var,               # stop the training if this value doesn't improve
-        mode='max',                             
-        patience=5                              # for 5 epochs
-    ))
+    
+    #callbacks_list.append(EarlyStopping(
+    #    monitor=conf.monitor_var,               # stop the training if this value doesn't improve
+    #    mode='max',                             
+    #    patience=5                              # for 5 epochs
+    #))
     
     callbacks_list.append(LearningRateMonitor(logging_interval='step'))
     
