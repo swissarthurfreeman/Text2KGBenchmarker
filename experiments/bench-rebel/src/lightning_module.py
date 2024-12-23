@@ -140,8 +140,11 @@ class BaseLightningModule(pl.LightningModule):
             with open(conf.repo_path + ontology_path) as ont_f:
                 ontology = json.load(ont_f)
                 for rel in ontology["relations"]:
-                    self.relations.append(rel['label'])
-                
+                    if rel not in self.relations: 
+                        self.relations.append(rel['label'])          # avoid duplicates in score computation
+        
+        self.relations = list(set(self.relations))
+        print("self.relations, passed to re_score :", self.relations)      
                 
         self.save_hyperparameters(conf)                     # adds conf dict to self.hparams
         self.tokenizer: BartTokenizerFast = tokenizer
@@ -323,7 +326,7 @@ class BaseLightningModule(pl.LightningModule):
                         pred['tail'] = pred['tail'].lower()
                         pred['type'] = pred['type'].lower()
                         
-                        if pred['type'] == 'publication date':
+                        if pred['type'] == 'publication date' or pred['type'] == 'inception' or pred['type'] == 'start time':
                             try:
                                 dt = parser.parse(pred['tail'])     # parse iso string as simple date   
                                 pred['tail'] = dt.strftime('%d %B %Y').lower()  # 01 January 2020

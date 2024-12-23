@@ -67,7 +67,7 @@ def train(conf: DictConfig):
     
     pl_module = BaseLightningModule(conf=conf, config=model_config, tokenizer=tokenizer, model=model)
     
-    wandb_run_name = f"all-ontologies-default-params"
+    wandb_run_name = f"all-ontologies-wikidata-tekgen-validation"
     wandb_project_name = "wikidata-synthetic"
     
     # TODO : use ontology name here instead of project
@@ -79,7 +79,7 @@ def train(conf: DictConfig):
     callbacks_list.append(ModelCheckpoint(
         #monitor=conf.monitor_var,                # monitor val_F1_micro
         save_top_k=-1,
-        every_n_train_steps=10_000,
+        every_n_train_steps=20_000,
         verbose=True,
         dirpath=wandb_project_name + "-" + wandb_run_name
     ))
@@ -97,7 +97,7 @@ def train(conf: DictConfig):
         accelerator=device,
         accumulate_grad_batches=conf.gradient_acc_steps,
         gradient_clip_val=conf.gradient_clip_value,
-        val_check_interval=conf.val_check_interval,
+        check_val_every_n_epoch=conf.check_val_every_n_epoch,
         max_steps=conf.max_steps,
         precision='16-mixed',
         logger=wandb_logger,

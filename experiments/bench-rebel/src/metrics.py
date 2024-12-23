@@ -88,30 +88,29 @@ def re_score(pred_relations, gt_relations, relation_types, mode="boundaries"):
     scores["ALL"]["Macro_p"] = np.mean([scores[ent_type]["p"] for ent_type in relation_types])
     scores["ALL"]["Macro_r"] = np.mean([scores[ent_type]["r"] for ent_type in relation_types])
 
-    print(f"RE Evaluation in *** {mode.upper()} *** mode")
+    print(f"\nRE Evaluation in *** {mode.upper()} *** mode")
 
-    print(
-        "processed {} sentences with {} relations; found: {} relations; correct: {}.".format(n_sents, n_rels, n_found,
-                                                                                             tp))
+    print("processed {} sentences with {} relations; found: {} relations; correct: {}.".format(n_sents, n_rels, n_found, tp))
     print(
         "\tALL\t TP: {};\tFP: {};\tFN: {}".format(
             scores["ALL"]["tp"],
             scores["ALL"]["fp"],
             scores["ALL"]["fn"]))
     print(
-        "\t\t(m avg): precision: {:.2f};\trecall: {:.2f};\tf1: {:.2f} (micro)".format(
+        "\t\t(micro avg): precision: {:.2f};\trecall: {:.2f};\tf1: {:.2f} (micro) (average metrics per sample)".format(
             precision,
             recall,
             f1))
     print(
-        "\t\t(M avg): precision: {:.2f};\trecall: {:.2f};\tf1: {:.2f} (Macro)\n".format(
+        "\t\t(Macro avg): precision: {:.2f};\trecall: {:.2f};\tf1: {:.2f} (Macro) (average metrics per relation) \n".format(
             scores["ALL"]["Macro_p"],
             scores["ALL"]["Macro_r"],
             scores["ALL"]["Macro_f1"]))
 
+    max_len = max([len(rel_type) for rel_type in relation_types])
+
     for rel_type in relation_types:
-        print("\t{}: \t\t\tTP: {};\tFP: {};\tFN: {};\tprecision: {:.2f};\trecall: {:.2f};\tf1: {:.2f};\t{}".format(
-            rel_type,
+        line = "\t\t\tTP: {};\tFP: {};\tFN: {};\tprecision: {:.2f};\trecall: {:.2f};\tf1: {:.2f}; (TP+FP): \t{}; (n°samples=TP+FN): \t{}".format(
             scores[rel_type]["tp"],
             scores[rel_type]["fp"],
             scores[rel_type]["fn"],
@@ -119,6 +118,12 @@ def re_score(pred_relations, gt_relations, relation_types, mode="boundaries"):
             scores[rel_type]["r"],
             scores[rel_type]["f1"],
             scores[rel_type]["tp"] +
-            scores[rel_type]["fp"]))
+            scores[rel_type]["fp"],
+            scores[rel_type]["tp"] +
+            scores[rel_type]["fn"]
+            
+        )
+        line = rel_type + f":{' '*(max_len-len(rel_type))}" + line 
+        print(line)
 
     return scores, precision, recall, f1

@@ -216,3 +216,95 @@ tensor([[0.3998]])
 srun --gpus=1 --mem-per-gpu=32G --partition=shared-gpu --time=1:00:00 python3 train.py model=rebel_model data=wikidata_synthetic_data train=wikidata_synthetic_train +trust_remote_code=True
 ```
 
+
+	ALL	 TP: 3857;	FP: 21465;	FN: 13189
+		(m avg): precision: 15.23;	recall: 22.63;	f1: 18.21 (micro)
+		(M avg): precision: 17.22;	recall: 23.43;	f1: 17.89 (Macro)
+
+	director: 			        TP: 122;	FP: 180;	FN: 96;	    precision: 40.40;	recall: 55.96;	f1: 46.92;	302
+	screenwriter: 			    TP: 37;	    FP: 179;	FN: 128;	precision: 17.13;	recall: 22.42;	f1: 19.42;	216
+	genre: 			            TP: 234;	FP: 1497;	FN: 753;	precision: 13.52;	recall: 23.71;	f1: 17.22;	1731
+	based on: 			        TP: 27;	    FP: 127;	FN: 46;	    precision: 17.53;	recall: 36.99;	f1: 23.79;	154
+	cast member: 			    TP: 110;	FP: 162;	FN: 147;	precision: 40.44;	recall: 42.80;	f1: 41.59;	272
+	award received: 			TP: 37;	    FP: 161;	FN: 61;	    precision: 18.69;	recall: 37.76;	f1: 25.00;	198
+	production company: 		TP: 32;	    FP: 162;	FN: 80;	    precision: 16.49;	recall: 28.57;	f1: 20.92;	194
+	country of origin: 			TP: 30;	    FP: 432;	FN: 103;	precision: 6.49;	recall: 22.56;	f1: 10.08;	462
+	publication date: 			TP: 411;	FP: 2916;	FN: 1758;	precision: 12.35;	recall: 18.95;	f1: 14.96;	3327
+	characters: 			    TP: 48;	    FP: 160;	FN: 258;	precision: 23.08;	recall: 15.69;	f1: 18.68;	208
+	narrative location: 	    TP: 42;	    FP: 136;	FN: 348;	precision: 23.60;	recall: 10.77;	f1: 14.79;	178
+	filming location: 			TP: 19;	    FP: 62;	    FN: 98;	    precision: 23.46;	recall: 16.24;	f1: 19.19;	81
+	main subject: 			    TP: 8;	    FP: 149;	FN: 59;	    precision: 5.10;	recall: 11.94;	f1: 7.14;	157
+	nominated for: 			    TP: 48;	    FP: 172;	FN: 144;	precision: 21.82;	recall: 25.00;	f1: 23.30;	220
+	cost: 			            TP: 0;	    FP: 16;	    FN: 0;	    precision: 0.00;	recall: 0.00;	f1: 0.00;	16
+	composer: 			        TP: 30;	    FP: 129;	FN: 120;	precision: 18.87;	recall: 20.00;	f1: 19.42;	159
+	part of: 			        TP: 35;	    FP: 384;	FN: 55;	    precision: 8.35;	recall: 38.89;	f1: 13.75;	419
+	lyrics by: 			        TP: 3;	    FP: 9;	    FN: 106;	precision: 25.00;	recall: 2.75;	f1: 4.96;	12
+	language of work or name: 	TP: 20;	    FP: 478;	FN: 70;	    precision: 4.02;	recall: 22.22;	f1: 6.80;	498
+	voice type: 			    TP: 13;	    FP: 53;	    FN: 50;	    precision: 19.70;	recall: 20.63;	f1: 20.16;	66
+	instrumentation: 			TP: 3;	    FP: 4;	    FN: 81;	    precision: 42.86;	recall: 3.57;	f1: 6.59;	7
+	tracklist: 			        TP: 3;	    FP: 6;	    FN: 86;	    precision: 33.33;	recall: 3.37;	f1: 6.12;	9
+	performer: 			        TP: 53;	    FP: 248;	FN: 162;	precision: 17.61;	recall: 24.65;	f1: 20.54;	301
+	producer: 			        TP: 19;	    FP: 77;	    FN: 81;	    precision: 19.79;	recall: 19.00;	f1: 19.39;	96
+	record label: 			    TP: 59;	    FP: 74;	    FN: 34;	    precision: 44.36;	recall: 63.44;	f1: 52.21;	133
+	occupation: 			    TP: 0;	    FP: 0;	    FN: 115;	precision: 0.00;	recall: 0.00;	f1: 0.00;	0
+	sport: 			            TP: 10;	    FP: 21;	    FN: 163;	precision: 32.26;	recall: 5.78;	f1: 9.80;	31
+	member of sports team: 		TP: 64;	    FP: 251;	FN: 32;	    precision: 20.32;	recall: 66.67;	f1: 31.14;	315
+	country for sport: 			TP: 18;	    FP: 71;	    FN: 65;	    precision: 20.22;	recall: 21.69;	f1: 20.93;	89
+	coach of sports team: 		TP: 5;	    FP: 17;	    FN: 22;	    precision: 22.73;	recall: 18.52;	f1: 20.41;	22
+	league: 			        TP: 64;	    FP: 228;	FN: 166;	precision: 21.92;	recall: 27.83;	f1: 24.52;	292
+	home venue: 			    TP: 2;	    FP: 2;	    FN: 0;	    precision: 50.00;	recall: 100.00;	f1: 66.67;	4
+	sports season of league or competition:TP: 31;	FP: 91;	FN: 26;	precision: 25.41;	recall: 54.39;	f1: 34.64;	122
+	competition class: 			TP: 4;	    FP: 117;	FN: 60;	    precision: 3.31;	recall: 6.25;	f1: 4.32;	121
+	illustrator: 			    TP: 30;	    FP: 47;	    FN: 53;	    precision: 38.96;	recall: 36.14;	f1: 37.50;	77
+	followed by: 			    TP: 5;	    FP: 112;	FN: 47;	    precision: 4.27;	recall: 9.62;	f1: 5.92;	117
+	author: 			        TP: 76;	    FP: 182;	FN: 108;	precision: 29.46;	recall: 41.30;	f1: 34.39;	258
+	publisher: 			        TP: 34;	    FP: 102;	FN: 38;	    precision: 25.00;	recall: 47.22;	f1: 32.69;	136
+	editor: 			        TP: 17;	    FP: 77;	    FN: 59;	    precision: 18.09;	recall: 22.37;	f1: 20.00;	94
+	place of publication: 		TP: 2;	    FP: 26;	    FN: 3;	    precision: 7.14;	recall: 40.00;	f1: 12.12;	28
+	depicts: 			        TP: 1;	    FP: 13;	    FN: 21;	    precision: 7.14;	recall: 4.55;	f1: 5.56;	14
+	military rank: 			    TP: 10;	    FP: 105;	FN: 62;	    precision: 8.70;	recall: 13.89;	f1: 10.70;	115
+	military branch: 			TP: 16;	    FP: 96;	    FN: 64;	    precision: 14.29;	recall: 20.00;	f1: 16.67;	112
+	military casualty classification : TP: 0;	FP: 0;	FN: 0;	    precision: 0.00;	recall: 0.00;	f1: 0.00;	0
+	designed by: 			    TP: 6;	    FP: 36;	    FN: 66;	    precision: 14.29;	recall: 8.33;	f1: 10.53;	42
+	commanded by: 			    TP: 0;	    FP: 7;	    FN: 0;	    precision: 0.00;	recall: 0.00;	f1: 0.00;	7
+	next higher rank: 			TP: 2;	    FP: 8;	    FN: 2;	    precision: 20.00;	recall: 50.00;	f1: 28.57;	10
+	designated as terrorist by: TP: 3;	    FP: 14;	    FN: 16;	    precision: 17.65;	recall: 15.79;	f1: 16.67;	17
+	developer: 			        TP: 28;	    FP: 173;	FN: 63;	    precision: 13.93;	recall: 30.77;	f1: 19.18;	201
+	creator: 			        TP: 24;	    FP: 90;	    FN: 40;	    precision: 21.05;	recall: 37.50;	f1: 26.97;	114
+	platform: 			        TP: 56;	    FP: 105;	FN: 115;	precision: 34.78;	recall: 32.75;	f1: 33.73;	161
+	operating system: 			TP: 8;	    FP: 96;	    FN: 5;	    precision: 7.69;	recall: 61.54;	f1: 13.68;	104
+	site of astronomical discovery: TP: 40;	FP: 78;	    FN: 23;	    precision: 33.90;	recall: 63.49;	f1: 44.20;	118
+	minor planet group: 		TP: 0;	    FP: 3;	    FN: 12;	    precision: 0.00;	recall: 0.00;	f1: 0.00;	3
+	spacecraft docking/undocking date: TP: 0;	FP: 28;	FN: 5;	    precision: 0.00;	recall: 0.00;	f1: 0.00;	28
+	location of landing: 		TP: 3;	    FP: 7;	    FN: 5;	    precision: 30.00;	recall: 37.50;	f1: 33.33;	10
+	backup or reserve team or crew:TP: 0;	FP: 2;	    FN: 2;	    precision: 0.00;	recall: 0.00;	f1: 0.00;	2
+	astronaut mission: 			TP: 57;	    FP: 58;	    FN: 51;	    precision: 49.57;	recall: 52.78;	f1: 51.12;	115
+	constellation: 			    TP: 60;	    FP: 5;	    FN: 2;	    precision: 92.31;	recall: 96.77;	f1: 94.49;	65
+	head of state: 			    TP: 0;	    FP: 1;	    FN: 10;	    precision: 0.00;	recall: 0.00;	f1: 0.00;	1
+	head of government: 		TP: 0;	    FP: 2;	    FN: 8;	    precision: 0.00;	recall: 0.00;	f1: 0.00;	2
+	position held: 			    TP: 25;	    FP: 96;	    FN: 50;	    precision: 20.66;	recall: 33.33;	f1: 25.51;	121
+	member of: 			        TP: 0;	    FP: 98;	    FN: 2;	    precision: 0.00;	recall: 0.00;	f1: 0.00;	98
+	political alignment: 		TP: 0;	    FP: 6;	    FN: 1;	    precision: 0.00;	recall: 0.00;	f1: 0.00;	6
+	member of political party: 	TP: 12;	    FP: 39;	    FN: 31;	    precision: 23.53;	recall: 27.91;	f1: 25.53;	51
+	elected in: 			    TP: 0;	    FP: 1;	    FN: 0;	    precision: 0.00;	recall: 0.00;	f1: 0.00;	1
+	candidacy in election: 		TP: 2;	    FP: 13;	    FN: 1;	    precision: 13.33;	recall: 66.67;	f1: 22.22;	15
+	political ideology: 		TP: 11;	    FP: 56;	    FN: 37;	    precision: 16.42;	recall: 22.92;	f1: 19.13;	67
+	parent taxon: 			    TP: 24;	    FP: 138;	FN: 51;	    precision: 14.81;	recall: 32.00;	f1: 20.25;	162
+	IUCN conservation status: 	TP: 0;	    FP: 0;	    FN: 0;	    precision: 0.00;	recall: 0.00;	f1: 0.00;	0
+	taxon synonym: 			    TP: 0;	    FP: 0;	    FN: 65;	    precision: 0.00;	recall: 0.00;	f1: 0.00;	0
+	habitat: 			        TP: 0;	    FP: 0;	    FN: 0;	    precision: 0.00;	recall: 0.00;	f1: 0.00;	0
+	mountain range: 			TP: 30;	    FP: 157;	FN: 42;	    precision: 16.04;	recall: 41.67;	f1: 23.17;	187
+	parent peak: 			    TP: 17;	    FP: 26;	    FN: 45;	    precision: 39.53;	recall: 27.42;	f1: 32.38;	43
+	tributary: 			        TP: 23;	    FP: 140;	FN: 28;	    precision: 14.11;	recall: 45.10;	f1: 21.50;	163
+	origin of the watercourse: 	TP: 9;	    FP: 18;	    FN: 40;	    precision: 33.33;	recall: 18.37;	f1: 23.68;	27
+	mouth of the watercourse: 	TP: 20;	    FP: 71;	    FN: 64;	    precision: 21.98;	recall: 23.81;	f1: 22.86;	91
+	drainage basin: 			TP: 2;	    FP: 50;	    FN: 13;	    precision: 3.85;	recall: 13.33;	f1: 5.97;	52
+	reservoir created: 			TP: 19;	    FP: 61;	    FN: 43;	    precision: 23.75;	recall: 30.65;	f1: 26.76;	80
+	mountains classification : 	TP: 0;	    FP: 0;	    FN: 0;	    precision: 0.00;	recall: 0.00;	f1: 0.00;	0
+	taxon common name: 			TP: 0;	    FP: 0;	    FN: 0;	    precision: 0.00;	recall: 0.00;	f1: 0.00;	0
+	ethnic group: 			    TP: 13;	    FP: 50;	    FN: 20;	    precision: 20.63;	recall: 39.39;	f1: 27.08;	63
+	languages spoken, written or signed:TP: 13;	FP: 27;	FN: 50;	    precision: 32.50;	recall: 20.63;	f1: 25.24;	40
+	inception: 			        TP: 0;	    FP: 135;	FN: 75;	    precision: 0.00;	recall: 0.00;	f1: 0.00;	135
+	start time: 			    TP: 0;	    FP: 3;	    FN: 4;	    precision: 0.00;	recall: 0.00;	f1: 0.00;	3
+
+
