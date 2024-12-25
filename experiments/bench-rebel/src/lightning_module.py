@@ -1,3 +1,4 @@
+import os
 import json
 from typing import Any, Dict, Mapping
 import torch
@@ -359,7 +360,7 @@ class BaseLightningModule(pl.LightningModule):
         self.val_preds.clear()
         
     def on_test_epoch_end(self):
-        # BUG : re_score does not normalize to lowercase, so we do that here.
+        # re_score does not normalize to lowercase, so we do that here.
         for pred in self.test_preds:
                 for llm_triples, gt in zip(pred['predictions'], pred['labels']):
                     for pred in llm_triples:
@@ -367,7 +368,7 @@ class BaseLightningModule(pl.LightningModule):
                         pred['tail'] = pred['tail'].lower()
                         pred['type'] = pred['type'].lower()
                         
-                        if pred['type'] == 'publication date':
+                        if pred['type'] == 'publication date' or pred['type'] == 'inception' or pred['type'] == 'start time':
                             try:
                                 dt = parser.parse(pred['tail'])     # parse iso string as simple date   
                                 pred['tail'] = dt.strftime('%d %B %Y').lower()  # 01 January 2020
@@ -379,9 +380,11 @@ class BaseLightningModule(pl.LightningModule):
                         pred['tail'] = pred['tail'].lower()
                         pred['type'] = pred['type'].lower()
 
-        # we just save the file here without ids to avoid technical debt,
-        # if you want to fully evaluate properly, re-use the model via a
-        # an extra adpater in utils that loads from a trained checkpoint.
+        output_dir_path = "/".join((self.hparams.repo_path + self.hparams.output_file_path).split("/")[:-1])
+        
+        if not os.path.exists(output_dir_path):
+            os.makedirs(output_dir_path)
+        
         with open(self.hparams.repo_path + self.hparams.output_file_path, 'a') as out_f:
             idx = 0
             for pred in self.test_preds:
@@ -389,13 +392,7 @@ class BaseLightningModule(pl.LightningModule):
                 for llm_triples in pred['predictions']:
                     triples: list = []
                     for triple in llm_triples:
-                        if triple['type'] == 'publication date':
-                            try:
-                                dt = parser.parse(pred['tail'])     # parse iso string as simple date   
-                                triple['tail'] = dt.strftime('%d %B %Y').lower()  # 01 January 2020
-                            except:
-                                pass
-                        if triple['type'] in self.relations:   # filter out triples not in ontology, NOTE : not useful, this can be removed
+                        if triple['type'] in self.relations:   # filter out triples not in ontology
                             triples.append(triple)
                     res.append(triples)
                 pred['predictions'] = res
@@ -403,8 +400,7 @@ class BaseLightningModule(pl.LightningModule):
                 for llm_triples, gt in zip(pred['predictions'], pred['labels']):
                     out_f.write(json.dumps({
                         'id': self.test_ids[idx],
-                        'predictions': list(llm_triples),
-                        'labels':list(gt),
+                        'triples': [ {'sub': triple['head'], 'rel': triple['type'], 'obj': triple['tail']} for triple in llm_triples]
                     }) + "\n")
                     
                     idx += 1
@@ -417,7 +413,7 @@ class BaseLightningModule(pl.LightningModule):
         scores, precision, recall, f1 = re_score(
             pred_relations,
             gt_relations,
-            relation_types=[rel['label'] for rel in self.relations]
+            relation_types=self.relations
         )
         
         self.log("test_prec_micro", precision)
@@ -425,6 +421,7 @@ class BaseLightningModule(pl.LightningModule):
         self.log("test_F1_micro", f1)
         
         self.test_preds.clear()
+        
     
     def configure_optimizers(self):
         no_decay = ["bias", "LayerNorm.weight"]

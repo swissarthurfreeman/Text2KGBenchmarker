@@ -6,8 +6,6 @@ from omegaconf import OmegaConf
 from lightning_module import BaseLightningModule
 from lightning_data_module import BaseLightningDataModule
 from transformers import AutoConfig, AutoTokenizer, AutoModelForSeq2SeqLM, pipeline
-
-
 from transformers.utils.logging import disable_progress_bar
 
 def test(conf: omegaconf.DictConfig):
@@ -47,11 +45,7 @@ def test(conf: omegaconf.DictConfig):
     device = "cuda" if torch.cuda.is_available() else "cpu"
     pl_module = BaseLightningModule(conf, model_config, tokenizer, model, test_ids=pl_data_module.test_ids)
     
-    pl_module.hparams.test_file = pl_data_module.conf.test_file
-    
-    trainer = pl.Trainer(
-        accelerator = device
-    )
+    trainer = pl.Trainer(accelerator = device)
     
     trainer.test(pl_module, dataloaders=pl_data_module.test_dataloader(), ckpt_path=conf.repo_path + conf.checkpoint_path)
 

@@ -71,8 +71,6 @@ class BaseLightningDataModule(pl.LightningDataModule):
                 batched=True,
                 batch_size=100,
                 remove_columns=self.column_names,
-                #load_from_cache_file=True,                          # under keys 'input_ids' and 'labels', but no more original data
-                #cache_file_name=self.conf.test_file.replace('jsonl', '-') + self.conf.dataset_script_path.split("/")[-1].replace('.py', '.cache')
             )
         else:
             self.train_dataset = self.datasets['train'].map(
@@ -80,8 +78,6 @@ class BaseLightningDataModule(pl.LightningDataModule):
                 batched=True,                                       # in batch mode, provides speedup
                 batch_size=100,
                 remove_columns=self.column_names,                    # output will contains tokenized sentence and triples
-                #load_from_cache_file=True,                          # under keys 'input_ids' and 'labels', but no more original data
-                #cache_file_name=self.conf.train_file.replace('jsonl', '-') + self.conf.dataset_script_path.split("/")[-1].replace('.py', '.cache')
             )
             
             self.eval_dataset = self.datasets["validation"].map(
@@ -89,8 +85,6 @@ class BaseLightningDataModule(pl.LightningDataModule):
                 batched=True,
                 batch_size=100,
                 remove_columns=self.column_names,
-                #load_from_cache_file=True,                          # under keys 'input_ids' and 'labels', but no more original data
-                #cache_file_name=self.conf.val_file.replace('jsonl', '-') + self.conf.dataset_script_path.split("/")[-1].replace('.py', '.cache')
             )
         
         
@@ -101,8 +95,6 @@ class BaseLightningDataModule(pl.LightningDataModule):
         inputs = batch[self.text_key]          # batch size of 1000, this is a list of sentences
         targets = batch[self.target_key]       # this is the list of it's linearized triples
         
-        #print("Hello", len(inputs), inputs[0], targets[0], "\n\n")
-        #exit(0)
         # see parameters https://huggingface.co/docs/transformers/en/main_classes/tokenizer
         # padding is done by collator, not the tokenizer, truncation from 1024 (tokenized) tokens.
         # it'll literally just trunkate the resulting input_ids and attention_mask arrays to 1024 in length
@@ -114,9 +106,6 @@ class BaseLightningDataModule(pl.LightningDataModule):
         
         # this will print the list of tokens of the first sentence of this batch, and it's target linearized triples
         # see https://github.com/huggingface/transformers/issues/22306
-        #print(self.tokenizer.convert_ids_to_tokens(model_inputs["input_ids"][0]), 
-        #      self.tokenizer.convert_ids_to_tokens(model_inputs["labels"][0]))
-        #exit(0)
         return model_inputs
     
     def train_dataloader(self) -> DataLoader:

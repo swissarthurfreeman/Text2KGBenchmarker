@@ -52,7 +52,6 @@ def train(conf: DictConfig):
         additional_special_tokens=['<obj>', '<subj>', '<triplet>', '<head>', '</head>', '<tail>', '</tail>']
     )
     """Tokenizer of type transformers.models.bart.tokenization_bart_fast.BartTokenizerFast"""
-    #print(type(tokenizer))
     
     model: BartForConditionalGeneration = cast(BartForConditionalGeneration, AutoModelForSeq2SeqLM.from_pretrained(
         pretrained_model_name_or_path=conf.repo_path + conf.pretrained_model_name_or_path,
@@ -67,7 +66,7 @@ def train(conf: DictConfig):
     
     pl_module = BaseLightningModule(conf=conf, config=model_config, tokenizer=tokenizer, model=model)
     
-    wandb_run_name = f"all-ontologies-wikidata-tekgen-validation"
+    wandb_run_name = conf.wandb_run_name
     wandb_project_name = "wikidata-synthetic"
     
     # TODO : use ontology name here instead of project
@@ -77,13 +76,14 @@ def train(conf: DictConfig):
     
     callbacks_list = []
     callbacks_list.append(ModelCheckpoint(
-        #monitor=conf.monitor_var,                # monitor val_F1_micro
-        save_top_k=-1,
-        every_n_train_steps=20_000,
-        verbose=True,
+        monitor=conf.monitor_var,                # monitor val_F1_micro
+        save_top_k=1,        
+        every_n_epochs=1,  
+        mode='max',         
+        verbose=True,                            # filename = ontology_name-validation_loss
+        filename=conf.wandb_run_name.split("-")[0]+'-{val_F1_micro:.2f}',
         dirpath=wandb_project_name + "-" + wandb_run_name
     ))
-    
     
     #callbacks_list.append(EarlyStopping(
     #    monitor=conf.monitor_var,               # stop the training if this value doesn't improve
@@ -97,7 +97,7 @@ def train(conf: DictConfig):
         accelerator=device,
         accumulate_grad_batches=conf.gradient_acc_steps,
         gradient_clip_val=conf.gradient_clip_value,
-        check_val_every_n_epoch=conf.check_val_every_n_epoch,
+        val_check_interval=conf.val_check_interval,
         max_steps=conf.max_steps,
         precision='16-mixed',
         logger=wandb_logger,
@@ -128,8 +128,7 @@ def get_wandb_run_name(conf: DictConfig) -> str:
 
 @hydra.main(config_path="../conf", config_name="root", version_base="1.1")
 def main(conf: DictConfig):
-    #print("conf")
-    #print(omegaconf.OmegaConf.to_yaml(conf))
+    print(omegaconf.OmegaConf.to_yaml(conf))
     train(conf)
 
 if __name__ == '__main__':

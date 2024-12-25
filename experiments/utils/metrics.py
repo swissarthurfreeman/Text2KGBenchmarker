@@ -160,7 +160,7 @@ class LLMMetrics():
         # count the number of system triples relations that are in the ontology
         num_rels_conformant = 0
         for triple in response["triples"]:
-            clean_rel = " ".join(camelCaseToSpaces(triple["rel"]).split()).lower().strip()
+            clean_rel = "_".join(camelCaseToSpaces(triple["rel"]).split()).lower().strip()
             
             if clean_rel in self.onto_relations: num_rels_conformant += 1
             
@@ -281,10 +281,17 @@ def generate_global_median_quartiles(llm_metrics_folder_name: str):
 
 
 if __name__ ==  "__main__":
-    for i in [1, 2, 3, 4, 5, 6]:
+    
+    llm_response_folder_name = f"rebel-fine-tuned-per-ontology-25-dec-checkpoints"
+    
+    for ontology_name in WIKIDATA_TEKGEN_ONT_NAMES:
+        l = LLMMetrics(llm_response_folder_name, ontology_name, "wikidata_tekgen")
+        l.generate()
+
+    #for i in [1, 2, 3, 4, 5, 6]:
         # note, we only use dpedia_webnlg_clean, for the sake of having comparable datasets,
         # so we re-ran once gpt-4o on this dataset because it used the dirty one previously.
-        llm_response_folder_name = f"gpt-4o-{i}-shot"
+        #llm_response_folder_name = f"gpt-4o-{i}-shot"
         
         #for ontology_name in WIKIDATA_TEKGEN_ONT_NAMES:
         #    l = LLMMetrics(llm_response_folder_name, ontology_name, "wikidata_tekgen")
@@ -295,7 +302,7 @@ if __name__ ==  "__main__":
         #    l.generate()
             
         
-        generate_global_median_quartiles(llm_response_folder_name)
+        #generate_global_median_quartiles(llm_response_folder_name)
     
     #for ontology_name in DPEDIA_WEBNLG_ONT_NAMES:
     #    # NOTE : using dpedia_webnlg_clean or dpedia_webnlg on rebel performance should
@@ -306,4 +313,4 @@ if __name__ ==  "__main__":
     # generate_global_averages(llm_response_folder_name)
     
     # note, for rebel-large-8..12-beams, do_sample was set to True, this wasn't the case with
-    # beams 2-6.
+    # beams 2-6

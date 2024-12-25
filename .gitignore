@@ -15,3 +15,4 @@ data/wikidata_synthetic/train/ont_1_movie_train-wikidata_synthetic.cache
 data/wikidata_tekgen/test/ont_1_movie_test-text2kgbench.cache
 data/wikidata_tekgen/test/ont_1_movie_test-text2kgbench.cache
 slurm-*.out
+*.ckpt

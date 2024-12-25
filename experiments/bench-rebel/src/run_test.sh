@@ -8,4 +8,4 @@
 
 module load GCCcore/13.2.0 Python/3.11.5
 
-srun pipenv run python3 test.py data=wkdata_synth_movie
+srun pipenv run python3 test.py data=wikidata_synthetic
