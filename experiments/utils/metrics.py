@@ -66,6 +66,11 @@ class LLMMetrics():
     
         with open(self.avg_met_path, "a") as avg_f:
             avg_f.write(json.dumps(self.avg_met) + "\n")
+        
+        generate_global_averages(self.metrics_dir)
+        get_csv_avg_per_ontology_dbpedia(self.metrics_dir)
+        get_csv_avg_per_ontology_tekgen(self.metrics_dir)  
+        generate_global_median_quartiles(self.metrics_dir)
     
     def _add_to_average(self, test_sent_w_metrics):
         types = ["all"]
@@ -279,6 +284,34 @@ def generate_global_median_quartiles(llm_metrics_folder_name: str):
 
             table_f.write("\n")
 
+def get_csv_avg_per_ontology_dbpedia(llm_response_subfolder: str) -> None:
+    """Generate CSV table format from _avg.jsonl files for DBpedia for easy LaTeX or Excel parsing"""
+    if os.path.exists(llm_response_subfolder + "/dpedia_webnlg_clean_avg.jsonl"):    
+        with open(llm_response_subfolder + "/dpedia_webnlg_clean_avg.jsonl") as f:
+            data_dbpedia = [json.loads(line) for line in f]
+            
+            with open(llm_response_subfolder + "/dbpedia_webnlg_clean_avg_per_ontology.csv", "a") as f:
+                f.write("onto, P, R, F1, OC, SH, RH, OH\n")
+                for ont_result in data_dbpedia:    
+                    f.write(f"{ont_result['onto']}, {ont_result['all']['avg_precision']:.2f}, {ont_result['all']['avg_recall']:.2f}, {ont_result['all']['avg_f1']:.2f}, ")
+                    f.write(f"{ont_result['all']['avg_onto_conf']:.2f}, {ont_result['all']['avg_sub_halluc']:.2f}, {ont_result['all']['avg_rel_halluc']:.2f}, {ont_result['all']['avg_obj_halluc']:.2f}\n")
+    else:
+        print("No DBpedia_WebNLG averages at", llm_response_subfolder + "/dpedia_webnlg_clean_avg.jsonl")
+
+
+def get_csv_avg_per_ontology_tekgen(llm_response_subfolder: str) -> None:
+    """Generate CSV table format from _avg.jsonl files for TekGen for easy LaTeX or Excel parsing"""
+    if os.path.exists(llm_response_subfolder + "/wikidata_tekgen_avg.jsonl"):
+        with open(llm_response_subfolder + "/wikidata_tekgen_avg.jsonl") as f:
+            data_wikidata = [json.loads(line) for line in f]
+            for variant in ["all", "unseen", "verified"]:
+                with open(llm_response_subfolder + f"/wikidata_tekgen_avg_per_ontology_{variant}.csv", "a") as f:
+                    f.write("onto, P, R, F1, OC, SH, RH, OH\n")
+                    for ont_result in data_wikidata:
+                        f.write(f"{ont_result['onto']}, {ont_result[variant]['avg_precision']:.2f}, {ont_result[variant]['avg_recall']:.2f}, {ont_result[variant]['avg_f1']:.2f}, ")
+                        f.write(f"{ont_result[variant]['avg_onto_conf']:.2f}, {ont_result[variant]['avg_sub_halluc']:.2f}, {ont_result[variant]['avg_rel_halluc']:.2f}, {ont_result[variant]['avg_obj_halluc']:.2f}\n")
+    else:
+        print("No Wikidata-TekGen averages at", llm_response_subfolder + "/wikidata_tekgen_avg.jsonl")
 
 if __name__ ==  "__main__":
     
@@ -287,22 +320,6 @@ if __name__ ==  "__main__":
     for ontology_name in WIKIDATA_TEKGEN_ONT_NAMES:
         l = LLMMetrics(llm_response_folder_name, ontology_name, "wikidata_tekgen")
         l.generate()
-
-    #for i in [1, 2, 3, 4, 5, 6]:
-        # note, we only use dpedia_webnlg_clean, for the sake of having comparable datasets,
-        # so we re-ran once gpt-4o on this dataset because it used the dirty one previously.
-        #llm_response_folder_name = f"gpt-4o-{i}-shot"
-        
-        #for ontology_name in WIKIDATA_TEKGEN_ONT_NAMES:
-        #    l = LLMMetrics(llm_response_folder_name, ontology_name, "wikidata_tekgen")
-        #    l.generate()
-        
-        #for ontology_name in DPEDIA_WEBNLG_ONT_NAMES:
-        #    l = LLMMetrics(llm_response_folder_name, ontology_name, "dpedia_webnlg_clean")
-        #    l.generate()
-            
-        
-        #generate_global_median_quartiles(llm_response_folder_name)
     
     #for ontology_name in DPEDIA_WEBNLG_ONT_NAMES:
     #    # NOTE : using dpedia_webnlg_clean or dpedia_webnlg on rebel performance should
@@ -312,5 +329,3 @@ if __name__ ==  "__main__":
     #    l.generate()
     # generate_global_averages(llm_response_folder_name)
     
-    # note, for rebel-large-8..12-beams, do_sample was set to True, this wasn't the case with
-    # beams 2-6

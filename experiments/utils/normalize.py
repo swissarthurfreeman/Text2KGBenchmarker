@@ -1,5 +1,6 @@
 import re
 import os
+import sys
 import json
 import glob
 import torch
@@ -56,12 +57,13 @@ class Normalizer:
             
             ont_relations: list[dict[str, str]] = self.getRelationsListOfDictsOf(dataset_name, ontology_name)
             
+            # to retrieve the original sentences
             ground_truths = load_jsonl_as_dict("../../data/" + dataset_name + "/test/" + ontology_name + "_test.jsonl")
             
             for response in responses:
                 sentence = ground_truths[response["id"]]["sent"]
-                normalized_response = self.normalize(response, sentence, ont_relations)    
-                print(response["id"])
+                normalized_response: dict = self.normalize(response, sentence, ont_relations)    
+                
                 with open(self.normalized_llm_responses_dir + "/" + ontology_name + "-" + dataset_name + ".jsonl", "a") as f_out:
                     f_out.write(json.dumps(normalized_response) + "\n")
             
@@ -112,21 +114,34 @@ class Entailement(Normalizer):
         res = {"id": response["id"], "response": response["response"], "triples": []}
         
         for triple in response["triples"]:
-            entailement_result = self.sent_entailer(sentence)[0]
+            # Johnny Depp was an actor in Pirates of the Caribbean. Johnny Depp cast member Pirates of the Caribbean.
+            sentence_w_triple = sentence + f". {triple['sub']} {triple['rel']} {triple['obj']}"
+            entailement_result = self.sent_entailer(sentence_w_triple)[0]
+            
+            print(sentence_w_triple, "entailement result :", entailement_result)
             # if sentence entails result, or we have reasonable doubt it might, keep triple.
-            if entailement_result["label"] == "ENTAILMENT" or (res["label"] == "NEUTRAL" and res["score"] < self.neutral_entailment_threshold):
+            if entailement_result["label"] == "ENTAILMENT" or (entailement_result["label"] == "NEUTRAL" and entailement_result["score"] < self.neutral_entailment_threshold):
                 res["triples"].append(triple)
         return res
             
-if __name__ == "__main__":    
+if __name__ == "__main__":
     device = "cuda" if torch.cuda.is_available() else "cpu"
-    llm_response_folder_name = "Babelscape.rebel-large-6-beams"
+    i: str = sys.argv[-2]
+    threshold: float = float(sys.argv[-1])
+    
+    llm_response_folder_name = f"Babelscape.rebel-large-" + i + "-beams"
+    normalized_llm_response_folder_name = llm_response_folder_name + "-rel-map-t=" + str(threshold)
+    
+    print(llm_response_folder_name)
     
     sent_comp_model = SentenceTransformer('sentence-transformers/all-mpnet-base-v2', device=device)
-    sim_normalizer = Similarity(llm_response_folder_name, llm_response_folder_name + "-rel-map", 0.3, sent_comp_model)
+    sim_normalizer = Similarity(llm_response_folder_name, normalized_llm_response_folder_name, threshold, sent_comp_model)
     sim_normalizer.generateNormalizedData()
     
     # you can then add another layer of normalization via, 
     #sent_entailement_model = pipeline(model='roberta-large-mnli', device=device)
-    #ent_normalizer = Entailement(llm_response_folder_name + "-rel-map", llm_response_folder_name + "-entail", sent_entailement_model, 0.55)
+    #ent_normalizer = Entailement(llm_response_folder_name, normalized_llm_response_folder_name, sent_entailement_model, threshold)
     #ent_normalizer.generateNormalizedData()
+    
+        
+        
