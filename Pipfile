@@ -23,6 +23,7 @@ psutil = "*"
 evaluate = "*"
 sparqlwrapper = {git = "https://github.com/rdflib/sparqlwrapper"}
 python-dateutil = "*"
+matplotlib = "*"
 
 [dev-packages]
 ipykernel = "*"
