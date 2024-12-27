@@ -66,11 +66,6 @@ class LLMMetrics():
     
         with open(self.avg_met_path, "a") as avg_f:
             avg_f.write(json.dumps(self.avg_met) + "\n")
-        
-        generate_global_averages(self.metrics_dir)
-        get_csv_avg_per_ontology_dbpedia(self.metrics_dir)
-        get_csv_avg_per_ontology_tekgen(self.metrics_dir)  
-        generate_global_median_quartiles(self.metrics_dir)
     
     def _add_to_average(self, test_sent_w_metrics):
         types = ["all"]
@@ -176,8 +171,8 @@ class LLMMetrics():
         return ont_conformance, rel_hallucination
 
 
-def generate_global_averages(llm_metrics_folder_name: str):
-    avg_files = glob.glob("../results/metrics/" + llm_metrics_folder_name + "/*_avg.jsonl")
+def generate_global_averages(llm_metrics_folder_path: str):
+    avg_files = glob.glob(llm_metrics_folder_path + "/*_avg.jsonl")
     avg_metrics_dpedia_webnlg = {
         "all": { "n_sentences": 0, "avg_precision": 0, "avg_recall": 0, "avg_f1": 0, "avg_onto_conf": 0, "avg_sub_halluc": 0, "avg_rel_halluc": 0, "avg_obj_halluc": 0}
     }
@@ -200,7 +195,7 @@ def generate_global_averages(llm_metrics_folder_name: str):
                         if "dpedia_webnlg" in avg_file_path and typ == "all":
                             avg_metrics_dpedia_webnlg[typ][key] += average[typ][key] / len(averages)
     
-    with open("../results/metrics/" + llm_metrics_folder_name + "/global_avg.csv", "w") as table_f:
+    with open(llm_metrics_folder_path + "/global_avg.csv", "w") as table_f:
         table_f.write("dataset, subset, P, R, F1, OC, SH, RH, OH\n")
         for typ in avg_metrics_wikidata_tekgen.keys():
             if typ in ["unseen", "all", "verified"]:
@@ -217,7 +212,7 @@ def generate_global_averages(llm_metrics_folder_name: str):
                 table_f.write(f"{avg_metrics_dpedia_webnlg[typ]['avg_obj_halluc']:.2f}\n")
 
 
-def generate_global_median_quartiles(llm_metrics_folder_name: str):
+def generate_global_median_quartiles(llm_metrics_folder_path: str):
     mediam_metrics_dpedia_webnlg = {
         "all": { "precision": [], "recall": [], "f1": [], "onto_conf": [], "sub_halluc": [], "rel_halluc": [], "obj_halluc": []}
     }
@@ -228,7 +223,7 @@ def generate_global_median_quartiles(llm_metrics_folder_name: str):
         "all": { "precision": [], "recall": [], "f1": [], "onto_conf": [], "sub_halluc": [], "rel_halluc": [], "obj_halluc": []}
     }
     
-    for avg_file_path in ["../results/metrics/" + llm_metrics_folder_name + "/dpedia_webnlg_clean_avg.jsonl", "../results/metrics/" + llm_metrics_folder_name + "/wikidata_tekgen_avg.jsonl"]:
+    for avg_file_path in [llm_metrics_folder_path + "/dpedia_webnlg_clean_avg.jsonl", llm_metrics_folder_path + "/wikidata_tekgen_avg.jsonl"]:
         onto_averages = load_jsonl_as_list(avg_file_path)
         
         for onto_average in onto_averages:
@@ -264,7 +259,7 @@ def generate_global_median_quartiles(llm_metrics_folder_name: str):
                 "p-75": np.percentile(values, 75)
             }
     
-    with open("../results/metrics/" + llm_metrics_folder_name + "/global_median.csv", "w") as table_f:
+    with open(llm_metrics_folder_path + "/global_median.csv", "w") as table_f:
         for statistic in ["median", "p-25", "p-75"]:
             table_f.write(statistic + "\n")
             table_f.write("dataset, subset, P, R, F1, OC, SH, RH, OH\n")
@@ -315,17 +310,26 @@ def get_csv_avg_per_ontology_tekgen(llm_response_subfolder: str) -> None:
 
 if __name__ ==  "__main__":
     
-    llm_response_folder_name = f"rebel-fine-tuned-per-ontology-25-dec-checkpoints"
+    llm_response_folders = glob.glob("../results/llm_responses/*")
     
-    for ontology_name in WIKIDATA_TEKGEN_ONT_NAMES:
-        l = LLMMetrics(llm_response_folder_name, ontology_name, "wikidata_tekgen")
-        l.generate()
+    for llm_response_folder_path in llm_response_folders: 
+        print("Compute metrics for", llm_response_folder_path)
+        folder_name = llm_response_folder_path.split("/")[-1]
+        
+        for ontology_name in WIKIDATA_TEKGEN_ONT_NAMES:
+            print("Wikidata-TekGen", ontology_name)
+            l = LLMMetrics(folder_name, ontology_name, "wikidata_tekgen")
+            l.generate()
+                
+        for ontology_name in DPEDIA_WEBNLG_ONT_NAMES:
+            print("DBpedia-WebNLG", ontology_name)
+            l = LLMMetrics(folder_name, ontology_name, "dpedia_webnlg_clean")
+            l.generate()     
     
-    #for ontology_name in DPEDIA_WEBNLG_ONT_NAMES:
-    #    # NOTE : using dpedia_webnlg_clean or dpedia_webnlg on rebel performance should
-    #    # not make any difference since we remove underscores and camelcasing in the code
-    #    # before computing comparison metrics.
-    #    l = LLMMetrics(llm_response_folder_name, ontology_name, "dpedia_webnlg_clean")
-    #    l.generate()
-    # generate_global_averages(llm_response_folder_name)
+        llm_response_metrics_folder_path = "../results/metrics/" + folder_name
+        generate_global_averages(llm_response_metrics_folder_path)
+        get_csv_avg_per_ontology_dbpedia(llm_response_metrics_folder_path)
+        get_csv_avg_per_ontology_tekgen(llm_response_metrics_folder_path)  
+        generate_global_median_quartiles(llm_response_metrics_folder_path)
+        
     
