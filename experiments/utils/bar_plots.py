@@ -224,7 +224,3 @@ if __name__ == '__main__':
     
     gen_bar_plots(llm_metric_folders, plot_labels, args.title_model_name, args.metric, args.variants, ylim=args.ylim, vicuna_f1_bars=strtobool(args.vicuna_f1_bars), mode=args.mode)
     
-    # TODO : add parameter to generate median plots instead, shouldn't be that difficult,
-    # modifiying line mean, stds = get_mean_stds(...) to medians, percentiles ought to do it
-    # and make sure to update the titles and labels based on this too.
-    # regenerate graphics with new llm_responses metrics, current graphs are based on older prompt without range/domain constraints.
