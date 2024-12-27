@@ -100,8 +100,23 @@ class Similarity(Normalizer):
                 triple["rel"] = closest_rel["rel"]
                 res["triples"].append(triple)
         return res
-        
 
+class InOntology(Normalizer):
+    def __init__(self, model_to_normalize_name, normalized_model_name):
+        super().__init__(model_to_normalize_name, normalized_model_name)
+
+    def normalize(self, response, sentence, ont_relations):
+        res = {"id": response["id"], "response": response["response"], "triples": []}
+        str_relations = [rel["rel"] for rel in ont_relations]
+
+        triples = []
+        for triple in response["triples"]:
+            if triple["rel"] in str_relations:
+                triples.append(triple)
+        
+        res["triples"] = triples
+        return res
+    
 class Entailement(Normalizer):
     """Drop triple if it is not entailed by the sentence"""
     def __init__(self, model_to_normalize_name: str, normalized_model_name: str, sent_entailer: object, threshold: float):
@@ -123,20 +138,22 @@ class Entailement(Normalizer):
             if entailement_result["label"] == "ENTAILMENT" or (entailement_result["label"] == "NEUTRAL" and entailement_result["score"] < self.neutral_entailment_threshold):
                 res["triples"].append(triple)
         return res
-            
+
 if __name__ == "__main__":
     device = "cuda" if torch.cuda.is_available() else "cpu"
-    i: str = sys.argv[-2]
-    threshold: float = float(sys.argv[-1])
+    #i: str = sys.argv[-2]
+    #threshold: float = float(sys.argv[-1])
+    for i in [2, 4, 6, 8, 10, 12]:
+        llm_response_folder_name = f"Babelscape.rebel-large-{i}-beams"
+        normalized_llm_response_folder_name = llm_response_folder_name + "-rel-in-ontology"
+        
+        print(llm_response_folder_name)
+
+        InOntology(llm_response_folder_name, normalized_llm_response_folder_name).generateNormalizedData()
     
-    llm_response_folder_name = f"Babelscape.rebel-large-" + i + "-beams"
-    normalized_llm_response_folder_name = llm_response_folder_name + "-rel-map-t=" + str(threshold)
-    
-    print(llm_response_folder_name)
-    
-    sent_comp_model = SentenceTransformer('sentence-transformers/all-mpnet-base-v2', device=device)
-    sim_normalizer = Similarity(llm_response_folder_name, normalized_llm_response_folder_name, threshold, sent_comp_model)
-    sim_normalizer.generateNormalizedData()
+    #sent_comp_model = SentenceTransformer('sentence-transformers/all-mpnet-base-v2', device=device)
+    #sim_normalizer = Similarity(llm_response_folder_name, normalized_llm_response_folder_name, threshold, sent_comp_model)
+    #sim_normalizer.generateNormalizedData()
     
     # you can then add another layer of normalization via, 
     #sent_entailement_model = pipeline(model='roberta-large-mnli', device=device)

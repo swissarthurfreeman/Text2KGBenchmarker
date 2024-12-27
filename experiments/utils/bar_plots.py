@@ -87,18 +87,15 @@ def gen_bar_plots(metric_paths: list[str], plot_labels: list[str], title_model_n
     bar will plot specified `metric` mean across ontologies and standard deviation."""
     assert len(metric_paths) == len(plot_labels), "Every bar plot must have a label !"
     
-    #start = 5582989
-    
-    #for _ in range(len(metric_paths)+1):
-    #    colors.append("#" + hex(start)[2:])
-    #    start += 43300
-
     fig, ax = plt.subplots(layout='constrained')
     ax.set_axisbelow(True)
     ax.grid(True)
-    x = np.arange(len(categories))   # the label locations
-    width = 0.13                     # the width of the bars
+    x = np.arange(len(categories)) * 2   # the label locations
     
+    width = 0.13                     # the width of the bars
+    if len(plot_labels) > 6:
+        width = (6 / len(plot_labels)) * 0.2
+        
     if vicuna_f1_bars and mode == 'mean':
         # plot Vicuna baseline bar
         means_vicuna = [0.32, 0.38, 0.35, 0.30]
@@ -113,7 +110,15 @@ def gen_bar_plots(metric_paths: list[str], plot_labels: list[str], title_model_n
     multiplier = 1
     colors = ["#800080", "#55308d", "#2a6099", "#158466", "#00a933", "#81d41a"]
     
-    
+    if len(metric_paths) > len(colors):
+        start = int("0x" + colors[-1][1:], 16)
+        
+        for _ in range(len(metric_paths) - len(colors) + 1):
+            colors.append("#" + hex(start)[2:])
+            start += 25000
+
+
+    capsize = 5 if len(plot_labels) == 6 else 2.5
     # llm_metric_folder_path is gpt-4o-4-shot for example
     # for every specified model metric folder, plot one bar for every variant
     for idx, (llm_metric_folder_path, plot_label) in enumerate(zip(metric_paths, plot_labels)):
@@ -122,11 +127,10 @@ def gen_bar_plots(metric_paths: list[str], plot_labels: list[str], title_model_n
         
         if mode == 'mean':
             means, stds = get_means_stds(llm_metric_folder_path, metric)
-            #print("bar", plot_label, means, stds, multiplier)
-            ax.bar(x + offset, means, width, label=plot_label, yerr=[stds], capsize=5, color=colors[idx])
+            ax.bar(x + offset, means, width, label=plot_label, yerr=[stds], capsize=capsize, color=colors[idx])
         elif mode == 'median':
             medians, p75errors, p25errors = get_median_percentiles(llm_metric_folder_path, metric)
-            ax.bar(x + offset, medians, width, label=plot_label, yerr=[medians-p25errors, p75errors-medians], capsize=5, color=colors[idx])
+            ax.bar(x + offset, medians, width, label=plot_label, yerr=[medians-p25errors, p75errors-medians], capsize=capsize, color=colors[idx])
         
         multiplier += 1
     
@@ -143,14 +147,19 @@ def gen_bar_plots(metric_paths: list[str], plot_labels: list[str], title_model_n
         
     ax.set_xlabel('Text2KGBench Variant')
 
-    ax.set_xticks(x+width*2.5, categories)
+    if len(plot_labels) == 6: 
+        ax.set_xticks(x+width*2.5, categories)
+    
+    if len(plot_labels) > 6:
+        ax.set_xticks(x+width*10, categories)
+    
     ax.legend(loc='upper left', ncols=3)
     ax.set_yticks(np.linspace(0, 1, 11))
     ax.set_ylim(0, ylim)
     
     filename = title_model_name.replace(',', '').replace(' ', '-')
     
-    plt.savefig(f'../results/graphics/{filename}-{mode}-{metric}.png')
+    plt.savefig(f'../results/graphics/{filename}-{mode}-{metric}.png', dpi=600)
     
 
 if __name__ == '__main__':
@@ -185,7 +194,13 @@ if __name__ == '__main__':
         values = []
         print("plot_labels not provided, inferring from folder names...")
         a_folder_name = llm_metric_folders[0].split("/")[-1] 
-        if 'beams' in a_folder_name:
+        if 't=' in a_folder_name:
+            for path in llm_metric_folders:
+                tequals: str = path.split("/")[-1].split("-")[-1]
+                plot_labels.append(f"{tequals[2:]}")
+                values.append(float(tequals[2:]))
+        
+        elif 'beams' in a_folder_name:
             for path in llm_metric_folders:
                 splitted_folder_name: list[str] = path.split("/")[-1].split("-")
                 idx = splitted_folder_name.index("beams")
@@ -198,13 +213,6 @@ if __name__ == '__main__':
                 idx = splitted_folder_name.index("shot")
                 plot_labels.append(f"{splitted_folder_name[idx-1]}-shot")
                 values.append(float(splitted_folder_name[idx-1]))
-        
-        elif 't=' in a_folder_name:
-            for path in llm_metric_folders:
-                tequals: str = path.split("/")[-1].split("-")[-1]
-                plot_labels.append(f"{tequals[2:]}")
-                values.append(float(tequals[2:]))
-        
         else:
             print("Unable to infer from folder names, aborting...")
             exit(0)

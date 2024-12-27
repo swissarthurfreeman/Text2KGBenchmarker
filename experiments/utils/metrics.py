@@ -318,6 +318,9 @@ if __name__ ==  "__main__":
     
     for llm_response_folder_path in llm_response_folders: 
 
+        llm_response_folder_path = "Babelscape.rebel-large-12-beams-entail-t=0.8"
+        #if "rel-in-ontology" not in llm_response_folder_path: continue
+
         print("Compute metrics for", llm_response_folder_path)
         folder_name = llm_response_folder_path.split("/")[-1]
         
@@ -340,4 +343,4 @@ if __name__ ==  "__main__":
         get_csv_avg_per_ontology_dbpedia(llm_response_metrics_folder_path)
         get_csv_avg_per_ontology_tekgen(llm_response_metrics_folder_path)  
         generate_global_median_quartiles(llm_response_metrics_folder_path)
-    
+        exit(0)
