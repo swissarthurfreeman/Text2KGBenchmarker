@@ -1,0 +1,820 @@
+{"id": "ont_1_movie_test_1", "triples": [{"sub": "bleach: hell verse", "rel": "director", "obj": "noriyuki abe"}]}
+{"id": "ont_1_movie_test_2", "triples": [{"sub": "keyboard cat", "rel": "main subject", "obj": "piano"}]}
+{"id": "ont_1_movie_test_3", "triples": [{"sub": "a letter to momo", "rel": "director", "obj": "mitsuko kase"}]}
+{"id": "ont_1_movie_test_4", "triples": [{"sub": "spirited away", "rel": "screenwriter", "obj": "hayao miyazaki"}]}
+{"id": "ont_1_movie_test_5", "triples": [{"sub": "looney tunes: back in action", "rel": "genre", "obj": "comedy film"}]}
+{"id": "ont_1_movie_test_6", "triples": [{"sub": "the life on the earth - the summer of dioxin", "rel": "main subject", "obj": "seveso disaster"}]}
+{"id": "ont_1_movie_test_7", "triples": [{"sub": "the flame of love", "rel": "cast member", "obj": "anna may wong"}]}
+{"id": "ont_1_movie_test_8", "triples": [{"sub": "metal skin panic madox-01", "rel": "director", "obj": "shinji aramaki"}]}
+{"id": "ont_1_movie_test_9", "triples": [{"sub": "the lost canvas", "rel": "director", "obj": "noriyuki abe"}]}
+{"id": "ont_1_movie_test_10", "triples": [{"sub": "fullmetal alchemist the movie: conqueror of shamballa", "rel": "director", "obj": "seiji mizushima"}]}
+{"id": "ont_1_movie_test_11", "triples": [{"sub": "alice's wonderland", "rel": "genre", "obj": "silent film"}]}
+{"id": "ont_1_movie_test_12", "triples": [{"sub": "welcome to eltingville", "rel": "screenwriter", "obj": "chuck sheetz"}]}
+{"id": "ont_1_movie_test_13", "triples": [{"sub": "the night of taneyamagahara", "rel": "director", "obj": "kazuo oga"}]}
+{"id": "ont_1_movie_test_14", "triples": [{"sub": "the magnificent world of el-hazard", "rel": "director", "obj": "hiroki hayashi"}]}
+{"id": "ont_1_movie_test_15", "triples": [{"sub": "daicon iii", "rel": "director", "obj": "hideaki anno"}]}
+{"id": "ont_1_movie_test_16", "triples": [{"sub": "the disappearance of haruhi suzumiya", "rel": "screenwriter", "obj": "fumihiko shimo"}]}
+{"id": "ont_1_movie_test_17", "triples": [{"sub": "who framed roger rabbit", "rel": "screenwriter", "obj": "jeffrey price"}]}
+{"id": "ont_1_movie_test_18", "triples": [{"sub": "the place promised in our early days", "rel": "screenwriter", "obj": "makoto shinkai"}]}
+{"id": "ont_1_movie_test_19", "triples": [{"sub": "arcadia of my youth", "rel": "director", "obj": "tomoharu katsumata"}]}
+{"id": "ont_1_movie_test_20", "triples": [{"sub": "the first", "rel": "director", "obj": "raja gosnell"}]}
+{"id": "ont_1_movie_test_21", "triples": [{"sub": "toy story", "rel": "screenwriter", "obj": "john lasseter"}]}
+{"id": "ont_1_movie_test_22", "triples": [{"sub": "anemic cinema", "rel": "screenwriter", "obj": "man ray"}]}
+{"id": "ont_1_movie_test_23", "triples": [{"sub": "coal black and de sebben dwarfs", "rel": "director", "obj": "bob clampett"}]}
+{"id": "ont_1_movie_test_24", "triples": [{"sub": "mobile suit gundam f91", "rel": "screenwriter", "obj": "yoshiyuki tomino"}]}
+{"id": "ont_1_movie_test_25", "triples": []}
+{"id": "ont_1_movie_test_26", "triples": [{"sub": "panda! go, panda!", "rel": "screenwriter", "obj": "yoichi kotabe"}]}
+{"id": "ont_1_movie_test_27", "triples": [{"sub": "the wonderful world of puss 'n boots", "rel": "production company", "obj": "t\u00e5\u008dei animation"}]}
+{"id": "ont_1_movie_test_28", "triples": [{"sub": "last comic standing", "rel": "screenwriter", "obj": "seth macfarlane"}]}
+{"id": "ont_1_movie_test_29", "triples": [{"sub": "how a mosquito operates", "rel": "screenwriter", "obj": "winsor mccay"}]}
+{"id": "ont_1_movie_test_30", "triples": [{"sub": "bead game", "rel": "screenwriter", "obj": "ishu patel"}]}
+{"id": "ont_1_movie_test_31", "triples": [{"sub": "cannery rodent", "rel": "director", "obj": "chuck jones"}]}
+{"id": "ont_1_movie_test_32", "triples": [{"sub": "jack and the witch", "rel": "director", "obj": "taiji yabushita"}]}
+{"id": "ont_1_movie_test_33", "triples": [{"sub": "harvie krumpet", "rel": "screenwriter", "obj": "adam elliot"}]}
+{"id": "ont_1_movie_test_34", "triples": [{"sub": "vampire hunter d: bloodlust", "rel": "screenwriter", "obj": "yoshiaki kawajiri"}]}
+{"id": "ont_1_movie_test_35", "triples": [{"sub": "i love to singa", "rel": "director", "obj": "tex avery"}]}
+{"id": "ont_1_movie_test_36", "triples": [{"sub": "arthur 3: the war of the two worlds", "rel": "cast member", "obj": "freddie highmore"}]}
+{"id": "ont_1_movie_test_37", "triples": [{"sub": "castle in the sky", "rel": "director", "obj": "hayao miyazaki"}]}
+{"id": "ont_1_movie_test_38", "triples": [{"sub": "the danish poet", "rel": "screenwriter", "obj": "torill kove"}]}
+{"id": "ont_1_movie_test_39", "triples": [{"sub": "toy tinkers", "rel": "based on", "obj": "jingle bells"}]}
+{"id": "ont_1_movie_test_40", "triples": [{"sub": "betty boop's bamboo isle", "rel": "director", "obj": "dave fleischer"}]}
+{"id": "ont_1_movie_test_41", "triples": [{"sub": "the secret life of pets", "rel": "screenwriter", "obj": "brian lynch"}]}
+{"id": "ont_1_movie_test_42", "triples": [{"sub": "the dot and the line", "rel": "production company", "obj": "metro-goldwyn-mayer"}]}
+{"id": "ont_1_movie_test_43", "triples": [{"sub": "the ghost in the shell movie", "rel": "screenwriter", "obj": "masamune shirow"}]}
+{"id": "ont_1_movie_test_44", "triples": [{"sub": "dead leaves", "rel": "director", "obj": "hiroyuki imaishi"}]}
+{"id": "ont_1_movie_test_45", "triples": [{"sub": "gertie the dinosaur", "rel": "screenwriter", "obj": "winsor mccay"}]}
+{"id": "ont_1_movie_test_46", "triples": [{"sub": "flight of the butterflies", "rel": "cast member", "obj": "gordon pinsent"}]}
+{"id": "ont_1_movie_test_47", "triples": [{"sub": "les vampires", "rel": "genre", "obj": "silent"}]}
+{"id": "ont_1_movie_test_48", "triples": [{"sub": "the castle of cagliostro", "rel": "director", "obj": "hayao miyazaki"}]}
+{"id": "ont_1_movie_test_49", "triples": [{"sub": "the horse in the gray flannel suit", "rel": "production company", "obj": "buena vista distribution company"}]}
+{"id": "ont_1_movie_test_50", "triples": [{"sub": "the case of the stuttering pig", "rel": "director", "obj": "frank tashlin"}]}
+{"id": "ont_1_movie_test_51", "triples": [{"sub": "upswept hare", "rel": "director", "obj": "robert mckimson"}]}
+{"id": "ont_1_movie_test_52", "triples": [{"sub": "my neighbor totoro", "rel": "director", "obj": "hayao miyazaki"}]}
+{"id": "ont_1_movie_test_53", "triples": [{"sub": "yankee doodle bugs", "rel": "director", "obj": "friz freleng"}]}
+{"id": "ont_1_movie_test_54", "triples": [{"sub": "hollywood steps out", "rel": "director", "obj": "tex avery"}]}
+{"id": "ont_1_movie_test_55", "triples": [{"sub": "mickey's christmas carol", "rel": "screenwriter", "obj": "burny mattinson"}]}
+{"id": "ont_1_movie_test_57", "triples": []}
+{"id": "ont_1_movie_test_58", "triples": [{"sub": "black soul", "rel": "publication date", "obj": "01 january 2002"}]}
+{"id": "ont_1_movie_test_59", "triples": [{"sub": "the haunted world", "rel": "screenwriter", "obj": "eugene poddany"}]}
+{"id": "ont_1_movie_test_60", "triples": [{"sub": "hai-tang", "rel": "cast member", "obj": "anna may wong"}]}
+{"id": "ont_1_movie_test_61", "triples": [{"sub": "the movie's", "rel": "screenwriter", "obj": "hiroshi fujimoto"}]}
+{"id": "ont_1_movie_test_62", "triples": [{"sub": "slayers return", "rel": "screenwriter", "obj": "hajime kanzaka"}]}
+{"id": "ont_1_movie_test_63", "triples": [{"sub": "the haunted world of el superbeasto", "rel": "cast member", "obj": "bud luckey"}]}
+{"id": "ont_1_movie_test_64", "triples": [{"sub": "who i am and what i want", "rel": "publication date", "obj": "01 january 2005"}]}
+{"id": "ont_1_movie_test_65", "triples": [{"sub": "dug's special mission", "rel": "director", "obj": "ronnie del carmen"}]}
+{"id": "ont_1_movie_test_66", "triples": [{"sub": "when marnie was there", "rel": "screenwriter", "obj": "hiromasa yonebayashi"}]}
+{"id": "ont_1_movie_test_67", "triples": [{"sub": "the dark knight rises", "rel": "screenwriter", "obj": "chris columbus"}]}
+{"id": "ont_1_movie_test_68", "triples": [{"sub": "mike's new car", "rel": "screenwriter", "obj": "pete docter"}]}
+{"id": "ont_1_movie_test_69", "triples": [{"sub": "seryi volk & krasnaya shapochka", "rel": "publication date", "obj": "01 january 1990"}]}
+{"id": "ont_1_movie_test_70", "triples": [{"sub": "puss gets the boot", "rel": "director", "obj": "william hanna"}]}
+{"id": "ont_1_movie_test_71", "triples": [{"sub": "superman ii", "rel": "screenwriter", "obj": "leslie newman"}]}
+{"id": "ont_1_movie_test_72", "triples": [{"sub": "tales of vesperia: the first strike", "rel": "screenwriter", "obj": "reiko yoshida"}]}
+{"id": "ont_1_movie_test_73", "triples": [{"sub": "partly cloudy", "rel": "screenwriter", "obj": "peter sohn"}]}
+{"id": "ont_1_movie_test_74", "triples": []}
+{"id": "ont_1_movie_test_75", "triples": [{"sub": "the curse of the were-rabbit", "rel": "based on", "obj": "little nemo"}]}
+{"id": "ont_1_movie_test_76", "triples": [{"sub": "patient porky", "rel": "screenwriter", "obj": "warren foster"}]}
+{"id": "ont_1_movie_test_77", "triples": [{"sub": "the haunted world", "rel": "screenwriter", "obj": "tom ray"}]}
+{"id": "ont_1_movie_test_78", "triples": [{"sub": "children who chase lost voices", "rel": "director", "obj": "makoto shinkai"}]}
+{"id": "ont_1_movie_test_79", "triples": [{"sub": "she and her cat", "rel": "director", "obj": "makoto shinkai"}]}
+{"id": "ont_1_movie_test_80", "triples": [{"sub": "the simpsons movie", "rel": "screenwriter", "obj": "matt groening"}]}
+{"id": "ont_1_movie_test_81", "triples": [{"sub": "birds anonymous", "rel": "director", "obj": "friz freleng"}]}
+{"id": "ont_1_movie_test_82", "triples": [{"sub": "trap happy porky", "rel": "screenwriter", "obj": "tedd pierce"}]}
+{"id": "ont_1_movie_test_83", "triples": [{"sub": "the walt disney mouse", "rel": "characters", "obj": "mickey mouse"}]}
+{"id": "ont_1_movie_test_84", "triples": [{"sub": "the day the clown cried", "rel": "genre", "obj": "drama film"}]}
+{"id": "ont_1_movie_test_85", "triples": [{"sub": "a grand day out", "rel": "director", "obj": "nick park"}]}
+{"id": "ont_1_movie_test_86", "triples": [{"sub": "the unsaid", "rel": "screenwriter", "obj": "joss whedon"}]}
+{"id": "ont_1_movie_test_87", "triples": [{"sub": "the lost canvas", "rel": "screenwriter", "obj": "fujiko f. fujio"}]}
+{"id": "ont_1_movie_test_90", "triples": [{"sub": "hana and alice", "rel": "screenwriter", "obj": "shunji iwai"}]}
+{"id": "ont_1_movie_test_91", "triples": [{"sub": "mr. duck steps out", "rel": "screenwriter", "obj": "michael maltese"}]}
+{"id": "ont_1_movie_test_92", "triples": []}
+{"id": "ont_1_movie_test_93", "triples": [{"sub": "dc showcase: catwoman", "rel": "publication date", "obj": "01 january 2011"}]}
+{"id": "ont_1_movie_test_94", "triples": [{"sub": "mr. duck steps out", "rel": "screenwriter", "obj": "frank tashlin"}]}
+{"id": "ont_1_movie_test_95", "triples": [{"sub": "frank film", "rel": "screenwriter", "obj": "frank mouris"}]}
+{"id": "ont_1_movie_test_96", "triples": [{"sub": "2010: the year we make contact", "rel": "publication date", "obj": "01 january 1984"}]}
+{"id": "ont_1_movie_test_99", "triples": [{"sub": "jerry, jerry, quite contrary", "rel": "screenwriter", "obj": "chuck jones"}]}
+{"id": "ont_1_movie_test_100", "triples": [{"sub": "the haunted world", "rel": "director", "obj": "william hanna"}]}
+{"id": "ont_1_movie_test_101", "triples": [{"sub": "the two mouseketeers", "rel": "director", "obj": "william hanna"}]}
+{"id": "ont_1_movie_test_102", "triples": [{"sub": "a letter to momo", "rel": "screenwriter", "obj": "gen urobuchi"}]}
+{"id": "ont_1_movie_test_103", "triples": [{"sub": "the idol master", "rel": "publication date", "obj": "01 january 2014"}]}
+{"id": "ont_1_movie_test_104", "triples": [{"sub": "a letter to momo", "rel": "director", "obj": "masaaki yuasa"}]}
+{"id": "ont_1_movie_test_105", "triples": [{"sub": "the practical pig", "rel": "director", "obj": "dick rickard"}]}
+{"id": "ont_1_movie_test_108", "triples": [{"sub": "slayers gorgeous", "rel": "screenwriter", "obj": "hajime kanzaka"}]}
+{"id": "ont_1_movie_test_109", "triples": [{"sub": "the gallopin' gaucho", "rel": "screenwriter", "obj": "ub iwerks"}]}
+{"id": "ont_1_movie_test_110", "triples": [{"sub": "the boy and the beast", "rel": "screenwriter", "obj": "mamoru hosoda"}]}
+{"id": "ont_1_movie_test_112", "triples": [{"sub": "jerry-go-round", "rel": "director", "obj": "chuck jones"}]}
+{"id": "ont_1_movie_test_113", "triples": [{"sub": "red's dream", "rel": "screenwriter", "obj": "john lasseter"}]}
+{"id": "ont_1_movie_test_114", "triples": [{"sub": "the haunted world", "rel": "screenwriter", "obj": "josh cooley"}]}
+{"id": "ont_1_movie_test_115", "triples": [{"sub": "the lion king", "rel": "screenwriter", "obj": "irene mecchi"}]}
+{"id": "ont_1_movie_test_116", "triples": [{"sub": "gumbasia", "rel": "screenwriter", "obj": "art clokey"}]}
+{"id": "ont_1_movie_test_117", "triples": [{"sub": "toy story toons: hawaiian vacation", "rel": "publication date", "obj": "01 january 2011"}]}
+{"id": "ont_1_movie_test_118", "triples": [{"sub": "z", "rel": "director", "obj": "hiroyuki kitakubo"}]}
+{"id": "ont_1_movie_test_119", "triples": [{"sub": "a close shave", "rel": "director", "obj": "nick park"}]}
+{"id": "ont_1_movie_test_120", "triples": [{"sub": "$9.99", "rel": "screenwriter", "obj": "tatia rosenthal"}]}
+{"id": "ont_1_movie_test_121", "triples": [{"sub": "sexykiller, morir\u00e3\u00a1s por ella", "rel": "genre", "obj": "comedy horror"}]}
+{"id": "ont_1_movie_test_122", "triples": [{"sub": "def by temptation", "rel": "genre", "obj": "comedy horror"}]}
+{"id": "ont_1_movie_test_123", "triples": [{"sub": "alita: battle angel", "rel": "based on", "obj": "battle angel"}]}
+{"id": "ont_1_movie_test_124", "triples": [{"sub": "geek maggot bingo", "rel": "genre", "obj": "comedy horror"}]}
+{"id": "ont_1_movie_test_125", "triples": [{"sub": "the haunted castle", "rel": "genre", "obj": "comedy horror"}]}
+{"id": "ont_1_movie_test_126", "triples": [{"sub": "the frighteners", "rel": "genre", "obj": "comedy horror"}]}
+{"id": "ont_1_movie_test_127", "triples": [{"sub": "flatliners", "rel": "genre", "obj": "psychological horror"}]}
+{"id": "ont_1_movie_test_128", "triples": [{"sub": "you've got mail", "rel": "genre", "obj": "romantic comedy"}]}
+{"id": "ont_1_movie_test_129", "triples": [{"sub": "scooby-doo! the movie", "rel": "genre", "obj": "comedy horror"}]}
+{"id": "ont_1_movie_test_130", "triples": [{"sub": "premutos: the fallen angel", "rel": "genre", "obj": "comedy horror"}]}
+{"id": "ont_1_movie_test_131", "triples": [{"sub": "sword of desperation", "rel": "director", "obj": "hideyuki hirayama"}]}
+{"id": "ont_1_movie_test_132", "triples": [{"sub": "blood on the highway", "rel": "genre", "obj": "comedy horror"}]}
+{"id": "ont_1_movie_test_133", "triples": [{"sub": "bela lugosi meets a brooklyn gorilla", "rel": "genre", "obj": "comedy horror"}]}
+{"id": "ont_1_movie_test_134", "triples": [{"sub": "scooby-doo and the legend of the vampire", "rel": "genre", "obj": "comedy horror"}]}
+{"id": "ont_1_movie_test_135", "triples": [{"sub": "the ghosts must be crazy", "rel": "genre", "obj": "comedy horror"}]}
+{"id": "ont_1_movie_test_136", "triples": [{"sub": "music of the vampire", "rel": "genre", "obj": "comedy horror"}]}
+{"id": "ont_1_movie_test_137", "triples": [{"sub": "mozart and the whale", "rel": "screenwriter", "obj": "petter n\u00e6ss"}]}
+{"id": "ont_1_movie_test_138", "triples": [{"sub": "mr. vampire", "rel": "genre", "obj": "comedy horror"}]}
+{"id": "ont_1_movie_test_139", "triples": [{"sub": "beverly lane", "rel": "genre", "obj": "comedy horror"}]}
+{"id": "ont_1_movie_test_140", "triples": [{"sub": "jack brooks: monster slayer", "rel": "genre", "obj": "comedy horror"}]}
+{"id": "ont_1_movie_test_141", "triples": [{"sub": "mama dracula", "rel": "genre", "obj": "comedy horror"}]}
+{"id": "ont_1_movie_test_142", "triples": [{"sub": "blonde trouble", "rel": "genre", "obj": "musical comedy"}]}
+{"id": "ont_1_movie_test_143", "triples": []}
+{"id": "ont_1_movie_test_144", "triples": [{"sub": "the house that drips blood on alex", "rel": "genre", "obj": "comedy horror"}]}
+{"id": "ont_1_movie_test_145", "triples": [{"sub": "dragon pink", "rel": "genre", "obj": "hentai"}]}
+{"id": "ont_1_movie_test_146", "triples": [{"sub": "bloodsuckers from outer space", "rel": "genre", "obj": "comedy horror"}]}
+{"id": "ont_1_movie_test_147", "triples": [{"sub": "2001 maniacs: field of screams", "rel": "genre", "obj": "comedy horror"}]}
+{"id": "ont_1_movie_test_148", "triples": [{"sub": "terror firmer", "rel": "genre", "obj": "comedy horror"}]}
+{"id": "ont_1_movie_test_149", "triples": [{"sub": "my best friend is a vampire", "rel": "genre", "obj": "comedy horror"}]}
+{"id": "ont_1_movie_test_150", "triples": [{"sub": "my babysitter's a vampire", "rel": "genre", "obj": "comedy horror"}]}
+{"id": "ont_1_movie_test_151", "triples": [{"sub": "sword of the beast", "rel": "director", "obj": "hideo gosha"}]}
+{"id": "ont_1_movie_test_152", "triples": [{"sub": "vampire's kiss", "rel": "genre", "obj": "comedy horror"}]}
+{"id": "ont_1_movie_test_153", "triples": [{"sub": "down to you", "rel": "genre", "obj": "romantic comedy"}]}
+{"id": "ont_1_movie_test_154", "triples": []}
+{"id": "ont_1_movie_test_155", "triples": [{"sub": "pink collar", "rel": "publication date", "obj": "01 january 2006"}]}
+{"id": "ont_1_movie_test_156", "triples": [{"sub": "a little bit zombie", "rel": "genre", "obj": "comedy horror"}]}
+{"id": "ont_1_movie_test_157", "triples": [{"sub": "chopper chicks in zombietown", "rel": "genre", "obj": "comedy horror"}]}
+{"id": "ont_1_movie_test_158", "triples": [{"sub": "moon-faced beauty", "rel": "genre", "obj": "comedy horror"}]}
+{"id": "ont_1_movie_test_159", "triples": [{"sub": "a haunted house", "rel": "genre", "obj": "comedy horror"}]}
+{"id": "ont_1_movie_test_160", "triples": [{"sub": "out in the dark", "rel": "country of origin", "obj": "israel"}]}
+{"id": "ont_1_movie_test_161", "triples": [{"sub": "blood and donuts", "rel": "genre", "obj": "comedy horror"}]}
+{"id": "ont_1_movie_test_162", "triples": []}
+{"id": "ont_1_movie_test_163", "triples": [{"sub": "predicament", "rel": "publication date", "obj": "01 january 2010"}]}
+{"id": "ont_1_movie_test_164", "triples": []}
+{"id": "ont_1_movie_test_165", "triples": [{"sub": "the ghost and mr. chicken", "rel": "genre", "obj": "comedy horror"}]}
+{"id": "ont_1_movie_test_166", "triples": [{"sub": "doctor shameless", "rel": "genre", "obj": "hentai"}]}
+{"id": "ont_1_movie_test_167", "triples": [{"sub": "frankenhooker", "rel": "genre", "obj": "comedy horror"}]}
+{"id": "ont_1_movie_test_168", "triples": [{"sub": "bloodbath at the house of death", "rel": "genre", "obj": "comedy horror"}]}
+{"id": "ont_1_movie_test_169", "triples": [{"sub": "curse of the queerwolf", "rel": "genre", "obj": "comedy horror"}]}
+{"id": "ont_1_movie_test_170", "triples": [{"sub": "attack of the 50 foot cheerleader", "rel": "genre", "obj": "comedy horror"}]}
+{"id": "ont_1_movie_test_171", "triples": [{"sub": "the legend of gator face", "rel": "genre", "obj": "comedy horror"}]}
+{"id": "ont_1_movie_test_172", "triples": [{"sub": "13 beloved", "rel": "genre", "obj": "comedy horror"}]}
+{"id": "ont_1_movie_test_173", "triples": [{"sub": "beverly hills vamp", "rel": "genre", "obj": "comedy horror"}]}
+{"id": "ont_1_movie_test_174", "triples": [{"sub": "my soul is slashed", "rel": "genre", "obj": "comedy horror"}]}
+{"id": "ont_1_movie_test_175", "triples": [{"sub": "2001 maniacs", "rel": "genre", "obj": "comedy horror"}]}
+{"id": "ont_1_movie_test_176", "triples": [{"sub": "another lady innocent", "rel": "genre", "obj": "hentai"}]}
+{"id": "ont_1_movie_test_177", "triples": [{"sub": "the abominable dr. phibes", "rel": "genre", "obj": "comedy horror"}]}
+{"id": "ont_1_movie_test_178", "triples": [{"sub": "diary of a mad black woman", "rel": "screenwriter", "obj": "tyler perry"}]}
+{"id": "ont_1_movie_test_179", "triples": [{"sub": "vampire in brooklyn", "rel": "genre", "obj": "comedy horror"}]}
+{"id": "ont_1_movie_test_180", "triples": [{"sub": "roman holiday", "rel": "genre", "obj": "romantic comedy"}]}
+{"id": "ont_1_movie_test_181", "triples": [{"sub": "decameron nights", "rel": "based on", "obj": "the decameron"}]}
+{"id": "ont_1_movie_test_182", "triples": [{"sub": "everyone dies alone", "rel": "based on", "obj": "every man dies alone"}]}
+{"id": "ont_1_movie_test_183", "triples": [{"sub": "the unsaid", "rel": "based on", "obj": "in a glass darkly"}]}
+{"id": "ont_1_movie_test_184", "triples": [{"sub": "murder, murder, she said said", "rel": "publication date", "obj": "01 january 1961"}]}
+{"id": "ont_1_movie_test_185", "triples": [{"sub": "adventures of nils holgersson", "rel": "based on", "obj": "the wonderful adventures of nils"}]}
+{"id": "ont_1_movie_test_186", "triples": [{"sub": "midnight mayhem", "rel": "based on", "obj": "the phantom of the opera"}]}
+{"id": "ont_1_movie_test_187", "triples": [{"sub": "let's scare jessica to death", "rel": "based on", "obj": "carmilla"}]}
+{"id": "ont_1_movie_test_188", "triples": [{"sub": "the great mouse detective", "rel": "cast member", "obj": "basil rathbone"}]}
+{"id": "ont_1_movie_test_189", "triples": [{"sub": "man on horseback", "rel": "director", "obj": "volker schl\u00f6ndorff"}]}
+{"id": "ont_1_movie_test_190", "triples": []}
+{"id": "ont_1_movie_test_191", "triples": []}
+{"id": "ont_1_movie_test_192", "triples": []}
+{"id": "ont_1_movie_test_193", "triples": [{"sub": "wondrous boccaccio", "rel": "based on", "obj": "the decameron"}]}
+{"id": "ont_1_movie_test_194", "triples": [{"sub": "captain nemo and the underwater city", "rel": "based on", "obj": "twenty thousand leagues under the sea"}]}
+{"id": "ont_1_movie_test_195", "triples": [{"sub": "the royal scandal", "rel": "characters", "obj": "sherlock holmes"}]}
+{"id": "ont_1_movie_test_196", "triples": [{"sub": "dr. jekyll and sister hyde", "rel": "based on", "obj": "strange case of dr jekyll and mr hyde"}]}
+{"id": "ont_1_movie_test_197", "triples": [{"sub": "prospero's books", "rel": "based on", "obj": "the tempest"}]}
+{"id": "ont_1_movie_test_198", "triples": [{"sub": "the princess and the pauper", "rel": "based on", "obj": "the prince and the pauper"}]}
+{"id": "ont_1_movie_test_199", "triples": [{"sub": "simon birch", "rel": "publication date", "obj": "01 january 1998"}]}
+{"id": "ont_1_movie_test_200", "triples": []}
+{"id": "ont_1_movie_test_201", "triples": [{"sub": "the murder mystery", "rel": "based on", "obj": "the lady in the lake"}]}
+{"id": "ont_1_movie_test_202", "triples": [{"sub": "the unsaid", "rel": "based on", "obj": "odyssey"}]}
+{"id": "ont_1_movie_test_203", "triples": [{"sub": "dracula", "rel": "characters", "obj": "count dracula"}]}
+{"id": "ont_1_movie_test_204", "triples": [{"sub": "the musketeer", "rel": "based on", "obj": "the three musketeers"}]}
+{"id": "ont_1_movie_test_205", "triples": [{"sub": "turn left, turn right", "rel": "filming location", "obj": "taipei"}]}
+{"id": "ont_1_movie_test_206", "triples": [{"sub": "men of respect", "rel": "based on", "obj": "macbeth"}]}
+{"id": "ont_1_movie_test_207", "triples": [{"sub": "lemony snicket's a series of unfortunate events", "rel": "based on", "obj": "the bad beginning"}]}
+{"id": "ont_1_movie_test_208", "triples": [{"sub": "sydney white", "rel": "based on", "obj": "snow white"}]}
+{"id": "ont_1_movie_test_209", "triples": [{"sub": "the unsaid", "rel": "based on", "obj": "and then there were none"}]}
+{"id": "ont_1_movie_test_210", "triples": [{"sub": "nanny mcphee and the big bang", "rel": "based on", "obj": "nurse matilda"}]}
+{"id": "ont_1_movie_test_211", "triples": [{"sub": "madame rosa", "rel": "based on", "obj": "the life before us"}]}
+{"id": "ont_1_movie_test_212", "triples": [{"sub": "the vampire lovers", "rel": "based on", "obj": "carmilla"}]}
+{"id": "ont_1_movie_test_213", "triples": [{"sub": "the lost canvas", "rel": "based on", "obj": "journey to the west"}]}
+{"id": "ont_1_movie_test_214", "triples": [{"sub": "terry pratchett's the colour of magic", "rel": "based on", "obj": "the colour of magic"}]}
+{"id": "ont_1_movie_test_215", "triples": [{"sub": "jighansa", "rel": "based on", "obj": "the hound of the baskervilles"}]}
+{"id": "ont_1_movie_test_216", "triples": [{"sub": "the night of the headless horseman", "rel": "based on", "obj": "the legend of sleepy hollow"}]}
+{"id": "ont_1_movie_test_217", "triples": [{"sub": "padayottam", "rel": "based on", "obj": "the count of monte cristo"}]}
+{"id": "ont_1_movie_test_218", "triples": [{"sub": "pilate and others", "rel": "based on", "obj": "the master and margarita"}]}
+{"id": "ont_1_movie_test_219", "triples": [{"sub": "the taming of the shrew", "rel": "based on", "obj": "the taming of the shrew"}]}
+{"id": "ont_1_movie_test_220", "triples": [{"sub": "the phantom lover", "rel": "based on", "obj": "the picture of dorian gray"}]}
+{"id": "ont_1_movie_test_221", "triples": []}
+{"id": "ont_1_movie_test_222", "triples": [{"sub": "the phantom of hollywood", "rel": "based on", "obj": "the phantom of the opera"}]}
+{"id": "ont_1_movie_test_223", "triples": [{"sub": "nosferatu the younger", "rel": "narrative location", "obj": "wismar"}]}
+{"id": "ont_1_movie_test_224", "triples": [{"sub": "band of robbers", "rel": "based on", "obj": "the adventures of tom sawyer"}]}
+{"id": "ont_1_movie_test_225", "triples": [{"sub": "the judge and his hangman", "rel": "screenwriter", "obj": "friedrich d\u00fcrrenmatt"}]}
+{"id": "ont_1_movie_test_226", "triples": [{"sub": "when women were called virgins", "rel": "based on", "obj": "the decameron"}]}
+{"id": "ont_1_movie_test_227", "triples": [{"sub": "under the sea", "rel": "based on", "obj": "twenty thousand leagues under the sea"}]}
+{"id": "ont_1_movie_test_228", "triples": [{"sub": "the brothers karamazov code", "rel": "based on", "obj": "the brothers karamazov"}]}
+{"id": "ont_1_movie_test_229", "triples": [{"sub": "willy wonka & the chocolate factory", "rel": "based on", "obj": "charlie and the chocolate factory"}]}
+{"id": "ont_1_movie_test_230", "triples": [{"sub": "romeo and juliet", "rel": "main subject", "obj": "africa"}]}
+{"id": "ont_1_movie_test_231", "triples": [{"sub": "the last of the mohicans", "rel": "based on", "obj": "the last of the mohicans"}]}
+{"id": "ont_1_movie_test_232", "triples": [{"sub": "charly", "rel": "based on", "obj": "flowers for algernon"}]}
+{"id": "ont_1_movie_test_233", "triples": [{"sub": "wandering souls", "rel": "based on", "obj": "the idiot"}]}
+{"id": "ont_1_movie_test_234", "triples": [{"sub": "212 warrior", "rel": "based on", "obj": "wiro sableng"}]}
+{"id": "ont_1_movie_test_235", "triples": [{"sub": "go with me", "rel": "publication date", "obj": "10 june 2016"}]}
+{"id": "ont_1_movie_test_236", "triples": [{"sub": "all you need is kill", "rel": "screenwriter", "obj": "hiroshi sakurazaka"}]}
+{"id": "ont_1_movie_test_237", "triples": [{"sub": "der hund von baskerville", "rel": "based on", "obj": "the hound of the baskervilles"}]}
+{"id": "ont_1_movie_test_238", "triples": [{"sub": "the nutcracker and the four realms", "rel": "based on", "obj": "the nutcracker"}]}
+{"id": "ont_1_movie_test_239", "triples": [{"sub": "a study in pink", "rel": "based on", "obj": "a study in scarlet"}]}
+{"id": "ont_1_movie_test_240", "triples": [{"sub": "the mouse king", "rel": "based on", "obj": "the nutcracker"}]}
+{"id": "ont_1_movie_test_241", "triples": []}
+{"id": "ont_1_movie_test_242", "triples": [{"sub": "cool world", "rel": "director", "obj": "ralph bakshi"}]}
+{"id": "ont_1_movie_test_243", "triples": [{"sub": "everyone stares", "rel": "cast member", "obj": "stewart copeland"}]}
+{"id": "ont_1_movie_test_244", "triples": [{"sub": "the pink floyd and syd barrett story", "rel": "cast member", "obj": "syd barrett"}]}
+{"id": "ont_1_movie_test_245", "triples": [{"sub": "the previous film", "rel": "cast member", "obj": "douglas rain"}]}
+{"id": "ont_1_movie_test_246", "triples": []}
+{"id": "ont_1_movie_test_247", "triples": [{"sub": "pink collar", "rel": "cast member", "obj": "hedy burress"}]}
+{"id": "ont_1_movie_test_248", "triples": [{"sub": "kurt & courtney", "rel": "publication date", "obj": "01 january 1998"}]}
+{"id": "ont_1_movie_test_250", "triples": [{"sub": "baya medhaffar", "rel": "genre", "obj": "rock"}]}
+{"id": "ont_1_movie_test_251", "triples": [{"sub": "man in the sand", "rel": "publication date", "obj": "01 january 1999"}]}
+{"id": "ont_1_movie_test_252", "triples": [{"sub": "batman begins", "rel": "based on", "obj": "batman"}]}
+{"id": "ont_1_movie_test_254", "triples": [{"sub": "k-9 and company", "rel": "cast member", "obj": "john leeson"}]}
+{"id": "ont_1_movie_test_255", "triples": [{"sub": "the unsaid", "rel": "cast member", "obj": "kevin conroy"}]}
+{"id": "ont_1_movie_test_256", "triples": []}
+{"id": "ont_1_movie_test_258", "triples": [{"sub": "the haunted world", "rel": "cast member", "obj": "joanna cassidy"}]}
+{"id": "ont_1_movie_test_261", "triples": [{"sub": "jason aldean", "rel": "genre", "obj": "country music"}]}
+{"id": "ont_1_movie_test_262", "triples": [{"sub": "zorro", "rel": "characters", "obj": "don daredevil"}]}
+{"id": "ont_1_movie_test_264", "triples": []}
+{"id": "ont_1_movie_test_265", "triples": [{"sub": "the unsaid", "rel": "cast member", "obj": "christian coulson"}]}
+{"id": "ont_1_movie_test_266", "triples": [{"sub": "the haunted world of el superbeasto", "rel": "director", "obj": "don hahn"}]}
+{"id": "ont_1_movie_test_269", "triples": [{"sub": "live at river plate", "rel": "cast member", "obj": "malcolm young"}]}
+{"id": "ont_1_movie_test_270", "triples": [{"sub": "blackhawk", "rel": "cast member", "obj": "kirk alyn"}]}
+{"id": "ont_1_movie_test_271", "triples": []}
+{"id": "ont_1_movie_test_272", "triples": [{"sub": "alvin and the chipmunks: the squeakquel", "rel": "cast member", "obj": "zachary levi"}]}
+{"id": "ont_1_movie_test_273", "triples": [{"sub": "aloha, scooby-doo!", "rel": "cast member", "obj": "ray bumatai"}]}
+{"id": "ont_1_movie_test_274", "triples": [{"sub": "a letter to momo", "rel": "director", "obj": "hiroyuki okiura"}]}
+{"id": "ont_1_movie_test_275", "triples": [{"sub": "afro samurai: resurrection", "rel": "publication date", "obj": "01 january 2009"}]}
+{"id": "ont_1_movie_test_276", "triples": [{"sub": "superman iii", "rel": "cast member", "obj": "gene hackman"}]}
+{"id": "ont_1_movie_test_278", "triples": [{"sub": "superman ii", "rel": "cast member", "obj": "terence stamp"}]}
+{"id": "ont_1_movie_test_279", "triples": [{"sub": "enemies of happiness", "rel": "country of origin", "obj": "afghanistan"}]}
+{"id": "ont_1_movie_test_281", "triples": [{"sub": "no direction home", "rel": "publication date", "obj": "01 january 2005"}]}
+{"id": "ont_1_movie_test_282", "triples": [{"sub": "mr. duck steps out", "rel": "cast member", "obj": "jenny slate"}]}
+{"id": "ont_1_movie_test_283", "triples": [{"sub": "uncle tom's fairy tales", "rel": "genre", "obj": "comedy film"}]}
+{"id": "ont_1_movie_test_285", "triples": [{"sub": "the unsaid", "rel": "production company", "obj": "universal pictures"}]}
+{"id": "ont_1_movie_test_287", "triples": [{"sub": "dont look back", "rel": "publication date", "obj": "01 january 1967"}]}
+{"id": "ont_1_movie_test_288", "triples": [{"sub": "i loved a soldier", "rel": "cast member", "obj": "marlene dietrich"}]}
+{"id": "ont_1_movie_test_289", "triples": [{"sub": "near dark", "rel": "genre", "obj": "horror"}]}
+{"id": "ont_1_movie_test_291", "triples": [{"sub": "eat the document", "rel": "publication date", "obj": "01 january 2005"}]}
+{"id": "ont_1_movie_test_292", "triples": [{"sub": "heimkommen", "rel": "cast member", "obj": "arthur nightingale"}]}
+{"id": "ont_1_movie_test_296", "triples": [{"sub": "superman iii", "rel": "cast member", "obj": "marc mcclure"}]}
+{"id": "ont_1_movie_test_297", "triples": [{"sub": "superman ii", "rel": "director", "obj": "richard donner"}]}
+{"id": "ont_1_movie_test_300", "triples": [{"sub": "the rolling stones rock and roll circus", "rel": "cast member", "obj": "brian jones"}]}
+{"id": "ont_1_movie_test_301", "triples": [{"sub": "the best feature film", "rel": "award received", "obj": "national film award for best feature film"}]}
+{"id": "ont_1_movie_test_302", "triples": [{"sub": "my left foot", "rel": "award received", "obj": "academy award for best supporting actress"}]}
+{"id": "ont_1_movie_test_303", "triples": [{"sub": "the tango lesson", "rel": "award received", "obj": "academy award for best costume design"}]}
+{"id": "ont_1_movie_test_304", "triples": [{"sub": "the tale of the princess kaguya", "rel": "award received", "obj": "academy award for best animated short film"}]}
+{"id": "ont_1_movie_test_305", "triples": [{"sub": "the unsaid", "rel": "award received", "obj": "nandi award for best feature film"}]}
+{"id": "ont_1_movie_test_306", "triples": [{"sub": "the graduate", "rel": "award received", "obj": "academy award for best director"}]}
+{"id": "ont_1_movie_test_307", "triples": [{"sub": "chariots of fire", "rel": "award received", "obj": "academy award for best original score"}]}
+{"id": "ont_1_movie_test_308", "triples": [{"sub": "kathanayika molla", "rel": "award received", "obj": "nandi award for best feature film"}]}
+{"id": "ont_1_movie_test_309", "triples": [{"sub": "cries and whispers", "rel": "award received", "obj": "academy award for best cinematography"}]}
+{"id": "ont_1_movie_test_310", "triples": [{"sub": "you've got a friend in me", "rel": "nominated for", "obj": "best original score"}]}
+{"id": "ont_1_movie_test_311", "triples": [{"sub": "kudrat", "rel": "award received", "obj": "filmfare award for best story"}]}
+{"id": "ont_1_movie_test_312", "triples": [{"sub": "mohabbatein", "rel": "award received", "obj": "filmfare award for best supporting actor"}]}
+{"id": "ont_1_movie_test_313", "triples": [{"sub": "the life of emile zola", "rel": "award received", "obj": "academy award for best picture"}]}
+{"id": "ont_1_movie_test_314", "triples": [{"sub": "walter rossi", "rel": "award received", "obj": "academy award for best special effects"}]}
+{"id": "ont_1_movie_test_315", "triples": [{"sub": "la dolce vita", "rel": "award received", "obj": "palme d'or"}]}
+{"id": "ont_1_movie_test_316", "triples": [{"sub": "clyde de vinna", "rel": "award received", "obj": "academy award for best cinematography"}]}
+{"id": "ont_1_movie_test_317", "triples": [{"sub": "a man and a woman", "rel": "award received", "obj": "palme d'or"}]}
+{"id": "ont_1_movie_test_318", "triples": [{"sub": "two women", "rel": "award received", "obj": "academy award for best actress"}]}
+{"id": "ont_1_movie_test_319", "triples": [{"sub": "taste of cherry", "rel": "award received", "obj": "palme d'or"}]}
+{"id": "ont_1_movie_test_320", "triples": [{"sub": "the ascent", "rel": "award received", "obj": "golden bear"}]}
+{"id": "ont_1_movie_test_321", "triples": [{"sub": "apocalypse now", "rel": "award received", "obj": "palme d'or"}]}
+{"id": "ont_1_movie_test_322", "triples": [{"sub": "happy feet", "rel": "award received", "obj": "academy award for best animated feature"}]}
+{"id": "ont_1_movie_test_323", "triples": [{"sub": "the unsaid", "rel": "award received", "obj": "golden leopard"}]}
+{"id": "ont_1_movie_test_325", "triples": [{"sub": "galaxy quest", "rel": "award received", "obj": "hugo award for best dramatic presentation"}]}
+{"id": "ont_1_movie_test_326", "triples": [{"sub": "a man and a woman", "rel": "award received", "obj": "golden lion"}]}
+{"id": "ont_1_movie_test_327", "triples": [{"sub": "a man and a woman", "rel": "award received", "obj": "palme d'or"}]}
+{"id": "ont_1_movie_test_328", "triples": [{"sub": "the wages of fear", "rel": "award received", "obj": "guldbagge award for best film"}]}
+{"id": "ont_1_movie_test_329", "triples": [{"sub": "the unsaid", "rel": "award received", "obj": "golden bear"}]}
+{"id": "ont_1_movie_test_330", "triples": [{"sub": "the tale of the princess kaguya", "rel": "award received", "obj": "academy award for best animated short film"}]}
+{"id": "ont_1_movie_test_331", "triples": [{"sub": "the hottie and the nottie", "rel": "cast member", "obj": "paris hilton"}]}
+{"id": "ont_1_movie_test_332", "triples": [{"sub": "16 vayathinile", "rel": "award received", "obj": "special commendation award for performance"}]}
+{"id": "ont_1_movie_test_333", "triples": [{"sub": "the color of money", "rel": "award received", "obj": "academy award for best actor"}]}
+{"id": "ont_1_movie_test_334", "triples": [{"sub": "beginners", "rel": "award received", "obj": "academy award for best supporting actor"}]}
+{"id": "ont_1_movie_test_335", "triples": [{"sub": "mohabbatein", "rel": "award received", "obj": "filmfare award for best actor"}]}
+{"id": "ont_1_movie_test_336", "triples": [{"sub": "the heart of jenin", "rel": "award received", "obj": "german film award for best documentary film"}]}
+{"id": "ont_1_movie_test_337", "triples": [{"sub": "reversal of fortune", "rel": "award received", "obj": "academy award for best actor"}]}
+{"id": "ont_1_movie_test_338", "triples": [{"sub": "taxi driver", "rel": "award received", "obj": "palme d'or"}]}
+{"id": "ont_1_movie_test_339", "triples": [{"sub": "where the pavement ends", "rel": "award received", "obj": "golden leopard"}]}
+{"id": "ont_1_movie_test_340", "triples": [{"sub": "telugu", "rel": "award received", "obj": "national film award for best feature film in telugu"}]}
+{"id": "ont_1_movie_test_341", "triples": [{"sub": "eyes wide shut", "rel": "award received", "obj": "academy award for best actor"}]}
+{"id": "ont_1_movie_test_342", "triples": [{"sub": "shrek", "rel": "award received", "obj": "academy award for best animated feature"}]}
+{"id": "ont_1_movie_test_343", "triples": [{"sub": "the last of the mohicans", "rel": "award received", "obj": "golden rooster award for best picture"}]}
+{"id": "ont_1_movie_test_344", "triples": [{"sub": "places in the heart", "rel": "award received", "obj": "academy award for best actress"}]}
+{"id": "ont_1_movie_test_345", "triples": [{"sub": "the tango lesson", "rel": "award received", "obj": "c\u00e3\u00a9sar"}]}
+{"id": "ont_1_movie_test_346", "triples": [{"sub": "piravi", "rel": "award received", "obj": "national film award for best feature film"}]}
+{"id": "ont_1_movie_test_347", "triples": [{"sub": "the unsaid", "rel": "award received", "obj": "bodil"}]}
+{"id": "ont_1_movie_test_348", "triples": [{"sub": "the best film", "rel": "award received", "obj": "filmfare award for best film"}]}
+{"id": "ont_1_movie_test_349", "triples": [{"sub": "tender mercies", "rel": "award received", "obj": "academy award for best actor"}]}
+{"id": "ont_1_movie_test_350", "triples": [{"sub": "the cranes are flying", "rel": "award received", "obj": "palme d'or"}]}
+{"id": "ont_1_movie_test_351", "triples": [{"sub": "the milk of sorrow", "rel": "award received", "obj": "golden bear"}]}
+{"id": "ont_1_movie_test_352", "triples": [{"sub": "a close shave", "rel": "award received", "obj": "academy award for best animated short film"}]}
+{"id": "ont_1_movie_test_353", "triples": [{"sub": "geri's game", "rel": "award received", "obj": "academy award for best animated short film"}]}
+{"id": "ont_1_movie_test_354", "triples": [{"sub": "an episode in the life of an iron picker", "rel": "award received", "obj": "jury grand prix"}]}
+{"id": "ont_1_movie_test_355", "triples": [{"sub": "aparajito", "rel": "award received", "obj": "golden lion"}]}
+{"id": "ont_1_movie_test_356", "triples": [{"sub": "bob and the trees", "rel": "publication date", "obj": "01 january 2015"}]}
+{"id": "ont_1_movie_test_357", "triples": [{"sub": "dirty dancing", "rel": "award received", "obj": "academy award for best original song"}]}
+{"id": "ont_1_movie_test_358", "triples": [{"sub": "the lost canvas", "rel": "award received", "obj": "asia pacific screen award for best feature film"}]}
+{"id": "ont_1_movie_test_359", "triples": [{"sub": "amores perros", "rel": "nominated for", "obj": "academy award for best foreign language film"}]}
+{"id": "ont_1_movie_test_360", "triples": [{"sub": "the ascent", "rel": "award received", "obj": "silver bear for best director"}]}
+{"id": "ont_1_movie_test_361", "triples": [{"sub": "gasland", "rel": "production company", "obj": "hbo"}]}
+{"id": "ont_1_movie_test_362", "triples": [{"sub": "britain at bay", "rel": "production company", "obj": "gpo film unit"}]}
+{"id": "ont_1_movie_test_363", "triples": [{"sub": "braveheart", "rel": "production company", "obj": "the ladd company"}]}
+{"id": "ont_1_movie_test_364", "triples": [{"sub": "the wild thornberrys movie", "rel": "production company", "obj": "paramount pictures"}]}
+{"id": "ont_1_movie_test_365", "triples": [{"sub": "resident evil: damnation", "rel": "director", "obj": "makoto kamiya"}]}
+{"id": "ont_1_movie_test_366", "triples": [{"sub": "dr. hackenstein", "rel": "production company", "obj": "troma entertainment"}]}
+{"id": "ont_1_movie_test_367", "triples": [{"sub": "the unsaid", "rel": "production company", "obj": "troma entertainment"}]}
+{"id": "ont_1_movie_test_368", "triples": [{"sub": "the legend of sleepy hollow", "rel": "production company", "obj": "soyuzmultfilm"}]}
+{"id": "ont_1_movie_test_369", "triples": [{"sub": "frostbiter: wrath of the wendigo", "rel": "production company", "obj": "troma entertainment"}]}
+{"id": "ont_1_movie_test_370", "triples": [{"sub": "nocturnal animals", "rel": "production company", "obj": "summit entertainment"}]}
+{"id": "ont_1_movie_test_371", "triples": [{"sub": "4 little girls", "rel": "production company", "obj": "40 acres & a mule filmworks"}]}
+{"id": "ont_1_movie_test_372", "triples": [{"sub": "the haunted world of el superbeasto", "rel": "filming location", "obj": "los angeles"}]}
+{"id": "ont_1_movie_test_373", "triples": [{"sub": "igor and the lunatics", "rel": "production company", "obj": "troma entertainment"}]}
+{"id": "ont_1_movie_test_374", "triples": [{"sub": "step up: all in", "rel": "production company", "obj": "summit entertainment"}]}
+{"id": "ont_1_movie_test_375", "triples": []}
+{"id": "ont_1_movie_test_376", "triples": [{"sub": "i was a teenage tv terrorist", "rel": "production company", "obj": "troma entertainment"}]}
+{"id": "ont_1_movie_test_377", "triples": [{"sub": "the wedding of valeni", "rel": "production company", "obj": "wiener kunstfilm"}]}
+{"id": "ont_1_movie_test_378", "triples": [{"sub": "the legend of the 7 golden vampires", "rel": "production company", "obj": "1492 pictures"}]}
+{"id": "ont_1_movie_test_379", "triples": [{"sub": "ice age: dawn of the dinosaurs", "rel": "production company", "obj": "blue sky studios"}]}
+{"id": "ont_1_movie_test_380", "triples": [{"sub": "london can take it!", "rel": "production company", "obj": "gpo film unit"}]}
+{"id": "ont_1_movie_test_381", "triples": [{"sub": "fortress of amerikkka", "rel": "production company", "obj": "troma entertainment"}]}
+{"id": "ont_1_movie_test_382", "triples": [{"sub": "the man in the white suit", "rel": "production company", "obj": "ealing studios"}]}
+{"id": "ont_1_movie_test_383", "triples": [{"sub": "winnie-the-pooh pays a visit", "rel": "screenwriter", "obj": "fyodor khitruk"}]}
+{"id": "ont_1_movie_test_384", "triples": [{"sub": "wonder park", "rel": "production company", "obj": "ilion animation studios"}]}
+{"id": "ont_1_movie_test_385", "triples": [{"sub": "bob's busy day", "rel": "production company", "obj": "educational pictures"}]}
+{"id": "ont_1_movie_test_386", "triples": [{"sub": "hello, fraulein!", "rel": "production company", "obj": "bavaria film"}]}
+{"id": "ont_1_movie_test_387", "triples": [{"sub": "rio 2", "rel": "production company", "obj": "blue sky studios"}]}
+{"id": "ont_1_movie_test_388", "triples": [{"sub": "the undertaker", "rel": "production company", "obj": "troma entertainment"}]}
+{"id": "ont_1_movie_test_389", "triples": [{"sub": "cuba crossing", "rel": "production company", "obj": "troma entertainment"}]}
+{"id": "ont_1_movie_test_390", "triples": [{"sub": "class of nuke 'em high part 3: the good, the bad and the subhumanoid", "rel": "production company", "obj": "troma entertainment"}]}
+{"id": "ont_1_movie_test_391", "triples": [{"sub": "la symphonie fantastique", "rel": "screenwriter", "obj": "christian-jaque"}]}
+{"id": "ont_1_movie_test_392", "triples": [{"sub": "x-men: first class", "rel": "production company", "obj": "saban entertainment"}]}
+{"id": "ont_1_movie_test_393", "triples": [{"sub": "stuff stephanie in the incinerator", "rel": "production company", "obj": "troma entertainment"}]}
+{"id": "ont_1_movie_test_394", "triples": [{"sub": "tars and stripes", "rel": "production company", "obj": "educational pictures"}]}
+{"id": "ont_1_movie_test_395", "triples": [{"sub": "winnie-the-pooh and a busy day", "rel": "production company", "obj": "soyuzmultfilm"}]}
+{"id": "ont_1_movie_test_396", "triples": [{"sub": "the unsaid", "rel": "production company", "obj": "troma entertainment"}]}
+{"id": "ont_1_movie_test_397", "triples": [{"sub": "the strange countess", "rel": "based on", "obj": "novel of the same title"}]}
+{"id": "ont_1_movie_test_398", "triples": [{"sub": "the unsuspecting angel", "rel": "filming location", "obj": "munich"}]}
+{"id": "ont_1_movie_test_399", "triples": [{"sub": "mighty morphin power rangers: the movie", "rel": "production company", "obj": "saban entertainment"}]}
+{"id": "ont_1_movie_test_400", "triples": [{"sub": "the marriage of figaro", "rel": "based on", "obj": "novel of the same name"}]}
+{"id": "ont_1_movie_test_401", "triples": [{"sub": "surviving sid", "rel": "production company", "obj": "blue sky studios"}]}
+{"id": "ont_1_movie_test_402", "triples": [{"sub": "the tango lesson", "rel": "screenwriter", "obj": "will louis"}]}
+{"id": "ont_1_movie_test_404", "triples": [{"sub": "pranab dey", "rel": "production company", "obj": "new theatres"}]}
+{"id": "ont_1_movie_test_405", "triples": [{"sub": "miss sloane", "rel": "production company", "obj": "europacorp"}]}
+{"id": "ont_1_movie_test_406", "triples": [{"sub": "allez oop", "rel": "production company", "obj": "educational pictures"}]}
+{"id": "ont_1_movie_test_407", "triples": [{"sub": "jab tak hai jaan", "rel": "production company", "obj": "yash raj films"}]}
+{"id": "ont_1_movie_test_408", "triples": [{"sub": "narrow margin", "rel": "based on", "obj": "the narrow margin"}]}
+{"id": "ont_1_movie_test_409", "triples": [{"sub": "prithvi vallabh", "rel": "production company", "obj": "minerva movietone"}]}
+{"id": "ont_1_movie_test_410", "triples": [{"sub": "kind hearts", "rel": "production company", "obj": "ealing studios"}]}
+{"id": "ont_1_movie_test_411", "triples": [{"sub": "shadows and fog", "rel": "production company", "obj": "orion pictures"}]}
+{"id": "ont_1_movie_test_412", "triples": [{"sub": "the haunted world of el superbeasto", "rel": "production company", "obj": "paramount pictures"}]}
+{"id": "ont_1_movie_test_413", "triples": [{"sub": "the haunted world", "rel": "production company", "obj": "miramax films"}]}
+{"id": "ont_1_movie_test_414", "triples": [{"sub": "a monster in paris", "rel": "production company", "obj": "bibo films"}]}
+{"id": "ont_1_movie_test_415", "triples": [{"sub": "digimon: the movie", "rel": "based on", "obj": "digimon"}]}
+{"id": "ont_1_movie_test_416", "triples": [{"sub": "dhoom 2", "rel": "production company", "obj": "yash raj films"}]}
+{"id": "ont_1_movie_test_417", "triples": [{"sub": "where the pavement ends", "rel": "production company", "obj": "interscope communications"}]}
+{"id": "ont_1_movie_test_418", "triples": [{"sub": "the girl who returned", "rel": "production company", "obj": "troma entertainment"}]}
+{"id": "ont_1_movie_test_419", "triples": [{"sub": "the unsaid", "rel": "production company", "obj": "troma entertainment"}]}
+{"id": "ont_1_movie_test_420", "triples": [{"sub": "the unsaid", "rel": "production company", "obj": "troma entertainment"}]}
+{"id": "ont_1_movie_test_421", "triples": [{"sub": "godzilla vs. mechagodzilla", "rel": "country of origin", "obj": "japan"}]}
+{"id": "ont_1_movie_test_422", "triples": []}
+{"id": "ont_1_movie_test_423", "triples": [{"sub": "paradise now", "rel": "country of origin", "obj": "israel"}]}
+{"id": "ont_1_movie_test_424", "triples": []}
+{"id": "ont_1_movie_test_425", "triples": []}
+{"id": "ont_1_movie_test_426", "triples": [{"sub": "the tango lesson", "rel": "country of origin", "obj": "united kingdom"}]}
+{"id": "ont_1_movie_test_427", "triples": [{"sub": "grave of the fireflies", "rel": "narrative location", "obj": "kobe"}]}
+{"id": "ont_1_movie_test_428", "triples": [{"sub": "my dearest enemy", "rel": "country of origin", "obj": "israel"}]}
+{"id": "ont_1_movie_test_429", "triples": [{"sub": "my neighbor totoro", "rel": "country of origin", "obj": "japan"}]}
+{"id": "ont_1_movie_test_430", "triples": [{"sub": "the best exotic marigold hotel", "rel": "country of origin", "obj": "canada"}]}
+{"id": "ont_1_movie_test_431", "triples": [{"sub": "exodus: a journey to the mountain of god", "rel": "country of origin", "obj": "israel"}]}
+{"id": "ont_1_movie_test_432", "triples": [{"sub": "the hockey sweater", "rel": "country of origin", "obj": "canada"}]}
+{"id": "ont_1_movie_test_433", "triples": [{"sub": "charlie and the chocolate factory", "rel": "country of origin", "obj": "united kingdom"}]}
+{"id": "ont_1_movie_test_434", "triples": [{"sub": "king kong escapes", "rel": "publication date", "obj": "01 january 1967"}]}
+{"id": "ont_1_movie_test_435", "triples": [{"sub": "the day when i was born", "rel": "country of origin", "obj": "japan"}]}
+{"id": "ont_1_movie_test_436", "triples": [{"sub": "the band's visit", "rel": "country of origin", "obj": "israel"}]}
+{"id": "ont_1_movie_test_437", "triples": [{"sub": "bob's birthday", "rel": "country of origin", "obj": "canada"}]}
+{"id": "ont_1_movie_test_438", "triples": [{"sub": "fear island", "rel": "country of origin", "obj": "canada"}]}
+{"id": "ont_1_movie_test_439", "triples": [{"sub": "clash of loyalties", "rel": "main subject", "obj": "first world war"}]}
+{"id": "ont_1_movie_test_440", "triples": [{"sub": "the unsaid", "rel": "country of origin", "obj": "canada"}]}
+{"id": "ont_1_movie_test_441", "triples": [{"sub": "slumdog millionaire", "rel": "country of origin", "obj": "united kingdom"}]}
+{"id": "ont_1_movie_test_442", "triples": [{"sub": "the last trapper", "rel": "country of origin", "obj": "canada"}]}
+{"id": "ont_1_movie_test_443", "triples": [{"sub": "take me to the edge", "rel": "country of origin", "obj": "canada"}]}
+{"id": "ont_1_movie_test_444", "triples": [{"sub": "aaron cohen's debt", "rel": "country of origin", "obj": "israel"}]}
+{"id": "ont_1_movie_test_445", "triples": [{"sub": "the english-language film", "rel": "country of origin", "obj": "canada"}]}
+{"id": "ont_1_movie_test_446", "triples": [{"sub": "flamenco at 5:15", "rel": "country of origin", "obj": "canada"}]}
+{"id": "ont_1_movie_test_447", "triples": [{"sub": "the tango lesson", "rel": "filming location", "obj": "tokyo"}]}
+{"id": "ont_1_movie_test_448", "triples": [{"sub": "princess mononoke", "rel": "country of origin", "obj": "japan"}]}
+{"id": "ont_1_movie_test_449", "triples": [{"sub": "batman begins", "rel": "country of origin", "obj": "united kingdom"}]}
+{"id": "ont_1_movie_test_450", "triples": [{"sub": "haderekh leein harod", "rel": "country of origin", "obj": "israel"}]}
+{"id": "ont_1_movie_test_451", "triples": []}
+{"id": "ont_1_movie_test_452", "triples": [{"sub": "three under the roof", "rel": "filming location", "obj": "tel aviv"}]}
+{"id": "ont_1_movie_test_453", "triples": [{"sub": "yossi & jagger", "rel": "country of origin", "obj": "israel"}]}
+{"id": "ont_1_movie_test_454", "triples": [{"sub": "the grudge", "rel": "country of origin", "obj": "canada"}]}
+{"id": "ont_1_movie_test_455", "triples": [{"sub": "where the pavement ends", "rel": "country of origin", "obj": "israel"}]}
+{"id": "ont_1_movie_test_456", "triples": [{"sub": "legend of lemnear", "rel": "country of origin", "obj": "japan"}]}
+{"id": "ont_1_movie_test_457", "triples": [{"sub": "from up on poppy hill", "rel": "screenwriter", "obj": "hayao miyazaki"}]}
+{"id": "ont_1_movie_test_458", "triples": [{"sub": "kiki's delivery service", "rel": "country of origin", "obj": "japan"}]}
+{"id": "ont_1_movie_test_459", "triples": [{"sub": "the meaning of life", "rel": "country of origin", "obj": "united kingdom"}]}
+{"id": "ont_1_movie_test_460", "triples": [{"sub": "harry potter and the goblet of fire", "rel": "country of origin", "obj": "united kingdom"}]}
+{"id": "ont_1_movie_test_461", "triples": [{"sub": "the blue butterfly", "rel": "country of origin", "obj": "costa rica"}]}
+{"id": "ont_1_movie_test_462", "triples": []}
+{"id": "ont_1_movie_test_463", "triples": [{"sub": "our homeland", "rel": "country of origin", "obj": "japan"}]}
+{"id": "ont_1_movie_test_464", "triples": [{"sub": "strangers no more", "rel": "country of origin", "obj": "israel"}]}
+{"id": "ont_1_movie_test_465", "triples": [{"sub": "candy queen", "rel": "country of origin", "obj": "canada"}]}
+{"id": "ont_1_movie_test_466", "triples": [{"sub": "stormbreaker", "rel": "country of origin", "obj": "united kingdom"}]}
+{"id": "ont_1_movie_test_467", "triples": [{"sub": "emotional arithmetic", "rel": "country of origin", "obj": "canada"}]}
+{"id": "ont_1_movie_test_468", "triples": [{"sub": "the x-files: i want to believe", "rel": "country of origin", "obj": "canada"}]}
+{"id": "ont_1_movie_test_469", "triples": [{"sub": "ultraman mebius & ultra brothers", "rel": "main subject", "obj": "kaiju"}]}
+{"id": "ont_1_movie_test_470", "triples": [{"sub": "the unsaid", "rel": "country of origin", "obj": "canada"}]}
+{"id": "ont_1_movie_test_471", "triples": [{"sub": "incendies", "rel": "country of origin", "obj": "canada"}]}
+{"id": "ont_1_movie_test_472", "triples": [{"sub": "dragon ball z: dead zone", "rel": "country of origin", "obj": "japan"}]}
+{"id": "ont_1_movie_test_473", "triples": [{"sub": "the program", "rel": "country of origin", "obj": "israel"}]}
+{"id": "ont_1_movie_test_474", "triples": [{"sub": "giv'at halfon eina ona", "rel": "main subject", "obj": "israel defense forces"}]}
+{"id": "ont_1_movie_test_475", "triples": [{"sub": "the unsaid", "rel": "country of origin", "obj": "united kingdom"}]}
+{"id": "ont_1_movie_test_476", "triples": [{"sub": "game over: kasparov and the machine", "rel": "country of origin", "obj": "canada"}]}
+{"id": "ont_1_movie_test_477", "triples": [{"sub": "the barbarian invasions", "rel": "country of origin", "obj": "canada"}]}
+{"id": "ont_1_movie_test_478", "triples": [{"sub": "k-19: the widowmaker", "rel": "main subject", "obj": "k-19"}]}
+{"id": "ont_1_movie_test_479", "triples": [{"sub": "the lost canvas", "rel": "country of origin", "obj": "canada"}]}
+{"id": "ont_1_movie_test_480", "triples": [{"sub": "grizzly rage", "rel": "country of origin", "obj": "canada"}]}
+{"id": "ont_1_movie_test_481", "triples": [{"sub": "c\u00e9line sur les plaines", "rel": "cast member", "obj": "celine dion"}]}
+{"id": "ont_1_movie_test_482", "triples": [{"sub": "cocksucker blues", "rel": "cast member", "obj": "the rolling stones"}]}
+{"id": "ont_1_movie_test_483", "triples": [{"sub": "wallace & gromit: the curse of the were-rabbit", "rel": "production company", "obj": "aardman animations"}]}
+{"id": "ont_1_movie_test_484", "triples": [{"sub": "chicken run", "rel": "publication date", "obj": "01 january 2000"}]}
+{"id": "ont_1_movie_test_485", "triples": [{"sub": "city of", "rel": "screenwriter", "obj": "david greenwalt"}]}
+{"id": "ont_1_movie_test_486", "triples": []}
+{"id": "ont_1_movie_test_487", "triples": [{"sub": "stratosphere", "rel": "characters", "obj": "marex"}]}
+{"id": "ont_1_movie_test_488", "triples": [{"sub": "welcome to eltingville", "rel": "country of origin", "obj": "united states"}]}
+{"id": "ont_1_movie_test_489", "triples": [{"sub": "the muppet show: sex and violence", "rel": "publication date", "obj": "19 march 1975"}]}
+{"id": "ont_1_movie_test_490", "triples": [{"sub": "monterey pop", "rel": "genre", "obj": "concert film"}]}
+{"id": "ont_1_movie_test_491", "triples": [{"sub": "letters from a porcupine", "rel": "publication date", "obj": "01 january 1996"}]}
+{"id": "ont_1_movie_test_492", "triples": [{"sub": "project a-ko", "rel": "publication date", "obj": "01 january 1986"}]}
+{"id": "ont_1_movie_test_493", "triples": [{"sub": "metal skin panic madox-01", "rel": "publication date", "obj": "01 january 1987"}]}
+{"id": "ont_1_movie_test_494", "triples": []}
+{"id": "ont_1_movie_test_495", "triples": [{"sub": "in the days of daniel boone", "rel": "director", "obj": "william james craft"}]}
+{"id": "ont_1_movie_test_496", "triples": [{"sub": "foo fighters: back and forth", "rel": "publication date", "obj": "01 january 2011"}]}
+{"id": "ont_1_movie_test_497", "triples": [{"sub": "voltage fighter gowcaizer", "rel": "genre", "obj": "fighting game"}]}
+{"id": "ont_1_movie_test_498", "triples": []}
+{"id": "ont_1_movie_test_499", "triples": [{"sub": "mezzo forte", "rel": "director", "obj": "yasuomi umetsu"}]}
+{"id": "ont_1_movie_test_500", "triples": [{"sub": "cracked actor: a film about david bowie", "rel": "publication date", "obj": "01 january 1975"}]}
+{"id": "ont_1_movie_test_501", "triples": [{"sub": "youtube rewind 2018: everyone controls rewind", "rel": "main subject", "obj": "youtube"}]}
+{"id": "ont_1_movie_test_502", "triples": [{"sub": "crossfire hurricane", "rel": "main subject", "obj": "the rolling stones"}]}
+{"id": "ont_1_movie_test_504", "triples": [{"sub": "so far", "rel": "publication date", "obj": "01 january 1987"}]}
+{"id": "ont_1_movie_test_505", "triples": [{"sub": "it's a spongebob christmas!", "rel": "publication date", "obj": "23 november 2012"}]}
+{"id": "ont_1_movie_test_506", "triples": [{"sub": "the road to dishonour", "rel": "cast member", "obj": "anna may wong"}]}
+{"id": "ont_1_movie_test_507", "triples": []}
+{"id": "ont_1_movie_test_508", "triples": [{"sub": "expelled from paradise", "rel": "publication date", "obj": "01 january 2014"}]}
+{"id": "ont_1_movie_test_509", "triples": [{"sub": "gunbuster", "rel": "production company", "obj": "gainax"}]}
+{"id": "ont_1_movie_test_510", "triples": [{"sub": "the unsaid", "rel": "country of origin", "obj": "united kingdom"}]}
+{"id": "ont_1_movie_test_511", "triples": [{"sub": "the legend of lyon flare", "rel": "publication date", "obj": "01 january 1986"}]}
+{"id": "ont_1_movie_test_512", "triples": []}
+{"id": "ont_1_movie_test_513", "triples": [{"sub": "take it back", "rel": "publication date", "obj": "16 may 1994"}]}
+{"id": "ont_1_movie_test_514", "triples": [{"sub": "enemies of happiness", "rel": "main subject", "obj": "malalai joya"}]}
+{"id": "ont_1_movie_test_515", "triples": [{"sub": "revolutionary girl utena", "rel": "publication date", "obj": "01 january 1999"}]}
+{"id": "ont_1_movie_test_516", "triples": [{"sub": "ladies and gentlemen: the rolling stones", "rel": "publication date", "obj": "01 january 1974"}]}
+{"id": "ont_1_movie_test_517", "triples": [{"sub": "plastilinovaya vorona", "rel": "publication date", "obj": "01 january 1981"}]}
+{"id": "ont_1_movie_test_518", "triples": [{"sub": "alien from the darkness", "rel": "publication date", "obj": "01 january 1996"}]}
+{"id": "ont_1_movie_test_519", "triples": [{"sub": "the garden of words", "rel": "award received", "obj": "kobe theatrical film award"}]}
+{"id": "ont_1_movie_test_520", "triples": [{"sub": "jack and the witch", "rel": "publication date", "obj": "01 january 1967"}]}
+{"id": "ont_1_movie_test_521", "triples": [{"sub": "keyboard cat", "rel": "screenwriter", "obj": "brad o'farrell"}]}
+{"id": "ont_1_movie_test_522", "triples": [{"sub": "key the metal idol", "rel": "publication date", "obj": "01 january 1994"}]}
+{"id": "ont_1_movie_test_523", "triples": []}
+{"id": "ont_1_movie_test_524", "triples": []}
+{"id": "ont_1_movie_test_525", "triples": [{"sub": "kure-na", "rel": "publication date", "obj": "01 january 2009"}]}
+{"id": "ont_1_movie_test_526", "triples": [{"sub": "eyes wide shut", "rel": "cast member", "obj": "u2"}]}
+{"id": "ont_1_movie_test_527", "triples": [{"sub": "the lost canvas", "rel": "production company", "obj": "studio gokumi"}]}
+{"id": "ont_1_movie_test_528", "triples": [{"sub": "chocolate rain", "rel": "publication date", "obj": "07 december 2024"}]}
+{"id": "ont_1_movie_test_529", "triples": [{"sub": "a second season", "rel": "publication date", "obj": "30 december 2018"}]}
+{"id": "ont_1_movie_test_530", "triples": [{"sub": "strawberry marshmallow", "rel": "publication date", "obj": "01 january 2009"}]}
+{"id": "ont_1_movie_test_531", "triples": [{"sub": "harry davies-carr", "rel": "country of origin", "obj": "united kingdom"}]}
+{"id": "ont_1_movie_test_532", "triples": [{"sub": "when we were beautiful", "rel": "publication date", "obj": "01 january 2009"}]}
+{"id": "ont_1_movie_test_533", "triples": []}
+{"id": "ont_1_movie_test_534", "triples": [{"sub": "spies in disguise", "rel": "publication date", "obj": "30 december 2019"}]}
+{"id": "ont_1_movie_test_535", "triples": [{"sub": "pour la suite du monde", "rel": "screenwriter", "obj": "marcel carri\u00e3\u00a8re"}]}
+{"id": "ont_1_movie_test_536", "triples": [{"sub": "acting sheriff", "rel": "country of origin", "obj": "united states"}]}
+{"id": "ont_1_movie_test_537", "triples": [{"sub": "trigun: badlands rumble", "rel": "production company", "obj": "madhouse"}]}
+{"id": "ont_1_movie_test_538", "triples": [{"sub": "i am trying to break your heart: a film about wilco", "rel": "publication date", "obj": "01 january 2002"}]}
+{"id": "ont_1_movie_test_540", "triples": [{"sub": "joe strummer: the future is unwritten", "rel": "director", "obj": "julien temple"}]}
+{"id": "ont_1_movie_test_541", "triples": [{"sub": "the haunted world of el superbeasto", "rel": "characters", "obj": "mickey mouse"}]}
+{"id": "ont_1_movie_test_542", "triples": [{"sub": "the sixth sense", "rel": "characters", "obj": "malcolm crowe"}]}
+{"id": "ont_1_movie_test_543", "triples": [{"sub": "the adventure of the empty house", "rel": "characters", "obj": "sherlock holmes"}]}
+{"id": "ont_1_movie_test_544", "triples": [{"sub": "dracula", "rel": "characters", "obj": "count dracula"}]}
+{"id": "ont_1_movie_test_545", "triples": [{"sub": "pippi on the run", "rel": "publication date", "obj": "01 january 1970"}]}
+{"id": "ont_1_movie_test_546", "triples": [{"sub": "the three musketeers", "rel": "characters", "obj": "aramis"}]}
+{"id": "ont_1_movie_test_547", "triples": [{"sub": "jurassic park iii", "rel": "characters", "obj": "alan grant"}]}
+{"id": "ont_1_movie_test_548", "triples": []}
+{"id": "ont_1_movie_test_549", "triples": [{"sub": "the lord of the rings: the two towers", "rel": "characters", "obj": "legolas"}]}
+{"id": "ont_1_movie_test_550", "triples": [{"sub": "the da vinci code", "rel": "narrative location", "obj": "paris"}]}
+{"id": "ont_1_movie_test_551", "triples": [{"sub": "the haunted mansion", "rel": "characters", "obj": "goofy"}]}
+{"id": "ont_1_movie_test_552", "triples": [{"sub": "seein' red, white 'n' blue", "rel": "characters", "obj": "popeye"}]}
+{"id": "ont_1_movie_test_553", "triples": [{"sub": "fantastic beasts: the crimes of grindelwald", "rel": "characters", "obj": "gellert grindelwald"}]}
+{"id": "ont_1_movie_test_554", "triples": [{"sub": "farewell, my lovely", "rel": "characters", "obj": "philip marlowe"}]}
+{"id": "ont_1_movie_test_555", "triples": [{"sub": "the three musketeers", "rel": "characters", "obj": "d'artagnan"}]}
+{"id": "ont_1_movie_test_556", "triples": []}
+{"id": "ont_1_movie_test_558", "triples": [{"sub": "crank: high voltage", "rel": "filming location", "obj": "los angeles"}]}
+{"id": "ont_1_movie_test_559", "triples": [{"sub": "the italian job", "rel": "cast member", "obj": "michael caine"}]}
+{"id": "ont_1_movie_test_560", "triples": []}
+{"id": "ont_1_movie_test_561", "triples": []}
+{"id": "ont_1_movie_test_562", "triples": [{"sub": "friday the 13th: the final chapter", "rel": "narrative location", "obj": "crystal lake"}]}
+{"id": "ont_1_movie_test_563", "triples": [{"sub": "taken 2", "rel": "filming location", "obj": "istanbul"}]}
+{"id": "ont_1_movie_test_564", "triples": [{"sub": "playful pluto", "rel": "characters", "obj": "mickey mouse"}]}
+{"id": "ont_1_movie_test_565", "triples": [{"sub": "the lord of the rings: the fellowship of the ring", "rel": "characters", "obj": "frodo baggins"}]}
+{"id": "ont_1_movie_test_566", "triples": [{"sub": "the grudge", "rel": "characters", "obj": "lloyd christmas"}]}
+{"id": "ont_1_movie_test_567", "triples": [{"sub": "the magic flute", "rel": "characters", "obj": "mickey"}]}
+{"id": "ont_1_movie_test_568", "triples": [{"sub": "the dark knight rises", "rel": "based on", "obj": "batman"}]}
+{"id": "ont_1_movie_test_569", "triples": [{"sub": "men in black 3", "rel": "characters", "obj": "boris the animal"}]}
+{"id": "ont_1_movie_test_570", "triples": [{"sub": "tumble weed greed", "rel": "characters", "obj": "woody woodpecker"}]}
+{"id": "ont_1_movie_test_572", "triples": [{"sub": "motor mania", "rel": "characters", "obj": "goofy"}]}
+{"id": "ont_1_movie_test_573", "triples": [{"sub": "the pointer", "rel": "characters", "obj": "mickey mouse"}]}
+{"id": "ont_1_movie_test_574", "triples": [{"sub": "inferior decorator", "rel": "characters", "obj": "donald duck"}]}
+{"id": "ont_1_movie_test_575", "triples": [{"sub": "pop-pie a la mode", "rel": "characters", "obj": "popeye"}]}
+{"id": "ont_1_movie_test_576", "triples": []}
+{"id": "ont_1_movie_test_577", "triples": [{"sub": "the haunted mouse", "rel": "characters", "obj": "pluto"}]}
+{"id": "ont_1_movie_test_578", "triples": [{"sub": "curran", "rel": "cast member", "obj": "sharon stone"}]}
+{"id": "ont_1_movie_test_579", "triples": [{"sub": "me musical nephews", "rel": "characters", "obj": "popeye"}]}
+{"id": "ont_1_movie_test_581", "triples": [{"sub": "tepee for two", "rel": "characters", "obj": "woody woodpecker"}]}
+{"id": "ont_1_movie_test_582", "triples": [{"sub": "the lincoln lawyer", "rel": "narrative location", "obj": "los angeles"}]}
+{"id": "ont_1_movie_test_583", "triples": [{"sub": "the little whirlwind", "rel": "characters", "obj": "mickey mouse"}]}
+{"id": "ont_1_movie_test_584", "triples": [{"sub": "the last of the mohicans", "rel": "characters", "obj": "chingachgook"}]}
+{"id": "ont_1_movie_test_585", "triples": [{"sub": "dracula", "rel": "characters", "obj": "count orlok"}]}
+{"id": "ont_1_movie_test_586", "triples": [{"sub": "spooky swabs", "rel": "director", "obj": "isadore sparber"}]}
+{"id": "ont_1_movie_test_587", "triples": [{"sub": "mickey's twice upon a christmas", "rel": "characters", "obj": "daisy duck"}]}
+{"id": "ont_1_movie_test_588", "triples": [{"sub": "mickey's mechanical man", "rel": "characters", "obj": "mickey mouse"}]}
+{"id": "ont_1_movie_test_589", "triples": [{"sub": "batman v superman: dawn of justice", "rel": "characters", "obj": "wonder woman"}]}
+{"id": "ont_1_movie_test_591", "triples": [{"sub": "assignment: earth", "rel": "characters", "obj": "kirk"}]}
+{"id": "ont_1_movie_test_592", "triples": []}
+{"id": "ont_1_movie_test_593", "triples": [{"sub": "the treasures of agra", "rel": "cast member", "obj": "vasily livanov"}]}
+{"id": "ont_1_movie_test_595", "triples": []}
+{"id": "ont_1_movie_test_597", "triples": [{"sub": "finding nemo", "rel": "characters", "obj": "marlin"}]}
+{"id": "ont_1_movie_test_598", "triples": [{"sub": "the judge dredd movie", "rel": "based on", "obj": "judge dredd"}]}
+{"id": "ont_1_movie_test_599", "triples": [{"sub": "a wild hare", "rel": "characters", "obj": "bugs bunny"}]}
+{"id": "ont_1_movie_test_600", "triples": [{"sub": "herbie rides again", "rel": "cast member", "obj": "keenan wynn"}]}
+{"id": "ont_1_movie_test_601", "triples": [{"sub": "without limits", "rel": "filming location", "obj": "munich"}]}
+{"id": "ont_1_movie_test_602", "triples": [{"sub": "infernal affairs iii", "rel": "filming location", "obj": "hong kong"}]}
+{"id": "ont_1_movie_test_603", "triples": []}
+{"id": "ont_1_movie_test_604", "triples": [{"sub": "dracula", "rel": "narrative location", "obj": "new orleans"}]}
+{"id": "ont_1_movie_test_605", "triples": [{"sub": "a short film about love", "rel": "filming location", "obj": "budapest"}]}
+{"id": "ont_1_movie_test_606", "triples": [{"sub": "the tiger and the snow", "rel": "narrative location", "obj": "baghdad"}]}
+{"id": "ont_1_movie_test_607", "triples": [{"sub": "children of fate", "rel": "narrative location", "obj": "palermo"}]}
+{"id": "ont_1_movie_test_608", "triples": [{"sub": "fill the void", "rel": "country of origin", "obj": "israel"}]}
+{"id": "ont_1_movie_test_609", "triples": [{"sub": "in the line of fire", "rel": "filming location", "obj": "dallas"}]}
+{"id": "ont_1_movie_test_610", "triples": [{"sub": "king in shadow", "rel": "filming location", "obj": "munich"}]}
+{"id": "ont_1_movie_test_611", "triples": [{"sub": "the italian job", "rel": "filming location", "obj": "turin"}]}
+{"id": "ont_1_movie_test_612", "triples": [{"sub": "dhoom 2", "rel": "filming location", "obj": "mumbai"}]}
+{"id": "ont_1_movie_test_613", "triples": [{"sub": "something like it", "rel": "narrative location", "obj": "seattle"}]}
+{"id": "ont_1_movie_test_614", "triples": [{"sub": "a simple life", "rel": "award received", "obj": "hong kong film awards"}]}
+{"id": "ont_1_movie_test_615", "triples": [{"sub": "24 hour party people", "rel": "publication date", "obj": "01 january 2002"}]}
+{"id": "ont_1_movie_test_616", "triples": []}
+{"id": "ont_1_movie_test_617", "triples": [{"sub": "dragon trap", "rel": "narrative location", "obj": "istanbul"}]}
+{"id": "ont_1_movie_test_618", "triples": [{"sub": "where the pavement ends", "rel": "country of origin", "obj": "canada"}]}
+{"id": "ont_1_movie_test_619", "triples": [{"sub": "the tango lesson", "rel": "filming location", "obj": "n'djamena"}]}
+{"id": "ont_1_movie_test_620", "triples": [{"sub": "the rise of the national right", "rel": "filming location", "obj": "melbourne"}]}
+{"id": "ont_1_movie_test_621", "triples": [{"sub": "over the edge", "rel": "narrative location", "obj": "munich"}]}
+{"id": "ont_1_movie_test_622", "triples": [{"sub": "who framed roger rabbit", "rel": "filming location", "obj": "los angeles"}]}
+{"id": "ont_1_movie_test_623", "triples": [{"sub": "the plot to assassinate hitler", "rel": "narrative location", "obj": "ferrara"}]}
+{"id": "ont_1_movie_test_624", "triples": [{"sub": "harbour and wilbur wants to kill", "rel": "narrative location", "obj": "glasgow"}]}
+{"id": "ont_1_movie_test_625", "triples": [{"sub": "the grudge", "rel": "filming location", "obj": "tacoma"}]}
+{"id": "ont_1_movie_test_626", "triples": [{"sub": "eurotrip", "rel": "narrative location", "obj": "rome"}]}
+{"id": "ont_1_movie_test_627", "triples": [{"sub": "batman begins", "rel": "filming location", "obj": "baltimore"}]}
+{"id": "ont_1_movie_test_628", "triples": [{"sub": "the unsaid", "rel": "filming location", "obj": "montreal"}]}
+{"id": "ont_1_movie_test_629", "triples": [{"sub": "family diary", "rel": "narrative location", "obj": "florence"}]}
+{"id": "ont_1_movie_test_630", "triples": []}
+{"id": "ont_1_movie_test_631", "triples": [{"sub": "the hangman of prague", "rel": "narrative location", "obj": "prague"}]}
+{"id": "ont_1_movie_test_632", "triples": [{"sub": "wings of desire", "rel": "narrative location", "obj": "berlin"}]}
+{"id": "ont_1_movie_test_633", "triples": [{"sub": "long night in 1943", "rel": "main subject", "obj": "ww2"}]}
+{"id": "ont_1_movie_test_634", "triples": [{"sub": "not one less", "rel": "filming location", "obj": "san francisco"}]}
+{"id": "ont_1_movie_test_635", "triples": [{"sub": "the cherry orchard", "rel": "narrative location", "obj": "liverpool"}]}
+{"id": "ont_1_movie_test_636", "triples": [{"sub": "mona lisa", "rel": "narrative location", "obj": "manila"}]}
+{"id": "ont_1_movie_test_637", "triples": [{"sub": "a japanese tragedy", "rel": "main subject", "obj": "prostitute"}]}
+{"id": "ont_1_movie_test_638", "triples": [{"sub": "resident evil: retribution", "rel": "filming location", "obj": "toronto"}]}
+{"id": "ont_1_movie_test_639", "triples": []}
+{"id": "ont_1_movie_test_640", "triples": [{"sub": "the dark knight rises", "rel": "filming location", "obj": "london"}]}
+{"id": "ont_1_movie_test_641", "triples": [{"sub": "operation daybreak", "rel": "filming location", "obj": "prague"}]}
+{"id": "ont_1_movie_test_642", "triples": [{"sub": "the mocambo", "rel": "filming location", "obj": "los angeles"}]}
+{"id": "ont_1_movie_test_643", "triples": [{"sub": "khosla ka ghosla", "rel": "filming location", "obj": "delhi"}]}
+{"id": "ont_1_movie_test_644", "triples": [{"sub": "the last wave", "rel": "narrative location", "obj": "sydney"}]}
+{"id": "ont_1_movie_test_645", "triples": [{"sub": "eyes wide shut", "rel": "filming location", "obj": "las cruces, new mexico"}]}
+{"id": "ont_1_movie_test_646", "triples": [{"sub": "flowers of nanjing", "rel": "screenwriter", "obj": "geling yan"}]}
+{"id": "ont_1_movie_test_647", "triples": [{"sub": "the way we laughed", "rel": "narrative location", "obj": "turin"}]}
+{"id": "ont_1_movie_test_648", "triples": [{"sub": "the actors", "rel": "narrative location", "obj": "dublin"}]}
+{"id": "ont_1_movie_test_649", "triples": [{"sub": "lies my father told me", "rel": "narrative location", "obj": "montreal"}]}
+{"id": "ont_1_movie_test_650", "triples": [{"sub": "the legend of the 7 golden vampires", "rel": "filming location", "obj": "hong kong"}]}
+{"id": "ont_1_movie_test_651", "triples": [{"sub": "gone baby gone", "rel": "filming location", "obj": "boston"}]}
+{"id": "ont_1_movie_test_652", "triples": [{"sub": "havana blues", "rel": "country of origin", "obj": "cuba"}]}
+{"id": "ont_1_movie_test_653", "triples": [{"sub": "perrier's bounty", "rel": "narrative location", "obj": "dublin"}]}
+{"id": "ont_1_movie_test_654", "triples": [{"sub": "batman begins", "rel": "filming location", "obj": "detroit"}]}
+{"id": "ont_1_movie_test_655", "triples": [{"sub": "the unsaid", "rel": "filming location", "obj": "boston"}]}
+{"id": "ont_1_movie_test_656", "triples": [{"sub": "diner", "rel": "filming location", "obj": "baltimore"}]}
+{"id": "ont_1_movie_test_657", "triples": [{"sub": "yi yi", "rel": "filming location", "obj": "taipei"}]}
+{"id": "ont_1_movie_test_658", "triples": []}
+{"id": "ont_1_movie_test_659", "triples": [{"sub": "the film", "rel": "narrative location", "obj": "tangier"}]}
+{"id": "ont_1_movie_test_660", "triples": [{"sub": "resident evil: retribution", "rel": "filming location", "obj": "san diego"}]}
+{"id": "ont_1_movie_test_661", "triples": [{"sub": "28 weeks later", "rel": "narrative location", "obj": "london"}]}
+{"id": "ont_1_movie_test_662", "triples": [{"sub": "chasing liberty", "rel": "filming location", "obj": "prague"}]}
+{"id": "ont_1_movie_test_663", "triples": [{"sub": "the pagemaster", "rel": "filming location", "obj": "vancouver"}]}
+{"id": "ont_1_movie_test_664", "triples": [{"sub": "new police story", "rel": "filming location", "obj": "hong kong"}]}
+{"id": "ont_1_movie_test_666", "triples": [{"sub": "the french kissers", "rel": "filming location", "obj": "nice"}]}
+{"id": "ont_1_movie_test_667", "triples": [{"sub": "good-tidings", "rel": "filming location", "obj": "beijing"}]}
+{"id": "ont_1_movie_test_668", "triples": [{"sub": "material girls", "rel": "filming location", "obj": "los angeles"}]}
+{"id": "ont_1_movie_test_669", "triples": [{"sub": "the fifth element", "rel": "filming location", "obj": "cologne"}]}
+{"id": "ont_1_movie_test_670", "triples": [{"sub": "the nightmare before christmas", "rel": "narrative location", "obj": "new york city"}]}
+{"id": "ont_1_movie_test_671", "triples": [{"sub": "elite squad: the enemy within", "rel": "narrative location", "obj": "rio de janeiro"}]}
+{"id": "ont_1_movie_test_672", "triples": [{"sub": "resident evil: retribution", "rel": "filming location", "obj": "atlanta"}]}
+{"id": "ont_1_movie_test_673", "triples": [{"sub": "the pagemaster", "rel": "filming location", "obj": "new york city"}]}
+{"id": "ont_1_movie_test_674", "triples": [{"sub": "i spit on your corpse", "rel": "filming location", "obj": "ottawa"}]}
+{"id": "ont_1_movie_test_675", "triples": [{"sub": "when the day breaks", "rel": "nominated for", "obj": "academy award for best animated short film"}]}
+{"id": "ont_1_movie_test_676", "triples": [{"sub": "the french kissers", "rel": "filming location", "obj": "marseille"}]}
+{"id": "ont_1_movie_test_677", "triples": [{"sub": "the unsaid", "rel": "filming location", "obj": "rio de janeiro"}]}
+{"id": "ont_1_movie_test_678", "triples": [{"sub": "bezerra de menezes: o di\u00e1rio de um esp\u00edrito", "rel": "filming location", "obj": "maranguape"}]}
+{"id": "ont_1_movie_test_679", "triples": [{"sub": "the unsaid", "rel": "filming location", "obj": "san francisco"}]}
+{"id": "ont_1_movie_test_680", "triples": [{"sub": "the magic flute", "rel": "filming location", "obj": "munich"}]}
+{"id": "ont_1_movie_test_681", "triples": []}
+{"id": "ont_1_movie_test_682", "triples": [{"sub": "the sun gym", "rel": "filming location", "obj": "miami"}]}
+{"id": "ont_1_movie_test_683", "triples": [{"sub": "slc punk!", "rel": "filming location", "obj": "salt lake city"}]}
+{"id": "ont_1_movie_test_684", "triples": [{"sub": "the adventures of priscilla, queen of the desert", "rel": "narrative location", "obj": "sydney"}]}
+{"id": "ont_1_movie_test_685", "triples": [{"sub": "the godfather part ii", "rel": "based on", "obj": "the godfather"}]}
+{"id": "ont_1_movie_test_686", "triples": [{"sub": "nothing like the holidays", "rel": "filming location", "obj": "chicago"}]}
+{"id": "ont_1_movie_test_687", "triples": [{"sub": "enter the dragon", "rel": "filming location", "obj": "hong kong"}]}
+{"id": "ont_1_movie_test_688", "triples": []}
+{"id": "ont_1_movie_test_689", "triples": [{"sub": "bullets over summer", "rel": "filming location", "obj": "hong kong"}]}
+{"id": "ont_1_movie_test_690", "triples": [{"sub": "the grudge", "rel": "filming location", "obj": "atlanta"}]}
+{"id": "ont_1_movie_test_691", "triples": [{"sub": "boogie nights", "rel": "filming location", "obj": "los angeles"}]}
+{"id": "ont_1_movie_test_692", "triples": [{"sub": "the storm warriors", "rel": "filming location", "obj": "bangkok"}]}
+{"id": "ont_1_movie_test_693", "triples": []}
+{"id": "ont_1_movie_test_694", "triples": [{"sub": "the haunted world", "rel": "filming location", "obj": "new york city"}]}
+{"id": "ont_1_movie_test_695", "triples": [{"sub": "to live and die in tsimshatsui", "rel": "filming location", "obj": "hong kong"}]}
+{"id": "ont_1_movie_test_696", "triples": [{"sub": "the dead pool", "rel": "filming location", "obj": "san francisco"}]}
+{"id": "ont_1_movie_test_697", "triples": [{"sub": "love in disguise", "rel": "filming location", "obj": "shanghai"}]}
+{"id": "ont_1_movie_test_698", "triples": [{"sub": "a fistful of dollars", "rel": "country of origin", "obj": "spain"}]}
+{"id": "ont_1_movie_test_699", "triples": [{"sub": "moondram pirai", "rel": "filming location", "obj": "bangalore"}]}
+{"id": "ont_1_movie_test_701", "triples": [{"sub": "the tango lesson", "rel": "filming location", "obj": "nantes"}]}
+{"id": "ont_1_movie_test_702", "triples": [{"sub": "before sunrise", "rel": "filming location", "obj": "vienna"}]}
+{"id": "ont_1_movie_test_703", "triples": [{"sub": "the pagemaster", "rel": "filming location", "obj": "detroit"}]}
+{"id": "ont_1_movie_test_704", "triples": [{"sub": "bad boys", "rel": "filming location", "obj": "miami"}]}
+{"id": "ont_1_movie_test_706", "triples": [{"sub": "une chambre en ville", "rel": "narrative location", "obj": "nantes"}]}
+{"id": "ont_1_movie_test_707", "triples": [{"sub": "germany, year zero", "rel": "filming location", "obj": "berlin"}]}
+{"id": "ont_1_movie_test_708", "triples": [{"sub": "skyfall", "rel": "publication date", "obj": "23 october 2012"}]}
+{"id": "ont_1_movie_test_709", "triples": [{"sub": "the movie", "rel": "filming location", "obj": "edinburgh"}]}
+{"id": "ont_1_movie_test_710", "triples": [{"sub": "top gun", "rel": "filming location", "obj": "san diego"}]}
+{"id": "ont_1_movie_test_711", "triples": [{"sub": "rust and bone", "rel": "award received", "obj": "palme d'or"}]}
+{"id": "ont_1_movie_test_712", "triples": [{"sub": "dave speed", "rel": "narrative location", "obj": "miami"}]}
+{"id": "ont_1_movie_test_713", "triples": [{"sub": "the tango lesson", "rel": "filming location", "obj": "budapest"}]}
+{"id": "ont_1_movie_test_714", "triples": []}
+{"id": "ont_1_movie_test_715", "triples": [{"sub": "the last emperor", "rel": "filming location", "obj": "beijing"}]}
+{"id": "ont_1_movie_test_716", "triples": [{"sub": "the pagemaster", "rel": "filming location", "obj": "london"}]}
+{"id": "ont_1_movie_test_717", "triples": [{"sub": "smokey and the bandit", "rel": "filming location", "obj": "atlanta"}]}
+{"id": "ont_1_movie_test_718", "triples": [{"sub": "resident evil: retribution", "rel": "filming location", "obj": "los angeles"}]}
+{"id": "ont_1_movie_test_719", "triples": [{"sub": "the dark knight rises", "rel": "filming location", "obj": "pittsburgh"}]}
+{"id": "ont_1_movie_test_720", "triples": [{"sub": "monsoon wedding", "rel": "narrative location", "obj": "new delhi"}]}
+{"id": "ont_1_movie_test_721", "triples": [{"sub": "hotel rwanda", "rel": "main subject", "obj": "rwandan genocide"}]}
+{"id": "ont_1_movie_test_722", "triples": [{"sub": "the nightmare factory", "rel": "main subject", "obj": "nazi germany"}]}
+{"id": "ont_1_movie_test_723", "triples": [{"sub": "sleepaway camp", "rel": "main subject", "obj": "summer camp"}]}
+{"id": "ont_1_movie_test_724", "triples": [{"sub": "summer wars", "rel": "main subject", "obj": "artificial intelligence"}]}
+{"id": "ont_1_movie_test_725", "triples": [{"sub": "mask of murder", "rel": "main subject", "obj": "serial killer"}]}
+{"id": "ont_1_movie_test_726", "triples": [{"sub": "the pride of the yankees", "rel": "main subject", "obj": "baseball"}]}
+{"id": "ont_1_movie_test_727", "triples": [{"sub": "fatih sultan muhammad", "rel": "main subject", "obj": "fall of constantinople"}]}
+{"id": "ont_1_movie_test_728", "triples": [{"sub": "the unsaid", "rel": "main subject", "obj": "suicide"}]}
+{"id": "ont_1_movie_test_729", "triples": [{"sub": "hitler: the last ten days", "rel": "main subject", "obj": "adolf hitler"}]}
+{"id": "ont_1_movie_test_730", "triples": [{"sub": "the wrecking crew", "rel": "main subject", "obj": "world war iii"}]}
+{"id": "ont_1_movie_test_731", "triples": [{"sub": "julie & julia", "rel": "main subject", "obj": "julia child"}]}
+{"id": "ont_1_movie_test_732", "triples": [{"sub": "the anderson platoon", "rel": "main subject", "obj": "vietnam war"}]}
+{"id": "ont_1_movie_test_733", "triples": [{"sub": "like crazy", "rel": "filming location", "obj": "los angeles"}]}
+{"id": "ont_1_movie_test_734", "triples": [{"sub": "the secret land", "rel": "main subject", "obj": "antarctica"}]}
+{"id": "ont_1_movie_test_735", "triples": []}
+{"id": "ont_1_movie_test_736", "triples": [{"sub": "henry: portrait of a serial killer", "rel": "genre", "obj": "psychological horror"}]}
+{"id": "ont_1_movie_test_737", "triples": [{"sub": "sicko", "rel": "country of origin", "obj": "united states"}]}
+{"id": "ont_1_movie_test_738", "triples": [{"sub": "the crucible", "rel": "main subject", "obj": "salem witch trials"}]}
+{"id": "ont_1_movie_test_739", "triples": [{"sub": "a dangerous method", "rel": "characters", "obj": "sabina spielrein"}]}
+{"id": "ont_1_movie_test_740", "triples": []}
+{"id": "ont_1_movie_test_741", "triples": [{"sub": "kissed", "rel": "main subject", "obj": "necrophilia"}]}
+{"id": "ont_1_movie_test_742", "triples": [{"sub": "cinderella man", "rel": "main subject", "obj": "boxing"}]}
+{"id": "ont_1_movie_test_743", "triples": [{"sub": "goodbye bafana, or the color of freedom", "rel": "based on", "obj": "goodbye bafana: nelson mandela, my prisoner, my friend"}]}
+{"id": "ont_1_movie_test_744", "triples": []}
+{"id": "ont_1_movie_test_745", "triples": [{"sub": "blitz wolf", "rel": "main subject", "obj": "world war ii"}]}
+{"id": "ont_1_movie_test_746", "triples": [{"sub": "maniac cop 2", "rel": "main subject", "obj": "serial killer"}]}
+{"id": "ont_1_movie_test_747", "triples": []}
+{"id": "ont_1_movie_test_748", "triples": [{"sub": "fathers' rights", "rel": "main subject", "obj": "divorce"}]}
+{"id": "ont_1_movie_test_749", "triples": [{"sub": "a sunday in kigali", "rel": "main subject", "obj": "rwandan genocide"}]}
+{"id": "ont_1_movie_test_750", "triples": [{"sub": "gossip girl", "rel": "cast member", "obj": "drake sather"}]}
+{"id": "ont_1_movie_test_751", "triples": [{"sub": "gang war in naples", "rel": "screenwriter", "obj": "pasquale squitieri"}]}
+{"id": "ont_1_movie_test_752", "triples": [{"sub": "the luzhin defence", "rel": "main subject", "obj": "chess"}]}
+{"id": "ont_1_movie_test_753", "triples": [{"sub": "unplanned pregnancy", "rel": "main subject", "obj": "abortion"}]}
+{"id": "ont_1_movie_test_754", "triples": [{"sub": "forbidden love", "rel": "main subject", "obj": "incest"}]}
+{"id": "ont_1_movie_test_755", "triples": [{"sub": "the 6th day", "rel": "main subject", "obj": "cloning"}]}
+{"id": "ont_1_movie_test_756", "triples": [{"sub": "a very long engagement", "rel": "main subject", "obj": "world war i"}]}
+{"id": "ont_1_movie_test_757", "triples": [{"sub": "needle park", "rel": "filming location", "obj": "manhattan"}]}
+{"id": "ont_1_movie_test_758", "triples": [{"sub": "brave new world", "rel": "main subject", "obj": "first war of scottish independence"}]}
+{"id": "ont_1_movie_test_759", "triples": [{"sub": "piagol", "rel": "main subject", "obj": "korean war"}]}
+{"id": "ont_1_movie_test_760", "triples": [{"sub": "million dollar baby", "rel": "main subject", "obj": "boxing"}]}
+{"id": "ont_1_movie_test_761", "triples": [{"sub": "by-products of nuclear fission", "rel": "main subject", "obj": "nuclear energy"}]}
+{"id": "ont_1_movie_test_762", "triples": []}
+{"id": "ont_1_movie_test_763", "triples": [{"sub": "the actes and deidis of the illustre and vallyeant campioun schir william wallace", "rel": "based on", "obj": "the actes and deidis of the illustre and vallyeant campioun schir william wallace"}]}
+{"id": "ont_1_movie_test_764", "triples": []}
+{"id": "ont_1_movie_test_765", "triples": [{"sub": "the first great train robbery", "rel": "based on", "obj": "the great train robbery"}]}
+{"id": "ont_1_movie_test_766", "triples": [{"sub": "the soul keeper", "rel": "main subject", "obj": "sabina spielrein"}]}
+{"id": "ont_1_movie_test_767", "triples": [{"sub": "cry freedom", "rel": "country of origin", "obj": "south africa"}]}
+{"id": "ont_1_movie_test_768", "triples": [{"sub": "timecop", "rel": "characters", "obj": "max walker"}]}
+{"id": "ont_1_movie_test_769", "triples": [{"sub": "lay the favorite", "rel": "main subject", "obj": "sports gambling"}]}
+{"id": "ont_1_movie_test_770", "triples": [{"sub": "goldmember", "rel": "based on", "obj": "goldfinger"}]}
+{"id": "ont_1_movie_test_771", "triples": [{"sub": "the social network", "rel": "based on", "obj": "the accidental billionaires"}]}
+{"id": "ont_1_movie_test_772", "triples": [{"sub": "a man and a woman", "rel": "production company", "obj": "twentieth century-fox"}]}
+{"id": "ont_1_movie_test_773", "triples": [{"sub": "loose change", "rel": "main subject", "obj": "september 11 attacks"}]}
+{"id": "ont_1_movie_test_774", "triples": [{"sub": "searching for bobby fischer", "rel": "main subject", "obj": "chess"}]}
+{"id": "ont_1_movie_test_775", "triples": [{"sub": "nekromantik 2", "rel": "main subject", "obj": "necrophilia"}]}
+{"id": "ont_1_movie_test_776", "triples": [{"sub": "shooting dogs", "rel": "main subject", "obj": "rwanda"}]}
+{"id": "ont_1_movie_test_777", "triples": [{"sub": "the devil's own", "rel": "country of origin", "obj": "united states"}]}
+{"id": "ont_1_movie_test_778", "triples": [{"sub": "the triplets of belleville", "rel": "narrative location", "obj": "belleville"}]}
+{"id": "ont_1_movie_test_779", "triples": [{"sub": "one minute to zero", "rel": "main subject", "obj": "korean war"}]}
+{"id": "ont_1_movie_test_780", "triples": [{"sub": "visions of light", "rel": "main subject", "obj": "cinematography"}]}
+{"id": "ont_1_movie_test_781", "triples": [{"sub": "the tender tale of cinderella penguin", "rel": "country of origin", "obj": "canada"}]}
+{"id": "ont_1_movie_test_782", "triples": [{"sub": "she wore a yellow ribbon", "rel": "nominated for", "obj": "academy award for best actress"}]}
+{"id": "ont_1_movie_test_783", "triples": [{"sub": "the unsaid", "rel": "nominated for", "obj": "academy award for best cinematography"}]}
+{"id": "ont_1_movie_test_784", "triples": [{"sub": "the unsaid", "rel": "nominated for", "obj": "academy award for best story"}]}
+{"id": "ont_1_movie_test_785", "triples": [{"sub": "eyes wide shut", "rel": "nominated for", "obj": "academy award for best actor"}]}
+{"id": "ont_1_movie_test_786", "triples": [{"sub": "the divorcee", "rel": "nominated for", "obj": "academy award for best director"}]}
+{"id": "ont_1_movie_test_787", "triples": [{"sub": "eyes wide shut", "rel": "award received", "obj": "academy award for best supporting actor"}]}
+{"id": "ont_1_movie_test_788", "triples": [{"sub": "reason and emotion", "rel": "nominated for", "obj": "academy award for best animated short film"}]}
+{"id": "ont_1_movie_test_789", "triples": [{"sub": "the madness of king george", "rel": "nominated for", "obj": "academy award for best actor"}]}
+{"id": "ont_1_movie_test_790", "triples": [{"sub": "escalante", "rel": "nominated for", "obj": "academy award for best actor"}]}
+{"id": "ont_1_movie_test_791", "triples": [{"sub": "a close shave", "rel": "nominated for", "obj": "academy award for best animated short film"}]}
+{"id": "ont_1_movie_test_792", "triples": [{"sub": "the secret of kells", "rel": "nominated for", "obj": "academy award for best animated feature"}]}
+{"id": "ont_1_movie_test_793", "triples": [{"sub": "tin toy", "rel": "award received", "obj": "academy award for best animated short film"}]}
+{"id": "ont_1_movie_test_794", "triples": [{"sub": "the barefoot contessa", "rel": "award received", "obj": "academy award for best supporting actor"}]}
+{"id": "ont_1_movie_test_795", "triples": [{"sub": "the unsaid", "rel": "award received", "obj": "academy award for best supporting actor"}]}
+{"id": "ont_1_movie_test_797", "triples": [{"sub": "the tale of the princess kaguya", "rel": "nominated for", "obj": "academy award for best animated short film"}]}
+{"id": "ont_1_movie_test_798", "triples": [{"sub": "mouse wreckers", "rel": "nominated for", "obj": "academy award for best animated short film"}]}
+{"id": "ont_1_movie_test_799", "triples": [{"sub": "roman holiday", "rel": "award received", "obj": "academy award for best actress"}]}
+{"id": "ont_1_movie_test_800", "triples": [{"sub": "the goodbye girl", "rel": "award received", "obj": "academy award for best actor"}]}
+{"id": "ont_1_movie_test_801", "triples": [{"sub": "little red riding hood", "rel": "nominated for", "obj": "academy award for best animated short film"}]}
+{"id": "ont_1_movie_test_802", "triples": [{"sub": "it's got me again!", "rel": "nominated for", "obj": "academy award for best animated short film"}]}
+{"id": "ont_1_movie_test_803", "triples": [{"sub": "spirit: stallion of the cimarron", "rel": "nominated for", "obj": "academy award for best animated feature"}]}
+{"id": "ont_1_movie_test_804", "triples": [{"sub": "i am sam", "rel": "nominated for", "obj": "academy award for best actor"}]}
+{"id": "ont_1_movie_test_805", "triples": [{"sub": "death becomes her", "rel": "award received", "obj": "academy award for best visual effects"}]}
+{"id": "ont_1_movie_test_806", "triples": [{"sub": "volver", "rel": "nominated for", "obj": "academy award for best actress"}]}
+{"id": "ont_1_movie_test_807", "triples": [{"sub": "mr hublot", "rel": "award received", "obj": "academy award for best animated short film"}]}
+{"id": "ont_1_movie_test_808", "triples": [{"sub": "my left foot", "rel": "award received", "obj": "academy award for best actor"}]}
+{"id": "ont_1_movie_test_809", "triples": [{"sub": "for scent-imental reasons", "rel": "award received", "obj": "academy award for best animated short film"}]}
+{"id": "ont_1_movie_test_811", "triples": [{"sub": "singin' in the rain", "rel": "nominated for", "obj": "academy award for best supporting actress"}]}
+{"id": "ont_1_movie_test_812", "triples": [{"sub": "the tale of the princess kaguya", "rel": "nominated for", "obj": "academy award for best animated feature"}]}
+{"id": "ont_1_movie_test_813", "triples": [{"sub": "the croods", "rel": "nominated for", "obj": "academy award for best animated feature"}]}
+{"id": "ont_1_movie_test_815", "triples": [{"sub": "the wrong trousers", "rel": "award received", "obj": "academy award for best animated short film"}]}
+{"id": "ont_1_movie_test_816", "triples": [{"sub": "chip an' dale", "rel": "nominated for", "obj": "academy award for best animated short film"}]}
+{"id": "ont_1_movie_test_818", "triples": [{"sub": "the country cousin", "rel": "nominated for", "obj": "academy award for best animated short film"}]}
+{"id": "ont_1_movie_test_819", "triples": [{"sub": "tea for two hundred", "rel": "nominated for", "obj": "academy award for best animated short film"}]}
+{"id": "ont_1_movie_test_821", "triples": [{"sub": "the quiet man", "rel": "award received", "obj": "academy award for best director"}]}
+{"id": "ont_1_movie_test_822", "triples": [{"sub": "al pacino", "rel": "nominated for", "obj": "academy award for best actor"}]}
+{"id": "ont_1_movie_test_823", "triples": [{"sub": "the dirty dozen", "rel": "award received", "obj": "academy award for best sound editing"}]}
+{"id": "ont_1_movie_test_824", "triples": [{"sub": "the unsaid", "rel": "nominated for", "obj": "academy award for best supporting actress"}]}
+{"id": "ont_1_movie_test_825", "triples": [{"sub": "no hunting", "rel": "nominated for", "obj": "academy award for best animated short film"}]}
+{"id": "ont_1_movie_test_826", "triples": [{"sub": "a man and a woman", "rel": "award received", "obj": "palme d'or"}]}
+{"id": "ont_1_movie_test_828", "triples": [{"sub": "a single man", "rel": "nominated for", "obj": "academy award for best actor"}]}
+{"id": "ont_1_movie_test_829", "triples": [{"sub": "the tale of the princess kaguya", "rel": "nominated for", "obj": "academy award for best animated feature"}]}
+{"id": "ont_1_movie_test_830", "triples": [{"sub": "the abyss", "rel": "award received", "obj": "academy award for best visual effects"}]}
+{"id": "ont_1_movie_test_831", "triples": [{"sub": "the haunted world", "rel": "nominated for", "obj": "academy award for best visual effects"}]}
+{"id": "ont_1_movie_test_832", "triples": [{"sub": "inglourious basterds", "rel": "award received", "obj": "academy award for best supporting actor"}]}
+{"id": "ont_1_movie_test_833", "triples": [{"sub": "forster", "rel": "nominated for", "obj": "academy award for best supporting actor"}]}
+{"id": "ont_1_movie_test_834", "triples": [{"sub": "a man and a woman", "rel": "award received", "obj": "academy award for best director"}]}
+{"id": "ont_1_movie_test_835", "triples": [{"sub": "min and bill", "rel": "award received", "obj": "academy award for best actress"}]}
+{"id": "ont_1_movie_test_836", "triples": [{"sub": "pirates of the caribbean: at world's end", "rel": "nominated for", "obj": "academy award for best makeup"}]}
+{"id": "ont_1_movie_test_838", "triples": [{"sub": "the tango lesson", "rel": "award received", "obj": "academy award for best original dramatic score"}]}
+{"id": "ont_1_movie_test_839", "triples": [{"sub": "a man and a woman", "rel": "nominated for", "obj": "academy award for best picture"}]}
+{"id": "ont_1_movie_test_840", "triples": [{"sub": "i spit on your corpse", "rel": "nominated for", "obj": "academy award for best picture"}]}
+{"id": "ont_1_movie_unseen_test_1", "triples": [{"sub": "your name", "rel": "director", "obj": "yutaka abe"}]}
+{"id": "ont_1_movie_unseen_test_2", "triples": [{"sub": "raja", "rel": "publication date", "obj": "30 december 1986"}]}
+{"id": "ont_1_movie_unseen_test_3", "triples": [{"sub": "slayers return", "rel": "screenwriter", "obj": "kishu izuchi"}]}
+{"id": "ont_1_movie_unseen_test_4", "triples": [{"sub": "the marnie", "rel": "screenwriter", "obj": "ram kumar"}]}
+{"id": "ont_1_movie_unseen_test_5", "triples": [{"sub": "roohi", "rel": "screenwriter", "obj": "gauri shinde"}]}
+{"id": "ont_1_movie_unseen_test_6", "triples": [{"sub": "jhamela", "rel": "screenwriter", "obj": "hardik mehta"}]}
+{"id": "ont_1_movie_unseen_test_7", "triples": [{"sub": "kahaani", "rel": "based on", "obj": "memento mori"}]}
+{"id": "ont_1_movie_unseen_test_8", "triples": [{"sub": "the ghajini", "rel": "director", "obj": "yuki iwata"}]}
+{"id": "ont_1_movie_unseen_test_9", "triples": [{"sub": "raincoat from the gift of magi", "rel": "cast member", "obj": "priyanka chopra"}]}
+{"id": "ont_1_movie_unseen_test_10", "triples": [{"sub": "hulchul", "rel": "screenwriter", "obj": "satish kaushik"}]}
+{"id": "ont_1_movie_unseen_test_11", "triples": [{"sub": "nitesh tiwari", "rel": "award received", "obj": "national film awards"}]}
+{"id": "ont_1_movie_unseen_test_12", "triples": [{"sub": "run baby run", "rel": "award received", "obj": "world soundtrack award for best best movie soundtracks"}]}
+{"id": "ont_1_movie_unseen_test_13", "triples": [{"sub": "ek thi daayan", "rel": "country of origin", "obj": "austria"}]}
+{"id": "ont_1_movie_unseen_test_14", "triples": [{"sub": "james pandu", "rel": "production company", "obj": "annapurna studios"}]}
+{"id": "ont_1_movie_unseen_test_15", "triples": [{"sub": "khel khel mein", "rel": "genre", "obj": "thriller"}]}
+{"id": "ont_1_movie_unseen_test_16", "triples": [{"sub": "evil dead rise", "rel": "country of origin", "obj": "japan"}]}
+{"id": "ont_1_movie_unseen_test_17", "triples": [{"sub": "gol maal", "rel": "publication date", "obj": "01 january 2001"}]}
+{"id": "ont_1_movie_unseen_test_18", "triples": [{"sub": "the home movie", "rel": "country of origin", "obj": "india"}]}
+{"id": "ont_1_movie_unseen_test_19", "triples": [{"sub": "mela hindi movie", "rel": "cast member", "obj": "ranbir kappor"}]}
+{"id": "ont_1_movie_unseen_test_20", "triples": [{"sub": "the haunted world", "rel": "characters", "obj": "mickey mouse"}]}
+{"id": "ont_1_movie_unseen_test_21", "triples": [{"sub": "nagina", "rel": "narrative location", "obj": "himachal pradesh"}]}
+{"id": "ont_1_movie_unseen_test_22", "triples": [{"sub": "thappu thapa", "rel": "country of origin", "obj": "india"}]}
+{"id": "ont_1_movie_unseen_test_23", "triples": [{"sub": "pyar kiya toh darna kya", "rel": "country of origin", "obj": "canada"}]}
+{"id": "ont_1_movie_unseen_test_24", "triples": [{"sub": "hate", "rel": "narrative location", "obj": "agra"}]}
+{"id": "ont_1_movie_unseen_test_25", "triples": [{"sub": "school education", "rel": "main subject", "obj": "school"}]}
+{"id": "ont_1_movie_unseen_test_26", "triples": [{"sub": "hindi medium", "rel": "filming location", "obj": "delhi"}]}

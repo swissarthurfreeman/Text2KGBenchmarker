@@ -318,7 +318,7 @@ if __name__ ==  "__main__":
     
     for llm_response_folder_path in llm_response_folders: 
 
-        llm_response_folder_path = "Babelscape.rebel-large-12-beams-entail-t=0.8"
+        llm_response_folder_path = "rebel-fine-tuned-per-ontology-30-dec-checkpoints"
         #if "rel-in-ontology" not in llm_response_folder_path: continue
 
         print("Compute metrics for", llm_response_folder_path)

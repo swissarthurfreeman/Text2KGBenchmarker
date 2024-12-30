@@ -1,0 +1,240 @@
+{"id": "ont_6_computer_test_1", "triples": [{"sub": "high performance file system", "rel": "creator", "obj": "gordon letwin"}]}
+{"id": "ont_6_computer_test_2", "triples": [{"sub": "disk operating system", "rel": "developer", "obj": "amstrad"}]}
+{"id": "ont_6_computer_test_3", "triples": [{"sub": "windows movie maker", "rel": "developer", "obj": "microsoft"}]}
+{"id": "ont_6_computer_test_4", "triples": [{"sub": "ground control: dark conspiracy", "rel": "developer", "obj": "high voltage software"}]}
+{"id": "ont_6_computer_test_5", "triples": [{"sub": "neverwinter nights 2: mask of the betrayer", "rel": "developer", "obj": "obsidian entertainment"}]}
+{"id": "ont_6_computer_test_6", "triples": [{"sub": "battle realms: winter of the wolf", "rel": "developer", "obj": "liquid entertainment"}]}
+{"id": "ont_6_computer_test_7", "triples": [{"sub": "final cut pro", "rel": "developer", "obj": "apple inc."}]}
+{"id": "ont_6_computer_test_8", "triples": [{"sub": "world in conflict: soviet assault", "rel": "developer", "obj": "swordfish studios"}]}
+{"id": "ont_6_computer_test_9", "triples": [{"sub": "vme", "rel": "developer", "obj": "international computers limited"}]}
+{"id": "ont_6_computer_test_10", "triples": [{"sub": "guild wars 2: heart of thorns", "rel": "developer", "obj": "arenanet"}]}
+{"id": "ont_6_computer_test_11", "triples": [{"sub": "amigaos 3.1", "rel": "developer", "obj": "hyperion entertainment"}]}
+{"id": "ont_6_computer_test_12", "triples": []}
+{"id": "ont_6_computer_test_13", "triples": [{"sub": "pc-mos/386", "rel": "developer", "obj": "the software link"}]}
+{"id": "ont_6_computer_test_14", "triples": [{"sub": "netscape navigator", "rel": "developer", "obj": "aol"}]}
+{"id": "ont_6_computer_test_15", "triples": [{"sub": "the conquerors", "rel": "developer", "obj": "microsoft game studios"}]}
+{"id": "ont_6_computer_test_16", "triples": [{"sub": "dnix", "rel": "developer", "obj": "dataindustrier ab"}]}
+{"id": "ont_6_computer_test_17", "triples": [{"sub": "rsx-11", "rel": "developer", "obj": "digital equipment corporation"}]}
+{"id": "ont_6_computer_test_18", "triples": [{"sub": "advfs", "rel": "developer", "obj": "digital equipment corporation"}]}
+{"id": "ont_6_computer_test_19", "triples": [{"sub": "guild wars: eye of the north", "rel": "developer", "obj": "arenanet"}]}
+{"id": "ont_6_computer_test_20", "triples": [{"sub": "vrx", "rel": "developer", "obj": "ncr corporation"}]}
+{"id": "ont_6_computer_test_21", "triples": [{"sub": "ntfs", "rel": "developer", "obj": "microsoft"}]}
+{"id": "ont_6_computer_test_22", "triples": [{"sub": "cp/cms", "rel": "developer", "obj": "ibm"}]}
+{"id": "ont_6_computer_test_23", "triples": [{"sub": "the book of unwritten tales: the critter chronicles", "rel": "developer", "obj": "king art games"}]}
+{"id": "ont_6_computer_test_24", "triples": [{"sub": "steam", "rel": "developer", "obj": "electronic arts"}]}
+{"id": "ont_6_computer_test_25", "triples": [{"sub": "tops-20", "rel": "developer", "obj": "digital equipment corporation"}]}
+{"id": "ont_6_computer_test_26", "triples": [{"sub": "os/8", "rel": "developer", "obj": "digital equipment corporation"}]}
+{"id": "ont_6_computer_test_27", "triples": [{"sub": "halo 3: odst", "rel": "developer", "obj": "bungie"}]}
+{"id": "ont_6_computer_test_28", "triples": [{"sub": "lego digital designer", "rel": "developer", "obj": "lego group"}]}
+{"id": "ont_6_computer_test_29", "triples": []}
+{"id": "ont_6_computer_test_30", "triples": [{"sub": "netware", "rel": "platform", "obj": "motorola 68000"}]}
+{"id": "ont_6_computer_test_31", "triples": [{"sub": "cobalt qube", "rel": "developer", "obj": "sun microsystems"}]}
+{"id": "ont_6_computer_test_32", "triples": [{"sub": "warcraft iii: the frozen throne", "rel": "developer", "obj": "blizzard entertainment"}]}
+{"id": "ont_6_computer_test_33", "triples": [{"sub": "tom clancy's ghost recon: desert siege", "rel": "developer", "obj": "red storm entertainment"}]}
+{"id": "ont_6_computer_test_34", "triples": [{"sub": "icewind dale: heart of winter", "rel": "developer", "obj": "black isle studios"}]}
+{"id": "ont_6_computer_test_35", "triples": [{"sub": "baldur 's gate: tales of the sword coast", "rel": "developer", "obj": "bioware"}]}
+{"id": "ont_6_computer_test_36", "triples": [{"sub": "mass effect 2: overlord", "rel": "developer", "obj": "bioware"}]}
+{"id": "ont_6_computer_test_37", "triples": [{"sub": "cxfs", "rel": "developer", "obj": "silicon graphics"}]}
+{"id": "ont_6_computer_test_38", "triples": [{"sub": "canape", "rel": "developer", "obj": "vector informatik"}]}
+{"id": "ont_6_computer_test_39", "triples": [{"sub": "windows 95", "rel": "developer", "obj": "microsoft"}]}
+{"id": "ont_6_computer_test_40", "triples": [{"sub": "acos-4", "rel": "developer", "obj": "nec"}]}
+{"id": "ont_6_computer_test_41", "triples": [{"sub": "activeperl", "rel": "developer", "obj": "activestate"}]}
+{"id": "ont_6_computer_test_42", "triples": [{"sub": "diablo iii", "rel": "developer", "obj": "techland"}]}
+{"id": "ont_6_computer_test_43", "triples": [{"sub": "86-dos", "rel": "developer", "obj": "seattle computer products"}]}
+{"id": "ont_6_computer_test_44", "triples": [{"sub": "the sims 2: seasons", "rel": "developer", "obj": "maxis"}]}
+{"id": "ont_6_computer_test_45", "triples": [{"sub": "vegas pro", "rel": "developer", "obj": "magix"}]}
+{"id": "ont_6_computer_test_46", "triples": [{"sub": "extraction point", "rel": "developer", "obj": "timegate studios"}]}
+{"id": "ont_6_computer_test_47", "triples": [{"sub": "monecs", "rel": "developer", "obj": "monash university"}]}
+{"id": "ont_6_computer_test_48", "triples": [{"sub": "diablo ii", "rel": "developer", "obj": "blizzard north"}]}
+{"id": "ont_6_computer_test_49", "triples": [{"sub": "starcraft: brood war", "rel": "platform", "obj": "microsoft windows"}]}
+{"id": "ont_6_computer_test_50", "triples": [{"sub": "pdp-8 disk monitor", "rel": "developer", "obj": "digital equipment corporation"}]}
+{"id": "ont_6_computer_test_51", "triples": [{"sub": "rt-11", "rel": "developer", "obj": "digital equipment corporation"}]}
+{"id": "ont_6_computer_test_52", "triples": [{"sub": "os-9", "rel": "developer", "obj": "microware lp"}]}
+{"id": "ont_6_computer_test_53", "triples": [{"sub": "the elder scrolls iii: bloodmoon", "rel": "developer", "obj": "bethesda game studios"}]}
+{"id": "ont_6_computer_test_54", "triples": [{"sub": "opera mobile", "rel": "developer", "obj": "opera software"}]}
+{"id": "ont_6_computer_test_55", "triples": [{"sub": "doom 3: resurrection of evil", "rel": "developer", "obj": "nerve software"}]}
+{"id": "ont_6_computer_test_56", "triples": []}
+{"id": "ont_6_computer_test_57", "triples": [{"sub": "wavelab", "rel": "creator", "obj": "steinberg"}]}
+{"id": "ont_6_computer_test_58", "triples": [{"sub": "blackmagic fusion", "rel": "developer", "obj": "blackmagic design"}]}
+{"id": "ont_6_computer_test_59", "triples": [{"sub": "rsts", "rel": "developer", "obj": "digital equipment corporation"}]}
+{"id": "ont_6_computer_test_60", "triples": [{"sub": "heroes of might and magic iii: the shadow of death", "rel": "developer", "obj": "new world computing"}]}
+{"id": "ont_6_computer_test_61", "triples": [{"sub": "spidermonkey", "rel": "creator", "obj": "brendan eich"}]}
+{"id": "ont_6_computer_test_62", "triples": [{"sub": "exscientologykids.com", "rel": "creator", "obj": "kendra wiseman"}]}
+{"id": "ont_6_computer_test_63", "triples": [{"sub": "interactive encyclopedia system", "rel": "creator", "obj": "ben shneiderman"}]}
+{"id": "ont_6_computer_test_64", "triples": [{"sub": "enquire", "rel": "creator", "obj": "tim berners-lee"}]}
+{"id": "ont_6_computer_test_65", "triples": []}
+{"id": "ont_6_computer_test_66", "triples": [{"sub": "the pirate bay", "rel": "creator", "obj": "fredrik neij"}]}
+{"id": "ont_6_computer_test_67", "triples": [{"sub": "nvu", "rel": "creator", "obj": "daniel glazman"}]}
+{"id": "ont_6_computer_test_68", "triples": []}
+{"id": "ont_6_computer_test_69", "triples": [{"sub": "ethereum", "rel": "creator", "obj": "vitalik buterin"}]}
+{"id": "ont_6_computer_test_70", "triples": [{"sub": "nationstates", "rel": "creator", "obj": "max barry"}]}
+{"id": "ont_6_computer_test_71", "triples": [{"sub": "olney hymns", "rel": "creator", "obj": "john newton"}]}
+{"id": "ont_6_computer_test_72", "triples": [{"sub": "vdr", "rel": "creator", "obj": "klaus-peter schmidinger"}]}
+{"id": "ont_6_computer_test_73", "triples": [{"sub": "hypertext editing system", "rel": "creator", "obj": "andries van dam"}]}
+{"id": "ont_6_computer_test_74", "triples": [{"sub": "charles kuralt", "rel": "creator", "obj": "robert northshield"}]}
+{"id": "ont_6_computer_test_75", "triples": [{"sub": "cleverbot", "rel": "creator", "obj": "rollo carpenter"}]}
+{"id": "ont_6_computer_test_76", "triples": [{"sub": "twitter", "rel": "creator", "obj": "evan williams"}]}
+{"id": "ont_6_computer_test_77", "triples": [{"sub": "arment", "rel": "creator", "obj": "marco arment"}]}
+{"id": "ont_6_computer_test_78", "triples": [{"sub": "iikiwiki", "rel": "creator", "obj": "joey hess"}]}
+{"id": "ont_6_computer_test_79", "triples": [{"sub": "zend engine", "rel": "creator", "obj": "andi gutmans"}]}
+{"id": "ont_6_computer_test_80", "triples": []}
+{"id": "ont_6_computer_test_81", "triples": [{"sub": "iruresa", "rel": "creator", "obj": "lasantha wickrematunge"}]}
+{"id": "ont_6_computer_test_82", "triples": [{"sub": "dilbert", "rel": "creator", "obj": "scott adams"}]}
+{"id": "ont_6_computer_test_83", "triples": [{"sub": "vic and sade", "rel": "creator", "obj": "paul rhymer"}]}
+{"id": "ont_6_computer_test_84", "triples": [{"sub": "d'agapeyeff cipher", "rel": "creator", "obj": "alexander d'agapeyeff"}]}
+{"id": "ont_6_computer_test_86", "triples": [{"sub": "everyday elegance", "rel": "creator", "obj": "colin cowie"}]}
+{"id": "ont_6_computer_test_87", "triples": [{"sub": "newsbeuter", "rel": "creator", "obj": "andreas krennmair"}]}
+{"id": "ont_6_computer_test_88", "triples": [{"sub": "megaupload", "rel": "creator", "obj": "kim dotcom"}]}
+{"id": "ont_6_computer_test_89", "triples": [{"sub": "meduza", "rel": "creator", "obj": "galina timchenko"}]}
+{"id": "ont_6_computer_test_90", "triples": [{"sub": "kiwix", "rel": "creator", "obj": "renaud gaudin"}]}
+{"id": "ont_6_computer_test_91", "triples": [{"sub": "liquid news", "rel": "creator", "obj": "stuart murphy"}]}
+{"id": "ont_6_computer_test_92", "triples": [{"sub": "colbert report", "rel": "creator", "obj": "jon stewart"}]}
+{"id": "ont_6_computer_test_93", "triples": [{"sub": "thayer", "rel": "creator", "obj": "william p. thayer"}]}
+{"id": "ont_6_computer_test_94", "triples": [{"sub": "wikiwikiweb", "rel": "creator", "obj": "ward cunningham"}]}
+{"id": "ont_6_computer_test_95", "triples": [{"sub": "cenk uygur", "rel": "creator", "obj": "ben mankiewicz"}]}
+{"id": "ont_6_computer_test_96", "triples": [{"sub": "tarsnap", "rel": "creator", "obj": "colin percival"}]}
+{"id": "ont_6_computer_test_98", "triples": []}
+{"id": "ont_6_computer_test_99", "triples": [{"sub": "pippi longstocking", "rel": "creator", "obj": "martine neddam"}]}
+{"id": "ont_6_computer_test_100", "triples": [{"sub": "wikipedia", "rel": "creator", "obj": "jimmy wales"}]}
+{"id": "ont_6_computer_test_101", "triples": [{"sub": "applesoft basic", "rel": "platform", "obj": "apple ii"}]}
+{"id": "ont_6_computer_test_102", "triples": [{"sub": "teenage mutant ninja turtles", "rel": "creator", "obj": "kevin eastman"}]}
+{"id": "ont_6_computer_test_103", "triples": [{"sub": "pgp", "rel": "creator", "obj": "phil zimmermann"}]}
+{"id": "ont_6_computer_test_104", "triples": [{"sub": "re:gex", "rel": "creator", "obj": "rob liefeld"}]}
+{"id": "ont_6_computer_test_105", "triples": [{"sub": "the million dollar homepage", "rel": "creator", "obj": "alex tew"}]}
+{"id": "ont_6_computer_test_106", "triples": [{"sub": "60 minutes", "rel": "creator", "obj": "don hewitt"}]}
+{"id": "ont_6_computer_test_107", "triples": [{"sub": "project xanadu", "rel": "creator", "obj": "ted nelson"}]}
+{"id": "ont_6_computer_test_109", "triples": [{"sub": "listen to wikipedia", "rel": "creator", "obj": "mahmoud hashemi"}]}
+{"id": "ont_6_computer_test_110", "triples": [{"sub": "eds", "rel": "creator", "obj": "sandor nagy"}]}
+{"id": "ont_6_computer_test_111", "triples": [{"sub": "caverns of mars", "rel": "platform", "obj": "atari 8-bit family"}]}
+{"id": "ont_6_computer_test_112", "triples": [{"sub": "mighty bomb jack", "rel": "platform", "obj": "commodore 64"}]}
+{"id": "ont_6_computer_test_113", "triples": []}
+{"id": "ont_6_computer_test_114", "triples": [{"sub": "gm-naa", "rel": "platform", "obj": "ibm 704"}]}
+{"id": "ont_6_computer_test_115", "triples": [{"sub": "zynaps", "rel": "platform", "obj": "commodore 64"}]}
+{"id": "ont_6_computer_test_116", "triples": [{"sub": "share operating system", "rel": "platform", "obj": "ibm 709"}]}
+{"id": "ont_6_computer_test_117", "triples": [{"sub": "red hat enterprise linux", "rel": "platform", "obj": "x86-64"}]}
+{"id": "ont_6_computer_test_118", "triples": [{"sub": "blasteroids", "rel": "platform", "obj": "amstrad cpc"}]}
+{"id": "ont_6_computer_test_119", "triples": []}
+{"id": "ont_6_computer_test_120", "triples": [{"sub": "archon", "rel": "platform", "obj": "commodore 64"}]}
+{"id": "ont_6_computer_test_121", "triples": [{"sub": "gs/os", "rel": "platform", "obj": "apple iigs"}]}
+{"id": "ont_6_computer_test_122", "triples": [{"sub": "xevious", "rel": "platform", "obj": "namco galaga"}]}
+{"id": "ont_6_computer_test_123", "triples": [{"sub": "james pond: underwater agent", "rel": "platform", "obj": "acorn archimedes"}]}
+{"id": "ont_6_computer_test_124", "triples": [{"sub": "the lost treasures of infocom", "rel": "platform", "obj": "apple iigs"}]}
+{"id": "ont_6_computer_test_125", "triples": [{"sub": "battle chess", "rel": "platform", "obj": "commodore 64"}]}
+{"id": "ont_6_computer_test_126", "triples": [{"sub": "10th frame", "rel": "platform", "obj": "commodore 64"}]}
+{"id": "ont_6_computer_test_127", "triples": [{"sub": "berkeley timesharing system", "rel": "platform", "obj": "sds 940"}]}
+{"id": "ont_6_computer_test_128", "triples": []}
+{"id": "ont_6_computer_test_129", "triples": [{"sub": "rescue on fractalus!", "rel": "platform", "obj": "commodore 64"}]}
+{"id": "ont_6_computer_test_130", "triples": [{"sub": "deathmatch", "rel": "platform", "obj": "atari st"}]}
+{"id": "ont_6_computer_test_131", "triples": [{"sub": "yie ar kung-fu ii", "rel": "platform", "obj": "msx"}]}
+{"id": "ont_6_computer_test_132", "triples": [{"sub": "ducktales: the quest for gold", "rel": "platform", "obj": "commodore 64"}]}
+{"id": "ont_6_computer_test_133", "triples": [{"sub": "besys", "rel": "developer", "obj": "bell labs"}]}
+{"id": "ont_6_computer_test_134", "triples": [{"sub": "hdos", "rel": "platform", "obj": "heathkit h8"}]}
+{"id": "ont_6_computer_test_136", "triples": [{"sub": "elan", "rel": "platform", "obj": "commodore 64"}]}
+{"id": "ont_6_computer_test_137", "triples": [{"sub": "the activision decathlon", "rel": "platform", "obj": "msx"}]}
+{"id": "ont_6_computer_test_138", "triples": [{"sub": "wargame construction set", "rel": "platform", "obj": "atari 8-bit family"}]}
+{"id": "ont_6_computer_test_139", "triples": [{"sub": "oric atmos", "rel": "platform", "obj": "commodore vic-20"}]}
+{"id": "ont_6_computer_test_141", "triples": []}
+{"id": "ont_6_computer_test_142", "triples": []}
+{"id": "ont_6_computer_test_144", "triples": [{"sub": "umes", "rel": "platform", "obj": "general motors executive system"}]}
+{"id": "ont_6_computer_test_145", "triples": [{"sub": "impossible mission", "rel": "platform", "obj": "commodore 64"}]}
+{"id": "ont_6_computer_test_146", "triples": [{"sub": "nltss", "rel": "platform", "obj": "cray y-mp"}]}
+{"id": "ont_6_computer_test_147", "triples": [{"sub": "towers ii: plight of the stargazer", "rel": "platform", "obj": "atari falcon"}]}
+{"id": "ont_6_computer_test_148", "triples": []}
+{"id": "ont_6_computer_test_149", "triples": [{"sub": "transarctica", "rel": "platform", "obj": "atari falcon"}]}
+{"id": "ont_6_computer_test_150", "triples": [{"sub": "army moves", "rel": "platform", "obj": "msx"}]}
+{"id": "ont_6_computer_test_151", "triples": [{"sub": "wings of fury", "rel": "platform", "obj": "commodore 64"}]}
+{"id": "ont_6_computer_test_152", "triples": []}
+{"id": "ont_6_computer_test_153", "triples": [{"sub": "007: licence to kill", "rel": "platform", "obj": "amstrad cpc"}]}
+{"id": "ont_6_computer_test_154", "triples": []}
+{"id": "ont_6_computer_test_155", "triples": []}
+{"id": "ont_6_computer_test_156", "triples": [{"sub": "super mario bros.", "rel": "platform", "obj": "commodore pet"}]}
+{"id": "ont_6_computer_test_157", "triples": [{"sub": "to preserve quandic", "rel": "platform", "obj": "trs-80 color computer"}]}
+{"id": "ont_6_computer_test_158", "triples": [{"sub": "halls of the things", "rel": "platform", "obj": "amstrad cpc"}]}
+{"id": "ont_6_computer_test_159", "triples": []}
+{"id": "ont_6_computer_test_160", "triples": [{"sub": "commodore max", "rel": "platform", "obj": "commodore 64"}]}
+{"id": "ont_6_computer_test_161", "triples": [{"sub": "dnd", "rel": "platform", "obj": "atari 800"}]}
+{"id": "ont_6_computer_test_162", "triples": [{"sub": "don dennis", "rel": "platform", "obj": "commodore pet"}]}
+{"id": "ont_6_computer_test_164", "triples": [{"sub": "delta 16", "rel": "platform", "obj": "commodore 64"}]}
+{"id": "ont_6_computer_test_165", "triples": [{"sub": "68k/os", "rel": "developer", "obj": "gst computer systems"}]}
+{"id": "ont_6_computer_test_166", "triples": [{"sub": "19 part one: boot camp", "rel": "platform", "obj": "commodore 64"}]}
+{"id": "ont_6_computer_test_167", "triples": [{"sub": "underwurlde", "rel": "platform", "obj": "commodore 64"}]}
+{"id": "ont_6_computer_test_168", "triples": [{"sub": "commando libya", "rel": "platform", "obj": "commodore 64"}]}
+{"id": "ont_6_computer_test_170", "triples": [{"sub": "amsdos", "rel": "platform", "obj": "amstrad cpc"}]}
+{"id": "ont_6_computer_test_171", "triples": [{"sub": "google pixelbook", "rel": "operating system", "obj": "chrome os"}]}
+{"id": "ont_6_computer_test_172", "triples": [{"sub": "banana pi", "rel": "developer", "obj": "allwinner"}]}
+{"id": "ont_6_computer_test_173", "triples": []}
+{"id": "ont_6_computer_test_174", "triples": [{"sub": "google drive", "rel": "operating system", "obj": "macos"}]}
+{"id": "ont_6_computer_test_175", "triples": [{"sub": "icloud", "rel": "operating system", "obj": "ios"}]}
+{"id": "ont_6_computer_test_176", "triples": [{"sub": "opteron", "rel": "developer", "obj": "amd"}]}
+{"id": "ont_6_computer_test_177", "triples": [{"sub": "fortnite battle royale", "rel": "developer", "obj": "epic games"}]}
+{"id": "ont_6_computer_test_178", "triples": [{"sub": "iw engine", "rel": "developer", "obj": "infinity ward"}]}
+{"id": "ont_6_computer_test_179", "triples": []}
+{"id": "ont_6_computer_test_180", "triples": [{"sub": "ghostscript", "rel": "developer", "obj": "adobe systems"}]}
+{"id": "ont_6_computer_test_181", "triples": []}
+{"id": "ont_6_computer_test_182", "triples": []}
+{"id": "ont_6_computer_test_183", "triples": []}
+{"id": "ont_6_computer_test_184", "triples": []}
+{"id": "ont_6_computer_test_185", "triples": []}
+{"id": "ont_6_computer_test_186", "triples": []}
+{"id": "ont_6_computer_test_187", "triples": []}
+{"id": "ont_6_computer_test_188", "triples": []}
+{"id": "ont_6_computer_test_189", "triples": []}
+{"id": "ont_6_computer_test_190", "triples": []}
+{"id": "ont_6_computer_test_191", "triples": []}
+{"id": "ont_6_computer_test_192", "triples": []}
+{"id": "ont_6_computer_test_193", "triples": []}
+{"id": "ont_6_computer_test_194", "triples": []}
+{"id": "ont_6_computer_test_195", "triples": []}
+{"id": "ont_6_computer_test_196", "triples": []}
+{"id": "ont_6_computer_test_197", "triples": [{"sub": "cosmic fantasy 2: bouken shounen ban (2)", "rel": "platform", "obj": "turbografx-cd"}]}
+{"id": "ont_6_computer_test_198", "triples": [{"sub": "greatest 18 holes of major championship golf", "rel": "platform", "obj": "turbografx-16"}]}
+{"id": "ont_6_computer_test_199", "triples": []}
+{"id": "ont_6_computer_test_200", "triples": []}
+{"id": "ont_6_computer_test_201", "triples": []}
+{"id": "ont_6_computer_test_202", "triples": []}
+{"id": "ont_6_computer_test_203", "triples": []}
+{"id": "ont_6_computer_test_204", "triples": []}
+{"id": "ont_6_computer_test_205", "triples": []}
+{"id": "ont_6_computer_test_207", "triples": [{"sub": "mad dog mccree", "rel": "developer", "obj": "american laser games"}]}
+{"id": "ont_6_computer_test_208", "triples": []}
+{"id": "ont_6_computer_test_209", "triples": []}
+{"id": "ont_6_computer_test_210", "triples": [{"sub": "jchempaint", "rel": "creator", "obj": "christoph steinbeck"}]}
+{"id": "ont_6_computer_test_211", "triples": [{"sub": "steem", "rel": "creator", "obj": "ned scott"}]}
+{"id": "ont_6_computer_test_212", "triples": []}
+{"id": "ont_6_computer_test_213", "triples": []}
+{"id": "ont_6_computer_test_214", "triples": []}
+{"id": "ont_6_computer_test_215", "triples": []}
+{"id": "ont_6_computer_test_216", "triples": []}
+{"id": "ont_6_computer_test_217", "triples": []}
+{"id": "ont_6_computer_test_218", "triples": []}
+{"id": "ont_6_computer_test_219", "triples": []}
+{"id": "ont_6_computer_test_220", "triples": []}
+{"id": "ont_6_computer_test_221", "triples": []}
+{"id": "ont_6_computer_test_222", "triples": []}
+{"id": "ont_6_computer_test_223", "triples": [{"sub": "thompson shell", "rel": "creator", "obj": "ken thompson"}]}
+{"id": "ont_6_computer_test_224", "triples": [{"sub": "tamagotchi", "rel": "creator", "obj": "aki maita"}]}
+{"id": "ont_6_computer_test_225", "triples": [{"sub": "radiogat\u00fan", "rel": "creator", "obj": "joan daemen"}]}
+{"id": "ont_6_computer_test_226", "triples": [{"sub": "sha-1", "rel": "developer", "obj": "national security agency"}]}
+{"id": "ont_6_computer_test_227", "triples": []}
+{"id": "ont_6_computer_test_228", "triples": []}
+{"id": "ont_6_computer_test_230", "triples": []}
+{"id": "ont_6_computer_unseen_test_1", "triples": [{"sub": "internet channel", "rel": "developer", "obj": "the software link"}]}
+{"id": "ont_6_computer_unseen_test_2", "triples": [{"sub": "pc-mos", "rel": "developer", "obj": "aol"}]}
+{"id": "ont_6_computer_unseen_test_3", "triples": [{"sub": "enquire", "rel": "creator", "obj": "floyd brown"}]}
+{"id": "ont_6_computer_unseen_test_4", "triples": [{"sub": "meet the press", "rel": "creator", "obj": "vitalik buterin"}]}
+{"id": "ont_6_computer_unseen_test_5", "triples": [{"sub": "caverns of mars", "rel": "platform", "obj": "commodore 64"}]}
+{"id": "ont_6_computer_unseen_test_6", "triples": [{"sub": "mighty bomb jack", "rel": "platform", "obj": "atari 8-bit family"}]}
+{"id": "ont_6_computer_unseen_test_7", "triples": [{"sub": "banana pi", "rel": "operating system", "obj": "irix"}]}
+{"id": "ont_6_computer_unseen_test_8", "triples": [{"sub": "sgi tezro", "rel": "operating system", "obj": "linux"}]}
+{"id": "ont_6_computer_unseen_test_9", "triples": [{"sub": "ghostscript", "rel": "developer", "obj": "openindiana"}]}
+{"id": "ont_6_computer_unseen_test_10", "triples": [{"sub": "ghostscript", "rel": "operating system", "obj": "opensolaris"}]}
+{"id": "ont_6_computer_unseen_test_11", "triples": []}
+{"id": "ont_6_computer_unseen_test_12", "triples": []}
+{"id": "ont_6_computer_unseen_test_13", "triples": []}
+{"id": "ont_6_computer_unseen_test_14", "triples": []}
+{"id": "ont_6_computer_unseen_test_15", "triples": []}
+{"id": "ont_6_computer_unseen_test_16", "triples": [{"sub": "ibm personal computer/at", "rel": "platform", "obj": "motorola 68030"}]}
+{"id": "ont_6_computer_unseen_test_17", "triples": [{"sub": "awk", "rel": "creator", "obj": "ken thompson"}]}
+{"id": "ont_6_computer_unseen_test_18", "triples": []}
+{"id": "ont_6_computer_unseen_test_19", "triples": [{"sub": "tamagotchi", "rel": "creator", "obj": "gilles van assche"}]}
+{"id": "ont_6_computer_unseen_test_20", "triples": [{"sub": "radiogat\u00fan", "rel": "creator", "obj": "aki maita"}]}

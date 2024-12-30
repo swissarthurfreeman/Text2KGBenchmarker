@@ -1,0 +1,215 @@
+{"id": "ont_8_politics_test_1", "triples": [{"sub": "egypt", "rel": "head of state", "obj": "abdel fattah el-sisi"}]}
+{"id": "ont_8_politics_test_2", "triples": [{"sub": "the gambia", "rel": "head of government", "obj": "adama barrow"}]}
+{"id": "ont_8_politics_test_3", "triples": []}
+{"id": "ont_8_politics_test_4", "triples": [{"sub": "cameroon", "rel": "head of state", "obj": "paul biya"}]}
+{"id": "ont_8_politics_test_5", "triples": [{"sub": "zimbabwe", "rel": "head of government", "obj": "emmerson mnangagwa"}]}
+{"id": "ont_8_politics_test_6", "triples": []}
+{"id": "ont_8_politics_test_7", "triples": [{"sub": "gurbanguly berdimuhamedow", "rel": "position held", "obj": "president"}]}
+{"id": "ont_8_politics_test_8", "triples": []}
+{"id": "ont_8_politics_test_9", "triples": [{"sub": "dmitry medvedev", "rel": "position held", "obj": "president of russia"}]}
+{"id": "ont_8_politics_test_10", "triples": [{"sub": "ephraim katzir", "rel": "position held", "obj": "president of israel"}]}
+{"id": "ont_8_politics_test_11", "triples": [{"sub": "kim dae-jung", "rel": "position held", "obj": "president of south korea"}]}
+{"id": "ont_8_politics_test_12", "triples": [{"sub": "guntis ulmanis", "rel": "position held", "obj": "president of latvia"}]}
+{"id": "ont_8_politics_test_13", "triples": [{"sub": "giorgio napolitano", "rel": "position held", "obj": "president of italy"}]}
+{"id": "ont_8_politics_test_14", "triples": [{"sub": "ashraf ghani", "rel": "position held", "obj": "president of afghanistan"}]}
+{"id": "ont_8_politics_test_15", "triples": [{"sub": "kwame nkrumah", "rel": "position held", "obj": "president of ghana"}]}
+{"id": "ont_8_politics_test_16", "triples": [{"sub": "sprent arumogo", "rel": "position held", "obj": "president of nauru"}]}
+{"id": "ont_8_politics_test_17", "triples": [{"sub": "idi amin", "rel": "position held", "obj": "president of uganda"}]}
+{"id": "ont_8_politics_test_18", "triples": [{"sub": "pierre nkurunziza", "rel": "position held", "obj": "president of burundi"}]}
+{"id": "ont_8_politics_test_19", "triples": [{"sub": "nursultan nazarbayev", "rel": "position held", "obj": "president of kazakhstan"}]}
+{"id": "ont_8_politics_test_20", "triples": [{"sub": "ian khama", "rel": "position held", "obj": "president of botswana"}]}
+{"id": "ont_8_politics_test_21", "triples": [{"sub": "michel suleiman", "rel": "position held", "obj": "president of lebanon"}]}
+{"id": "ont_8_politics_test_22", "triples": [{"sub": "alexander van der bellen", "rel": "position held", "obj": "president of austria"}]}
+{"id": "ont_8_politics_test_23", "triples": [{"sub": "imata kabua", "rel": "position held", "obj": "president of the marshall islands"}]}
+{"id": "ont_8_politics_test_24", "triples": [{"sub": "agostinho neto", "rel": "position held", "obj": "president of angola"}]}
+{"id": "ont_8_politics_test_25", "triples": [{"sub": "james alix michel", "rel": "position held", "obj": "president of seychelles"}]}
+{"id": "ont_8_politics_test_26", "triples": [{"sub": "goodluck jonathan", "rel": "position held", "obj": "vice president of nigeria"}]}
+{"id": "ont_8_politics_test_27", "triples": [{"sub": "suharto", "rel": "position held", "obj": "president of indonesia"}]}
+{"id": "ont_8_politics_test_28", "triples": [{"sub": "rudolf schuster", "rel": "position held", "obj": "president of slovakia"}]}
+{"id": "ont_8_politics_test_29", "triples": []}
+{"id": "ont_8_politics_test_30", "triples": []}
+{"id": "ont_8_politics_test_31", "triples": [{"sub": "leonid kravchuk", "rel": "position held", "obj": "president of ukraine"}]}
+{"id": "ont_8_politics_test_32", "triples": [{"sub": "leonel fern\u00e1ndez", "rel": "position held", "obj": "president of the dominican republic"}]}
+{"id": "ont_8_politics_test_33", "triples": []}
+{"id": "ont_8_politics_test_34", "triples": [{"sub": "omar al-bashir", "rel": "position held", "obj": "president of sudan"}]}
+{"id": "ont_8_politics_test_35", "triples": [{"sub": "guy scott", "rel": "position held", "obj": "president of zambia"}]}
+{"id": "ont_8_politics_test_36", "triples": [{"sub": "moncef marzouki", "rel": "position held", "obj": "president of tunisia"}]}
+{"id": "ont_8_politics_test_37", "triples": [{"sub": "syngman rhee", "rel": "position held", "obj": "president of south korea"}]}
+{"id": "ont_8_politics_test_38", "triples": [{"sub": "abdoulaye wade", "rel": "position held", "obj": "president of senegal"}]}
+{"id": "ont_8_politics_test_39", "triples": [{"sub": "alfred moisiu", "rel": "position held", "obj": "president of albania"}]}
+{"id": "ont_8_politics_test_40", "triples": [{"sub": "vladimir voronin", "rel": "position held", "obj": "president of the republic of moldova"}]}
+{"id": "ont_8_politics_test_41", "triples": [{"sub": "lennart meri", "rel": "position held", "obj": "president of estonia"}]}
+{"id": "ont_8_politics_test_42", "triples": [{"sub": "elias hrawi", "rel": "position held", "obj": "president of lebanon"}]}
+{"id": "ont_8_politics_test_43", "triples": [{"sub": "christopher jorebon loeak", "rel": "position held", "obj": "president of the marshall islands"}]}
+{"id": "ont_8_politics_test_44", "triples": [{"sub": "faure eyad\u00e9ma", "rel": "position held", "obj": "president of togo"}]}
+{"id": "ont_8_politics_test_45", "triples": [{"sub": "barack obama", "rel": "member of political party", "obj": "democratic party"}]}
+{"id": "ont_8_politics_test_46", "triples": [{"sub": "choummaly sayasone", "rel": "position held", "obj": "president of laos"}]}
+{"id": "ont_8_politics_test_47", "triples": [{"sub": "luis ulate", "rel": "position held", "obj": "president of costa rica"}]}
+{"id": "ont_8_politics_test_48", "triples": [{"sub": "ellen johnson sirleaf", "rel": "position held", "obj": "president of liberia"}]}
+{"id": "ont_8_politics_test_49", "triples": [{"sub": "manuel carlos prado", "rel": "position held", "obj": "president of peru"}]}
+{"id": "ont_8_politics_test_50", "triples": [{"sub": "mahmoud abbas", "rel": "position held", "obj": "president of the state of palestine"}]}
+{"id": "ont_8_politics_test_51", "triples": [{"sub": "chiang kai-shek", "rel": "position held", "obj": "president of the republic of china"}]}
+{"id": "ont_8_politics_test_52", "triples": [{"sub": "gerald ford", "rel": "position held", "obj": "vice president of the united states"}]}
+{"id": "ont_8_politics_test_53", "triples": [{"sub": "martin van buren", "rel": "member of political party", "obj": "democratic party"}]}
+{"id": "ont_8_politics_test_54", "triples": [{"sub": "george maxwell richards", "rel": "position held", "obj": "president of trinidad and tobago"}]}
+{"id": "ont_8_politics_test_55", "triples": [{"sub": "michel martelly", "rel": "position held", "obj": "president of haiti"}]}
+{"id": "ont_8_politics_test_56", "triples": [{"sub": "leone", "rel": "position held", "obj": "president of italy"}]}
+{"id": "ont_8_politics_test_57", "triples": [{"sub": "kenneth kaunda", "rel": "position held", "obj": "president of zambia"}]}
+{"id": "ont_8_politics_test_58", "triples": [{"sub": "ezer weizman", "rel": "position held", "obj": "president of israel"}]}
+{"id": "ont_8_politics_test_59", "triples": [{"sub": "hosni mubarak", "rel": "position held", "obj": "president of egypt"}]}
+{"id": "ont_8_politics_test_60", "triples": [{"sub": "kessai hesa note", "rel": "position held", "obj": "president of the marshall islands"}]}
+{"id": "ont_8_politics_test_61", "triples": [{"sub": "john kufuor", "rel": "position held", "obj": "president of ghana"}]}
+{"id": "ont_8_politics_test_62", "triples": [{"sub": "kgalema motlanthe", "rel": "position held", "obj": "deputy president of south africa"}]}
+{"id": "ont_8_politics_test_63", "triples": []}
+{"id": "ont_8_politics_test_64", "triples": [{"sub": "levy mwanawasa", "rel": "position held", "obj": "president of zambia"}]}
+{"id": "ont_8_politics_test_65", "triples": [{"sub": "li zongren", "rel": "position held", "obj": "president of the republic of china"}]}
+{"id": "ont_8_politics_test_66", "triples": [{"sub": "v\u00e1clav klaus", "rel": "position held", "obj": "president of the czech republic"}]}
+{"id": "ont_8_politics_test_67", "triples": []}
+{"id": "ont_8_politics_test_68", "triples": [{"sub": "alain berset", "rel": "position held", "obj": "president of the swiss confederation"}]}
+{"id": "ont_8_politics_test_69", "triples": []}
+{"id": "ont_8_politics_test_70", "triples": []}
+{"id": "ont_8_politics_test_71", "triples": []}
+{"id": "ont_8_politics_test_72", "triples": []}
+{"id": "ont_8_politics_test_73", "triples": []}
+{"id": "ont_8_politics_test_74", "triples": []}
+{"id": "ont_8_politics_test_75", "triples": []}
+{"id": "ont_8_politics_test_76", "triples": [{"sub": "jean-claude juncker", "rel": "position held", "obj": "president of the eurogroup"}]}
+{"id": "ont_8_politics_test_77", "triples": [{"sub": "thomas bach", "rel": "position held", "obj": "president of the international olympic committee"}]}
+{"id": "ont_8_politics_test_78", "triples": []}
+{"id": "ont_8_politics_test_79", "triples": []}
+{"id": "ont_8_politics_test_80", "triples": []}
+{"id": "ont_8_politics_test_81", "triples": []}
+{"id": "ont_8_politics_test_82", "triples": []}
+{"id": "ont_8_politics_test_83", "triples": []}
+{"id": "ont_8_politics_test_84", "triples": []}
+{"id": "ont_8_politics_test_85", "triples": []}
+{"id": "ont_8_politics_test_86", "triples": []}
+{"id": "ont_8_politics_test_87", "triples": []}
+{"id": "ont_8_politics_test_88", "triples": []}
+{"id": "ont_8_politics_test_89", "triples": []}
+{"id": "ont_8_politics_test_90", "triples": []}
+{"id": "ont_8_politics_test_91", "triples": []}
+{"id": "ont_8_politics_test_92", "triples": []}
+{"id": "ont_8_politics_test_93", "triples": []}
+{"id": "ont_8_politics_test_94", "triples": []}
+{"id": "ont_8_politics_test_95", "triples": []}
+{"id": "ont_8_politics_test_96", "triples": []}
+{"id": "ont_8_politics_test_97", "triples": []}
+{"id": "ont_8_politics_test_98", "triples": []}
+{"id": "ont_8_politics_test_99", "triples": []}
+{"id": "ont_8_politics_test_100", "triples": []}
+{"id": "ont_8_politics_test_101", "triples": []}
+{"id": "ont_8_politics_test_102", "triples": []}
+{"id": "ont_8_politics_test_103", "triples": []}
+{"id": "ont_8_politics_test_104", "triples": []}
+{"id": "ont_8_politics_test_105", "triples": []}
+{"id": "ont_8_politics_test_106", "triples": []}
+{"id": "ont_8_politics_test_107", "triples": []}
+{"id": "ont_8_politics_test_108", "triples": []}
+{"id": "ont_8_politics_test_109", "triples": []}
+{"id": "ont_8_politics_test_110", "triples": []}
+{"id": "ont_8_politics_test_111", "triples": []}
+{"id": "ont_8_politics_test_112", "triples": []}
+{"id": "ont_8_politics_test_113", "triples": []}
+{"id": "ont_8_politics_test_114", "triples": []}
+{"id": "ont_8_politics_test_115", "triples": []}
+{"id": "ont_8_politics_test_116", "triples": []}
+{"id": "ont_8_politics_test_117", "triples": []}
+{"id": "ont_8_politics_test_118", "triples": []}
+{"id": "ont_8_politics_test_119", "triples": []}
+{"id": "ont_8_politics_test_120", "triples": []}
+{"id": "ont_8_politics_test_121", "triples": []}
+{"id": "ont_8_politics_test_122", "triples": []}
+{"id": "ont_8_politics_test_123", "triples": []}
+{"id": "ont_8_politics_test_124", "triples": []}
+{"id": "ont_8_politics_test_125", "triples": []}
+{"id": "ont_8_politics_test_126", "triples": []}
+{"id": "ont_8_politics_test_127", "triples": []}
+{"id": "ont_8_politics_test_128", "triples": []}
+{"id": "ont_8_politics_test_129", "triples": [{"sub": "xenophon", "rel": "political ideology", "obj": "populism"}]}
+{"id": "ont_8_politics_test_130", "triples": [{"sub": "kaarina krohn", "rel": "member of political party", "obj": "green league"}]}
+{"id": "ont_8_politics_test_131", "triples": [{"sub": "peter seipenbusch", "rel": "member of political party", "obj": "pirate party germany"}]}
+{"id": "ont_8_politics_test_132", "triples": [{"sub": "hanneke jagersma", "rel": "member of political party", "obj": "communist party of the netherlands"}]}
+{"id": "ont_8_politics_test_133", "triples": [{"sub": "miguel cabanellas", "rel": "member of political party", "obj": "radical republican party"}]}
+{"id": "ont_8_politics_test_134", "triples": [{"sub": "oras tynkkynen", "rel": "member of political party", "obj": "green league"}]}
+{"id": "ont_8_politics_test_135", "triples": [{"sub": "bernardo de la garza herrera", "rel": "member of political party", "obj": "partido verde ecologista de m\u00e9xico"}]}
+{"id": "ont_8_politics_test_136", "triples": [{"sub": "gerben wagenaar", "rel": "member of political party", "obj": "communist party of the netherlands"}]}
+{"id": "ont_8_politics_test_137", "triples": [{"sub": "felix leinen", "rel": "member of political party", "obj": "ecological democratic party"}]}
+{"id": "ont_8_politics_test_138", "triples": [{"sub": "noel lynch", "rel": "member of political party", "obj": "green party of england and wales"}]}
+{"id": "ont_8_politics_test_139", "triples": [{"sub": "michael woodin", "rel": "member of political party", "obj": "green party of england and wales"}]}
+{"id": "ont_8_politics_test_140", "triples": [{"sub": "theodore m. berry", "rel": "member of political party", "obj": "charter party of cincinnati"}]}
+{"id": "ont_8_politics_test_141", "triples": [{"sub": "rich whitney", "rel": "member of political party", "obj": "illinois green party"}]}
+{"id": "ont_8_politics_test_142", "triples": [{"sub": "robert zambito", "rel": "member of political party", "obj": "union montreal"}]}
+{"id": "ont_8_politics_test_143", "triples": [{"sub": "cumine russell", "rel": "member of political party", "obj": "green party of england and wales"}]}
+{"id": "ont_8_politics_test_144", "triples": [{"sub": "jan ceton", "rel": "member of political party", "obj": "communist party of the netherlands"}]}
+{"id": "ont_8_politics_test_145", "triples": [{"sub": "bill macdougall", "rel": "member of political party", "obj": "green party of new brunswick"}]}
+{"id": "ont_8_politics_test_146", "triples": [{"sub": "gilles deguire", "rel": "member of political party", "obj": "union montreal"}]}
+{"id": "ont_8_politics_test_147", "triples": [{"sub": "sharon labchuk", "rel": "member of political party", "obj": "green party of prince edward island"}]}
+{"id": "ont_8_politics_test_148", "triples": [{"sub": "angelika beer", "rel": "member of political party", "obj": "pirate party germany"}]}
+{"id": "ont_8_politics_test_149", "triples": [{"sub": "touko aalto", "rel": "member of political party", "obj": "green league"}]}
+{"id": "ont_8_politics_test_150", "triples": [{"sub": "bert brandsen", "rel": "member of political party", "obj": "communist party of the netherlands"}]}
+{"id": "ont_8_politics_test_151", "triples": [{"sub": "heidi hautala", "rel": "member of political party", "obj": "green league"}]}
+{"id": "ont_8_politics_test_152", "triples": [{"sub": "james tarbell", "rel": "member of political party", "obj": "charter party"}]}
+{"id": "ont_8_politics_test_153", "triples": [{"sub": "miguel zerolo aguilar", "rel": "member of political party", "obj": "canarian coalition"}]}
+{"id": "ont_8_politics_test_154", "triples": [{"sub": "antero vartia", "rel": "member of political party", "obj": "green league"}]}
+{"id": "ont_8_politics_test_155", "triples": [{"sub": "derek norman wall", "rel": "member of political party", "obj": "green party of england and wales"}]}
+{"id": "ont_8_politics_test_156", "triples": []}
+{"id": "ont_8_politics_test_157", "triples": [{"sub": "sebastian nerz", "rel": "member of political party", "obj": "pirate party germany"}]}
+{"id": "ont_8_politics_test_158", "triples": []}
+{"id": "ont_8_politics_test_159", "triples": [{"sub": "stefan k\u00f6rner", "rel": "member of political party", "obj": "pirate party germany"}]}
+{"id": "ont_8_politics_test_160", "triples": [{"sub": "will duckworth", "rel": "member of political party", "obj": "green party of england and wales"}]}
+{"id": "ont_8_politics_test_161", "triples": [{"sub": "irene doutney", "rel": "member of political party", "obj": "greens new south wales"}]}
+{"id": "ont_8_politics_test_162", "triples": [{"sub": "patricia lucas", "rel": "member of political party", "obj": "green party of england and wales"}]}
+{"id": "ont_8_politics_test_163", "triples": [{"sub": "jyrki mikkonen", "rel": "member of political party", "obj": "green league"}]}
+{"id": "ont_8_politics_test_164", "triples": [{"sub": "gustavo petro", "rel": "position held", "obj": "president of colombia"}]}
+{"id": "ont_8_politics_test_165", "triples": []}
+{"id": "ont_8_politics_test_166", "triples": [{"sub": "cem \u00f6zdemir", "rel": "member of political party", "obj": "greens"}]}
+{"id": "ont_8_politics_test_167", "triples": [{"sub": "communist party", "rel": "political ideology", "obj": "communism"}]}
+{"id": "ont_8_politics_test_168", "triples": [{"sub": "green party of albania", "rel": "political ideology", "obj": "green politics"}]}
+{"id": "ont_8_politics_test_169", "triples": [{"sub": "american party of labor", "rel": "political ideology", "obj": "hoxhaism"}]}
+{"id": "ont_8_politics_test_170", "triples": [{"sub": "national fascist party", "rel": "political ideology", "obj": "italian fascism"}]}
+{"id": "ont_8_politics_test_171", "triples": [{"sub": "green party", "rel": "political ideology", "obj": "green politics"}]}
+{"id": "ont_8_politics_test_172", "triples": [{"sub": "national bolshevik party", "rel": "political ideology", "obj": "national bolshevism"}]}
+{"id": "ont_8_politics_test_173", "triples": [{"sub": "european green party", "rel": "political ideology", "obj": "green politics"}]}
+{"id": "ont_8_politics_test_174", "triples": [{"sub": "us with salvini", "rel": "political ideology", "obj": "euroscepticism"}]}
+{"id": "ont_8_politics_test_175", "triples": [{"sub": "jan\u00e1\u010dek radical party", "rel": "political ideology", "obj": "christian socialism"}]}
+{"id": "ont_8_politics_test_176", "triples": [{"sub": "belarusian christian democracy", "rel": "political ideology", "obj": "christian-democratic"}]}
+{"id": "ont_8_politics_test_177", "triples": [{"sub": "democratic progressive party", "rel": "political ideology", "obj": "anti-communism"}]}
+{"id": "ont_8_politics_test_178", "triples": []}
+{"id": "ont_8_politics_test_179", "triples": []}
+{"id": "ont_8_politics_test_180", "triples": [{"sub": "red electoral alliance", "rel": "political ideology", "obj": "revolutionary socialism"}]}
+{"id": "ont_8_politics_test_181", "triples": [{"sub": "arf", "rel": "political ideology", "obj": "armenian nationalism"}]}
+{"id": "ont_8_politics_test_182", "triples": [{"sub": "bharatiya janata party", "rel": "political ideology", "obj": "nationalism"}]}
+{"id": "ont_8_politics_test_183", "triples": [{"sub": "finns party", "rel": "political ideology", "obj": "euroscepticism"}]}
+{"id": "ont_8_politics_test_185", "triples": [{"sub": "socialist alternative", "rel": "political ideology", "obj": "socialism"}]}
+{"id": "ont_8_politics_test_186", "triples": [{"sub": "janata dal (united)", "rel": "political ideology", "obj": "secularism"}]}
+{"id": "ont_8_politics_test_187", "triples": [{"sub": "scottish nationalist party", "rel": "political ideology", "obj": "civic nationalism"}]}
+{"id": "ont_8_politics_test_189", "triples": [{"sub": "flaminio piccoli", "rel": "member of political party", "obj": "christian democracy"}]}
+{"id": "ont_8_politics_test_190", "triples": [{"sub": "european people's party", "rel": "political ideology", "obj": "europeanism"}]}
+{"id": "ont_8_politics_test_194", "triples": [{"sub": "green party of lebanon", "rel": "political ideology", "obj": "green politics"}]}
+{"id": "ont_8_politics_test_195", "triples": [{"sub": "armenian revolutionary federation", "rel": "political ideology", "obj": "democratic socialism"}]}
+{"id": "ont_8_politics_test_197", "triples": [{"sub": "american freedom party", "rel": "political ideology", "obj": "white nationalism"}]}
+{"id": "ont_8_politics_test_198", "triples": [{"sub": "anp", "rel": "political ideology", "obj": "secularism"}]}
+{"id": "ont_8_politics_test_199", "triples": [{"sub": "democratic people's federation", "rel": "political ideology", "obj": "basque christian democracy"}]}
+{"id": "ont_8_politics_test_200", "triples": [{"sub": "communist party of spain", "rel": "political ideology", "obj": "communism"}]}
+{"id": "ont_8_politics_test_201", "triples": [{"sub": "liga veneta", "rel": "political ideology", "obj": "federalism"}]}
+{"id": "ont_8_politics_test_202", "triples": [{"sub": "italian radical union", "rel": "political ideology", "obj": "fascism"}]}
+{"id": "ont_8_politics_test_204", "triples": [{"sub": "popular", "rel": "political ideology", "obj": "christian democracy"}]}
+{"id": "ont_8_politics_test_206", "triples": [{"sub": "ecolo", "rel": "political ideology", "obj": "green politics"}]}
+{"id": "ont_8_politics_test_207", "triples": [{"sub": "vlaams blok", "rel": "political ideology", "obj": "right wing"}]}
+{"id": "ont_8_politics_test_209", "triples": []}
+{"id": "ont_8_politics_test_210", "triples": [{"sub": "slovene peasant party", "rel": "political ideology", "obj": "agrarianism"}]}
+{"id": "ont_8_politics_test_211", "triples": [{"sub": "coalition for the defence of the republic", "rel": "political ideology", "obj": "hutu power"}]}
+{"id": "ont_8_politics_test_212", "triples": [{"sub": "institutional revolutionary party", "rel": "political ideology", "obj": "corporatism"}]}
+{"id": "ont_8_politics_unseen_test_1", "triples": [{"sub": "the gambia", "rel": "head of state", "obj": "abdel fattah el-sisi"}]}
+{"id": "ont_8_politics_unseen_test_2", "triples": [{"sub": "egypt", "rel": "head of government", "obj": "shavkat mirziyoyev"}]}
+{"id": "ont_8_politics_unseen_test_3", "triples": [{"sub": "gurbanguly berdimuhamedow", "rel": "position held", "obj": "president of zambia"}]}
+{"id": "ont_8_politics_unseen_test_4", "triples": [{"sub": "edgar lungu", "rel": "position held", "obj": "president of turkmenistan"}]}
+{"id": "ont_8_politics_unseen_test_5", "triples": [{"sub": "ephraim katzir", "rel": "position held", "obj": "president of russia"}]}
+{"id": "ont_8_politics_unseen_test_6", "triples": [{"sub": "dmitry medvedev", "rel": "position held", "obj": "president of israel"}]}
+{"id": "ont_8_politics_unseen_test_7", "triples": []}
+{"id": "ont_8_politics_unseen_test_8", "triples": []}
+{"id": "ont_8_politics_unseen_test_9", "triples": [{"sub": "irina krohn", "rel": "member of political party", "obj": "pirate party germany"}]}
+{"id": "ont_8_politics_unseen_test_10", "triples": [{"sub": "jens peter seipenbusch", "rel": "member of political party", "obj": "green league"}]}
+{"id": "ont_8_politics_unseen_test_11", "triples": [{"sub": "communist party", "rel": "political ideology", "obj": "green politics"}]}
+{"id": "ont_8_politics_unseen_test_12", "triples": [{"sub": "green party of albania", "rel": "political ideology", "obj": "communism"}]}

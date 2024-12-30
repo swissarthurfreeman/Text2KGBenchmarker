@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "Run train_wikidata_tekgen.sh" 
+
 declare -a ontologies=(
     ont_1_movie
     ont_2_music
@@ -17,11 +19,6 @@ module load GCCcore/13.2.0 Python/3.11.5
 
 for ont in "${ontologies[@]}"
 do
-    sbatch --partition shared-gpu --ntasks 1 --mem 25G --time 2:00:00 --gres gpu:1,VramPerGpu:24G 
-    \ pipenv run python3 train.py 
-    \ data=wikidata_synthetic 
-    \ wandb_run_name=${ont}-wikidata-tekgen-val 
-    \ ontology_paths=[data/wikidata_synthetic/ontologies/${ont}.json] 
-    \ val_files=[data/wikidata_tekgen/validation/${ont}_validation.jsonl] 
-    \ train_files=[data/wikidata_synthetic/train/${ont}_train.jsonl,data/wikidata_tekgen/train/${ont}_train.jsonl]
+    echo $ont
+    sbatch --partition shared-gpu --ntasks 1 --mem 25G --time 2:00:00 --gres gpu:1,VramPerGpu:24G --job-name $ont pipenv run python3 train.py data=wikidata_synthetic wandb_run_name=${ont}-wikidata-tekgen-train-and-val ontology_paths=[data/wikidata_tekgen/ontologies/${ont}.json] val_files=[data/wikidata_tekgen/validation/${ont}_validation.jsonl] train_files=[data/wikidata_tekgen/train/${ont}_train.jsonl]
 done
