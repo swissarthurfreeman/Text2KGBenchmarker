@@ -30,7 +30,7 @@ recall_ylims=(1.0 1.0 0.7 0.7 0.7 0.7 0.7 0.7)
 MODEL_NAME_ITER=0
 for title_model_name in "${title_model_names[@]}"
 do
-    for metric in avg_f1 avg_recall avg_precision
+    for metric in avg_f1 avg_recall avg_precision avg_sub_halluc avg_obj_halluc avg_rel_halluc
     do
         for mode in mean median
         do

@@ -90,7 +90,10 @@ def gen_bar_plots(metric_paths: list[str], plot_labels: list[str], title_model_n
     fig, ax = plt.subplots(layout='constrained')
     ax.set_axisbelow(True)
     ax.grid(True)
-    x = np.arange(len(categories)) * 2   # the label locations
+
+    x = np.arange(len(categories))
+    if len(plot_labels) > 6:
+        x = x * 2   # the label locations
     
     width = 0.13                     # the width of the bars
     if len(plot_labels) > 6:
@@ -147,7 +150,7 @@ def gen_bar_plots(metric_paths: list[str], plot_labels: list[str], title_model_n
         
     ax.set_xlabel('Text2KGBench Variant')
 
-    if len(plot_labels) == 6: 
+    if len(plot_labels) == 6:
         ax.set_xticks(x+width*2.5, categories)
     
     if len(plot_labels) > 6:
@@ -171,7 +174,7 @@ if __name__ == '__main__':
     
     parser.add_argument("--mode", type=str, default='mean', choices=['mean', 'median'])
     parser.add_argument("--variants", type=str, nargs="*", default=["Unseen\nWikidata-TekGen", "Verified\nWikidata-TekGen", "All\nWikidata-TekGen", "All\nDBpedia-WebNLG"])
-    parser.add_argument("--metric", type=str, default="avg_f1", choices=['avg_f1', 'avg_recall', 'avg_precision'])
+    parser.add_argument("--metric", type=str, default="avg_f1", choices=['avg_f1', 'avg_recall', 'avg_precision', 'avg_obj_halluc', 'avg_sub_halluc', 'avg_rel_halluc'])
     parser.add_argument("--ylim", type=float, default=1.0)
     parser.add_argument("--vicuna_f1_bars", type=str, choices=['True', 'False'])
     args = parser.parse_args()
