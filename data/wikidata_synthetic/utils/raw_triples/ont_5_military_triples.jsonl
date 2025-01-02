@@ -9927,3 +9927,54 @@
 {"triples": [{"sub": "Michael Dukakis", "sqid": "Q319099", "rel": "military rank", "rpid": "P410", "obj": "specialist", "oqid": "Q1434096"}]}
 {"triples": [{"sub": "Dan Halutz", "sqid": "Q319090", "rel": "military rank", "rpid": "P410", "obj": "Rav Aluf", "oqid": "Q23758088"}, {"sub": "Dan Halutz", "sqid": "Q319090", "rel": "military branch", "rpid": "P241", "obj": "Israeli Air Force", "oqid": "Q462211"}]}
 {"triples": [{"sub": "Sejo of Joseon", "sqid": "Q334308", "rel": "military rank", "rpid": "P410", "obj": "general", "oqid": "Q83460"}, {"sub": "general", "sqid": "Q83460", "rel": "next higher rank", "rpid": "P3730", "obj": "field marshal", "oqid": "Q7821620"}]}
+{"triples": [{"sub": "Gunther von Etzel", "sqid": "Q90631", "rel": "military rank", "rpid": "P410", "obj": "Generalleutnant", "oqid": "Q3100519"}]}
+{"triples": [{"sub": "Adolf Lubich von Milovan", "sqid": "Q363204", "rel": "military rank", "rpid": "P410", "obj": "Generalleutnant", "oqid": "Q3100519"}]}
+{"triples": [{"sub": "Gregor Strasser", "sqid": "Q76638", "rel": "military rank", "rpid": "P410", "obj": "Oberleutnant", "oqid": "Q2673216"}]}
+{"triples": [{"sub": "Burkhart M\u00fcller-Hillebrand", "sqid": "Q109434", "rel": "military rank", "rpid": "P410", "obj": "Generalleutnant", "oqid": "Q3100519"}]}
+{"triples": [{"sub": "Karl Freiherr von Th\u00fcngen", "sqid": "Q74067", "rel": "military rank", "rpid": "P410", "obj": "Generalleutnant", "oqid": "Q3100519"}]}
+{"triples": [{"sub": "Josef Ackermann", "sqid": "Q123873", "rel": "military rank", "rpid": "P410", "obj": "colonel", "oqid": "Q17411803"}, {"sub": "colonel", "sqid": "Q17411803", "rel": "next higher rank", "rpid": "P3730", "obj": "brigadier", "oqid": "Q23056163"}, {"sub": "brigadier", "sqid": "Q23056163", "rel": "next higher rank", "rpid": "P3730", "obj": "Major General", "oqid": "Q694202"}, {"sub": "Major General", "sqid": "Q694202", "rel": "next higher rank", "rpid": "P3730", "obj": "Q131364174", "oqid": "Q131364174"}, {"sub": "Q131364174", "sqid": "Q131364174", "rel": "next higher rank", "rpid": "P3730", "obj": "general", "oqid": "Q670860"}]}
+{"triples": [{"sub": "Paul von Hase", "sqid": "Q62004", "rel": "military rank", "rpid": "P410", "obj": "Generalleutnant", "oqid": "Q3100519"}]}
+{"triples": [{"sub": "Alfred Boehm-Tettelbach", "sqid": "Q123971", "rel": "military rank", "rpid": "P410", "obj": "Generalleutnant", "oqid": "Q3100519"}]}
+{"triples": [{"sub": "Walther Wever", "sqid": "Q62236", "rel": "military rank", "rpid": "P410", "obj": "Generalleutnant", "oqid": "Q3100519"}]}
+{"triples": [{"sub": "Ulrich Greifelt", "sqid": "Q70638", "rel": "military rank", "rpid": "P410", "obj": "Oberleutnant", "oqid": "Q2673216"}]}
+{"triples": [{"sub": "Alexander Edler von Daniels", "sqid": "Q71796", "rel": "military rank", "rpid": "P410", "obj": "Generalleutnant", "oqid": "Q3100519"}]}
+{"triples": [{"sub": "Ernst Sachs", "sqid": "Q113141", "rel": "military rank", "rpid": "P410", "obj": "Generalleutnant", "oqid": "Q3100519"}]}
+{"triples": [{"sub": "Peter Tauber", "sqid": "Q124622", "rel": "military rank", "rpid": "P410", "obj": "Oberleutnant", "oqid": "Q2673216"}]}
+{"triples": [{"sub": "Werner von Haeften", "sqid": "Q57453", "rel": "military rank", "rpid": "P410", "obj": "Oberleutnant", "oqid": "Q2673216"}]}
+{"triples": [{"sub": "Ferdinand Heim", "sqid": "Q63293", "rel": "military rank", "rpid": "P410", "obj": "Generalleutnant", "oqid": "Q3100519"}]}
+{"triples": [{"sub": "Wend von Wietersheim", "sqid": "Q63331", "rel": "military rank", "rpid": "P410", "obj": "Generalleutnant", "oqid": "Q3100519"}]}
+{"triples": [{"sub": "Adolf Herrgott", "sqid": "Q362112", "rel": "military rank", "rpid": "P410", "obj": "Generalleutnant", "oqid": "Q3100519"}]}
+{"triples": [{"sub": "Friedrich Foertsch", "sqid": "Q84893", "rel": "military rank", "rpid": "P410", "obj": "Generalleutnant", "oqid": "Q3100519"}]}
+{"triples": [{"sub": "Johann Mickl", "sqid": "Q86251", "rel": "military rank", "rpid": "P410", "obj": "Generalleutnant", "oqid": "Q3100519"}]}
+{"triples": [{"sub": "Hans Bethge", "sqid": "Q88772", "rel": "military rank", "rpid": "P410", "obj": "Oberleutnant", "oqid": "Q2673216"}]}
+{"triples": [{"sub": "J\u00f3zsef Szinnyei", "sqid": "Q208894", "rel": "military rank", "rpid": "P410", "obj": "Oberleutnant", "oqid": "Q2673216"}]}
+{"triples": [{"sub": "Albert Battel", "sqid": "Q74589", "rel": "military rank", "rpid": "P410", "obj": "Oberleutnant", "oqid": "Q2673216"}]}
+{"triples": [{"sub": "Heinz von Randow", "sqid": "Q75538", "rel": "military rank", "rpid": "P410", "obj": "Generalleutnant", "oqid": "Q3100519"}]}
+{"triples": [{"sub": "Philipp Bouhler", "sqid": "Q60334", "rel": "military rank", "rpid": "P410", "obj": "Oberleutnant", "oqid": "Q2673216"}]}
+{"triples": [{"sub": "Karl-Gustav Sauberzweig", "sqid": "Q77337", "rel": "military rank", "rpid": "P410", "obj": "Generalleutnant", "oqid": "Q3100519"}]}
+{"triples": [{"sub": "Heinz-Georg Lemm", "sqid": "Q96759", "rel": "military rank", "rpid": "P410", "obj": "Generalleutnant", "oqid": "Q3100519"}]}
+{"triples": [{"sub": "Eberhard von Schmettow", "sqid": "Q96718", "rel": "military rank", "rpid": "P410", "obj": "Generalleutnant", "oqid": "Q3100519"}]}
+{"triples": [{"sub": "Friedrich Ritter von R\u00f6th", "sqid": "Q95341", "rel": "military rank", "rpid": "P410", "obj": "Oberleutnant", "oqid": "Q2673216"}]}
+{"triples": [{"sub": "Friedrich K\u00f6rner", "sqid": "Q281948", "rel": "military rank", "rpid": "P410", "obj": "Oberleutnant", "oqid": "Q2673216"}]}
+{"triples": [{"sub": "Maximilian Gritzner", "sqid": "Q78134", "rel": "military rank", "rpid": "P410", "obj": "Oberleutnant", "oqid": "Q2673216"}]}
+{"triples": [{"sub": "Heinrich Menu von Minutoli", "sqid": "Q532671", "rel": "military rank", "rpid": "P410", "obj": "Generalleutnant", "oqid": "Q3100519"}]}
+{"triples": [{"sub": "Wilhelm Baur", "sqid": "Q90986", "rel": "military rank", "rpid": "P410", "obj": "Generalleutnant", "oqid": "Q3100519"}]}
+{"triples": [{"sub": "Frank Linke-Crawford", "sqid": "Q79136", "rel": "military rank", "rpid": "P410", "obj": "Oberleutnant", "oqid": "Q2673216"}]}
+{"triples": [{"sub": "Georg Kenzian", "sqid": "Q511802", "rel": "military rank", "rpid": "P410", "obj": "Oberleutnant", "oqid": "Q2673216"}]}
+{"triples": [{"sub": "Franz Eccard von Bentivegni", "sqid": "Q104468", "rel": "military rank", "rpid": "P410", "obj": "Generalleutnant", "oqid": "Q3100519"}]}
+{"triples": [{"sub": "Erwin Menny", "sqid": "Q615656", "rel": "military rank", "rpid": "P410", "obj": "Generalleutnant", "oqid": "Q3100519"}]}
+{"triples": [{"sub": "Franz Joseph, 9th Prince of Thurn and Taxis", "sqid": "Q63016", "rel": "military rank", "rpid": "P410", "obj": "Oberleutnant", "oqid": "Q2673216"}]}
+{"triples": [{"sub": "Josef Friedrich", "sqid": "Q592188", "rel": "military rank", "rpid": "P410", "obj": "Oberleutnant", "oqid": "Q2673216"}]}
+{"triples": [{"sub": "Anton Pi\u00ebch", "sqid": "Q592879", "rel": "military rank", "rpid": "P410", "obj": "Oberleutnant", "oqid": "Q2673216"}]}
+{"triples": [{"sub": "Hyazinth Graf Strachwitz von Gross-Zauche und Camminetz", "sqid": "Q60722", "rel": "military rank", "rpid": "P410", "obj": "Generalleutnant", "oqid": "Q3100519"}]}
+{"triples": [{"sub": "Karl Plauth", "sqid": "Q98578", "rel": "military rank", "rpid": "P410", "obj": "Oberleutnant", "oqid": "Q2673216"}]}
+{"triples": [{"sub": "Alphonse Gemuseus", "sqid": "Q667375", "rel": "military rank", "rpid": "P410", "obj": "Oberleutnant", "oqid": "Q2673216"}]}
+{"triples": [{"sub": "Johann von Hinrichs", "sqid": "Q103716", "rel": "military rank", "rpid": "P410", "obj": "Generalleutnant", "oqid": "Q3100519"}]}
+{"triples": [{"sub": "Joachim Friedrich von Stutterheim", "sqid": "Q105518", "rel": "military rank", "rpid": "P410", "obj": "Generalleutnant", "oqid": "Q3100519"}]}
+{"triples": [{"sub": "He Jin", "sqid": "Q714428", "rel": "military rank", "rpid": "P410", "obj": "taish\u014dgun", "oqid": "Q5369529"}, {"sub": "taish\u014dgun", "sqid": "Q5369529", "rel": "next higher rank", "rpid": "P3730", "obj": "Q9383616", "oqid": "Q9383616"}]}
+{"triples": [{"sub": "Gaston Thierry", "sqid": "Q102308", "rel": "military rank", "rpid": "P410", "obj": "Oberleutnant", "oqid": "Q2673216"}]}
+{"triples": [{"sub": "Sebastian Fichtner", "sqid": "Q106788", "rel": "military rank", "rpid": "P410", "obj": "Generalleutnant", "oqid": "Q3100519"}]}
+{"triples": [{"sub": "Artur Schmitt", "sqid": "Q714825", "rel": "military rank", "rpid": "P410", "obj": "Generalleutnant", "oqid": "Q3100519"}]}
+{"triples": [{"sub": "Harald von Hirschfeld", "sqid": "Q106253", "rel": "military rank", "rpid": "P410", "obj": "Generalleutnant", "oqid": "Q3100519"}]}
+{"triples": [{"sub": "Jacques Doriot", "sqid": "Q724729", "rel": "military rank", "rpid": "P410", "obj": "Oberleutnant", "oqid": "Q2673216"}]}
+{"triples": [{"sub": "Rudolf Weber", "sqid": "Q752860", "rel": "military rank", "rpid": "P410", "obj": "Oberleutnant", "oqid": "Q2673216"}]}

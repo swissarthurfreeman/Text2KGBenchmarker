@@ -30,6 +30,7 @@
 		{"pid": "P915", "label": "filming location", "domain": "Q11424", "range": "Q515"},
 		{"pid": "P921", "label": "main subject", "domain": "Q11424", "range": ""},
 		{"pid": "P1411", "label": "nominated for", "domain": "Q11424", "range": "Q618779"},
-		{"pid": "P2130", "label": "cost", "domain": "Q11424", "range": ""}
+		{"pid": "P2130", "label": "cost", "domain": "Q11424", "range": ""},
+		{"pid": "P27", "label": "country of citizenship", "domain": "Q5", "range": "Q6256"}
 	]
 }

@@ -40,4 +40,7 @@ def lin_triplets(triples, sent):
         
     return lin_triplets
     
-print(lin_triplets(triplets, sent))
+#print(lin_triplets(triplets, sent))
+import sys
+
+print(sys.argv)

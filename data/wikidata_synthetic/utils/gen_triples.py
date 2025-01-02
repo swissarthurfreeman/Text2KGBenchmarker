@@ -70,7 +70,7 @@ class TripleGenerator:
                 continue
             
             if not stdout:
-                with open("./" + self.ontology_path.split("/")[-1] + "l", "a") as f:
+                with open("./raw_triples/" + self.ontology_path.split("/")[-1].replace('.json', "_triples.jsonl"), "a") as f:
                     print("T", thread, "writing at", time() / 60, "minutes, did", count, "entities left :", len(self.root_entities))
                     f.write(json.dumps({ 'triples': triples }) + "\n")
                     count += 1
@@ -101,12 +101,16 @@ class TripleGenerator:
             # 'objectLabel': {'xml:lang': 'LANG', 'type': ..., 'value': 'Literal Value'}}
             bindings: list[dict] = [{
                 'objectQid': binding['object']['value'].split("/")[-1], 
-                'objectLabel': binding['objectLabel']['value']
+                'objectLabel': binding['objectLabel']['value'],
+                'subjectLabel': entity['label'],
+                'subjectQid': entity['qid'],
+                'relationLabel': self.relations[pid]['label'],
+                'relationPid': pid,
             }  for binding in self.sparqlwd_caller.query().convert()['results']['bindings']]
 
             for obj in bindings:        # keep triples following ontology, if award_received(film, award), then subject needs to be film/subclassof film, object an award/subclass of award
                 if self.followsOntology(entity['qid'], self.relations[pid], obj['objectQid']):
-                    triples.append({'sub': entity['label'], 'rel': self.relations[pid]['label'], 'obj': obj['objectLabel']})
+                    triples.append({'sub': entity['label'], 'sqid': obj['subjectQid'], 'rel': self.relations[pid]['label'], 'rpid': obj['relationPid'], 'obj': obj['objectLabel'], 'oqid': obj['objectQid']})
                     if self.isInstanceOfDomainOfAProperty(obj['objectQid']):    # for example, cast_member(film, human), nationality(human, country)
                         triples += self.getTriplesOfEntity({                    # get relevant ontology triples starting from this object
                             "qid": obj['objectQid'],
@@ -203,7 +207,7 @@ def getUnprocessedRootEntities(onto_name: str) -> list[dict]:
         root_qids_with_triples = [json.loads(line)['triples'][0]['sqid'] for line in f] 
     
     root_qids_without_triples: list[dict] = []
-    root_qids_files = glob.glob(f"../root_entities/{onto_name}_root_entities_**.jsonl")
+    root_qids_files = glob.glob(f"./root_entities/{onto_name}_root_entities_**.jsonl")
 
     for root_qid_file in root_qids_files: 
         with open(root_qid_file) as f:
@@ -211,7 +215,7 @@ def getUnprocessedRootEntities(onto_name: str) -> list[dict]:
                 ent = json.loads(line)
                 if ent['qid'] not in root_qids_with_triples:    # if qid hasn't doesn't have a triples list
                     root_qids_without_triples.append(ent)
-    
+
     return root_qids_without_triples
 
 
@@ -238,7 +242,7 @@ if __name__ == "__main__":
     print("Retrieved", len(root_entities_without_triples), "root entities to get triples of.")
 
     for i in range(n_threads):
-        pool.apply_async(worker, (i, '../ontologies/{onto_name}.json', n_threads, root_entities_without_triples))
+        pool.apply_async(worker, (i, f'../ontologies/{onto_name}.json', n_threads, root_entities_without_triples))
     
     pool.close()
     pool.join()
