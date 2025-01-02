@@ -1,0 +1,68 @@
+{"id": "ont_9_astronaut_test_1", "triples": [{"sub": "alan shepard", "rel": "birth place", "obj": "new hampshire"}, {"sub": "alan shepard", "rel": "alma mater", "obj": "\"wnwc\""}]}
+{"id": "ont_9_astronaut_test_2", "triples": [{"sub": "alan shepard", "rel": "birth place", "obj": "new hampshire"}, {"sub": "alan shepard", "rel": "alma mater", "obj": "\"w.n.c. 1957\""}]}
+{"id": "ont_9_astronaut_test_3", "triples": [{"sub": "alan shepard", "rel": "alma mater", "obj": "\"nwc, m.a. 1957\""}]}
+{"id": "ont_9_astronaut_test_4", "triples": [{"sub": "alan shepard", "rel": "birth date", "obj": "\"1923-nov-18\""}, {"sub": "alan shepard", "rel": "birth place", "obj": "new hampshire"}, {"sub": "alan shepard", "rel": "selected by nasa", "obj": "1959"}]}
+{"id": "ont_9_astronaut_test_5", "triples": [{"sub": "alan shepard", "rel": "selected by nasa", "obj": "\"1958-09-01\""}, {"sub": "alan shepard", "rel": "birth place", "obj": "new hampshire"}]}
+{"id": "ont_9_astronaut_test_6", "triples": [{"sub": "alan shepard", "rel": "occupation", "obj": "test pilot"}, {"sub": "alan shepard", "rel": "birth place", "obj": "new hampshire"}, {"sub": "alan shepard", "rel": "birth date", "obj": "november 18, 1923"}]}
+{"id": "ont_9_astronaut_test_7", "triples": [{"sub": "alan shepard", "rel": "birth place", "obj": "new hampshire"}]}
+{"id": "ont_9_astronaut_test_8", "triples": [{"sub": "alan shepard", "rel": "occupation", "obj": "test pilot"}, {"sub": "alan shepard", "rel": "birth place", "obj": "new hampshire"}]}
+{"id": "ont_9_astronaut_test_9", "triples": [{"sub": "alan shepard", "rel": "birth place", "obj": "his birth place"}, {"sub": "alan shepard", "rel": "mission", "obj": "apollo 14"}, {"sub": "alan shepard", "rel": "birth place", "obj": "new hampshire"}, {"sub": "alan shepard", "rel": "time in space", "obj": "\"13017.0\"(minutes)"}]}
+{"id": "ont_9_astronaut_test_10", "triples": [{"sub": "alan shepard", "rel": "mission", "obj": "apollo 14"}, {"sub": "alan shepard", "rel": "birth place", "obj": "new hampshire"}]}
+{"id": "ont_9_astronaut_test_11", "triples": []}
+{"id": "ont_9_astronaut_test_12", "triples": [{"sub": "elliot see", "rel": "birth place", "obj": "dallas"}]}
+{"id": "ont_9_astronaut_test_13", "triples": [{"sub": "alan shepard", "rel": "birth place", "obj": "new hampshire"}]}
+{"id": "ont_9_astronaut_test_14", "triples": []}
+{"id": "ont_9_astronaut_test_15", "triples": [{"sub": "elliot see", "rel": "occupation", "obj": "test pilot"}]}
+{"id": "ont_9_astronaut_test_16", "triples": [{"sub": "elliot see", "rel": "alma mater", "obj": "university of texas system"}]}
+{"id": "ont_9_astronaut_test_17", "triples": []}
+{"id": "ont_9_astronaut_test_18", "triples": [{"sub": "elliot see", "rel": "alma mater", "obj": "university of texas at austin"}]}
+{"id": "ont_9_astronaut_test_19", "triples": [{"sub": "elliot see", "rel": "occupation", "obj": "test pilot"}, {"sub": "elliot see", "rel": "selected by nasa", "obj": "\"1962-10-17\""}, {"sub": "elliot see", "rel": "birth place", "obj": "dallas"}]}
+{"id": "ont_9_astronaut_test_20", "triples": [{"sub": "elliot see", "rel": "birth place", "obj": "dallas"}]}
+{"id": "ont_9_astronaut_test_21", "triples": [{"sub": "elliot see", "rel": "birth date", "obj": "\"1923-23-1927\""}, {"sub": "elliot see", "rel": "occupation", "obj": "test pilot"}]}
+{"id": "ont_9_astronaut_test_22", "triples": [{"sub": "elliot see", "rel": "birth place", "obj": "dallas"}]}
+{"id": "ont_9_astronaut_test_23", "triples": [{"sub": "elliot see", "rel": "occupation", "obj": "test pilot"}, {"sub": "elliot see", "rel": "birth place", "obj": "dallas, texas"}]}
+{"id": "ont_9_astronaut_test_24", "triples": [{"sub": "elliot see", "rel": "nationality", "obj": "kingdom of france"}]}
+{"id": "ont_9_astronaut_test_25", "triples": [{"sub": "alan shepard", "rel": "birth place", "obj": "new hampshire"}]}
+{"id": "ont_9_astronaut_test_26", "triples": [{"sub": "alan shepard", "rel": "birth date", "obj": "\"1923-10-18\""}, {"sub": "alan shepard", "rel": "death place", "obj": "\"california\""}, {"sub": "alan shepard", "rel": "mission", "obj": "apollo 14"}, {"sub": "alan shepard", "rel": "birth place", "obj": "new hampshire"}]}
+{"id": "ont_9_astronaut_test_27", "triples": [{"sub": "alan shepard", "rel": "mission", "obj": "apollo 14"}, {"sub": "alan shepard", "rel": "birth place", "obj": "new hampshire"}]}
+{"id": "ont_9_astronaut_test_28", "triples": [{"sub": "alan shepard", "rel": "alma mater", "obj": "\"nwc\""}, {"sub": "alan shepard", "rel": "birth place", "obj": "new hampshire"}]}
+{"id": "ont_9_astronaut_test_29", "triples": [{"sub": "alan shepard", "rel": "operator", "obj": "united states navy"}, {"sub": "alan shepard", "rel": "birth place", "obj": "new hampshire"}]}
+{"id": "ont_9_astronaut_test_30", "triples": [{"sub": "alan shepard", "rel": "alma mater", "obj": "\"new hampshire, w.n.c. 1957\""}, {"sub": "alan shepard", "rel": "mission", "obj": "apollo 14"}]}
+{"id": "ont_9_astronaut_test_31", "triples": [{"sub": "alan shepard", "rel": "nationality", "obj": "united states.a."}, {"sub": "alan shepard", "rel": "birth place", "obj": "new hampshire"}]}
+{"id": "ont_9_astronaut_test_32", "triples": []}
+{"id": "ont_9_astronaut_test_33", "triples": [{"sub": "alan shepard", "rel": "nationality", "obj": "united states"}, {"sub": "alan shepard", "rel": "birth place", "obj": "new hampshire"}]}
+{"id": "ont_9_astronaut_test_34", "triples": [{"sub": "alan shepard", "rel": "selected by nasa", "obj": "1959"}, {"sub": "alan shepard", "rel": "birth date", "obj": "\"1923-10-18\""}, {"sub": "alan shepard", "rel": "nationality", "obj": "united states"}]}
+{"id": "ont_9_astronaut_test_35", "triples": [{"sub": "alan shepard", "rel": "occupation", "obj": "test pilot"}, {"sub": "alan shepard", "rel": "birth place", "obj": "new hampshire"}, {"sub": "alan shepard", "rel": "birth date", "obj": "\"1923-10-19\""}, {"sub": "alan shepard", "rel": "death place", "obj": "california"}, {"sub": "alan shepard", "rel": "nationality", "obj": "united states"}]}
+{"id": "ont_9_astronaut_test_36", "triples": [{"sub": "alan shepard", "rel": "birth place", "obj": "new hampshire"}]}
+{"id": "ont_9_astronaut_test_37", "triples": [{"sub": "alan shepard", "rel": "birth date", "obj": "\"1923-10-18\""}, {"sub": "alan shepard", "rel": "nationality", "obj": "united states"}]}
+{"id": "ont_9_astronaut_test_38", "triples": [{"sub": "alan shepard", "rel": "nationality", "obj": "united states"}, {"sub": "alan shepard", "rel": "alma mater", "obj": "\"new hampshire, went to school at nwc, and graduated with an ma in 1957\""}]}
+{"id": "ont_9_astronaut_test_39", "triples": [{"sub": "alan shepard", "rel": "mission", "obj": "apollo 14"}, {"sub": "alan shepard", "rel": "birth place", "obj": "new hampshire"}, {"sub": "alan shepard", "rel": "birth date", "obj": "nov 18, 1923"}]}
+{"id": "ont_9_astronaut_test_40", "triples": [{"sub": "alan shepard", "rel": "birth place", "obj": "new hampshire"}]}
+{"id": "ont_9_astronaut_test_41", "triples": [{"sub": "alan shepard", "rel": "birth date", "obj": "\"1923-10-18\""}, {"sub": "alan shepard", "rel": "birth place", "obj": "new hampshire"}]}
+{"id": "ont_9_astronaut_test_42", "triples": [{"sub": "alan shepard", "rel": "occupation", "obj": "test pilot"}, {"sub": "alan shepard", "rel": "birth place", "obj": "new hampshire"}]}
+{"id": "ont_9_astronaut_test_43", "triples": [{"sub": "alan shepard", "rel": "alma mater", "obj": "\"w nwc\""}, {"sub": "alan shepard", "rel": "nationality", "obj": "united states"}, {"sub": "alan shepard", "rel": "birth place", "obj": "new hampshire"}]}
+{"id": "ont_9_astronaut_test_44", "triples": [{"sub": "alan shepard", "rel": "birth date", "obj": "\"1923-10-18\""}, {"sub": "alan shepard", "rel": "title", "obj": "chief of the astronaut office"}, {"sub": "alan shepard", "rel": "mission", "obj": "apollo 14"}, {"sub": "alan shepard", "rel": "death place", "obj": "\"california\""}]}
+{"id": "ont_9_astronaut_test_45", "triples": [{"sub": "alan shepard", "rel": "nationality", "obj": "united states"}]}
+{"id": "ont_9_astronaut_test_46", "triples": [{"sub": "alan shepard", "rel": "birth date", "obj": "\"1923-10-18\""}, {"sub": "alan shepard", "rel": "alma mater", "obj": "\"new hampshire, m.a. 1957\""}, {"sub": "alan shepard", "rel": "death place", "obj": "\"california\""}]}
+{"id": "ont_9_astronaut_test_47", "triples": [{"sub": "alan shepard", "rel": "alma mater", "obj": "\"new hampshire, m.a. 1957\""}, {"sub": "alan shepard", "rel": "nationality", "obj": "united states"}]}
+{"id": "ont_9_astronaut_test_48", "triples": [{"sub": "alan shepard", "rel": "mission", "obj": "apollo 14"}, {"sub": "alan shepard", "rel": "birth place", "obj": "new hampshire"}, {"sub": "alan shepard", "rel": "nationality", "obj": "united states"}]}
+{"id": "ont_9_astronaut_test_49", "triples": [{"sub": "alan shepard", "rel": "birth place", "obj": "new hampshire"}, {"sub": "alan shepard", "rel": "birth date", "obj": "\"1923-10-18\""}, {"sub": "alan shepard", "rel": "nationality", "obj": "united states"}]}
+{"id": "ont_9_astronaut_test_50", "triples": [{"sub": "alan shepard", "rel": "alma mater", "obj": "\"m.a. 1957\""}, {"sub": "alan shepard", "rel": "birth place", "obj": "new hampshire"}, {"sub": "alan shepard", "rel": "nationality", "obj": "united states"}]}
+{"id": "ont_9_astronaut_test_51", "triples": [{"sub": "alan shepard", "rel": "status", "obj": "\"retired\""}, {"sub": "alan shepard", "rel": "birth place", "obj": "new hampshire"}]}
+{"id": "ont_9_astronaut_test_52", "triples": [{"sub": "alan shepard", "rel": "birth date", "obj": "\"1923-10-18\""}, {"sub": "alan shepard", "rel": "death place", "obj": "california"}, {"sub": "alan shepard", "rel": "birth place", "obj": "new hampshire"}, {"sub": "alan shepard", "rel": "selected by nasa", "obj": "1959"}]}
+{"id": "ont_9_astronaut_test_53", "triples": [{"sub": "alan shepard", "rel": "occupation", "obj": "test pilot"}, {"sub": "alan shepard", "rel": "birth date", "obj": "\"1923-18-18\""}, {"sub": "alan shepard", "rel": "birth place", "obj": "new hampshire"}]}
+{"id": "ont_9_astronaut_test_54", "triples": [{"sub": "alan shepard's", "rel": "birth place", "obj": "new hampshire"}]}
+{"id": "ont_9_astronaut_test_55", "triples": [{"sub": "alan shepard", "rel": "alma mater", "obj": "nwc"}, {"sub": "alan shepard", "rel": "birth place", "obj": "new hampshire"}]}
+{"id": "ont_9_astronaut_test_56", "triples": [{"sub": "alan shepard", "rel": "nationality", "obj": "united states"}, {"sub": "alan shepard", "rel": "birth place", "obj": "new hampshire"}]}
+{"id": "ont_9_astronaut_test_57", "triples": [{"sub": "alan shepard", "rel": "birth place", "obj": "new hampshire"}]}
+{"id": "ont_9_astronaut_test_58", "triples": [{"sub": "alan shepard", "rel": "birth date", "obj": "\"1923-nov-18th\""}, {"sub": "alan shepard", "rel": "birth place", "obj": "new hampshire"}, {"sub": "alan shepard", "rel": "nationality", "obj": "united states"}]}
+{"id": "ont_9_astronaut_test_59", "triples": []}
+{"id": "ont_9_astronaut_test_60", "triples": [{"sub": "alan shepard", "rel": "operator", "obj": "united states navy"}]}
+{"id": "ont_9_astronaut_test_61", "triples": [{"sub": "alan shepard", "rel": "operator", "obj": "united states navy"}]}
+{"id": "ont_9_astronaut_test_62", "triples": []}
+{"id": "ont_9_astronaut_test_63", "triples": [{"sub": "alan shepard", "rel": "birth place", "obj": "new hampshire"}]}
+{"id": "ont_9_astronaut_test_64", "triples": [{"sub": "alan shepard", "rel": "birth date", "obj": "\"1923-nov-18\""}]}
+{"id": "ont_9_astronaut_test_65", "triples": []}
+{"id": "ont_9_astronaut_test_66", "triples": []}
+{"id": "ont_9_astronaut_test_67", "triples": [{"sub": "elliot see", "rel": "selected by nasa", "obj": "1962"}]}
+{"id": "ont_9_astronaut_test_68", "triples": [{"sub": "elliot see", "rel": "birth place", "obj": "dallas"}]}

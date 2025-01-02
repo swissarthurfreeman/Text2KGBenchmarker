@@ -318,7 +318,7 @@ if __name__ ==  "__main__":
     
     for llm_response_folder_path in llm_response_folders: 
 
-        llm_response_folder_path = "rebel-fine-tuned-per-ontology-30-dec-checkpoints"
+        llm_response_folder_path = "rebel-fine-tuned-per-ontology-01-january-checkpoints"
         #if "rel-in-ontology" not in llm_response_folder_path: continue
 
         print("Compute metrics for", llm_response_folder_path)
@@ -343,4 +343,5 @@ if __name__ ==  "__main__":
         get_csv_avg_per_ontology_dbpedia(llm_response_metrics_folder_path)
         get_csv_avg_per_ontology_tekgen(llm_response_metrics_folder_path)  
         generate_global_median_quartiles(llm_response_metrics_folder_path)
+
         exit(0)

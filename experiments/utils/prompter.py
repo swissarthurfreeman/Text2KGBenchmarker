@@ -129,11 +129,11 @@ class Prompter:
 
 
 if __name__ == "__main__":
-    ont = "ont_6_computer"
+    ont = "ont_2_musicalwork"
+
+    dpedia_prompter = Prompter("dpedia_webnlg_clean", ont)
+    print(dpedia_prompter.getPromptOf(f"{ont}_test_5", n_examples=2))
     
-    #dpedia_prompter = Prompter("dpedia_webnlg_clean", ont)
-    #print(dpedia_prompter.getPromptOf(f"{ont}_test_2", n_examples=2))
-    
-    wikidata_prompter = Prompter("wikidata_tekgen", f"{ont}")
-    print(wikidata_prompter.getPromptOf(f"{ont}_test_3", n_examples=3))
+    #wikidata_prompter = Prompter("wikidata_tekgen", f"{ont}")
+    #print(wikidata_prompter.getPromptOf(f"{ont}_test_102", n_examples=3))
     

@@ -1,0 +1,71 @@
+{"id": "ont_1_university_test_1", "triples": [{"sub": "awh engineering college", "rel": "academic staff size", "obj": "250"}]}
+{"id": "ont_1_university_test_2", "triples": [{"sub": "awh engineering college", "rel": "academic staff size", "obj": "250"}]}
+{"id": "ont_1_university_test_3", "triples": [{"sub": "awh engineering college", "rel": "country", "obj": "india"}, {"sub": "kuttikkattoor", "rel": "country", "obj": "india"}]}
+{"id": "ont_1_university_test_4", "triples": [{"sub": "awh engineering college", "rel": "country", "obj": "india"}, {"sub": "kerala", "rel": "country", "obj": "india"}]}
+{"id": "ont_1_university_test_5", "triples": [{"sub": "awh engineering college", "rel": "academic staff size", "obj": "250"}]}
+{"id": "ont_1_university_test_6", "triples": [{"sub": "acharya institute of technology", "rel": "country", "obj": "india"}, {"sub": "acharya institute of technology", "rel": "academic staff size", "obj": "500"}]}
+{"id": "ont_1_university_test_7", "triples": [{"sub": "acharya institute of technology", "rel": "affiliation", "obj": "visvesvaraya technological university"}, {"sub": "acharya institute of technology", "rel": "country", "obj": "india"}, {"sub": "visvesvaraya technological university", "rel": "country", "obj": "india"}, {"sub": "bangalore", "rel": "country", "obj": "india"}, {"sub": "visvesvaraya technological university", "rel": "campus", "obj": "bangalore"}]}
+{"id": "ont_1_university_test_8", "triples": [{"sub": "acharya institute of technology", "rel": "affiliation", "obj": "visvesvaraya technological university"}, {"sub": "visvesvaraya technological university", "rel": "state", "obj": "karnataka"}, {"sub": "visvesvaraya technological university", "rel": "campus", "obj": "bangalore"}]}
+{"id": "ont_1_university_test_9", "triples": [{"sub": "acharya institute of technology", "rel": "affiliation", "obj": "visvesvaraya technological university"}, {"sub": "visvesvaraya technological university", "rel": "campus", "obj": "belgaum"}]}
+{"id": "ont_1_university_test_10", "triples": [{"sub": "acharya institute of technology", "rel": "affiliation", "obj": "visvesvaraya technological university"}]}
+{"id": "ont_1_university_test_11", "triples": []}
+{"id": "ont_1_university_test_12", "triples": [{"sub": "acharya institute of technology", "rel": "number of postgraduate students", "obj": "700"}]}
+{"id": "ont_1_university_test_13", "triples": [{"sub": "acharya institute of technology", "rel": "affiliation", "obj": "visvesvaraya technological university"}, {"sub": "visvesvaraya technological university", "rel": "country", "obj": "india"}, {"sub": "acharya institute of technology", "rel": "country", "obj": "india"}]}
+{"id": "ont_1_university_test_14", "triples": [{"sub": "soldevanahalli", "rel": "country", "obj": "india"}, {"sub": "acharya institute of technology", "rel": "country", "obj": "india"}]}
+{"id": "ont_1_university_test_15", "triples": [{"sub": "karnataka", "rel": "country", "obj": "india"}, {"sub": "acharya institute of technology", "rel": "country", "obj": "india"}]}
+{"id": "ont_1_university_test_16", "triples": []}
+{"id": "ont_1_university_test_17", "triples": [{"sub": "acharya institute of technology", "rel": "city", "obj": "bangalore"}, {"sub": "acharya institute of technology", "rel": "affiliation", "obj": "all india council for technical education"}]}
+{"id": "ont_1_university_test_18", "triples": [{"sub": "acharya institute of technology", "rel": "affiliation", "obj": "visvesvaraya technological university"}, {"sub": "visvesvaraya technological university", "rel": "campus", "obj": "bangalore"}]}
+{"id": "ont_1_university_test_19", "triples": [{"sub": "acharya institute of technology", "rel": "president", "obj": "b m reddy"}]}
+{"id": "ont_1_university_test_20", "triples": []}
+{"id": "ont_1_university_test_21", "triples": [{"sub": "awh engineering college at kerala", "rel": "academic staff size", "obj": "250"}, {"sub": "awh engineering college at kerala", "rel": "city", "obj": "kochi"}]}
+{"id": "ont_1_university_test_22", "triples": [{"sub": "kerala", "rel": "capital", "obj": "kochi"}]}
+{"id": "ont_1_university_test_23", "triples": [{"sub": "acharya institute of technology", "rel": "affiliation", "obj": "visvesvaraya technological university"}, {"sub": "visvesvaraya technological university", "rel": "campus", "obj": "belgaum"}]}
+{"id": "ont_1_university_test_24", "triples": [{"sub": "acharya institute of technology", "rel": "affiliation", "obj": "visvesvaraya technological university"}, {"sub": "acharya institute of technology", "rel": "city", "obj": "belgaum"}, {"sub": "acharya institute of technology", "rel": "number of postgraduate students", "obj": "700"}]}
+{"id": "ont_1_university_test_25", "triples": [{"sub": "acharya institute of technology", "rel": "affiliation", "obj": "visvesvaraya technological university"}, {"sub": "visvesvaraya technological university", "rel": "country", "obj": "india"}, {"sub": "acharya institute of technology", "rel": "country", "obj": "india"}]}
+{"id": "ont_1_university_test_26", "triples": []}
+{"id": "ont_1_university_test_27", "triples": [{"sub": "acharya institute of technology", "rel": "affiliation", "obj": "visvesvaraya technological university"}, {"sub": "visvesvaraya technological university", "rel": "campus", "obj": "bangalore"}]}
+{"id": "ont_1_university_test_28", "triples": [{"sub": "acharya institute of technology", "rel": "affiliation", "obj": "visvesvaraya technological university"}, {"sub": "visvesvaraya technological university", "rel": "campus", "obj": "bangalore"}]}
+{"id": "ont_1_university_test_29", "triples": []}
+{"id": "ont_1_university_test_30", "triples": [{"sub": "acharya institute of technology", "rel": "affiliation", "obj": "visvesvaraya technological university"}, {"sub": "acharya institute of technology", "rel": "campus", "obj": "soldevanahalli"}]}
+{"id": "ont_1_university_test_31", "triples": [{"sub": "the acharya institute of technology", "rel": "affiliation", "obj": "visvesvaraya technological university"}, {"sub": "the acharya institute of technology", "rel": "country", "obj": "india"}, {"sub": "visvesvaraya technological university", "rel": "country", "obj": "india"}]}
+{"id": "ont_1_university_test_32", "triples": [{"sub": "acharya institute of technology", "rel": "affiliation", "obj": "visvesvaraya technological university"}, {"sub": "visvesvaraya technological university", "rel": "campus", "obj": "mumbai"}]}
+{"id": "ont_1_university_test_33", "triples": []}
+{"id": "ont_1_university_test_34", "triples": [{"sub": "acharya institute of technology", "rel": "affiliation", "obj": "visvesvaraya technological university"}, {"sub": "visvesvaraya technological university", "rel": "campus", "obj": "bangalore"}]}
+{"id": "ont_1_university_test_35", "triples": [{"sub": "acharya institute of technology", "rel": "affiliation", "obj": "visvesvaraya technological university"}, {"sub": "acharya institute of technology", "rel": "campus", "obj": "soldevanahalli"}, {"sub": "acharya institute of technology", "rel": "city", "obj": "bangalore"}]}
+{"id": "ont_1_university_test_36", "triples": [{"sub": "acharya institute of technology", "rel": "affiliation", "obj": "visvesvaraya technological university"}]}
+{"id": "ont_1_university_test_37", "triples": []}
+{"id": "ont_1_university_test_38", "triples": [{"sub": "acharya institute of technology", "rel": "affiliation", "obj": "visvesvaraya technological university"}, {"sub": "all india council for technical education", "rel": "country", "obj": "india"}, {"sub": "acharya institute of technology", "rel": "country", "obj": "india"}, {"sub": "visvesvaraya technological university", "rel": "country", "obj": "india"}]}
+{"id": "ont_1_university_test_39", "triples": [{"sub": "acharya institute of technology", "rel": "affiliation", "obj": "visvesvaraya technological university"}, {"sub": "visvesvaraya technological university", "rel": "campus", "obj": "belgaum"}]}
+{"id": "ont_1_university_test_40", "triples": [{"sub": "acharya institute of technology", "rel": "affiliation", "obj": "visvesvaraya technological university"}]}
+{"id": "ont_1_university_test_41", "triples": [{"sub": "acharya institute of technology", "rel": "affiliation", "obj": "visvesvaraya technological university"}, {"sub": "acharya institute of technology", "rel": "campus", "obj": "soldevanahalli"}]}
+{"id": "ont_1_university_test_42", "triples": [{"sub": "acharya institute of technology", "rel": "affiliation", "obj": "visvesvaraya technological university"}]}
+{"id": "ont_1_university_test_43", "triples": []}
+{"id": "ont_1_university_test_44", "triples": [{"sub": "acharya institute of technology", "rel": "affiliation", "obj": "visvesvaraya technological university"}]}
+{"id": "ont_1_university_test_45", "triples": [{"sub": "acharya institute of technology", "rel": "affiliation", "obj": "visvesvaraya technological university"}, {"sub": "acharya institute of technology", "rel": "affiliation", "obj": "all india council for technical education"}]}
+{"id": "ont_1_university_test_46", "triples": [{"sub": "acharya institute of technology", "rel": "affiliation", "obj": "visvesvaraya technological university"}, {"sub": "acharya institute of technology", "rel": "number of postgraduate students", "obj": "700"}]}
+{"id": "ont_1_university_test_47", "triples": [{"sub": "acharya institute of technology", "rel": "affiliation", "obj": "visvesvaraya technological university"}]}
+{"id": "ont_1_university_test_48", "triples": [{"sub": "acharya institute of technology", "rel": "affiliation", "obj": "visvesvaraya technological university"}, {"sub": "acharya institute of technology", "rel": "campus", "obj": "soldevanahalli"}]}
+{"id": "ont_1_university_test_49", "triples": [{"sub": "acharya institute of technology", "rel": "campus", "obj": "soldevanahalli"}, {"sub": "bangalore", "rel": "country", "obj": "india"}, {"sub": "acharya institute of technology", "rel": "country", "obj": "india"}]}
+{"id": "ont_1_university_test_50", "triples": []}
+{"id": "ont_1_university_test_51", "triples": [{"sub": "acharya institute of technology", "rel": "city", "obj": "bangalore"}, {"sub": "acharya institute of technology", "rel": "country", "obj": "india"}]}
+{"id": "ont_1_university_test_52", "triples": [{"sub": "all india council for technical education", "rel": "location", "obj": "mumbai"}, {"sub": "acharya institute of technology", "rel": "affiliation", "obj": "visvesvaraya technological university"}, {"sub": "visvesvaraya technological university", "rel": "campus", "obj": "belgaum"}]}
+{"id": "ont_1_university_test_53", "triples": [{"sub": "acharya institute of technology", "rel": "city", "obj": "bangalore"}, {"sub": "karnataka", "rel": "capital", "obj": "bangalore"}]}
+{"id": "ont_1_university_test_54", "triples": [{"sub": "acharya institute of technology", "rel": "affiliation", "obj": "visvesvaraya technological university"}]}
+{"id": "ont_1_university_test_55", "triples": []}
+{"id": "ont_1_university_test_56", "triples": [{"sub": "all india council for technical education", "rel": "country", "obj": "india"}, {"sub": "acharya institute of technology", "rel": "country", "obj": "india"}]}
+{"id": "ont_1_university_test_57", "triples": [{"sub": "acharya institute of technology", "rel": "affiliation", "obj": "all india technical council for technical education"}]}
+{"id": "ont_1_university_test_58", "triples": []}
+{"id": "ont_1_university_test_59", "triples": [{"sub": "karnataka", "rel": "country", "obj": "india"}, {"sub": "acharya institute of technology", "rel": "country", "obj": "india"}, {"sub": "bangalore", "rel": "country", "obj": "india"}]}
+{"id": "ont_1_university_test_60", "triples": [{"sub": "acharya institute of technology", "rel": "affiliation", "obj": "visvesvaraya technological university"}]}
+{"id": "ont_1_university_test_61", "triples": [{"sub": "acharya institute of technology", "rel": "campus", "obj": "soldevanahalli"}, {"sub": "acharya institute of technology", "rel": "number of postgraduate students", "obj": "700"}]}
+{"id": "ont_1_university_test_62", "triples": [{"sub": "acharya institute of technology", "rel": "affiliation", "obj": "visvesvaraya technological university"}, {"sub": "all india council for technical education", "rel": "country", "obj": "india"}, {"sub": "visvesvaraya technological university", "rel": "country", "obj": "india"}]}
+{"id": "ont_1_university_test_63", "triples": [{"sub": "karnataka", "rel": "country", "obj": "india"}, {"sub": "acharya institute of technology", "rel": "country", "obj": "india"}]}
+{"id": "ont_1_university_test_64", "triples": [{"sub": "acharya institute of technology", "rel": "affiliation", "obj": "visvesvaraya technological university"}, {"sub": "acharya institute of technology", "rel": "affiliation", "obj": "all india council for technical education"}]}
+{"id": "ont_1_university_test_65", "triples": [{"sub": "acharya institute of technology", "rel": "affiliation", "obj": "visvesvaraya technological university"}, {"sub": "acharya institute of technology", "rel": "campus", "obj": "soldevanahalli"}, {"sub": "acharya institute of technology", "rel": "country", "obj": "india"}, {"sub": "visvesvaraya technological university", "rel": "country", "obj": "india"}]}
+{"id": "ont_1_university_test_66", "triples": [{"sub": "acharya institute of technology", "rel": "affiliation", "obj": "visvesvaraya technological university"}]}
+{"id": "ont_1_university_test_67", "triples": [{"sub": "acharya institute of technology", "rel": "affiliation", "obj": "visvesvaraya technological university"}, {"sub": "visvesvaraya technological university", "rel": "country", "obj": "india"}, {"sub": "acharya institute of technology", "rel": "country", "obj": "india"}]}
+{"id": "ont_1_university_test_68", "triples": [{"sub": "bangalore", "rel": "country", "obj": "india"}, {"sub": "acharya institute of technology", "rel": "country", "obj": "india"}]}
+{"id": "ont_1_university_test_69", "triples": [{"sub": "bangalore", "rel": "country", "obj": "india"}, {"sub": "acharya institute of technology", "rel": "country", "obj": "india"}]}
+{"id": "ont_1_university_test_70", "triples": []}
+{"id": "ont_1_university_test_71", "triples": []}

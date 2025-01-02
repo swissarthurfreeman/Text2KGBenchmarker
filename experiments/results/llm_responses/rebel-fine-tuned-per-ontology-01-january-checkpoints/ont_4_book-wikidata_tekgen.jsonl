@@ -1,0 +1,560 @@
+{"id": "ont_4_book_test_1", "triples": [{"sub": "peter and the piskies", "rel": "illustrator", "obj": "raymond briggs"}, {"sub": "peter and the piskies", "rel": "author", "obj": "ruth manning-sanders"}, {"sub": "peter and the piskies", "rel": "publication date", "obj": "01 january 1958"}]}
+{"id": "ont_4_book_test_2", "triples": [{"sub": "queen zixi of ix, or the story of the magic cloak", "rel": "illustrator", "obj": "frederick richardson"}, {"sub": "queen zixi of ix, or the story of the magic cloak", "rel": "author", "obj": "l. frank baum"}, {"sub": "queen zixi of ix, or the story of the magic cloak", "rel": "genre", "obj": "children's book"}]}
+{"id": "ont_4_book_test_3", "triples": [{"sub": "peter and the secret of rundoon", "rel": "illustrator", "obj": "greg call"}]}
+{"id": "ont_4_book_test_4", "triples": [{"sub": "the number devil", "rel": "illustrator", "obj": "rotraut susanne berner"}, {"sub": "the number devil", "rel": "publication date", "obj": "01 january 1997"}, {"sub": "the number devil", "rel": "author", "obj": "hans magnus enzensberger"}, {"sub": "the number devil", "rel": "language of work or name", "obj": "german"}]}
+{"id": "ont_4_book_test_5", "triples": [{"sub": "trudy cooper", "rel": "author", "obj": "danny murphy"}]}
+{"id": "ont_4_book_test_6", "triples": [{"sub": "always room for one more", "rel": "illustrator", "obj": "nonny hogrogian"}, {"sub": "always room for one more", "rel": "author", "obj": "sorche nic leodhas"}]}
+{"id": "ont_4_book_test_7", "triples": [{"sub": "howard pyle", "rel": "genre", "obj": "illustrations"}]}
+{"id": "ont_4_book_test_8", "triples": [{"sub": "nine days to christmas", "rel": "author", "obj": "aurora labastida"}, {"sub": "nine days to christmas", "rel": "author", "obj": "marie hall ets"}]}
+{"id": "ont_4_book_test_9", "triples": [{"sub": "eric carle", "rel": "author", "obj": "bill martin, jr."}]}
+{"id": "ont_4_book_test_10", "triples": [{"sub": "doctor dolittle's post office", "rel": "author", "obj": "hugh lofting"}, {"sub": "doctor dolittle", "rel": "author", "obj": "hugh lofting"}, {"sub": "doctor dolittle", "rel": "followed by", "obj": "doctor dolittle's post office"}]}
+{"id": "ont_4_book_test_11", "triples": [{"sub": "busybody nora", "rel": "illustrator", "obj": "susan jeschke"}, {"sub": "busybody nora", "rel": "author", "obj": "johanna hurwitz"}]}
+{"id": "ont_4_book_test_12", "triples": [{"sub": "the giving tree", "rel": "author", "obj": "shel silverstein"}]}
+{"id": "ont_4_book_test_13", "triples": []}
+{"id": "ont_4_book_test_14", "triples": [{"sub": "duffy and the devil", "rel": "author", "obj": "harvey fichstrom"}, {"sub": "duffy and the devil", "rel": "author", "obj": "margot zemach"}]}
+{"id": "ont_4_book_test_15", "triples": [{"sub": "little fur family", "rel": "publication date", "obj": "01 january 1946"}, {"sub": "little fur family", "rel": "illustrator", "obj": "garth williams"}, {"sub": "little fur family", "rel": "author", "obj": "margaret wise brown"}]}
+{"id": "ont_4_book_test_16", "triples": [{"sub": "all you need is kill", "rel": "illustrator", "obj": "yoshitoshi abe"}, {"sub": "all you need is kill", "rel": "author", "obj": "hiroshi sakurazaka"}]}
+{"id": "ont_4_book_test_17", "triples": [{"sub": "my friend rabbit", "rel": "author", "obj": "eric rohmann"}]}
+{"id": "ont_4_book_test_18", "triples": [{"sub": "inkdeath", "rel": "author", "obj": "cornelia funke"}, {"sub": "inkdeath", "rel": "publication date", "obj": "01 january 2007"}]}
+{"id": "ont_4_book_test_19", "triples": [{"sub": "diary of a spider", "rel": "illustrator", "obj": "harry bliss"}, {"sub": "diary of a spider", "rel": "author", "obj": "doreen cronin"}]}
+{"id": "ont_4_book_test_20", "triples": [{"sub": "kermit the hermit", "rel": "author", "obj": "bill peet"}]}
+{"id": "ont_4_book_test_21", "triples": [{"sub": "bannertail: the story of a gray squirrel", "rel": "genre", "obj": "children's novel"}, {"sub": "bannertail: the story of a gray squirrel", "rel": "author", "obj": "ernest thompson seton"}]}
+{"id": "ont_4_book_test_22", "triples": [{"sub": "baboushka and the three kings", "rel": "illustrator", "obj": "nicolas sidjakov"}, {"sub": "baboushka and the three kings", "rel": "publication date", "obj": "01 january 1960"}, {"sub": "baboushka and the three kings", "rel": "publisher", "obj": "parnassus press"}, {"sub": "baboushka and the three kings", "rel": "author", "obj": "ruth robbins"}]}
+{"id": "ont_4_book_test_23", "triples": []}
+{"id": "ont_4_book_test_24", "triples": []}
+{"id": "ont_4_book_test_25", "triples": [{"sub": "the man who walked between the towers", "rel": "author", "obj": "mordicai gerstein"}]}
+{"id": "ont_4_book_test_26", "triples": [{"sub": "cautionary tales for children", "rel": "followed by", "obj": "the bad child's book of beasts"}]}
+{"id": "ont_4_book_test_27", "triples": [{"sub": "flatland: a romance of many dimensions", "rel": "place of publication", "obj": "london"}, {"sub": "flatland: a romance of many dimensions", "rel": "author", "obj": "edwin abbott abbott"}, {"sub": "flatland: a romance of many dimensions", "rel": "publisher", "obj": "seeley & co."}, {"sub": "flatland: a romance of many dimensions", "rel": "publication date", "obj": "01 january 1884"}]}
+{"id": "ont_4_book_test_28", "triples": [{"sub": "doctor dolittle in the moon", "rel": "publication date", "obj": "01 january 1928"}, {"sub": "doctor dolittle in the moon", "rel": "genre", "obj": "children's book"}, {"sub": "doctor dolittle in the moon", "rel": "author", "obj": "hugh lofting"}]}
+{"id": "ont_4_book_test_29", "triples": [{"sub": "ginger pye", "rel": "author", "obj": "eleanor estes"}]}
+{"id": "ont_4_book_test_30", "triples": [{"sub": "horrid henry tricks the tooth fairy", "rel": "illustrator", "obj": "tony ross"}, {"sub": "horrid henry tricks the tooth fairy", "rel": "author", "obj": "francesca simon"}, {"sub": "horrid henry tricks the tooth fairy", "rel": "publication date", "obj": "01 january 1996"}]}
+{"id": "ont_4_book_test_31", "triples": []}
+{"id": "ont_4_book_test_32", "triples": [{"sub": "doctor dolittle's garden", "rel": "author", "obj": "hugh lofting"}]}
+{"id": "ont_4_book_test_33", "triples": [{"sub": "clay, skellig, kit's wilderness and the fire-eaters", "rel": "author", "obj": "david almond"}]}
+{"id": "ont_4_book_test_34", "triples": [{"sub": "a scandal in bohemia", "rel": "illustrator", "obj": "sidney paget"}]}
+{"id": "ont_4_book_test_35", "triples": [{"sub": "the little house", "rel": "publication date", "obj": "01 january 1942"}, {"sub": "the little house", "rel": "author", "obj": "virginia lee burton"}]}
+{"id": "ont_4_book_test_36", "triples": [{"sub": "the city of dreaming books", "rel": "language of work or name", "obj": "english"}, {"sub": "the city of dreaming books", "rel": "author", "obj": "john brownjohn"}, {"sub": "the city of dreaming books", "rel": "author", "obj": "walter moers"}]}
+{"id": "ont_4_book_test_37", "triples": [{"sub": "city of light, city of dark", "rel": "author", "obj": "avi"}, {"sub": "city of light, city of dark", "rel": "illustrator", "obj": "brian floca"}]}
+{"id": "ont_4_book_test_38", "triples": []}
+{"id": "ont_4_book_test_39", "triples": [{"sub": "room on the broom", "rel": "illustrator", "obj": "axel scheffler"}, {"sub": "room on the broom", "rel": "author", "obj": "julia donaldson"}]}
+{"id": "ont_4_book_test_40", "triples": [{"sub": "hajabarala", "rel": "language of work or name", "obj": "bengali"}, {"sub": "hajabarala", "rel": "author", "obj": "sukumar ray"}]}
+{"id": "ont_4_book_test_41", "triples": [{"sub": "house of odd", "rel": "illustrator", "obj": "queenie chan"}]}
+{"id": "ont_4_book_test_42", "triples": []}
+{"id": "ont_4_book_test_43", "triples": []}
+{"id": "ont_4_book_test_44", "triples": [{"sub": "in odd we trust", "rel": "illustrator", "obj": "koontz"}, {"sub": "in odd we trust", "rel": "author", "obj": "queenie chan"}]}
+{"id": "ont_4_book_test_45", "triples": [{"sub": "all in a day", "rel": "illustrator", "obj": "eric carle"}, {"sub": "all in a day", "rel": "illustrator", "obj": "nicolai ye"}, {"sub": "all in a day", "rel": "illustrator", "obj": "raymond briggs"}, {"sub": "all in a day", "rel": "illustrator", "obj": "anno"}]}
+{"id": "ont_4_book_test_46", "triples": [{"sub": "the son of neptune", "rel": "illustrator", "obj": "john rocco"}, {"sub": "the son of neptune", "rel": "publication date", "obj": "04 october 2011"}, {"sub": "the son of neptune", "rel": "publisher", "obj": "disney-hyperion"}]}
+{"id": "ont_4_book_test_47", "triples": [{"sub": "the jiro kuwata batmanga", "rel": "publisher", "obj": "comixology"}]}
+{"id": "ont_4_book_test_48", "triples": [{"sub": "the last hero", "rel": "publication date", "obj": "01 january 2001"}, {"sub": "the last hero", "rel": "illustrator", "obj": "paul kidby"}]}
+{"id": "ont_4_book_test_49", "triples": []}
+{"id": "ont_4_book_test_50", "triples": [{"sub": "a monster calls", "rel": "publication date", "obj": "01 january 2011"}]}
+{"id": "ont_4_book_test_51", "triples": []}
+{"id": "ont_4_book_test_52", "triples": [{"sub": "basil of baker street", "rel": "illustrator", "obj": "paul galdone"}, {"sub": "basil of baker street", "rel": "author", "obj": "eve titus"}]}
+{"id": "ont_4_book_test_53", "triples": [{"sub": "click, clack, quackity-quack: an alphabetical adventure", "rel": "illustrator", "obj": "betsy lewin"}, {"sub": "click, clack, quackity-quack: an alphabetical adventure", "rel": "author", "obj": "doreen cronin"}]}
+{"id": "ont_4_book_test_54", "triples": [{"sub": "peter and wendy", "rel": "author", "obj": "j. m. barrie"}]}
+{"id": "ont_4_book_test_55", "triples": [{"sub": "flambards in summer", "rel": "publication date", "obj": "01 january 1969"}]}
+{"id": "ont_4_book_test_56", "triples": [{"sub": "mike harding", "rel": "illustrator", "obj": "gray jolliffe"}]}
+{"id": "ont_4_book_test_57", "triples": [{"sub": "exploding kittens", "rel": "author", "obj": "shane small"}, {"sub": "exploding kittens", "rel": "author", "obj": "matthew inman"}, {"sub": "exploding kittens", "rel": "author", "obj": "elan lee"}]}
+{"id": "ont_4_book_test_58", "triples": [{"sub": "doctor dolittle's return", "rel": "author", "obj": "hugh lofting"}, {"sub": "doctor dolittle's return", "rel": "publication date", "obj": "01 january 1933"}]}
+{"id": "ont_4_book_test_59", "triples": [{"sub": "wombat divine", "rel": "publication date", "obj": "01 january 1995"}, {"sub": "wombat divine", "rel": "author", "obj": "mem fox"}]}
+{"id": "ont_4_book_test_60", "triples": [{"sub": "sylvester and the magic pebble", "rel": "author", "obj": "william steig"}, {"sub": "sylvester and the magic pebble", "rel": "genre", "obj": "children's picture book"}, {"sub": "sylvester and the magic pebble", "rel": "publication date", "obj": "01 january 1969"}, {"sub": "sylvester and the magic pebble", "rel": "illustrator", "obj": "william steig"}]}
+{"id": "ont_4_book_test_61", "triples": [{"sub": "bolshaya rossiyskaya entsiklopediya", "rel": "publication date", "obj": "01 january 2002"}]}
+{"id": "ont_4_book_test_62", "triples": [{"sub": "privateer 2: the darkening", "rel": "publication date", "obj": "01 january 1996"}]}
+{"id": "ont_4_book_test_63", "triples": []}
+{"id": "ont_4_book_test_64", "triples": [{"sub": "doremi fantasy", "rel": "publication date", "obj": "01 january 1996"}]}
+{"id": "ont_4_book_test_65", "triples": [{"sub": "warlords battlecry iii", "rel": "publication date", "obj": "01 january 2004"}]}
+{"id": "ont_4_book_test_66", "triples": []}
+{"id": "ont_4_book_test_67", "triples": [{"sub": "poker night 2", "rel": "publication date", "obj": "01 january 2013"}]}
+{"id": "ont_4_book_test_68", "triples": [{"sub": "soulstorm", "rel": "followed by", "obj": "oddworld: soulstorm"}]}
+{"id": "ont_4_book_test_69", "triples": []}
+{"id": "ont_4_book_test_70", "triples": [{"sub": "schizm ii: chameleon", "rel": "followed by", "obj": "mysterious journey ii"}]}
+{"id": "ont_4_book_test_71", "triples": []}
+{"id": "ont_4_book_test_72", "triples": [{"sub": "kessen ii", "rel": "followed by", "obj": "kessen iii"}]}
+{"id": "ont_4_book_test_73", "triples": [{"sub": "kessen ii", "rel": "followed by", "obj": "kessen iii"}]}
+{"id": "ont_4_book_test_74", "triples": [{"sub": "the denpa men 2: beyond the waves", "rel": "followed by", "obj": "the denpa men"}]}
+{"id": "ont_4_book_test_75", "triples": [{"sub": "windows mobile", "rel": "followed by", "obj": "windows phone"}]}
+{"id": "ont_4_book_test_76", "triples": [{"sub": "sonic adventure 2", "rel": "publication date", "obj": "01 january 2001"}]}
+{"id": "ont_4_book_test_77", "triples": [{"sub": "gradius ii", "rel": "followed by", "obj": "gradius iii"}]}
+{"id": "ont_4_book_test_78", "triples": [{"sub": "ace driver: victory lap", "rel": "followed by", "obj": "ace driver 3: final turn"}]}
+{"id": "ont_4_book_test_79", "triples": [{"sub": "final fantasy x-2", "rel": "publication date", "obj": "13 march 2003"}]}
+{"id": "ont_4_book_test_80", "triples": [{"sub": "blackberry 10", "rel": "publication date", "obj": "01 january 2013"}]}
+{"id": "ont_4_book_test_81", "triples": [{"sub": "windows 2000", "rel": "followed by", "obj": "windows xp"}]}
+{"id": "ont_4_book_test_82", "triples": [{"sub": "mobileme", "rel": "followed by", "obj": "icloud"}]}
+{"id": "ont_4_book_test_83", "triples": [{"sub": "gran turismo concept", "rel": "followed by", "obj": "gran turismo 5 prologue"}]}
+{"id": "ont_4_book_test_84", "triples": [{"sub": "lands of lore iii", "rel": "publication date", "obj": "01 january 1999"}]}
+{"id": "ont_4_book_test_85", "triples": [{"sub": "day of the tentacle", "rel": "publication date", "obj": "01 january 1993"}]}
+{"id": "ont_4_book_test_86", "triples": [{"sub": "millennium 2.2", "rel": "followed by", "obj": "bird's deuteros"}]}
+{"id": "ont_4_book_test_87", "triples": [{"sub": "ecstatica ii", "rel": "publication date", "obj": "01 january 1997"}]}
+{"id": "ont_4_book_test_88", "triples": [{"sub": "diablo iii", "rel": "publication date", "obj": "15 may 2012"}]}
+{"id": "ont_4_book_test_89", "triples": [{"sub": "windows xp", "rel": "followed by", "obj": "windows server 2003"}, {"sub": "windows 2000", "rel": "followed by", "obj": "windows xp"}]}
+{"id": "ont_4_book_test_90", "triples": []}
+{"id": "ont_4_book_test_91", "triples": [{"sub": "final fantasy xiii-2", "rel": "publication date", "obj": "01 december 2011"}]}
+{"id": "ont_4_book_test_92", "triples": [{"sub": "killzone 2", "rel": "followed by", "obj": "killzone 3"}]}
+{"id": "ont_4_book_test_93", "triples": [{"sub": "zork i", "rel": "followed by", "obj": "zork iii"}, {"sub": "zork ii", "rel": "followed by", "obj": "zork iii"}, {"sub": "zork i", "rel": "followed by", "obj": "zork ii"}]}
+{"id": "ont_4_book_test_94", "triples": [{"sub": "the lions of al-rassan", "rel": "followed by", "obj": "the last light of the sun"}]}
+{"id": "ont_4_book_test_95", "triples": [{"sub": "outlook express", "rel": "followed by", "obj": "windows mail"}]}
+{"id": "ont_4_book_test_96", "triples": []}
+{"id": "ont_4_book_test_97", "triples": [{"sub": "hatoful boyfriend: holiday star", "rel": "publication date", "obj": "29 december 2011"}]}
+{"id": "ont_4_book_test_98", "triples": [{"sub": "tropico 2", "rel": "followed by", "obj": "tropico 3"}]}
+{"id": "ont_4_book_test_99", "triples": [{"sub": "unreal tournament 2003", "rel": "followed by", "obj": "unreal tournament 2004"}]}
+{"id": "ont_4_book_test_100", "triples": [{"sub": "champions of krynn", "rel": "followed by", "obj": "the dark queen of krynn"}]}
+{"id": "ont_4_book_test_101", "triples": []}
+{"id": "ont_4_book_test_102", "triples": []}
+{"id": "ont_4_book_test_103", "triples": [{"sub": "puzzle quest : challenge of the warlords", "rel": "followed by", "obj": "puzzle quest 2"}]}
+{"id": "ont_4_book_test_104", "triples": [{"sub": "the abyss beyond dreams", "rel": "followed by", "obj": "night without stars"}, {"sub": "the abyss beyond dreams", "rel": "publication date", "obj": "01 january 2014"}]}
+{"id": "ont_4_book_test_105", "triples": []}
+{"id": "ont_4_book_test_106", "triples": [{"sub": "magicka 2", "rel": "publication date", "obj": "09 june 2014"}]}
+{"id": "ont_4_book_test_107", "triples": []}
+{"id": "ont_4_book_test_108", "triples": [{"sub": "sonic 3 & knuckles", "rel": "followed by", "obj": "sonic & knuckles"}]}
+{"id": "ont_4_book_test_109", "triples": [{"sub": "audiosurf 2", "rel": "publication date", "obj": "02 october 2013"}]}
+{"id": "ont_4_book_test_110", "triples": []}
+{"id": "ont_4_book_test_111", "triples": []}
+{"id": "ont_4_book_test_112", "triples": [{"sub": "the best american poetry 2004", "rel": "editor", "obj": "david lehman"}]}
+{"id": "ont_4_book_test_113", "triples": [{"sub": "the best american poetry 1994", "rel": "editor", "obj": "a. r. ammons"}, {"sub": "the best american poetry 1994", "rel": "editor", "obj": "david lehman"}]}
+{"id": "ont_4_book_test_114", "triples": [{"sub": "divine worship", "rel": "publication date", "obj": "29 november 2015"}]}
+{"id": "ont_4_book_test_115", "triples": [{"sub": "millennium bible", "rel": "publication date", "obj": "01 january 1965"}]}
+{"id": "ont_4_book_test_116", "triples": [{"sub": "a small killing", "rel": "publication date", "obj": "01 january 1991"}, {"sub": "a small killing", "rel": "genre", "obj": "graphic novel"}, {"sub": "a small killing", "rel": "author", "obj": "alan moore"}]}
+{"id": "ont_4_book_test_117", "triples": [{"sub": "the penguin book of modern african poetry", "rel": "publication date", "obj": "01 january 1984"}, {"sub": "the penguin book of modern african poetry", "rel": "editor", "obj": "ulli beier"}, {"sub": "the penguin book of modern african poetry", "rel": "editor", "obj": "gerald moore"}]}
+{"id": "ont_4_book_test_118", "triples": [{"sub": "meikai kokugo jiten", "rel": "publication date", "obj": "01 january 1972"}]}
+{"id": "ont_4_book_test_119", "triples": [{"sub": "four dissertations", "rel": "publication date", "obj": "01 january 1757"}, {"sub": "four dissertations", "rel": "author", "obj": "david hume"}]}
+{"id": "ont_4_book_test_120", "triples": [{"sub": "the harvill book of twentieth-century poetry in english", "rel": "language of work or name", "obj": "english"}, {"sub": "the harvill book of twentieth-century poetry in english", "rel": "genre", "obj": "poetry anthology"}, {"sub": "the harvill book of twentieth-century poetry in english", "rel": "publication date", "obj": "01 january 1999"}, {"sub": "the harvill book of twentieth-century poetry in english", "rel": "editor", "obj": "michael schmidt"}]}
+{"id": "ont_4_book_test_121", "triples": [{"sub": "biographical dictionary of the common law", "rel": "publisher", "obj": "butterworths"}, {"sub": "biographical dictionary of the common law", "rel": "genre", "obj": "biographical dictionary"}, {"sub": "biographical dictionary of the common law", "rel": "author", "obj": "a. w. simpson"}, {"sub": "biographical dictionary of the common law", "rel": "genre", "obj": "legal biography"}, {"sub": "biographical dictionary of the common law", "rel": "publication date", "obj": "01 january 1984"}]}
+{"id": "ont_4_book_test_122", "triples": [{"sub": "shakti", "rel": "publication date", "obj": "01 january 2014"}]}
+{"id": "ont_4_book_test_123", "triples": [{"sub": "interchange file format", "rel": "publication date", "obj": "01 january 1985"}]}
+{"id": "ont_4_book_test_124", "triples": []}
+{"id": "ont_4_book_test_125", "triples": [{"sub": "the new york times manual of style and usage", "rel": "author", "obj": "allan m. siegal"}, {"sub": "the new york times manual of style and usage", "rel": "author", "obj": "william g. connolly"}, {"sub": "the new york times manual of style and usage", "rel": "publication date", "obj": "01 january 1950"}]}
+{"id": "ont_4_book_test_126", "triples": [{"sub": "julio's day", "rel": "publication date", "obj": "01 may 2013"}, {"sub": "julio's day", "rel": "author", "obj": "gilbert hernandez"}]}
+{"id": "ont_4_book_test_127", "triples": []}
+{"id": "ont_4_book_test_128", "triples": [{"sub": "alias the cat", "rel": "author", "obj": "kim deitch"}, {"sub": "alias the cat", "rel": "publisher", "obj": "pantheon books"}, {"sub": "alias the cat", "rel": "publication date", "obj": "01 january 2007"}]}
+{"id": "ont_4_book_test_129", "triples": [{"sub": "encyclopedia of fantasy", "rel": "author", "obj": "john clute"}, {"sub": "encyclopedia of fantasy", "rel": "publication date", "obj": "01 january 1997"}, {"sub": "encyclopedia of fantasy", "rel": "author", "obj": "john grant"}]}
+{"id": "ont_4_book_test_130", "triples": [{"sub": "the nightmare factory: volume 2, 2008", "rel": "author", "obj": "thomas ligotti"}, {"sub": "the nightmare factory: volume 2, 2008", "rel": "publisher", "obj": "fox atomic comics"}, {"sub": "the nightmare factory: volume 2, 2008", "rel": "publication date", "obj": "01 january 2008"}]}
+{"id": "ont_4_book_test_131", "triples": [{"sub": "the alternate asimovs", "rel": "author", "obj": "isaac asimov"}]}
+{"id": "ont_4_book_test_132", "triples": [{"sub": "carnet de voyage", "rel": "author", "obj": "craig thompson"}, {"sub": "carnet de voyage", "rel": "publication date", "obj": "01 january 2004"}]}
+{"id": "ont_4_book_test_133", "triples": []}
+{"id": "ont_4_book_test_134", "triples": [{"sub": "bread and wine: an erotic tale of new york", "rel": "publication date", "obj": "01 january 1999"}, {"sub": "bread and wine: an erotic tale of new york", "rel": "author", "obj": "samuel r. delany"}, {"sub": "bread and wine: an erotic tale of new york", "rel": "illustrator", "obj": "mia wolff"}]}
+{"id": "ont_4_book_test_135", "triples": [{"sub": "film", "rel": "publication date", "obj": "01 january 2007"}]}
+{"id": "ont_4_book_test_136", "triples": [{"sub": "the cambridge guide to women's writing in english", "rel": "publication date", "obj": "01 january 1999"}]}
+{"id": "ont_4_book_test_137", "triples": [{"sub": "bergen byleksikon", "rel": "publication date", "obj": "01 january 1994"}, {"sub": "bergen byleksikon", "rel": "author", "obj": "gunnar hagen hartvedt"}]}
+{"id": "ont_4_book_test_138", "triples": []}
+{"id": "ont_4_book_test_139", "triples": [{"sub": "the best american poetry 1988", "rel": "editor", "obj": "john ashbery"}, {"sub": "the best american poetry 1988", "rel": "editor", "obj": "david lehman"}]}
+{"id": "ont_4_book_test_140", "triples": []}
+{"id": "ont_4_book_test_141", "triples": [{"sub": "wolverine/nick fury: the scorpio connection", "rel": "publisher", "obj": "marvel comics"}, {"sub": "wolverine/nick fury: the scorpio connection", "rel": "publication date", "obj": "01 january 1989"}]}
+{"id": "ont_4_book_test_142", "triples": [{"sub": "this one summer", "rel": "publisher", "obj": "first second books"}, {"sub": "this one summer", "rel": "illustrator", "obj": "jillian tamaki"}, {"sub": "this one summer", "rel": "author", "obj": "mariko tamaki"}, {"sub": "this one summer", "rel": "publication date", "obj": "01 january 2014"}]}
+{"id": "ont_4_book_test_143", "triples": [{"sub": "canadian oxford dictionary", "rel": "language of work or name", "obj": "canadian english"}, {"sub": "canadian oxford dictionary", "rel": "publication date", "obj": "01 january 1998"}, {"sub": "canadian oxford dictionary", "rel": "publisher", "obj": "oxford university press canada"}]}
+{"id": "ont_4_book_test_144", "triples": [{"sub": "anthology of twentieth-century british and irish poetry", "rel": "editor", "obj": "keith tuma"}, {"sub": "anthology of twentieth-century british and irish poetry", "rel": "publisher", "obj": "oxford university press"}, {"sub": "anthology of twentieth-century british and irish poetry", "rel": "publication date", "obj": "01 january 2001"}]}
+{"id": "ont_4_book_test_145", "triples": [{"sub": "monthly comic flapper", "rel": "publication date", "obj": "05 november 1999"}]}
+{"id": "ont_4_book_test_146", "triples": [{"sub": "1st edition sanseid\u00e5\u008d kokugo jiten", "rel": "followed by", "obj": "2nd-5th editions"}]}
+{"id": "ont_4_book_test_147", "triples": [{"sub": "the nihongo daijiten", "rel": "publication date", "obj": "01 january 1989"}]}
+{"id": "ont_4_book_test_148", "triples": [{"sub": "a slip of the keyboard", "rel": "author", "obj": "neil gaiman"}, {"sub": "a slip of the keyboard", "rel": "publication date", "obj": "01 january 2014"}]}
+{"id": "ont_4_book_test_150", "triples": [{"sub": "tajik soviet encyclopedia", "rel": "publication date", "obj": "01 january 1978"}]}
+{"id": "ont_4_book_test_151", "triples": [{"sub": "norsk salmebok 2013: for kirke og hjem", "rel": "publication date", "obj": "01 january 2013"}]}
+{"id": "ont_4_book_test_152", "triples": [{"sub": "oxford dictionary of byzantium", "rel": "publication date", "obj": "01 january 1991"}, {"sub": "oxford dictionary of byzantium", "rel": "editor", "obj": "alexander kazhdan"}]}
+{"id": "ont_4_book_test_153", "triples": []}
+{"id": "ont_4_book_test_154", "triples": [{"sub": "sagan om sune", "rel": "author", "obj": "s\u00e3\u00b6ren olsson"}, {"sub": "sagan om sune", "rel": "publication date", "obj": "01 january 1984"}, {"sub": "sagan om sune", "rel": "author", "obj": "anders jacobsson"}, {"sub": "sagan om sune", "rel": "language of work or name", "obj": "swedish"}]}
+{"id": "ont_4_book_test_155", "triples": [{"sub": "welsh academy encyclopaedia of wales", "rel": "publication date", "obj": "01 january 2008"}, {"sub": "welsh academy encyclopaedia of wales", "rel": "genre", "obj": "encyclopaedia"}]}
+{"id": "ont_4_book_test_156", "triples": []}
+{"id": "ont_4_book_test_157", "triples": [{"sub": "alfie and his secret friend", "rel": "publication date", "obj": "01 january 1976"}, {"sub": "alfie and his secret friend", "rel": "author", "obj": "gunilla bergstr\u00e3\u00b6m"}, {"sub": "alfie and his secret friend", "rel": "language of work or name", "obj": "swedish"}]}
+{"id": "ont_4_book_test_158", "triples": [{"sub": "the cardboard valise", "rel": "publisher", "obj": "pantheon books"}, {"sub": "the cardboard valise", "rel": "publication date", "obj": "01 january 2011"}]}
+{"id": "ont_4_book_test_159", "triples": [{"sub": "elektra lives again", "rel": "publication date", "obj": "01 january 1990"}, {"sub": "elektra lives again", "rel": "author", "obj": "frank miller"}, {"sub": "elektra lives again", "rel": "author", "obj": "lynn varley"}, {"sub": "elektra lives again", "rel": "publisher", "obj": "marvel comics"}, {"sub": "elektra lives again", "rel": "publisher", "obj": "epic comics"}]}
+{"id": "ont_4_book_test_160", "triples": [{"sub": "dictionnaire des ouvrages anonymes et pseudonymes", "rel": "author", "obj": "antoine alexandre barbier"}, {"sub": "dictionnaire des ouvrages anonymes et pseudonymes", "rel": "language of work or name", "obj": "latin"}, {"sub": "dictionnaire des ouvrages anonymes et pseudonymes", "rel": "genre", "obj": "dictionary"}, {"sub": "dictionnaire des ouvrages anonymes et pseudonymes", "rel": "language of work or name", "obj": "french"}]}
+{"id": "ont_4_book_test_161", "triples": [{"sub": "hymns for the amusement of children", "rel": "author", "obj": "christopher smart"}]}
+{"id": "ont_4_book_test_162", "triples": [{"sub": "violent cases", "rel": "author", "obj": "neil gaiman"}, {"sub": "violent cases", "rel": "illustrator", "obj": "dave mckean"}]}
+{"id": "ont_4_book_test_163", "triples": [{"sub": "duden ([dudn])", "rel": "publication date", "obj": "01 january 1880"}, {"sub": "duden ([dudn])", "rel": "language of work or name", "obj": "german"}, {"sub": "duden ([dudn])", "rel": "genre", "obj": "dictionary"}, {"sub": "duden ([dudn])", "rel": "author", "obj": "konrad duden"}]}
+{"id": "ont_4_book_test_164", "triples": [{"sub": "terry and the gunrunners", "rel": "author", "obj": "bob kerr"}, {"sub": "terry and the gunrunners", "rel": "author", "obj": "stephen ballantyne"}]}
+{"id": "ont_4_book_test_165", "triples": [{"sub": "a new concordance of the bible", "rel": "publication date", "obj": "01 january 1977"}]}
+{"id": "ont_4_book_test_166", "triples": [{"sub": "dropsie avenue", "rel": "publication date", "obj": "01 january 1995"}, {"sub": "dropsie avenue", "rel": "author", "obj": "will eisner"}]}
+{"id": "ont_4_book_test_167", "triples": [{"sub": "star trek encyclopedia", "rel": "author", "obj": "michael okuda"}, {"sub": "star trek encyclopedia", "rel": "author", "obj": "denise okuda"}]}
+{"id": "ont_4_book_test_168", "triples": [{"sub": "superman: peace on earth", "rel": "author", "obj": "alex ross"}, {"sub": "superman: peace on earth", "rel": "author", "obj": "paul dini"}]}
+{"id": "ont_4_book_test_169", "triples": [{"sub": "a cauldron of witches", "rel": "author", "obj": "ruth manning-sanders"}, {"sub": "a cauldron of witches", "rel": "publication date", "obj": "01 january 1988"}]}
+{"id": "ont_4_book_test_171", "triples": []}
+{"id": "ont_4_book_test_172", "triples": [{"sub": "berts ytterligare betraktelser", "rel": "publication date", "obj": "01 january 1991"}]}
+{"id": "ont_4_book_test_173", "triples": [{"sub": "bert och boysen", "rel": "publication date", "obj": "01 january 1996"}]}
+{"id": "ont_4_book_test_174", "triples": [{"sub": "interlingua a prime vista", "rel": "author", "obj": "alexander gode"}, {"sub": "interlingua a prime vista", "rel": "publication date", "obj": "01 january 1954"}]}
+{"id": "ont_4_book_test_175", "triples": [{"sub": "my favorite thing is monsters", "rel": "author", "obj": "emil ferris"}]}
+{"id": "ont_4_book_test_176", "triples": [{"sub": "fem unga", "rel": "author", "obj": "artur lundkvist"}, {"sub": "fem unga", "rel": "author", "obj": "erik asklund"}, {"sub": "fem unga", "rel": "author", "obj": "harry martinson"}, {"sub": "fem unga", "rel": "publication date", "obj": "01 january 1929"}, {"sub": "fem unga", "rel": "author", "obj": "josef kjellgren"}, {"sub": "fem unga", "rel": "author", "obj": "gustav sandgren"}]}
+{"id": "ont_4_book_test_177", "triples": [{"sub": "kinsky-halm catalogue", "rel": "followed by", "obj": "hess and grove"}]}
+{"id": "ont_4_book_test_178", "triples": [{"sub": "bloodstar", "rel": "illustrator", "obj": "richard corben"}]}
+{"id": "ont_4_book_test_180", "triples": [{"sub": "dark visions", "rel": "author", "obj": "dan simmons"}, {"sub": "dark visions", "rel": "author", "obj": "stephen king"}, {"sub": "dark visions", "rel": "author", "obj": "george r. r. martin"}]}
+{"id": "ont_4_book_test_181", "triples": []}
+{"id": "ont_4_book_test_182", "triples": [{"sub": "love and rockets x", "rel": "author", "obj": "gilbert hernandez"}]}
+{"id": "ont_4_book_test_183", "triples": []}
+{"id": "ont_4_book_test_184", "triples": [{"sub": "politics and the english language", "rel": "author", "obj": "george orwell"}, {"sub": "politics and the english language", "rel": "language of work or name", "obj": "english"}]}
+{"id": "ont_4_book_test_185", "triples": [{"sub": "scary godmother", "rel": "publisher", "obj": "sirius entertainment"}, {"sub": "scary godmother", "rel": "author", "obj": "jill thompson"}, {"sub": "scary godmother", "rel": "publication date", "obj": "01 january 1997"}]}
+{"id": "ont_4_book_test_186", "triples": [{"sub": "jovan du\u010di\u0107", "rel": "author", "obj": "veljko petrovi\u0107"}]}
+{"id": "ont_4_book_test_187", "triples": []}
+{"id": "ont_4_book_test_188", "triples": [{"sub": "an introduction to animals and political theory", "rel": "author", "obj": "alasdair cochrane"}, {"sub": "an introduction to animals and political theory", "rel": "publication date", "obj": "01 january 2010"}]}
+{"id": "ont_4_book_test_189", "triples": [{"sub": "david boring", "rel": "author", "obj": "daniel clowes"}]}
+{"id": "ont_4_book_test_190", "triples": [{"sub": "good-bye to all that", "rel": "genre", "obj": "autobiography"}, {"sub": "good-bye to all that", "rel": "author", "obj": "robert graves"}, {"sub": "good-bye to all that", "rel": "publication date", "obj": "01 january 1929"}]}
+{"id": "ont_4_book_test_191", "triples": [{"sub": "jla: earth 2", "rel": "author", "obj": "frank quitely"}, {"sub": "jla: earth 2", "rel": "publication date", "obj": "01 january 2000"}, {"sub": "jla: earth 2", "rel": "author", "obj": "grant morrison"}]}
+{"id": "ont_4_book_test_192", "triples": [{"sub": "professor shonkur kandokarkhana", "rel": "author", "obj": "satyajit ray"}, {"sub": "professor shonkur kandokarkhana", "rel": "publication date", "obj": "01 january 1970"}, {"sub": "professor shonkur kandokarkhana", "rel": "characters", "obj": "professor shanku"}, {"sub": "professor shonkur kandokarkhana", "rel": "publisher", "obj": "ananda publishers"}, {"sub": "professor shonkur kandokarkhana", "rel": "language of work or name", "obj": "bengali"}]}
+{"id": "ont_4_book_test_193", "triples": [{"sub": "how to talk to girls at parties", "rel": "author", "obj": "neil gaiman"}, {"sub": "how to talk to girls at parties", "rel": "publication date", "obj": "01 january 2006"}]}
+{"id": "ont_4_book_test_194", "triples": [{"sub": "future history", "rel": "author", "obj": "robert a. heinlein"}, {"sub": "future history", "rel": "genre", "obj": "science fiction"}, {"sub": "the past through tomorrow", "rel": "author", "obj": "robert a. heinlein"}]}
+{"id": "ont_4_book_test_195", "triples": [{"sub": "robert b. leighton", "rel": "author", "obj": "matthew sands"}]}
+{"id": "ont_4_book_test_196", "triples": [{"sub": "batman: arkham asylum", "rel": "characters", "obj": "batman"}, {"sub": "batman: arkham asylum", "rel": "author", "obj": "grant morrison"}, {"sub": "batman: arkham asylum", "rel": "illustrator", "obj": "dave mckean"}]}
+{"id": "ont_4_book_test_197", "triples": [{"sub": "geschiedenis der vaderlandsche schilderkunst", "rel": "author", "obj": "adriaan van der willigen"}]}
+{"id": "ont_4_book_test_198", "triples": [{"sub": "quark/4", "rel": "editor", "obj": "marilyn hacker"}, {"sub": "quark/4", "rel": "publication date", "obj": "01 january 1971"}, {"sub": "quark/4", "rel": "editor", "obj": "samuel r. delany"}]}
+{"id": "ont_4_book_test_199", "triples": [{"sub": "zhongyuan yinyun", "rel": "author", "obj": "zhou deqing"}, {"sub": "zhongyuan yinyun", "rel": "publication date", "obj": "01 january 1324"}]}
+{"id": "ont_4_book_test_200", "triples": [{"sub": "poem strip", "rel": "author", "obj": "dino buzzati"}, {"sub": "poem strip", "rel": "publication date", "obj": "01 january 1969"}, {"sub": "poem strip", "rel": "language of work or name", "obj": "italian"}]}
+{"id": "ont_4_book_test_201", "triples": [{"sub": "shiroi heya no futari", "rel": "author", "obj": "ryoko yamagishi"}, {"sub": "shiroi heya no futari", "rel": "genre", "obj": "yuri manga"}, {"sub": "shiroi heya no futari", "rel": "author", "obj": "year 24 group"}]}
+{"id": "ont_4_book_test_202", "triples": [{"sub": "hip hop family tree", "rel": "author", "obj": "ed piskor"}]}
+{"id": "ont_4_book_test_203", "triples": []}
+{"id": "ont_4_book_test_204", "triples": [{"sub": "quark/1", "rel": "editor", "obj": "marilyn hacker"}, {"sub": "quark/1", "rel": "editor", "obj": "samuel r. delany"}, {"sub": "quark/1", "rel": "publication date", "obj": "01 january 1970"}]}
+{"id": "ont_4_book_test_205", "triples": [{"sub": "genevan psalter", "rel": "language of work or name", "obj": "french"}, {"sub": "genevan psalter", "rel": "author", "obj": "john calvin"}]}
+{"id": "ont_4_book_test_206", "triples": [{"sub": "death: the high cost of living", "rel": "illustrator", "obj": "mark buckingham"}, {"sub": "death: the high cost of living", "rel": "illustrator", "obj": "chris bachalo"}, {"sub": "death: the high cost of living", "rel": "author", "obj": "neil gaiman"}]}
+{"id": "ont_4_book_test_207", "triples": [{"sub": "american born chinese", "rel": "author", "obj": "gene luen yang"}]}
+{"id": "ont_4_book_test_209", "triples": [{"sub": "for marx", "rel": "author", "obj": "louis althusser"}, {"sub": "for marx", "rel": "publication date", "obj": "01 january 1965"}]}
+{"id": "ont_4_book_test_210", "triples": [{"sub": "wagner-werk-verzeichnis", "rel": "author", "obj": "martin geck"}, {"sub": "wagner-werk-verzeichnis", "rel": "author", "obj": "john deathridge"}, {"sub": "wagner-werk-verzeichnis", "rel": "author", "obj": "egon voss"}]}
+{"id": "ont_4_book_test_211", "triples": [{"sub": "authors of plant names", "rel": "author", "obj": "brummitt & powell"}]}
+{"id": "ont_4_book_test_212", "triples": [{"sub": "prodromus astronomiae", "rel": "publication date", "obj": "01 january 1690"}, {"sub": "prodromus astronomiae", "rel": "author", "obj": "johannes hevelius"}, {"sub": "prodromus astronomiae", "rel": "author", "obj": "elisabeth hevelius"}]}
+{"id": "ont_4_book_test_213", "triples": [{"sub": "new moon: the graphic novel", "rel": "author", "obj": "young kim"}, {"sub": "new moon", "rel": "author", "obj": "stephenie meyer"}, {"sub": "new moon", "rel": "publication date", "obj": "01 january 2006"}]}
+{"id": "ont_4_book_test_214", "triples": [{"sub": "the lives of flemish, german, and dutch painters", "rel": "author", "obj": "jean-baptiste descamps"}, {"sub": "the lives of flemish, german, and dutch painters", "rel": "illustrator", "obj": "charles eisen"}]}
+{"id": "ont_4_book_test_216", "triples": [{"sub": "poison river", "rel": "author", "obj": "gilbert hernandez"}, {"sub": "poison river", "rel": "publication date", "obj": "01 january 1994"}]}
+{"id": "ont_4_book_test_217", "triples": [{"sub": "roget's thesaurus", "rel": "publication date", "obj": "01 january 1805"}, {"sub": "roget's thesaurus", "rel": "author", "obj": "peter mark roget"}, {"sub": "roget's thesaurus", "rel": "language of work or name", "obj": "english"}]}
+{"id": "ont_4_book_test_219", "triples": [{"sub": "dc universe: the stories of alan moore", "rel": "publication date", "obj": "01 january 2006"}]}
+{"id": "ont_4_book_test_220", "triples": [{"sub": "two-fisted tales", "rel": "publisher", "obj": "ec comics"}]}
+{"id": "ont_4_book_test_221", "triples": [{"sub": "oxford dictionary of saints", "rel": "publisher", "obj": "oxford university press"}]}
+{"id": "ont_4_book_test_222", "triples": [{"sub": "the shorter oxford english dictionary", "rel": "publisher", "obj": "oxford university press"}, {"sub": "the shorter oxford english dictionary", "rel": "language of work or name", "obj": "english"}]}
+{"id": "ont_4_book_test_223", "triples": [{"sub": "killing commendatore", "rel": "publication date", "obj": "24 february 2017"}]}
+{"id": "ont_4_book_test_224", "triples": [{"sub": "encyclopedia of american studies", "rel": "publisher", "obj": "american studies association"}, {"sub": "encyclopedia of american studies", "rel": "publication date", "obj": "01 january 2003"}, {"sub": "encyclopedia of american studies", "rel": "publisher", "obj": "johns hopkins university press"}]}
+{"id": "ont_4_book_test_225", "triples": [{"sub": "no straight lines", "rel": "publication date", "obj": "01 august 2012"}, {"sub": "no straight lines", "rel": "author", "obj": "justin hall"}, {"sub": "no straight lines", "rel": "publisher", "obj": "fantagraphics books"}]}
+{"id": "ont_4_book_test_226", "triples": [{"sub": "the oxford dictionary of islam", "rel": "publisher", "obj": "oxford university press"}, {"sub": "the oxford dictionary of islam", "rel": "editor", "obj": "john esposito"}]}
+{"id": "ont_4_book_test_227", "triples": [{"sub": "standard catalog of world coins", "rel": "publisher", "obj": "active interest media"}, {"sub": "standard catalog of world coins", "rel": "publisher", "obj": "krause publications"}]}
+{"id": "ont_4_book_test_228", "triples": [{"sub": "young champion", "rel": "publisher", "obj": "akita shoten"}, {"sub": "young champion", "rel": "place of publication", "obj": "tokyo"}]}
+{"id": "ont_4_book_test_229", "triples": []}
+{"id": "ont_4_book_test_230", "triples": [{"sub": "sensation comics", "rel": "publisher", "obj": "dc comics"}]}
+{"id": "ont_4_book_test_231", "triples": [{"sub": "tintin", "rel": "publisher", "obj": "casterman"}]}
+{"id": "ont_4_book_test_232", "triples": []}
+{"id": "ont_4_book_test_234", "triples": [{"sub": "notes and queries", "rel": "publisher", "obj": "oxford university press"}]}
+{"id": "ont_4_book_test_235", "triples": [{"sub": "monthly comic gene", "rel": "language of work or name", "obj": "japanese"}, {"sub": "monthly comic gene", "rel": "publisher", "obj": "media factory"}, {"sub": "monthly comic gene", "rel": "publication date", "obj": "15 june 2011"}]}
+{"id": "ont_4_book_test_236", "triples": [{"sub": "tintin", "rel": "publisher", "obj": "casterman"}]}
+{"id": "ont_4_book_test_237", "triples": []}
+{"id": "ont_4_book_test_238", "triples": []}
+{"id": "ont_4_book_test_239", "triples": [{"sub": "tech jacket", "rel": "publisher", "obj": "image comics"}, {"sub": "tech jacket", "rel": "publication date", "obj": "01 january 2002"}, {"sub": "tech jacket", "rel": "author", "obj": "robert kirkman"}, {"sub": "tech jacket", "rel": "illustrator", "obj": "e. j. su"}]}
+{"id": "ont_4_book_test_240", "triples": [{"sub": "pears ' cyclopaedia", "rel": "publication date", "obj": "01 november 2017"}, {"sub": "pears ' cyclopaedia", "rel": "publisher", "obj": "penguin books"}, {"sub": "pears ' cyclopaedia", "rel": "publisher", "obj": "pelham books"}]}
+{"id": "ont_4_book_test_241", "triples": [{"sub": "heroes for hope", "rel": "author", "obj": "alan moore"}]}
+{"id": "ont_4_book_test_242", "triples": [{"sub": "psycinfo", "rel": "publisher", "obj": "american psychological association"}]}
+{"id": "ont_4_book_test_243", "triples": []}
+{"id": "ont_4_book_test_244", "triples": [{"sub": "2003 edition", "rel": "publisher", "obj": "oxford university press"}, {"sub": "2003 edition", "rel": "publication date", "obj": "01 january 2003"}]}
+{"id": "ont_4_book_test_245", "triples": [{"sub": "the cambridge grammar of the english language", "rel": "publisher", "obj": "cambridge university press"}, {"sub": "the cambridge grammar of the english language", "rel": "publication date", "obj": "01 january 2002"}]}
+{"id": "ont_4_book_test_246", "triples": [{"sub": "the sandman : endless nights", "rel": "publisher", "obj": "dc comics"}, {"sub": "the sandman : endless nights", "rel": "publication date", "obj": "01 january 2003"}]}
+{"id": "ont_4_book_test_247", "triples": [{"sub": "hero the newmatic man", "rel": "publisher", "obj": "tekno comix"}]}
+{"id": "ont_4_book_test_248", "triples": [{"sub": "handbook of australian, new zealand and antarctic birds", "rel": "publisher", "obj": "oxford university press"}, {"sub": "handbook of australian, new zealand and antarctic birds", "rel": "publication date", "obj": "01 june 2006"}]}
+{"id": "ont_4_book_test_249", "triples": [{"sub": "blue ribbon comics", "rel": "publisher", "obj": "mlj magazines inc."}]}
+{"id": "ont_4_book_test_250", "triples": [{"sub": "the oxford dictionary of world religions", "rel": "editor", "obj": "john bowker"}, {"sub": "the oxford dictionary of world religions", "rel": "publication date", "obj": "01 january 1997"}, {"sub": "the oxford dictionary of world religions", "rel": "publisher", "obj": "oxford university press"}]}
+{"id": "ont_4_book_test_251", "triples": [{"sub": "superman's pal jimmy olsen", "rel": "publisher", "obj": "dc comics"}]}
+{"id": "ont_4_book_test_252", "triples": [{"sub": "tintin in the congo", "rel": "publication date", "obj": "01 january 1975"}, {"sub": "tintin in the congo", "rel": "publisher", "obj": "casterman"}]}
+{"id": "ont_4_book_test_253", "triples": [{"sub": "the opposite house", "rel": "publication date", "obj": "01 january 2007"}, {"sub": "the opposite house", "rel": "publisher", "obj": "penguin books"}, {"sub": "the opposite house", "rel": "author", "obj": "helen oyeyemi"}]}
+{"id": "ont_4_book_test_254", "triples": [{"sub": "manga time kirara max", "rel": "publisher", "obj": "houbunsha"}]}
+{"id": "ont_4_book_test_255", "triples": [{"sub": "stu hart: lord of the ring", "rel": "publication date", "obj": "01 january 2002"}, {"sub": "stu hart: lord of the ring", "rel": "publisher", "obj": "ecw press"}, {"sub": "stu hart: lord of the ring", "rel": "author", "obj": "marsha erb"}]}
+{"id": "ont_4_book_test_256", "triples": [{"sub": "oxford dictionary of byzantium", "rel": "genre", "obj": "historical dictionary"}, {"sub": "oxford dictionary of byzantium", "rel": "language of work or name", "obj": "english"}, {"sub": "oxford dictionary of byzantium", "rel": "publisher", "obj": "oxford university press"}]}
+{"id": "ont_4_book_test_257", "triples": [{"sub": "the cambridge ancient history", "rel": "publisher", "obj": "cambridge university press"}]}
+{"id": "ont_4_book_test_258", "triples": [{"sub": "chike and the river", "rel": "publication date", "obj": "01 january 1966"}, {"sub": "chike and the river", "rel": "publisher", "obj": "cambridge university press"}, {"sub": "chike and the river", "rel": "illustrator", "obj": "prue theobalds"}, {"sub": "chike and the river", "rel": "genre", "obj": "children's stories"}]}
+{"id": "ont_4_book_test_259", "triples": []}
+{"id": "ont_4_book_test_260", "triples": [{"sub": "oxford advanced learner 's dictionary", "rel": "publisher", "obj": "oxford university press"}, {"sub": "oxford advanced learner 's dictionary", "rel": "language of work or name", "obj": "english-language"}]}
+{"id": "ont_4_book_test_261", "triples": [{"sub": "star trek maps", "rel": "publication date", "obj": "01 august 1980"}, {"sub": "star trek maps", "rel": "publisher", "obj": "bantam books"}, {"sub": "star trek maps", "rel": "publisher", "obj": "paramount pictures"}]}
+{"id": "ont_4_book_test_262", "triples": [{"sub": "little archie", "rel": "publisher", "obj": "archie comics"}, {"sub": "little archie", "rel": "publication date", "obj": "01 january 1956"}]}
+{"id": "ont_4_book_test_263", "triples": [{"sub": "a dictionary of current chinese or contemporary chinese dictionary", "rel": "publisher", "obj": "xiandai hanyu cidian"}, {"sub": "a dictionary of current chinese or contemporary chinese dictionary", "rel": "publisher", "obj": "commercial press"}, {"sub": "a dictionary of current chinese or contemporary chinese dictionary", "rel": "language of work or name", "obj": "standard mandarin chinese"}]}
+{"id": "ont_4_book_test_264", "triples": [{"sub": "weekly young sunday", "rel": "followed by", "obj": "sh\u014dnen big comic"}]}
+{"id": "ont_4_book_test_265", "triples": [{"sub": "both", "rel": "publisher", "obj": "university of california press"}]}
+{"id": "ont_4_book_test_266", "triples": [{"sub": "nakayoshi", "rel": "publisher", "obj": "kodansha"}]}
+{"id": "ont_4_book_test_267", "triples": [{"sub": "boing boing", "rel": "publisher", "obj": "fantagraphics books"}]}
+{"id": "ont_4_book_test_268", "triples": [{"sub": "young you", "rel": "publisher", "obj": "shueisha"}, {"sub": "young you", "rel": "place of publication", "obj": "tokyo"}, {"sub": "young you", "rel": "publication date", "obj": "01 january 1986"}]}
+{"id": "ont_4_book_test_269", "triples": [{"sub": "prisoners of the sun", "rel": "publisher", "obj": "casterman"}]}
+{"id": "ont_4_book_test_270", "triples": []}
+{"id": "ont_4_book_test_271", "triples": [{"sub": "encyclopedia of china publishing house", "rel": "publication date", "obj": "01 january 1980"}]}
+{"id": "ont_4_book_test_272", "triples": [{"sub": "the man in the brown suit", "rel": "publisher", "obj": "the bodley head"}, {"sub": "the man in the brown suit", "rel": "publisher", "obj": "dodd, mead and company"}, {"sub": "the man in the brown suit", "rel": "author", "obj": "agatha christie"}]}
+{"id": "ont_4_book_test_273", "triples": [{"sub": "batman-spawn: war devil", "rel": "author", "obj": "alan grant"}, {"sub": "batman-spawn: war devil", "rel": "publication date", "obj": "01 january 1994"}, {"sub": "batman-spawn: war devil", "rel": "author", "obj": "doug moench"}, {"sub": "batman-spawn: war devil", "rel": "author", "obj": "chuck dixon"}, {"sub": "batman-spawn: war devil", "rel": "publisher", "obj": "elseworlds"}]}
+{"id": "ont_4_book_test_274", "triples": [{"sub": "oxford dictionary of biology", "rel": "genre", "obj": "multiple editions dictionary"}, {"sub": "oxford dictionary of biology", "rel": "publisher", "obj": "oxford university press"}, {"sub": "oxford dictionary of biology", "rel": "language of work or name", "obj": "english"}]}
+{"id": "ont_4_book_test_275", "triples": [{"sub": "fantastic comics", "rel": "publisher", "obj": "fox feature syndicate"}]}
+{"id": "ont_4_book_test_276", "triples": [{"sub": "hana to yume", "rel": "language of work or name", "obj": "japanese"}, {"sub": "hana to yume", "rel": "publisher", "obj": "hakusensha"}, {"sub": "hana to yume", "rel": "genre", "obj": "sh\u014djo manga"}]}
+{"id": "ont_4_book_test_277", "triples": [{"sub": "the spawn of cthulhu", "rel": "publisher", "obj": "ballantine books"}, {"sub": "the spawn of cthulhu", "rel": "publication date", "obj": "01 october 1971"}]}
+{"id": "ont_4_book_test_278", "triples": [{"sub": "daddy's roommate", "rel": "publication date", "obj": "01 january 1990"}, {"sub": "daddy's roommate", "rel": "author", "obj": "michael willhoite"}, {"sub": "daddy's roommate", "rel": "publisher", "obj": "alyson books"}]}
+{"id": "ont_4_book_test_279", "triples": [{"sub": "ring of fire iii", "rel": "publication date", "obj": "01 july 2011"}, {"sub": "ring of fire iii", "rel": "author", "obj": "eric flint"}, {"sub": "ring of fire iii", "rel": "publisher", "obj": "baen books"}]}
+{"id": "ont_4_book_test_280", "triples": [{"sub": "on a silver platter", "rel": "publication date", "obj": "01 march 1990"}, {"sub": "on a silver platter", "rel": "characters", "obj": "scrooge mcduck"}, {"sub": "on a silver platter", "rel": "author", "obj": "don rosa"}]}
+{"id": "ont_4_book_test_281", "triples": [{"sub": "the dream-quest of unknown kadath", "rel": "characters", "obj": "randolph carter"}]}
+{"id": "ont_4_book_test_282", "triples": [{"sub": "searching for a successor", "rel": "characters", "obj": "donald duck"}, {"sub": "searching for a successor", "rel": "author", "obj": "carl barks"}, {"sub": "searching for a successor", "rel": "characters", "obj": "gladstone gander"}]}
+{"id": "ont_4_book_test_283", "triples": [{"sub": "q", "rel": "followed by", "obj": "trelane"}]}
+{"id": "ont_4_book_test_284", "triples": [{"sub": "a charlie brown christmas", "rel": "followed by", "obj": "it's the great pumpkin, charlie brown"}]}
+{"id": "ont_4_book_test_285", "triples": [{"sub": "the treasure of the ten avatars", "rel": "characters", "obj": "donald duck"}, {"sub": "the treasure of the ten avatars", "rel": "publication date", "obj": "01 january 1996"}, {"sub": "the treasure of the ten avatars", "rel": "author", "obj": "don rosa"}]}
+{"id": "ont_4_book_test_286", "triples": [{"sub": "uncle scrooge", "rel": "characters", "obj": "scrooge mcduck"}, {"sub": "uncle scrooge", "rel": "author", "obj": "carl barks"}]}
+{"id": "ont_4_book_test_287", "triples": [{"sub": "a financial fable", "rel": "characters", "obj": "donald duck"}, {"sub": "a financial fable", "rel": "author", "obj": "carl barks"}, {"sub": "a financial fable", "rel": "publication date", "obj": "01 september 1950"}]}
+{"id": "ont_4_book_test_288", "triples": []}
+{"id": "ont_4_book_test_289", "triples": [{"sub": "prisoners of the sun", "rel": "followed by", "obj": "the seven crystal balls"}]}
+{"id": "ont_4_book_test_290", "triples": [{"sub": "cigars of the pharaoh", "rel": "followed by", "obj": "thomson and thompson"}]}
+{"id": "ont_4_book_test_291", "triples": []}
+{"id": "ont_4_book_test_292", "triples": [{"sub": "la ceinture du grand froid", "rel": "author", "obj": "nic & cauvin"}]}
+{"id": "ont_4_book_test_293", "triples": [{"sub": "an eye for detail", "rel": "author", "obj": "don rosa"}, {"sub": "an eye for detail", "rel": "publication date", "obj": "01 january 1997"}, {"sub": "an eye for detail", "rel": "characters", "obj": "donald duck"}]}
+{"id": "ont_4_book_test_294", "triples": []}
+{"id": "ont_4_book_test_295", "triples": [{"sub": "christmas on bear mountain", "rel": "characters", "obj": "scrooge mcduck"}]}
+{"id": "ont_4_book_test_296", "triples": [{"sub": "huey, dewey and louie", "rel": "characters", "obj": "scrooge mcduck"}]}
+{"id": "ont_4_book_test_297", "triples": [{"sub": "percy jackson & the olympians", "rel": "followed by", "obj": "percy jackson & the olympians"}]}
+{"id": "ont_4_book_test_298", "triples": [{"sub": "oolated luck", "rel": "characters", "obj": "gladstone gander"}, {"sub": "oolated luck", "rel": "characters", "obj": "donald duck"}, {"sub": "oolated luck", "rel": "publication date", "obj": "01 april 1988"}]}
+{"id": "ont_4_book_test_299", "triples": [{"sub": "santa claus", "rel": "genre", "obj": "poem"}]}
+{"id": "ont_4_book_test_300", "triples": [{"sub": "four color comics", "rel": "publisher", "obj": "dell comics"}]}
+{"id": "ont_4_book_test_301", "triples": [{"sub": "the buckaroo of the badlands", "rel": "publication date", "obj": "01 january 1992"}, {"sub": "the buckaroo of the badlands", "rel": "characters", "obj": "scrooge mcduck"}, {"sub": "the buckaroo of the badlands", "rel": "author", "obj": "don rosa"}]}
+{"id": "ont_4_book_test_302", "triples": [{"sub": "back to the klondike", "rel": "characters", "obj": "scrooge mcduck"}, {"sub": "back to the klondike", "rel": "characters", "obj": "donald"}]}
+{"id": "ont_4_book_test_303", "triples": [{"sub": "huey, dewey, and louie", "rel": "characters", "obj": "donald duck"}]}
+{"id": "ont_4_book_test_304", "triples": [{"sub": "conan the wanderer", "rel": "author", "obj": "robert e. howard"}, {"sub": "conan the wanderer", "rel": "author", "obj": "lin carter"}, {"sub": "conan the wanderer", "rel": "characters", "obj": "conan the barbarian"}, {"sub": "conan the wanderer", "rel": "publication date", "obj": "01 january 1968"}]}
+{"id": "ont_4_book_test_305", "triples": [{"sub": "the adventurous uncle scrooge mcduck", "rel": "publication date", "obj": "01 march 1998"}]}
+{"id": "ont_4_book_test_306", "triples": []}
+{"id": "ont_4_book_test_307", "triples": [{"sub": "l'ombre du z", "rel": "author", "obj": "franquin"}]}
+{"id": "ont_4_book_test_308", "triples": []}
+{"id": "ont_4_book_test_309", "triples": [{"sub": "christmas on bear mountain (1947)", "rel": "author", "obj": "carl barks"}, {"sub": "christmas on bear mountain (1947)", "rel": "publisher", "obj": "dell comics"}, {"sub": "christmas on bear mountain (1947)", "rel": "characters", "obj": "donald duck"}]}
+{"id": "ont_4_book_test_310", "triples": [{"sub": "flip decision", "rel": "publication date", "obj": "01 june 1952"}, {"sub": "flip decision", "rel": "author", "obj": "carl barks"}]}
+{"id": "ont_4_book_test_311", "triples": []}
+{"id": "ont_4_book_test_312", "triples": []}
+{"id": "ont_4_book_test_313", "triples": []}
+{"id": "ont_4_book_test_314", "triples": []}
+{"id": "ont_4_book_test_315", "triples": []}
+{"id": "ont_4_book_test_316", "triples": [{"sub": "the seven crystal balls", "rel": "characters", "obj": "tintin"}, {"sub": "the seven crystal balls", "rel": "characters", "obj": "professor calculus"}, {"sub": "the seven crystal balls", "rel": "characters", "obj": "captain haddock"}, {"sub": "the seven crystal balls", "rel": "narrative location", "obj": "peru"}]}
+{"id": "ont_4_book_test_318", "triples": [{"sub": "attack of the hideous space-varmints", "rel": "author", "obj": "don rosa"}, {"sub": "attack of the hideous space-varmints", "rel": "characters", "obj": "donald duck"}, {"sub": "attack of the hideous space-varmints", "rel": "publication date", "obj": "01 january 1997"}]}
+{"id": "ont_4_book_test_319", "triples": [{"sub": "the dutchman's secret", "rel": "characters", "obj": "donald duck"}, {"sub": "the dutchman's secret", "rel": "publication date", "obj": "01 january 1999"}, {"sub": "the dutchman's secret", "rel": "author", "obj": "don rosa"}]}
+{"id": "ont_4_book_test_320", "triples": [{"sub": "christmas on bear mountain", "rel": "publication date", "obj": "01 january 1947"}]}
+{"id": "ont_4_book_test_321", "triples": [{"sub": "destination moon", "rel": "characters", "obj": "professor calculus"}, {"sub": "destination moon", "rel": "characters", "obj": "captain haddock"}, {"sub": "destination moon", "rel": "characters", "obj": "thomson and thompson"}, {"sub": "destination moon", "rel": "characters", "obj": "tintin"}]}
+{"id": "ont_4_book_test_322", "triples": [{"sub": "the richest duck in the world or the recluse of mcduck manor", "rel": "publication date", "obj": "01 january 1994"}, {"sub": "the richest duck in the world or the recluse of mcduck manor", "rel": "characters", "obj": "scrooge mcduck"}, {"sub": "the richest duck in the world or the recluse of mcduck manor", "rel": "author", "obj": "don rosa"}]}
+{"id": "ont_4_book_test_323", "triples": [{"sub": "of ducks, dimes and destinies", "rel": "author", "obj": "don rosa"}, {"sub": "of ducks, dimes and destinies", "rel": "publication date", "obj": "01 january 1995"}, {"sub": "of ducks, dimes and destinies", "rel": "characters", "obj": "scrooge mcduck"}]}
+{"id": "ont_4_book_test_324", "triples": [{"sub": "roman charity", "rel": "characters", "obj": "cimon"}, {"sub": "roman charity", "rel": "characters", "obj": "pero"}]}
+{"id": "ont_4_book_test_325", "triples": [{"sub": "the once and future duck", "rel": "author", "obj": "don rosa"}, {"sub": "the once and future duck", "rel": "publication date", "obj": "01 january 1996"}, {"sub": "the once and future duck", "rel": "characters", "obj": "donald duck"}]}
+{"id": "ont_4_book_test_327", "triples": []}
+{"id": "ont_4_book_test_328", "triples": []}
+{"id": "ont_4_book_test_329", "triples": []}
+{"id": "ont_4_book_test_330", "triples": []}
+{"id": "ont_4_book_test_331", "triples": []}
+{"id": "ont_4_book_test_332", "triples": [{"sub": "international journal of robotics research", "rel": "publisher", "obj": "university of utah"}, {"sub": "international journal of robotics research", "rel": "editor", "obj": "john m. hollerbach"}]}
+{"id": "ont_4_book_test_333", "triples": []}
+{"id": "ont_4_book_test_334", "triples": [{"sub": "kultura", "rel": "editor", "obj": "jerzy giedroyc"}]}
+{"id": "ont_4_book_test_335", "triples": [{"sub": "security dialogue", "rel": "editor", "obj": "j. peter burgess"}]}
+{"id": "ont_4_book_test_336", "triples": [{"sub": "scandinavian journal of the old testament", "rel": "publisher", "obj": "university of copenhagen"}]}
+{"id": "ont_4_book_test_337", "triples": []}
+{"id": "ont_4_book_test_338", "triples": []}
+{"id": "ont_4_book_test_339", "triples": []}
+{"id": "ont_4_book_test_340", "triples": []}
+{"id": "ont_4_book_test_341", "triples": [{"sub": "review of economics of the household", "rel": "publication date", "obj": "01 january 2003"}]}
+{"id": "ont_4_book_test_342", "triples": []}
+{"id": "ont_4_book_test_343", "triples": [{"sub": "fides et historia", "rel": "editor", "obj": "donald a. yerxa"}]}
+{"id": "ont_4_book_test_344", "triples": [{"sub": "the paris review", "rel": "editor", "obj": "emily nemens"}]}
+{"id": "ont_4_book_test_345", "triples": []}
+{"id": "ont_4_book_test_346", "triples": [{"sub": "journal of theoretical biology", "rel": "publisher", "obj": "elsevier"}, {"sub": "journal of theoretical biology", "rel": "editor", "obj": "lewis wolpert"}, {"sub": "journal of theoretical biology", "rel": "editor", "obj": "denise kirschner"}, {"sub": "journal of theoretical biology", "rel": "publisher", "obj": "university college london"}, {"sub": "journal of theoretical biology", "rel": "editor", "obj": "yoh iwasa"}]}
+{"id": "ont_4_book_test_347", "triples": []}
+{"id": "ont_4_book_test_348", "triples": []}
+{"id": "ont_4_book_test_349", "triples": [{"sub": "bellevue literary review", "rel": "editor", "obj": "danielle ofri"}]}
+{"id": "ont_4_book_test_350", "triples": []}
+{"id": "ont_4_book_test_351", "triples": []}
+{"id": "ont_4_book_test_352", "triples": []}
+{"id": "ont_4_book_test_353", "triples": [{"sub": "short stories", "rel": "editor", "obj": "dorothy mcilwraith"}]}
+{"id": "ont_4_book_test_354", "triples": [{"sub": "agalma (journal)", "rel": "publication date", "obj": "01 january 2000"}, {"sub": "agalma (journal)", "rel": "author", "obj": "mario perniola"}]}
+{"id": "ont_4_book_test_355", "triples": []}
+{"id": "ont_4_book_test_356", "triples": [{"sub": "armed forces & society", "rel": "publisher", "obj": "sage publications"}]}
+{"id": "ont_4_book_test_357", "triples": []}
+{"id": "ont_4_book_test_358", "triples": []}
+{"id": "ont_4_book_test_359", "triples": []}
+{"id": "ont_4_book_test_360", "triples": [{"sub": "paper & printing trades journal", "rel": "publication date", "obj": "01 january 1872"}]}
+{"id": "ont_4_book_test_361", "triples": []}
+{"id": "ont_4_book_test_362", "triples": [{"sub": "political science quarterly", "rel": "publisher", "obj": "columbia university"}, {"sub": "political science quarterly", "rel": "editor", "obj": "demetrios james caraley"}]}
+{"id": "ont_4_book_test_363", "triples": [{"sub": "journal of bisexuality", "rel": "editor", "obj": "fritz klein"}, {"sub": "journal of bisexuality", "rel": "editor", "obj": "jonathan alexander"}, {"sub": "journal of bisexuality", "rel": "editor", "obj": "brian zamboni"}, {"sub": "journal of bisexuality", "rel": "editor", "obj": "james d. weinrich"}]}
+{"id": "ont_4_book_test_364", "triples": []}
+{"id": "ont_4_book_test_365", "triples": [{"sub": "journal of biomedical informatics", "rel": "editor", "obj": "edward h. shortliffe"}]}
+{"id": "ont_4_book_test_366", "triples": [{"sub": "andrey korotayev", "rel": "editor", "obj": "leonid grinin"}, {"sub": "andrey korotayev", "rel": "editor", "obj": "dmitri bondarenko"}]}
+{"id": "ont_4_book_test_367", "triples": []}
+{"id": "ont_4_book_test_368", "triples": [{"sub": "philosophy and phenomenological research", "rel": "publication date", "obj": "01 january 1980"}, {"sub": "philosophy and phenomenological research", "rel": "editor", "obj": "ernest sosa"}, {"sub": "philosophy and phenomenological research", "rel": "editor", "obj": "roderick chisholm"}]}
+{"id": "ont_4_book_test_369", "triples": []}
+{"id": "ont_4_book_test_370", "triples": [{"sub": "mankind quarterly", "rel": "publisher", "obj": "ulster institute for social research"}, {"sub": "mankind quarterly", "rel": "editor", "obj": "richard lynn"}]}
+{"id": "ont_4_book_test_371", "triples": [{"sub": "westminster theological journal", "rel": "editor", "obj": "vern poythress"}, {"sub": "westminster theological journal", "rel": "publisher", "obj": "westminster theological seminary"}]}
+{"id": "ont_4_book_test_372", "triples": []}
+{"id": "ont_4_book_test_373", "triples": []}
+{"id": "ont_4_book_test_374", "triples": [{"sub": "chemische annalen f\u00e3\u00bcr die freunde der naturlehre, arzneygel\u00e3\u00a4hrtheit, haushaltungskunst und manufacturen", "rel": "editor", "obj": "lorenz florenz friedrich von crell"}, {"sub": "chemische annalen f\u00e3\u00bcr die freunde der naturlehre, arzneygel\u00e3\u00a4hrtheit, haushaltungskunst und manufacturen", "rel": "publication date", "obj": "01 january 1778"}, {"sub": "chemische annalen f\u00e3\u00bcr die freunde der naturlehre, arzneygel\u00e3\u00a4hrtheit, haushaltungskunst und manufacturen", "rel": "publisher", "obj": "university of helmstedt"}]}
+{"id": "ont_4_book_test_375", "triples": []}
+{"id": "ont_4_book_test_376", "triples": []}
+{"id": "ont_4_book_test_377", "triples": []}
+{"id": "ont_4_book_test_378", "triples": []}
+{"id": "ont_4_book_test_379", "triples": []}
+{"id": "ont_4_book_test_380", "triples": [{"sub": "the musical quarterly", "rel": "publisher", "obj": "bard college"}, {"sub": "the musical quarterly", "rel": "publication date", "obj": "01 january 1993"}, {"sub": "the musical quarterly", "rel": "editor", "obj": "leon botstein"}]}
+{"id": "ont_4_book_test_381", "triples": [{"sub": "translational psychiatry", "rel": "publisher", "obj": "the australian national university"}, {"sub": "translational psychiatry", "rel": "publication date", "obj": "05 april 2011"}, {"sub": "translational psychiatry", "rel": "editor", "obj": "julio licinio"}]}
+{"id": "ont_4_book_test_382", "triples": []}
+{"id": "ont_4_book_test_383", "triples": [{"sub": "antony anghie", "rel": "editor", "obj": "tan hsien-li"}]}
+{"id": "ont_4_book_test_384", "triples": [{"sub": "matematicheskii sbornik", "rel": "editor", "obj": "boris kashin"}]}
+{"id": "ont_4_book_test_385", "triples": [{"sub": "levinson", "rel": "editor", "obj": "david m. levinson"}]}
+{"id": "ont_4_book_test_386", "triples": [{"sub": "carnegie council", "rel": "editor", "obj": "john krzyzaniak"}, {"sub": "carnegie council", "rel": "editor", "obj": "john tessitore"}, {"sub": "carnegie council", "rel": "editor", "obj": "joel h. rosenthal"}, {"sub": "carnegie council", "rel": "editor", "obj": "adam read-brown"}]}
+{"id": "ont_4_book_test_387", "triples": [{"sub": "sign systems studies", "rel": "editor", "obj": "peeter torop"}, {"sub": "sign systems studies", "rel": "publication date", "obj": "01 january 1998"}, {"sub": "sign systems studies", "rel": "editor", "obj": "mihhail lotman"}, {"sub": "sign systems studies", "rel": "editor", "obj": "kalevi kull"}]}
+{"id": "ont_4_book_test_388", "triples": [{"sub": "kazakh soviet encyclopedia", "rel": "publication date", "obj": "01 january 1972"}]}
+{"id": "ont_4_book_test_389", "triples": [{"sub": "zoological record", "rel": "publication date", "obj": "01 january 1870"}]}
+{"id": "ont_4_book_test_390", "triples": [{"sub": "pamphlet of rigas feraios", "rel": "genre", "obj": "chalcography"}, {"sub": "pamphlet of rigas feraios", "rel": "place of publication", "obj": "vienna"}, {"sub": "pamphlet of rigas feraios", "rel": "author", "obj": "rigas feraios"}, {"sub": "pamphlet of rigas feraios", "rel": "publication date", "obj": "01 january 1797"}]}
+{"id": "ont_4_book_test_391", "triples": [{"sub": "negro motorist green book", "rel": "publication date", "obj": "01 january 1936"}, {"sub": "negro motorist green book", "rel": "author", "obj": "victor hugo green"}]}
+{"id": "ont_4_book_test_392", "triples": [{"sub": "encyclopedia of jews in music", "rel": "editor", "obj": "theophil stengel"}, {"sub": "encyclopedia of jews in music", "rel": "editor", "obj": "herbert gerigk"}, {"sub": "encyclopedia of jews in music", "rel": "publisher", "obj": "institute for study of the jewish question"}, {"sub": "encyclopedia of jews in music", "rel": "publisher", "obj": "bernhard hahnefeld"}, {"sub": "encyclopedia of jews in music", "rel": "publication date", "obj": "01 january 1940"}]}
+{"id": "ont_4_book_test_393", "triples": [{"sub": "evelina", "rel": "narrative location", "obj": "hotwells"}]}
+{"id": "ont_4_book_test_394", "triples": []}
+{"id": "ont_4_book_test_395", "triples": [{"sub": "the adventures of tom sawyer", "rel": "narrative location", "obj": "hannibal, missouri"}]}
+{"id": "ont_4_book_test_396", "triples": [{"sub": "disquiet heart", "rel": "author", "obj": "randall silvis"}, {"sub": "disquiet heart", "rel": "narrative location", "obj": "pittsburgh, pennsylvania"}]}
+{"id": "ont_4_book_test_397", "triples": [{"sub": "the fated sky", "rel": "narrative location", "obj": "norway"}]}
+{"id": "ont_4_book_test_398", "triples": [{"sub": "of mice and men", "rel": "publication date", "obj": "01 january 1937"}]}
+{"id": "ont_4_book_test_399", "triples": []}
+{"id": "ont_4_book_test_400", "triples": []}
+{"id": "ont_4_book_test_401", "triples": []}
+{"id": "ont_4_book_test_402", "triples": [{"sub": "scrooge", "rel": "narrative location", "obj": "glasgow"}]}
+{"id": "ont_4_book_test_403", "triples": [{"sub": "duma key", "rel": "narrative location", "obj": "florida"}]}
+{"id": "ont_4_book_test_404", "triples": []}
+{"id": "ont_4_book_test_405", "triples": []}
+{"id": "ont_4_book_test_406", "triples": [{"sub": "playing beatie bow", "rel": "narrative location", "obj": "sydney, australia"}]}
+{"id": "ont_4_book_test_407", "triples": []}
+{"id": "ont_4_book_test_408", "triples": []}
+{"id": "ont_4_book_test_409", "triples": [{"sub": "lawless and tilley", "rel": "narrative location", "obj": "sheffield"}]}
+{"id": "ont_4_book_test_410", "triples": []}
+{"id": "ont_4_book_test_411", "triples": []}
+{"id": "ont_4_book_test_412", "triples": [{"sub": "men should weep", "rel": "narrative location", "obj": "glasgow"}]}
+{"id": "ont_4_book_test_413", "triples": [{"sub": "maria light", "rel": "narrative location", "obj": "pittsburgh, pennsylvania"}, {"sub": "maria light", "rel": "author", "obj": "lester goran"}]}
+{"id": "ont_4_book_test_414", "triples": [{"sub": "the raj quartet", "rel": "author", "obj": "paul scott"}]}
+{"id": "ont_4_book_test_415", "triples": [{"sub": "emily of new moon", "rel": "author", "obj": "lucy maud montgomery"}, {"sub": "emily of new moon", "rel": "narrative location", "obj": "prince edward island"}]}
+{"id": "ont_4_book_test_416", "triples": [{"sub": "the lady in the lake", "rel": "narrative location", "obj": "los angeles"}]}
+{"id": "ont_4_book_test_417", "triples": []}
+{"id": "ont_4_book_test_418", "triples": [{"sub": "gogarty", "rel": "narrative location", "obj": "dublin"}]}
+{"id": "ont_4_book_test_419", "triples": [{"sub": "duel of angels", "rel": "author", "obj": "giraudoux"}, {"sub": "duel of angels", "rel": "narrative location", "obj": "aix-en-provence"}]}
+{"id": "ont_4_book_test_420", "triples": [{"sub": "the hidden assassins", "rel": "author", "obj": "robert wilson"}, {"sub": "the hidden assassins", "rel": "publication date", "obj": "01 january 2006"}, {"sub": "the hidden assassins", "rel": "narrative location", "obj": "seville"}]}
+{"id": "ont_4_book_test_421", "triples": [{"sub": "the ignorance of blood", "rel": "narrative location", "obj": "seville"}, {"sub": "the ignorance of blood", "rel": "author", "obj": "robert wilson"}]}
+{"id": "ont_4_book_test_422", "triples": []}
+{"id": "ont_4_book_test_423", "triples": [{"sub": "trochenbrod", "rel": "followed by", "obj": "trachimbrod"}]}
+{"id": "ont_4_book_test_424", "triples": []}
+{"id": "ont_4_book_test_425", "triples": [{"sub": "asterix in spain", "rel": "illustrator", "obj": "albert uderzo"}, {"sub": "asterix in spain", "rel": "author", "obj": "ren\u00e3\u00a9 goscinny"}]}
+{"id": "ont_4_book_test_426", "triples": [{"sub": "huasipungo", "rel": "publication date", "obj": "01 january 1934"}, {"sub": "huasipungo", "rel": "author", "obj": "jorge icaza"}]}
+{"id": "ont_4_book_test_427", "triples": []}
+{"id": "ont_4_book_test_428", "triples": [{"sub": "castle dor", "rel": "author", "obj": "arthur quiller-couch"}, {"sub": "castle dor", "rel": "author", "obj": "daphne du maurier"}, {"sub": "castle dor", "rel": "narrative location", "obj": "cornwall"}, {"sub": "castle dor", "rel": "genre", "obj": "historical novel"}, {"sub": "castle dor", "rel": "publication date", "obj": "01 january 1961"}]}
+{"id": "ont_4_book_test_429", "triples": []}
+{"id": "ont_4_book_test_430", "triples": []}
+{"id": "ont_4_book_test_431", "triples": [{"sub": "murder in mesopotamia", "rel": "author", "obj": "sir max mallowan"}]}
+{"id": "ont_4_book_test_432", "triples": []}
+{"id": "ont_4_book_test_434", "triples": [{"sub": "the plough and the stars", "rel": "followed by", "obj": "the shadow of a gunman"}]}
+{"id": "ont_4_book_test_435", "triples": [{"sub": "confidential, and white jazz", "rel": "publication date", "obj": "01 january 1946"}, {"sub": "confidential, and white jazz", "rel": "place of publication", "obj": "los angeles"}]}
+{"id": "ont_4_book_test_436", "triples": [{"sub": "glory of the seas", "rel": "narrative location", "obj": "boston, massachusetts"}]}
+{"id": "ont_4_book_test_437", "triples": []}
+{"id": "ont_4_book_test_438", "triples": []}
+{"id": "ont_4_book_test_439", "triples": [{"sub": "serenity", "rel": "characters", "obj": "onion john"}, {"sub": "serenity", "rel": "characters", "obj": "andy rusch"}]}
+{"id": "ont_4_book_test_440", "triples": [{"sub": "ellis's", "rel": "narrative location", "obj": "california"}]}
+{"id": "ont_4_book_test_441", "triples": [{"sub": "the body snatchers", "rel": "author", "obj": "jack finney"}, {"sub": "the body snatchers", "rel": "narrative location", "obj": "mill valley, california"}, {"sub": "the body snatchers", "rel": "publication date", "obj": "01 january 1955"}]}
+{"id": "ont_4_book_test_442", "triples": [{"sub": "the vampire lestat", "rel": "followed by", "obj": "the vampire lestat"}]}
+{"id": "ont_4_book_test_443", "triples": []}
+{"id": "ont_4_book_test_444", "triples": []}
+{"id": "ont_4_book_test_445", "triples": [{"sub": "the fortified castle", "rel": "narrative location", "obj": "iraq"}]}
+{"id": "ont_4_book_test_446", "triples": []}
+{"id": "ont_4_book_test_447", "triples": [{"sub": "sohrab and rustum", "rel": "author", "obj": "matthew arnold"}]}
+{"id": "ont_4_book_test_448", "triples": [{"sub": "the post office girl", "rel": "characters", "obj": "christine hoflehner"}]}
+{"id": "ont_4_book_test_449", "triples": [{"sub": "missing soluch", "rel": "language of work or name", "obj": "persian"}]}
+{"id": "ont_4_book_test_450", "triples": [{"sub": "the old man and the sea", "rel": "narrative location", "obj": "cuba"}]}
+{"id": "ont_4_book_test_451", "triples": [{"sub": "scattered crumbs", "rel": "narrative location", "obj": "iraq"}]}
+{"id": "ont_4_book_test_452", "triples": [{"sub": "american pastoral", "rel": "publication date", "obj": "01 january 1997"}, {"sub": "american pastoral", "rel": "characters", "obj": "seymour \"swede\" levov"}, {"sub": "american pastoral", "rel": "narrative location", "obj": "newark, new jersey"}, {"sub": "american pastoral", "rel": "author", "obj": "philip roth"}]}
+{"id": "ont_4_book_test_453", "triples": [{"sub": "100 greatest african americans", "rel": "publication date", "obj": "01 january 2002"}, {"sub": "100 greatest african americans", "rel": "author", "obj": "molefi kete asante"}]}
+{"id": "ont_4_book_test_454", "triples": [{"sub": "caballero: a historical novel", "rel": "author", "obj": "jovita gonz\u00e3\u00a1lez"}, {"sub": "caballero: a historical novel", "rel": "genre", "obj": "historical romance"}, {"sub": "caballero: a historical novel", "rel": "author", "obj": "eve raleigh"}, {"sub": "caballero: a historical novel", "rel": "author", "obj": "margaret eimer"}]}
+{"id": "ont_4_book_test_455", "triples": [{"sub": "head smash", "rel": "illustrator", "obj": "dwayne harris"}]}
+{"id": "ont_4_book_test_456", "triples": [{"sub": "the assignation, or love in a nunnery", "rel": "author", "obj": "john dryden"}, {"sub": "the assignation, or love in a nunnery", "rel": "genre", "obj": "restoration comedy"}]}
+{"id": "ont_4_book_test_457", "triples": [{"sub": "biterolf und dietleib", "rel": "language of work or name", "obj": "middle high german"}]}
+{"id": "ont_4_book_test_458", "triples": []}
+{"id": "ont_4_book_test_459", "triples": [{"sub": "socrates", "rel": "characters", "obj": "hippias"}]}
+{"id": "ont_4_book_test_460", "triples": [{"sub": "the lost library", "rel": "author", "obj": "philip clark"}]}
+{"id": "ont_4_book_test_461", "triples": [{"sub": "the structure and interpretation of the computer science curriculum", "rel": "publication date", "obj": "01 january 2004"}]}
+{"id": "ont_4_book_test_462", "triples": []}
+{"id": "ont_4_book_test_463", "triples": [{"sub": "ananga ranga", "rel": "genre", "obj": "sex manual"}, {"sub": "ananga ranga", "rel": "author", "obj": "kalyana malla"}]}
+{"id": "ont_4_book_test_464", "triples": []}
+{"id": "ont_4_book_test_465", "triples": [{"sub": "burning chrome", "rel": "publication date", "obj": "01 july 1982"}, {"sub": "burning chrome", "rel": "author", "obj": "william gibson"}]}
+{"id": "ont_4_book_test_466", "triples": [{"sub": "minna von barnhelm or the soldiers' happiness", "rel": "author", "obj": "gotthold ephraim lessing"}, {"sub": "minna von barnhelm or the soldiers' happiness", "rel": "genre", "obj": "lustspiel"}, {"sub": "minna von barnhelm or the soldiers' happiness", "rel": "language of work or name", "obj": "german"}]}
+{"id": "ont_4_book_test_467", "triples": [{"sub": "the great gatsby", "rel": "publication date", "obj": "01 january 1951"}]}
+{"id": "ont_4_book_test_468", "triples": [{"sub": "the life of josiah henson, formerly a slave, now an inhabitant of canada, as narrated by himself", "rel": "author", "obj": "josiah henson"}]}
+{"id": "ont_4_book_test_469", "triples": [{"sub": "the new negro", "rel": "followed by", "obj": "the new negro's"}]}
+{"id": "ont_4_book_test_470", "triples": [{"sub": "lesbian", "rel": "genre", "obj": "pulp fiction"}]}
+{"id": "ont_4_book_test_471", "triples": [{"sub": "a civil campaign", "rel": "author", "obj": "lois mcmaster bujold"}, {"sub": "a civil campaign", "rel": "publication date", "obj": "01 september 1999"}]}
+{"id": "ont_4_book_test_472", "triples": [{"sub": "isaac asimov", "rel": "genre", "obj": "science fiction"}, {"sub": "the last question", "rel": "author", "obj": "isaac asimov"}, {"sub": "the last question", "rel": "genre", "obj": "short story"}]}
+{"id": "ont_4_book_test_473", "triples": [{"sub": "chandler: red tide", "rel": "publication date", "obj": "01 january 1976"}, {"sub": "chandler: red tide", "rel": "author", "obj": "jim steranko"}]}
+{"id": "ont_4_book_test_474", "triples": []}
+{"id": "ont_4_book_test_475", "triples": [{"sub": "honor girl", "rel": "author", "obj": "maggie thrash"}]}
+{"id": "ont_4_book_test_476", "triples": []}
+{"id": "ont_4_book_test_477", "triples": [{"sub": "12 days", "rel": "author", "obj": "june kim"}]}
+{"id": "ont_4_book_test_478", "triples": [{"sub": "spring fire", "rel": "genre", "obj": "lesbian pulp fiction"}]}
+{"id": "ont_4_book_test_479", "triples": []}
+{"id": "ont_4_book_test_480", "triples": [{"sub": "sinyushka's water well", "rel": "author", "obj": "pavel bazhov"}, {"sub": "sinyushka's water well", "rel": "genre", "obj": "skaz"}]}
+{"id": "ont_4_book_test_481", "triples": [{"sub": "the egyptian", "rel": "author", "obj": "mika waltari"}]}
+{"id": "ont_4_book_test_482", "triples": [{"sub": "el zortzico", "rel": "genre", "obj": "zarzuela"}]}
+{"id": "ont_4_book_test_483", "triples": [{"sub": "gatha saptasati", "rel": "genre", "obj": "subhashita-genre text"}]}
+{"id": "ont_4_book_test_484", "triples": [{"sub": "the indian story of an author", "rel": "author", "obj": "gaurav sharma"}]}
+{"id": "ont_4_book_test_485", "triples": [{"sub": "aucassin and nicolette", "rel": "genre", "obj": "prosimetrum"}]}
+{"id": "ont_4_book_test_486", "triples": [{"sub": "lord darcy investigates", "rel": "author", "obj": "randall garrett"}, {"sub": "lord darcy investigates", "rel": "characters", "obj": "lord darcy"}]}
+{"id": "ont_4_book_test_487", "triples": [{"sub": "taiheiki", "rel": "genre", "obj": "gunki monogatari"}]}
+{"id": "ont_4_book_test_488", "triples": []}
+{"id": "ont_4_book_test_489", "triples": [{"sub": "the poem of the cid", "rel": "genre", "obj": "chanson de geste"}]}
+{"id": "ont_4_book_test_490", "triples": [{"sub": "minister jade", "rel": "author", "obj": "steve bialik"}, {"sub": "minister jade", "rel": "publication date", "obj": "01 january 2008"}]}
+{"id": "ont_4_book_test_491", "triples": []}
+{"id": "ont_4_book_test_492", "triples": [{"sub": "chanson d'antioche", "rel": "publication date", "obj": "01 january 1180"}]}
+{"id": "ont_4_book_test_493", "triples": [{"sub": "god and science: return of the ti-girls", "rel": "author", "obj": "jaime hernandez"}, {"sub": "god and science: return of the ti-girls", "rel": "publication date", "obj": "01 december 2012"}]}
+{"id": "ont_4_book_test_494", "triples": []}
+{"id": "ont_4_book_test_495", "triples": [{"sub": "el reloj de lucerna", "rel": "genre", "obj": "drama l\u00e3\u00adrico"}]}
+{"id": "ont_4_book_test_496", "triples": [{"sub": "down in the bottomlands", "rel": "author", "obj": "harry turtledove"}]}
+{"id": "ont_4_book_test_497", "triples": [{"sub": "gemma bovery", "rel": "author", "obj": "posy simmonds"}]}
+{"id": "ont_4_book_test_498", "triples": [{"sub": "buku iqro", "rel": "language of work or name", "obj": "arabic"}]}
+{"id": "ont_4_book_test_499", "triples": [{"sub": "how to cook and eat in chinese", "rel": "author", "obj": "buwei yang chao"}]}
+{"id": "ont_4_book_test_500", "triples": [{"sub": "meno", "rel": "author", "obj": "plato"}]}
+{"id": "ont_4_book_test_501", "triples": [{"sub": "the prose tristan", "rel": "followed by", "obj": "tristan en prose"}]}
+{"id": "ont_4_book_test_502", "triples": [{"sub": "i am a woman", "rel": "author", "obj": "ann bannon"}, {"sub": "i am a woman", "rel": "publication date", "obj": "01 january 1959"}]}
+{"id": "ont_4_book_test_503", "triples": [{"sub": "the ascendance series", "rel": "author", "obj": "jennifer a. nielsen"}]}
+{"id": "ont_4_book_test_504", "triples": [{"sub": "for the fallen", "rel": "followed by", "obj": "ode of remembrance"}]}
+{"id": "ont_4_book_test_505", "triples": [{"sub": "konjaku monogatarish\u016b", "rel": "followed by", "obj": "uji sh\u016bi monogatari"}]}
+{"id": "ont_4_book_test_506", "triples": [{"sub": "anekdote zur senkung der arbeitsmoral", "rel": "author", "obj": "heinrich b\u00e3\u00b6ll"}, {"sub": "anekdote zur senkung der arbeitsmoral", "rel": "author", "obj": "leila vennewitz"}]}
+{"id": "ont_4_book_test_507", "triples": []}
+{"id": "ont_4_book_test_508", "triples": []}
+{"id": "ont_4_book_test_509", "triples": []}
+{"id": "ont_4_book_test_510", "triples": []}
+{"id": "ont_4_book_test_511", "triples": [{"sub": "a caveat or warning for common cursitors", "rel": "genre", "obj": "rogue literature"}]}
+{"id": "ont_4_book_test_512", "triples": [{"sub": "the book of the sun of gnosis and the subtleties of elevated things", "rel": "genre", "obj": "grimoire"}, {"sub": "the book of the sun of gnosis and the subtleties of elevated things", "rel": "language of work or name", "obj": "arabic"}]}
+{"id": "ont_4_book_test_513", "triples": [{"sub": "de umbris idearum", "rel": "author", "obj": "giordano bruno"}, {"sub": "de umbris idearum", "rel": "publication date", "obj": "01 january 1582"}]}
+{"id": "ont_4_book_test_514", "triples": [{"sub": "aiquin", "rel": "language of work or name", "obj": "old french"}, {"sub": "aiquin", "rel": "genre", "obj": "chanson de geste"}]}
+{"id": "ont_4_book_test_515", "triples": []}
+{"id": "ont_4_book_test_516", "triples": []}
+{"id": "ont_4_book_test_517", "triples": [{"sub": "personent hodie", "rel": "publication date", "obj": "01 january 1582"}]}
+{"id": "ont_4_book_test_518", "triples": [{"sub": "tantrasamgraha", "rel": "language of work or name", "obj": "sanskrit"}]}
+{"id": "ont_4_book_test_519", "triples": []}
+{"id": "ont_4_book_test_520", "triples": [{"sub": "ma waraa al tabiaa", "rel": "language of work or name", "obj": "arabic"}, {"sub": "ma waraa al tabiaa", "rel": "author", "obj": "ahmad khaled towfeq"}]}
+{"id": "ont_4_book_test_521", "triples": [{"sub": "oxford psalter", "rel": "language of work or name", "obj": "anglo-norman old french"}]}
+{"id": "ont_4_book_test_522", "triples": []}
+{"id": "ont_4_book_test_523", "triples": [{"sub": "psalter", "rel": "language of work or name", "obj": "latin"}]}
+{"id": "ont_4_book_test_524", "triples": [{"sub": "lumen gentium", "rel": "language of work or name", "obj": "latin"}]}
+{"id": "ont_4_book_test_525", "triples": []}
+{"id": "ont_4_book_test_526", "triples": [{"sub": "geste de guillaume d'orange", "rel": "genre", "obj": "chanson de geste"}, {"sub": "geste de guillaume d'orange", "rel": "language of work or name", "obj": "old french"}, {"sub": "prise d'orange", "rel": "genre", "obj": "chanson de geste"}, {"sub": "prise d'orange", "rel": "language of work or name", "obj": "old french"}]}
+{"id": "ont_4_book_test_527", "triples": [{"sub": "pange lingua gloriosi corporis mysterium", "rel": "language of work or name", "obj": "ecclesiastical latin"}, {"sub": "pange lingua gloriosi corporis mysterium", "rel": "author", "obj": "thomas aquinas"}]}
+{"id": "ont_4_book_test_528", "triples": [{"sub": "alma redemptoris mater", "rel": "followed by", "obj": "ave regina caelorum"}]}
+{"id": "ont_4_book_test_529", "triples": [{"sub": "de vita solitaria", "rel": "author", "obj": "petrarch"}, {"sub": "de vita solitaria", "rel": "language of work or name", "obj": "latin"}]}
+{"id": "ont_4_book_test_530", "triples": [{"sub": "iliad", "rel": "language of work or name", "obj": "homeric greek"}, {"sub": "iliad", "rel": "language of work or name", "obj": "ionic greek"}]}
+{"id": "ont_4_book_test_531", "triples": []}
+{"id": "ont_4_book_test_532", "triples": [{"sub": "eadwine psalter", "rel": "language of work or name", "obj": "latin"}, {"sub": "eadwine psalter", "rel": "language of work or name", "obj": "old english"}, {"sub": "eadwine psalter", "rel": "language of work or name", "obj": "anglo-norman"}]}
+{"id": "ont_4_book_test_533", "triples": [{"sub": "the reckoning of time", "rel": "author", "obj": "bede"}]}
+{"id": "ont_4_book_test_534", "triples": []}
+{"id": "ont_4_book_test_535", "triples": []}
+{"id": "ont_4_book_test_536", "triples": []}
+{"id": "ont_4_book_test_537", "triples": []}
+{"id": "ont_4_book_test_538", "triples": [{"sub": "the dead-tossed waves", "rel": "characters", "obj": "mudo"}]}
+{"id": "ont_4_book_test_539", "triples": [{"sub": "the forest of hands and teeth", "rel": "genre", "obj": "young adults"}, {"sub": "the forest of hands and teeth", "rel": "author", "obj": "carrie ryan"}]}
+{"id": "ont_4_book_test_540", "triples": [{"sub": "crucified", "rel": "depicts", "obj": "figure"}]}
+{"id": "ont_4_book_test_541", "triples": []}
+{"id": "ont_4_book_test_542", "triples": [{"sub": "baby shark", "rel": "genre", "obj": "children's song"}]}
+{"id": "ont_4_book_test_543", "triples": [{"sub": "giovanna d'arco", "rel": "genre", "obj": "dramma lirico"}]}
+{"id": "ont_4_book_test_544", "triples": [{"sub": "le ventre de paris", "rel": "depicts", "obj": "les halles"}]}
+{"id": "ont_4_book_test_545", "triples": []}
+{"id": "ont_4_book_test_546", "triples": []}
+{"id": "ont_4_book_test_547", "triples": [{"sub": "i lombardi alla prima crociata", "rel": "genre", "obj": "dramma lirico"}]}
+{"id": "ont_4_book_test_548", "triples": [{"sub": "bisclavret", "rel": "language of work or name", "obj": "french"}]}
+{"id": "ont_4_book_test_549", "triples": [{"sub": "openworm", "rel": "depicts", "obj": "caenorhabditis elegans"}]}
+{"id": "ont_4_book_test_550", "triples": [{"sub": "billiards at half-past nine", "rel": "publication date", "obj": "01 january 1972"}]}
+{"id": "ont_4_book_unseen_test_1", "triples": [{"sub": "ramayan", "rel": "illustrator", "obj": "maharishi valmiki"}, {"sub": "ramayan", "rel": "language of work or name", "obj": "sanskrit"}]}
+{"id": "ont_4_book_unseen_test_2", "triples": [{"sub": "queen", "rel": "illustrator", "obj": "rahul dhiman"}, {"sub": "queen", "rel": "author", "obj": "kusum"}]}
+{"id": "ont_4_book_unseen_test_3", "triples": [{"sub": "the reading list ii", "rel": "publication date", "obj": "01 january 1978"}, {"sub": "the reading list i", "rel": "followed by", "obj": "the reading list ii"}, {"sub": "the reading list i", "rel": "publication date", "obj": "01 january 1978"}]}
+{"id": "ont_4_book_unseen_test_4", "triples": [{"sub": "python data science handbook-ii", "rel": "followed by", "obj": "python data science handbook-i"}]}
+{"id": "ont_4_book_unseen_test_5", "triples": [{"sub": "the god of small things", "rel": "publication date", "obj": "01 january 1977"}]}
+{"id": "ont_4_book_unseen_test_6", "triples": [{"sub": "the white tiger", "rel": "author", "obj": "aandi goel"}, {"sub": "the white tiger", "rel": "publication date", "obj": "01 january 2020"}]}
+{"id": "ont_4_book_unseen_test_7", "triples": [{"sub": "the great indian novel", "rel": "publication date", "obj": "01 january 1924"}]}
+{"id": "ont_4_book_unseen_test_8", "triples": [{"sub": "a fine balance", "rel": "author", "obj": "daksh goel"}, {"sub": "a fine balance", "rel": "publication date", "obj": "01 january 2021"}]}
+{"id": "ont_4_book_unseen_test_9", "triples": [{"sub": "my exam", "rel": "characters", "obj": "preeti"}, {"sub": "my exam", "rel": "characters", "obj": "rahul"}]}
+{"id": "ont_4_book_unseen_test_10", "triples": [{"sub": "prisoner", "rel": "author", "obj": "vikramm rai"}]}
+{"id": "ont_4_book_unseen_test_11", "triples": [{"sub": "artificial intelligence", "rel": "editor", "obj": "megha kapoor"}]}
+{"id": "ont_4_book_unseen_test_12", "triples": [{"sub": "fate is fate", "rel": "editor", "obj": "paulami sengupta"}, {"sub": "fate is fate", "rel": "author", "obj": "vmathithan"}]}
+{"id": "ont_4_book_unseen_test_13", "triples": [{"sub": "the golden christmas tree", "rel": "narrative location", "obj": "brahmpur"}]}
+{"id": "ont_4_book_unseen_test_14", "triples": []}
+{"id": "ont_4_book_unseen_test_15", "triples": [{"sub": "the loss of city", "rel": "followed by", "obj": "the loss of city"}]}
+{"id": "ont_4_book_unseen_test_16", "triples": [{"sub": "i dont need doctor", "rel": "author", "obj": "jhumpa lahiri"}]}
+{"id": "ont_4_book_unseen_test_17", "triples": [{"sub": "my name", "rel": "language of work or name", "obj": "tamil langauge"}]}
+{"id": "ont_4_book_unseen_test_18", "triples": [{"sub": "no longer human", "rel": "language of work or name", "obj": "hindi"}, {"sub": "no longer human", "rel": "publication date", "obj": "01 january 2020"}, {"sub": "no longer human", "rel": "author", "obj": "vikram seth"}]}
+{"id": "ont_4_book_unseen_test_19", "triples": [{"sub": "the boy", "rel": "characters", "obj": "his sister"}]}
+{"id": "ont_4_book_unseen_test_20", "triples": [{"sub": "the velveteen rabbit", "rel": "depicts", "obj": "zombie"}]}
