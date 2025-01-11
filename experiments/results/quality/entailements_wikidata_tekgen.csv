@@ -1,0 +1,11 @@
+Ontology,Train,Validation,Test
+1. Movie,0.74,0.72,0.64
+2. Music,0.77,0.72,0.78
+3. Sport,0.92,0.89,0.89
+4. Book,0.78,0.79,0.77
+5. Military,0.82,0.83,0.74
+6. Computer,0.83,0.86,0.82
+7. Space,0.90,0.89,0.92
+8. Politics,0.95,0.93,0.93
+9. Nature,0.80,0.75,0.81
+10. Culture,0.71,0.63,0.67

@@ -38,7 +38,7 @@ def get_median_percentiles(llm_metric_folder_path: str, metric: str):
         return medians, p75errors, p25errors
 
 
-def get_means_stds(llm_metric_folder_path: str, metric: str) -> tuple[list[float], list[float]]:
+def get_means_stds(llm_metric_folder_path: str, metric: str, dbpedia_webnlg: bool = True) -> tuple[list[float], list[float]]:
     """Compute mean and standard deviations for metrics inside folder. Return means and stds 
     list of 4 (with dbpedia) or 3 values corresponding to means or stds."""
     means = {}
@@ -75,9 +75,10 @@ def get_means_stds(llm_metric_folder_path: str, metric: str) -> tuple[list[float
             
             mean_F1.append(np.mean(F1s))
             std_F1.append(np.std(F1s))
-    else:
-        means['Vicuna'].pop()
-        stds['Vicuna'].pop()
+    
+    if not dbpedia_webnlg and len(mean_F1) > 3:
+        mean_F1.pop()
+        std_F1.pop()
     
     return np.round(np.array(mean_F1), 2), np.round(np.array(std_F1), 2)
     
@@ -129,10 +130,10 @@ def gen_bar_plots(metric_paths: list[str], plot_labels: list[str], title_model_n
         offset = width * multiplier
         
         if mode == 'mean':
-            means, stds = get_means_stds(llm_metric_folder_path, metric)
+            means, stds = get_means_stds(llm_metric_folder_path, metric, len(categories) > 3)
             ax.bar(x + offset, means, width, label=plot_label, yerr=[stds], capsize=capsize, color=colors[idx])
         elif mode == 'median':
-            medians, p75errors, p25errors = get_median_percentiles(llm_metric_folder_path, metric)
+            medians, p75errors, p25errors = get_median_percentiles(llm_metric_folder_path, metric, len(categories) > 3)
             ax.bar(x + offset, medians, width, label=plot_label, yerr=[medians-p25errors, p75errors-medians], capsize=capsize, color=colors[idx])
         
         multiplier += 1
@@ -149,14 +150,14 @@ def gen_bar_plots(metric_paths: list[str], plot_labels: list[str], title_model_n
         ax.set_ylabel(f'Median {metric.upper()}, percentile error bars.')
         
     ax.set_xlabel('Text2KGBench Variant')
-
+    if len(plot_labels) < 6:
+        ax.set_xticks(x+width*1.5, categories)
     if len(plot_labels) == 6:
         ax.set_xticks(x+width*2.5, categories)
-    
-    if len(plot_labels) > 6:
+    elif len(plot_labels) > 6:
         ax.set_xticks(x+width*10, categories)
     
-    ax.legend(loc='upper left', ncols=3)
+    ax.legend(loc='upper left', ncols=2)
     ax.set_yticks(np.linspace(0, 1, 11))
     ax.set_ylim(0, ylim)
     
@@ -177,6 +178,8 @@ if __name__ == '__main__':
     parser.add_argument("--metric", type=str, default="avg_f1", choices=['avg_f1', 'avg_recall', 'avg_precision', 'avg_obj_halluc', 'avg_sub_halluc', 'avg_rel_halluc'])
     parser.add_argument("--ylim", type=float, default=1.0)
     parser.add_argument("--vicuna_f1_bars", type=str, choices=['True', 'False'])
+    #parser.add_argument("--dbpedia_webnlg", type=str, choices=['True', 'False'])
+    
     args = parser.parse_args()
 
     if len(args.model_names_list) == 0 and args.model_name_glob == '':
@@ -190,7 +193,7 @@ if __name__ == '__main__':
         for model_name in args.model_names_list:
             llm_metric_folders.append("../results/metrics/" + model_name)
     
-    llm_metric_folders = list(sorted(llm_metric_folders))
+    #llm_metric_folders = list(sorted(llm_metric_folders))
     
     plot_labels = []
     if len(args.plot_labels) == 0:
@@ -227,11 +230,13 @@ if __name__ == '__main__':
     else:
         plot_labels = args.plot_labels
         
-    
     print("Generating bar plots for metrics inside : ")
     pprint(llm_metric_folders)
     
-    print("Using plot labels :", plot_labels)
-    
+    print("Using plot labels :", plot_labels, "categories :", args.variants)
+    # python3 bar_plots.py --model_names_list rebel-fine-tuned-per-ontology-01-january-checkpoints rebel-fine-tuned-per-ontology-25-dec-checkpoints rebel-fine-tuned-per-ontology-30-dec-checkpoints gpt-4o-6-shot --title_model_name "REBEL Fine-Tuning, dataset variations" --plot_labels 'Synthetic Only' 'Synthetic & Text2KGBench' 'Text2KGBench Only' 'GPT-4o 6-shot' --vicuna_f1_bars True  --variant 'Unseen\nWikidata-TekGen' 'Verified\nWikidata-TekGen' 'All\nWikidata-TekGen'
+    #args.variants = ['Unseen\nWikidata-TekGen', 'Verified\nWikidata-TekGen', 'All\nWikidata-TekGen']
     gen_bar_plots(llm_metric_folders, plot_labels, args.title_model_name, args.metric, args.variants, ylim=args.ylim, vicuna_f1_bars=strtobool(args.vicuna_f1_bars), mode=args.mode)
+    
+
     

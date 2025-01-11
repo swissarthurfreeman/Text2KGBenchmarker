@@ -1,4 +1,6 @@
-dataset, subset, P, R, F1, OC, SH, RH, OH
+dataset, subset,              P,    R,   F1,   OC,   SH,   RH,   OH
 wikidata_tekgen, unseen,   0.38, 0.44, 0.40, 1.00, 0.02, 0.00, 0.05
 wikidata_tekgen, verified, 0.40, 0.44, 0.40, 1.00, 0.01, 0.00, 0.03
 wikidata_tekgen, all,      0.34, 0.37, 0.34, 1.00, 0.01, 0.00, 0.03
+
+01 January, synthetic only
