@@ -11,41 +11,58 @@ from multiprocessing.pool import ThreadPool
 
 class SentenceGenerator:
     """
-    >>> samples = [
-            {"triples": [
-                {"sub": "Violent Silences", "sqid": "Q7933178", "rel": "publication date", "rpid": "P577", "obj": "2004-01-01T00:00:00Z", "oqid": "2004-01-01T00:00:00Z"}, 
-                {"sub": "Violent Silences", "sqid": "Q7933178", "rel": "performer", "rpid": "P175", "obj": "Rico", "oqid": "Q7332245"}
-            ]},
-            {"triples": [
-                {"sub": "Get Some Sleep", "sqid": "Q5554174", "rel": "part of", "rpid": "P361", "obj": "Beautiful Collision", "oqid": "Q4877686"}, 
-                {"sub": "Beautiful Collision", "sqid": "Q4877686", "rel": "publication date", "rpid": "P577", "obj": "2002-01-01T00:00:00Z", "oqid": "2002-01-01T00:00:00Z"},
-                {"sub": "Beautiful Collision", "sqid": "Q4877686", "rel": "genre", "rpid": "P136", "obj": "pop music", "oqid": "Q37073"}, 
-                {"sub": "Beautiful Collision", "sqid": "Q4877686", "rel": "performer", "rpid": "P175", "obj": "Bic Runga", "oqid": "Q467035"}
-            ]}
-        ]
-    >>> gen = SentenceGenerator(samples, '', 'musical works', 'ont_2_music')
+    >>> from gen_sent import SentenceGenerator
+    >>> lotr = {
+            'triples': [
+                {"sub": "The Lord of the Rings: The Two Towers", "sqid": "Q164963", "rel": "director", "rpid": "P57", "obj": "Peter Jackson", "oqid": "Q4465"}, 
+                {"sub": "Peter Jackson", "sqid": "Q4465", "rel": "country of citizenship", "rpid": "P27", "obj": "New Zealand", "oqid": "Q664"},
+                {"sub": "The Lord of the Rings: The Two Towers", "sqid": "Q164963", "rel": "cast member", "rpid": "P161", "obj": "Orlando Bloom", "oqid": "Q44467"},
+                {"sub": "Orlando Bloom", "sqid": "Q44467", "rel": "country of citizenship", "rpid": "P27", "obj": "United Kingdom", "oqid": "Q145"},
+                {"sub": "The Lord of the Rings: The Two Towers", "sqid": "Q164963", "rel": "characters", "rpid": "P674", "obj": "Gollum", "oqid": "Q15007"},
+                {"sub": "The Lord of the Rings: The Two Towers", "sqid": "Q164963", "rel": "characters", "rpid": "P674", "obj": "Frodo Baggins", "oqid": "Q177329"},
+            ]
+        }
+    >>> metropolis = {
+            'triples': [
+                {"sub": "Metropolis", "sqid": "Q151599", "rel": "director", "rpid": "P57", "obj": "Fritz Lang", "oqid": "Q19504"}, 
+                {"sub": "Fritz Lang", "sqid": "Q19504", "rel": "country of citizenship", "rpid": "P27", "obj": "Austria", "oqid": "Q40"},
+                {"sub": "Metropolis", "sqid": "Q151599", "rel": "publication date", "rpid": "P577", "obj": "1927-01-10T00:00:00Z", "oqid": "1927-01-10T00:00:00Z"},  
+                {"sub": "Metropolis", "sqid": "Q151599", "rel": "filming location", "rpid": "P915", "obj": "Berlin", "oqid": "Q64"}, 
+                {"sub": "Metropolis", "sqid": "Q151599", "rel": "main subject", "rpid": "P921", "obj": "love", "oqid": "Q316"}, 
+                {"sub": "Metropolis", "sqid": "Q151599", "rel": "main subject", "rpid": "P921", "obj": "revolution", "oqid": "Q10931"}, 
+                {"sub": "Metropolis", "sqid": "Q151599", "rel": "main subject", "rpid": "P921", "obj": "technology", "oqid": "Q11016"}, 
+                {"sub": "Metropolis", "sqid": "Q151599", "rel": "main subject", "rpid": "P921", "obj": "working class", "oqid": "Q191159"}
+            ]
+        }
+    >>> gen = SentenceGenerator([lotr, metropolis], '', 'movies', 'ont_1_movie')
     >>> gen.generate(stdout=True)
-    T0 Getting prompt and triples for ont_2_music_train_Q7933178
+    T0 Getting prompt and triples for ont_1_movie_train_Q164963
+    n_triples 9
     {
-        "id": "ont_2_music_train_Q7933178", 
-        "sent": '''Released on January 1, 2004, Violent Silences is a notable musical work performed by Rico. This project showcases Rico\u2019s unique style and 
-        musical vision, contributing to the broader landscape of music from the early 2000s.''', 
+        "id": "ont_1_movie_train_Q164963", 
+        "sent": '''Peter Jackson, a director from New Zealand, masterfully helmed The Lord of the Rings: The Two Towers. The film features 
+        an impressive cast, including Orlando Bloom, who hails from the United Kingdom. In this epic sequel, audiences are introduced 
+        to pivotal characters such as Frodo Baggins and the complex Gollum. Their intertwined destinies drive the narrative forward, showcasing 
+        the film's rich storytelling.''', 
         "triples": [
-            {"sub": "Violent Silences", "sqid": "Q7933178", "rel": "publication date", "rpid": "P577", ..., "oqid": "2004-01-01T00:00:00Z"}, 
-            {"sub": "Violent Silences", "sqid": "Q7933178", "rel": "performer", "rpid": "P175", "obj": "Rico", "oqid": "Q7332245"}
+            {"sub": "The Lord of the Rings: The Two Towers", "sqid": "Q164963", "rel": "director", "rpid": "P57", "obj": "Peter Jackson", "oqid": "Q4465"}, 
+            {"sub": "Peter Jackson", "sqid": "Q4465", "rel": "country of citizenship", "rpid": "P27", "obj": "New Zealand", "oqid": "Q664"}, 
+            ...
+            {"sub": "The Lord of the Rings: The Two Towers", "sqid": "Q164963", "rel": "characters", "rpid": "P674", "obj": "Frodo Baggins", "oqid": "Q177329"}
         ]
     }
-    T0 Getting prompt and triples for ont_2_music_train_Q5554174
+    T0 Getting prompt and triples for ont_1_movie_train_Q151599
+    n_triples 6
     {
-        "id": "ont_2_music_train_Q5554174", 
-        "sent": '''Get Some Sleep is a standout track from Bic Runga's album Beautiful Collision, which was released on January 1, 2002. This work is primarily categorized 
-        within the pop music genre, showcasing Runga's distinctive style and lyrical depth. The album has continued to resonate with fans, maintaining its relevance in the 
-        pop music scene years after its debut.''', 
+        "id": "ont_1_movie_train_Q151599", 
+        "sent": '''Fritz Lang, an Austrian director, helmed the groundbreaking film Metropolis, which explores themes of love and the struggles of the working class. 
+        Set against the backdrop of Berlin, this cinematic masterpiece depicts a dystopian society on the brink of revolution, intertwining personal relationships 
+        with social commentary. Through its depiction of love amid societal upheaval, Metropolis remains a significant work in the genre of science fiction.''', 
         "triples": [
-            {"sub": "Get Some Sleep", "sqid": "Q5554174", "rel": "part of", "rpid": "P361", "obj": "Beautiful Collision", "oqid": "Q4877686"}, 
-            {"sub": "Beautiful Collision", "sqid": "Q4877686", "rel": "publication date", "rpid": "P577", ..., "oqid": "2002-01-01T00:00:00Z"}, 
-            {"sub": "Beautiful Collision", "sqid": "Q4877686", "rel": "genre", "rpid": "P136", "obj": "pop music", "oqid": "Q37073"}, 
-            {"sub": "Beautiful Collision", "sqid": "Q4877686", "rel": "performer", "rpid": "P175", "obj": "Bic Runga", "oqid": "Q467035"}
+            {"sub": "Metropolis", "sqid": "Q151599", "rel": "director", "rpid": "P57", "obj": "Fritz Lang", "oqid": "Q19504"}, 
+            {"sub": "Metropolis", "sqid": "Q151599", "rel": "main subject", "rpid": "P921", "obj": "love", "oqid": "Q316"}, 
+            ...
+            {"sub": "Metropolis", "sqid": "Q151599", "rel": "main subject", "rpid": "P921", "obj": "revolution", "oqid": "Q10931"}
         ]
     }
     """
@@ -64,8 +81,6 @@ class SentenceGenerator:
             print(f"T{i} Getting prompt and triples for", sample['id'])
             prompt, chosen_triples = self.getPrompt(sample['triples'])
             
-            print(prompt)
-            exit(0)
             chat_completion = client.chat.completions.create(
                 model="gpt-4o-mini",
                 messages=[{"role": "user", "content": prompt}],
