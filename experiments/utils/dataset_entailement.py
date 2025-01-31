@@ -103,7 +103,7 @@ def getSubjectInSentRatioOf(samples: list[dict[str, str | list[dict[str, str]]]]
 
     for sample in samples:
         for triple in sample['triples']:
-            if sample['sent'].lower().replace(" ", "").find(triple['sub'].lower().replace(" ", "")) != -1 or ps.stem(sample['sent']).lower().replace(" ", "").find(ps.stem(triple['sub']).lower().replace(" ", "")) != -1:
+            if sample['sent'].lower().replace(" ", "").find(triple['sub'].lower().replace(" ", "")) != -1 or ps.stem(sample['sent']).replace(" ", "").find(ps.stem(triple['sub']).replace(" ", "")) != -1:
                 n_subject_in_sent += 1
             else:
                 print(triple['sub'], "not in", sample['sent'])
@@ -148,12 +148,12 @@ def getWikidataTekGenSubjRatios() -> None:
 
 
 if __name__ == '__main__':
-    #device = "cuda" if torch.cuda.is_available() else "cpu"
-    #sent_entailement_model = pipeline("text-classification", model='roberta-large-mnli', device=device)
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    sent_entailement_model = pipeline("text-classification", model='roberta-large-mnli', device=device)
 
-    getDBpediaWebNLGSubjRatios()
+    #getDBpediaWebNLGSubjRatios()
     #getWikidataTekGenSubjRatios()
 
     #getWikidataTekGenEntailRatios(sent_entailement_model)
-    #getDBpediaWebNLGEntailRatios(sent_entailement_model)
+    getDBpediaWebNLGEntailRatios(sent_entailement_model)
     
