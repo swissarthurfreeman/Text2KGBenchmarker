@@ -27,6 +27,8 @@ def getEntailementRatioOf(samples: list[dict[str, str | list[dict[str, str]]]], 
                     sent = " ".join(subset)                             # stick them together, check if they entail the triple
                     result = entailer( sent + f". {triple['sub']} {triple['rel']} {triple['obj']}" )[0]
                     
+                    # ont_3_airport_train_14
+                    ont = sample['id'].split("_")[2]
                     with open(f"../results/quality/{variant}/{ont}.out", "a") as f:
                         f.write(json.dumps({
                             'id': sample['id'], 
@@ -101,9 +103,10 @@ def getSubjectInSentRatioOf(samples: list[dict[str, str | list[dict[str, str]]]]
 
     for sample in samples:
         for triple in sample['triples']:
-            if ps.stem(sample['sent']).lower().replace(" ", "").find(ps.stem(triple['sub']).lower().replace(" ", "")) != -1:
+            if sample['sent'].lower().replace(" ", "").find(triple['sub'].lower().replace(" ", "")) != -1 or ps.stem(sample['sent']).lower().replace(" ", "").find(ps.stem(triple['sub']).lower().replace(" ", "")) != -1:
                 n_subject_in_sent += 1
-    
+            else:
+                print(triple['sub'], "not in", sample['sent'])
     return n_subject_in_sent/n_triples
 
 def getDBpediaWebNLGSubjRatios() -> None:
@@ -149,7 +152,7 @@ if __name__ == '__main__':
     #sent_entailement_model = pipeline("text-classification", model='roberta-large-mnli', device=device)
 
     getDBpediaWebNLGSubjRatios()
-    getWikidataTekGenSubjRatios()
+    #getWikidataTekGenSubjRatios()
 
     #getWikidataTekGenEntailRatios(sent_entailement_model)
     #getDBpediaWebNLGEntailRatios(sent_entailement_model)
