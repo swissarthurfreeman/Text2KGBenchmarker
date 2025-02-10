@@ -1,130 +1,144 @@
-In llm_responses, explicit domain / range constraint 
+# Text2KGBenchmarker : Master Thesis Repository of A. Freeman
+
+## Architecture
+
+This repository consists in the following main parts : 
+
+- A cleaned and simplified version of the [Text2KGBench dataset](https://github.com/cenguix/Text2KGBench) located under `data/dbpedia_webnlg_clean` and `data/wikidata_tekgen`. The precise changes done to the original Text2KGBench dataset published alongside the [2023 paper](https://arxiv.org/abs/2308.02357) are detailed under `data/CHANGES.md`.  
+- A simplified, documented version of the [REBEL model repository](https://github.com/Babelscape/rebel) under `experiments/bench-rebel`, tailored for fine-tuning on Text2KGBench, stripped of any code not fitting our study's use cases. 
+- A suite of utility scripts located under `experiments/utils`, responding to various use-cases such as metrics, graphics, normalizations (relational mapping, sentence entailement), prompt tuning generation tasks. 
+- An `experiments/results` folder, containing all model variation answers for Text2KGBench, such as `experiments/results/Babelscape.rebel-large-6-beams-rel-map/` for 6 return sequences with relational mapping REBEL model directly evaluated on Text2KGBench's test data, where the folder contains `.jsonl` file for every test ontology samples file. 
+- A synthetic dataset under `data/wikidata_synthetic`, generated using Wikidata and GPT-4o with the same ontologies as in `data/wikidata_tekgen/ontologies`.
+
+## Installing the Environment
+
+**Assuming a clean installation of Linux** (these commands were tested in an Ubuntu 24.04.1 LTS virtual machine), you can run the following commands to install all required dependencies.
+
+```sudo apt update && sudo apt upgrade```
+
+```sudo apt install git && sudo apt install python3-pip```
+
+```sudo apt install pipx && pipx ensurepath```
+
+Relaunch terminal, then run,
+
+```pipx install pipenv```
+
+Relaunch terminal again, then clone the repository, this takes a while, there's 500 MB of data in the repository.
+
+```git clone https://github.com/swissarthurfreeman/Text2KGBenchmarker.git && cd Text2KGbenchmarker```
+
+Finally, install all pipfile dependencies via, 
+
+```pipenv install --verbose```
+
+This takes a while too, pytorch, huggingface, etc must be downloaded, the `--verbose` argument will detail what is being downloaded, it'll certainly take some time with pytorch, which is 1GB large. 
 
 
-## Benchmarker : Text2KGBench
+Once this is done, launch a shell via,
 
-This is a Text2KGBench cleaned dataset with a rerwite of utility functions to fix technical debt
-from the original repository to make working with the dataset easier. 
+```pipenv shell```
 
-The list of changes is as follows : 
-- data is all kept in `jsonl` files in the hierarchy below, instead of a mix of data across multiple `jsonl` and `txt` files.
-- ontology files were edited to remove ghost wikidata IDs which did not a corresponding property or entity label within the file.
-- addition of missing domain and range classes to certain properties, to avoid for instance, describing a publication date via `publication_date(film,)`, instead we add `date` as range to yield `publication_date(film, date)`.
-- folded all duplicate sentences in `wikidata_tekgen` test and train datasets, aggregating into the same list the facts from train. Indeed, in the train files, certain objects with different ids had the same sentences but with different facts, they were folded into a single id and their facts were concatenated into a list following the same format as `dbpedia_webnlg`. The same processing was done on the `test` data of `wikidata_tekgen` where additionally the `similars` list was updated with the new id folds, replacing the removed sentences by the id of the sentence folded to.  
-- `wikidata_tekgen` dataset still has many problems. There are a lot of triples missing, for example with the sentence `The Prize Pest is a 1951 Warner Bros. Looney Tunes cartoon directed by Robert McKimson, and written by Tedd Pierce.` we only have a single fact `screenwriter(The Prize Pest, Tedd Pierce)`, we added `director(The Prize Pest, Robert McKimson)` which is valid and follows the ontology, but there are hundreds of such cases. This data should be manually reviewed and eventually uploaded to Hugging face datasets.
-- addition of `dpedia_webnlg_clean`, where ontologies were modified to remove all camel casing and facts and entities of test/train data were stripped of camelcasing and the use of `_`. The logic behind this is that to train a model on this dataset, it doesn't make sense to ask it to extract facts in camelcase on one part of the dataset (dpedia_webnlg) but not on another (wikidata_tekgen), we should aim have as uniform data as possible. This also avoids technical debt in scripts. 
+You are now inside a pipenv virtual environment with all dependencies for this project. You should be able to run python3 and import any of the `Pipfile` dependencies.
 
-### File Hierarchy
+```bash
+vboxuser@virtual-machine:~/Text2KGbenchmarker$ pipenv shell
+Launching subshell in virtual environment...
+vboxuser@virtual-machine:~/Text2KGbenchmarker$ source /home/vboxuser/.local/share/virtualenvs/Text2KGbenchmarker-ntCgD4G7/bin/activate
+(Text2KGbenchmarker) vboxuser@virtual-machine:~/Text2KGbenchmarker$ python3
+Python3 3.12.3 (main, Jan 17 2025, 18:03:48) [GCC 13.3.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import torch
+>>> import SPARQLWrapper	# Works without issues.
+```
+
+Note that the path provided above points towards the python interpeter that should be selected in visual studio code, for correct import resolution. 
+
+```/home/vboxuser/.local/share/virtualenvs/Text2KGbenchmarker-ntCgD4G7/bin/python```
+
+Once this is done, you can successfully run any of the scripts of the repository, for example, to test the prompt tuning class, you can run the following commands,
+
+``
+
+### Downloading the REBEL Model
+
+REBEL must be downloaded and installed within the `experiments/Rebel-large/` folder. 
+You can downloaded it from [this link](https://osf.io/rxmze?view_only=87e7af84c0564bd1b3eadff23e4b7e54) as provided in the original REBEL repository's instructions. The zip file should then be extracted and all contents should be placed within `experiments/Rebel-large`, such
+as the hierarchy contains,
 
 ```
-Benchmarker
-│   README.md    
-│   .env
+Text2KGBenchmarker
 |
-└───data
-│   │   
-│   │
-│   └───dbpedia_webnlg
-|   |   |
-|   |   └───train
-|   |   |       ont_1_train_movie_train.jsonl
-|   |   |       ont_2_train_music_train.jsonl
-|   |   |       ...
-|   |   └───test
-|   |   |       ont_1_test_movie_test.jsonl
-|   |   |       ont_1_test_music_test.jsonl
-|   |   |       ...
-|   |   └───ontologies
-|   |           ont_1_movie_ontology.json
-|   |           ont_2_movie_ontology.json
-|   |           ...
-|   |
-│   └───wikidata_tekgen
-|       |
-|       └───train
-|       |       ont_1_train_university_train.jsonl
-|       |       ont_2_train_musicalwork_train.jsonl
-|       |       ...
-|       └───test
-|       |       ont_1_test_university_test.jsonl
-|       |       ont_2_test_musicalwork_test.jsonl
-|       |       ...
-|       |
-|       |
-|       └───ontologies
-|               1_university_ontology.json
-|               2_musicalwork_ontology.json
-|      
-└───evaluation
-    │   file021.txt
-    │   file022.txt
+└───experiments
+    │   
+    │
+    └───bench-rebel
+		|
+		└───Rebel-large
+				added_tokens.json
+				config.json
+				merges.txt
+				special_tokens_map.json
+				tokenizer_config.json
+				vocab.json
 ```
 
+Note that the zip file is 1.4GB large, so a decent connection is required. It can be dropped via ssh into Baobab using drag and drop.
 
-The .env file must contain an `OPEN_AI_KEY` value, if using an `OpenAI` model.
-An example of a json object in the `wikidata_tekgen` test sentences files is the following, 
+## Running Experiments 
 
-```json
-{
-    "id": "ont_1_movie_test_1", 
-    "sent": "Bleach: Hell Verse (Japanese: BLEACH , Hepburn: Bur\u00c4\u00abchi Jigoku-Hen) is a 2010 Japanese animated film directed by Noriyuki Abe.", 
-    "triples": [
-        {"sub": "Bleach : Hell Verse", "rel": "director", "obj": "Noriyuki Abe"}, 
-        {"sub": "Bleach : Hell Verse", "rel": "publication date", "obj": "01 January 2010"}
-    ], 
-    "unseen": false, 
-    "verified": true, 
-    "similars": [
-        "ont_1_movie_train_119", 
-        "ont_1_movie_train_27", 
-        "ont_1_movie_train_67", 
-        "ont_1_movie_train_715"
-    ]
-}
+### Evaluating Prompt Tuning
+
+### Evaluating REBEL on Test Data
+
+### Fine-Tuning REBEL
+
+### Evaluating Fine-Tuned REBEL
+
+## Slurm
+
+If you're running inside a Slurm environment, such as that of the University of Geneva's Baobab cluster, you'll have to use the Slurm CLI to request appropriate resources. To run REBEL, you need a GPU with at least 24GB of Vram. You connect to baobab using,
+
+```$ ssh isis_username@login1.baobab.hpc.unige.ch```
+
+You can view your list of running or pending jobs using, 
+
+```$ squeue -u isis_username```
+
+You can request an interactive terminal with a GPU attached using, 
+
+```$ salloc --ntasks 1 --mem=25G --time=2:00:00 --partition=shared-gpu --gres=gpu:1,VramPerGpu:24G```
+
+Note that there are two parameters for memory, `--mem` requests RAM, which must be specified, or else by default only 2GB are allocated, which will yield an out of memory when instantiating the data loaders. `--gres=gpu:1,VramPerGpu:24G` allows requesting a GPU with a minimum of 24GB of Vram. They are limited, so this can take some time, during weekends and vacations access is usually instantaneous. You can check wether sufficient VRAM was correctly allocated using `nvidia-smi` on the CLI. 
+
+Once you have the allocation, assuming you've installed your pipenv environment before hand, you can activate the usage of python via the following commands,
+
+```$ module load GCCcore/13.2.0 Python/3.11.5 && pipenv shell```
+
+once inside the pipenv shell, you should have access to all pipenv installed dependencies, and should be able to import pytorch and move a tensor to the GPU. One example of shell output could be the following, 
+
+```shell
+(baobab)-[isis_username@gpu020 Text2KGBenchmarker]$ module load GCCcore/13.2.0 Python/3.11.5 && pipenv shell
+Launching subshell in virtual environment...
+ source /home/users/f/isis_username/.local/share/virtualenvs/Text2KGBenchmarker-yg4X5boN/bin/activate
+(baobab)-[isis_username@gpu020 Text2KGBenchmarker]$  source /home/users/f/isis_username/.local/share/virtualenvs/Text2KGBenchmarker-yg4X5boN/bin/activate
+(Text2KGBenchmarker) (baobab)-[isis_username@gpu020 Text2KGBenchmarker]$ python3
+iPython 3.11.5 (main, Nov 12 2024, 14:17:18) [GCC 13.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import torch
+>>> torch.ones((1, 10)).to('cuda')
+tensor([[1., 1., 1., 1., 1., 1., 1., 1., 1., 1.]], device='cuda:0')
+>>>
 ```
 
-with the `dbpedia_webnlg` dataset, the format differs by the lack of the `"unseen"` and `"verified"` keys, as they're not part of this peculiar dataset.
-See the original paper's details. Test sentences contain the `"similars"` list of ids of sentences that are similar to the test one in the training set. 
-
-`"unseen": false` means the data comes from some datasource like wikipedia which an LLM may have already seen in pretraining, and `verified` means the 
-sentence was manually checked to ensure the triples were extractable. Note that we don't have validation data, indeed the original dataset only 
-has some for TekGen, but every sentence only contains one triple, and it's not in the same format as the rest of the data. It seems the authors didn't 
-have the time to correctly format it, clean it and generate the triples list. 
-
-## Yggdrasil
-
-View jobs via squeue -u freemana
-scontrol show jobid [JOBID]
-Care ful not to use = signs in #SBATCH instructions
-
-
-`salloc --ntasks=64 --mem=20G --time=4:00:00 --partition=shared-cpu && module load GCCcore/13.2.0 Python/3.11.5 && pipenv shell`
-Run `module load GCCcore/13.2.0 Python/3.11.5 && pipenv shell` to load up python, then `pipenv install && pipenv shell` from the root directory. 
-`salloc --ntasks 1 --mem=25G --time=2:00:00 --partition=shared-gpu --gres=gpu:1,VramPerGpu:24G`
-YOU HAVE TO SPECIFY MEMORY, OR ELSE IT'LL JUST ALLOCATE 2G, YOU WON'T BE ABLE TO PROCESS THE DATA, check actual memory allocated
-with `nvidia-smi` every time, slurm has a tendency not to respect `--mem` parameter, actual VRAM allocated is unknown.
-## REBEL Fine tuning
-
-### NYT Fine Tune
-
-To fine tune correctly, update the file paths in `text2kgbench_data.yml` and `text2kgbench.py`.
-Update the `relations` array in `score.py`, update the `relations_wikidata_movies` array in 
-`lightning_modules.py`. Delete all `.cache` files, update the dataset script filename in
-`lightnin_modules.py` at lines 510 and 559, 
-
-Fine tune REBEL on NYT dataset from within the `src` folder with :
-```
-python3 train.py model=rebel_model data=nyt_data train=nyt_train
-```
-
-Try via srun,
+## Fine-Tuning on Text2KGBench
 
 ```
 srun --gpus=1 --mem-per-gpu=32G --partition=shared-gpu --time=1:00:00 python3 train.py model=rebel_model data=text2kgbench_data train=text2kgbench_train
 ```
 
 ```
-python3 test.py model=rebel_model data=nyt_data train=nyt_train do_predict=True checkpoint_path='/home/users/f/freemana/Text2KGBenchmarker/experiments/rebel/src/outputs/2024-11-05/12-06-55/experiments/nyt/epoch\=8-step\=21078.ckpt'
+python3 test.py model=rebel_model data=nyt_data train=nyt_train do_predict=True checkpoint_path='/home/users/f/isis_username/Text2KGBenchmarker/experiments/rebel/src/outputs/2024-11-05/12-06-55/experiments/nyt/epoch\=8-step\=21078.ckpt'
 ```
 
 ### Fine Tune on Wikidata Movie Ontology
@@ -214,100 +228,3 @@ tensor([[0.2190]])
 >>> sent_similarity("film screenwriter human", "the film Hunt has as screenwriter Michael Bay")
 tensor([[0.3998]])
 ```
-
-```
-srun --gpus=1 --mem-per-gpu=32G --partition=shared-gpu --time=1:00:00 python3 train.py model=rebel_model data=wikidata_synthetic_data train=wikidata_synthetic_train +trust_remote_code=True
-```
-
-
-	ALL	 TP: 3857;	FP: 21465;	FN: 13189
-		(m avg): precision: 15.23;	recall: 22.63;	f1: 18.21 (micro)
-		(M avg): precision: 17.22;	recall: 23.43;	f1: 17.89 (Macro)
-
-	director: 			        TP: 122;	FP: 180;	FN: 96;	    precision: 40.40;	recall: 55.96;	f1: 46.92;	302
-	screenwriter: 			    TP: 37;	    FP: 179;	FN: 128;	precision: 17.13;	recall: 22.42;	f1: 19.42;	216
-	genre: 			            TP: 234;	FP: 1497;	FN: 753;	precision: 13.52;	recall: 23.71;	f1: 17.22;	1731
-	based on: 			        TP: 27;	    FP: 127;	FN: 46;	    precision: 17.53;	recall: 36.99;	f1: 23.79;	154
-	cast member: 			    TP: 110;	FP: 162;	FN: 147;	precision: 40.44;	recall: 42.80;	f1: 41.59;	272
-	award received: 			TP: 37;	    FP: 161;	FN: 61;	    precision: 18.69;	recall: 37.76;	f1: 25.00;	198
-	production company: 		TP: 32;	    FP: 162;	FN: 80;	    precision: 16.49;	recall: 28.57;	f1: 20.92;	194
-	country of origin: 			TP: 30;	    FP: 432;	FN: 103;	precision: 6.49;	recall: 22.56;	f1: 10.08;	462
-	publication date: 			TP: 411;	FP: 2916;	FN: 1758;	precision: 12.35;	recall: 18.95;	f1: 14.96;	3327
-	characters: 			    TP: 48;	    FP: 160;	FN: 258;	precision: 23.08;	recall: 15.69;	f1: 18.68;	208
-	narrative location: 	    TP: 42;	    FP: 136;	FN: 348;	precision: 23.60;	recall: 10.77;	f1: 14.79;	178
-	filming location: 			TP: 19;	    FP: 62;	    FN: 98;	    precision: 23.46;	recall: 16.24;	f1: 19.19;	81
-	main subject: 			    TP: 8;	    FP: 149;	FN: 59;	    precision: 5.10;	recall: 11.94;	f1: 7.14;	157
-	nominated for: 			    TP: 48;	    FP: 172;	FN: 144;	precision: 21.82;	recall: 25.00;	f1: 23.30;	220
-	cost: 			            TP: 0;	    FP: 16;	    FN: 0;	    precision: 0.00;	recall: 0.00;	f1: 0.00;	16
-	composer: 			        TP: 30;	    FP: 129;	FN: 120;	precision: 18.87;	recall: 20.00;	f1: 19.42;	159
-	part of: 			        TP: 35;	    FP: 384;	FN: 55;	    precision: 8.35;	recall: 38.89;	f1: 13.75;	419
-	lyrics by: 			        TP: 3;	    FP: 9;	    FN: 106;	precision: 25.00;	recall: 2.75;	f1: 4.96;	12
-	language of work or name: 	TP: 20;	    FP: 478;	FN: 70;	    precision: 4.02;	recall: 22.22;	f1: 6.80;	498
-	voice type: 			    TP: 13;	    FP: 53;	    FN: 50;	    precision: 19.70;	recall: 20.63;	f1: 20.16;	66
-	instrumentation: 			TP: 3;	    FP: 4;	    FN: 81;	    precision: 42.86;	recall: 3.57;	f1: 6.59;	7
-	tracklist: 			        TP: 3;	    FP: 6;	    FN: 86;	    precision: 33.33;	recall: 3.37;	f1: 6.12;	9
-	performer: 			        TP: 53;	    FP: 248;	FN: 162;	precision: 17.61;	recall: 24.65;	f1: 20.54;	301
-	producer: 			        TP: 19;	    FP: 77;	    FN: 81;	    precision: 19.79;	recall: 19.00;	f1: 19.39;	96
-	record label: 			    TP: 59;	    FP: 74;	    FN: 34;	    precision: 44.36;	recall: 63.44;	f1: 52.21;	133
-	occupation: 			    TP: 0;	    FP: 0;	    FN: 115;	precision: 0.00;	recall: 0.00;	f1: 0.00;	0
-	sport: 			            TP: 10;	    FP: 21;	    FN: 163;	precision: 32.26;	recall: 5.78;	f1: 9.80;	31
-	member of sports team: 		TP: 64;	    FP: 251;	FN: 32;	    precision: 20.32;	recall: 66.67;	f1: 31.14;	315
-	country for sport: 			TP: 18;	    FP: 71;	    FN: 65;	    precision: 20.22;	recall: 21.69;	f1: 20.93;	89
-	coach of sports team: 		TP: 5;	    FP: 17;	    FN: 22;	    precision: 22.73;	recall: 18.52;	f1: 20.41;	22
-	league: 			        TP: 64;	    FP: 228;	FN: 166;	precision: 21.92;	recall: 27.83;	f1: 24.52;	292
-	home venue: 			    TP: 2;	    FP: 2;	    FN: 0;	    precision: 50.00;	recall: 100.00;	f1: 66.67;	4
-	sports season of league or competition:TP: 31;	FP: 91;	FN: 26;	precision: 25.41;	recall: 54.39;	f1: 34.64;	122
-	competition class: 			TP: 4;	    FP: 117;	FN: 60;	    precision: 3.31;	recall: 6.25;	f1: 4.32;	121
-	illustrator: 			    TP: 30;	    FP: 47;	    FN: 53;	    precision: 38.96;	recall: 36.14;	f1: 37.50;	77
-	followed by: 			    TP: 5;	    FP: 112;	FN: 47;	    precision: 4.27;	recall: 9.62;	f1: 5.92;	117
-	author: 			        TP: 76;	    FP: 182;	FN: 108;	precision: 29.46;	recall: 41.30;	f1: 34.39;	258
-	publisher: 			        TP: 34;	    FP: 102;	FN: 38;	    precision: 25.00;	recall: 47.22;	f1: 32.69;	136
-	editor: 			        TP: 17;	    FP: 77;	    FN: 59;	    precision: 18.09;	recall: 22.37;	f1: 20.00;	94
-	place of publication: 		TP: 2;	    FP: 26;	    FN: 3;	    precision: 7.14;	recall: 40.00;	f1: 12.12;	28
-	depicts: 			        TP: 1;	    FP: 13;	    FN: 21;	    precision: 7.14;	recall: 4.55;	f1: 5.56;	14
-	military rank: 			    TP: 10;	    FP: 105;	FN: 62;	    precision: 8.70;	recall: 13.89;	f1: 10.70;	115
-	military branch: 			TP: 16;	    FP: 96;	    FN: 64;	    precision: 14.29;	recall: 20.00;	f1: 16.67;	112
-	military casualty classification : TP: 0;	FP: 0;	FN: 0;	    precision: 0.00;	recall: 0.00;	f1: 0.00;	0
-	designed by: 			    TP: 6;	    FP: 36;	    FN: 66;	    precision: 14.29;	recall: 8.33;	f1: 10.53;	42
-	commanded by: 			    TP: 0;	    FP: 7;	    FN: 0;	    precision: 0.00;	recall: 0.00;	f1: 0.00;	7
-	next higher rank: 			TP: 2;	    FP: 8;	    FN: 2;	    precision: 20.00;	recall: 50.00;	f1: 28.57;	10
-	designated as terrorist by: TP: 3;	    FP: 14;	    FN: 16;	    precision: 17.65;	recall: 15.79;	f1: 16.67;	17
-	developer: 			        TP: 28;	    FP: 173;	FN: 63;	    precision: 13.93;	recall: 30.77;	f1: 19.18;	201
-	creator: 			        TP: 24;	    FP: 90;	    FN: 40;	    precision: 21.05;	recall: 37.50;	f1: 26.97;	114
-	platform: 			        TP: 56;	    FP: 105;	FN: 115;	precision: 34.78;	recall: 32.75;	f1: 33.73;	161
-	operating system: 			TP: 8;	    FP: 96;	    FN: 5;	    precision: 7.69;	recall: 61.54;	f1: 13.68;	104
-	site of astronomical discovery: TP: 40;	FP: 78;	    FN: 23;	    precision: 33.90;	recall: 63.49;	f1: 44.20;	118
-	minor planet group: 		TP: 0;	    FP: 3;	    FN: 12;	    precision: 0.00;	recall: 0.00;	f1: 0.00;	3
-	spacecraft docking/undocking date: TP: 0;	FP: 28;	FN: 5;	    precision: 0.00;	recall: 0.00;	f1: 0.00;	28
-	location of landing: 		TP: 3;	    FP: 7;	    FN: 5;	    precision: 30.00;	recall: 37.50;	f1: 33.33;	10
-	backup or reserve team or crew:TP: 0;	FP: 2;	    FN: 2;	    precision: 0.00;	recall: 0.00;	f1: 0.00;	2
-	astronaut mission: 			TP: 57;	    FP: 58;	    FN: 51;	    precision: 49.57;	recall: 52.78;	f1: 51.12;	115
-	constellation: 			    TP: 60;	    FP: 5;	    FN: 2;	    precision: 92.31;	recall: 96.77;	f1: 94.49;	65
-	head of state: 			    TP: 0;	    FP: 1;	    FN: 10;	    precision: 0.00;	recall: 0.00;	f1: 0.00;	1
-	head of government: 		TP: 0;	    FP: 2;	    FN: 8;	    precision: 0.00;	recall: 0.00;	f1: 0.00;	2
-	position held: 			    TP: 25;	    FP: 96;	    FN: 50;	    precision: 20.66;	recall: 33.33;	f1: 25.51;	121
-	member of: 			        TP: 0;	    FP: 98;	    FN: 2;	    precision: 0.00;	recall: 0.00;	f1: 0.00;	98
-	political alignment: 		TP: 0;	    FP: 6;	    FN: 1;	    precision: 0.00;	recall: 0.00;	f1: 0.00;	6
-	member of political party: 	TP: 12;	    FP: 39;	    FN: 31;	    precision: 23.53;	recall: 27.91;	f1: 25.53;	51
-	elected in: 			    TP: 0;	    FP: 1;	    FN: 0;	    precision: 0.00;	recall: 0.00;	f1: 0.00;	1
-	candidacy in election: 		TP: 2;	    FP: 13;	    FN: 1;	    precision: 13.33;	recall: 66.67;	f1: 22.22;	15
-	political ideology: 		TP: 11;	    FP: 56;	    FN: 37;	    precision: 16.42;	recall: 22.92;	f1: 19.13;	67
-	parent taxon: 			    TP: 24;	    FP: 138;	FN: 51;	    precision: 14.81;	recall: 32.00;	f1: 20.25;	162
-	IUCN conservation status: 	TP: 0;	    FP: 0;	    FN: 0;	    precision: 0.00;	recall: 0.00;	f1: 0.00;	0
-	taxon synonym: 			    TP: 0;	    FP: 0;	    FN: 65;	    precision: 0.00;	recall: 0.00;	f1: 0.00;	0
-	habitat: 			        TP: 0;	    FP: 0;	    FN: 0;	    precision: 0.00;	recall: 0.00;	f1: 0.00;	0
-	mountain range: 			TP: 30;	    FP: 157;	FN: 42;	    precision: 16.04;	recall: 41.67;	f1: 23.17;	187
-	parent peak: 			    TP: 17;	    FP: 26;	    FN: 45;	    precision: 39.53;	recall: 27.42;	f1: 32.38;	43
-	tributary: 			        TP: 23;	    FP: 140;	FN: 28;	    precision: 14.11;	recall: 45.10;	f1: 21.50;	163
-	origin of the watercourse: 	TP: 9;	    FP: 18;	    FN: 40;	    precision: 33.33;	recall: 18.37;	f1: 23.68;	27
-	mouth of the watercourse: 	TP: 20;	    FP: 71;	    FN: 64;	    precision: 21.98;	recall: 23.81;	f1: 22.86;	91
-	drainage basin: 			TP: 2;	    FP: 50;	    FN: 13;	    precision: 3.85;	recall: 13.33;	f1: 5.97;	52
-	reservoir created: 			TP: 19;	    FP: 61;	    FN: 43;	    precision: 23.75;	recall: 30.65;	f1: 26.76;	80
-	mountains classification : 	TP: 0;	    FP: 0;	    FN: 0;	    precision: 0.00;	recall: 0.00;	f1: 0.00;	0
-	taxon common name: 			TP: 0;	    FP: 0;	    FN: 0;	    precision: 0.00;	recall: 0.00;	f1: 0.00;	0
-	ethnic group: 			    TP: 13;	    FP: 50;	    FN: 20;	    precision: 20.63;	recall: 39.39;	f1: 27.08;	63
-	languages spoken, written or signed:TP: 13;	FP: 27;	FN: 50;	    precision: 32.50;	recall: 20.63;	f1: 25.24;	40
-	inception: 			        TP: 0;	    FP: 135;	FN: 75;	    precision: 0.00;	recall: 0.00;	f1: 0.00;	135
-	start time: 			    TP: 0;	    FP: 3;	    FN: 4;	    precision: 0.00;	recall: 0.00;	f1: 0.00;	3
-
-
