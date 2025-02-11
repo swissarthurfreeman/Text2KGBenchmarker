@@ -144,11 +144,13 @@ The general principle for running an experiment using REBEL is simply to write a
 
 To evaluate REBEL on Text2KGBench, without fine-tuning, using their publicly available checkpoint downloaded under the [Downloading the REBEL Model](#downloading-the-rebel-model) section, we use the `test.py` script under `experiments/bench-rebel/src/test.py`. This script sets up the model and it's tokenizer as well as the lightning data module which is configured in test mode, hence only it's test data loader is configured and passed to a lightning trainer instance in test mode. 
 
-To evaluate, an array of test files must be specified inside the config file. This is done via the `test_files` key, the [*dataset script file*](https://huggingface.co/docs/datasets/en/dataset_script) must also be specified. This is the file in charge of reading the `.jsonl` files of Text2KGBench, we have just one of them, which works for the synthetic, Wikidata-TekGen or DBpedia-WebNLG by reading the files list from `test_files`. The script is under `experiments/bench-rebel/datasets/text2kgbench.py`. 
-
-```yaml
+Evaluation is done on the array of test files must be specified inside the config file via the `test_files` key. The [*dataset script file*](https://huggingface.co/docs/datasets/en/dataset_script) must also be specified. This is the file in charge of reading the `.jsonl` files of Text2KGBench, we have just one of them, which works for the synthetic, Wikidata-TekGen or DBpedia-WebNLG by reading the files list from `test_files`. 
 
 
+We provide a configuration file for raw REBEL evaluation on the whole of Text2KGBench's test data inside `experiments/bench-rebel/conf/data/text2kgbench-raw-rebel-test.yaml`. Readers can re-use this configuration by running the script like so,
+
+```
+python3 test.py data=text2kgbench-raw-rebel-test
 ```
 
 

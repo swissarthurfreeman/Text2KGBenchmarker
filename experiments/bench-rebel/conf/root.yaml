@@ -4,7 +4,7 @@ repo_path: '/home/users/f/freemana/Text2KGBenchmarker/'
 
 defaults:
   - _self_
-  - data: wikidata_synthetic
+  - data: text2kgbench
   - model: rebel_model
   - wandb_run_name: 
 

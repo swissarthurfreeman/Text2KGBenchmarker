@@ -1,5 +1,4 @@
 import json
-import glob
 import datasets
 from datasets import disable_caching
 disable_caching()
@@ -10,7 +9,7 @@ class Text2KGBenchConfig(datasets.BuilderConfig):
 
 class Text2KGBenchData(datasets.GeneratorBasedBuilder):
     # https://huggingface.co/docs/datasets/en/dataset_script   
-     
+    
     BUILDER_CONFIGS = [
         Text2KGBenchConfig(
             name = "wikidata_synthetic",
@@ -20,7 +19,7 @@ class Text2KGBenchData(datasets.GeneratorBasedBuilder):
     
     def _info(self):
         return datasets.DatasetInfo(
-            description="Synthetic Text2KGBench inspired synthetic dataset",
+            description="Text2KGBench format dataset script, supports synthetic dataset via the data_files dictionary.",
             features=datasets.Features(
                 {
                     "id": datasets.Value("string"),
@@ -31,8 +30,7 @@ class Text2KGBenchData(datasets.GeneratorBasedBuilder):
         )
     
     def _split_generators(self, dl_manager: datasets.DownloadManager | datasets.StreamingDownloadManager) -> list[datasets.SplitGenerator]:
-        # BUG : when passing data_files via load_dataset(), the values are put into lists...
-        # note, for datasets.SplitGenerator gen_kwargs are arguments to forward to the DatasetBuilder._generate_examples method of the builder.
+        # For datasets.SplitGenerator gen_kwargs are arguments to forward to the DatasetBuilder._generate_examples method of the builder.
         # https://huggingface.co/docs/datasets/en/package_reference/builder_classes
         return [
             datasets.SplitGenerator(name = datasets.Split.TRAIN, gen_kwargs={"filepaths": self.config.data_files['train']}),
