@@ -43,6 +43,7 @@ def test(conf: omegaconf.DictConfig):
     pl_data_module.setup('test')
     
     device = "cuda" if torch.cuda.is_available() else "cpu"
+    
     pl_module = BaseLightningModule(conf, model_config, tokenizer, model, test_ids=pl_data_module.test_ids)
     
     trainer = pl.Trainer(accelerator = device)
@@ -50,7 +51,7 @@ def test(conf: omegaconf.DictConfig):
     trainer.test(
         pl_module, 
         dataloaders=pl_data_module.test_dataloader(), 
-        ckpt_path=conf.repo_path + conf.checkpoint_path if conf.checkpoint_path else None
+        ckpt_path=conf.repo_path + conf.checkpoint_path if "checkpoint_path" in conf else None
     )
 
 @hydra.main(config_path='../conf', config_name='root', version_base="1.1")

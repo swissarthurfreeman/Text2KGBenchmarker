@@ -8,7 +8,7 @@ import numpy as np
 nltk.download('punkt_tab')
 from nltk.stem import PorterStemmer
 from nltk.tokenize import word_tokenize
-from utils import DPEDIA_WEBNLG_ONT_NAMES, WIKIDATA_TEKGEN_ONT_NAMES
+from utils import DBPEDIA_WEBNLG_ONT_NAMES, WIKIDATA_TEKGEN_ONT_NAMES
 from utils import load_jsonl_as_dict, getOntologyConceptsList, getOntologyRelationsListLabels, camelCaseToSpaces, load_jsonl_as_list
 
 
@@ -173,7 +173,7 @@ class LLMMetrics():
 
 def generate_global_averages(llm_metrics_folder_path: str):
     avg_files = glob.glob(llm_metrics_folder_path + "/*_avg.jsonl")
-    avg_metrics_dpedia_webnlg = {
+    avg_metrics_dbpedia_webnlg = {
         "all": { "n_sentences": 0, "avg_precision": 0, "avg_recall": 0, "avg_f1": 0, "avg_onto_conf": 0, "avg_sub_halluc": 0, "avg_rel_halluc": 0, "avg_obj_halluc": 0}
     }
     
@@ -192,8 +192,8 @@ def generate_global_averages(llm_metrics_folder_path: str):
                     for key in average[typ].keys():
                         if "wikidata_tekgen" in avg_file_path:
                             avg_metrics_wikidata_tekgen[typ][key] += average[typ][key] / len(averages)
-                        if "dpedia_webnlg" in avg_file_path and typ == "all":
-                            avg_metrics_dpedia_webnlg[typ][key] += average[typ][key] / len(averages)
+                        if "dbpedia_webnlg" in avg_file_path and typ == "all":
+                            avg_metrics_dbpedia_webnlg[typ][key] += average[typ][key] / len(averages)
     
     with open(llm_metrics_folder_path + "/global_avg.csv", "w") as table_f:
         table_f.write("dataset, subset, P, R, F1, OC, SH, RH, OH\n")
@@ -204,17 +204,17 @@ def generate_global_averages(llm_metrics_folder_path: str):
                 table_f.write(f"{avg_metrics_wikidata_tekgen[typ]['avg_sub_halluc']:.2f}, {avg_metrics_wikidata_tekgen[typ]['avg_rel_halluc']:.2f}, ")
                 table_f.write(f"{avg_metrics_wikidata_tekgen[typ]['avg_obj_halluc']:.2f}\n")
         
-        if os.path.exists(llm_metrics_folder_path + "/dpedia_webnlg_clean_avg.jsonl"):
-            for typ in avg_metrics_dpedia_webnlg.keys():
+        if os.path.exists(llm_metrics_folder_path + "/dbpedia_webnlg_clean_avg.jsonl"):
+            for typ in avg_metrics_dbpedia_webnlg.keys():
                 if typ in ['unseen', 'all', 'verified']:
-                    table_f.write(f"dpedia_webnlg, {typ}, {avg_metrics_dpedia_webnlg[typ]['avg_precision']:.2f}, {avg_metrics_dpedia_webnlg[typ]['avg_recall']:.2f}, ")
-                    table_f.write(f"{avg_metrics_dpedia_webnlg[typ]['avg_f1']:.2f}, {avg_metrics_dpedia_webnlg[typ]['avg_onto_conf']:.2f}, ")
-                    table_f.write(f"{avg_metrics_dpedia_webnlg[typ]['avg_sub_halluc']:.2f}, {avg_metrics_dpedia_webnlg[typ]['avg_rel_halluc']:.2f}, ")
-                    table_f.write(f"{avg_metrics_dpedia_webnlg[typ]['avg_obj_halluc']:.2f}\n")
+                    table_f.write(f"dbpedia_webnlg, {typ}, {avg_metrics_dbpedia_webnlg[typ]['avg_precision']:.2f}, {avg_metrics_dbpedia_webnlg[typ]['avg_recall']:.2f}, ")
+                    table_f.write(f"{avg_metrics_dbpedia_webnlg[typ]['avg_f1']:.2f}, {avg_metrics_dbpedia_webnlg[typ]['avg_onto_conf']:.2f}, ")
+                    table_f.write(f"{avg_metrics_dbpedia_webnlg[typ]['avg_sub_halluc']:.2f}, {avg_metrics_dbpedia_webnlg[typ]['avg_rel_halluc']:.2f}, ")
+                    table_f.write(f"{avg_metrics_dbpedia_webnlg[typ]['avg_obj_halluc']:.2f}\n")
 
 
 def generate_global_median_quartiles(llm_metrics_folder_path: str):
-    mediam_metrics_dpedia_webnlg = {
+    mediam_metrics_dbpedia_webnlg = {
         "all": { "precision": [], "recall": [], "f1": [], "onto_conf": [], "sub_halluc": [], "rel_halluc": [], "obj_halluc": []}
     }
     
@@ -224,7 +224,7 @@ def generate_global_median_quartiles(llm_metrics_folder_path: str):
         "all": { "precision": [], "recall": [], "f1": [], "onto_conf": [], "sub_halluc": [], "rel_halluc": [], "obj_halluc": []}
     }
     
-    for avg_file_path in [llm_metrics_folder_path + "/dpedia_webnlg_clean_avg.jsonl", llm_metrics_folder_path + "/wikidata_tekgen_avg.jsonl"]:
+    for avg_file_path in [llm_metrics_folder_path + "/dbpedia_webnlg_clean_avg.jsonl", llm_metrics_folder_path + "/wikidata_tekgen_avg.jsonl"]:
         if os.path.exists(avg_file_path):
             onto_averages = load_jsonl_as_list(avg_file_path)
             
@@ -236,8 +236,8 @@ def generate_global_median_quartiles(llm_metrics_folder_path: str):
                                 if "wikidata_tekgen" in avg_file_path:
                                     mediam_metrics_wikidata_tekgen[variant][metric.replace("avg_", "")].append(onto_average[variant][metric])
                                 
-                                if "dpedia_webnlg" in avg_file_path and variant == "all":
-                                    mediam_metrics_dpedia_webnlg[variant][metric.replace("avg_", "")].append(onto_average[variant][metric])
+                                if "dbpedia_webnlg" in avg_file_path and variant == "all":
+                                    mediam_metrics_dbpedia_webnlg[variant][metric.replace("avg_", "")].append(onto_average[variant][metric])
 
     for variant in mediam_metrics_wikidata_tekgen.keys():
         for metric in mediam_metrics_wikidata_tekgen[variant].keys():
@@ -250,13 +250,13 @@ def generate_global_median_quartiles(llm_metrics_folder_path: str):
                 "p-75": np.percentile(values, 75)
             }
     
-    if os.path.exists(llm_metrics_folder_path + "/dpedia_webnlg_clean_avg.jsonl"):
-        for variant in mediam_metrics_dpedia_webnlg.keys():
-            for metric in mediam_metrics_dpedia_webnlg[variant].keys():
-                values = np.array(mediam_metrics_dpedia_webnlg[variant][metric])
+    if os.path.exists(llm_metrics_folder_path + "/dbpedia_webnlg_clean_avg.jsonl"):
+        for variant in mediam_metrics_dbpedia_webnlg.keys():
+            for metric in mediam_metrics_dbpedia_webnlg[variant].keys():
+                values = np.array(mediam_metrics_dbpedia_webnlg[variant][metric])
                 values.sort()
                 
-                mediam_metrics_dpedia_webnlg[variant][metric] = {
+                mediam_metrics_dbpedia_webnlg[variant][metric] = {
                     "median": np.median(values),
                     "p-25": np.percentile(values, 25),
                     "p-75": np.percentile(values, 75)
@@ -273,20 +273,20 @@ def generate_global_median_quartiles(llm_metrics_folder_path: str):
                     table_f.write(f"{mediam_metrics_wikidata_tekgen[variant]['sub_halluc'][statistic]:2f}, {mediam_metrics_wikidata_tekgen[variant]['rel_halluc'][statistic]:2f}, ")
                     table_f.write(f"{mediam_metrics_wikidata_tekgen[variant]['obj_halluc'][statistic]:2f}\n")
             
-            if os.path.exists(llm_metrics_folder_path + "/dpedia_webnlg_clean_avg.jsonl"):
-                for variant in mediam_metrics_dpedia_webnlg.keys():
+            if os.path.exists(llm_metrics_folder_path + "/dbpedia_webnlg_clean_avg.jsonl"):
+                for variant in mediam_metrics_dbpedia_webnlg.keys():
                     if variant in ['unseen', 'all', 'verified']:
-                        table_f.write(f"dpedia_webnlg, {variant}, {mediam_metrics_dpedia_webnlg[variant]['precision'][statistic]:2f}, {mediam_metrics_dpedia_webnlg[variant]['recall'][statistic]:2f}, ")
-                        table_f.write(f"{mediam_metrics_dpedia_webnlg[variant]['f1'][statistic]:2f}, {mediam_metrics_dpedia_webnlg[variant]['onto_conf'][statistic]:2f}, ")
-                        table_f.write(f"{mediam_metrics_dpedia_webnlg[variant]['sub_halluc'][statistic]:2f}, {mediam_metrics_dpedia_webnlg[variant]['rel_halluc'][statistic]:2f}, ")
-                        table_f.write(f"{mediam_metrics_dpedia_webnlg[variant]['obj_halluc'][statistic]:2f}\n")
+                        table_f.write(f"dbpedia_webnlg, {variant}, {mediam_metrics_dbpedia_webnlg[variant]['precision'][statistic]:2f}, {mediam_metrics_dbpedia_webnlg[variant]['recall'][statistic]:2f}, ")
+                        table_f.write(f"{mediam_metrics_dbpedia_webnlg[variant]['f1'][statistic]:2f}, {mediam_metrics_dbpedia_webnlg[variant]['onto_conf'][statistic]:2f}, ")
+                        table_f.write(f"{mediam_metrics_dbpedia_webnlg[variant]['sub_halluc'][statistic]:2f}, {mediam_metrics_dbpedia_webnlg[variant]['rel_halluc'][statistic]:2f}, ")
+                        table_f.write(f"{mediam_metrics_dbpedia_webnlg[variant]['obj_halluc'][statistic]:2f}\n")
 
             table_f.write("\n")
 
 def get_csv_avg_per_ontology_dbpedia(llm_response_subfolder: str) -> None:
     """Generate CSV table format from _avg.jsonl files for DBpedia for easy LaTeX or Excel parsing"""
-    if os.path.exists(llm_response_subfolder + "/dpedia_webnlg_clean_avg.jsonl"):    
-        with open(llm_response_subfolder + "/dpedia_webnlg_clean_avg.jsonl") as f:
+    if os.path.exists(llm_response_subfolder + "/dbpedia_webnlg_clean_avg.jsonl"):    
+        with open(llm_response_subfolder + "/dbpedia_webnlg_clean_avg.jsonl") as f:
             data_dbpedia = [json.loads(line) for line in f]
             
             with open(llm_response_subfolder + "/dbpedia_webnlg_clean_avg_per_ontology.csv", "a") as f:
@@ -295,7 +295,7 @@ def get_csv_avg_per_ontology_dbpedia(llm_response_subfolder: str) -> None:
                     f.write(f"{ont_result['onto']}, {ont_result['all']['avg_precision']:.2f}, {ont_result['all']['avg_recall']:.2f}, {ont_result['all']['avg_f1']:.2f}, ")
                     f.write(f"{ont_result['all']['avg_onto_conf']:.2f}, {ont_result['all']['avg_sub_halluc']:.2f}, {ont_result['all']['avg_rel_halluc']:.2f}, {ont_result['all']['avg_obj_halluc']:.2f}\n")
     else:
-        print("No DBpedia_WebNLG averages at", llm_response_subfolder + "/dpedia_webnlg_clean_avg.jsonl")
+        print("No DBpedia_WebNLG averages at", llm_response_subfolder + "/dbpedia_webnlg_clean_avg.jsonl")
 
 
 def get_csv_avg_per_ontology_tekgen(llm_response_subfolder: str) -> None:
@@ -332,10 +332,10 @@ if __name__ ==  "__main__":
             l.generate()
         
         # if one dbpedia file exists, assume they all do
-        if os.path.exists("../results/llm_responses/" + folder_name + "/ont_1_university-dpedia_webnlg_clean.jsonl"):
-            for ontology_name in DPEDIA_WEBNLG_ONT_NAMES:
+        if os.path.exists("../results/llm_responses/" + folder_name + "/ont_1_university-dbpedia_webnlg_clean.jsonl"):
+            for ontology_name in DBPEDIA_WEBNLG_ONT_NAMES:
                 print("DBpedia-WebNLG", ontology_name)
-                l = LLMMetrics(folder_name, ontology_name, "dpedia_webnlg_clean")
+                l = LLMMetrics(folder_name, ontology_name, "dbpedia_webnlg_clean")
                 l.generate()     
     
         llm_response_metrics_folder_path = "../results/metrics/" + folder_name

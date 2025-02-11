@@ -29,5 +29,5 @@ module load GCCcore/13.2.0 Python/3.11.5
 for ont in "${ontologies[@]}"
 do
     echo $ont
-    sbatch --partition shared-gpu --ntasks 1 --mem 25G --time 2:00:00 --gres gpu:1,VramPerGpu:24G --job-name $ont pipenv run python3 train.py data=wikidata_synthetic wandb_run_name=${ont}-dbpedia-webnlg-train-train ontology_paths=[data/dpedia_webnlg_clean/ontologies/${ont}.json] val_files=[data/dpedia_webnlg_clean/test/${ont}_test.jsonl] train_files=[data/dpedia_webnlg_clean/train/${ont}_train.jsonl]
+    sbatch --partition shared-gpu --ntasks 1 --mem 25G --time 2:00:00 --gres gpu:1,VramPerGpu:24G --job-name $ont pipenv run python3 train.py data=wikidata_synthetic wandb_run_name=${ont}-dbpedia-webnlg-train-train ontology_paths=[data/dbpedia_webnlg_clean/ontologies/${ont}.json] val_files=[data/dbpedia_webnlg_clean/test/${ont}_test.jsonl] train_files=[data/dbpedia_webnlg_clean/train/${ont}_train.jsonl]
 done

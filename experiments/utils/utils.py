@@ -1,7 +1,7 @@
 import re
 import json
 
-DPEDIA_WEBNLG_ONT_NAMES = [
+DBPEDIA_WEBNLG_ONT_NAMES = [
     "ont_1_university",
     "ont_2_musicalwork",
     "ont_3_airport",

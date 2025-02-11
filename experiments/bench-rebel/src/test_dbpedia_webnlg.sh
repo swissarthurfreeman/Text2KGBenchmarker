@@ -51,5 +51,5 @@ module load GCCcore/13.2.0 Python/3.11.5
 for i in "${!ontologies[@]}"
 do
     echo $i
-    sbatch --partition shared-gpu --ntasks 1 --mem 25G --time 2:00:00 --gres gpu:1,VramPerGpu:24G pipenv run python3 test.py data=wikidata_synthetic do_test_predict=True ontology_paths=[data/dpedia_webnlg_clean/ontologies/${ontologies[$i]}.json] test_files=[data/dpedia_webnlg_clean/test/${ontologies[$i]}_test.jsonl] checkpoint_path=experiments/bench-rebel/src/checkpoints/30-dec/${ontologies[$i]}-val_F1_micro\\=${best_val_f1s[$i]}.ckpt output_file_path=/experiments/results/llm_responses/rebel-fine-tuned-per-ontology-30-dec-checkpoints/${ontologies[$i]}-val_F1_micro\\=${best_val_f1s[$i]}/${ontologies[$i]}-dpedia_webnlg_clean.jsonl
+    sbatch --partition shared-gpu --ntasks 1 --mem 25G --time 2:00:00 --gres gpu:1,VramPerGpu:24G pipenv run python3 test.py data=wikidata_synthetic do_test_predict=True ontology_paths=[data/dbpedia_webnlg_clean/ontologies/${ontologies[$i]}.json] test_files=[data/dbpedia_webnlg_clean/test/${ontologies[$i]}_test.jsonl] checkpoint_path=experiments/bench-rebel/src/checkpoints/30-dec/${ontologies[$i]}-val_F1_micro\\=${best_val_f1s[$i]}.ckpt output_file_path=/experiments/results/llm_responses/rebel-fine-tuned-per-ontology-30-dec-checkpoints/${ontologies[$i]}-val_F1_micro\\=${best_val_f1s[$i]}/${ontologies[$i]}-dbpedia_webnlg_clean.jsonl
 done

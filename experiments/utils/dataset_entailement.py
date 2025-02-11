@@ -6,7 +6,7 @@ import torch
 import itertools
 from nltk import PorterStemmer
 from transformers import pipeline
-from utils import WIKIDATA_TEKGEN_ONT_NAMES, DPEDIA_WEBNLG_ONT_NAMES
+from utils import WIKIDATA_TEKGEN_ONT_NAMES, DBPEDIA_WEBNLG_ONT_NAMES
 
 def getEntailementRatioOf(samples: list[dict[str, str | list[dict[str, str]]]], variant: str, entailer) -> float:
     """Compute triple entailement ratio for list of samples where every sample has an `id`, `sent`, `triples` keys."""
@@ -62,11 +62,11 @@ def getDBpediaWebNLGEntailRatios(sent_entailement_model) -> None:
         with open(f"../results/quality/entailements_{variant}.csv", 'a') as f:
             f.write("Ontology,Train,Test\n")    
 
-        for ont in DPEDIA_WEBNLG_ONT_NAMES:
+        for ont in DBPEDIA_WEBNLG_ONT_NAMES:
             with open(f"../results/quality/entailements_{variant}.csv", 'a') as f:
                 f.write(getTitle(ont))
                 for split in ['train', 'test']:
-                    file_path = f'../../data/dpedia_webnlg_clean/{split}/{ont}_{split}.jsonl'
+                    file_path = f'../../data/dbpedia_webnlg_clean/{split}/{ont}_{split}.jsonl'
                     if os.path.exists(file_path):
                         samples = getSamplesList(file_path, 1000)
                         ratio = getEntailementRatioOf(samples, variant, sent_entailement_model)
@@ -114,11 +114,11 @@ def getDBpediaWebNLGSubjRatios() -> None:
         with open(f"../results/quality/subj_ratios_{variant}.csv", 'a') as f:
             f.write("Ontology,Train,Test\n")    
 
-        for ont in DPEDIA_WEBNLG_ONT_NAMES:
+        for ont in DBPEDIA_WEBNLG_ONT_NAMES:
             with open(f"../results/quality/subj_ratios_{variant}.csv", 'a') as f:
                 f.write(getTitle(ont))
                 for split in ['train', 'test']:
-                    file_path = f'../../data/dpedia_webnlg_clean/{split}/{ont}_{split}.jsonl'
+                    file_path = f'../../data/dbpedia_webnlg_clean/{split}/{ont}_{split}.jsonl'
                     if os.path.exists(file_path):
                         samples = getSamplesList(file_path, 1000)
                         ratio = getSubjectInSentRatioOf(samples)

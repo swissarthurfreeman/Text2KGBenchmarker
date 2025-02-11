@@ -16,6 +16,41 @@ from transformers import AutoConfig, AutoTokenizer, AutoModelForSeq2SeqLM, pipel
 from transformers.optimization import get_constant_schedule, get_constant_schedule_with_warmup, get_cosine_schedule_with_warmup
 from transformers.optimization import get_cosine_with_hard_restarts_schedule_with_warmup, get_linear_schedule_with_warmup, get_polynomial_decay_schedule_with_warmup
 
+DBPEDIA_WEBNLG_ONT_NAMES = [
+    "ont_1_university",
+    "ont_2_musicalwork",
+    "ont_3_airport",
+    "ont_4_building",
+    "ont_5_athlete",
+    "ont_6_politician",
+    "ont_7_company",
+    "ont_8_celestialbody",
+    "ont_9_astronaut",
+    "ont_10_comicscharacter",
+    "ont_11_meanoftransportation",
+    "ont_12_monument",
+    "ont_13_food",
+    "ont_14_writtenwork",
+    "ont_15_sportsteam",
+    "ont_16_city",
+    "ont_17_artist",
+    "ont_18_scientist",
+    "ont_19_film"
+]
+
+WIKIDATA_TEKGEN_ONT_NAMES = [
+    "ont_1_movie",
+    "ont_2_music",
+    "ont_3_sport",
+    "ont_4_book",
+    "ont_5_military",
+    "ont_6_computer",
+    "ont_7_space",
+    "ont_8_politics",
+    "ont_9_nature",
+    "ont_10_culture"
+]
+
 def get_inverse_square_root_schedule_with_warmup(optimizer, num_warmup_steps, warmup_init_lr=-1, last_epoch=-1):
     """
     Create a schedule with a learning rate that decreases as a polynomial decay from the initial lr set in the
@@ -256,6 +291,7 @@ class BaseLightningModule(pl.LightningModule):
         
         #print("outputs =", outputs)
         self.test_preds.append(outputs)
+        print("Test step, N°", len(self.test_preds))
         return outputs        
     
     def generate_triples(self, batch: dict[str, torch.Tensor]) -> tuple:
@@ -359,51 +395,67 @@ class BaseLightningModule(pl.LightningModule):
         # empty validation predictions list, making space for new batch.
         self.val_preds.clear()
         
+    def on_test_epoch_start(self):
+        print("Starting Test Epoch...")
+    
     def on_test_epoch_end(self):
-        # re_score does not normalize to lowercase, so we do that here.
-        for pred in self.test_preds:
-                for llm_triples, gt in zip(pred['predictions'], pred['labels']):
-                    for pred in llm_triples:
-                        pred['head'] = pred['head'].lower()
-                        pred['tail'] = pred['tail'].lower()
-                        pred['type'] = pred['type'].lower()
-                        
-                        if pred['type'] == 'publication date' or pred['type'] == 'inception' or pred['type'] == 'start time':
+        
+        for pred in self.test_preds:                                        # re_score does not normalize to lowercase, so we do that here.
+            for llm_triples, gt in zip(pred['predictions'], pred['labels']):
+                for pred in llm_triples:
+                    pred['head'] = pred['head'].lower()
+                    pred['tail'] = pred['tail'].lower()
+                    pred['type'] = pred['type'].lower()
+                    
+                    if self.hparams.parse_dates:
+                        if pred['type'] in self.hparams.date_relation_labels:
                             try:
-                                dt = parser.parse(pred['tail'])     # parse iso string as simple date   
+                                dt = parser.parse(pred['tail'])                 # parse date strings (be it ISO or a year) to a format like in Text2KGBench 
                                 pred['tail'] = dt.strftime('%d %B %Y').lower()  # 01 January 2020
                             except:
                                 pass
                     
-                    for pred in gt:
-                        pred['head'] = pred['head'].lower()
-                        pred['tail'] = pred['tail'].lower()
-                        pred['type'] = pred['type'].lower()
+                for pred in gt:                                             # this is passed to re_score underneath
+                    pred['head'] = pred['head'].lower()
+                    pred['tail'] = pred['tail'].lower()
+                    pred['type'] = pred['type'].lower()
 
-        output_dir_path = "/".join((self.hparams.repo_path + self.hparams.output_file_path).split("/")[:-1])
-        
-        if not os.path.exists(output_dir_path):
-            os.makedirs(output_dir_path)
-        
-        with open(self.hparams.repo_path + self.hparams.output_file_path, 'a') as out_f:
-            idx = 0
+
+        if self.hparams.only_relations_in_ontology:                        # if we want only triples with relation in ontology, filter them
             for pred in self.test_preds:
                 res: list = []
                 for llm_triples in pred['predictions']:
                     triples: list = []
                     for triple in llm_triples:
-                        if triple['type'] in self.relations:   # filter out triples not in ontology
+                        if triple['type'] in self.relations:               # filter out triples not in ontology
                             triples.append(triple)
                     res.append(triples)
                 pred['predictions'] = res
-                
-                for llm_triples, gt in zip(pred['predictions'], pred['labels']):
-                    out_f.write(json.dumps({
+        
+        output_dir_path = self.hparams.repo_path + self.hparams.output_dir_path
+        if not os.path.exists(output_dir_path):               # check output folder exists
+            os.makedirs(output_dir_path)        
+
+        idx = 0
+        for pred_batch in self.test_preds:    
+            for llm_triples in pred_batch['predictions']:
+                output_file_path = output_dir_path + "_".join(self.test_ids[idx].split("_")[:3]) 
+                onto_name = "_".join(self.test_ids[idx].split("_")[:3])
+
+                if onto_name in "".join(DBPEDIA_WEBNLG_ONT_NAMES):
+                    output_file_path += '-dbpedia_webnlg.jsonl'
+                elif onto_name in "".join(WIKIDATA_TEKGEN_ONT_NAMES):
+                    output_file_path += '-wikidata_tekgen.jsonl'
+                else:
+                    print("ERROR, ", onto_name, "is not recognized, aborting...")
+                             
+                with open(output_file_path, 'a') as out_f:
+
+                    out_f.write(json.dumps({                                    # write llm triples
                         'id': self.test_ids[idx],
                         'triples': [ {'sub': triple['head'], 'rel': triple['type'], 'obj': triple['tail']} for triple in llm_triples]
                     }) + "\n")
-                    
-                    idx += 1
+                idx += 1
         
         pred_relations = [item for pred in self.test_preds for item in pred['predictions']]
         
@@ -422,7 +474,6 @@ class BaseLightningModule(pl.LightningModule):
         
         self.test_preds.clear()
         
-    
     def configure_optimizers(self):
         no_decay = ["bias", "LayerNorm.weight"]
         optimizer_grouped_parameters = [

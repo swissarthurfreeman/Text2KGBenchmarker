@@ -120,7 +120,7 @@ The querying can be interrupted and re-ran, and the script will pick up from whe
 
 One you have all the response folders generated under `experiments/results/llm_responses/`, you can compute the resulting metrics (Recall, Precision, F1, OC, RH, OH) for every ontology and the global average, in percentile and standard deviation form, using, from the `experiments/utils/` folder, the script `metrics.py` via `python3 metrics.py`. This will generate a folder for every model under `experiments/results/metrics/model_name/` with a `.jsonl` file containing the *metrics per sample* for every ontology and variant for DBpedia-WebNLG and Wikidata-TekGen in csv and `jsonl` format located in :
 
-- `dpedia_webnlg_clean_avg.jsonl`
+- `dbpedia_webnlg_clean_avg.jsonl`
 - `dbpedia_webnlg_clean_avg_per_ontology.csv`
 - `wikidata_tekgen_avg.jsonl`
 - `wikidata_tekgen_avg_per_ontology_all.csv`
@@ -152,6 +152,8 @@ We provide a configuration file for raw REBEL evaluation on the whole of Text2KG
 ```
 python3 test.py data=text2kgbench-raw-rebel-test
 ```
+
+Note that this takes about 30 minutes on a GPU such as the NVIDIA RTX A5500. Theresults will be written inside the `experiments/results/llm_responses/rebel-raw-12-beams-2-ret-seq` folder. 
 
 
 ### Fine-Tuning REBEL

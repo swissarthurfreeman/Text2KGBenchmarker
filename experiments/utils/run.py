@@ -2,7 +2,7 @@ import os
 import json
 from prompter import Prompter
 from adapter import LLMAdapter, LLMResponse, OpenAIAdapter, RebelAdapter
-from utils import WIKIDATA_TEKGEN_ONT_NAMES, DPEDIA_WEBNLG_ONT_NAMES, load_jsonl_as_list
+from utils import WIKIDATA_TEKGEN_ONT_NAMES, DBPEDIA_WEBNLG_ONT_NAMES, load_jsonl_as_list
 
 
 class LLMRunConfig:
@@ -94,8 +94,8 @@ if __name__ == "__main__":
             "gpt-4o-2024-11-20"
         )
         
-        for ontology_name in DPEDIA_WEBNLG_ONT_NAMES:
-            run_inference_on("dpedia_webnlg_clean", ontology_name, model_adapter, i)
+        for ontology_name in DBPEDIA_WEBNLG_ONT_NAMES:
+            run_inference_on("dbpedia_webnlg_clean", ontology_name, model_adapter, i)
         
         for ontology_name in WIKIDATA_TEKGEN_ONT_NAMES:
             run_inference_on("wikidata_tekgen", ontology_name, model_adapter, i)

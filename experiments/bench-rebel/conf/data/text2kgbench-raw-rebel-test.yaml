@@ -4,82 +4,96 @@
 dataset_script_path: 'experiments/bench-rebel/datasets/text2kgbench.py'
 text_key:   'sent'
 target_key: 'triples'
-test_batch_size:  16
+test_batch_size:  24
 
 # raw rebel weights (as provided by the REBEL repository)
 pretrained_model_name_or_path: 'experiments/bench-rebel/Rebel-large'
 
 # used to tell the lightning data module to only configure test data loader.
-do_test_predict:  true
+do_test_predict: true
 pl_seed: 42
 
-ontology_paths: 
-  - 'data/wikidata_tekgen/ontologies/ont_1_movie.json'
-  - 'data/wikidata_tekgen/ontologies/ont_2_music.json'
-  - 'data/wikidata_tekgen/ontologies/ont_3_sport.json'
-  - 'data/wikidata_tekgen/ontologies/ont_4_book.json'
-  - 'data/wikidata_tekgen/ontologies/ont_5_military.json'
-  - 'data/wikidata_tekgen/ontologies/ont_6_computer.json'
-  - 'data/wikidata_tekgen/ontologies/ont_7_space.json'
-  - 'data/wikidata_tekgen/ontologies/ont_8_politics.json'
-  - 'data/wikidata_tekgen/ontologies/ont_9_nature.json'
-  - 'data/wikidata_tekgen/ontologies/ont_10_culture.json'
-  - 'data/dbpedia_webnlg_clean/ontologies/ont_1_university.json'
-  - 'data/dbpedia_webnlg_clean/ontologies/ont_2_musicalwork
-  - 'data/dbpedia_webnlg_clean/ontologies/ont_3_airport.json'
-  - 'data/dbpedia_webnlg_clean/ontologies/ont_4_building.json'
-  - 'data/dbpedia_webnlg_clean/ontologies/ont_5_athlete.json'
-  - 'data/dbpedia_webnlg_clean/ontologies/ont_6_politician.json'
-  - 'data/dbpedia_webnlg_clean/ontologies/ont_7_company.json'
-  - 'data/dbpedia_webnlg_clean/ontologies/ont_8_celestialbody.json'
-  - 'data/dbpedia_webnlg_clean/ontologies/ont_9_astronaut.json'
-  - 'data/dbpedia_webnlg_clean/ontologies/ont_10_comicscharacter.json'
-  - 'data/dbpedia_webnlg_clean/ontologies/ont_11_meanoftransportation.json'
-  - 'data/dbpedia_webnlg_clean/ontologies/ont_12_monument.json'
-  - 'data/dbpedia_webnlg_clean/ontologies/ont_13_food.json'
-  - 'data/dbpedia_webnlg_clean/ontologies/ont_14_writtenwork.json'
-  - 'data/dbpedia_webnlg_clean/ontologies/ont_15_sportsteam.json'
-  - 'data/dbpedia_webnlg_clean/ontologies/ont_16_city.json'
-  - 'data/dbpedia_webnlg_clean/ontologies/ont_17_artist.json'
-  - 'data/dbpedia_webnlg_clean/ontologies/ont_18_scientist.json'
-  - 'data/dbpedia_webnlg_clean/ontologies/ont_19_film.json'
+ontology_paths:
+    - 'data/wikidata_tekgen/ontologies/ont_1_movie.json'
+    - 'data/wikidata_tekgen/ontologies/ont_2_music.json'
+    - 'data/wikidata_tekgen/ontologies/ont_3_sport.json'
+    - 'data/wikidata_tekgen/ontologies/ont_4_book.json'
+    - 'data/wikidata_tekgen/ontologies/ont_5_military.json'
+    - 'data/wikidata_tekgen/ontologies/ont_6_computer.json'
+    - 'data/wikidata_tekgen/ontologies/ont_7_space.json'
+    - 'data/wikidata_tekgen/ontologies/ont_8_politics.json'
+    - 'data/wikidata_tekgen/ontologies/ont_9_nature.json'
+    - 'data/wikidata_tekgen/ontologies/ont_10_culture.json'
+    - 'data/dbpedia_webnlg_clean/ontologies/ont_1_university.json'
+    - 'data/dbpedia_webnlg_clean/ontologies/ont_2_musicalwork.json'
+    - 'data/dbpedia_webnlg_clean/ontologies/ont_3_airport.json'
+    - 'data/dbpedia_webnlg_clean/ontologies/ont_4_building.json'
+    - 'data/dbpedia_webnlg_clean/ontologies/ont_5_athlete.json'
+    - 'data/dbpedia_webnlg_clean/ontologies/ont_6_politician.json'
+    - 'data/dbpedia_webnlg_clean/ontologies/ont_7_company.json'
+    - 'data/dbpedia_webnlg_clean/ontologies/ont_8_celestialbody.json'
+    - 'data/dbpedia_webnlg_clean/ontologies/ont_9_astronaut.json'
+    - 'data/dbpedia_webnlg_clean/ontologies/ont_10_comicscharacter.json'
+    - 'data/dbpedia_webnlg_clean/ontologies/ont_11_meanoftransportation.json'
+    - 'data/dbpedia_webnlg_clean/ontologies/ont_12_monument.json'
+    - 'data/dbpedia_webnlg_clean/ontologies/ont_13_food.json'
+    - 'data/dbpedia_webnlg_clean/ontologies/ont_14_writtenwork.json'
+    - 'data/dbpedia_webnlg_clean/ontologies/ont_15_sportsteam.json'
+    - 'data/dbpedia_webnlg_clean/ontologies/ont_16_city.json'
+    - 'data/dbpedia_webnlg_clean/ontologies/ont_17_artist.json'
+    - 'data/dbpedia_webnlg_clean/ontologies/ont_18_scientist.json'
+    - 'data/dbpedia_webnlg_clean/ontologies/ont_19_film.json'
 
 test_files:
-  - 'data/wikidata_tekgen/test/ont_1_movie_test.jsonl'
-  - 'data/wikidata_tekgen/test/ont_2_music_test.jsonl'
-  - 'data/wikidata_tekgen/test/ont_3_sport_test.jsonl'
-  - 'data/wikidata_tekgen/test/ont_4_book_test.jsonl'
-  - 'data/wikidata_tekgen/test/ont_5_military_test.jsonl'
-  - 'data/wikidata_tekgen/test/ont_6_computer_test.jsonl'
-  - 'data/wikidata_tekgen/test/ont_7_space_test.jsonl'
-  - 'data/wikidata_tekgen/test/ont_8_politics_test.jsonl'
-  - 'data/wikidata_tekgen/test/ont_9_nature_test.jsonl'
-  - 'data/wikidata_tekgen/test/ont_10_culture_test.jsonl'
-  - 'data/dbpedia_webnlg_clean/test/ont_1_university_test.jsonl'
-  - 'data/dbpedia_webnlg_clean/test/ont_2_musicalwork_test.jsonl'
-  - 'data/dbpedia_webnlg_clean/test/ont_3_airport_test.jsonl'
-  - 'data/dbpedia_webnlg_clean/test/ont_4_building_test.jsonl'
-  - 'data/dbpedia_webnlg_clean/test/ont_5_athlete_test.jsonl'
-  - 'data/dbpedia_webnlg_clean/test/ont_6_politician_test.jsonl'
-  - 'data/dbpedia_webnlg_clean/test/ont_7_company_test.jsonl'
-  - 'data/dbpedia_webnlg_clean/test/ont_8_celestialbody_test.jsonl'
-  - 'data/dbpedia_webnlg_clean/test/ont_9_astronaut_test.jsonl'
-  - 'data/dbpedia_webnlg_clean/test/ont_10_comicscharacter_test.jsonl'
-  - 'data/dbpedia_webnlg_clean/test/ont_11_meanoftransportation_test.jsonl'
-  - 'data/dbpedia_webnlg_clean/test/ont_12_monument_test.jsonl'
-  - 'data/dbpedia_webnlg_clean/test/ont_13_food_test.jsonl'
-  - 'data/dbpedia_webnlg_clean/test/ont_14_writtenwork_test.jsonl'
-  - 'data/dbpedia_webnlg_clean/test/ont_15_sportsteam_test.jsonl'
-  - 'data/dbpedia_webnlg_clean/test/ont_16_city_test.jsonl'
-  - 'data/dbpedia_webnlg_clean/test/ont_17_artist_test.jsonl'
-  - 'data/dbpedia_webnlg_clean/test/ont_18_scientist_test.jsonl'
-  - 'data/dbpedia_webnlg_clean/test/ont_19_film_test.jsonl'
+    - 'data/wikidata_tekgen/test/ont_1_movie_test.jsonl'
+    - 'data/wikidata_tekgen/test/ont_2_music_test.jsonl'
+    - 'data/wikidata_tekgen/test/ont_3_sport_test.jsonl'
+    - 'data/wikidata_tekgen/test/ont_4_book_test.jsonl'
+    - 'data/wikidata_tekgen/test/ont_5_military_test.jsonl'
+    - 'data/wikidata_tekgen/test/ont_6_computer_test.jsonl'
+    - 'data/wikidata_tekgen/test/ont_7_space_test.jsonl'
+    - 'data/wikidata_tekgen/test/ont_8_politics_test.jsonl'
+    - 'data/wikidata_tekgen/test/ont_9_nature_test.jsonl'
+    - 'data/wikidata_tekgen/test/ont_10_culture_test.jsonl'
+    - 'data/dbpedia_webnlg_clean/test/ont_1_university_test.jsonl'
+    - 'data/dbpedia_webnlg_clean/test/ont_2_musicalwork_test.jsonl'
+    - 'data/dbpedia_webnlg_clean/test/ont_3_airport_test.jsonl'
+    - 'data/dbpedia_webnlg_clean/test/ont_4_building_test.jsonl'
+    - 'data/dbpedia_webnlg_clean/test/ont_5_athlete_test.jsonl'
+    - 'data/dbpedia_webnlg_clean/test/ont_6_politician_test.jsonl'
+    - 'data/dbpedia_webnlg_clean/test/ont_7_company_test.jsonl'
+    - 'data/dbpedia_webnlg_clean/test/ont_8_celestialbody_test.jsonl'
+    - 'data/dbpedia_webnlg_clean/test/ont_9_astronaut_test.jsonl'
+    - 'data/dbpedia_webnlg_clean/test/ont_10_comicscharacter_test.jsonl'
+    - 'data/dbpedia_webnlg_clean/test/ont_11_meanoftransportation_test.jsonl'
+    - 'data/dbpedia_webnlg_clean/test/ont_12_monument_test.jsonl'
+    - 'data/dbpedia_webnlg_clean/test/ont_13_food_test.jsonl'
+    - 'data/dbpedia_webnlg_clean/test/ont_14_writtenwork_test.jsonl'
+    - 'data/dbpedia_webnlg_clean/test/ont_15_sportsteam_test.jsonl'
+    - 'data/dbpedia_webnlg_clean/test/ont_16_city_test.jsonl'
+    - 'data/dbpedia_webnlg_clean/test/ont_17_artist_test.jsonl'
+    - 'data/dbpedia_webnlg_clean/test/ont_18_scientist_test.jsonl'
+    - 'data/dbpedia_webnlg_clean/test/ont_19_film_test.jsonl'
 
+train_files:
+  - 'data/wikidata_tekgen/train/ont_1_movie_train.jsonl'
+
+val_files:
+  - 'data/wikidata_tekgen/test/ont_1_movie_test.jsonl'
+
+output_dir_path: 'experiments/results/llm_responses/rebel-raw-3-beams-1-ret-seq/'
 
 # generation hyperparameters
-num_return_sequences: 2      # top likeliest number of beams kept in output (beams get folded into one predicted triple set)
-eval_beams: 12               # number of beams to use during generation
-max_target_length: 256       # maximum generated linearized triples output length
+num_return_sequences: 1             # top likeliest number of beams kept in output (beams get folded into one predicted triple set)
+eval_beams: 3                       # number of beams to use during generation
+max_target_length: 256              # maximum generated linearized triples output length
+only_relations_in_ontology: false   # only keep triples whose relation label is in ontology
+parse_dates: false                  # wether or not to parse dates to canonical form, 1955 -> 01 January 1955
+date_relation_labels:               # list of relation labels that are to be parsed as dates
+  - 'publication date'
+  - 'inception'
+  - 'start time'
+
 
 # model hyperparameters
 dropout: 0.1

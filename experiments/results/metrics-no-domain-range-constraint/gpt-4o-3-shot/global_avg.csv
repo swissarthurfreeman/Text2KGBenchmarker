@@ -2,4 +2,4 @@ dataset, subset, P, R, F1, OC, SH, RH, OH
 wikidata_tekgen, unseen, 0.50, 0.53, 0.51, 0.99, 0.02, 0.01, 0.06
 wikidata_tekgen, verified, 0.56, 0.52, 0.52, 1.00, 0.04, 0.00, 0.04
 wikidata_tekgen, all, 0.51, 0.46, 0.47, 0.99, 0.06, 0.01, 0.04
-dpedia_webnlg, all, 0.57, 0.53, 0.54, 1.00, 0.09, 0.00, 0.18
+dbpedia_webnlg, all, 0.57, 0.53, 0.54, 1.00, 0.09, 0.00, 0.18

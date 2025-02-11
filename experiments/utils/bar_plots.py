@@ -65,8 +65,8 @@ def get_means_stds(llm_metric_folder_path: str, metric: str, dbpedia_webnlg: boo
         mean_F1.append(np.mean(F1s_all))
         std_F1.append(np.std(F1s_all))
     
-    if os.path.exists(llm_metric_folder_path + "/dpedia_webnlg_clean_avg.jsonl"):
-        with open(llm_metric_folder_path + "/dpedia_webnlg_clean_avg.jsonl") as f:
+    if os.path.exists(llm_metric_folder_path + "/dbpedia_webnlg_clean_avg.jsonl"):
+        with open(llm_metric_folder_path + "/dbpedia_webnlg_clean_avg.jsonl") as f:
             data = [json.loads(line) for line in f]
             
             F1s = []
