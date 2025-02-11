@@ -1,0 +1,72 @@
+{"id": "ont_8_celestialbody_test_1", "triples": [{"sub": "vk8", "rel": "service entry", "obj": "1994"}]}
+{"id": "ont_8_celestialbody_test_2", "triples": [{"sub": "(19255) 1994 vk8", "rel": "instance of", "obj": "celestial body"}]}
+{"id": "ont_8_celestialbody_test_3", "triples": [{"sub": "1994 vk8", "rel": "instance of", "obj": "epoch"}]}
+{"id": "ont_8_celestialbody_test_4", "triples": [{"sub": "apoapsis", "rel": "part of", "obj": "orbital period"}]}
+{"id": "ont_8_celestialbody_test_5", "triples": [{"sub": "1994 vk8", "rel": "point in time", "obj": "31st december 2006"}]}
+{"id": "ont_8_celestialbody_test_6", "triples": [{"sub": "periapsis", "rel": "part of", "obj": "epoch"}]}
+{"id": "ont_8_celestialbody_test_7", "triples": [{"sub": "(66391) 1999 kw4", "rel": "instance of", "obj": "asteroid"}]}
+{"id": "ont_8_celestialbody_test_8", "triples": [{"sub": "(66391) 1999 kw4", "rel": "point in time", "obj": "july 14th 2004"}]}
+{"id": "ont_8_celestialbody_test_9", "triples": [{"sub": "apoapsis", "rel": "part of", "obj": "orbital period"}]}
+{"id": "ont_8_celestialbody_test_10", "triples": [{"sub": "(66391) 1999 kw4", "rel": "instance of", "obj": "celestial body"}]}
+{"id": "ont_8_celestialbody_test_11", "triples": [{"sub": "periapsis", "rel": "opposite of", "obj": "apoapsis"}]}
+{"id": "ont_8_celestialbody_test_12", "triples": [{"sub": "apoapsis", "rel": "subclass of", "obj": "escape velocity"}]}
+{"id": "ont_8_celestialbody_test_13", "triples": [{"sub": "walter baade", "rel": "educated at", "obj": "university of gottingen"}, {"sub": "allan sandage", "rel": "educated at", "obj": "university of gottingen"}]}
+{"id": "ont_8_celestialbody_test_14", "triples": [{"sub": "walter baade", "rel": "educated at", "obj": "university of gottingen"}]}
+{"id": "ont_8_celestialbody_test_15", "triples": [{"sub": "walter baade", "rel": "educated at", "obj": "university of gottingen"}, {"sub": "walter baade", "rel": "place of birth", "obj": "preu\u00dfisch oldendorf"}]}
+{"id": "ont_8_celestialbody_test_16", "triples": [{"sub": "walter baade", "rel": "place of death", "obj": "g\u00f6ttingen"}, {"sub": "walter baade", "rel": "educated at", "obj": "university of gottingen"}]}
+{"id": "ont_8_celestialbody_test_17", "triples": [{"sub": "walter baade", "rel": "educated at", "obj": "university of gottingen"}]}
+{"id": "ont_8_celestialbody_test_18", "triples": [{"sub": "walter baade", "rel": "educated at", "obj": "university of gottingen"}]}
+{"id": "ont_8_celestialbody_test_19", "triples": [{"sub": "1036 ganymed", "rel": "discoverer or inventor", "obj": "walter baade"}]}
+{"id": "ont_8_celestialbody_test_20", "triples": [{"sub": "walter baade", "rel": "place of birth", "obj": "preu\u00dfisch oldendorf"}]}
+{"id": "ont_8_celestialbody_test_21", "triples": [{"sub": "1036 ganymed", "rel": "point in time", "obj": "october 22nd 2004"}]}
+{"id": "ont_8_celestialbody_test_22", "triples": [{"sub": "apoapsis", "rel": "part of", "obj": "orbital period"}]}
+{"id": "ont_8_celestialbody_test_23", "triples": [{"sub": "1089 tama", "rel": "point in time", "obj": "26 of november 2005"}]}
+{"id": "ont_8_celestialbody_test_24", "triples": [{"sub": "1089 tama", "rel": "point in time", "obj": "26 november 2005"}]}
+{"id": "ont_8_celestialbody_test_25", "triples": [{"sub": "periapsis", "rel": "part of", "obj": "epoch"}]}
+{"id": "ont_8_celestialbody_test_26", "triples": [{"sub": "1089 tama", "rel": "instance of", "obj": "epoch"}]}
+{"id": "ont_8_celestialbody_test_27", "triples": [{"sub": "1089 tama", "rel": "point in time", "obj": "26 november 2005"}]}
+{"id": "ont_8_celestialbody_test_28", "triples": [{"sub": "1089 tama", "rel": "point in time", "obj": "1089"}]}
+{"id": "ont_8_celestialbody_test_29", "triples": [{"sub": "1089 tama", "rel": "instance of", "obj": "escape velocity"}]}
+{"id": "ont_8_celestialbody_test_30", "triples": [{"sub": "1089 tama", "rel": "date of first performance", "obj": "26 november 2005"}]}
+{"id": "ont_8_celestialbody_test_31", "triples": [{"sub": "110 lydia", "rel": "mass", "obj": "6.7 kg"}]}
+{"id": "ont_8_celestialbody_test_32", "triples": [{"sub": "110 lydia", "rel": "instance of", "obj": "celestial body"}]}
+{"id": "ont_8_celestialbody_test_33", "triples": [{"sub": "110 lydia", "rel": "mass", "obj": "6.7"}]}
+{"id": "ont_8_celestialbody_test_34", "triples": [{"sub": "apoapsis", "rel": "facet of", "obj": "temperature"}]}
+{"id": "ont_8_celestialbody_test_35", "triples": [{"sub": "grigory neujmin", "rel": "date of death", "obj": "december 17, 1946"}]}
+{"id": "ont_8_celestialbody_test_36", "triples": [{"sub": "grigory neujmin", "rel": "date of death", "obj": "dec 17, 1946"}]}
+{"id": "ont_8_celestialbody_test_37", "triples": [{"sub": "stavropolis 1147", "rel": "instance of", "obj": "asteroid"}]}
+{"id": "ont_8_celestialbody_test_38", "triples": [{"sub": "1147 stavropolis", "rel": "instance of", "obj": "asteroid"}]}
+{"id": "ont_8_celestialbody_test_39", "triples": [{"sub": "1147 stavropolis", "rel": "instance of", "obj": "stavropolis"}]}
+{"id": "ont_8_celestialbody_test_40", "triples": [{"sub": "1147 stavropolis", "rel": "discoverer or inventor", "obj": "grigory neujmin"}]}
+{"id": "ont_8_celestialbody_test_41", "triples": [{"sub": "1147 stavropolis", "rel": "discoverer or inventor", "obj": "grigory neujmin"}]}
+{"id": "ont_8_celestialbody_test_42", "triples": [{"sub": "1147 stavropolis", "rel": "discoverer or inventor", "obj": "grigory neujmin"}]}
+{"id": "ont_8_celestialbody_test_43", "triples": [{"sub": "1147 stavropolis", "rel": "point in time", "obj": "1147"}]}
+{"id": "ont_8_celestialbody_test_44", "triples": [{"sub": "1147 stavropolis", "rel": "instance of", "obj": "asteroid"}]}
+{"id": "ont_8_celestialbody_test_45", "triples": [{"sub": "1147 stavropolis", "rel": "discoverer or inventor", "obj": "grigory neujmin"}]}
+{"id": "ont_8_celestialbody_test_46", "triples": [{"sub": "stavropolis", "rel": "discoverer or inventor", "obj": "grigory neujmin"}]}
+{"id": "ont_8_celestialbody_test_47", "triples": [{"sub": "grigory neujmin", "rel": "date of birth", "obj": "january 1, 1886"}]}
+{"id": "ont_8_celestialbody_test_48", "triples": [{"sub": "1147 stavropolis", "rel": "instance of", "obj": "asteroid"}]}
+{"id": "ont_8_celestialbody_test_49", "triples": [{"sub": "1147 stavropolis", "rel": "instance of", "obj": "asteroid"}]}
+{"id": "ont_8_celestialbody_test_50", "triples": [{"sub": "1147 stavropolis", "rel": "instance of", "obj": "asteroid"}]}
+{"id": "ont_8_celestialbody_test_51", "triples": [{"sub": "1147 stavropolis", "rel": "instance of", "obj": "asteroid"}]}
+{"id": "ont_8_celestialbody_test_52", "triples": [{"sub": "1147 stavropolis", "rel": "instance of", "obj": "asteroid"}, {"sub": "1147 stavropolis", "rel": "discoverer or inventor", "obj": "grigory neujmin"}]}
+{"id": "ont_8_celestialbody_test_53", "triples": [{"sub": "grigory neujmin", "rel": "date of birth", "obj": "jan 1, 1886"}]}
+{"id": "ont_8_celestialbody_test_54", "triples": [{"sub": "apoapsis", "rel": "followed by", "obj": "periapsis"}]}
+{"id": "ont_8_celestialbody_test_55", "triples": [{"sub": "1147 stavropolis", "rel": "discoverer or inventor", "obj": "grigory neujmin"}]}
+{"id": "ont_8_celestialbody_test_56", "triples": [{"sub": "1147 stavropolis", "rel": "discoverer or inventor", "obj": "grigory neujmin"}]}
+{"id": "ont_8_celestialbody_test_57", "triples": [{"sub": "grigory neujmin", "rel": "place of birth", "obj": "tbilisi"}]}
+{"id": "ont_8_celestialbody_test_58", "triples": [{"sub": "1147 stavropolis", "rel": "instance of", "obj": "asteroid"}]}
+{"id": "ont_8_celestialbody_test_59", "triples": [{"sub": "1147 stavropolis", "rel": "instance of", "obj": "asteroid"}]}
+{"id": "ont_8_celestialbody_test_60", "triples": [{"sub": "1147 stavropolis", "rel": "point in time", "obj": "1147"}]}
+{"id": "ont_8_celestialbody_test_61", "triples": [{"sub": "1147 stavropolis", "rel": "instance of", "obj": "asteroid"}, {"sub": "1147 stavropolis", "rel": "discoverer or inventor", "obj": "grigory neujmin"}]}
+{"id": "ont_8_celestialbody_test_62", "triples": [{"sub": "1147 stavropolis", "rel": "instance of", "obj": "asteroid"}]}
+{"id": "ont_8_celestialbody_test_63", "triples": [{"sub": "1147 stavropolis", "rel": "instance of", "obj": "asteroid"}]}
+{"id": "ont_8_celestialbody_test_64", "triples": [{"sub": "1147 stavropolis", "rel": "discoverer or inventor", "obj": "grigory neujmin"}]}
+{"id": "ont_8_celestialbody_test_65", "triples": [{"sub": "1147 stavropolis", "rel": "instance of", "obj": "asteroid"}]}
+{"id": "ont_8_celestialbody_test_66", "triples": [{"sub": "1147 stavropolis", "rel": "discoverer or inventor", "obj": "grigory neujmin"}]}
+{"id": "ont_8_celestialbody_test_67", "triples": [{"sub": "1147 stavropolis", "rel": "date of first performance", "obj": "june 11, 1929"}]}
+{"id": "ont_8_celestialbody_test_68", "triples": [{"sub": "1147 stavropolis", "rel": "instance of", "obj": "asteroid"}]}
+{"id": "ont_8_celestialbody_test_69", "triples": [{"sub": "1147 stavropolis", "rel": "point in time", "obj": "1147"}]}
+{"id": "ont_8_celestialbody_test_70", "triples": [{"sub": "(66391) 1999 kw4", "rel": "instance of", "obj": "celestial body"}]}
+{"id": "ont_8_celestialbody_test_71", "triples": [{"sub": "walter baade", "rel": "employer", "obj": "university of gottingen"}]}
+{"id": "ont_8_celestialbody_test_72", "triples": [{"sub": "110 lydia", "rel": "point in time", "obj": "31st december 2006"}]}

@@ -81,10 +81,10 @@ train_files:
 val_files:
   - 'data/wikidata_tekgen/test/ont_1_movie_test.jsonl'
 
-output_dir_path: 'experiments/results/llm_responses/rebel-raw-3-beams-1-ret-seq/'
+output_dir_path: 'experiments/results/llm_responses/rebel-raw-3-beams-2-ret-seq/'
 
 # generation hyperparameters
-num_return_sequences: 1             # top likeliest number of beams kept in output (beams get folded into one predicted triple set)
+num_return_sequences: 2             # top likeliest number of beams kept in output (beams get folded into one predicted triple set)
 eval_beams: 3                       # number of beams to use during generation
 max_target_length: 256              # maximum generated linearized triples output length
 only_relations_in_ontology: false   # only keep triples whose relation label is in ontology

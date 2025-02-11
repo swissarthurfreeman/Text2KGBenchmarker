@@ -1,0 +1,36 @@
+{"id": "ont_10_comicscharacter_test_1", "triples": [{"sub": "arion", "rel": "creator", "obj": "jan duursema"}]}
+{"id": "ont_10_comicscharacter_test_2", "triples": [{"sub": "arion", "rel": "creator", "obj": "paul kupperberg"}]}
+{"id": "ont_10_comicscharacter_test_3", "triples": [{"sub": "aurakles", "rel": "creator", "obj": "len wein"}]}
+{"id": "ont_10_comicscharacter_test_4", "triples": [{"sub": "dick dillin", "rel": "country of citizenship", "obj": "united states"}]}
+{"id": "ont_10_comicscharacter_test_5", "triples": [{"sub": "aurakles", "rel": "creator", "obj": "dick dillin"}]}
+{"id": "ont_10_comicscharacter_test_6", "triples": [{"sub": "auron", "rel": "creator", "obj": "marv wolfman"}]}
+{"id": "ont_10_comicscharacter_test_7", "triples": [{"sub": "auron", "rel": "creator", "obj": "karl kesel"}, {"sub": "auron", "rel": "creator", "obj": "walt simonson"}]}
+{"id": "ont_10_comicscharacter_test_8", "triples": [{"sub": "auron", "rel": "creator", "obj": "marv wolfman"}, {"sub": "auron", "rel": "creator", "obj": "karl kesel"}]}
+{"id": "ont_10_comicscharacter_test_9", "triples": [{"sub": "auron", "rel": "creator", "obj": "marv wolfman"}, {"sub": "auron", "rel": "creator", "obj": "walt simonson"}]}
+{"id": "ont_10_comicscharacter_test_10", "triples": [{"sub": "balder", "rel": "creator", "obj": "stan lee"}, {"sub": "balder", "rel": "creator", "obj": "jack kirby"}]}
+{"id": "ont_10_comicscharacter_test_11", "triples": [{"sub": "balder odinson", "rel": "creator", "obj": "jack kirby"}]}
+{"id": "ont_10_comicscharacter_test_12", "triples": [{"sub": "balder", "rel": "creator", "obj": "stan lee"}, {"sub": "balder", "rel": "creator", "obj": "jack kirby"}]}
+{"id": "ont_10_comicscharacter_test_13", "triples": [{"sub": "baymax", "rel": "production company", "obj": "walt disney studios motion pictures"}, {"sub": "big hero 6", "rel": "production company", "obj": "walt disney studios motion pictures"}, {"sub": "baymax", "rel": "performer", "obj": "alan tudyk"}, {"sub": "baymax", "rel": "present in work", "obj": "big hero 6"}, {"sub": "big hero 6", "rel": "characters", "obj": "baymax"}, {"sub": "big hero 6", "rel": "cast member", "obj": "alan tudyk"}]}
+{"id": "ont_10_comicscharacter_test_14", "triples": [{"sub": "big hero 6", "rel": "cast member", "obj": "ryan potter"}, {"sub": "big hero 6", "rel": "production company", "obj": "walt disney studios motion pictures"}]}
+{"id": "ont_10_comicscharacter_test_15", "triples": [{"sub": "big hero 6", "rel": "creator", "obj": "duncan rouleau"}, {"sub": "baymax", "rel": "creator", "obj": "duncan rouleau"}, {"sub": "baymax", "rel": "creator", "obj": "steven t. seagle"}, {"sub": "baymax", "rel": "present in work", "obj": "big hero 6"}, {"sub": "big hero 6", "rel": "creator", "obj": "steven t. seagle"}]}
+{"id": "ont_10_comicscharacter_test_16", "triples": [{"sub": "baymax", "rel": "creator", "obj": "duncan rouleau"}, {"sub": "baymax", "rel": "performer", "obj": "scott adsit"}]}
+{"id": "ont_10_comicscharacter_test_17", "triples": [{"sub": "bibbo bibbowski", "rel": "creator", "obj": "marv wolfman"}]}
+{"id": "ont_10_comicscharacter_test_18", "triples": [{"sub": "big hero 6", "rel": "cast member", "obj": "jamie chung"}, {"sub": "big hero 6", "rel": "production company", "obj": "walt disney studios motion pictures"}]}
+{"id": "ont_10_comicscharacter_test_19", "triples": [{"sub": "big hero 6", "rel": "cast member", "obj": "maya rudolph"}, {"sub": "big hero 6", "rel": "production company", "obj": "walt disney studios motion pictures"}]}
+{"id": "ont_10_comicscharacter_test_20", "triples": [{"sub": "big hero 6", "rel": "cast member", "obj": "alan tudyk"}]}
+{"id": "ont_10_comicscharacter_test_21", "triples": [{"sub": "ernie colon", "rel": "country of citizenship", "obj": "puerto rican"}]}
+{"id": "ont_10_comicscharacter_test_22", "triples": [{"sub": "bolt", "rel": "creator", "obj": "gary cohn"}]}
+{"id": "ont_10_comicscharacter_test_23", "triples": [{"sub": "bolt", "rel": "creator", "obj": "paris cullins"}, {"sub": "bolt", "rel": "creator", "obj": "gary cohn"}]}
+{"id": "ont_10_comicscharacter_test_24", "triples": [{"sub": "larry bolatinsky", "rel": "creator", "obj": "ernie colon"}]}
+{"id": "ont_10_comicscharacter_test_25", "triples": [{"sub": "bolt", "rel": "creator", "obj": "paris cullins"}]}
+{"id": "ont_10_comicscharacter_test_26", "triples": [{"sub": "bolt", "rel": "creator", "obj": "dan mishkin"}]}
+{"id": "ont_10_comicscharacter_test_27", "triples": [{"sub": "bolt", "rel": "creator", "obj": "paris cullins"}]}
+{"id": "ont_10_comicscharacter_test_28", "triples": [{"sub": "bolt", "rel": "creator", "obj": "gary cohn"}]}
+{"id": "ont_10_comicscharacter_test_29", "triples": [{"sub": "baymax", "rel": "creator", "obj": "steven t seagle"}]}
+{"id": "ont_10_comicscharacter_test_30", "triples": [{"sub": "auron", "rel": "creator", "obj": "karl kesel"}]}
+{"id": "ont_10_comicscharacter_test_31", "triples": [{"sub": "big hero 6", "rel": "production company", "obj": "walt disney studios motion pictures"}]}
+{"id": "ont_10_comicscharacter_test_32", "triples": [{"sub": "auron", "rel": "creator", "obj": "walt simonson"}]}
+{"id": "ont_10_comicscharacter_test_33", "triples": [{"sub": "baymax", "rel": "creator", "obj": "duncan rouleau"}, {"sub": "baymax", "rel": "creator", "obj": "steven t. seagle"}]}
+{"id": "ont_10_comicscharacter_test_34", "triples": [{"sub": "bibbo bibbowski", "rel": "creator", "obj": "jerry ordway"}]}
+{"id": "ont_10_comicscharacter_test_35", "triples": [{"sub": "bolt", "rel": "creator", "obj": "ernie colon"}]}
+{"id": "ont_10_comicscharacter_test_36", "triples": [{"sub": "larry bolatinsky", "rel": "creator", "obj": "paris cullins"}]}

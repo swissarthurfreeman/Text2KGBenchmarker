@@ -153,7 +153,8 @@ We provide a configuration file for raw REBEL evaluation on the whole of Text2KG
 python3 test.py data=text2kgbench-raw-rebel-test
 ```
 
-Note that this takes about 30 minutes on a GPU such as the NVIDIA RTX A5500. Theresults will be written inside the `experiments/results/llm_responses/rebel-raw-12-beams-2-ret-seq` folder. 
+Note that this takes about 10 minutes on a GPU such as the NVIDIA RTX A5500, using 3 evaluation beams and 1 return sequence and a batch size of 24 as in the config. The results will be written inside the `experiments/results/llm_responses/rebel-raw-12-beams-2-ret-seq` folder. 
+You can then compute the metrics for the model, using the script `metrics.py` under `experiments/utils/metrics.py`
 
 
 ### Fine-Tuning REBEL

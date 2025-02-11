@@ -1,0 +1,56 @@
+{"id": "ont_7_company_test_1", "triples": [{"sub": "insular government of the philippine islands", "rel": "capital", "obj": "manila"}, {"sub": "chinabank", "rel": "headquarters location", "obj": "manila"}]}
+{"id": "ont_7_company_test_2", "triples": [{"sub": "chinabank", "rel": "headquarters location", "obj": "manila"}, {"sub": "chinabank", "rel": "location of formation", "obj": "manila"}]}
+{"id": "ont_7_company_test_3", "triples": [{"sub": "insular government of the philippine islands", "rel": "capital", "obj": "manila"}, {"sub": "chinabank", "rel": "headquarters location", "obj": "manila"}]}
+{"id": "ont_7_company_test_4", "triples": [{"sub": "manila", "rel": "located in the administrative territorial entity", "obj": "metro manila"}, {"sub": "metro manila", "rel": "capital", "obj": "manila"}, {"sub": "chinabank", "rel": "headquarters location", "obj": "manila"}]}
+{"id": "ont_7_company_test_5", "triples": [{"sub": "chinabank", "rel": "date of official opening", "obj": "august 16th,1920"}, {"sub": "chinabank", "rel": "inception", "obj": "august 16th,1920"}]}
+{"id": "ont_7_company_test_6", "triples": [{"sub": "chinabank", "rel": "inception", "obj": "08-16-1920"}, {"sub": "chinabank", "rel": "instance of", "obj": "banking"}]}
+{"id": "ont_7_company_test_7", "triples": [{"sub": "chinabank", "rel": "inception", "obj": "aug. 16, 1920"}, {"sub": "chinabank", "rel": "instance of", "obj": "bank"}]}
+{"id": "ont_7_company_test_8", "triples": [{"sub": "chinabank", "rel": "instance of", "obj": "banking"}, {"sub": "chinabank", "rel": "inception", "obj": "1920-08-16"}]}
+{"id": "ont_7_company_test_9", "triples": [{"sub": "chinabank", "rel": "headquarters location", "obj": "manila"}, {"sub": "chinabank", "rel": "location of formation", "obj": "manila"}]}
+{"id": "ont_7_company_test_10", "triples": [{"sub": "chinabank", "rel": "industry", "obj": "public company"}, {"sub": "chinabank", "rel": "instance of", "obj": "public company"}]}
+{"id": "ont_7_company_test_11", "triples": [{"sub": "chinabank", "rel": "headquarters location", "obj": "manila"}, {"sub": "chinabank", "rel": "location of formation", "obj": "manila"}]}
+{"id": "ont_7_company_test_12", "triples": [{"sub": "chinabank", "rel": "headquarters location", "obj": "manila"}, {"sub": "chinabank", "rel": "location of formation", "obj": "manila"}]}
+{"id": "ont_7_company_test_13", "triples": [{"sub": "swords", "rel": "located in the administrative territorial entity", "obj": "dublin"}, {"sub": "dublin", "rel": "contains administrative territorial entity", "obj": "swords"}]}
+{"id": "ont_7_company_test_14", "triples": [{"sub": "trane", "rel": "headquarters location", "obj": "la crosse, wisconsin"}, {"sub": "trane", "rel": "inception", "obj": "1913-01-01"}]}
+{"id": "ont_7_company_test_15", "triples": [{"sub": "trane", "rel": "headquarters location", "obj": "la crosse, wisconsin"}, {"sub": "trane", "rel": "inception", "obj": "1913-01-01"}]}
+{"id": "ont_7_company_test_16", "triples": [{"sub": "trane", "rel": "inception", "obj": "january 1913"}, {"sub": "trane", "rel": "headquarters location", "obj": "lacrosse, wisconsin"}]}
+{"id": "ont_7_company_test_17", "triples": [{"sub": "trane located in ireland", "rel": "inception", "obj": "01-01-1913"}, {"sub": "trane", "rel": "inception", "obj": "01-01-1913"}]}
+{"id": "ont_7_company_test_18", "triples": [{"sub": "trane", "rel": "inception", "obj": "january 1, 1913"}, {"sub": "trane", "rel": "product or material produced", "obj": "hvac"}]}
+{"id": "ont_7_company_test_19", "triples": [{"sub": "trane", "rel": "headquarters location", "obj": "ireland"}, {"sub": "ireland", "rel": "continent", "obj": "europe"}]}
+{"id": "ont_7_company_test_20", "triples": [{"sub": "swords", "rel": "located in the administrative territorial entity", "obj": "dublin"}, {"sub": "swords", "rel": "country", "obj": "ireland"}, {"sub": "dublin", "rel": "country", "obj": "ireland"}]}
+{"id": "ont_7_company_test_21", "triples": [{"sub": "trane", "rel": "headquarters location", "obj": "swords, dublin"}, {"sub": "trane", "rel": "headquarters location", "obj": "swords"}]}
+{"id": "ont_7_company_test_22", "triples": [{"sub": "building materials", "rel": "instance of", "obj": "industry"}, {"sub": "hvac", "rel": "instance of", "obj": "industry"}, {"sub": "building material", "rel": "instance of", "obj": "industry"}]}
+{"id": "ont_7_company_test_23", "triples": [{"sub": "trane", "rel": "inception", "obj": "1913-01-01"}, {"sub": "trane", "rel": "country", "obj": "ireland"}]}
+{"id": "ont_7_company_test_24", "triples": [{"sub": "trane", "rel": "headquarters location", "obj": "la crosse, wisconsin"}, {"sub": "trane", "rel": "location of formation", "obj": "la crosse, wisconsin"}]}
+{"id": "ont_7_company_test_25", "triples": [{"sub": "trane", "rel": "industry", "obj": "building materials industry"}, {"sub": "trane", "rel": "industry", "obj": "hvac"}]}
+{"id": "ont_7_company_test_26", "triples": [{"sub": "swords", "rel": "located in the administrative territorial entity", "obj": "dublin"}, {"sub": "swords, dublin", "rel": "country", "obj": "ireland"}]}
+{"id": "ont_7_company_test_27", "triples": [{"sub": "swords", "rel": "located in the administrative territorial entity", "obj": "dublin"}, {"sub": "trane", "rel": "headquarters location", "obj": "swords, dublin"}]}
+{"id": "ont_7_company_test_28", "triples": [{"sub": "swords", "rel": "located in the administrative territorial entity", "obj": "dublin"}, {"sub": "trane", "rel": "headquarters location", "obj": "swords, dublin"}]}
+{"id": "ont_7_company_test_29", "triples": [{"sub": "revenue", "rel": "has part", "obj": "net income"}, {"sub": "revenue", "rel": "has effect", "obj": "net income"}]}
+{"id": "ont_7_company_test_30", "triples": [{"sub": "trane", "rel": "industry", "obj": "building management systems"}, {"sub": "trane", "rel": "product or material produced", "obj": "building management systems"}]}
+{"id": "ont_7_company_test_31", "triples": [{"sub": "trane", "rel": "headquarters location", "obj": "swords, dublin"}, {"sub": "trane", "rel": "headquarters location", "obj": "swords"}]}
+{"id": "ont_7_company_test_32", "triples": [{"sub": "trane", "rel": "inception", "obj": "1-01-1913"}, {"sub": "trane", "rel": "inception", "obj": "01-01-1913"}]}
+{"id": "ont_7_company_test_33", "triples": [{"sub": "chinabank", "rel": "headquarters location", "obj": "philippines"}, {"sub": "chinabank", "rel": "country", "obj": "philippines"}]}
+{"id": "ont_7_company_test_34", "triples": [{"sub": "chinabank", "rel": "instance of", "obj": "net income"}, {"sub": "chinabank", "rel": "industry", "obj": "net income"}]}
+{"id": "ont_7_company_test_35", "triples": [{"sub": "chinabank", "rel": "inception", "obj": "1920"}, {"sub": "chinabank", "rel": "inception", "obj": "1920-08-16"}]}
+{"id": "ont_7_company_test_36", "triples": [{"sub": "chinabank", "rel": "headquarters location", "obj": "philippines"}, {"sub": "chinabank", "rel": "country", "obj": "philippines"}]}
+{"id": "ont_7_company_test_37", "triples": [{"sub": "metro manila", "rel": "contains administrative territorial entity", "obj": "manila"}, {"sub": "metro manila", "rel": "capital", "obj": "manila"}, {"sub": "manila", "rel": "located in the administrative territorial entity", "obj": "metro manila"}]}
+{"id": "ont_7_company_test_38", "triples": [{"sub": "la crosse county", "rel": "capital", "obj": "la crosse"}, {"sub": "la crosse county", "rel": "contains administrative territorial entity", "obj": "la crosse"}, {"sub": "la crosse", "rel": "located in the administrative territorial entity", "obj": "la crosse county"}]}
+{"id": "ont_7_company_test_39", "triples": [{"sub": "trane", "rel": "inception", "obj": "1913-01-01"}, {"sub": "trane", "rel": "industry", "obj": "hvac"}]}
+{"id": "ont_7_company_test_40", "triples": [{"sub": "philippine islands", "rel": "capital", "obj": "manila"}, {"sub": "manila", "rel": "capital of", "obj": "philippine islands"}, {"sub": "chinabank", "rel": "headquarters location", "obj": "manila"}]}
+{"id": "ont_7_company_test_41", "triples": [{"sub": "trane", "rel": "headquarters location", "obj": "la crosse, wisconsin"}, {"sub": "trane", "rel": "inception", "obj": "january 1, 1913"}]}
+{"id": "ont_7_company_test_42", "triples": [{"sub": "trane", "rel": "instance of", "obj": "operating income"}, {"sub": "operating income", "rel": "facet of", "obj": "trane"}]}
+{"id": "ont_7_company_test_43", "triples": [{"sub": "mayor", "rel": "applies to jurisdiction", "obj": "la crosse, wisconsin"}, {"sub": "la crosse, wisconsin", "rel": "office held by head of government", "obj": "mayor"}]}
+{"id": "ont_7_company_test_44", "triples": [{"sub": "swords", "rel": "located in the administrative territorial entity", "obj": "dublin"}, {"sub": "swords, dublin", "rel": "located in the administrative territorial entity", "obj": "leinster"}]}
+{"id": "ont_7_company_test_45", "triples": [{"sub": "chinabank", "rel": "inception", "obj": "august 16,1920"}]}
+{"id": "ont_7_company_test_46", "triples": [{"sub": "chinabank", "rel": "headquarters location", "obj": "philippines"}, {"sub": "chinabank", "rel": "country", "obj": "philippines"}]}
+{"id": "ont_7_company_test_47", "triples": [{"sub": "trane", "rel": "headquarters location", "obj": "lacrosse, wisconsin"}, {"sub": "trane", "rel": "inception", "obj": "january 01, 1913"}]}
+{"id": "ont_7_company_test_48", "triples": [{"sub": "manila", "rel": "legislative body", "obj": "city council"}, {"sub": "city council", "rel": "applies to jurisdiction", "obj": "manila"}, {"sub": "chinabank", "rel": "headquarters location", "obj": "manila"}]}
+{"id": "ont_7_company_test_49", "triples": [{"sub": "la crosse wisconsin", "rel": "elevation above sea level", "obj": "204.0"}, {"sub": "la crosse", "rel": "elevation above sea level", "obj": "204.0"}]}
+{"id": "ont_7_company_test_50", "triples": [{"sub": "trane", "rel": "headquarters location", "obj": "lacrosse, wisconsin"}, {"sub": "trane", "rel": "location of formation", "obj": "lacrosse, wisconsin"}]}
+{"id": "ont_7_company_test_51", "triples": [{"sub": "trane", "rel": "product or material produced", "obj": "building material"}, {"sub": "trane", "rel": "industry", "obj": "building material"}]}
+{"id": "ont_7_company_test_52", "triples": [{"sub": "swords", "rel": "located in the administrative territorial entity", "obj": "dublin"}, {"sub": "county manager", "rel": "headquarters location", "obj": "swords"}]}
+{"id": "ont_7_company_test_53", "triples": [{"sub": "philippines", "rel": "capital", "obj": "manila"}, {"sub": "chinabank", "rel": "headquarters location", "obj": "manila"}, {"sub": "chinabank", "rel": "country", "obj": "philippines"}, {"sub": "manila", "rel": "country", "obj": "philippines"}]}
+{"id": "ont_7_company_test_54", "triples": [{"sub": "trane", "rel": "headquarters location", "obj": "la crosse"}, {"sub": "trane", "rel": "headquarters location", "obj": "la crosse, wisconsin state"}]}
+{"id": "ont_7_company_test_55", "triples": [{"sub": "trane", "rel": "headquarters location", "obj": "la crosse, wisconsin"}, {"sub": "ireland", "rel": "continent", "obj": "europe"}]}
+{"id": "ont_7_company_test_56", "triples": [{"sub": "revenue", "rel": "has part", "obj": "net income"}, {"sub": "net income", "rel": "has part", "obj": "revenue"}]}

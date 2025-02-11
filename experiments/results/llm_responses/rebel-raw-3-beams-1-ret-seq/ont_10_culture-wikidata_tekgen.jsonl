@@ -1,0 +1,167 @@
+{"id": "ont_10_culture_test_1", "triples": [{"sub": "louise meriwether", "rel": "date of birth", "obj": "may 8, 1923"}]}
+{"id": "ont_10_culture_test_2", "triples": [{"sub": "rothari", "rel": "family", "obj": "arodus"}]}
+{"id": "ont_10_culture_test_3", "triples": [{"sub": "augusta savage", "rel": "ethnic group", "obj": "african americans"}]}
+{"id": "ont_10_culture_test_4", "triples": [{"sub": "percy lavon julian", "rel": "field of work", "obj": "chemistry"}]}
+{"id": "ont_10_culture_test_5", "triples": [{"sub": "sarah dudley pettey", "rel": "ethnic group", "obj": "african american"}]}
+{"id": "ont_10_culture_test_6", "triples": [{"sub": "edna meade colson", "rel": "date of death", "obj": "january 17, 1985"}, {"sub": "edna meade colson", "rel": "date of birth", "obj": "october 7, 1888"}]}
+{"id": "ont_10_culture_test_7", "triples": [{"sub": "charlotte e. ray", "rel": "ethnic group", "obj": "african americans"}]}
+{"id": "ont_10_culture_test_8", "triples": [{"sub": "south", "rel": "shares border with", "obj": "north"}, {"sub": "north", "rel": "shares border with", "obj": "south"}]}
+{"id": "ont_10_culture_test_9", "triples": [{"sub": "james reese europe", "rel": "ethnic group", "obj": "african americans"}]}
+{"id": "ont_10_culture_test_10", "triples": [{"sub": "anatole broyard", "rel": "ethnic group", "obj": "african americans"}]}
+{"id": "ont_10_culture_test_11", "triples": [{"sub": "harry s. cummings", "rel": "educated at", "obj": "university of maryland school of law"}]}
+{"id": "ont_10_culture_test_12", "triples": [{"sub": "benjamin franklin butler", "rel": "conflict", "obj": "american civil war"}]}
+{"id": "ont_10_culture_test_13", "triples": [{"sub": "african-american", "rel": "different from", "obj": "african americans"}, {"sub": "african americans", "rel": "different from", "obj": "african-american"}]}
+{"id": "ont_10_culture_test_14", "triples": [{"sub": "charles spurgeon johnson", "rel": "date of birth", "obj": "july 24, 1893"}, {"sub": "charles spurgeon johnson", "rel": "date of death", "obj": "october 27, 1956"}]}
+{"id": "ont_10_culture_test_15", "triples": [{"sub": "african americans in the revolutionary war", "rel": "author", "obj": "william wells brown"}, {"sub": "william wells brown", "rel": "notable work", "obj": "african americans in the revolutionary war"}]}
+{"id": "ont_10_culture_test_16", "triples": [{"sub": "dwelle infirmary", "rel": "located in the administrative territorial entity", "obj": "atlanta"}]}
+{"id": "ont_10_culture_test_17", "triples": [{"sub": "mkrtich khrimian", "rel": "date of birth", "obj": "4 april 1820"}, {"sub": "mkrtich khrimian", "rel": "position held", "obj": "catholicos of all armenians"}, {"sub": "mkrtich khrimian", "rel": "date of death", "obj": "29 october 1907"}]}
+{"id": "ont_10_culture_test_18", "triples": [{"sub": "reconstruction era", "rel": "participant", "obj": "florida"}]}
+{"id": "ont_10_culture_test_19", "triples": [{"sub": "civil rights movement", "rel": "has part", "obj": "african americans"}]}
+{"id": "ont_10_culture_test_20", "triples": [{"sub": "roy decarava", "rel": "ethnic group", "obj": "african americans"}]}
+{"id": "ont_10_culture_test_21", "triples": [{"sub": "john patterson green", "rel": "member of political party", "obj": "republican"}]}
+{"id": "ont_10_culture_test_22", "triples": [{"sub": "mary burnett talbert", "rel": "ethnic group", "obj": "african americans"}]}
+{"id": "ont_10_culture_test_23", "triples": [{"sub": "little rock crisis", "rel": "facet of", "obj": "desegregation"}]}
+{"id": "ont_10_culture_test_24", "triples": [{"sub": "collage", "rel": "subclass of", "obj": "painting"}]}
+{"id": "ont_10_culture_test_25", "triples": [{"sub": "100 greatest african americans", "rel": "author", "obj": "molefi kete asante"}]}
+{"id": "ont_10_culture_test_26", "triples": [{"sub": "armenian national council of tiflis", "rel": "country", "obj": "first republic of armenia"}]}
+{"id": "ont_10_culture_test_27", "triples": [{"sub": "george moses horton", "rel": "ethnic group", "obj": "african american"}]}
+{"id": "ont_10_culture_test_28", "triples": [{"sub": "fairfax county", "rel": "located in the administrative territorial entity", "obj": "virginia"}, {"sub": "virginia", "rel": "contains administrative territorial entity", "obj": "fairfax county"}]}
+{"id": "ont_10_culture_test_29", "triples": [{"sub": "mandubracius", "rel": "ethnic group", "obj": "trinovantes"}]}
+{"id": "ont_10_culture_test_30", "triples": [{"sub": "ladonna vita tabbytite harris", "rel": "date of birth", "obj": "february 26, 1931"}]}
+{"id": "ont_10_culture_test_31", "triples": [{"sub": "united states", "rel": "ethnic group", "obj": "african americans"}]}
+{"id": "ont_10_culture_test_32", "triples": [{"sub": "ovid", "rel": "influenced by", "obj": "horace"}, {"sub": "ovid", "rel": "influenced by", "obj": "virgil"}]}
+{"id": "ont_10_culture_test_33", "triples": [{"sub": "theodore bibliander", "rel": "place of birth", "obj": "bischofszell"}]}
+{"id": "ont_10_culture_test_34", "triples": [{"sub": "messina", "rel": "country", "obj": "italy"}]}
+{"id": "ont_10_culture_test_35", "triples": [{"sub": "cato the elder", "rel": "field of work", "obj": "latin"}]}
+{"id": "ont_10_culture_test_36", "triples": [{"sub": "franz neumayr", "rel": "date of birth", "obj": "17 january 1697"}, {"sub": "franz neumayr", "rel": "date of death", "obj": "1 may 1765"}, {"sub": "franz neumayr", "rel": "religious order", "obj": "jesuit"}]}
+{"id": "ont_10_culture_test_37", "triples": [{"sub": "johann wigand", "rel": "religion", "obj": "lutheran"}]}
+{"id": "ont_10_culture_test_38", "triples": [{"sub": "esperanto", "rel": "instance of", "obj": "constructed language"}]}
+{"id": "ont_10_culture_test_39", "triples": [{"sub": "konrad pellikan", "rel": "date of death", "obj": "6 may 1556"}, {"sub": "konrad pellikan", "rel": "date of birth", "obj": "january 8, 1478"}, {"sub": "konrad pellikan", "rel": "place of death", "obj": "zurich"}, {"sub": "konrad pellikan", "rel": "place of birth", "obj": "rouffach"}]}
+{"id": "ont_10_culture_test_40", "triples": [{"sub": "francesco filelfo", "rel": "date of death", "obj": "july 31, 1481"}, {"sub": "francesco filelfo", "rel": "date of birth", "obj": "july 25, 1398"}]}
+{"id": "ont_10_culture_test_41", "triples": [{"sub": "humphrey tonkin", "rel": "field of work", "obj": "esperanto studies"}]}
+{"id": "ont_10_culture_test_42", "triples": [{"sub": "poliespo", "rel": "instance of", "obj": "constructed language"}]}
+{"id": "ont_10_culture_test_43", "triples": [{"sub": "english", "rel": "influenced by", "obj": "russian"}]}
+{"id": "ont_10_culture_test_44", "triples": [{"sub": "ljudmila novak", "rel": "field of work", "obj": "esperanto"}]}
+{"id": "ont_10_culture_test_45", "triples": [{"sub": "j\u00e1no\u0161\u00edk", "rel": "publication date", "obj": "1921"}]}
+{"id": "ont_10_culture_test_46", "triples": [{"sub": "hendrik jan bulthuis", "rel": "place of death", "obj": "noordbroek"}, {"sub": "hendrik jan bulthuis", "rel": "date of death", "obj": "27 april 1945"}, {"sub": "hendrik jan bulthuis", "rel": "place of birth", "obj": "warffum"}, {"sub": "hendrik jan bulthuis", "rel": "date of birth", "obj": "15 september 1865"}]}
+{"id": "ont_10_culture_test_47", "triples": [{"sub": "poliziano", "rel": "date of death", "obj": "24 september 1494"}, {"sub": "poliziano", "rel": "date of birth", "obj": "14 july 1454"}]}
+{"id": "ont_10_culture_test_48", "triples": [{"sub": "wilhelm fabry", "rel": "place of death", "obj": "bern"}]}
+{"id": "ont_10_culture_test_49", "triples": [{"sub": "ramon llull", "rel": "date of birth", "obj": "1232"}]}
+{"id": "ont_10_culture_test_50", "triples": [{"sub": "johann(es) werner", "rel": "date of death", "obj": "may 1522"}, {"sub": "johann(es) werner", "rel": "date of birth", "obj": "february 14, 1468"}]}
+{"id": "ont_10_culture_test_51", "triples": [{"sub": "esperanto movement", "rel": "field of work", "obj": "esperanto"}]}
+{"id": "ont_10_culture_test_52", "triples": [{"sub": "edward saxton payson", "rel": "field of work", "obj": "esperanto"}]}
+{"id": "ont_10_culture_test_53", "triples": [{"sub": "henry montagu butler", "rel": "conflict", "obj": "first world war"}]}
+{"id": "ont_10_culture_test_54", "triples": [{"sub": "julius caesar aranzi", "rel": "field of work", "obj": "hydrocephalus"}]}
+{"id": "ont_10_culture_test_55", "triples": [{"sub": "han moo-hyup", "rel": "military rank", "obj": "major general"}]}
+{"id": "ont_10_culture_test_56", "triples": [{"sub": "epigram", "rel": "studied by", "obj": "epigrammatist"}, {"sub": "epigrammatist", "rel": "studies", "obj": "epigram"}]}
+{"id": "ont_10_culture_test_57", "triples": [{"sub": "la homa lingvo", "rel": "publication date", "obj": "1927"}]}
+{"id": "ont_10_culture_test_58", "triples": [{"sub": "li shijun", "rel": "field of work", "obj": "esperanto"}]}
+{"id": "ont_10_culture_test_59", "triples": [{"sub": "johann jakob reiske", "rel": "date of death", "obj": "august 14, 1774"}, {"sub": "johann jakob reiske", "rel": "date of birth", "obj": "december 25, 1716"}]}
+{"id": "ont_10_culture_test_60", "triples": [{"sub": "dante alighieri", "rel": "language of work or name", "obj": "latin"}]}
+{"id": "ont_10_culture_test_61", "triples": [{"sub": "lithuania", "rel": "language used", "obj": "esperanto"}]}
+{"id": "ont_10_culture_test_62", "triples": [{"sub": "taiji yamaga", "rel": "field of work", "obj": "esperanto"}]}
+{"id": "ont_10_culture_test_63", "triples": [{"sub": "conrad celtes", "rel": "date of death", "obj": "4 february 1508"}]}
+{"id": "ont_10_culture_test_64", "triples": [{"sub": "de revolutionibus orbium coelestium", "rel": "author", "obj": "copernicus"}, {"sub": "copernicus", "rel": "notable work", "obj": "de revolutionibus orbium coelestium"}]}
+{"id": "ont_10_culture_test_65", "triples": [{"sub": "virgil", "rel": "time period", "obj": "augustan period"}]}
+{"id": "ont_10_culture_test_66", "triples": [{"sub": "alain de lille", "rel": "date of death", "obj": "1202"}]}
+{"id": "ont_10_culture_test_67", "triples": [{"sub": "esperanto", "rel": "inception", "obj": "1924"}]}
+{"id": "ont_10_culture_test_68", "triples": [{"sub": "gerrit berveling", "rel": "date of birth", "obj": "1 april 1944"}, {"sub": "gerrit berveling", "rel": "place of birth", "obj": "vlaardingen"}]}
+{"id": "ont_10_culture_test_69", "triples": [{"sub": "thomas naogeorgus", "rel": "date of birth", "obj": "21 december 1508"}, {"sub": "thomas naogeorgus", "rel": "date of death", "obj": "29 december 1563"}]}
+{"id": "ont_10_culture_test_70", "triples": [{"sub": "claude piron", "rel": "field of work", "obj": "esperanto"}]}
+{"id": "ont_10_culture_test_71", "triples": [{"sub": "felix stone moscheles", "rel": "date of death", "obj": "22 december 1917"}, {"sub": "felix stone moscheles", "rel": "date of birth", "obj": "8 february 1833"}]}
+{"id": "ont_10_culture_test_72", "triples": [{"sub": "nilto maciel", "rel": "language of work or name", "obj": "esperanto"}]}
+{"id": "ont_10_culture_test_73", "triples": [{"sub": "langues d'o\u00e3\u00afl", "rel": "subclass of", "obj": "middle high german"}]}
+{"id": "ont_10_culture_test_74", "triples": [{"sub": "vilma sindona eichholz", "rel": "date of death", "obj": "july 15, 1995"}]}
+{"id": "ont_10_culture_test_75", "triples": [{"sub": "johannes waldemar karsch", "rel": "member of", "obj": "estraro"}]}
+{"id": "ont_10_culture_test_76", "triples": [{"sub": "propertius", "rel": "genre", "obj": "latin elegists"}]}
+{"id": "ont_10_culture_test_77", "triples": [{"sub": "lidia zamenhof", "rel": "field of work", "obj": "esperanto"}]}
+{"id": "ont_10_culture_test_78", "triples": [{"sub": "arulo", "rel": "creator", "obj": "max talmey"}, {"sub": "ail", "rel": "creator", "obj": "max talmey"}, {"sub": "gloro", "rel": "creator", "obj": "max talmey"}]}
+{"id": "ont_10_culture_test_79", "triples": [{"sub": "max mangold", "rel": "field of work", "obj": "esperanto"}]}
+{"id": "ont_10_culture_test_80", "triples": [{"sub": "ether", "rel": "discoverer or inventor", "obj": "valerius cordus"}]}
+{"id": "ont_10_culture_test_81", "triples": [{"sub": "georg fabricius", "rel": "date of death", "obj": "17 july 1571"}, {"sub": "georg fabricius", "rel": "date of birth", "obj": "23 april 1516"}]}
+{"id": "ont_10_culture_test_82", "triples": [{"sub": "sixth world esperanto congress", "rel": "point in time", "obj": "1910"}]}
+{"id": "ont_10_culture_test_83", "triples": [{"sub": "geoffrey of monmouth", "rel": "date of birth", "obj": "1095"}]}
+{"id": "ont_10_culture_test_84", "triples": [{"sub": "ferdinand duviard", "rel": "occupation", "obj": "esperantist"}]}
+{"id": "ont_10_culture_test_85", "triples": [{"sub": "augustine of hippo", "rel": "movement", "obj": "patristic period"}]}
+{"id": "ont_10_culture_test_86", "triples": [{"sub": "nadia hordijenko andrianova", "rel": "date of birth", "obj": "1921"}]}
+{"id": "ont_10_culture_test_87", "triples": [{"sub": "trevor steele", "rel": "date of birth", "obj": "1940"}]}
+{"id": "ont_10_culture_test_88", "triples": [{"sub": "georges lagrange", "rel": "language of work or name", "obj": "esperanto"}]}
+{"id": "ont_10_culture_test_89", "triples": [{"sub": "oliviero carafa", "rel": "position held", "obj": "cardinal"}]}
+{"id": "ont_10_culture_test_90", "triples": [{"sub": "edgar de wahl", "rel": "field of work", "obj": "esperanto"}]}
+{"id": "ont_10_culture_test_91", "triples": [{"sub": "ossetic", "rel": "subclass of", "obj": "iranian languages"}]}
+{"id": "ont_10_culture_test_92", "triples": [{"sub": "antiviral chemistry & chemotherapy", "rel": "inception", "obj": "january 1990"}]}
+{"id": "ont_10_culture_test_93", "triples": [{"sub": "british journal of sports medicine", "rel": "inception", "obj": "1964"}]}
+{"id": "ont_10_culture_test_94", "triples": [{"sub": "veterinary record", "rel": "inception", "obj": "1888"}]}
+{"id": "ont_10_culture_test_95", "triples": [{"sub": "the clinical investigator", "rel": "inception", "obj": "1992"}]}
+{"id": "ont_10_culture_test_96", "triples": [{"sub": "vascular pharmacology", "rel": "inception", "obj": "1970"}]}
+{"id": "ont_10_culture_test_97", "triples": [{"sub": "physician and sportsmedicine", "rel": "inception", "obj": "1973"}]}
+{"id": "ont_10_culture_test_98", "triples": [{"sub": "european journal of medicinal chemistry", "rel": "inception", "obj": "1966"}]}
+{"id": "ont_10_culture_test_99", "triples": [{"sub": "1995", "rel": "point in time", "obj": "1995"}]}
+{"id": "ont_10_culture_test_100", "triples": [{"sub": "current medical research and opinion", "rel": "instance of", "obj": "medical journal"}, {"sub": "current medical research and opinion", "rel": "inception", "obj": "1972"}]}
+{"id": "ont_10_culture_test_101", "triples": [{"sub": "journal of inherited metabolic disease", "rel": "inception", "obj": "1978"}]}
+{"id": "ont_10_culture_test_102", "triples": [{"sub": "palle holmstrup", "rel": "employer", "obj": "university of copenhagen"}]}
+{"id": "ont_10_culture_test_103", "triples": [{"sub": "glenn mcgee", "rel": "inception", "obj": "1999"}]}
+{"id": "ont_10_culture_test_104", "triples": [{"sub": "john a. wagner", "rel": "employer", "obj": "takeda pharmaceuticals international"}]}
+{"id": "ont_10_culture_test_105", "triples": [{"sub": "dermatology online journal", "rel": "inception", "obj": "1995"}, {"sub": "dermatology online journal", "rel": "instance of", "obj": "medical journal"}]}
+{"id": "ont_10_culture_test_106", "triples": [{"sub": "ophthalmic record", "rel": "inception", "obj": "1917"}]}
+{"id": "ont_10_culture_test_107", "triples": [{"sub": "nelson fausto", "rel": "employer", "obj": "university of washington"}]}
+{"id": "ont_10_culture_test_108", "triples": [{"sub": "arthritis & rheumatology", "rel": "inception", "obj": "1958"}]}
+{"id": "ont_10_culture_test_109", "triples": [{"sub": "jama surgery", "rel": "inception", "obj": "1920"}]}
+{"id": "ont_10_culture_test_110", "triples": [{"sub": "journal of musculoskeletal research", "rel": "inception", "obj": "1997"}, {"sub": "journal of musculoskeletal research", "rel": "publisher", "obj": "world scientific"}]}
+{"id": "ont_10_culture_test_111", "triples": [{"sub": "annals of behavioral medicine", "rel": "inception", "obj": "1979"}, {"sub": "annals of behavioral medicine", "rel": "publisher", "obj": "society of behavioral medicine"}]}
+{"id": "ont_10_culture_test_112", "triples": [{"sub": "international journal of nephrology and renovascular disease", "rel": "publisher", "obj": "dove medical press"}, {"sub": "international journal of nephrology and renovascular disease", "rel": "inception", "obj": "2008"}]}
+{"id": "ont_10_culture_test_113", "triples": [{"sub": "journal of medical physics", "rel": "inception", "obj": "1976"}]}
+{"id": "ont_10_culture_test_114", "triples": [{"sub": "dove medical press", "rel": "inception", "obj": "2009"}]}
+{"id": "ont_10_culture_test_115", "triples": [{"sub": "american journal of hematology", "rel": "inception", "obj": "1976"}]}
+{"id": "ont_10_culture_test_116", "triples": [{"sub": "international journal of chronic obstructive pulmonary disease", "rel": "inception", "obj": "2006"}]}
+{"id": "ont_10_culture_test_117", "triples": [{"sub": "child health issues", "rel": "subclass of", "obj": "health care"}]}
+{"id": "ont_10_culture_test_118", "triples": [{"sub": "annals of surgery", "rel": "inception", "obj": "1885"}]}
+{"id": "ont_10_culture_test_119", "triples": [{"sub": "annals of tropical paediatrics", "rel": "inception", "obj": "1981"}]}
+{"id": "ont_10_culture_test_120", "triples": [{"sub": "annals of family medicine", "rel": "inception", "obj": "2003"}]}
+{"id": "ont_10_culture_test_121", "triples": [{"sub": "toxicologic pathology", "rel": "inception", "obj": "1972"}, {"sub": "toxicologic pathology", "rel": "publisher", "obj": "sage publications"}]}
+{"id": "ont_10_culture_test_122", "triples": [{"sub": "annals of saudi medicine", "rel": "inception", "obj": "1981"}]}
+{"id": "ont_10_culture_test_123", "triples": [{"sub": "clinical gastroenterology and hepatology", "rel": "inception", "obj": "january 2003"}]}
+{"id": "ont_10_culture_test_124", "triples": [{"sub": "1975", "rel": "point in time", "obj": "1975"}]}
+{"id": "ont_10_culture_test_125", "triples": [{"sub": "infection, genetics and evolution", "rel": "inception", "obj": "2001"}, {"sub": "scientific journal", "rel": "uses", "obj": "peer-reviewed"}, {"sub": "infection, genetics and evolution", "rel": "instance of", "obj": "scientific journal"}]}
+{"id": "ont_10_culture_test_126", "triples": [{"sub": "asian journal of andrology", "rel": "inception", "obj": "1999"}]}
+{"id": "ont_10_culture_test_127", "triples": [{"sub": "british journal of nutrition", "rel": "publisher", "obj": "cambridge university press"}, {"sub": "british journal of nutrition", "rel": "inception", "obj": "1947"}]}
+{"id": "ont_10_culture_test_128", "triples": [{"sub": "comprehensive therapy", "rel": "publisher", "obj": "humana press"}, {"sub": "comprehensive therapy", "rel": "inception", "obj": "1975"}]}
+{"id": "ont_10_culture_test_129", "triples": [{"sub": "european journal of cancer prevention", "rel": "publisher", "obj": "lippincott williams & wilkins"}, {"sub": "european journal of cancer prevention", "rel": "inception", "obj": "1991"}]}
+{"id": "ont_10_culture_test_130", "triples": [{"sub": "age and ageing", "rel": "inception", "obj": "1972"}, {"sub": "age and ageing", "rel": "publisher", "obj": "oxford university press"}]}
+{"id": "ont_10_culture_test_131", "triples": [{"sub": "journal of indian association of pediatric surgeons", "rel": "inception", "obj": "1995"}]}
+{"id": "ont_10_culture_test_132", "triples": [{"sub": "journal of orthopaedic research", "rel": "inception", "obj": "1983"}]}
+{"id": "ont_10_culture_test_133", "triples": [{"sub": "1985", "rel": "point in time", "obj": "1985"}]}
+{"id": "ont_10_culture_test_134", "triples": [{"sub": "journal of experimental & clinical cancer research", "rel": "publisher", "obj": "biomed central"}, {"sub": "journal of experimental & clinical cancer research", "rel": "inception", "obj": "1982"}]}
+{"id": "ont_10_culture_test_135", "triples": [{"sub": "international journal of general medicine", "rel": "inception", "obj": "2008"}, {"sub": "international journal of general medicine", "rel": "publisher", "obj": "dove medical press"}]}
+{"id": "ont_10_culture_test_136", "triples": [{"sub": "journal of oncology practice", "rel": "publisher", "obj": "american society of clinical oncology"}, {"sub": "journal of oncology practice", "rel": "inception", "obj": "2005"}]}
+{"id": "ont_10_culture_test_137", "triples": [{"sub": "1911", "rel": "point in time", "obj": "1911"}]}
+{"id": "ont_10_culture_test_138", "triples": [{"sub": "2002", "rel": "point in time", "obj": "2002"}]}
+{"id": "ont_10_culture_test_139", "triples": [{"sub": "academic journal", "rel": "uses", "obj": "peer-reviewed"}, {"sub": "journal of medical ethics", "rel": "inception", "obj": "1975"}]}
+{"id": "ont_10_culture_test_140", "triples": [{"sub": "applied and environmental microbiology", "rel": "inception", "obj": "1953"}]}
+{"id": "ont_10_culture_test_141", "triples": [{"sub": "dove medical press", "rel": "inception", "obj": "2008"}]}
+{"id": "ont_10_culture_test_142", "triples": [{"sub": "dove medical press", "rel": "inception", "obj": "2007"}]}
+{"id": "ont_10_culture_test_143", "triples": [{"sub": "aids research and human retroviruses", "rel": "inception", "obj": "1983"}]}
+{"id": "ont_10_culture_test_144", "triples": [{"sub": "journal of occupational and environmental medicine", "rel": "inception", "obj": "1959"}]}
+{"id": "ont_10_culture_test_145", "triples": [{"sub": "human mutation", "rel": "inception", "obj": "1992"}]}
+{"id": "ont_10_culture_test_146", "triples": [{"sub": "journal of orthopaedic & sports physical therapy", "rel": "inception", "obj": "1979"}]}
+{"id": "ont_10_culture_test_147", "triples": [{"sub": "scientific world journal", "rel": "inception", "obj": "2001"}]}
+{"id": "ont_10_culture_test_148", "triples": [{"sub": "vascular and endovascular surgery", "rel": "publisher", "obj": "sage publications"}, {"sub": "vascular and endovascular surgery", "rel": "inception", "obj": "1967"}]}
+{"id": "ont_10_culture_test_149", "triples": [{"sub": "international journal of obesity", "rel": "inception", "obj": "1977"}]}
+{"id": "ont_10_culture_test_150", "triples": [{"sub": "endocrine journal", "rel": "inception", "obj": "1925"}]}
+{"id": "ont_10_culture_test_151", "triples": [{"sub": "european journal of pain", "rel": "publisher", "obj": "wiley-blackwell"}, {"sub": "european journal of pain", "rel": "inception", "obj": "1997"}]}
+{"id": "ont_10_culture_test_152", "triples": [{"sub": "1994 concert", "rel": "point in time", "obj": "1994"}]}
+{"id": "ont_10_culture_test_153", "triples": [{"sub": "beovizija", "rel": "instance of", "obj": "music festival"}, {"sub": "beovizija", "rel": "inception", "obj": "2003"}]}
+{"id": "ont_10_culture_test_154", "triples": [{"sub": "ultra", "rel": "performer", "obj": "depeche mode"}]}
+{"id": "ont_10_culture_test_155", "triples": [{"sub": "grand final", "rel": "point in time", "obj": "21 december 2013"}]}
+{"id": "ont_10_culture_test_156", "triples": [{"sub": "radio ga ga", "rel": "performer", "obj": "queen"}, {"sub": "killer queen", "rel": "performer", "obj": "queen"}, {"sub": "freddie mercury", "rel": "notable work", "obj": "bohemian rhapsody"}, {"sub": "freddie mercury", "rel": "member of", "obj": "queen"}, {"sub": "queen", "rel": "has part", "obj": "freddie mercury"}, {"sub": "freddie mercury", "rel": "notable work", "obj": "radio ga ga"}, {"sub": "freddie mercury", "rel": "notable work", "obj": "killer queen"}, {"sub": "bohemian rhapsody", "rel": "performer", "obj": "queen"}]}
+{"id": "ont_10_culture_test_157", "triples": [{"sub": "manichaean religion", "rel": "founded by", "obj": "mani"}, {"sub": "mani", "rel": "religion", "obj": "manichaean religion"}, {"sub": "shabuhragan", "rel": "author", "obj": "mani"}]}
+{"id": "ont_10_culture_test_158", "triples": [{"sub": "bartholomew the apostle", "rel": "instance of", "obj": "beheaded"}]}
+{"id": "ont_10_culture_test_159", "triples": [{"sub": "mount etna", "rel": "located on terrain feature", "obj": "sicily"}]}
+{"id": "ont_10_culture_unseen_test_1", "triples": [{"sub": "augusta savage", "rel": "ethnic group", "obj": "armenians"}]}
+{"id": "ont_10_culture_unseen_test_2", "triples": [{"sub": "james reese europe", "rel": "member of", "obj": "lombards"}]}
+{"id": "ont_10_culture_unseen_test_3", "triples": [{"sub": "cato the elder", "rel": "field of work", "obj": "esperanto"}]}
+{"id": "ont_10_culture_unseen_test_4", "triples": [{"sub": "vilho v\u00e4is\u00e4l\u00e4", "rel": "movement", "obj": "latin movement"}]}
+{"id": "ont_10_culture_unseen_test_5", "triples": [{"sub": "american journal of bioethics", "rel": "inception", "obj": "1999"}]}
+{"id": "ont_10_culture_unseen_test_6", "triples": [{"sub": "veterinary record", "rel": "inception", "obj": "1888"}]}
+{"id": "ont_10_culture_unseen_test_7", "triples": [{"sub": "bartholomew the apostle", "rel": "depicts", "obj": "breast"}]}
+{"id": "ont_10_culture_unseen_test_8", "triples": [{"sub": "symbol knife", "rel": "subclass of", "obj": "iconographic"}]}

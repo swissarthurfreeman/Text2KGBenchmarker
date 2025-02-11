@@ -1,0 +1,658 @@
+{"id": "ont_2_music_test_1", "triples": [{"sub": "'39", "rel": "composer", "obj": "brian may"}, {"sub": "a night at the opera", "rel": "producer", "obj": "brian may"}, {"sub": "'39", "rel": "part of", "obj": "a night at the opera"}]}
+{"id": "ont_2_music_test_2", "triples": [{"sub": "till the world ends", "rel": "performer", "obj": "kesha sebert"}]}
+{"id": "ont_2_music_test_3", "triples": [{"sub": "gaby oh gaby", "rel": "performer", "obj": "alain bashung"}]}
+{"id": "ont_2_music_test_4", "triples": [{"sub": "hold it against me", "rel": "producer", "obj": "max martin"}]}
+{"id": "ont_2_music_test_5", "triples": [{"sub": "the fame", "rel": "performer", "obj": "lady gaga"}, {"sub": "beautiful, dirty, rich", "rel": "part of", "obj": "the fame"}, {"sub": "beautiful, dirty, rich", "rel": "performer", "obj": "lady gaga"}]}
+{"id": "ont_2_music_test_6", "triples": [{"sub": "the loco-motion", "rel": "publication date", "obj": "1962"}, {"sub": "gerry goffin", "rel": "spouse", "obj": "carole king"}, {"sub": "carole king", "rel": "spouse", "obj": "gerry goffin"}]}
+{"id": "ont_2_music_test_7", "triples": [{"sub": "california gurls", "rel": "has part", "obj": "bonnie mckee"}]}
+{"id": "ont_2_music_test_8", "triples": [{"sub": "let 's get loud", "rel": "composer", "obj": "gloria estefan"}]}
+{"id": "ont_2_music_test_9", "triples": [{"sub": "eh, eh (nothing else i can say)", "rel": "performer", "obj": "lady gaga"}, {"sub": "eh, eh (nothing else i can say)", "rel": "part of", "obj": "the fame"}, {"sub": "the fame", "rel": "performer", "obj": "lady gaga"}, {"sub": "eh, eh (nothing else i can say)", "rel": "part of", "obj": "eh, eh (nothing else i can say)"}]}
+{"id": "ont_2_music_test_10", "triples": [{"sub": "driving home for christmas", "rel": "performer", "obj": "chris rea"}]}
+{"id": "ont_2_music_test_11", "triples": [{"sub": "four strong winds", "rel": "performer", "obj": "ian and sylvia"}]}
+{"id": "ont_2_music_test_12", "triples": [{"sub": "1913", "rel": "point in time", "obj": "1913"}]}
+{"id": "ont_2_music_test_13", "triples": [{"sub": "jim morrison", "rel": "occupation", "obj": "lead singer"}]}
+{"id": "ont_2_music_test_14", "triples": [{"sub": "c'est ta chance", "rel": "performer", "obj": "jean-jacques goldman"}]}
+{"id": "ont_2_music_test_15", "triples": [{"sub": "your love is my drug", "rel": "part of", "obj": "animal"}, {"sub": "animal", "rel": "performer", "obj": "kesha"}, {"sub": "your love is my drug", "rel": "performer", "obj": "kesha"}]}
+{"id": "ont_2_music_test_16", "triples": [{"sub": "crazy in love", "rel": "performer", "obj": "beyonc\u00e3\u00a9"}, {"sub": "crazy in love", "rel": "producer", "obj": "rich harrison"}]}
+{"id": "ont_2_music_test_17", "triples": [{"sub": "i'm gonna be alright", "rel": "part of", "obj": "i 'm gonna be alright"}, {"sub": "i 'm gonna be alright", "rel": "performer", "obj": "jennifer lopez"}, {"sub": "i'm gonna be alright", "rel": "performer", "obj": "jennifer lopez"}]}
+{"id": "ont_2_music_test_18", "triples": [{"sub": "reign in blood", "rel": "publication date", "obj": "1986"}]}
+{"id": "ont_2_music_test_19", "triples": [{"sub": "les millions d'arl\u00e3\u00a9quin", "rel": "composer", "obj": "riccardo drigo"}]}
+{"id": "ont_2_music_test_20", "triples": [{"sub": "chic", "rel": "has part", "obj": "nile rodgers"}, {"sub": "bernard edwards", "rel": "member of", "obj": "chic"}, {"sub": "chic", "rel": "has part", "obj": "bernard edwards"}, {"sub": "nile rodgers", "rel": "member of", "obj": "chic"}, {"sub": "good times", "rel": "performer", "obj": "chic"}]}
+{"id": "ont_2_music_test_21", "triples": [{"sub": "austrian empire", "rel": "replaces", "obj": "holy roman empire"}, {"sub": "holy roman empire", "rel": "replaced by", "obj": "austrian empire"}]}
+{"id": "ont_2_music_test_22", "triples": [{"sub": "who wants to live forever", "rel": "performer", "obj": "brian may"}, {"sub": "who wants to live forever", "rel": "part of", "obj": "a kind of magic"}, {"sub": "a kind of magic", "rel": "performer", "obj": "brian may"}]}
+{"id": "ont_2_music_test_23", "triples": [{"sub": "azzurro", "rel": "genre", "obj": "pop"}]}
+{"id": "ont_2_music_test_24", "triples": [{"sub": "love never felt so good", "rel": "performer", "obj": "michael jackson"}]}
+{"id": "ont_2_music_test_25", "triples": [{"sub": "i kissed a girl", "rel": "producer", "obj": "dr. luke"}]}
+{"id": "ont_2_music_test_26", "triples": [{"sub": "only teardrops", "rel": "performer", "obj": "emmelie de forest"}, {"sub": "eurovision song contest 2013", "rel": "winner", "obj": "emmelie de forest"}, {"sub": "emmelie de forest", "rel": "participant in", "obj": "eurovision song contest 2013"}]}
+{"id": "ont_2_music_test_27", "triples": [{"sub": "west side story", "rel": "instance of", "obj": "musical"}, {"sub": "west side story", "rel": "composer", "obj": "leonard bernstein"}, {"sub": "west side story", "rel": "librettist", "obj": "arthur laurents"}, {"sub": "west side story", "rel": "lyrics by", "obj": "stephen sondheim"}]}
+{"id": "ont_2_music_test_28", "triples": [{"sub": "robert schumann", "rel": "instrument", "obj": "piano"}]}
+{"id": "ont_2_music_test_29", "triples": [{"sub": "waka waka (this time for africa)", "rel": "performer", "obj": "shakira"}]}
+{"id": "ont_2_music_test_30", "triples": [{"sub": "ich hatt ' einen kameraden", "rel": "composer", "obj": "friedrich silcher"}]}
+{"id": "ont_2_music_test_31", "triples": [{"sub": "bono", "rel": "sibling", "obj": "the edge"}, {"sub": "the edge", "rel": "sibling", "obj": "bono"}]}
+{"id": "ont_2_music_test_32", "triples": [{"sub": "chichester psalms", "rel": "composer", "obj": "leonard bernstein"}]}
+{"id": "ont_2_music_test_33", "triples": [{"sub": "grimes", "rel": "occupation", "obj": "produced"}]}
+{"id": "ont_2_music_test_34", "triples": [{"sub": "suicide is painless", "rel": "composer", "obj": "johnny mandel"}]}
+{"id": "ont_2_music_test_35", "triples": [{"sub": "till i collapse", "rel": "publication date", "obj": "2002"}, {"sub": "the eminem show", "rel": "performer", "obj": "eminem"}, {"sub": "till i collapse", "rel": "part of", "obj": "the eminem show"}, {"sub": "till i collapse", "rel": "performer", "obj": "eminem"}]}
+{"id": "ont_2_music_test_36", "triples": [{"sub": "the song of the nightingale", "rel": "composer", "obj": "igor stravinsky"}]}
+{"id": "ont_2_music_test_37", "triples": [{"sub": "salomon rossi suite", "rel": "composer", "obj": "lukas foss"}]}
+{"id": "ont_2_music_test_38", "triples": [{"sub": "friends will be friends", "rel": "performer", "obj": "queen"}, {"sub": "queen", "rel": "has part", "obj": "john deacon"}, {"sub": "a kind of magic", "rel": "performer", "obj": "queen"}, {"sub": "freddie mercury", "rel": "member of", "obj": "queen"}, {"sub": "queen", "rel": "has part", "obj": "freddie mercury"}, {"sub": "john deacon", "rel": "member of", "obj": "queen"}, {"sub": "friends will be friends", "rel": "part of", "obj": "a kind of magic"}]}
+{"id": "ont_2_music_test_39", "triples": [{"sub": "metro boomin", "rel": "location of formation", "obj": "atlanta"}]}
+{"id": "ont_2_music_test_40", "triples": [{"sub": "you're gonna be ok", "rel": "part of", "obj": "after all these years"}, {"sub": "you're gonna be ok", "rel": "performer", "obj": "jenn johnson"}, {"sub": "after all these years", "rel": "performer", "obj": "jenn johnson"}]}
+{"id": "ont_2_music_test_41", "triples": [{"sub": "last friday night", "rel": "performer", "obj": "katy perry"}, {"sub": "teenage dream", "rel": "performer", "obj": "katy perry"}]}
+{"id": "ont_2_music_test_42", "triples": [{"sub": "jana gana mana", "rel": "lyrics by", "obj": "rabindranath tagore"}]}
+{"id": "ont_2_music_test_43", "triples": [{"sub": "sevak khanagyan", "rel": "country of citizenship", "obj": "armenia"}]}
+{"id": "ont_2_music_test_44", "triples": [{"sub": "fairy ballet", "rel": "subclass of", "obj": "ballet"}]}
+{"id": "ont_2_music_test_45", "triples": [{"sub": "earth song", "rel": "performer", "obj": "michael jackson"}]}
+{"id": "ont_2_music_test_46", "triples": [{"sub": "zadok the priest", "rel": "composer", "obj": "george frideric handel"}]}
+{"id": "ont_2_music_test_47", "triples": [{"sub": "space oddity", "rel": "record label", "obj": "rca records"}]}
+{"id": "ont_2_music_test_48", "triples": [{"sub": "i wanna go", "rel": "producer", "obj": "max martin"}]}
+{"id": "ont_2_music_test_49", "triples": [{"sub": "pyotr ilyich tchaikovsky", "rel": "genre", "obj": "ballet"}]}
+{"id": "ont_2_music_test_50", "triples": [{"sub": "stephen stills", "rel": "member of", "obj": "crosby, stills & nash"}, {"sub": "judy blue eyes", "rel": "performer", "obj": "crosby, stills & nash"}, {"sub": "crosby, stills & nash", "rel": "has part", "obj": "stephen stills"}]}
+{"id": "ont_2_music_test_53", "triples": [{"sub": "his eye is on the sparrow", "rel": "publication date", "obj": "1905"}]}
+{"id": "ont_2_music_test_54", "triples": [{"sub": "redemption song", "rel": "performer", "obj": "bob marley"}]}
+{"id": "ont_2_music_test_55", "triples": [{"sub": "wait your turn", "rel": "performer", "obj": "rihanna"}]}
+{"id": "ont_2_music_test_56", "triples": [{"sub": "one of the boys", "rel": "producer", "obj": "benny blanco"}]}
+{"id": "ont_2_music_test_57", "triples": [{"sub": "maamme", "rel": "composer", "obj": "fredrik pacius"}]}
+{"id": "ont_2_music_test_58", "triples": [{"sub": "jay-z", "rel": "spouse", "obj": "beyonc\u00e3\u00a9"}, {"sub": "beyonc\u00e3\u00a9", "rel": "spouse", "obj": "jay-z"}]}
+{"id": "ont_2_music_test_59", "triples": [{"sub": "wild dances", "rel": "performer", "obj": "ruslana"}]}
+{"id": "ont_2_music_test_60", "triples": [{"sub": "one of the boys", "rel": "performer", "obj": "katy perry"}, {"sub": "i kissed a girl", "rel": "performer", "obj": "katy perry"}, {"sub": "i kissed a girl", "rel": "part of", "obj": "one of the boys"}]}
+{"id": "ont_2_music_test_61", "triples": [{"sub": "favourite mistake", "rel": "performer", "obj": "ca n't keep waiting"}, {"sub": "can't keep waiting", "rel": "performer", "obj": "autumn hill"}, {"sub": "can't keep waiting", "rel": "performer", "obj": "ca n't keep waiting"}, {"sub": "autumn hill", "rel": "genre", "obj": "country music"}, {"sub": "can't keep waiting", "rel": "part of", "obj": "favourite mistake"}, {"sub": "ca n't keep waiting", "rel": "genre", "obj": "country music"}, {"sub": "favourite mistake", "rel": "genre", "obj": "country music"}]}
+{"id": "ont_2_music_test_62", "triples": [{"sub": "no line on the horizon", "rel": "performer", "obj": "u2"}, {"sub": "get on your boots", "rel": "part of", "obj": "no line on the horizon"}, {"sub": "get on your boots", "rel": "performer", "obj": "u2"}]}
+{"id": "ont_2_music_test_63", "triples": [{"sub": "survivor in love", "rel": "genre", "obj": "italo disco"}, {"sub": "survivor in love", "rel": "performer", "obj": "baltimora"}, {"sub": "survivor in love", "rel": "publication date", "obj": "1987"}, {"sub": "key key karimba", "rel": "performer", "obj": "baltimora"}, {"sub": "key key karimba", "rel": "part of", "obj": "survivor in love"}, {"sub": "key key karimba", "rel": "genre", "obj": "italo disco"}]}
+{"id": "ont_2_music_test_64", "triples": [{"sub": "don't lose my number", "rel": "performer", "obj": "do n't lose my number"}, {"sub": "don't lose my number", "rel": "part of", "obj": "no jacket required"}, {"sub": "no jacket required", "rel": "performer", "obj": "phil collins"}, {"sub": "don't lose my number", "rel": "performer", "obj": "phil collins"}]}
+{"id": "ont_2_music_test_65", "triples": [{"sub": "little l", "rel": "genre", "obj": "acid jazz"}, {"sub": "jamiroquai", "rel": "genre", "obj": "funk"}, {"sub": "jamiroquai", "rel": "genre", "obj": "acid jazz"}, {"sub": "little l", "rel": "performer", "obj": "jamiroquai"}, {"sub": "a funk odyssey", "rel": "performer", "obj": "jamiroquai"}, {"sub": "a funk odyssey", "rel": "genre", "obj": "funk"}, {"sub": "little l", "rel": "genre", "obj": "funk"}, {"sub": "little l", "rel": "part of", "obj": "a funk odyssey"}]}
+{"id": "ont_2_music_test_66", "triples": [{"sub": "let england shake", "rel": "performer", "obj": "the glorious land"}]}
+{"id": "ont_2_music_test_67", "triples": [{"sub": "mercury lane", "rel": "performer", "obj": "best shot"}, {"sub": "mercury lane", "rel": "publication date", "obj": "2018"}]}
+{"id": "ont_2_music_test_68", "triples": [{"sub": "some heads are gonna roll", "rel": "part of", "obj": "defenders of the faith"}]}
+{"id": "ont_2_music_test_69", "triples": [{"sub": "disney wonder", "rel": "based on", "obj": "hercules"}]}
+{"id": "ont_2_music_test_70", "triples": [{"sub": "kittenz and thee glitz", "rel": "performer", "obj": "felix da housecat"}, {"sub": "electroclash", "rel": "subclass of", "obj": "electronic"}]}
+{"id": "ont_2_music_test_71", "triples": [{"sub": "martini mia", "rel": "performer", "obj": "mia martini"}, {"sub": "almeno tu nell'universo", "rel": "performer", "obj": "mia martini"}, {"sub": "almeno tu nell'universo", "rel": "part of", "obj": "martini mia"}, {"sub": "martini mia", "rel": "publication date", "obj": "1989"}, {"sub": "almeno tu nell'universo", "rel": "publication date", "obj": "1989"}]}
+{"id": "ont_2_music_test_72", "triples": [{"sub": "suffer well", "rel": "part of", "obj": "playing the angel"}, {"sub": "playing the angel", "rel": "performer", "obj": "depeche mode"}, {"sub": "suffer well", "rel": "performer", "obj": "depeche mode"}]}
+{"id": "ont_2_music_test_73", "triples": [{"sub": "calling elvis", "rel": "part of", "obj": "on every street"}]}
+{"id": "ont_2_music_test_74", "triples": [{"sub": "relayer", "rel": "publication date", "obj": "1974"}, {"sub": "the gates of delirium", "rel": "part of", "obj": "relayer"}, {"sub": "relayer", "rel": "performer", "obj": "yess"}, {"sub": "the gates of delirium", "rel": "performer", "obj": "yess"}]}
+{"id": "ont_2_music_test_75", "triples": [{"sub": "animal ambition", "rel": "performer", "obj": "50 cent"}, {"sub": "don't worry 'bout it", "rel": "publication date", "obj": "march 18, 2014"}, {"sub": "don't worry 'bout it", "rel": "performer", "obj": "50 cent"}, {"sub": "don't worry 'bout it", "rel": "part of", "obj": "animal ambition"}, {"sub": "50 cent", "rel": "genre", "obj": "hip hop"}]}
+{"id": "ont_2_music_test_76", "triples": [{"sub": "for lack of a better name", "rel": "performer", "obj": "deadmau5"}]}
+{"id": "ont_2_music_test_77", "triples": [{"sub": "fire water burn", "rel": "performer", "obj": "bloodhound gang"}, {"sub": "one fierce beer coaster", "rel": "performer", "obj": "bloodhound gang"}, {"sub": "fire water burn", "rel": "part of", "obj": "one fierce beer coaster"}]}
+{"id": "ont_2_music_test_78", "triples": [{"sub": "the velvet rope", "rel": "performer", "obj": "janet jackson"}, {"sub": "i get lonely", "rel": "performer", "obj": "janet jackson"}, {"sub": "i get lonely", "rel": "part of", "obj": "the velvet rope"}]}
+{"id": "ont_2_music_test_79", "triples": [{"sub": "love is the seventh wave", "rel": "part of", "obj": "the dream of the blue turtles"}, {"sub": "the dream of the blue turtles", "rel": "performer", "obj": "sting"}, {"sub": "love is the seventh wave", "rel": "performer", "obj": "sting"}, {"sub": "love is the seventh wave", "rel": "publication date", "obj": "1985"}]}
+{"id": "ont_2_music_test_80", "triples": [{"sub": "la tribu de dana", "rel": "performer", "obj": "manau"}, {"sub": "panique celtique", "rel": "publication date", "obj": "1998"}, {"sub": "la tribu de dana", "rel": "part of", "obj": "panique celtique"}, {"sub": "panique celtique", "rel": "performer", "obj": "manau"}, {"sub": "la tribu de dana", "rel": "publication date", "obj": "1998"}]}
+{"id": "ont_2_music_test_81", "triples": [{"sub": "lost in the world", "rel": "part of", "obj": "my beautiful dark twisted fantasy"}, {"sub": "my beautiful dark twisted fantasy", "rel": "performer", "obj": "kanye west"}, {"sub": "lost in the world", "rel": "performer", "obj": "kanye west"}, {"sub": "kanye west", "rel": "genre", "obj": "hip hop"}, {"sub": "lost in the world", "rel": "genre", "obj": "hip hop"}, {"sub": "my beautiful dark twisted fantasy", "rel": "genre", "obj": "hip hop"}]}
+{"id": "ont_2_music_test_82", "triples": [{"sub": "enigma", "rel": "instance of", "obj": "las vegas residency"}]}
+{"id": "ont_2_music_test_83", "triples": [{"sub": "flaming pie", "rel": "performer", "obj": "paul mccartney"}, {"sub": "really love you", "rel": "part of", "obj": "flaming pie"}, {"sub": "really love you", "rel": "performer", "obj": "paul mccartney"}]}
+{"id": "ont_2_music_test_84", "triples": [{"sub": "tutte storie", "rel": "publication date", "obj": "1993"}, {"sub": "cose della vita", "rel": "part of", "obj": "tutte storie"}, {"sub": "cose della vita", "rel": "performer", "obj": "eros ramazzotti"}, {"sub": "tutte storie", "rel": "performer", "obj": "eros ramazzotti"}, {"sub": "cose della vita", "rel": "publication date", "obj": "1993"}]}
+{"id": "ont_2_music_test_85", "triples": [{"sub": "voices inside my head", "rel": "performer", "obj": "zenyatta mondatta"}]}
+{"id": "ont_2_music_test_86", "triples": [{"sub": "slowhand", "rel": "publication date", "obj": "1977"}]}
+{"id": "ont_2_music_test_87", "triples": [{"sub": "in through the out door", "rel": "performer", "obj": "led zeppelin"}, {"sub": "fool in the rain", "rel": "performer", "obj": "led zeppelin"}, {"sub": "fool in the rain", "rel": "publication date", "obj": "1979"}, {"sub": "fool in the rain", "rel": "part of", "obj": "in through the out door"}]}
+{"id": "ont_2_music_test_88", "triples": [{"sub": "hot space", "rel": "genre", "obj": "monster rock"}]}
+{"id": "ont_2_music_test_89", "triples": [{"sub": "animal boy", "rel": "publication date", "obj": "1986"}]}
+{"id": "ont_2_music_test_90", "triples": [{"sub": "dancing on the ceiling", "rel": "performer", "obj": "richie's"}]}
+{"id": "ont_2_music_test_91", "triples": [{"sub": "everlong", "rel": "part of", "obj": "the colour and the shape"}]}
+{"id": "ont_2_music_test_92", "triples": [{"sub": "born villain", "rel": "performer", "obj": "marilyn manson"}, {"sub": "no reflection", "rel": "performer", "obj": "marilyn manson"}, {"sub": "no reflection", "rel": "part of", "obj": "born villain"}]}
+{"id": "ont_2_music_test_93", "triples": [{"sub": "eurovision song contest 2011", "rel": "point in time", "obj": "2011"}]}
+{"id": "ont_2_music_test_94", "triples": [{"sub": "colour by numbers", "rel": "performer", "obj": "miss me blind"}]}
+{"id": "ont_2_music_test_95", "triples": [{"sub": "skateaway", "rel": "part of", "obj": "making movies"}]}
+{"id": "ont_2_music_test_96", "triples": [{"sub": "a kind of magic", "rel": "performer", "obj": "queen"}, {"sub": "pain is so close to pleasure", "rel": "performer", "obj": "queen"}, {"sub": "pain is so close to pleasure", "rel": "part of", "obj": "a kind of magic"}]}
+{"id": "ont_2_music_test_97", "triples": [{"sub": "beds are burning", "rel": "part of", "obj": "diesel and dust"}, {"sub": "diesel and dust", "rel": "performer", "obj": "midnight oil"}, {"sub": "beds are burning", "rel": "publication date", "obj": "1987"}, {"sub": "beds are burning", "rel": "performer", "obj": "midnight oil"}]}
+{"id": "ont_2_music_test_98", "triples": [{"sub": "carrying a torch", "rel": "part of", "obj": "hymns to the silence"}, {"sub": "hymns to the silence", "rel": "performer", "obj": "van morrison"}, {"sub": "carrying a torch", "rel": "performer", "obj": "van morrison"}]}
+{"id": "ont_2_music_test_99", "triples": [{"sub": "black & what", "rel": "publication date", "obj": "1991"}, {"sub": "yannick noah", "rel": "sport", "obj": "tennis"}, {"sub": "saga africa", "rel": "part of", "obj": "black & what"}, {"sub": "saga africa", "rel": "performer", "obj": "yannick noah"}, {"sub": "saga africa", "rel": "publication date", "obj": "1991"}, {"sub": "black & what", "rel": "performer", "obj": "yannick noah"}]}
+{"id": "ont_2_music_test_100", "triples": [{"sub": "vendeurs de larmes", "rel": "publication date", "obj": "1982"}]}
+{"id": "ont_2_music_test_101", "triples": [{"sub": "beat of the music", "rel": "part of", "obj": "bring you back"}, {"sub": "beat of the music", "rel": "publication date", "obj": "september 30, 2013"}]}
+{"id": "ont_2_music_test_102", "triples": [{"sub": "the blackening", "rel": "genre", "obj": "heavy metal"}, {"sub": "aesthetics of hate", "rel": "part of", "obj": "the blackening"}, {"sub": "machine head", "rel": "genre", "obj": "heavy metal"}, {"sub": "the blackening", "rel": "performer", "obj": "machine head"}, {"sub": "aesthetics of hate", "rel": "performer", "obj": "machine head"}]}
+{"id": "ont_2_music_test_103", "triples": [{"sub": "holding on for life", "rel": "part of", "obj": "after the disco"}]}
+{"id": "ont_2_music_test_104", "triples": [{"sub": "pocket symphony", "rel": "performer", "obj": "air"}, {"sub": "mer du japon", "rel": "part of", "obj": "pocket symphony"}, {"sub": "mer du japon", "rel": "performer", "obj": "air"}]}
+{"id": "ont_2_music_test_105", "triples": [{"sub": "je te dis tout", "rel": "part of", "obj": "monkey me"}, {"sub": "je te dis tout", "rel": "publication date", "obj": "4 march 2013"}]}
+{"id": "ont_2_music_test_106", "triples": [{"sub": "if it gets you where you wanna go", "rel": "part of", "obj": "jumped right in"}]}
+{"id": "ont_2_music_test_108", "triples": [{"sub": "the seventh one", "rel": "performer", "obj": "toto"}, {"sub": "stop loving you", "rel": "performer", "obj": "toto"}, {"sub": "stop loving you", "rel": "part of", "obj": "the seventh one"}]}
+{"id": "ont_2_music_test_109", "triples": [{"sub": "adrenalize", "rel": "performer", "obj": "def leppard"}, {"sub": "stand up (kick love into motion)", "rel": "performer", "obj": "def leppard"}, {"sub": "stand up (kick love into motion)", "rel": "part of", "obj": "adrenalize"}, {"sub": "def leppard", "rel": "genre", "obj": "hard rock"}]}
+{"id": "ont_2_music_test_110", "triples": [{"sub": "smiley smile", "rel": "publication date", "obj": "september 1967"}]}
+{"id": "ont_2_music_test_111", "triples": [{"sub": "solitude standing", "rel": "publication date", "obj": "1987"}]}
+{"id": "ont_2_music_test_112", "triples": [{"sub": "humaine", "rel": "performer", "obj": "s\u00e3\u00a9gara"}, {"sub": "on n'oublie jamais rien, on vit avec", "rel": "performer", "obj": "s\u00e3\u00a9gara"}, {"sub": "on n'oublie jamais rien, on vit avec", "rel": "part of", "obj": "humaine"}]}
+{"id": "ont_2_music_test_113", "triples": [{"sub": "ganz wien", "rel": "publication date", "obj": "1981"}]}
+{"id": "ont_2_music_test_114", "triples": [{"sub": "flowers are red", "rel": "part of", "obj": "living room suite"}, {"sub": "flowers are red", "rel": "performer", "obj": "harry chapin"}, {"sub": "living room suite", "rel": "performer", "obj": "harry chapin"}, {"sub": "living room suite", "rel": "publication date", "obj": "1978"}]}
+{"id": "ont_2_music_test_115", "triples": [{"sub": "together", "rel": "performer", "obj": "diana ross & the supremes"}, {"sub": "why (must we fall in love)", "rel": "performer", "obj": "diana ross & the supremes"}, {"sub": "together", "rel": "publication date", "obj": "1970"}, {"sub": "why (must we fall in love)", "rel": "part of", "obj": "together"}]}
+{"id": "ont_2_music_test_116", "triples": [{"sub": "die bestie in menschengestalt", "rel": "publication date", "obj": "1993"}]}
+{"id": "ont_2_music_test_118", "triples": [{"sub": "dandy in the underworld", "rel": "publication date", "obj": "1977"}]}
+{"id": "ont_2_music_test_119", "triples": [{"sub": "game over (flip)", "rel": "performer", "obj": "lil' flip"}, {"sub": "u gotta feel me", "rel": "performer", "obj": "lil' flip"}, {"sub": "game over (flip)", "rel": "part of", "obj": "u gotta feel me"}]}
+{"id": "ont_2_music_test_120", "triples": [{"sub": "presenting the fabulous ronettes featuring veronica", "rel": "performer", "obj": "the ronettes"}, {"sub": "be my baby", "rel": "performer", "obj": "the ronettes"}, {"sub": "be my baby", "rel": "part of", "obj": "presenting the fabulous ronettes featuring veronica"}, {"sub": "presenting the fabulous ronettes featuring veronica", "rel": "publication date", "obj": "1964"}]}
+{"id": "ont_2_music_test_121", "triples": [{"sub": "jenny from the block", "rel": "performer", "obj": "jennifer lopez"}]}
+{"id": "ont_2_music_test_123", "triples": [{"sub": "rona nishliu", "rel": "country of citizenship", "obj": "kosovo"}]}
+{"id": "ont_2_music_test_124", "triples": [{"sub": "title song", "rel": "performer", "obj": "liam howlett"}]}
+{"id": "ont_2_music_test_125", "triples": [{"sub": "can't get you out of my head", "rel": "performer", "obj": "cathy dennis"}]}
+{"id": "ont_2_music_test_126", "triples": [{"sub": "i wanna talk 2 u", "rel": "performer", "obj": "john cale"}]}
+{"id": "ont_2_music_test_127", "triples": [{"sub": "echo (you and i)", "rel": "performer", "obj": "anggun"}]}
+{"id": "ont_2_music_test_128", "triples": [{"sub": "the works", "rel": "publication date", "obj": "1984"}]}
+{"id": "ont_2_music_test_130", "triples": [{"sub": "on a mission", "rel": "performer", "obj": "gabriella cilmi"}]}
+{"id": "ont_2_music_test_131", "triples": [{"sub": "ivan shapovalov", "rel": "occupation", "obj": "directed"}]}
+{"id": "ont_2_music_test_132", "triples": [{"sub": "ian stanley", "rel": "occupation", "obj": "produced"}]}
+{"id": "ont_2_music_test_133", "triples": [{"sub": "welcome to st. tropez", "rel": "publication date", "obj": "2011"}, {"sub": "welcome to st. tropez", "rel": "performer", "obj": "dj antoine"}]}
+{"id": "ont_2_music_test_134", "triples": [{"sub": "i see the light", "rel": "lyrics by", "obj": "glenn slater"}, {"sub": "i see the light", "rel": "composer", "obj": "alan menken"}, {"sub": "tangled", "rel": "production company", "obj": "walt disney animation studios"}, {"sub": "tangled", "rel": "composer", "obj": "alan menken"}, {"sub": "i see the light", "rel": "part of", "obj": "tangled"}]}
+{"id": "ont_2_music_test_135", "triples": [{"sub": "rebel rebel", "rel": "performer", "obj": "david bowie"}]}
+{"id": "ont_2_music_test_136", "triples": [{"sub": "ai n't your mama", "rel": "creator", "obj": "meghan trainor"}]}
+{"id": "ont_2_music_test_137", "triples": [{"sub": "tulips from amsterdam", "rel": "composer", "obj": "klaus g\u00e3\u00bcnter neumann"}]}
+{"id": "ont_2_music_test_138", "triples": [{"sub": "the minstrel boy", "rel": "composer", "obj": "thomas moore"}]}
+{"id": "ont_2_music_test_140", "triples": [{"sub": "self-titled fifth studio album", "rel": "producer", "obj": "timbaland"}]}
+{"id": "ont_2_music_test_142", "triples": [{"sub": "it is burning", "rel": "lyrics by", "obj": "mordechai gebirtig"}, {"sub": "it is burning", "rel": "publication date", "obj": "1936"}]}
+{"id": "ont_2_music_test_143", "triples": [{"sub": "she doesn't mind", "rel": "performer", "obj": "sean paul"}, {"sub": "she doesn't mind", "rel": "genre", "obj": "dancehall"}, {"sub": "tomahawk technique", "rel": "performer", "obj": "sean paul"}, {"sub": "sean paul", "rel": "genre", "obj": "dancehall"}, {"sub": "she doesn't mind", "rel": "part of", "obj": "tomahawk technique"}, {"sub": "tomahawk technique", "rel": "genre", "obj": "dancehall"}]}
+{"id": "ont_2_music_test_144", "triples": [{"sub": "overprotected", "rel": "producer", "obj": "max martin"}]}
+{"id": "ont_2_music_test_146", "triples": [{"sub": "in the air tonight", "rel": "performer", "obj": "phil collins"}]}
+{"id": "ont_2_music_test_147", "triples": [{"sub": "peace or violence", "rel": "part of", "obj": "cheese"}, {"sub": "peace or violence", "rel": "performer", "obj": "stromae"}, {"sub": "cheese", "rel": "performer", "obj": "stromae"}]}
+{"id": "ont_2_music_test_148", "triples": [{"sub": "david foster", "rel": "occupation", "obj": "produced"}]}
+{"id": "ont_2_music_test_149", "triples": [{"sub": "we are the world", "rel": "performer", "obj": "michael jackson"}, {"sub": "we are the world", "rel": "producer", "obj": "quincy jones"}]}
+{"id": "ont_2_music_test_151", "triples": [{"sub": "sk8er boi", "rel": "part of", "obj": "let go"}, {"sub": "let go", "rel": "performer", "obj": "avril lavigne"}, {"sub": "sk8er boi", "rel": "performer", "obj": "avril lavigne"}]}
+{"id": "ont_2_music_test_152", "triples": [{"sub": "play hard", "rel": "performer", "obj": "david guetta"}, {"sub": "play hard", "rel": "performer", "obj": "akon"}, {"sub": "play hard", "rel": "performer", "obj": "ne-yo"}]}
+{"id": "ont_2_music_test_154", "triples": [{"sub": "accompanying video", "rel": "cast member", "obj": "shakira"}, {"sub": "accompanying video", "rel": "cast member", "obj": "rihanna"}]}
+{"id": "ont_2_music_test_155", "triples": [{"sub": "noel gallagher", "rel": "occupation", "obj": "guitarist"}]}
+{"id": "ont_2_music_test_157", "triples": [{"sub": "knock madness", "rel": "instance of", "obj": "studio album"}]}
+{"id": "ont_2_music_test_159", "triples": [{"sub": "in the neighborhood", "rel": "part of", "obj": "swordfishtrombones"}, {"sub": "in the neighborhood", "rel": "performer", "obj": "tom waits"}, {"sub": "swordfishtrombones", "rel": "performer", "obj": "tom waits"}]}
+{"id": "ont_2_music_test_161", "triples": [{"sub": "hot knives", "rel": "has part", "obj": "conor oberst"}]}
+{"id": "ont_2_music_test_162", "triples": [{"sub": "wir glauben all an einen gott", "rel": "publisher", "obj": "johann walter"}, {"sub": "eyn geystlich gesangk buchleyn", "rel": "editor", "obj": "johann walter"}, {"sub": "wir glauben all an einen gott", "rel": "published in", "obj": "eyn geystlich gesangk buchleyn"}, {"sub": "wir glauben all an einen gott", "rel": "author", "obj": "martin luther"}]}
+{"id": "ont_2_music_test_163", "triples": [{"sub": "jessie j", "rel": "occupation", "obj": "produced"}]}
+{"id": "ont_2_music_test_164", "triples": [{"sub": "joanna pacitti", "rel": "country of citizenship", "obj": "american"}]}
+{"id": "ont_2_music_test_165", "triples": [{"sub": "the edge", "rel": "influenced by", "obj": "bono"}]}
+{"id": "ont_2_music_test_166", "triples": [{"sub": "vision of love", "rel": "performer", "obj": "mariah carey"}]}
+{"id": "ont_2_music_test_167", "triples": [{"sub": "the kinks", "rel": "has part", "obj": "ray davies"}, {"sub": "ray davies", "rel": "part of", "obj": "the kinks"}, {"sub": "you really got me", "rel": "performer", "obj": "the kinks"}]}
+{"id": "ont_2_music_test_168", "triples": [{"sub": "daft punk", "rel": "has part", "obj": "thomas bangalter"}, {"sub": "thomas bangalter", "rel": "member of", "obj": "daft punk"}]}
+{"id": "ont_2_music_test_169", "triples": [{"sub": "all by myself", "rel": "performer", "obj": "eric carmen"}, {"sub": "all by myself", "rel": "publication date", "obj": "1975"}]}
+{"id": "ont_2_music_test_170", "triples": [{"sub": "club can't handle me", "rel": "performer", "obj": "flo rida"}, {"sub": "club can't handle me", "rel": "performer", "obj": "david guetta"}]}
+{"id": "ont_2_music_test_171", "triples": [{"sub": "drain you", "rel": "performer", "obj": "nirvana"}, {"sub": "drain you", "rel": "lyrics by", "obj": "kurt cobain"}, {"sub": "kurt cobain", "rel": "member of", "obj": "nirvana"}, {"sub": "nirvana", "rel": "has part", "obj": "kurt cobain"}]}
+{"id": "ont_2_music_test_172", "triples": [{"sub": "love takes time", "rel": "part of", "obj": "mariah carey"}]}
+{"id": "ont_2_music_test_173", "triples": [{"sub": "sweeter than fiction", "rel": "performer", "obj": "taylor swift"}]}
+{"id": "ont_2_music_test_174", "triples": [{"sub": "under the bridge", "rel": "has part", "obj": "anthony kiedis"}]}
+{"id": "ont_2_music_test_175", "triples": [{"sub": "rapper", "rel": "country of origin", "obj": "american"}, {"sub": "snoop dogg", "rel": "country of citizenship", "obj": "american"}]}
+{"id": "ont_2_music_test_176", "triples": [{"sub": "i 'm gonna be alright", "rel": "producer", "obj": "troy oliver"}]}
+{"id": "ont_2_music_test_178", "triples": [{"sub": "almost cut my hair", "rel": "composer", "obj": "david crosby"}]}
+{"id": "ont_2_music_test_179", "triples": [{"sub": "jaya jaya he telangana", "rel": "composer", "obj": "ande sri"}]}
+{"id": "ont_2_music_test_180", "triples": [{"sub": "farouk gouida", "rel": "occupation", "obj": "lyrics"}]}
+{"id": "ont_2_music_test_181", "triples": [{"sub": "hinds", "rel": "country of origin", "obj": "barbados"}]}
+{"id": "ont_2_music_test_182", "triples": [{"sub": "zinedine zidane", "rel": "member of sports team", "obj": "french football team"}, {"sub": "2006 fifa world cup", "rel": "participating team", "obj": "french football team"}, {"sub": "french football team", "rel": "participant in", "obj": "2006 fifa world cup"}, {"sub": "zinedine zidane", "rel": "participant in", "obj": "2006 fifa world cup"}]}
+{"id": "ont_2_music_test_183", "triples": [{"sub": "sauver l'amour", "rel": "publication date", "obj": "march 1986"}]}
+{"id": "ont_2_music_test_184", "triples": [{"sub": "november 2007", "rel": "point in time", "obj": "november 2007"}]}
+{"id": "ont_2_music_test_185", "triples": [{"sub": "children of the grave", "rel": "part of", "obj": "master of reality"}, {"sub": "children of the grave", "rel": "genre", "obj": "heavy metal"}, {"sub": "children of the grave", "rel": "performer", "obj": "black sabbath"}, {"sub": "black sabbath", "rel": "genre", "obj": "heavy metal"}, {"sub": "master of reality", "rel": "performer", "obj": "black sabbath"}, {"sub": "master of reality", "rel": "genre", "obj": "heavy metal"}]}
+{"id": "ont_2_music_test_186", "triples": [{"sub": "interscope records", "rel": "genre", "obj": "pop"}]}
+{"id": "ont_2_music_test_187", "triples": [{"sub": "put your hands up in the air!", "rel": "publication date", "obj": "august 2005"}]}
+{"id": "ont_2_music_test_188", "triples": [{"sub": "my world is empty without you", "rel": "performer", "obj": "the supremes"}, {"sub": "my world is empty without you", "rel": "record label", "obj": "motown"}, {"sub": "the supremes", "rel": "record label", "obj": "motown"}]}
+{"id": "ont_2_music_test_189", "triples": [{"sub": "murda muzik", "rel": "performer", "obj": "mobb deep"}, {"sub": "it's mine", "rel": "performer", "obj": "nas"}, {"sub": "it's mine", "rel": "part of", "obj": "murda muzik"}, {"sub": "it's mine", "rel": "performer", "obj": "mobb deep"}]}
+{"id": "ont_2_music_test_191", "triples": [{"sub": "gil scott-heron", "rel": "date of death", "obj": "2011"}]}
+{"id": "ont_2_music_test_192", "triples": [{"sub": "souviens-toi du jour", "rel": "performer", "obj": "myl\u00e3\u00a8ne farmer"}]}
+{"id": "ont_2_music_test_193", "triples": [{"sub": "we belong together", "rel": "publication date", "obj": "2005"}]}
+{"id": "ont_2_music_test_194", "triples": [{"sub": "avant que l'ombre...", "rel": "performer", "obj": "redonne-moi"}]}
+{"id": "ont_2_music_test_195", "triples": [{"sub": "if i ain't got you", "rel": "publication date", "obj": "february 2004"}]}
+{"id": "ont_2_music_test_196", "triples": [{"sub": "pop singles chart", "rel": "publisher", "obj": "billboard"}]}
+{"id": "ont_2_music_test_197", "triples": [{"sub": "diamond dogs", "rel": "record label", "obj": "rca victor"}, {"sub": "rebel rebel", "rel": "part of", "obj": "diamond dogs"}, {"sub": "rebel rebel", "rel": "record label", "obj": "rca victor"}]}
+{"id": "ont_2_music_test_198", "triples": [{"sub": "chocolate rain", "rel": "publication date", "obj": "2007"}]}
+{"id": "ont_2_music_test_199", "triples": [{"sub": "sticks and stones", "rel": "performer", "obj": "cher lloyd"}, {"sub": "swagger jagger", "rel": "performer", "obj": "cher lloyd"}, {"sub": "swagger jagger", "rel": "part of", "obj": "sticks and stones"}]}
+{"id": "ont_2_music_test_200", "triples": [{"sub": "belgium", "rel": "contains administrative territorial entity", "obj": "wallonia"}, {"sub": "wallonia", "rel": "country", "obj": "belgium"}]}
+{"id": "ont_2_music_test_201", "triples": [{"sub": "plug in baby", "rel": "publication date", "obj": "5 march 2001"}, {"sub": "plug in baby", "rel": "part of", "obj": "origin of symmetry"}]}
+{"id": "ont_2_music_test_202", "triples": [{"sub": "1999", "rel": "point in time", "obj": "1999"}]}
+{"id": "ont_2_music_test_203", "triples": [{"sub": "avant de partir", "rel": "publication date", "obj": "8 september 2000"}, {"sub": "avant de partir", "rel": "part of", "obj": "aime-moi"}]}
+{"id": "ont_2_music_test_205", "triples": [{"sub": "a different corner", "rel": "publication date", "obj": "1986"}, {"sub": "a different corner", "rel": "record label", "obj": "epic records"}, {"sub": "george michael", "rel": "record label", "obj": "columbia records"}, {"sub": "george michael", "rel": "record label", "obj": "epic records"}, {"sub": "a different corner", "rel": "performer", "obj": "george michael"}, {"sub": "a different corner", "rel": "record label", "obj": "columbia records"}]}
+{"id": "ont_2_music_test_206", "triples": [{"sub": "lady writer", "rel": "part of", "obj": "communiqu\u00e3\u00a9"}, {"sub": "communiqu\u00e3\u00a9", "rel": "performer", "obj": "dire straits"}, {"sub": "lady writer", "rel": "performer", "obj": "dire straits"}]}
+{"id": "ont_2_music_test_207", "triples": [{"sub": "alors on danse", "rel": "publication date", "obj": "september 2009"}]}
+{"id": "ont_2_music_test_208", "triples": [{"sub": "california gurls", "rel": "publication date", "obj": "may 11, 2010"}]}
+{"id": "ont_2_music_test_209", "triples": [{"sub": "music box tour", "rel": "performer", "obj": "love takes time"}]}
+{"id": "ont_2_music_test_210", "triples": [{"sub": "duet", "rel": "performer", "obj": "john legend"}]}
+{"id": "ont_2_music_test_211", "triples": [{"sub": "2005 mtv video music awards", "rel": "point in time", "obj": "2005"}]}
+{"id": "ont_2_music_test_212", "triples": [{"sub": "four tops", "rel": "record label", "obj": "motown"}, {"sub": "standing in the shadows of love", "rel": "record label", "obj": "motown"}, {"sub": "standing in the shadows of love", "rel": "performer", "obj": "four tops"}]}
+{"id": "ont_2_music_test_213", "triples": [{"sub": "1995", "rel": "point in time", "obj": "1995"}]}
+{"id": "ont_2_music_test_214", "triples": [{"sub": "smack my bitch up", "rel": "part of", "obj": "the fat of the land"}]}
+{"id": "ont_2_music_test_215", "triples": [{"sub": "you da one", "rel": "publication date", "obj": "november 11, 2011"}]}
+{"id": "ont_2_music_test_216", "triples": [{"sub": "mach die augen zu", "rel": "publication date", "obj": "1993"}, {"sub": "mach die augen zu", "rel": "part of", "obj": "die bestie in menschengestalt"}, {"sub": "die bestie in menschengestalt", "rel": "publication date", "obj": "1993"}]}
+{"id": "ont_2_music_test_217", "triples": [{"sub": "1985 in music", "rel": "point in time", "obj": "1985"}, {"sub": "pictures in the dark", "rel": "performer", "obj": "mike oldfield"}, {"sub": "pictures in the dark", "rel": "publication date", "obj": "1985"}]}
+{"id": "ont_2_music_test_218", "triples": [{"sub": "never too far / hero medley", "rel": "followed by", "obj": "glitter (2001)"}]}
+{"id": "ont_2_music_test_219", "triples": [{"sub": "batdance", "rel": "performer", "obj": "prince"}]}
+{"id": "ont_2_music_test_220", "triples": [{"sub": "suffer well", "rel": "publication date", "obj": "27 march 2006"}]}
+{"id": "ont_2_music_test_221", "triples": [{"sub": "dancetaria", "rel": "publication date", "obj": "1999"}]}
+{"id": "ont_2_music_test_222", "triples": [{"sub": "mark foster", "rel": "occupation", "obj": "frontman"}]}
+{"id": "ont_2_music_test_224", "triples": [{"sub": "you belong with me", "rel": "record label", "obj": "big machine records"}, {"sub": "you belong with me", "rel": "publication date", "obj": "april 18, 2009"}, {"sub": "you belong with me", "rel": "part of", "obj": "fearless"}, {"sub": "fearless", "rel": "record label", "obj": "big machine records"}]}
+{"id": "ont_2_music_test_225", "triples": [{"sub": "i wanna be down", "rel": "part of", "obj": "self-titled debut album"}, {"sub": "self-titled debut album", "rel": "publication date", "obj": "1994"}, {"sub": "i wanna be down", "rel": "publication date", "obj": "1994"}]}
+{"id": "ont_2_music_test_226", "triples": [{"sub": "eurovision song contest 2011", "rel": "point in time", "obj": "2011"}, {"sub": "eurovision song contest 2011", "rel": "participant", "obj": "amaury vassili"}, {"sub": "d\u00e3\u00bcsseldorf", "rel": "country", "obj": "germany"}, {"sub": "eurovision song contest 2011", "rel": "country", "obj": "germany"}, {"sub": "amaury vassili", "rel": "participant in", "obj": "eurovision song contest 2011"}, {"sub": "sognu", "rel": "performer", "obj": "amaury vassili"}]}
+{"id": "ont_2_music_test_227", "triples": [{"sub": "i should be so lucky", "rel": "record label", "obj": "mushroom records"}]}
+{"id": "ont_2_music_test_228", "triples": [{"sub": "atom heart mother", "rel": "performer", "obj": "pink floyd"}, {"sub": "summer '68", "rel": "part of", "obj": "atom heart mother"}, {"sub": "summer '68", "rel": "performer", "obj": "pink floyd"}]}
+{"id": "ont_2_music_test_229", "triples": [{"sub": "2011 mtv video music awards", "rel": "point in time", "obj": "2011"}]}
+{"id": "ont_2_music_test_230", "triples": [{"sub": "let 's wait awhile", "rel": "publication date", "obj": "january 6, 1987"}, {"sub": "let 's wait awhile", "rel": "record label", "obj": "a&m records"}]}
+{"id": "ont_2_music_test_231", "triples": [{"sub": "beautiful day", "rel": "part of", "obj": "all that you can't leave behind"}, {"sub": "beautiful day", "rel": "publication date", "obj": "9 october 2000"}]}
+{"id": "ont_2_music_test_233", "triples": [{"sub": "little l", "rel": "publication date", "obj": "2001"}]}
+{"id": "ont_2_music_test_234", "triples": [{"sub": "girl i 'm gonna miss you", "rel": "part of", "obj": "girl you know it's true"}]}
+{"id": "ont_2_music_test_235", "triples": [{"sub": "i still have n't found what i 'm looking for", "rel": "part of", "obj": "the joshua tree"}]}
+{"id": "ont_2_music_test_236", "triples": [{"sub": "def leppard", "rel": "has part", "obj": "rick savage"}, {"sub": "vault", "rel": "performer", "obj": "def leppard"}, {"sub": "def leppard", "rel": "has part", "obj": "joe elliott"}, {"sub": "when love & hate collide", "rel": "part of", "obj": "vault"}, {"sub": "when love & hate collide", "rel": "performer", "obj": "def leppard"}, {"sub": "rick savage", "rel": "member of", "obj": "def leppard"}, {"sub": "joe elliott", "rel": "member of", "obj": "def leppard"}]}
+{"id": "ont_2_music_test_238", "triples": [{"sub": "tendrement", "rel": "performer", "obj": "sur un air latino"}]}
+{"id": "ont_2_music_test_240", "triples": [{"sub": "soul", "rel": "subclass of", "obj": "r&b"}]}
+{"id": "ont_2_music_test_241", "triples": [{"sub": "virgin mary", "rel": "child", "obj": "christ"}, {"sub": "christ", "rel": "mother", "obj": "virgin mary"}]}
+{"id": "ont_2_music_test_242", "triples": [{"sub": "gloria in excelsis deo", "rel": "composer", "obj": "johann sebastian bach"}, {"sub": "johann sebastian bach", "rel": "genre", "obj": "baroque"}]}
+{"id": "ont_2_music_test_243", "triples": [{"sub": "fida'\u00e4\u00ab", "rel": "language of work or name", "obj": "arabic"}]}
+{"id": "ont_2_music_test_244", "triples": [{"sub": "arabic", "rel": "country", "obj": "libya"}]}
+{"id": "ont_2_music_test_245", "triples": [{"sub": "satyricon", "rel": "language of work or name", "obj": "latin"}]}
+{"id": "ont_2_music_test_246", "triples": [{"sub": "united republic", "rel": "instance of", "obj": "national anthem"}, {"sub": "united republic", "rel": "country", "obj": "yemen"}]}
+{"id": "ont_2_music_test_247", "triples": [{"sub": "leonhard kleber", "rel": "work period (start)", "obj": "1500"}]}
+{"id": "ont_2_music_test_248", "triples": [{"sub": "alma redemptoris mater", "rel": "instance of", "obj": "marian hymn"}]}
+{"id": "ont_2_music_test_249", "triples": [{"sub": "de temporum fine comoedia", "rel": "genre", "obj": "mystery play"}]}
+{"id": "ont_2_music_test_250", "triples": [{"sub": "march forward, dear mother ethiopia", "rel": "instance of", "obj": "national anthem"}]}
+{"id": "ont_2_music_test_251", "triples": [{"sub": "esca viatorum", "rel": "language of work or name", "obj": "latin"}]}
+{"id": "ont_2_music_test_252", "triples": [{"sub": "brooklyn", "rel": "located in the administrative territorial entity", "obj": "new york city"}, {"sub": "bei mir bistu shein", "rel": "publication date", "obj": "1932"}, {"sub": "new york city", "rel": "contains administrative territorial entity", "obj": "brooklyn"}, {"sub": "parkway theatre", "rel": "located in the administrative territorial entity", "obj": "brooklyn"}]}
+{"id": "ont_2_music_test_253", "triples": [{"sub": "bach", "rel": "instrument", "obj": "organ"}]}
+{"id": "ont_2_music_test_254", "triples": [{"sub": "domenico ronconi", "rel": "date of birth", "obj": "11 july 1772"}, {"sub": "domenico ronconi", "rel": "date of death", "obj": "13 april 1839"}]}
+{"id": "ont_2_music_test_255", "triples": [{"sub": "kipras petrauskas", "rel": "date of death", "obj": "january 17, 1968"}, {"sub": "kipras petrauskas", "rel": "date of birth", "obj": "november 23, 1885"}]}
+{"id": "ont_2_music_test_256", "triples": [{"sub": "caroline stam", "rel": "voice type", "obj": "soprano"}]}
+{"id": "ont_2_music_test_257", "triples": [{"sub": "francesco tamagno", "rel": "date of death", "obj": "31 august 1905"}, {"sub": "francesco tamagno", "rel": "date of birth", "obj": "28 december 1850"}]}
+{"id": "ont_2_music_test_258", "triples": [{"sub": "tashi dorje", "rel": "date of birth", "obj": "29 november 1966"}]}
+{"id": "ont_2_music_test_259", "triples": [{"sub": "inga nielsen", "rel": "date of death", "obj": "10 february 2008"}, {"sub": "inga nielsen", "rel": "date of birth", "obj": "2 june 1946"}]}
+{"id": "ont_2_music_test_260", "triples": [{"sub": "pavol g\u00e1bor", "rel": "date of death", "obj": "28 august 2003"}, {"sub": "pavol g\u00e1bor", "rel": "date of birth", "obj": "1 december 1932"}]}
+{"id": "ont_2_music_test_261", "triples": [{"sub": "salvador novoa", "rel": "date of birth", "obj": "october 30, 1937"}]}
+{"id": "ont_2_music_test_262", "triples": [{"sub": "angelo maria amorevoli", "rel": "date of birth", "obj": "16 september 1716"}, {"sub": "angelo maria amorevoli", "rel": "date of death", "obj": "15 november 1798"}]}
+{"id": "ont_2_music_test_263", "triples": [{"sub": "vladimir rosing", "rel": "date of death", "obj": "november 24, 1963"}]}
+{"id": "ont_2_music_test_264", "triples": [{"sub": "basilio basili", "rel": "date of birth", "obj": "march 21, 1804"}, {"sub": "basilio basili", "rel": "date of death", "obj": "1895"}]}
+{"id": "ont_2_music_test_265", "triples": [{"sub": "yvonne gall", "rel": "date of death", "obj": "21 august 1972"}, {"sub": "yvonne gall", "rel": "date of birth", "obj": "6 march 1885"}]}
+{"id": "ont_2_music_test_266", "triples": [{"sub": "abdylas maldybaev", "rel": "date of death", "obj": "june 1, 1978"}, {"sub": "abdylas maldybaev", "rel": "date of birth", "obj": "july 7, 1906"}]}
+{"id": "ont_2_music_test_267", "triples": [{"sub": "louis roney", "rel": "date of death", "obj": "november 5, 2017"}, {"sub": "louis roney", "rel": "date of birth", "obj": "january 26, 1921"}]}
+{"id": "ont_2_music_test_268", "triples": [{"sub": "giuseppina cobelli", "rel": "date of birth", "obj": "1 august 1898"}, {"sub": "giuseppina cobelli", "rel": "date of death", "obj": "10 august 1948"}]}
+{"id": "ont_2_music_test_269", "triples": [{"sub": "maurice stern", "rel": "voice type", "obj": "tenor"}]}
+{"id": "ont_2_music_test_270", "triples": [{"sub": "henry bracy", "rel": "voice type", "obj": "tenor"}]}
+{"id": "ont_2_music_test_271", "triples": [{"sub": "lutz-michael harder", "rel": "date of birth", "obj": "4 september 1942"}, {"sub": "lutz-michael harder", "rel": "date of death", "obj": "24 august 2019"}]}
+{"id": "ont_2_music_test_272", "triples": [{"sub": "giovanni paroli", "rel": "date of death", "obj": "1920"}, {"sub": "giovanni paroli", "rel": "place of birth", "obj": "brescia"}]}
+{"id": "ont_2_music_test_273", "triples": [{"sub": "mount lebanon singers", "rel": "genre", "obj": "gospel"}]}
+{"id": "ont_2_music_test_274", "triples": [{"sub": "richard conrad", "rel": "date of death", "obj": "august 26, 2019"}, {"sub": "richard conrad", "rel": "date of birth", "obj": "august 12, 1935"}]}
+{"id": "ont_2_music_test_275", "triples": [{"sub": "evangelista gennaro gorga", "rel": "date of birth", "obj": "6 february 1865"}, {"sub": "evangelista gennaro gorga", "rel": "date of death", "obj": "5 december 1957"}]}
+{"id": "ont_2_music_test_276", "triples": [{"sub": "tibor kelen", "rel": "date of death", "obj": "2001"}, {"sub": "tibor kelen", "rel": "date of birth", "obj": "18 september 1937"}]}
+{"id": "ont_2_music_test_277", "triples": [{"sub": "richard strauss", "rel": "influenced by", "obj": "richard wagner"}]}
+{"id": "ont_2_music_test_278", "triples": [{"sub": "robin donald", "rel": "date of birth", "obj": "26 march 1942"}]}
+{"id": "ont_2_music_test_279", "triples": [{"sub": "semyenovich chishko", "rel": "voice type", "obj": "tenor"}]}
+{"id": "ont_2_music_test_280", "triples": [{"sub": "josef josephi", "rel": "voice type", "obj": "tenor"}]}
+{"id": "ont_2_music_test_281", "triples": [{"sub": "alfredo nigro", "rel": "voice type", "obj": "tenor"}]}
+{"id": "ont_2_music_test_282", "triples": [{"sub": "vladimir alexandrovich nechaev", "rel": "date of death", "obj": "11 april 1969"}, {"sub": "vladimir alexandrovich nechaev", "rel": "date of birth", "obj": "28 july 1908"}]}
+{"id": "ont_2_music_test_283", "triples": [{"sub": "gerard joling", "rel": "voice type", "obj": "high tenor"}]}
+{"id": "ont_2_music_test_284", "triples": [{"sub": "the phantom of the opera", "rel": "instance of", "obj": "opera"}]}
+{"id": "ont_2_music_test_285", "triples": [{"sub": "andrzej lampert", "rel": "date of birth", "obj": "october 2, 1981"}]}
+{"id": "ont_2_music_test_286", "triples": [{"sub": "noriko awaya", "rel": "date of birth", "obj": "august 12, 1907"}, {"sub": "noriko awaya", "rel": "date of death", "obj": "september 22, 1999"}]}
+{"id": "ont_2_music_test_287", "triples": [{"sub": "nicolai gedda", "rel": "date of death", "obj": "8 january 2017"}, {"sub": "nicolai gedda", "rel": "date of birth", "obj": "11 july 1925"}]}
+{"id": "ont_2_music_test_288", "triples": [{"sub": "norman kelley", "rel": "date of death", "obj": "september 4, 2006"}, {"sub": "norman kelley", "rel": "date of birth", "obj": "august 27, 1911"}]}
+{"id": "ont_2_music_test_289", "triples": [{"sub": "toby spence", "rel": "date of birth", "obj": "22 may 1969"}]}
+{"id": "ont_2_music_test_290", "triples": [{"sub": "gregorio babbi", "rel": "place of birth", "obj": "cesena"}, {"sub": "gregorio babbi", "rel": "date of death", "obj": "2 january 1768"}, {"sub": "gregorio babbi", "rel": "date of birth", "obj": "16 november 1708"}]}
+{"id": "ont_2_music_test_291", "triples": [{"sub": "happi", "rel": "date of death", "obj": "8 december 2015"}, {"sub": "happi", "rel": "date of birth", "obj": "30 november 1935"}]}
+{"id": "ont_2_music_test_292", "triples": [{"sub": "steven dorian", "rel": "date of birth", "obj": "november 15, 1977"}]}
+{"id": "ont_2_music_test_293", "triples": [{"sub": "neil rosenshein", "rel": "date of birth", "obj": "november 27, 1947"}, {"sub": "neil rosenshein", "rel": "place of birth", "obj": "new york city"}]}
+{"id": "ont_2_music_test_294", "triples": [{"sub": "jack harrold", "rel": "voice type", "obj": "clarion tenor"}]}
+{"id": "ont_2_music_test_295", "triples": [{"sub": "francesco rasi", "rel": "date of death", "obj": "30 november 1621"}, {"sub": "francesco rasi", "rel": "date of birth", "obj": "14 may 1574"}]}
+{"id": "ont_2_music_test_296", "triples": [{"sub": "martin gore", "rel": "voice type", "obj": "tenor"}]}
+{"id": "ont_2_music_test_297", "triples": [{"sub": "luard pears", "rel": "date of death", "obj": "3 april 1986"}, {"sub": "luard pears", "rel": "date of birth", "obj": "22 june 1910"}]}
+{"id": "ont_2_music_test_298", "triples": [{"sub": "meritorious artist mari autonomous soviet socialist republic", "rel": "country", "obj": "soviet"}]}
+{"id": "ont_2_music_test_299", "triples": [{"sub": "bobby rogers", "rel": "record label", "obj": "motown"}, {"sub": "bobby rogers", "rel": "date of birth", "obj": "february 19, 1940"}, {"sub": "bobby rogers", "rel": "date of death", "obj": "march 3, 2013"}, {"sub": "bobby rogers", "rel": "place of death", "obj": "southfield, michigan"}]}
+{"id": "ont_2_music_test_300", "triples": [{"sub": "riccardo martin", "rel": "date of birth", "obj": "november 18, 1874"}, {"sub": "riccardo martin", "rel": "date of death", "obj": "august 11, 1952"}]}
+{"id": "ont_2_music_test_301", "triples": [{"sub": "lyudmila", "rel": "spouse", "obj": "ruslan"}, {"sub": "ruslan", "rel": "spouse", "obj": "lyudmila"}]}
+{"id": "ont_2_music_test_302", "triples": [{"sub": "angelo bendinelli", "rel": "record label", "obj": "columbia company"}]}
+{"id": "ont_2_music_test_303", "triples": [{"sub": "john h. bieling", "rel": "date of birth", "obj": "march 15, 1869"}, {"sub": "john h. bieling", "rel": "date of death", "obj": "march 30, 1948"}]}
+{"id": "ont_2_music_test_304", "triples": [{"sub": "the gorgeous gael", "rel": "date of death", "obj": "13 december 1978"}, {"sub": "the gorgeous gael", "rel": "date of birth", "obj": "31 august 1913"}]}
+{"id": "ont_2_music_test_305", "triples": [{"sub": "alfred macewan", "rel": "date of death", "obj": "25 september 1991"}, {"sub": "alfred macewan", "rel": "date of birth", "obj": "19 october 1908"}]}
+{"id": "ont_2_music_test_306", "triples": [{"sub": "marco beasley", "rel": "place of birth", "obj": "naples"}, {"sub": "marco beasley", "rel": "date of birth", "obj": "26 february 1957"}]}
+{"id": "ont_2_music_test_307", "triples": [{"sub": "ferruccio tagliavini", "rel": "date of birth", "obj": "14 august 1913"}, {"sub": "ferruccio tagliavini", "rel": "date of death", "obj": "28 january 1995"}]}
+{"id": "ont_2_music_test_308", "triples": [{"sub": "d'oyly carte opera company", "rel": "inception", "obj": "1892"}]}
+{"id": "ont_2_music_test_309", "triples": [{"sub": "volodymyr havrylovych luciv", "rel": "date of birth", "obj": "5 june 1929"}, {"sub": "volodymyr havrylovych luciv", "rel": "date of death", "obj": "7 september 2019"}, {"sub": "volodymyr havrylovych luciv", "rel": "place of birth", "obj": "nadvirna"}]}
+{"id": "ont_2_music_test_310", "triples": [{"sub": "roberto stagno", "rel": "date of birth", "obj": "18 october 1840"}, {"sub": "roberto stagno", "rel": "date of death", "obj": "26 april 1897"}]}
+{"id": "ont_2_music_test_311", "triples": [{"sub": "siegfried", "rel": "composer", "obj": "wagnerian"}, {"sub": "wagnerian", "rel": "notable work", "obj": "siegfried"}, {"sub": "tristan", "rel": "composer", "obj": "wagnerian"}, {"sub": "wagnerian", "rel": "notable work", "obj": "tristan"}]}
+{"id": "ont_2_music_test_312", "triples": [{"sub": "belladonna", "rel": "voice type", "obj": "tenor"}]}
+{"id": "ont_2_music_test_313", "triples": [{"sub": "operatic", "rel": "country of origin", "obj": "british"}]}
+{"id": "ont_2_music_test_314", "triples": [{"sub": "estudiantina", "rel": "composer", "obj": "waldteufel"}]}
+{"id": "ont_2_music_test_315", "triples": [{"sub": "violin concerto", "rel": "subclass of", "obj": "concerto"}]}
+{"id": "ont_2_music_test_317", "triples": [{"sub": "kreuzspiel", "rel": "composer", "obj": "karlheinz stockhausen"}]}
+{"id": "ont_2_music_test_318", "triples": [{"sub": "helikopter-streichquartett", "rel": "composer", "obj": "karlheinz stockhausen"}]}
+{"id": "ont_2_music_test_319", "triples": [{"sub": "sergei rachmaninoff", "rel": "instrument", "obj": "piano"}]}
+{"id": "ont_2_music_test_320", "triples": [{"sub": "a sea symphony", "rel": "composer", "obj": "ralph vaughan williams"}]}
+{"id": "ont_2_music_test_321", "triples": [{"sub": "chamber orchestra", "rel": "subclass of", "obj": "orchestra"}]}
+{"id": "ont_2_music_test_322", "triples": [{"sub": "kegelstatt trio", "rel": "composer", "obj": "wolfgang amadeus mozart"}]}
+{"id": "ont_2_music_test_323", "triples": [{"sub": "b-flat", "rel": "subclass of", "obj": "clarinet"}]}
+{"id": "ont_2_music_test_324", "triples": [{"sub": "piano", "rel": "has part", "obj": "luth\u00e3\u00a9al"}]}
+{"id": "ont_2_music_test_325", "triples": [{"sub": "guitar", "rel": "ranking", "obj": "13"}]}
+{"id": "ont_2_music_test_326", "triples": [{"sub": "johannes brahms", "rel": "instrument", "obj": "piano"}]}
+{"id": "ont_2_music_test_327", "triples": [{"sub": "frederic rzewski", "rel": "instrument", "obj": "piano"}]}
+{"id": "ont_2_music_test_328", "triples": [{"sub": "for children", "rel": "composer", "obj": "b\u00e3\u00a9la bart\u00e3\u00b3k"}]}
+{"id": "ont_2_music_test_329", "triples": [{"sub": "duet-concertino for clarinet and bassoon, trv 293", "rel": "composer", "obj": "richard strauss"}]}
+{"id": "ont_2_music_test_330", "triples": [{"sub": "alexander scriabin", "rel": "instrument", "obj": "piano"}]}
+{"id": "ont_2_music_test_331", "triples": [{"sub": "requiem canticles", "rel": "composer", "obj": "igor stravinsky"}]}
+{"id": "ont_2_music_test_332", "triples": [{"sub": "triakontameron", "rel": "composer", "obj": "leopold godowsky"}]}
+{"id": "ont_2_music_test_333", "triples": [{"sub": "bart\u00e3\u00b3k", "rel": "instrument", "obj": "viola concerto"}]}
+{"id": "ont_2_music_test_334", "triples": [{"sub": "wanderer fantasy", "rel": "composer", "obj": "schubert"}]}
+{"id": "ont_2_music_test_335", "triples": [{"sub": "cello", "rel": "subclass of", "obj": "piano"}]}
+{"id": "ont_2_music_test_336", "triples": [{"sub": "danses gothiques", "rel": "publication date", "obj": "1893"}, {"sub": "danses gothiques", "rel": "composer", "obj": "erik satie"}]}
+{"id": "ont_2_music_test_337", "triples": [{"sub": "a sea symphony", "rel": "instance of", "obj": "symphonic"}]}
+{"id": "ont_2_music_test_338", "triples": [{"sub": "troorkh", "rel": "composer", "obj": "iannis xenakis"}]}
+{"id": "ont_2_music_test_339", "triples": [{"sub": "catalogue d'oiseaux", "rel": "composer", "obj": "olivier messiaen"}]}
+{"id": "ont_2_music_test_340", "triples": [{"sub": "double piano concertos", "rel": "subclass of", "obj": "piano concertos"}]}
+{"id": "ont_2_music_test_342", "triples": [{"sub": "voiles", "rel": "composer", "obj": "claude debussy"}]}
+{"id": "ont_2_music_test_343", "triples": [{"sub": "sonata for two clarinets", "rel": "instance of", "obj": "clarinet duets"}]}
+{"id": "ont_2_music_test_344", "triples": [{"sub": "l'isle joyeuse", "rel": "composer", "obj": "claude debussy"}]}
+{"id": "ont_2_music_test_345", "triples": [{"sub": "violin sonatas", "rel": "composer", "obj": "johann sebastian bach"}]}
+{"id": "ont_2_music_test_346", "triples": [{"sub": "piano", "rel": "use", "obj": "piano part"}]}
+{"id": "ont_2_music_test_347", "triples": [{"sub": "four organs", "rel": "composer", "obj": "steve reich"}, {"sub": "four organs", "rel": "publication date", "obj": "january 1970"}]}
+{"id": "ont_2_music_test_348", "triples": [{"sub": "piano duet", "rel": "different from", "obj": "piano solo"}, {"sub": "piano solo", "rel": "different from", "obj": "piano duet"}]}
+{"id": "ont_2_music_test_349", "triples": [{"sub": "sequenza v", "rel": "composer", "obj": "luciano berio"}]}
+{"id": "ont_2_music_test_350", "triples": [{"sub": "overture on hebrew themes", "rel": "instance of", "obj": "chamber orchestra"}]}
+{"id": "ont_2_music_test_351", "triples": [{"sub": "trout quintet", "rel": "instrument", "obj": "piano"}]}
+{"id": "ont_2_music_test_352", "triples": [{"sub": "pablo de sarasate", "rel": "instrument", "obj": "violin"}]}
+{"id": "ont_2_music_test_356", "triples": [{"sub": "andante spianato et grande polonaise brillante", "rel": "composer", "obj": "chopin"}]}
+{"id": "ont_2_music_test_357", "triples": [{"sub": "fantasia quasi sonata", "rel": "composer", "obj": "franz liszt"}]}
+{"id": "ont_2_music_test_358", "triples": [{"sub": "alfred brendel", "rel": "instrument", "obj": "piano"}]}
+{"id": "ont_2_music_test_359", "triples": [{"sub": "schelomo", "rel": "composer", "obj": "ernest bloch"}, {"sub": "schelomo", "rel": "part of", "obj": "jewish cycle"}, {"sub": "jewish cycle", "rel": "has part", "obj": "schelomo"}, {"sub": "jewish cycle", "rel": "composer", "obj": "ernest bloch"}]}
+{"id": "ont_2_music_test_360", "triples": [{"sub": "holberg suite", "rel": "instance of", "obj": "string orchestra"}]}
+{"id": "ont_2_music_test_361", "triples": [{"sub": "english horn", "rel": "subclass of", "obj": "horn"}]}
+{"id": "ont_2_music_test_363", "triples": [{"sub": "overture, scherzo and finale", "rel": "composer", "obj": "robert schumann"}]}
+{"id": "ont_2_music_test_365", "triples": [{"sub": "pyotr ilyich tchaikovsky", "rel": "genre", "obj": "orchestra"}]}
+{"id": "ont_2_music_test_366", "triples": [{"sub": "andante favori", "rel": "composer", "obj": "ludwig van beethoven"}]}
+{"id": "ont_2_music_test_367", "triples": [{"sub": "andante and finale", "rel": "composer", "obj": "sergei taneyev"}]}
+{"id": "ont_2_music_test_368", "triples": [{"sub": "pleyel", "rel": "product or material produced", "obj": "harpsichord"}]}
+{"id": "ont_2_music_test_369", "triples": [{"sub": "double bass", "rel": "subclass of", "obj": "violins"}]}
+{"id": "ont_2_music_test_370", "triples": [{"sub": "sonata undine", "rel": "composer", "obj": "carl reinecke"}]}
+{"id": "ont_2_music_test_371", "triples": [{"sub": "ludus tonalis", "rel": "composer", "obj": "paul hindemith"}]}
+{"id": "ont_2_music_test_374", "triples": [{"sub": "george martin", "rel": "record label", "obj": "emi"}]}
+{"id": "ont_2_music_test_375", "triples": [{"sub": "don't forget to remember", "rel": "instance of", "obj": "single"}]}
+{"id": "ont_2_music_test_376", "triples": [{"sub": "goodbye yellow brick road", "rel": "followed by", "obj": "saturday night's alright for fighting"}]}
+{"id": "ont_2_music_test_377", "triples": [{"sub": "long tall sally", "rel": "performer", "obj": "richard"}]}
+{"id": "ont_2_music_test_378", "triples": [{"sub": "better to lie", "rel": "followed by", "obj": "roses"}, {"sub": "roses", "rel": "performer", "obj": "brendon urie"}, {"sub": "eastside", "rel": "part of", "obj": "friends keep secrets"}, {"sub": "eastside", "rel": "followed by", "obj": "i found you"}, {"sub": "i found you", "rel": "followed by", "obj": "better to lie"}, {"sub": "eastside", "rel": "performer", "obj": "khalid"}, {"sub": "roses", "rel": "performer", "obj": "juice wrld"}, {"sub": "better to lie", "rel": "performer", "obj": "swae lee"}, {"sub": "roses", "rel": "part of", "obj": "friends keep secrets"}, {"sub": "i found you", "rel": "part of", "obj": "friends keep secrets"}, {"sub": "better to lie", "rel": "part of", "obj": "friends keep secrets"}, {"sub": "eastside", "rel": "performer", "obj": "halsey"}, {"sub": "i found you", "rel": "performer", "obj": "calvin harris"}, {"sub": "better to lie", "rel": "performer", "obj": "jesse"}]}
+{"id": "ont_2_music_test_379", "triples": [{"sub": "dub be good to me", "rel": "followed by", "obj": "won't talk about it"}]}
+{"id": "ont_2_music_test_380", "triples": [{"sub": "belgium", "rel": "contains administrative territorial entity", "obj": "wallonia"}, {"sub": "wallonia", "rel": "country", "obj": "belgium"}]}
+{"id": "ont_2_music_test_381", "triples": [{"sub": "best male r&b vocal performance", "rel": "instance of", "obj": "grammy award"}]}
+{"id": "ont_2_music_test_382", "triples": [{"sub": "welcome to the jungle", "rel": "part of", "obj": "appetite for destruction"}, {"sub": "sweet child o' mine", "rel": "part of", "obj": "appetite for destruction"}, {"sub": "paradise city", "rel": "part of", "obj": "appetite for destruction"}]}
+{"id": "ont_2_music_test_383", "triples": [{"sub": "hello in there", "rel": "part of", "obj": "friends"}]}
+{"id": "ont_2_music_test_384", "triples": [{"sub": "metal & dust", "rel": "followed by", "obj": "wasting my young years"}]}
+{"id": "ont_2_music_test_385", "triples": [{"sub": "earth song", "rel": "genre", "obj": "protest song"}, {"sub": "they don't care about us", "rel": "genre", "obj": "protest song"}]}
+{"id": "ont_2_music_test_386", "triples": [{"sub": "gigi in paradisco", "rel": "publication date", "obj": "1980"}, {"sub": "gigi in paradisco", "rel": "performer", "obj": "dalida"}]}
+{"id": "ont_2_music_test_387", "triples": [{"sub": "please don't stop loving me", "rel": "performer", "obj": "porter 'n ' dolly"}]}
+{"id": "ont_2_music_test_388", "triples": [{"sub": "accompanying music video", "rel": "based on", "obj": "o holy night"}]}
+{"id": "ont_2_music_test_389", "triples": [{"sub": "no reply", "rel": "lyrics by", "obj": "john lennon"}, {"sub": "i'm a loser", "rel": "lyrics by", "obj": "john lennon"}]}
+{"id": "ont_2_music_test_390", "triples": [{"sub": "sur un air latino", "rel": "publication date", "obj": "2 june 2003"}]}
+{"id": "ont_2_music_test_391", "triples": [{"sub": "the man with all the toys", "rel": "instance of", "obj": "single"}]}
+{"id": "ont_2_music_test_392", "triples": [{"sub": "take me to the river", "rel": "performer", "obj": "al green"}]}
+{"id": "ont_2_music_test_393", "triples": [{"sub": "get together", "rel": "followed by", "obj": "jump"}]}
+{"id": "ont_2_music_test_394", "triples": [{"sub": "hello, goodbye", "rel": "part of", "obj": "soundtrack record"}]}
+{"id": "ont_2_music_test_395", "triples": [{"sub": "something", "rel": "followed by", "obj": "come together"}]}
+{"id": "ont_2_music_test_396", "triples": [{"sub": "snow, let it snow, let it snow", "rel": "performer", "obj": "let rejoyce"}]}
+{"id": "ont_2_music_test_397", "triples": [{"sub": "mao boy", "rel": "performer", "obj": "paradize"}]}
+{"id": "ont_2_music_test_398", "triples": [{"sub": "pull me under", "rel": "part of", "obj": "images and words"}]}
+{"id": "ont_2_music_test_399", "triples": [{"sub": "on s'attache", "rel": "instance of", "obj": "single"}]}
+{"id": "ont_2_music_test_400", "triples": [{"sub": "keep on running", "rel": "performer", "obj": "spencer davis group"}]}
+{"id": "ont_2_music_test_401", "triples": [{"sub": "i can survive", "rel": "publication date", "obj": "1980"}]}
+{"id": "ont_2_music_test_402", "triples": [{"sub": "50 words for snow", "rel": "performer", "obj": "kate bush"}]}
+{"id": "ont_2_music_test_403", "triples": [{"sub": "little earthquakes", "rel": "performer", "obj": "tori amos"}]}
+{"id": "ont_2_music_test_405", "triples": [{"sub": "i think i love you", "rel": "part of", "obj": "the partridge family album"}]}
+{"id": "ont_2_music_test_406", "triples": [{"sub": "i'm happy just to dance with you", "rel": "performer", "obj": "the beatles"}]}
+{"id": "ont_2_music_test_407", "triples": [{"sub": "justify my love", "rel": "part of", "obj": "the immaculate collection"}]}
+{"id": "ont_2_music_test_408", "triples": [{"sub": "you're beautiful", "rel": "part of", "obj": "back to bedlam"}]}
+{"id": "ont_2_music_test_409", "triples": [{"sub": "please please me", "rel": "publication date", "obj": "11 february 1963"}]}
+{"id": "ont_2_music_test_411", "triples": [{"sub": "hyper music", "rel": "follows", "obj": "bliss"}, {"sub": "new born", "rel": "followed by", "obj": "bliss"}, {"sub": "bliss", "rel": "followed by", "obj": "hyper music"}, {"sub": "plug in baby", "rel": "followed by", "obj": "new born"}, {"sub": "bliss", "rel": "follows", "obj": "new born"}, {"sub": "new born", "rel": "follows", "obj": "plug in baby"}]}
+{"id": "ont_2_music_test_412", "triples": [{"sub": "toi c'est moi", "rel": "followed by", "obj": "jalousie"}, {"sub": "jalousie", "rel": "part of", "obj": "une fille comme moi"}, {"sub": "toujours pas d'amour", "rel": "followed by", "obj": "toi c'est moi"}, {"sub": "toi c'est moi", "rel": "follows", "obj": "toujours pas d'amour"}, {"sub": "toujours pas d'amour", "rel": "part of", "obj": "une fille comme moi"}, {"sub": "jalousie", "rel": "follows", "obj": "toi c'est moi"}, {"sub": "toi c'est moi", "rel": "part of", "obj": "une fille comme moi"}]}
+{"id": "ont_2_music_test_413", "triples": [{"sub": "r&b songs", "rel": "country", "obj": "united states"}]}
+{"id": "ont_2_music_test_415", "triples": [{"sub": "ticket to ride", "rel": "part of", "obj": "film"}]}
+{"id": "ont_2_music_test_416", "triples": [{"sub": "killing an arab", "rel": "performer", "obj": "the cure"}]}
+{"id": "ont_2_music_test_417", "triples": [{"sub": "time after time", "rel": "performer", "obj": "she 's so unusual"}]}
+{"id": "ont_2_music_test_418", "triples": [{"sub": "baby, it's cold outside", "rel": "performer", "obj": "nick lachey"}]}
+{"id": "ont_2_music_test_419", "triples": [{"sub": "il silenzio", "rel": "performer", "obj": "dalida"}]}
+{"id": "ont_2_music_test_420", "triples": [{"sub": "it hurts (slow)", "rel": "follows", "obj": "can't nobody"}, {"sub": "clap your hands", "rel": "followed by", "obj": "go away"}, {"sub": "go away", "rel": "followed by", "obj": "can't nobody"}, {"sub": "can't nobody", "rel": "followed by", "obj": "it hurts (slow)"}]}
+{"id": "ont_2_music_test_421", "triples": [{"sub": "a single", "rel": "part of", "obj": "things"}]}
+{"id": "ont_2_music_test_423", "triples": [{"sub": "on the backs of angels", "rel": "followed by", "obj": "build me up, break me down"}]}
+{"id": "ont_2_music_test_424", "triples": [{"sub": "run like hell", "rel": "followed by", "obj": "comfortably numb"}]}
+{"id": "ont_2_music_test_425", "triples": [{"sub": "learning to fly", "rel": "followed by", "obj": "terminal frost"}]}
+{"id": "ont_2_music_test_426", "triples": [{"sub": "wild", "rel": "followed by", "obj": "youth"}, {"sub": "youth", "rel": "followed by", "obj": "talk me down"}]}
+{"id": "ont_2_music_test_427", "triples": [{"sub": "don't bother me", "rel": "producer", "obj": "george martin"}]}
+{"id": "ont_2_music_test_428", "triples": [{"sub": "500 greatest songs of all time", "rel": "published in", "obj": "rolling stone magazine"}]}
+{"id": "ont_2_music_test_429", "triples": [{"sub": "a day in the life", "rel": "followed by", "obj": "a day in the life"}]}
+{"id": "ont_2_music_test_430", "triples": [{"sub": "running up that hill (a deal with god)", "rel": "instance of", "obj": "single"}]}
+{"id": "ont_2_music_test_431", "triples": [{"sub": "fire", "rel": "instance of", "obj": "b-side"}]}
+{"id": "ont_2_music_test_432", "triples": [{"sub": "four seasons of love", "rel": "record label", "obj": "casablanca records"}]}
+{"id": "ont_2_music_test_434", "triples": [{"sub": "i 'm so young", "rel": "genre", "obj": "doo-wop"}]}
+{"id": "ont_2_music_test_435", "triples": [{"sub": "empire song", "rel": "performer", "obj": "killing joke"}]}
+{"id": "ont_2_music_test_436", "triples": [{"sub": "jesus nahm zu sich die zw\u00f6lfe", "rel": "composer", "obj": "johann sebastian bach"}]}
+{"id": "ont_2_music_test_437", "triples": [{"sub": "whiskeytown", "rel": "has part", "obj": "ryan adams"}, {"sub": "when the stars go blue", "rel": "performer", "obj": "ryan adams"}]}
+{"id": "ont_2_music_test_438", "triples": [{"sub": "searchlight rag", "rel": "composer", "obj": "scott joplin"}, {"sub": "searchlight rag", "rel": "genre", "obj": "ragtime"}, {"sub": "scott joplin", "rel": "genre", "obj": "ragtime"}, {"sub": "searchlight rag", "rel": "publication date", "obj": "1907"}]}
+{"id": "ont_2_music_test_439", "triples": [{"sub": "das gesicht im spiegel", "rel": "librettist", "obj": "roland schimmelpfennig"}, {"sub": "das gesicht im spiegel", "rel": "composer", "obj": "j\u00f6rg widmann"}, {"sub": "das gesicht im spiegel", "rel": "instance of", "obj": "opera"}]}
+{"id": "ont_2_music_test_440", "triples": [{"sub": "pavement", "rel": "genre", "obj": "indie rock"}, {"sub": "summer babe (winter version)", "rel": "genre", "obj": "indie rock"}, {"sub": "summer babe (winter version)", "rel": "performer", "obj": "pavement"}]}
+{"id": "ont_2_music_test_441", "triples": [{"sub": "thrash metal", "rel": "instance of", "obj": "genre"}]}
+{"id": "ont_2_music_test_442", "triples": [{"sub": "oratorio", "rel": "subclass of", "obj": "opera"}]}
+{"id": "ont_2_music_test_443", "triples": [{"sub": "all i could do was cry", "rel": "performer", "obj": "etta james"}, {"sub": "all i could do was cry", "rel": "publication date", "obj": "1960"}, {"sub": "etta james", "rel": "genre", "obj": "doo-wop"}, {"sub": "all i could do was cry", "rel": "genre", "obj": "doo-wop"}]}
+{"id": "ont_2_music_test_444", "triples": [{"sub": "el problema", "rel": "performer", "obj": "ricardo arjona"}]}
+{"id": "ont_2_music_test_445", "triples": [{"sub": "doo-wop", "rel": "subclass of", "obj": "12/8 time"}]}
+{"id": "ont_2_music_test_446", "triples": [{"sub": "i wanna be your boyfriend", "rel": "genre", "obj": "punk rock"}, {"sub": "i wanna be your boyfriend", "rel": "performer", "obj": "ramones"}, {"sub": "ramones", "rel": "genre", "obj": "punk rock"}]}
+{"id": "ont_2_music_test_447", "triples": [{"sub": "death cab for cutie", "rel": "genre", "obj": "indie rock"}, {"sub": "plans", "rel": "performer", "obj": "death cab for cutie"}, {"sub": "soul meets body", "rel": "publication date", "obj": "october 10, 2005"}, {"sub": "plans", "rel": "genre", "obj": "indie rock"}, {"sub": "soul meets body", "rel": "part of", "obj": "plans"}, {"sub": "soul meets body", "rel": "genre", "obj": "indie rock"}, {"sub": "soul meets body", "rel": "performer", "obj": "death cab for cutie"}]}
+{"id": "ont_2_music_test_448", "triples": [{"sub": "the mystics", "rel": "genre", "obj": "doo-wop"}, {"sub": "hushabye", "rel": "performer", "obj": "the mystics"}, {"sub": "hushabye", "rel": "genre", "obj": "doo-wop"}]}
+{"id": "ont_2_music_test_449", "triples": [{"sub": "hang an ornament", "rel": "publication date", "obj": "december 17, 2014"}, {"sub": "hang an ornament", "rel": "performer", "obj": "band of horses"}, {"sub": "hang an ornament", "rel": "performer", "obj": "grandaddy"}, {"sub": "band of horses", "rel": "genre", "obj": "indie rock"}, {"sub": "hang an ornament", "rel": "genre", "obj": "indie rock"}, {"sub": "grandaddy", "rel": "genre", "obj": "indie rock"}]}
+{"id": "ont_2_music_test_450", "triples": [{"sub": "it's raining men", "rel": "genre", "obj": "hi-nrg"}]}
+{"id": "ont_2_music_test_451", "triples": [{"sub": "doo-wop", "rel": "subclass of", "obj": "rhythm and blues"}]}
+{"id": "ont_2_music_test_452", "triples": [{"sub": "don't swallow the cap", "rel": "performer", "obj": "the national"}, {"sub": "the national", "rel": "genre", "obj": "indie rock"}, {"sub": "don't swallow the cap", "rel": "genre", "obj": "indie rock"}]}
+{"id": "ont_2_music_test_453", "triples": [{"sub": "il neo", "rel": "composer", "obj": "henrique oswald"}, {"sub": "il neo", "rel": "instance of", "obj": "opera"}, {"sub": "il neo", "rel": "librettist", "obj": "eduardo filippi"}]}
+{"id": "ont_2_music_test_454", "triples": [{"sub": "il corsaro", "rel": "based on", "obj": "the corsair"}, {"sub": "the corsair", "rel": "author", "obj": "lord byron"}, {"sub": "il corsaro", "rel": "after a work by", "obj": "lord byron"}, {"sub": "il corsaro", "rel": "composer", "obj": "giuseppe verdi"}, {"sub": "il corsaro", "rel": "librettist", "obj": "francesco maria piave"}, {"sub": "il corsaro", "rel": "instance of", "obj": "opera"}, {"sub": "the corsair", "rel": "publication date", "obj": "1814"}]}
+{"id": "ont_2_music_test_456", "triples": [{"sub": "american society of composers, authors and publishers awards of 1993", "rel": "point in time", "obj": "1993"}]}
+{"id": "ont_2_music_test_457", "triples": [{"sub": "2000", "rel": "point in time", "obj": "2000"}]}
+{"id": "ont_2_music_test_458", "triples": [{"sub": "flight of the bumblebee", "rel": "composer", "obj": "nikolai rimsky-korsakov"}, {"sub": "the tale of tsar saltan", "rel": "composer", "obj": "nikolai rimsky-korsakov"}]}
+{"id": "ont_2_music_test_459", "triples": [{"sub": "hoy es domingo", "rel": "part of", "obj": "buena vida"}, {"sub": "buena vida", "rel": "performer", "obj": "diego torres"}, {"sub": "buena vida", "rel": "genre", "obj": "latin pop"}, {"sub": "hoy es domingo", "rel": "genre", "obj": "latin pop"}, {"sub": "hoy es domingo", "rel": "publication date", "obj": "july 10, 2015"}, {"sub": "hoy es domingo", "rel": "performer", "obj": "diego torres"}]}
+{"id": "ont_2_music_test_460", "triples": [{"sub": "rock civilization", "rel": "performer", "obj": "headhunterz"}]}
+{"id": "ont_2_music_test_461", "triples": [{"sub": "scott joplin", "rel": "genre", "obj": "ragtime"}, {"sub": "magnetic rag", "rel": "genre", "obj": "ragtime"}, {"sub": "magnetic rag", "rel": "publication date", "obj": "1914"}, {"sub": "magnetic rag", "rel": "composer", "obj": "scott joplin"}]}
+{"id": "ont_2_music_test_462", "triples": [{"sub": "tourniquet", "rel": "genre", "obj": "thrash metal"}, {"sub": "ark of suffering", "rel": "performer", "obj": "tourniquet"}, {"sub": "ark of suffering", "rel": "genre", "obj": "thrash metal"}]}
+{"id": "ont_2_music_test_463", "triples": [{"sub": "master of puppets", "rel": "genre", "obj": "thrash metal"}]}
+{"id": "ont_2_music_test_464", "triples": [{"sub": "la juive", "rel": "date of first performance", "obj": "23 february 1835"}, {"sub": "la juive", "rel": "librettist", "obj": "eug\u00e3\u00a8ne scribe"}, {"sub": "la juive", "rel": "composer", "obj": "fromental hal\u00e3\u00a9vy"}]}
+{"id": "ont_2_music_test_465", "triples": [{"sub": "something is not right with me", "rel": "performer", "obj": "cold war kids"}, {"sub": "something is not right with me", "rel": "genre", "obj": "indie rock"}, {"sub": "cold war kids", "rel": "genre", "obj": "indie rock"}]}
+{"id": "ont_2_music_test_466", "triples": [{"sub": "the bravery", "rel": "genre", "obj": "indie rock"}, {"sub": "slow poison", "rel": "genre", "obj": "indie rock"}, {"sub": "slow poison", "rel": "performer", "obj": "the bravery"}]}
+{"id": "ont_2_music_test_467", "triples": [{"sub": "53rd & 3rd", "rel": "genre", "obj": "punk rock"}, {"sub": "53rd & 3rd", "rel": "performer", "obj": "ramones"}, {"sub": "ramones", "rel": "genre", "obj": "punk rock"}]}
+{"id": "ont_2_music_test_468", "triples": [{"sub": "dancehall", "rel": "subclass of", "obj": "reggae"}]}
+{"id": "ont_2_music_test_469", "triples": [{"sub": "telephone thing", "rel": "performer", "obj": "the fall"}, {"sub": "telephone thing", "rel": "genre", "obj": "post-punk"}, {"sub": "the fall", "rel": "genre", "obj": "post-punk"}]}
+{"id": "ont_2_music_test_470", "triples": [{"sub": "stalin wasn't stallin' (a modern spiritual)", "rel": "performer", "obj": "golden gate jubilee quartet"}]}
+{"id": "ont_2_music_test_471", "triples": [{"sub": "self-titled debut album", "rel": "performer", "obj": "korn"}, {"sub": "daddy", "rel": "part of", "obj": "self-titled debut album"}, {"sub": "daddy", "rel": "performer", "obj": "korn"}, {"sub": "daddy", "rel": "genre", "obj": "nu metal"}, {"sub": "daddy (korn song)", "rel": "part of", "obj": "self-titled debut album"}, {"sub": "korn", "rel": "genre", "obj": "nu metal"}, {"sub": "daddy (korn song)", "rel": "performer", "obj": "korn"}, {"sub": "daddy (korn song)", "rel": "genre", "obj": "nu metal"}, {"sub": "self-titled debut album", "rel": "genre", "obj": "nu metal"}]}
+{"id": "ont_2_music_test_472", "triples": [{"sub": "james brown", "rel": "genre", "obj": "reggae"}]}
+{"id": "ont_2_music_test_473", "triples": [{"sub": "elite syncopations", "rel": "genre", "obj": "ragtime"}, {"sub": "elite syncopations", "rel": "composer", "obj": "scott joplin"}, {"sub": "scott joplin", "rel": "genre", "obj": "ragtime"}]}
+{"id": "ont_2_music_test_474", "triples": [{"sub": "gods zoo", "rel": "publication date", "obj": "23 october 1983"}, {"sub": "death cult", "rel": "record label", "obj": "situation two"}, {"sub": "gods zoo", "rel": "performer", "obj": "death cult"}, {"sub": "gods zoo", "rel": "record label", "obj": "situation two"}]}
+{"id": "ont_2_music_test_475", "triples": [{"sub": "la campana sommersa", "rel": "composer", "obj": "ottorino respighi"}, {"sub": "la campana sommersa", "rel": "instance of", "obj": "opera"}]}
+{"id": "ont_2_music_test_476", "triples": [{"sub": "his hand in mine", "rel": "genre", "obj": "gospel music"}]}
+{"id": "ont_2_music_test_477", "triples": [{"sub": "teneke", "rel": "composer", "obj": "fabio vacchi"}, {"sub": "teneke", "rel": "instance of", "obj": "opera"}]}
+{"id": "ont_2_music_test_478", "triples": [{"sub": "earth angel", "rel": "genre", "obj": "doo-wop"}]}
+{"id": "ont_2_music_test_479", "triples": [{"sub": "1er gaou", "rel": "performer", "obj": "magic system"}, {"sub": "magic system", "rel": "genre", "obj": "zouglou"}, {"sub": "1er gaou", "rel": "part of", "obj": "album of the same name"}, {"sub": "album of the same name", "rel": "performer", "obj": "magic system"}]}
+{"id": "ont_2_music_test_480", "triples": [{"sub": "whiskeytown", "rel": "genre", "obj": "alternative country"}, {"sub": "yesterday's news", "rel": "performer", "obj": "whiskeytown"}]}
+{"id": "ont_2_music_test_481", "triples": [{"sub": "la scala", "rel": "located in the administrative territorial entity", "obj": "milan"}]}
+{"id": "ont_2_music_test_482", "triples": [{"sub": "hit the north", "rel": "performer", "obj": "the fall"}, {"sub": "hit the north", "rel": "genre", "obj": "post-punk"}, {"sub": "the fall", "rel": "genre", "obj": "post-punk"}, {"sub": "hit the north", "rel": "publication date", "obj": "1987"}]}
+{"id": "ont_2_music_test_483", "triples": [{"sub": "she's lost control", "rel": "performer", "obj": "joy division"}, {"sub": "joy division", "rel": "genre", "obj": "post-punk"}, {"sub": "she's lost control", "rel": "genre", "obj": "post-punk"}]}
+{"id": "ont_2_music_test_484", "triples": [{"sub": "that's a plenty", "rel": "composer", "obj": "lew pollack"}, {"sub": "that's a plenty", "rel": "publication date", "obj": "1914"}]}
+{"id": "ont_2_music_test_485", "triples": [{"sub": "tepic", "rel": "located in the administrative territorial entity", "obj": "nayarit"}, {"sub": "nayarit", "rel": "capital", "obj": "tepic"}]}
+{"id": "ont_2_music_test_486", "triples": [{"sub": "maria egiziaca", "rel": "composer", "obj": "ottorino respighi"}, {"sub": "maria egiziaca", "rel": "instance of", "obj": "opera"}]}
+{"id": "ont_2_music_test_487", "triples": [{"sub": "controla", "rel": "followed by", "obj": "too good"}]}
+{"id": "ont_2_music_test_488", "triples": [{"sub": "rapper's delight", "rel": "performer", "obj": "sugarhill gang"}, {"sub": "rapper's delight", "rel": "publication date", "obj": "1979"}, {"sub": "rapper's delight", "rel": "producer", "obj": "sylvia robinson"}]}
+{"id": "ont_2_music_test_490", "triples": [{"sub": "bump, bump, bump", "rel": "performer", "obj": "b2k"}]}
+{"id": "ont_2_music_test_491", "triples": [{"sub": "did it on'em", "rel": "performer", "obj": "nicki minaj"}]}
+{"id": "ont_2_music_test_492", "triples": [{"sub": "cold hearted", "rel": "part of", "obj": "forever your girl"}, {"sub": "forever your girl", "rel": "performer", "obj": "paula abdul"}, {"sub": "cold hearted", "rel": "performer", "obj": "paula abdul"}]}
+{"id": "ont_2_music_test_493", "triples": [{"sub": "nate dogg", "rel": "father", "obj": "snoop dogg"}]}
+{"id": "ont_2_music_test_496", "triples": [{"sub": "peter svensson", "rel": "member of", "obj": "the cardigans"}, {"sub": "the cardigans", "rel": "has part", "obj": "nina persson"}, {"sub": "first band on the moon", "rel": "performer", "obj": "the cardigans"}, {"sub": "lovefool", "rel": "part of", "obj": "first band on the moon"}, {"sub": "lovefool", "rel": "performer", "obj": "the cardigans"}, {"sub": "nina persson", "rel": "member of", "obj": "the cardigans"}, {"sub": "the cardigans", "rel": "has part", "obj": "peter svensson"}]}
+{"id": "ont_2_music_test_497", "triples": [{"sub": "rest your love on me", "rel": "performer", "obj": "bee gees"}, {"sub": "rest your love on me", "rel": "lyrics by", "obj": "barry gibb"}, {"sub": "bee gees", "rel": "has part", "obj": "barry gibb"}, {"sub": "barry gibb", "rel": "part of", "obj": "bee gees"}]}
+{"id": "ont_2_music_test_498", "triples": [{"sub": "music box dancer", "rel": "performer", "obj": "frank mills"}]}
+{"id": "ont_2_music_test_499", "triples": [{"sub": "california gurls", "rel": "performer", "obj": "katy perry"}]}
+{"id": "ont_2_music_test_500", "triples": [{"sub": "loose", "rel": "performer", "obj": "nelly furtado"}, {"sub": "say it right", "rel": "part of", "obj": "loose"}, {"sub": "say it right", "rel": "performer", "obj": "nelly furtado"}]}
+{"id": "ont_2_music_test_502", "triples": [{"sub": "george michael", "rel": "record label", "obj": "columbia records"}]}
+{"id": "ont_2_music_test_503", "triples": [{"sub": "haddaway", "rel": "genre", "obj": "eurodance"}, {"sub": "what is love", "rel": "part of", "obj": "the album"}, {"sub": "the album", "rel": "performer", "obj": "haddaway"}, {"sub": "what is love", "rel": "performer", "obj": "haddaway"}, {"sub": "what is love", "rel": "genre", "obj": "eurodance"}, {"sub": "the album", "rel": "genre", "obj": "eurodance"}]}
+{"id": "ont_2_music_test_504", "triples": [{"sub": "dirty dancing", "rel": "publication date", "obj": "1987"}]}
+{"id": "ont_2_music_test_505", "triples": [{"sub": "doo-wops & hooligans", "rel": "performer", "obj": "bruno mars"}, {"sub": "marry you", "rel": "part of", "obj": "doo-wops & hooligans"}, {"sub": "marry you", "rel": "performer", "obj": "bruno mars"}]}
+{"id": "ont_2_music_test_507", "triples": [{"sub": "can't fight the moonlight", "rel": "performer", "obj": "leann rimes"}]}
+{"id": "ont_2_music_test_508", "triples": [{"sub": "alison hinds", "rel": "genre", "obj": "soca"}, {"sub": "soca queen", "rel": "performer", "obj": "roll it gal"}]}
+{"id": "ont_2_music_test_509", "triples": [{"sub": "waka waka (this time for africa)", "rel": "performer", "obj": "shakira"}]}
+{"id": "ont_2_music_test_510", "triples": [{"sub": "john fogerty", "rel": "member of", "obj": "creedence clearwater revival"}, {"sub": "creedence clearwater revival", "rel": "has part", "obj": "john fogerty"}, {"sub": "rockin' all over the world", "rel": "lyrics by", "obj": "john fogerty"}]}
+{"id": "ont_2_music_test_511", "triples": [{"sub": "party in the u.s.a", "rel": "part of", "obj": "the time of our lives"}, {"sub": "party in the u.s.a", "rel": "performer", "obj": "miley cyrus"}, {"sub": "the time of our lives", "rel": "performer", "obj": "miley cyrus"}]}
+{"id": "ont_2_music_test_512", "triples": [{"sub": "arthur", "rel": "cast member", "obj": "dudley moore"}, {"sub": "arthur", "rel": "cast member", "obj": "liza minnelli"}]}
+{"id": "ont_2_music_test_513", "triples": [{"sub": "i am your leader", "rel": "performer", "obj": "nicki minaj"}]}
+{"id": "ont_2_music_test_514", "triples": [{"sub": "...baby one more time", "rel": "performer", "obj": "britney spears"}, {"sub": "(you drive me) crazy", "rel": "performer", "obj": "britney spears"}, {"sub": "(you drive me) crazy", "rel": "part of", "obj": "...baby one more time"}]}
+{"id": "ont_2_music_test_515", "triples": [{"sub": "va va voom", "rel": "performer", "obj": "nicki minaj"}]}
+{"id": "ont_2_music_test_516", "triples": [{"sub": "you shook me", "rel": "performer", "obj": "muddy waters"}]}
+{"id": "ont_2_music_test_517", "triples": [{"sub": "jennette mccurdy", "rel": "genre", "obj": "country"}, {"sub": "not that far away", "rel": "performer", "obj": "jennette mccurdy"}, {"sub": "not that far away", "rel": "genre", "obj": "country"}]}
+{"id": "ont_2_music_test_518", "triples": [{"sub": "by the way", "rel": "publication date", "obj": "july 9, 2002"}, {"sub": "by the way", "rel": "performer", "obj": "red hot chili peppers"}]}
+{"id": "ont_2_music_test_519", "triples": [{"sub": "rockabilly", "rel": "subclass of", "obj": "rock and roll"}]}
+{"id": "ont_2_music_test_520", "triples": [{"sub": "the next episode", "rel": "part of", "obj": "2001"}, {"sub": "the next episode", "rel": "performer", "obj": "dr. dre"}, {"sub": "the next episode", "rel": "publication date", "obj": "july 4, 2000"}, {"sub": "2001", "rel": "performer", "obj": "dr. dre"}]}
+{"id": "ont_2_music_test_521", "triples": [{"sub": "akb48", "rel": "country of origin", "obj": "japan"}]}
+{"id": "ont_2_music_test_523", "triples": [{"sub": "better be good to me", "rel": "part of", "obj": "private dancer"}, {"sub": "private dancer", "rel": "performer", "obj": "tina turner"}, {"sub": "better be good to me", "rel": "performer", "obj": "tina turner"}]}
+{"id": "ont_2_music_test_524", "triples": [{"sub": "taylor swift", "rel": "country of citizenship", "obj": "american"}]}
+{"id": "ont_2_music_test_525", "triples": [{"sub": "lying from you", "rel": "performer", "obj": "linkin park"}, {"sub": "lying from you", "rel": "publication date", "obj": "march 16, 2004"}]}
+{"id": "ont_2_music_test_526", "triples": [{"sub": "eye to the telescope", "rel": "performer", "obj": "kt tunstall"}, {"sub": "suddenly i see", "rel": "performer", "obj": "kt tunstall"}, {"sub": "suddenly i see", "rel": "part of", "obj": "eye to the telescope"}]}
+{"id": "ont_2_music_test_527", "triples": [{"sub": "we are the ones", "rel": "performer", "obj": "will.i.am"}]}
+{"id": "ont_2_music_test_528", "triples": [{"sub": "romance, irane", "rel": "performer", "obj": "akb48"}, {"sub": "akb48", "rel": "record label", "obj": "defstar records"}, {"sub": "romance, irane", "rel": "publication date", "obj": "january 23, 2008"}, {"sub": "romance, irane", "rel": "record label", "obj": "defstar records"}]}
+{"id": "ont_2_music_test_529", "triples": [{"sub": "hijo de la luna", "rel": "performer", "obj": "mecano"}]}
+{"id": "ont_2_music_test_530", "triples": [{"sub": "supertramp", "rel": "genre", "obj": "rock"}, {"sub": "breakfast in america", "rel": "performer", "obj": "supertramp"}, {"sub": "the logical song", "rel": "performer", "obj": "supertramp"}, {"sub": "the logical song", "rel": "part of", "obj": "breakfast in america"}]}
+{"id": "ont_2_music_test_531", "triples": [{"sub": "little bad girl", "rel": "performer", "obj": "david guetta"}, {"sub": "little bad girl", "rel": "performer", "obj": "ludacris"}, {"sub": "little bad girl", "rel": "performer", "obj": "taio cruz"}]}
+{"id": "ont_2_music_test_532", "triples": [{"sub": "bad romance", "rel": "cast member", "obj": "lady gaga"}, {"sub": "bad romance", "rel": "producer", "obj": "nadir \"redone\" khayat"}]}
+{"id": "ont_2_music_test_533", "triples": [{"sub": "all that she wants", "rel": "performer", "obj": "ace of base"}]}
+{"id": "ont_2_music_test_534", "triples": [{"sub": "anarchy in the u.k.", "rel": "part of", "obj": "never mind the bollocks, here's the sex pistols"}]}
+{"id": "ont_2_music_test_535", "triples": [{"sub": "these words", "rel": "performer", "obj": "natasha bedingfield"}]}
+{"id": "ont_2_music_test_536", "triples": [{"sub": "ixnay on the hombre", "rel": "performer", "obj": "the offspring"}, {"sub": "gone away (ep)", "rel": "performer", "obj": "die kreuzen"}]}
+{"id": "ont_2_music_test_540", "triples": [{"sub": "vida minha", "rel": "performer", "obj": "filipa sousa"}]}
+{"id": "ont_2_music_test_541", "triples": [{"sub": "no woman, no cry", "rel": "performer", "obj": "bob marley and the wailers"}, {"sub": "no woman, no cry", "rel": "genre", "obj": "reggae"}, {"sub": "bob marley and the wailers", "rel": "genre", "obj": "reggae"}]}
+{"id": "ont_2_music_test_542", "triples": [{"sub": "jar of hearts", "rel": "performer", "obj": "christina perri"}]}
+{"id": "ont_2_music_test_543", "triples": [{"sub": "...baby one more time", "rel": "performer", "obj": "britney spears"}, {"sub": "born to make you happy", "rel": "performer", "obj": "britney spears"}, {"sub": "born to make you happy", "rel": "part of", "obj": "...baby one more time"}]}
+{"id": "ont_2_music_test_544", "triples": [{"sub": "i still haven't found what i'm looking for", "rel": "performer", "obj": "u2"}]}
+{"id": "ont_2_music_test_545", "triples": [{"sub": "gimme more", "rel": "performer", "obj": "britney spears"}, {"sub": "gimme more", "rel": "part of", "obj": "blackout"}, {"sub": "blackout", "rel": "performer", "obj": "britney spears"}]}
+{"id": "ont_2_music_test_546", "triples": [{"sub": "dave gahan", "rel": "member of", "obj": "depeche mode"}, {"sub": "suffer well", "rel": "performer", "obj": "depeche mode"}, {"sub": "depeche mode", "rel": "has part", "obj": "dave gahan"}]}
+{"id": "ont_2_music_test_547", "triples": [{"sub": "out from under", "rel": "performer", "obj": "britney spears"}]}
+{"id": "ont_2_music_test_548", "triples": [{"sub": "wings", "rel": "has part", "obj": "steve holley"}, {"sub": "steve holley", "rel": "member of", "obj": "wings"}, {"sub": "laurence juber", "rel": "member of", "obj": "wings"}, {"sub": "paul mccartney", "rel": "genre", "obj": "new wave"}, {"sub": "wings", "rel": "has part", "obj": "laurence juber"}, {"sub": "wings", "rel": "has part", "obj": "paul mccartney"}, {"sub": "paul mccartney", "rel": "member of", "obj": "wings"}]}
+{"id": "ont_2_music_test_549", "triples": [{"sub": "no line on the horizon", "rel": "producer", "obj": "brian eno"}]}
+{"id": "ont_2_music_test_550", "triples": [{"sub": "abenteuer", "rel": "composer", "obj": "dieter bohlen"}]}
+{"id": "ont_2_music_test_551", "triples": [{"sub": "pure", "rel": "publication date", "obj": "2000"}, {"sub": "jagged", "rel": "performer", "obj": "gary numan"}, {"sub": "pure", "rel": "performer", "obj": "gary numan"}]}
+{"id": "ont_2_music_test_552", "triples": [{"sub": "rick rubin", "rel": "occupation", "obj": "produced"}]}
+{"id": "ont_2_music_test_553", "triples": [{"sub": "on a night like this tour", "rel": "performer", "obj": "kylie minogue"}, {"sub": "live in sydney", "rel": "performer", "obj": "kylie minogue"}]}
+{"id": "ont_2_music_test_554", "triples": [{"sub": "timbaland", "rel": "occupation", "obj": "record producer"}]}
+{"id": "ont_2_music_test_555", "triples": [{"sub": "chris walla", "rel": "occupation", "obj": "guitarist"}]}
+{"id": "ont_2_music_test_556", "triples": [{"sub": "a nod is as good as a wink ... to a blind horse", "rel": "producer", "obj": "glyn johns"}]}
+{"id": "ont_2_music_test_557", "triples": [{"sub": "pink floyd", "rel": "has part", "obj": "roger waters"}, {"sub": "roger waters", "rel": "part of", "obj": "pink floyd"}, {"sub": "pink floyd", "rel": "has part", "obj": "david gilmour"}, {"sub": "david gilmour", "rel": "member of", "obj": "pink floyd"}]}
+{"id": "ont_2_music_test_558", "triples": [{"sub": "nick cave and the bad seeds", "rel": "genre", "obj": "post-punk"}, {"sub": "the firstborn is dead", "rel": "performer", "obj": "nick cave and the bad seeds"}]}
+{"id": "ont_2_music_test_559", "triples": [{"sub": "another day on earth", "rel": "performer", "obj": "brian eno"}, {"sub": "another day on earth", "rel": "record label", "obj": "hannibal records"}]}
+{"id": "ont_2_music_test_560", "triples": [{"sub": "dr. dre", "rel": "influenced by", "obj": "jimmy iovine"}]}
+{"id": "ont_2_music_test_561", "triples": [{"sub": "bill wyman", "rel": "member of", "obj": "stones"}, {"sub": "stones", "rel": "has part", "obj": "bill wyman"}, {"sub": "stones", "rel": "has part", "obj": "charlie watts"}, {"sub": "mick jagger", "rel": "member of", "obj": "stones"}, {"sub": "charlie watts", "rel": "member of", "obj": "stones"}, {"sub": "stones", "rel": "has part", "obj": "mick jagger"}]}
+{"id": "ont_2_music_test_562", "triples": [{"sub": "a flash flood of colour", "rel": "producer", "obj": "dan weller"}, {"sub": "a flash flood of colour", "rel": "performer", "obj": "enter shikari"}]}
+{"id": "ont_2_music_test_563", "triples": [{"sub": "neal avron", "rel": "occupation", "obj": "production"}]}
+{"id": "ont_2_music_test_564", "triples": [{"sub": "out of our heads", "rel": "producer", "obj": "andrew loog oldham"}]}
+{"id": "ont_2_music_test_565", "triples": [{"sub": "in the wee small hours", "rel": "producer", "obj": "voyle gilmore"}, {"sub": "in the wee small hours", "rel": "record label", "obj": "capitol"}]}
+{"id": "ont_2_music_test_566", "triples": [{"sub": "the appearances of keak da sneak", "rel": "record label", "obj": "moe doe records"}]}
+{"id": "ont_2_music_test_567", "triples": [{"sub": "john cale", "rel": "record label", "obj": "ze records"}, {"sub": "caribbean sunset", "rel": "record label", "obj": "ze records"}, {"sub": "caribbean sunset", "rel": "performer", "obj": "john cale"}, {"sub": "caribbean sunset", "rel": "publication date", "obj": "1984"}]}
+{"id": "ont_2_music_test_568", "triples": [{"sub": "strawberries oceans ships forest", "rel": "performer", "obj": "the fireman"}, {"sub": "the orb", "rel": "has part", "obj": "youth"}, {"sub": "youth", "rel": "member of", "obj": "the orb"}, {"sub": "youth", "rel": "member of", "obj": "killing joke"}, {"sub": "strawberries oceans ships forest", "rel": "genre", "obj": "ambient techno"}, {"sub": "the fireman", "rel": "has part", "obj": "paul mccartney"}, {"sub": "killing joke", "rel": "has part", "obj": "youth"}, {"sub": "strawberries oceans ships forest", "rel": "publication date", "obj": "1993"}]}
+{"id": "ont_2_music_test_569", "triples": [{"sub": "wrong way up", "rel": "publication date", "obj": "1990"}, {"sub": "wrong way up", "rel": "performer", "obj": "brian eno"}]}
+{"id": "ont_2_music_test_570", "triples": [{"sub": "strapping young lad", "rel": "has part", "obj": "devin townsend"}]}
+{"id": "ont_2_music_test_571", "triples": [{"sub": "claudio guidetti", "rel": "has part", "obj": "michele canova"}]}
+{"id": "ont_2_music_test_572", "triples": [{"sub": "awaken the guardian", "rel": "publication date", "obj": "1986"}, {"sub": "awaken the guardian", "rel": "genre", "obj": "progressive metal"}, {"sub": "awaken the guardian", "rel": "performer", "obj": "fates warning"}, {"sub": "fates warning", "rel": "genre", "obj": "progressive metal"}, {"sub": "awaken the guardian", "rel": "record label", "obj": "metal blade records"}, {"sub": "fates warning", "rel": "record label", "obj": "metal blade records"}, {"sub": "metal blade records", "rel": "genre", "obj": "progressive metal"}]}
+{"id": "ont_2_music_test_573", "triples": [{"sub": "100th window", "rel": "performer", "obj": "horace andy"}, {"sub": "damon albarn", "rel": "member of", "obj": "2d"}, {"sub": "2d", "rel": "has part", "obj": "damon albarn"}]}
+{"id": "ont_2_music_test_574", "triples": [{"sub": "ultramega ok", "rel": "publication date", "obj": "1988"}]}
+{"id": "ont_2_music_test_575", "triples": [{"sub": "jonas brothers", "rel": "instance of", "obj": "boy band"}]}
+{"id": "ont_2_music_test_576", "triples": [{"sub": "welcome to my nightmare", "rel": "followed by", "obj": "alice cooper goes to hell"}, {"sub": "alice cooper goes to hell", "rel": "follows", "obj": "welcome to my nightmare"}]}
+{"id": "ont_2_music_test_577", "triples": [{"sub": "redone", "rel": "has part", "obj": "kevin rudolf"}]}
+{"id": "ont_2_music_test_578", "triples": [{"sub": "musicland studios", "rel": "headquarters location", "obj": "munich"}]}
+{"id": "ont_2_music_test_579", "triples": [{"sub": "walking on locusts", "rel": "publication date", "obj": "1996"}, {"sub": "walking on locusts", "rel": "performer", "obj": "john cale"}]}
+{"id": "ont_2_music_test_580", "triples": [{"sub": "history", "rel": "publication date", "obj": "june 20, 1995"}, {"sub": "history", "rel": "performer", "obj": "michael jackson"}]}
+{"id": "ont_2_music_test_581", "triples": [{"sub": "porcupine tree", "rel": "has part", "obj": "steven wilson"}, {"sub": "grace for drowning", "rel": "performer", "obj": "steven wilson"}, {"sub": "steven wilson", "rel": "member of", "obj": "porcupine tree"}]}
+{"id": "ont_2_music_test_582", "triples": [{"sub": "under a blood red sky", "rel": "performer", "obj": "u2"}]}
+{"id": "ont_2_music_test_583", "triples": [{"sub": "chester bennington", "rel": "record label", "obj": "nrg recordings"}, {"sub": "hybrid theory", "rel": "record label", "obj": "nrg recordings"}, {"sub": "hybrid theory", "rel": "has part", "obj": "chester bennington"}]}
+{"id": "ont_2_music_test_584", "triples": [{"sub": "nard & b", "rel": "occupation", "obj": "record producer"}]}
+{"id": "ont_2_music_test_585", "triples": [{"sub": "syro", "rel": "follows", "obj": "drukqs"}, {"sub": "drukqs", "rel": "followed by", "obj": "syro"}]}
+{"id": "ont_2_music_test_586", "triples": [{"sub": "prior album", "rel": "producer", "obj": "rick rubin"}]}
+{"id": "ont_2_music_test_587", "triples": [{"sub": "love beach", "rel": "producer", "obj": "keith emerson"}]}
+{"id": "ont_2_music_test_588", "triples": [{"sub": "she wolf", "rel": "performer", "obj": "shakira"}]}
+{"id": "ont_2_music_test_589", "triples": [{"sub": "ambient 1", "rel": "publication date", "obj": "1978"}, {"sub": "brian eno", "rel": "record label", "obj": "polydor records"}, {"sub": "ambient 1", "rel": "performer", "obj": "brian eno"}, {"sub": "ambient 1", "rel": "record label", "obj": "polydor records"}]}
+{"id": "ont_2_music_test_590", "triples": [{"sub": "enemies of reality", "rel": "producer", "obj": "kelly gray"}]}
+{"id": "ont_2_music_test_591", "triples": [{"sub": "the dark side of the moon", "rel": "performer", "obj": "pink floyd"}]}
+{"id": "ont_2_music_test_592", "triples": [{"sub": "xenomania", "rel": "has part", "obj": "brian higgins"}]}
+{"id": "ont_2_music_test_593", "triples": [{"sub": "more monsters and sprites", "rel": "follows", "obj": "scary monsters and nice sprites"}, {"sub": "scary monsters and nice sprites", "rel": "followed by", "obj": "more monsters and sprites"}]}
+{"id": "ont_2_music_test_594", "triples": [{"sub": "blood sugar sex magik", "rel": "producer", "obj": "rick rubin"}]}
+{"id": "ont_2_music_test_595", "triples": [{"sub": "five miles out", "rel": "publication date", "obj": "1982"}, {"sub": "five miles out", "rel": "performer", "obj": "mike oldfield"}]}
+{"id": "ont_2_music_test_596", "triples": [{"sub": "if i could only remember my name", "rel": "record label", "obj": "atlantic records"}, {"sub": "if i could only remember my name", "rel": "performer", "obj": "david crosby"}, {"sub": "david crosby", "rel": "record label", "obj": "atlantic records"}]}
+{"id": "ont_2_music_test_597", "triples": [{"sub": "lonesome crow", "rel": "producer", "obj": "conny plank"}]}
+{"id": "ont_2_music_test_598", "triples": [{"sub": "4\u00e3\u00974=12", "rel": "followed by", "obj": "album title goes here"}]}
+{"id": "ont_2_music_test_599", "triples": [{"sub": "a state of trance 2010", "rel": "producer", "obj": "armin van buuren"}]}
+{"id": "ont_2_music_test_600", "triples": [{"sub": "brett gurewitz", "rel": "member of", "obj": "bad religion"}, {"sub": "bad religion", "rel": "has part", "obj": "brett gurewitz"}]}
+{"id": "ont_2_music_test_601", "triples": [{"sub": "tom petty and the heartbreakers", "rel": "work period (start)", "obj": "1978"}]}
+{"id": "ont_2_music_test_602", "triples": [{"sub": "music for films", "rel": "performer", "obj": "brian eno"}]}
+{"id": "ont_2_music_test_603", "triples": [{"sub": "chicken-n-beer", "rel": "work period (start)", "obj": "2002"}]}
+{"id": "ont_2_music_test_604", "triples": [{"sub": "ingo politz", "rel": "occupation", "obj": "produced"}]}
+{"id": "ont_2_music_test_605", "triples": [{"sub": "blizzard of ozz", "rel": "publication date", "obj": "20 september 1980"}, {"sub": "ozzy osbourne", "rel": "genre", "obj": "heavy metal"}, {"sub": "blizzard of ozz", "rel": "performer", "obj": "ozzy osbourne"}, {"sub": "blizzard of ozz", "rel": "genre", "obj": "heavy metal"}]}
+{"id": "ont_2_music_test_606", "triples": [{"sub": "the rolling stones", "rel": "record label", "obj": "decca records"}]}
+{"id": "ont_2_music_test_607", "triples": [{"sub": "in waves", "rel": "record label", "obj": "roadrunner records"}]}
+{"id": "ont_2_music_test_608", "triples": [{"sub": "best rap album", "rel": "instance of", "obj": "grammy award"}, {"sub": "album of the year", "rel": "instance of", "obj": "grammy award"}, {"sub": "grammy award", "rel": "has part", "obj": "album of the year"}]}
+{"id": "ont_2_music_test_609", "triples": [{"sub": "alpocalypse", "rel": "nominated for", "obj": "grammy award for best comedy album"}]}
+{"id": "ont_2_music_test_610", "triples": [{"sub": "grammy award for best rock album", "rel": "inception", "obj": "1995"}]}
+{"id": "ont_2_music_test_611", "triples": [{"sub": "dear ella", "rel": "award received", "obj": "grammy award for best jazz vocal album"}]}
+{"id": "ont_2_music_test_612", "triples": [{"sub": "best rock performance by a duo or group with vocal", "rel": "instance of", "obj": "grammy award"}]}
+{"id": "ont_2_music_test_613", "triples": [{"sub": "46th grammy awards", "rel": "point in time", "obj": "2004"}]}
+{"id": "ont_2_music_test_614", "triples": [{"sub": "bone machine", "rel": "has part", "obj": "tom waits"}, {"sub": "tom waits", "rel": "member of", "obj": "bone machine"}]}
+{"id": "ont_2_music_test_615", "triples": [{"sub": "40th grammy awards", "rel": "point in time", "obj": "1998"}]}
+{"id": "ont_2_music_test_616", "triples": [{"sub": "magna carta records", "rel": "product or material produced", "obj": "albums"}]}
+{"id": "ont_2_music_test_617", "triples": [{"sub": "living with the living", "rel": "record label", "obj": "touch and go records"}, {"sub": "ted leo and the pharmacists", "rel": "record label", "obj": "touch and go records"}, {"sub": "living with the living", "rel": "performer", "obj": "ted leo and the pharmacists"}]}
+{"id": "ont_2_music_test_618", "triples": [{"sub": "frankenchrist", "rel": "publication date", "obj": "1985"}, {"sub": "frankenchrist", "rel": "record label", "obj": "alternative tentacles"}, {"sub": "dead kennedys", "rel": "genre", "obj": "hardcore punk"}, {"sub": "dead kennedys", "rel": "record label", "obj": "alternative tentacles"}]}
+{"id": "ont_2_music_test_619", "triples": [{"sub": "lovesick electric", "rel": "record label", "obj": "jive records"}]}
+{"id": "ont_2_music_test_620", "triples": [{"sub": "a-sides", "rel": "record label", "obj": "a&m records"}]}
+{"id": "ont_2_music_test_621", "triples": [{"sub": "my arms, your hearse", "rel": "record label", "obj": "candlelight records"}, {"sub": "my arms, your hearse", "rel": "performer", "obj": "opeth"}, {"sub": "opeth", "rel": "record label", "obj": "candlelight records"}]}
+{"id": "ont_2_music_test_622", "triples": [{"sub": "the screen behind the mirror", "rel": "record label", "obj": "virgin records"}]}
+{"id": "ont_2_music_test_623", "triples": [{"sub": "nina simone at town hall", "rel": "record label", "obj": "colpix records"}]}
+{"id": "ont_2_music_test_624", "triples": [{"sub": "far east movement", "rel": "record label", "obj": "interscope records"}, {"sub": "dirty bass", "rel": "record label", "obj": "cherrytree records"}, {"sub": "interscope records", "rel": "owned by", "obj": "universal music group"}, {"sub": "universal music group", "rel": "subsidiary", "obj": "interscope records"}, {"sub": "dirty bass", "rel": "performer", "obj": "far east movement"}, {"sub": "far east movement", "rel": "record label", "obj": "cherrytree records"}]}
+{"id": "ont_2_music_test_625", "triples": [{"sub": "alright, still's", "rel": "record label", "obj": "regal recordings"}]}
+{"id": "ont_2_music_test_626", "triples": [{"sub": "death cab for cutie", "rel": "genre", "obj": "indie rock"}, {"sub": "transatlanticism", "rel": "record label", "obj": "barsuk records"}, {"sub": "transatlanticism", "rel": "performer", "obj": "death cab for cutie"}, {"sub": "death cab for cutie", "rel": "record label", "obj": "barsuk records"}, {"sub": "transatlanticism", "rel": "genre", "obj": "indie rock"}]}
+{"id": "ont_2_music_test_627", "triples": [{"sub": "obzen", "rel": "record label", "obj": "nuclear blast"}]}
+{"id": "ont_2_music_test_628", "triples": [{"sub": "the second stage turbine blade", "rel": "record label", "obj": "equal vision records"}]}
+{"id": "ont_2_music_test_629", "triples": [{"sub": "a rush of blood to the head", "rel": "record label", "obj": "parlophone"}]}
+{"id": "ont_2_music_test_630", "triples": [{"sub": "ok computer", "rel": "performer", "obj": "radiohead"}, {"sub": "ok computer", "rel": "publication date", "obj": "21 may 1997"}, {"sub": "ok computer", "rel": "record label", "obj": "capitol records"}, {"sub": "radiohead", "rel": "record label", "obj": "parlophone"}, {"sub": "radiohead", "rel": "record label", "obj": "capitol records"}, {"sub": "ok computer", "rel": "record label", "obj": "parlophone"}]}
+{"id": "ont_2_music_test_631", "triples": [{"sub": "gris-gris", "rel": "publication date", "obj": "1968"}, {"sub": "gris-gris", "rel": "record label", "obj": "atco records"}]}
+{"id": "ont_2_music_test_632", "triples": [{"sub": "the mars volta", "rel": "genre", "obj": "progressive rock"}, {"sub": "the mars volta", "rel": "record label", "obj": "universal records"}, {"sub": "de-loused in the comatorium", "rel": "performer", "obj": "the mars volta"}, {"sub": "de-loused in the comatorium", "rel": "genre", "obj": "progressive rock"}, {"sub": "de-loused in the comatorium", "rel": "record label", "obj": "universal records"}]}
+{"id": "ont_2_music_test_633", "triples": [{"sub": "we have the facts and we're voting yes", "rel": "record label", "obj": "barsuk records"}, {"sub": "death cab for cutie", "rel": "record label", "obj": "barsuk records"}, {"sub": "we have the facts and we're voting yes", "rel": "performer", "obj": "death cab for cutie"}]}
+{"id": "ont_2_music_test_634", "triples": [{"sub": "a thousand suns", "rel": "publication date", "obj": "september 10, 2010"}]}
+{"id": "ont_2_music_test_635", "triples": [{"sub": "regain records", "rel": "publication date", "obj": "november 18, 2009"}]}
+{"id": "ont_2_music_test_636", "triples": [{"sub": "joe satriani", "rel": "record label", "obj": "epic records"}]}
+{"id": "ont_2_music_test_637", "triples": [{"sub": "seleniko", "rel": "performer", "obj": "v\u00e3\u00a4rttin\u00e3\u00a4"}, {"sub": "seleniko", "rel": "publication date", "obj": "1992"}, {"sub": "seleniko", "rel": "record label", "obj": "spirit"}, {"sub": "seleniko", "rel": "record label", "obj": "polygram finland"}, {"sub": "v\u00e3\u00a4rttin\u00e3\u00a4", "rel": "record label", "obj": "spirit"}]}
+{"id": "ont_2_music_test_638", "triples": [{"sub": "seleniko", "rel": "work period (start)", "obj": "1993"}]}
+{"id": "ont_2_music_test_639", "triples": [{"sub": "dream theater", "rel": "record label", "obj": "roadrunner records"}, {"sub": "a dramatic turn of events", "rel": "performer", "obj": "dream theater"}, {"sub": "a dramatic turn of events", "rel": "record label", "obj": "roadrunner records"}, {"sub": "dream theater", "rel": "genre", "obj": "progressive metal"}, {"sub": "a dramatic turn of events", "rel": "genre", "obj": "progressive metal"}, {"sub": "roadrunner records", "rel": "genre", "obj": "progressive metal"}]}
+{"id": "ont_2_music_test_640", "triples": [{"sub": "hey you, i love your soul", "rel": "record label", "obj": "forefront records"}, {"sub": "hey you, i love your soul", "rel": "publication date", "obj": "1998"}]}
+{"id": "ont_2_music_test_641", "triples": [{"sub": "volume 4", "rel": "record label", "obj": "flawless records"}]}
+{"id": "ont_2_music_test_642", "triples": [{"sub": "michael jackson with the jackson 5 live", "rel": "publication date", "obj": "1986"}]}
+{"id": "ont_2_music_test_643", "triples": [{"sub": "interscope records", "rel": "inception", "obj": "june 6, 2006"}]}
+{"id": "ont_2_music_test_644", "triples": [{"sub": "third album", "rel": "publication date", "obj": "1970"}, {"sub": "third album", "rel": "performer", "obj": "the jackson 5"}, {"sub": "third album", "rel": "record label", "obj": "motown records"}, {"sub": "the jackson 5", "rel": "record label", "obj": "motown records"}]}
+{"id": "ont_2_music_test_645", "triples": [{"sub": "ready to die", "rel": "instance of", "obj": "studio album"}, {"sub": "the notorious b.i.g", "rel": "record label", "obj": "bad boy records"}, {"sub": "ready to die", "rel": "record label", "obj": "arista records"}, {"sub": "ready to die", "rel": "publication date", "obj": "september 13, 1994"}, {"sub": "ready to die", "rel": "record label", "obj": "bad boy records"}, {"sub": "ready to die", "rel": "performer", "obj": "the notorious b.i.g"}, {"sub": "the notorious b.i.g", "rel": "record label", "obj": "arista records"}]}
+{"id": "ont_2_music_test_646", "triples": [{"sub": "sanctuary records", "rel": "parent organization", "obj": "universal music"}, {"sub": "universal music", "rel": "subsidiary", "obj": "sanctuary records"}]}
+{"id": "ont_2_music_test_647", "triples": [{"sub": "vertigo", "rel": "distributed by", "obj": "reprise records"}]}
+{"id": "ont_2_music_test_648", "triples": [{"sub": "gonna ball", "rel": "genre", "obj": "rockabilly"}, {"sub": "gonna ball", "rel": "record label", "obj": "arista records"}, {"sub": "gonna ball", "rel": "performer", "obj": "stray cats"}, {"sub": "stray cats", "rel": "record label", "obj": "arista records"}]}
+{"id": "ont_2_music_test_649", "triples": [{"sub": "saddle creek records", "rel": "headquarters location", "obj": "omaha, nebraska"}]}
+{"id": "ont_2_music_test_650", "triples": [{"sub": "nine types of light", "rel": "performer", "obj": "tv on the radio"}, {"sub": "tv on the radio", "rel": "record label", "obj": "interscope records"}, {"sub": "nine types of light", "rel": "record label", "obj": "interscope records"}]}
+{"id": "ont_2_music_test_651", "triples": [{"sub": "a best", "rel": "record label", "obj": "avex trax"}, {"sub": "a best", "rel": "publication date", "obj": "march 28, 2001"}, {"sub": "i am...", "rel": "record label", "obj": "avex trax"}]}
+{"id": "ont_2_music_test_652", "triples": [{"sub": "a new world record", "rel": "record label", "obj": "united artists records"}]}
+{"id": "ont_2_music_test_653", "triples": [{"sub": "in the nightside eclipse", "rel": "genre", "obj": "black metal"}, {"sub": "in the nightside eclipse", "rel": "record label", "obj": "candlelight records"}, {"sub": "in the nightside eclipse", "rel": "performer", "obj": "emperor"}, {"sub": "emperor", "rel": "record label", "obj": "candlelight records"}, {"sub": "emperor", "rel": "genre", "obj": "black metal"}, {"sub": "in the nightside eclipse", "rel": "publication date", "obj": "1994"}]}
+{"id": "ont_2_music_test_654", "triples": [{"sub": "planetary duality", "rel": "record label", "obj": "sumerian records"}]}
+{"id": "ont_2_music_test_655", "triples": [{"sub": "ruff ryders entertainment", "rel": "record label", "obj": "def jam recordings"}]}
+{"id": "ont_2_music_test_656", "triples": [{"sub": "stack-o-tracks", "rel": "record label", "obj": "capitol records"}]}
+{"id": "ont_2_music_test_657", "triples": [{"sub": "born to die", "rel": "record label", "obj": "interscope records"}, {"sub": "born to die", "rel": "publication date", "obj": "january 27, 2012"}]}
+{"id": "ont_2_music_test_658", "triples": [{"sub": "the jackson 5", "rel": "record label", "obj": "motown"}, {"sub": "skywriter", "rel": "performer", "obj": "the jackson 5"}, {"sub": "skywriter", "rel": "publication date", "obj": "march 29, 1973"}, {"sub": "skywriter", "rel": "record label", "obj": "motown"}]}
+{"id": "ont_2_music_test_659", "triples": [{"sub": "blackwater park", "rel": "record label", "obj": "koch records"}]}
+{"id": "ont_2_music_test_660", "triples": [{"sub": "morningrise", "rel": "record label", "obj": "candlelight records"}]}
+{"id": "ont_2_music_test_661", "triples": [{"sub": "comatised", "rel": "publication date", "obj": "2000"}, {"sub": "leona naess", "rel": "record label", "obj": "mca records"}, {"sub": "comatised", "rel": "record label", "obj": "mca records"}, {"sub": "comatised", "rel": "performer", "obj": "leona naess"}]}
+{"id": "ont_2_music_test_662", "triples": [{"sub": "nevermore", "rel": "record label", "obj": "century media"}, {"sub": "enemies of reality", "rel": "publication date", "obj": "2003"}, {"sub": "enemies of reality", "rel": "performer", "obj": "nevermore"}, {"sub": "enemies of reality", "rel": "genre", "obj": "progressive metal"}, {"sub": "nevermore", "rel": "genre", "obj": "progressive metal"}, {"sub": "enemies of reality", "rel": "record label", "obj": "century media"}]}
+{"id": "ont_2_music_test_663", "triples": [{"sub": "brian eno", "rel": "record label", "obj": "island records"}, {"sub": "island records", "rel": "distributed by", "obj": "interscope records"}, {"sub": "all that you ca n't leave behind", "rel": "producer", "obj": "brian eno"}, {"sub": "brian eno", "rel": "record label", "obj": "interscope records"}, {"sub": "all that you ca n't leave behind", "rel": "record label", "obj": "island records"}]}
+{"id": "ont_2_music_test_664", "triples": [{"sub": "for lack of a better name", "rel": "record label", "obj": "mau5trap"}, {"sub": "for lack of a better name", "rel": "record label", "obj": "ultra records"}, {"sub": "for lack of a better name", "rel": "record label", "obj": "virgin records"}]}
+{"id": "ont_2_music_test_665", "triples": [{"sub": "a twist in the myth", "rel": "record label", "obj": "nuclear blast"}]}
+{"id": "ont_2_music_test_666", "triples": [{"sub": "the first four years", "rel": "record label", "obj": "sst records"}, {"sub": "the first four years", "rel": "publication date", "obj": "1983"}]}
+{"id": "ont_2_music_test_667", "triples": [{"sub": "diana ross and the supremes", "rel": "record label", "obj": "motown productions"}]}
+{"id": "ont_2_music_test_668", "triples": [{"sub": "asylum records", "rel": "parent organization", "obj": "columbia records"}]}
+{"id": "ont_2_music_test_669", "triples": [{"sub": "filosofem", "rel": "record label", "obj": "misanthropy records"}]}
+{"id": "ont_2_music_test_670", "triples": [{"sub": "megadeth", "rel": "record label", "obj": "sanctuary records"}, {"sub": "the world needs a hero", "rel": "performer", "obj": "megadeth"}, {"sub": "megadeth", "rel": "genre", "obj": "heavy metal"}, {"sub": "the world needs a hero", "rel": "record label", "obj": "sanctuary records"}, {"sub": "the world needs a hero", "rel": "genre", "obj": "heavy metal"}]}
+{"id": "ont_2_music_test_671", "triples": [{"sub": "tales from topographic oceans", "rel": "performer", "obj": "yes"}, {"sub": "tales from topographic oceans", "rel": "genre", "obj": "progressive rock"}, {"sub": "yes", "rel": "genre", "obj": "progressive rock"}, {"sub": "tales from topographic oceans", "rel": "record label", "obj": "atlantic records"}, {"sub": "yes", "rel": "record label", "obj": "atlantic records"}]}
+{"id": "ont_2_music_test_672", "triples": [{"sub": "the jackson 5", "rel": "record label", "obj": "motown"}, {"sub": "lookin' through the windows", "rel": "record label", "obj": "motown"}, {"sub": "lookin' through the windows", "rel": "performer", "obj": "the jackson 5"}]}
+{"id": "ont_2_music_test_673", "triples": [{"sub": "wea", "rel": "owner of", "obj": "epitaph records"}, {"sub": "epitaph records", "rel": "owned by", "obj": "wea"}]}
+{"id": "ont_2_music_test_674", "triples": [{"sub": "jump back", "rel": "record label", "obj": "virgin records"}]}
+{"id": "ont_2_music_test_675", "triples": [{"sub": "mad not mad", "rel": "record label", "obj": "virgin records"}]}
+{"id": "ont_2_music_unseen_test_1", "triples": [{"sub": "jo jeeta wohi sikandar", "rel": "nominated for", "obj": "academy award for best picture"}]}
+{"id": "ont_2_music_unseen_test_2", "triples": [{"sub": "ghost", "rel": "nominated for", "obj": "academy award for best international feature film"}]}
+{"id": "ont_2_music_unseen_test_3", "triples": [{"sub": "agent vinod", "rel": "cast member", "obj": "arjit singh"}]}
+{"id": "ont_2_music_unseen_test_4", "triples": [{"sub": "duaa", "rel": "composer", "obj": "vishal shekar"}]}
+{"id": "ont_2_music_unseen_test_5", "triples": [{"sub": "cocktail", "rel": "composer", "obj": "jeet gannguli"}]}
+{"id": "ont_2_music_unseen_test_6", "triples": [{"sub": "kabira", "rel": "lyrics by", "obj": "mithoon"}]}
+{"id": "ont_2_music_unseen_test_7", "triples": [{"sub": "resham ki dori", "rel": "publication date", "obj": "2020"}]}
+{"id": "ont_2_music_unseen_test_8", "triples": [{"sub": "thank god", "rel": "performer", "obj": "tanishk bagchi"}]}
+{"id": "ont_2_music_unseen_test_9", "triples": [{"sub": "tose naina", "rel": "publication date", "obj": "30 april 2008"}]}
+{"id": "ont_2_music_unseen_test_10", "triples": [{"sub": "jo jeeta wohi sikandar", "rel": "publication date", "obj": "12 june 2020"}]}
+{"id": "ont_2_music_unseen_test_11", "triples": [{"sub": "virgin mary", "rel": "child", "obj": "christ"}, {"sub": "christ", "rel": "mother", "obj": "virgin mary"}, {"sub": "nativity", "rel": "depicts", "obj": "christ"}, {"sub": "christ", "rel": "significant event", "obj": "nativity"}]}
+{"id": "ont_2_music_unseen_test_12", "triples": [{"sub": "w/x/y", "rel": "performer", "obj": "tani yuuki"}]}
+{"id": "ont_2_music_unseen_test_13", "triples": [{"sub": "rahul", "rel": "date of birth", "obj": "1976"}]}
+{"id": "ont_2_music_unseen_test_14", "triples": [{"sub": "anand roy", "rel": "instrument", "obj": "counterteno"}]}
+{"id": "ont_2_music_unseen_test_15", "triples": [{"sub": "overture", "rel": "publication date", "obj": "2000"}]}
+{"id": "ont_2_music_unseen_test_16", "triples": [{"sub": "saxophone duet", "rel": "subclass of", "obj": "harmony"}]}
+{"id": "ont_2_music_unseen_test_17", "triples": [{"sub": "rabaata", "rel": "part of", "obj": "heart touching"}]}
+{"id": "ont_2_music_unseen_test_18", "triples": [{"sub": "kisi ka bhai kisi ki jaan", "rel": "performer", "obj": "anand mukharjee"}]}
+{"id": "ont_2_music_unseen_test_19", "triples": [{"sub": "sadho re", "rel": "performer", "obj": "parikrama"}]}
+{"id": "ont_2_music_unseen_test_20", "triples": [{"sub": "soulmate", "rel": "location of formation", "obj": "shillong"}]}
+{"id": "ont_2_music_unseen_test_21", "triples": [{"sub": "yaaron", "rel": "performer", "obj": "javed ali"}]}
+{"id": "ont_2_music_unseen_test_22", "triples": [{"sub": "naatu naatu", "rel": "performer", "obj": "krishnakumar kunnath"}]}
+{"id": "ont_2_music_unseen_test_23", "triples": [{"sub": "made in french", "rel": "publication date", "obj": "1980"}]}
+{"id": "ont_2_music_unseen_test_24", "triples": [{"sub": "foras road", "rel": "producer", "obj": "john ebrahim"}]}
+{"id": "ont_2_music_unseen_test_25", "triples": [{"sub": "best hip hop performance by a duo", "rel": "instance of", "obj": "world music awards"}]}
+{"id": "ont_2_music_unseen_test_26", "triples": [{"sub": "50th american music award", "rel": "point in time", "obj": "2020"}]}
+{"id": "ont_2_music_unseen_test_27", "triples": [{"sub": "bhakti", "rel": "record label", "obj": "saregamapa india ltd."}]}
+{"id": "ont_2_music_unseen_test_28", "triples": [{"sub": "filo", "rel": "record label", "obj": "virgin records"}]}

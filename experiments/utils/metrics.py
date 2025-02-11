@@ -39,7 +39,7 @@ class LLMMetrics():
         self.llm_responses_path = "../results/llm_responses/" + self.llm_responses_folder_name + "/" + self.ontology_name + "-" + self.dataset_name + ".jsonl"
         self.metrics_dir = "../results/metrics/" + llm_responses_folder_name
         self.avg_met_path = self.metrics_dir + "/" + self.dataset_name + "_avg.jsonl"
-        if not os.path.exists(self.metrics_dir): os.mkdir(self.metrics_dir)
+        if not os.path.exists(self.metrics_dir): os.makedirs(self.metrics_dir)
         
         self.avg_met = {
             "onto": self.ontology_name,
@@ -315,9 +315,8 @@ def get_csv_avg_per_ontology_tekgen(llm_response_subfolder: str) -> None:
 if __name__ ==  "__main__":
     
     llm_response_folders = glob.glob("../results/llm_responses/*")
-    
+    print(llm_response_folders)
     for llm_response_folder_path in llm_response_folders: 
-
         #llm_response_folder_path = "rebel-fine-tuned-per-ontology-01-january-checkpoints"
         #if "rel-in-ontology" not in llm_response_folder_path: continue
 

@@ -1,0 +1,149 @@
+{"id": "ont_18_scientist_test_1", "triples": [{"sub": "01325", "rel": "instance of", "obj": "area code"}]}
+{"id": "ont_18_scientist_test_2", "triples": [{"sub": "lady anne monson", "rel": "spouse", "obj": "george monson"}, {"sub": "george monson", "rel": "spouse", "obj": "lady anne monson"}]}
+{"id": "ont_18_scientist_test_3", "triples": [{"sub": "andrzej piotr ruszczy\u0144ski", "rel": "field of work", "obj": "theory"}]}
+{"id": "ont_18_scientist_test_4", "triples": [{"sub": "lady anne monson", "rel": "spouse", "obj": "george monson"}, {"sub": "george monson", "rel": "spouse", "obj": "lady anne monson"}]}
+{"id": "ont_18_scientist_test_5", "triples": [{"sub": "brandon carter", "rel": "field of work", "obj": "general relativity"}]}
+{"id": "ont_18_scientist_test_6", "triples": [{"sub": "darinka dentcheva", "rel": "educated at", "obj": "humboldt university"}]}
+{"id": "ont_18_scientist_test_7", "triples": [{"sub": "dl2", "rel": "instance of", "obj": "zip code"}, {"sub": "dl1", "rel": "instance of", "obj": "zip code"}, {"sub": "dl3", "rel": "instance of", "obj": "zip code"}]}
+{"id": "ont_18_scientist_test_8", "triples": [{"sub": "unitary state", "rel": "country", "obj": "kingdom of england"}]}
+{"id": "ont_18_scientist_test_9", "triples": [{"sub": "darinka dentcheva", "rel": "country", "obj": "united states"}]}
+{"id": "ont_18_scientist_test_10", "triples": [{"sub": "lady anne monson", "rel": "date of death", "obj": "1776-02-18"}]}
+{"id": "ont_18_scientist_test_11", "triples": [{"sub": "anne monson", "rel": "place of birth", "obj": "darlington"}]}
+{"id": "ont_18_scientist_test_12", "triples": [{"sub": "united states", "rel": "contains administrative territorial entity", "obj": "new jersey"}, {"sub": "new jersey", "rel": "country", "obj": "united states"}, {"sub": "darinka dentcheva", "rel": "country of citizenship", "obj": "united states"}]}
+{"id": "ont_18_scientist_test_13", "triples": [{"sub": "lady anne monson", "rel": "date of death", "obj": "1776-02-18"}]}
+{"id": "ont_18_scientist_test_14", "triples": [{"sub": "darinka dentcheva", "rel": "field of work", "obj": "mathematical optimization"}]}
+{"id": "ont_18_scientist_test_15", "triples": [{"sub": "united states", "rel": "contains administrative territorial entity", "obj": "new jersey"}, {"sub": "new jersey", "rel": "country", "obj": "united states"}]}
+{"id": "ont_18_scientist_test_16", "triples": [{"sub": "andrzej piotr ruszczy\u0144ski", "rel": "field of work", "obj": "mathematical optimization"}]}
+{"id": "ont_18_scientist_test_17", "triples": [{"sub": "darinka dentcheva", "rel": "country of citizenship", "obj": "united states"}]}
+{"id": "ont_18_scientist_test_18", "triples": [{"sub": "darinka dentcheva", "rel": "educated at", "obj": "humboldt university"}]}
+{"id": "ont_18_scientist_test_19", "triples": [{"sub": "darinka dentcheva", "rel": "date of birth", "obj": "january 1, 1958"}, {"sub": "darinka dentcheva", "rel": "educated at", "obj": "humboldt university"}]}
+{"id": "ont_18_scientist_test_20", "triples": [{"sub": "lady anne monson", "rel": "date of birth", "obj": "january 1, 1726"}]}
+{"id": "ont_18_scientist_test_21", "triples": [{"sub": "carter constant", "rel": "named after", "obj": "brandon carter"}]}
+{"id": "ont_18_scientist_test_22", "triples": [{"sub": "carter constant", "rel": "named after", "obj": "brandon carter"}]}
+{"id": "ont_18_scientist_test_23", "triples": [{"sub": "kingdom of england", "rel": "inception", "obj": "927"}]}
+{"id": "ont_18_scientist_test_24", "triples": [{"sub": "anne monson", "rel": "country of citizenship", "obj": "india"}]}
+{"id": "ont_18_scientist_test_25", "triples": [{"sub": "lady anne monson", "rel": "date of birth", "obj": "january 1, 1726"}]}
+{"id": "ont_18_scientist_test_26", "triples": [{"sub": "darinka dentcheva", "rel": "residence", "obj": "new jersey"}]}
+{"id": "ont_18_scientist_test_27", "triples": [{"sub": "darinka dentcheva", "rel": "place of birth", "obj": "new jersey"}]}
+{"id": "ont_18_scientist_test_28", "triples": [{"sub": "darinka dentcheva", "rel": "date of birth", "obj": "january 1st of 1958"}]}
+{"id": "ont_18_scientist_test_29", "triples": [{"sub": "darinka dentcheva", "rel": "country of citizenship", "obj": "united states"}, {"sub": "john roberts", "rel": "country of citizenship", "obj": "united states"}]}
+{"id": "ont_18_scientist_test_30", "triples": [{"sub": "anne monson", "rel": "spouse", "obj": "t. s. thakur"}]}
+{"id": "ont_18_scientist_test_31", "triples": [{"sub": "unitary state", "rel": "country", "obj": "kingdom of england"}]}
+{"id": "ont_18_scientist_test_32", "triples": [{"sub": "american", "rel": "instance of", "obj": "demonym"}]}
+{"id": "ont_18_scientist_test_33", "triples": [{"sub": "darinka dentcheva", "rel": "occupation", "obj": "mathematician"}]}
+{"id": "ont_18_scientist_test_34", "triples": [{"sub": "darinka dentcheva", "rel": "educated at", "obj": "humboldt university"}]}
+{"id": "ont_18_scientist_test_35", "triples": [{"sub": "lady anne monson", "rel": "date of birth", "obj": "january 1, 1726"}]}
+{"id": "ont_18_scientist_test_36", "triples": [{"sub": "lady anne monson", "rel": "date of death", "obj": "february 18th, 1776"}]}
+{"id": "ont_18_scientist_test_37", "triples": [{"sub": "anthropic principle theory", "rel": "creator", "obj": "brandon carter"}]}
+{"id": "ont_18_scientist_test_38", "triples": [{"sub": "darinka dentcheva", "rel": "educated at", "obj": "humboldt university"}]}
+{"id": "ont_18_scientist_test_39", "triples": [{"sub": "new jersey", "rel": "language used", "obj": "english"}]}
+{"id": "ont_18_scientist_test_40", "triples": [{"sub": "lady anne monson", "rel": "spouse", "obj": "george monson"}, {"sub": "lady anne monson", "rel": "date of birth", "obj": "january 1, 1726"}, {"sub": "george monson", "rel": "spouse", "obj": "lady anne monson"}]}
+{"id": "ont_18_scientist_test_41", "triples": [{"sub": "population of the united states", "rel": "country", "obj": "united states"}]}
+{"id": "ont_18_scientist_test_42", "triples": [{"sub": "lady anne monson", "rel": "date of death", "obj": "february 18, 1776"}, {"sub": "lady anne monson", "rel": "date of birth", "obj": "january 1, 1726"}]}
+{"id": "ont_18_scientist_test_43", "triples": [{"sub": "john roberts", "rel": "country of citizenship", "obj": "united states"}]}
+{"id": "ont_18_scientist_test_44", "triples": [{"sub": "lady anne monson", "rel": "place of birth", "obj": "kingdom of england"}]}
+{"id": "ont_18_scientist_test_45", "triples": [{"sub": "lady anne monson", "rel": "date of death", "obj": "february 18, 1776"}, {"sub": "lady anne monson", "rel": "date of birth", "obj": "january 1, 1726"}]}
+{"id": "ont_18_scientist_test_46", "triples": [{"sub": "lady anne monson", "rel": "place of birth", "obj": "darlington"}]}
+{"id": "ont_18_scientist_test_47", "triples": [{"sub": "carter constant", "rel": "named after", "obj": "brandon carter"}, {"sub": "dennis william sciama", "rel": "employer", "obj": "university of cambridge"}, {"sub": "brandon carter", "rel": "educated at", "obj": "university of cambridge"}]}
+{"id": "ont_18_scientist_test_48", "triples": [{"sub": "darinka dentcheva", "rel": "country of citizenship", "obj": "american"}]}
+{"id": "ont_18_scientist_test_49", "triples": [{"sub": "carter constant", "rel": "named after", "obj": "brandon carter"}]}
+{"id": "ont_18_scientist_test_50", "triples": [{"sub": "kingdom of england", "rel": "dissolved, abolished or demolished date", "obj": "1707"}]}
+{"id": "ont_18_scientist_test_51", "triples": [{"sub": "brandon carter", "rel": "date of birth", "obj": "january 1, 1942"}]}
+{"id": "ont_18_scientist_test_52", "triples": [{"sub": "lady anne monson", "rel": "place of birth", "obj": "darlington"}]}
+{"id": "ont_18_scientist_test_53", "triples": [{"sub": "brandon carter", "rel": "place of birth", "obj": "england"}]}
+{"id": "ont_18_scientist_test_54", "triples": [{"sub": "indian", "rel": "instance of", "obj": "demonym"}]}
+{"id": "ont_18_scientist_test_55", "triples": [{"sub": "darinka dentcheva", "rel": "date of birth", "obj": "january 1, 1958"}]}
+{"id": "ont_18_scientist_test_56", "triples": [{"sub": "north east england", "rel": "instance of", "obj": "region"}]}
+{"id": "ont_18_scientist_test_57", "triples": [{"sub": "president", "rel": "country", "obj": "india"}]}
+{"id": "ont_18_scientist_test_58", "triples": [{"sub": "lady anne monson", "rel": "place of birth", "obj": "darlington"}]}
+{"id": "ont_18_scientist_test_59", "triples": [{"sub": "chief justice", "rel": "country", "obj": "india"}]}
+{"id": "ont_18_scientist_test_60", "triples": [{"sub": "brandon carter", "rel": "place of birth", "obj": "england"}]}
+{"id": "ont_18_scientist_test_61", "triples": [{"sub": "darinka dentcheva", "rel": "date of birth", "obj": "january 1st, 1958"}]}
+{"id": "ont_18_scientist_test_62", "triples": [{"sub": "lady anne monson", "rel": "date of birth", "obj": "january 1, 1726"}, {"sub": "lady anne monson", "rel": "date of death", "obj": "february 18th, 1776"}]}
+{"id": "ont_18_scientist_test_63", "triples": [{"sub": "lady anne monson", "rel": "date of birth", "obj": "january 1st, 1726"}]}
+{"id": "ont_18_scientist_test_64", "triples": [{"sub": "lady anne monson", "rel": "date of birth", "obj": "january 1, 1726"}]}
+{"id": "ont_18_scientist_test_65", "triples": [{"sub": "brandon carter", "rel": "date of birth", "obj": "january 1st, 1942"}]}
+{"id": "ont_18_scientist_test_66", "triples": [{"sub": "brandon carter", "rel": "place of birth", "obj": "england"}]}
+{"id": "ont_18_scientist_test_67", "triples": [{"sub": "population", "rel": "country", "obj": "india"}]}
+{"id": "ont_18_scientist_test_68", "triples": [{"sub": "brandon carter", "rel": "date of birth", "obj": "01-01-1942"}]}
+{"id": "ont_18_scientist_test_69", "triples": [{"sub": "dennis william sciama", "rel": "employer", "obj": "university of cambridge"}]}
+{"id": "ont_18_scientist_test_70", "triples": [{"sub": "anne monson", "rel": "field of work", "obj": "botany"}]}
+{"id": "ont_18_scientist_test_71", "triples": [{"sub": "lady anne monson", "rel": "date of death", "obj": "february 18th, 1776"}]}
+{"id": "ont_18_scientist_test_72", "triples": [{"sub": "darinka dentcheva", "rel": "date of birth", "obj": "january 1, 1958"}, {"sub": "darinka dentcheva", "rel": "educated at", "obj": "humboldt university"}]}
+{"id": "ont_18_scientist_test_73", "triples": [{"sub": "brandon carter", "rel": "date of birth", "obj": "january 1, 1942"}]}
+{"id": "ont_18_scientist_test_74", "triples": [{"sub": "lady anne monson", "rel": "date of birth", "obj": "january 1st, 1726"}]}
+{"id": "ont_18_scientist_test_75", "triples": [{"sub": "winchester", "rel": "capital of", "obj": "kingdom of england"}, {"sub": "kingdom of england", "rel": "capital", "obj": "winchester"}]}
+{"id": "ont_18_scientist_test_76", "triples": [{"sub": "darinka dentcheva", "rel": "date of birth", "obj": "january 1, 1958"}]}
+{"id": "ont_18_scientist_test_77", "triples": [{"sub": "lady anne monson", "rel": "spouse", "obj": "george monson"}, {"sub": "george monson", "rel": "spouse", "obj": "lady anne monson"}]}
+{"id": "ont_18_scientist_test_78", "triples": [{"sub": "brandon carter", "rel": "date of birth", "obj": "1942"}, {"sub": "brandon carter", "rel": "educated at", "obj": "university of cambridge"}]}
+{"id": "ont_18_scientist_test_79", "triples": [{"sub": "brandon carter", "rel": "date of birth", "obj": "january 1, 1942"}]}
+{"id": "ont_18_scientist_test_80", "triples": [{"sub": "brandon carter", "rel": "date of birth", "obj": "january 1, 1942"}, {"sub": "brandon carter", "rel": "educated at", "obj": "university of cambridge"}]}
+{"id": "ont_18_scientist_test_81", "triples": [{"sub": "lady anne monson", "rel": "place of birth", "obj": "darlington"}]}
+{"id": "ont_18_scientist_test_82", "triples": [{"sub": "university of cambridge", "rel": "located in the administrative territorial entity", "obj": "england"}]}
+{"id": "ont_18_scientist_test_83", "triples": [{"sub": "andrzej piotr ruszczynski", "rel": "field of work", "obj": "mathematical optimization"}]}
+{"id": "ont_18_scientist_test_84", "triples": [{"sub": "pranab mukherjee", "rel": "country of citizenship", "obj": "india"}]}
+{"id": "ont_18_scientist_test_85", "triples": [{"sub": "darinka dentcheva", "rel": "country of citizenship", "obj": "united states of america"}, {"sub": "humboldt university", "rel": "country", "obj": "united states of america"}, {"sub": "darinka dentcheva", "rel": "educated at", "obj": "humboldt university"}]}
+{"id": "ont_18_scientist_test_86", "triples": [{"sub": "brandon carter", "rel": "educated at", "obj": "university of cambridge"}]}
+{"id": "ont_18_scientist_test_87", "triples": [{"sub": "carter constant", "rel": "named after", "obj": "brandon carter"}]}
+{"id": "ont_18_scientist_test_88", "triples": [{"sub": "lady anne monson", "rel": "country of citizenship", "obj": "kingdom of england"}]}
+{"id": "ont_18_scientist_test_89", "triples": [{"sub": "india", "rel": "inception", "obj": "january 26, 1950"}]}
+{"id": "ont_18_scientist_test_90", "triples": [{"sub": "carter constant", "rel": "named after", "obj": "brandon carter"}]}
+{"id": "ont_18_scientist_test_91", "triples": [{"sub": "carter constant", "rel": "named after", "obj": "brandon carter"}]}
+{"id": "ont_18_scientist_test_92", "triples": [{"sub": "lady anne monson", "rel": "date of birth", "obj": "january 1st, 1726"}]}
+{"id": "ont_18_scientist_test_93", "triples": [{"sub": "doomsday argument", "rel": "creator", "obj": "brandon carter"}]}
+{"id": "ont_18_scientist_test_94", "triples": [{"sub": "new jersey", "rel": "instance of", "obj": "us state"}]}
+{"id": "ont_18_scientist_test_95", "triples": [{"sub": "lady anne monson", "rel": "place of birth", "obj": "darlington"}]}
+{"id": "ont_18_scientist_test_96", "triples": [{"sub": "grid reference", "rel": "facet of", "obj": "os"}]}
+{"id": "ont_18_scientist_test_97", "triples": [{"sub": "darinka dentcheva", "rel": "field of work", "obj": "stochastic programming"}]}
+{"id": "ont_18_scientist_test_98", "triples": [{"sub": "brandon carter", "rel": "educated at", "obj": "university of cambridge"}]}
+{"id": "ont_18_scientist_test_99", "triples": [{"sub": "lady anne monson", "rel": "date of birth", "obj": "january 1, 1726"}]}
+{"id": "ont_18_scientist_test_100", "triples": [{"sub": "lady anne monson", "rel": "date of death", "obj": "february 18, 1776"}]}
+{"id": "ont_18_scientist_test_101", "triples": [{"sub": "carter constant", "rel": "named after", "obj": "brandon carter"}]}
+{"id": "ont_18_scientist_test_102", "triples": [{"sub": "darinka dentcheva", "rel": "date of birth", "obj": "january 1st, 1958"}]}
+{"id": "ont_18_scientist_test_103", "triples": [{"sub": "darinka dentcheva", "rel": "date of birth", "obj": "january 1st 1989"}]}
+{"id": "ont_18_scientist_test_104", "triples": [{"sub": "brandon carter", "rel": "educated at", "obj": "university of cambridge"}]}
+{"id": "ont_18_scientist_test_105", "triples": [{"sub": "brandon carter", "rel": "date of birth", "obj": "january 1, 1942"}, {"sub": "brandon carter", "rel": "educated at", "obj": "university of cambridge"}]}
+{"id": "ont_18_scientist_test_106", "triples": [{"sub": "brandon carter", "rel": "date of birth", "obj": "january 1st, 1942"}]}
+{"id": "ont_18_scientist_test_107", "triples": [{"sub": "brandon carter", "rel": "date of birth", "obj": "january 1st, 1942"}, {"sub": "brandon carter", "rel": "educated at", "obj": "university of cambridge"}]}
+{"id": "ont_18_scientist_test_108", "triples": [{"sub": "carter constant", "rel": "named after", "obj": "brandon carter"}]}
+{"id": "ont_18_scientist_test_109", "triples": [{"sub": "anne monson", "rel": "field of work", "obj": "botany"}]}
+{"id": "ont_18_scientist_test_110", "triples": [{"sub": "darinka dentcheva", "rel": "educated at", "obj": "humboldt university"}, {"sub": "darinka dentcheva", "rel": "date of birth", "obj": "january 1st, 1958"}]}
+{"id": "ont_18_scientist_test_111", "triples": [{"sub": "in god we trust", "rel": "instance of", "obj": "motto"}]}
+{"id": "ont_18_scientist_test_112", "triples": [{"sub": "darinka dentcheva", "rel": "date of birth", "obj": "january 1, 1958"}]}
+{"id": "ont_18_scientist_test_113", "triples": [{"sub": "darinka dentcheva", "rel": "date of birth", "obj": "january 1, 1958"}]}
+{"id": "ont_18_scientist_test_114", "triples": [{"sub": "darinka dentcheva", "rel": "educated at", "obj": "humboldt university"}]}
+{"id": "ont_18_scientist_test_115", "triples": [{"sub": "darinka dentcheva", "rel": "educated at", "obj": "humboldt university"}]}
+{"id": "ont_18_scientist_test_116", "triples": [{"sub": "andrzej piotr ruszczy\u0144ski", "rel": "field of work", "obj": "mathematical optimization"}]}
+{"id": "ont_18_scientist_test_117", "triples": [{"sub": "india", "rel": "country", "obj": "republic of india"}]}
+{"id": "ont_18_scientist_test_118", "triples": [{"sub": "darinka dentcheva", "rel": "educated at", "obj": "humboldt university"}]}
+{"id": "ont_18_scientist_test_119", "triples": [{"sub": "darinka dentcheva", "rel": "field of work", "obj": "mathematical optimization"}]}
+{"id": "ont_18_scientist_test_120", "triples": [{"sub": "lady anne monson", "rel": "date of death", "obj": "february 18, 1776"}]}
+{"id": "ont_18_scientist_test_121", "triples": [{"sub": "darinka dentcheva", "rel": "date of birth", "obj": "january 1st,1958"}]}
+{"id": "ont_18_scientist_test_122", "triples": [{"sub": "lady anne monson", "rel": "date of death", "obj": "february 18, 1776"}]}
+{"id": "ont_18_scientist_test_123", "triples": [{"sub": "brandon carter", "rel": "date of birth", "obj": "january 1st, 1942"}]}
+{"id": "ont_18_scientist_test_124", "triples": [{"sub": "david sainsbury, baron sainsbury of turville", "rel": "position held", "obj": "chancellor of the university of cambridge"}]}
+{"id": "ont_18_scientist_test_125", "triples": [{"sub": "darinka dentcheva", "rel": "date of birth", "obj": "january 1, 1958"}]}
+{"id": "ont_18_scientist_test_126", "triples": [{"sub": "brandon carter", "rel": "date of birth", "obj": "january 1st, 1942"}]}
+{"id": "ont_18_scientist_test_127", "triples": [{"sub": "united states", "rel": "contains administrative territorial entity", "obj": "new jersey"}, {"sub": "new jersey", "rel": "country", "obj": "united states"}]}
+{"id": "ont_18_scientist_test_128", "triples": [{"sub": "lady anne monson", "rel": "date of birth", "obj": "january 1, 1726"}, {"sub": "lady anne monson", "rel": "place of birth", "obj": "darlington"}]}
+{"id": "ont_18_scientist_test_129", "triples": [{"sub": "winchester", "rel": "capital of", "obj": "kingdom of england"}, {"sub": "kingdom of england", "rel": "capital", "obj": "winchester"}]}
+{"id": "ont_18_scientist_test_130", "triples": [{"sub": "new jersey", "rel": "area", "obj": "22,591.38"}]}
+{"id": "ont_18_scientist_test_131", "triples": [{"sub": "lady anne monson", "rel": "date of death", "obj": "february 18th, 1776"}]}
+{"id": "ont_18_scientist_test_132", "triples": [{"sub": "lady anne monson", "rel": "place of birth", "obj": "darlington"}]}
+{"id": "ont_18_scientist_test_133", "triples": [{"sub": "united states", "rel": "contains administrative territorial entity", "obj": "new jersey"}, {"sub": "new jersey", "rel": "country", "obj": "united states"}]}
+{"id": "ont_18_scientist_test_134", "triples": [{"sub": "andrzej piotr ruszczy\u0144ski", "rel": "field of work", "obj": "stochastic programming"}]}
+{"id": "ont_18_scientist_test_135", "triples": [{"sub": "lady anne monson", "rel": "date of birth", "obj": "january 1, 1726"}]}
+{"id": "ont_18_scientist_test_136", "triples": [{"sub": "darinka dentcheva", "rel": "country of citizenship", "obj": "united states"}]}
+{"id": "ont_18_scientist_test_137", "triples": [{"sub": "brandon carter", "rel": "date of birth", "obj": "january 1st, 1942"}, {"sub": "brandon carter", "rel": "educated at", "obj": "university of cambridge"}]}
+{"id": "ont_18_scientist_test_138", "triples": [{"sub": "lady anne monson", "rel": "date of birth", "obj": "1726-01-01"}]}
+{"id": "ont_18_scientist_test_139", "triples": [{"sub": "new jersey", "rel": "area", "obj": "3,544"}]}
+{"id": "ont_18_scientist_test_140", "triples": [{"sub": "david sainsbury", "rel": "employer", "obj": "university of cambridge"}, {"sub": "brandon carter", "rel": "date of birth", "obj": "1942"}, {"sub": "brandon carter", "rel": "educated at", "obj": "university of cambridge"}]}
+{"id": "ont_18_scientist_test_141", "triples": [{"sub": "darlington", "rel": "instance of", "obj": "town"}]}
+{"id": "ont_18_scientist_test_142", "triples": [{"sub": "lady anne monson", "rel": "date of birth", "obj": "january 1, 1726"}]}
+{"id": "ont_18_scientist_test_143", "triples": [{"sub": "leszek borysiewicz", "rel": "educated at", "obj": "university of cambridge"}]}
+{"id": "ont_18_scientist_test_144", "triples": [{"sub": "andrzej piotr ruszczynski", "rel": "field of work", "obj": "stochastic programming"}]}
+{"id": "ont_18_scientist_test_145", "triples": [{"sub": "kingdom of england", "rel": "instance of", "obj": "unitary state form of government"}]}
+{"id": "ont_18_scientist_test_146", "triples": [{"sub": "india", "rel": "population", "obj": "3287590000000"}]}
+{"id": "ont_18_scientist_test_147", "triples": [{"sub": "university of cambridge", "rel": "instance of", "obj": "research university"}]}
+{"id": "ont_18_scientist_test_148", "triples": [{"sub": "darinka dentcheva", "rel": "educated at", "obj": "humboldt university"}, {"sub": "darinka dentcheva", "rel": "date of birth", "obj": "january 1st, 1958"}]}
+{"id": "ont_18_scientist_test_149", "triples": [{"sub": "darinka dentcheva", "rel": "country of citizenship", "obj": "united states"}]}

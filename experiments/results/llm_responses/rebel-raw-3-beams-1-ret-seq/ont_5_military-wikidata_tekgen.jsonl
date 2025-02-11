@@ -1,0 +1,236 @@
+{"id": "ont_5_military_test_1", "triples": [{"sub": "vasily stepanovich zavoyko", "rel": "date of birth", "obj": "5 july 1809"}, {"sub": "vasily stepanovich zavoyko", "rel": "date of death", "obj": "16 february 1898"}]}
+{"id": "ont_5_military_test_2", "triples": [{"sub": "li yaowen", "rel": "date of death", "obj": "10 april 2018"}, {"sub": "li yaowen", "rel": "date of birth", "obj": "1 may 1918"}]}
+{"id": "ont_5_military_test_3", "triples": [{"sub": "xiong zhaoren", "rel": "military rank", "obj": "major general"}]}
+{"id": "ont_5_military_test_4", "triples": [{"sub": "russian academy of sciences", "rel": "located in the administrative territorial entity", "obj": "saint petersburg"}, {"sub": "russia", "rel": "contains administrative territorial entity", "obj": "saint petersburg"}, {"sub": "russian academy of sciences", "rel": "country", "obj": "russia"}, {"sub": "saint petersburg", "rel": "country", "obj": "russia"}]}
+{"id": "ont_5_military_test_5", "triples": [{"sub": "dogan penjor rabgye", "rel": "military rank", "obj": "lieutenant general"}]}
+{"id": "ont_5_military_test_6", "triples": [{"sub": "zhang yulin", "rel": "date of birth", "obj": "january 1958"}]}
+{"id": "ont_5_military_test_7", "triples": [{"sub": "felix von bendemann", "rel": "date of birth", "obj": "8 august 1848"}, {"sub": "felix von bendemann", "rel": "date of death", "obj": "31 october 1915"}]}
+{"id": "ont_5_military_test_8", "triples": [{"sub": "admiral", "rel": "subclass of", "obj": "officer"}]}
+{"id": "ont_5_military_test_9", "triples": [{"sub": "fouad mohamed abou zikry", "rel": "military rank", "obj": "admiral"}, {"sub": "fouad mohamed abou zikry", "rel": "date of death", "obj": "january 26, 1983"}, {"sub": "fouad mohamed abou zikry", "rel": "date of birth", "obj": "november 8, 1923"}]}
+{"id": "ont_5_military_test_10", "triples": [{"sub": "miao hua", "rel": "date of birth", "obj": "november 1955"}]}
+{"id": "ont_5_military_test_11", "triples": [{"sub": "wang jiasheng", "rel": "date of birth", "obj": "january 1955"}]}
+{"id": "ont_5_military_test_12", "triples": [{"sub": "you taizhong", "rel": "military rank", "obj": "major general"}]}
+{"id": "ont_5_military_test_13", "triples": [{"sub": "amikam norkin", "rel": "date of birth", "obj": "december 20, 1966"}]}
+{"id": "ont_5_military_test_14", "triples": [{"sub": "old iranian", "rel": "country", "obj": "achaemenid elamite"}, {"sub": "darius the great", "rel": "country of citizenship", "obj": "persian empire"}, {"sub": "achaemenid elamite", "rel": "language used", "obj": "old iranian"}]}
+{"id": "ont_5_military_test_15", "triples": [{"sub": "vasily ivanovich berkov", "rel": "date of death", "obj": "5 april 1870"}, {"sub": "vasily ivanovich berkov", "rel": "date of birth", "obj": "21 august 1794"}]}
+{"id": "ont_5_military_test_16", "triples": [{"sub": "li tianyou", "rel": "date of birth", "obj": "1914"}]}
+{"id": "ont_5_military_test_17", "triples": [{"sub": "zhang zhijian", "rel": "military rank", "obj": "major general"}]}
+{"id": "ont_5_military_test_18", "triples": [{"sub": "peter von sivers", "rel": "military rank", "obj": "admiral"}]}
+{"id": "ont_5_military_test_19", "triples": [{"sub": "dong guishan", "rel": "military rank", "obj": "lieutenant general"}]}
+{"id": "ont_5_military_test_20", "triples": [{"sub": "fyodor matveyevich apraksin", "rel": "date of death", "obj": "10 november 1728"}, {"sub": "fyodor matveyevich apraksin", "rel": "date of birth", "obj": "27 october 1661"}]}
+{"id": "ont_5_military_test_21", "triples": [{"sub": "piri reis", "rel": "date of death", "obj": "1553"}]}
+{"id": "ont_5_military_test_22", "triples": [{"sub": "caroline aigle", "rel": "date of death", "obj": "21 august 2007"}, {"sub": "caroline aigle", "rel": "date of birth", "obj": "12 september 1974"}]}
+{"id": "ont_5_military_test_23", "triples": [{"sub": "guo huaruo", "rel": "date of birth", "obj": "1904"}]}
+{"id": "ont_5_military_test_24", "triples": [{"sub": "gao jin", "rel": "date of birth", "obj": "april 1959"}]}
+{"id": "ont_5_military_test_25", "triples": [{"sub": "johann wittenborg", "rel": "conflict", "obj": "battle of helsingborg"}]}
+{"id": "ont_5_military_test_26", "triples": [{"sub": "talavera de la reina", "rel": "located in the administrative territorial entity", "obj": "province of toledo"}, {"sub": "francisco verdugo", "rel": "place of birth", "obj": "talavera de la reina"}, {"sub": "francisco verdugo", "rel": "date of birth", "obj": "1537"}, {"sub": "francisco verdugo", "rel": "date of death", "obj": "1595"}, {"sub": "francisco verdugo", "rel": "place of death", "obj": "luxembourg"}]}
+{"id": "ont_5_military_test_27", "triples": [{"sub": "wang jiaocheng", "rel": "date of birth", "obj": "1952"}]}
+{"id": "ont_5_military_test_28", "triples": [{"sub": "takeo kurita", "rel": "date of death", "obj": "19 december 1977"}, {"sub": "takeo kurita", "rel": "date of birth", "obj": "28 april 1889"}, {"sub": "takeo kurita", "rel": "conflict", "obj": "world war ii"}, {"sub": "takeo kurita", "rel": "military rank", "obj": "vice admiral"}, {"sub": "imperial japanese navy", "rel": "conflict", "obj": "world war ii"}]}
+{"id": "ont_5_military_test_29", "triples": [{"sub": "wei fenghe", "rel": "date of birth", "obj": "1954"}]}
+{"id": "ont_5_military_test_30", "triples": [{"sub": "karl ernst rahtgens", "rel": "military rank", "obj": "oberstleutnant"}]}
+{"id": "ont_5_military_test_31", "triples": [{"sub": "zhang lianzhong", "rel": "date of birth", "obj": "23 june 1931"}]}
+{"id": "ont_5_military_test_32", "triples": [{"sub": "otto paul wilhelm h\u00f6hne", "rel": "date of death", "obj": "22 november 1969"}, {"sub": "otto paul wilhelm h\u00f6hne", "rel": "date of birth", "obj": "30 april 1895"}, {"sub": "otto paul wilhelm h\u00f6hne", "rel": "occupation", "obj": "flying ace"}]}
+{"id": "ont_5_military_test_33", "triples": [{"sub": "israeli air force", "rel": "part of", "obj": "israel defense forces"}, {"sub": "israel defense forces", "rel": "has part", "obj": "israeli air force"}, {"sub": "eliezer shkedy", "rel": "date of birth", "obj": "16 august 1957"}]}
+{"id": "ont_5_military_test_34", "triples": [{"sub": "battle of the barents sea", "rel": "participant", "obj": "admiral hipper"}]}
+{"id": "ont_5_military_test_35", "triples": [{"sub": "aegospotami", "rel": "location", "obj": "hellespont"}]}
+{"id": "ont_5_military_test_36", "triples": [{"sub": "wilhelm anton souchon", "rel": "date of birth", "obj": "2 june 1864"}, {"sub": "wilhelm anton souchon", "rel": "date of death", "obj": "13 january 1946"}, {"sub": "wilhelm anton souchon", "rel": "conflict", "obj": "world war i"}]}
+{"id": "ont_5_military_test_37", "triples": [{"sub": "tang liang", "rel": "date of death", "obj": "20 november 1986"}, {"sub": "hunan", "rel": "country", "obj": "people's republic of china"}, {"sub": "people's liberation army", "rel": "country", "obj": "people's republic of china"}, {"sub": "people's republic of china", "rel": "contains administrative territorial entity", "obj": "hunan"}, {"sub": "tang liang", "rel": "date of birth", "obj": "13 june 1910"}]}
+{"id": "ont_5_military_test_38", "triples": [{"sub": "alexios doukas philanthropenos", "rel": "position held", "obj": "megas doux"}]}
+{"id": "ont_5_military_test_39", "triples": [{"sub": "nie rongzhen", "rel": "military rank", "obj": "marshal"}]}
+{"id": "ont_5_military_test_40", "triples": [{"sub": "li jukui", "rel": "date of birth", "obj": "1904"}]}
+{"id": "ont_5_military_test_41", "triples": [{"sub": "liu xiaojiang", "rel": "date of birth", "obj": "december 1949"}]}
+{"id": "ont_5_military_test_42", "triples": [{"sub": "jorge montt", "rel": "date of death", "obj": "october 8, 1922"}, {"sub": "jorge montt", "rel": "position held", "obj": "president of chile"}, {"sub": "jorge montt", "rel": "date of birth", "obj": "april 26, 1845"}]}
+{"id": "ont_5_military_test_43", "triples": [{"sub": "wu changde", "rel": "date of birth", "obj": "1952"}]}
+{"id": "ont_5_military_test_44", "triples": [{"sub": "zhang guohua", "rel": "date of birth", "obj": "october 1914"}]}
+{"id": "ont_5_military_test_45", "triples": [{"sub": "andrei eberhardt", "rel": "date of birth", "obj": "9 november 1856"}, {"sub": "andrei eberhardt", "rel": "date of death", "obj": "19 april 1919"}]}
+{"id": "ont_5_military_test_46", "triples": [{"sub": "isoroku yamamoto", "rel": "conflict", "obj": "world war ii"}, {"sub": "isoroku yamamoto", "rel": "date of death", "obj": "april 18, 1943"}, {"sub": "isoroku yamamoto", "rel": "military rank", "obj": "marshal admiral"}, {"sub": "combined fleet", "rel": "part of", "obj": "imperial japanese navy"}, {"sub": "combined fleet", "rel": "conflict", "obj": "world war ii"}, {"sub": "isoroku yamamoto", "rel": "date of birth", "obj": "april 4, 1884"}, {"sub": "imperial japanese navy", "rel": "conflict", "obj": "world war ii"}]}
+{"id": "ont_5_military_test_47", "triples": [{"sub": "fredrik von otter", "rel": "military rank", "obj": "commodore"}]}
+{"id": "ont_5_military_test_48", "triples": [{"sub": "liu yuejun", "rel": "date of birth", "obj": "september 1954"}]}
+{"id": "ont_5_military_test_49", "triples": [{"sub": "philip ii of spain", "rel": "sibling", "obj": "john of austria"}, {"sub": "john of austria", "rel": "sibling", "obj": "philip ii of spain"}]}
+{"id": "ont_5_military_test_50", "triples": [{"sub": "otto von schrader", "rel": "date of death", "obj": "19 july 1945"}, {"sub": "nazi germany", "rel": "participant in", "obj": "world war ii"}, {"sub": "otto von schrader", "rel": "conflict", "obj": "world war ii"}, {"sub": "knight's cross of the iron cross", "rel": "country", "obj": "nazi germany"}, {"sub": "otto von schrader", "rel": "date of birth", "obj": "18 march 1888"}, {"sub": "otto von schrader", "rel": "award received", "obj": "knight's cross of the iron cross"}]}
+{"id": "ont_5_military_test_51", "triples": [{"sub": "nie li", "rel": "date of birth", "obj": "september 1930"}]}
+{"id": "ont_5_military_test_52", "triples": [{"sub": "iv\u00e3\u00a1n fyodorovich kruzensht\u00e3\u00a9rn", "rel": "date of death", "obj": "12 august 1846"}, {"sub": "iv\u00e3\u00a1n fyodorovich kruzensht\u00e3\u00a9rn", "rel": "date of birth", "obj": "10 october 1770"}]}
+{"id": "ont_5_military_test_53", "triples": [{"sub": "luigi amedeo, duke of the abruzzi", "rel": "conflict", "obj": "world war i"}]}
+{"id": "ont_5_military_test_54", "triples": [{"sub": "xing shizhong", "rel": "date of death", "obj": "11 march 2019"}, {"sub": "xing shizhong", "rel": "date of birth", "obj": "september 1938"}]}
+{"id": "ont_5_military_test_55", "triples": [{"sub": "jean georges fernand matton", "rel": "occupation", "obj": "flying ace"}]}
+{"id": "ont_5_military_test_56", "triples": [{"sub": "wang guanzhong", "rel": "date of birth", "obj": "february 1953"}]}
+{"id": "ont_5_military_test_57", "triples": [{"sub": "aharon haliva", "rel": "date of birth", "obj": "1967"}]}
+{"id": "ont_5_military_test_58", "triples": [{"sub": "ferdinand udvardy", "rel": "occupation", "obj": "flying ace"}]}
+{"id": "ont_5_military_test_59", "triples": [{"sub": "ruggero settimo", "rel": "military rank", "obj": "counter-admiral"}]}
+{"id": "ont_5_military_test_60", "triples": [{"sub": "nehemiah tamari", "rel": "date of death", "obj": "january 12, 1994"}, {"sub": "nehemiah tamari", "rel": "date of birth", "obj": "november 17, 1946"}]}
+{"id": "ont_5_military_test_61", "triples": [{"sub": "martin edward dempsey", "rel": "date of birth", "obj": "march 14, 1952"}, {"sub": "martin edward dempsey", "rel": "position held", "obj": "chairman of the joint chiefs of staff"}]}
+{"id": "ont_5_military_test_62", "triples": [{"sub": "abhakara kiartivongse", "rel": "military branch", "obj": "thai royal navy"}]}
+{"id": "ont_5_military_test_63", "triples": [{"sub": "royal navy", "rel": "country", "obj": "united kingdom"}]}
+{"id": "ont_5_military_test_64", "triples": [{"sub": "robert heinrich wagner", "rel": "work location", "obj": "konstanz"}]}
+{"id": "ont_5_military_test_65", "triples": [{"sub": "david howell petraeus", "rel": "date of birth", "obj": "november 7, 1952"}]}
+{"id": "ont_5_military_test_66", "triples": [{"sub": "mediterranean theatre", "rel": "part of", "obj": "world war ii"}, {"sub": "world war ii", "rel": "has part", "obj": "mediterranean theatre"}, {"sub": "yahya khan", "rel": "conflict", "obj": "world war ii"}]}
+{"id": "ont_5_military_test_67", "triples": [{"sub": "adolphe niel", "rel": "date of birth", "obj": "4 october 1802"}, {"sub": "adolphe niel", "rel": "date of death", "obj": "13 august 1869"}, {"sub": "adolphe niel", "rel": "award received", "obj": "marshal of france"}]}
+{"id": "ont_5_military_test_68", "triples": [{"sub": "army group center", "rel": "conflict", "obj": "attack on the soviet union"}]}
+{"id": "ont_5_military_test_69", "triples": [{"sub": "royal netherlands navy", "rel": "conflict", "obj": "world war ii"}]}
+{"id": "ont_5_military_test_70", "triples": [{"sub": "heinrich liebe", "rel": "military branch", "obj": "kriegsmarine"}]}
+{"id": "ont_5_military_test_71", "triples": [{"sub": "united states army air corps", "rel": "conflict", "obj": "world war ii"}]}
+{"id": "ont_5_military_test_72", "triples": [{"sub": "frank luke jr.", "rel": "award received", "obj": "medal of honor"}, {"sub": "frank luke jr.", "rel": "conflict", "obj": "world war i"}, {"sub": "eddie rickenbacker", "rel": "conflict", "obj": "world war i"}, {"sub": "frank luke jr.", "rel": "date of death", "obj": "september 29, 1918"}, {"sub": "frank luke jr.", "rel": "date of birth", "obj": "may 19, 1897"}]}
+{"id": "ont_5_military_test_73", "triples": [{"sub": "john paul jones", "rel": "military branch", "obj": "imperial russian navy"}]}
+{"id": "ont_5_military_test_74", "triples": [{"sub": "united states army", "rel": "conflict", "obj": "american civil war"}, {"sub": "union army", "rel": "conflict", "obj": "american civil war"}]}
+{"id": "ont_5_military_test_75", "triples": [{"sub": "1999 nato bombing of yugoslavia", "rel": "point in time", "obj": "1999"}]}
+{"id": "ont_5_military_test_76", "triples": [{"sub": "philippines", "rel": "instance of", "obj": "overseas colonies"}, {"sub": "guam", "rel": "instance of", "obj": "overseas colonies"}, {"sub": "puerto rico", "rel": "instance of", "obj": "overseas colonies"}]}
+{"id": "ont_5_military_test_77", "triples": [{"sub": "hosni mubarak", "rel": "military branch", "obj": "egyptian air force"}]}
+{"id": "ont_5_military_test_78", "triples": [{"sub": "operation typhoon", "rel": "start time", "obj": "october 1941"}]}
+{"id": "ont_5_military_test_79", "triples": [{"sub": "imperial russian navy", "rel": "conflict", "obj": "russo-japanese war"}, {"sub": "imperial russian navy", "rel": "conflict", "obj": "first world war"}]}
+{"id": "ont_5_military_test_80", "triples": [{"sub": "eugen meindl", "rel": "date of birth", "obj": "16 july 1892"}, {"sub": "luftwaffe", "rel": "conflict", "obj": "world war ii"}, {"sub": "nazi germany", "rel": "participant in", "obj": "world war ii"}, {"sub": "luftwaffe", "rel": "applies to jurisdiction", "obj": "nazi germany"}, {"sub": "eugen meindl", "rel": "conflict", "obj": "world war ii"}, {"sub": "eugen meindl", "rel": "date of death", "obj": "24 january 1951"}]}
+{"id": "ont_5_military_test_81", "triples": [{"sub": "abdul haris nasution", "rel": "date of death", "obj": "6 september 2000"}, {"sub": "abdul haris nasution", "rel": "date of birth", "obj": "3 december 1918"}]}
+{"id": "ont_5_military_test_82", "triples": [{"sub": "james vashon", "rel": "date of birth", "obj": "9 august 1742"}, {"sub": "admiral", "rel": "part of", "obj": "royal navy"}, {"sub": "james vashon", "rel": "date of death", "obj": "27 october 1827"}, {"sub": "james vashon", "rel": "military rank", "obj": "admiral"}]}
+{"id": "ont_5_military_test_83", "triples": [{"sub": "prince william", "rel": "sibling", "obj": "prince harry, duke of sussex"}, {"sub": "prince harry, duke of sussex", "rel": "sibling", "obj": "prince william"}]}
+{"id": "ont_5_military_test_84", "triples": [{"sub": "john franklin", "rel": "date of death", "obj": "11 june 1847"}, {"sub": "john franklin", "rel": "military rank", "obj": "rear-admiral"}, {"sub": "john franklin", "rel": "date of birth", "obj": "16 april 1786"}, {"sub": "rear-admiral", "rel": "part of", "obj": "royal navy"}, {"sub": "john franklin", "rel": "member of", "obj": "frgs"}]}
+{"id": "ont_5_military_test_85", "triples": [{"sub": "john brown gordon", "rel": "date of birth", "obj": "february 6, 1832"}, {"sub": "john brown gordon", "rel": "date of death", "obj": "january 9, 1904"}]}
+{"id": "ont_5_military_test_86", "triples": [{"sub": "heinrich lehmann-willenbrock", "rel": "date of birth", "obj": "11 december 1911"}, {"sub": "kriegsmarine", "rel": "conflict", "obj": "world war ii"}, {"sub": "nazi germany", "rel": "participant in", "obj": "world war ii"}, {"sub": "kriegsmarine", "rel": "country", "obj": "nazi germany"}, {"sub": "heinrich lehmann-willenbrock", "rel": "conflict", "obj": "world war ii"}, {"sub": "heinrich lehmann-willenbrock", "rel": "date of death", "obj": "18 april 1986"}]}
+{"id": "ont_5_military_test_87", "triples": [{"sub": "helmuth von pannwitz", "rel": "date of birth", "obj": "14 october 1898"}, {"sub": "helmuth von pannwitz", "rel": "conflict", "obj": "second world wars"}, {"sub": "helmuth von pannwitz", "rel": "date of death", "obj": "16 january 1947"}]}
+{"id": "ont_5_military_test_88", "triples": [{"sub": "hermann hoth", "rel": "date of birth", "obj": "12 april 1885"}, {"sub": "hermann hoth", "rel": "date of death", "obj": "25 january 1971"}, {"sub": "hermann hoth", "rel": "conflict", "obj": "world war ii"}]}
+{"id": "ont_5_military_test_89", "triples": [{"sub": "interwar period", "rel": "start time", "obj": "1930"}]}
+{"id": "ont_5_military_test_90", "triples": [{"sub": "united states air force", "rel": "conflict", "obj": "korean war"}, {"sub": "buzz aldrin", "rel": "conflict", "obj": "korean war"}]}
+{"id": "ont_5_military_test_92", "triples": [{"sub": "union army", "rel": "conflict", "obj": "american civil war"}, {"sub": "alexander schimmelfennig", "rel": "conflict", "obj": "american civil war"}, {"sub": "alexander schimmelfennig", "rel": "date of death", "obj": "september 5, 1865"}, {"sub": "alexander schimmelfennig", "rel": "date of birth", "obj": "july 20, 1824"}]}
+{"id": "ont_5_military_test_93", "triples": [{"sub": "imperial russian army", "rel": "country", "obj": "russia"}]}
+{"id": "ont_5_military_test_94", "triples": [{"sub": "special operations executive", "rel": "conflict", "obj": "world war ii"}, {"sub": "benjamin hodkinson cowburn", "rel": "conflict", "obj": "world war ii"}, {"sub": "benjamin hodkinson cowburn", "rel": "award received", "obj": "mc"}]}
+{"id": "ont_5_military_test_95", "triples": [{"sub": "hellenic army", "rel": "conflict", "obj": "world war ii"}, {"sub": "alexandros papagos", "rel": "conflict", "obj": "world war ii"}, {"sub": "alexandros papagos", "rel": "date of death", "obj": "4 october 1955"}, {"sub": "alexandros papagos", "rel": "conflict", "obj": "greek civil war"}, {"sub": "alexandros papagos", "rel": "date of birth", "obj": "9 december 1883"}]}
+{"id": "ont_5_military_test_96", "triples": [{"sub": "henry allingham", "rel": "conflict", "obj": "battle of jutland"}]}
+{"id": "ont_5_military_test_97", "triples": [{"sub": "william penn adair", "rel": "military branch", "obj": "confederate states army"}]}
+{"id": "ont_5_military_test_98", "triples": [{"sub": "tadamichi kuribayashi", "rel": "date of birth", "obj": "7 july 1891"}, {"sub": "imperial japanese army general staff", "rel": "part of", "obj": "imperial japanese army"}, {"sub": "tadamichi kuribayashi", "rel": "military rank", "obj": "general"}, {"sub": "imperial japanese army", "rel": "has part", "obj": "imperial japanese army general staff"}, {"sub": "tadamichi kuribayashi", "rel": "date of death", "obj": "26 march 1945"}]}
+{"id": "ont_5_military_test_99", "triples": [{"sub": "castelo branco", "rel": "position held", "obj": "president"}]}
+{"id": "ont_5_military_test_100", "triples": [{"sub": "royal marines", "rel": "conflict", "obj": "second world war"}, {"sub": "royal horse guards", "rel": "conflict", "obj": "second world war"}, {"sub": "evelyn waugh", "rel": "conflict", "obj": "second world war"}]}
+{"id": "ont_5_military_test_101", "triples": [{"sub": "royal australian air force", "rel": "conflict", "obj": "world war ii"}]}
+{"id": "ont_5_military_test_102", "triples": [{"sub": "stanislav yevgrafovich petrov", "rel": "date of death", "obj": "19 may 2017"}, {"sub": "stanislav yevgrafovich petrov", "rel": "date of birth", "obj": "7 september 1939"}]}
+{"id": "ont_5_military_test_103", "triples": [{"sub": "maximilian of hesse-kassel", "rel": "date of death", "obj": "8 may 1753"}, {"sub": "maximilian of hesse-kassel", "rel": "date of birth", "obj": "28 may 1689"}]}
+{"id": "ont_5_military_test_104", "triples": [{"sub": "huguenot", "rel": "country of origin", "obj": "french"}]}
+{"id": "ont_5_military_test_105", "triples": [{"sub": "marcos cesar pontes", "rel": "date of birth", "obj": "march 11, 1963"}]}
+{"id": "ont_5_military_test_106", "triples": [{"sub": "boxer rebellion", "rel": "part of", "obj": "russo-japanese war"}]}
+{"id": "ont_5_military_test_107", "triples": [{"sub": "luostari air base", "rel": "operator", "obj": "soviet air forces"}]}
+{"id": "ont_5_military_test_108", "triples": [{"sub": "bob kerrey", "rel": "conflict", "obj": "vietnam war"}, {"sub": "bob kerrey", "rel": "award received", "obj": "medal of honor"}]}
+{"id": "ont_5_military_test_109", "triples": [{"sub": "raymond mccreesh", "rel": "member of", "obj": "provisional irish republican army"}, {"sub": "raymond mccreesh", "rel": "date of death", "obj": "21 may 1981"}, {"sub": "raymond mccreesh", "rel": "date of birth", "obj": "25 february 1957"}]}
+{"id": "ont_5_military_test_110", "triples": [{"sub": "sergey gorshkov", "rel": "award received", "obj": "hero of the soviet union"}]}
+{"id": "ont_5_military_test_111", "triples": [{"sub": "lieutenant general", "rel": "military branch", "obj": "imperial russian army"}]}
+{"id": "ont_5_military_test_112", "triples": [{"sub": "tomoyuki yamashita", "rel": "conflict", "obj": "world war ii"}, {"sub": "tomoyuki yamashita", "rel": "date of birth", "obj": "8 november 1885"}, {"sub": "imperial japanese army", "rel": "conflict", "obj": "world war ii"}, {"sub": "tomoyuki yamashita", "rel": "date of death", "obj": "23 february 1946"}]}
+{"id": "ont_5_military_test_113", "triples": [{"sub": "grace brewster murray hopper", "rel": "date of birth", "obj": "december 9, 1906"}, {"sub": "grace brewster murray hopper", "rel": "date of death", "obj": "january 1, 1992"}]}
+{"id": "ont_5_military_test_114", "triples": [{"sub": "imperial russian army", "rel": "conflict", "obj": "world war i"}]}
+{"id": "ont_5_military_test_115", "triples": [{"sub": "pakistan army", "rel": "conflict", "obj": "afghan civil war"}]}
+{"id": "ont_5_military_test_116", "triples": [{"sub": "battle of cowpens", "rel": "participant", "obj": "continental army"}]}
+{"id": "ont_5_military_test_117", "triples": [{"sub": "helmuth von moltke the elder", "rel": "military branch", "obj": "prussian army"}]}
+{"id": "ont_5_military_test_118", "triples": [{"sub": "hans ludwig raimund von koester", "rel": "date of death", "obj": "21 february 1928"}, {"sub": "hans ludwig raimund von koester", "rel": "date of birth", "obj": "29 april 1844"}]}
+{"id": "ont_5_military_test_119", "triples": [{"sub": "franz conrad von h\u00f6tzendorf", "rel": "military branch", "obj": "austro-hungarian army"}]}
+{"id": "ont_5_military_test_120", "triples": [{"sub": "prussian army", "rel": "country", "obj": "prussian"}]}
+{"id": "ont_5_military_test_121", "triples": [{"sub": "united states marine corps", "rel": "conflict", "obj": "world war ii"}, {"sub": "battle of iwo jima", "rel": "start time", "obj": "february 19, 1945"}, {"sub": "battle of iwo jima", "rel": "conflict", "obj": "world war ii"}, {"sub": "john edward chevigny", "rel": "date of death", "obj": "february 19, 1945"}, {"sub": "john edward chevigny", "rel": "date of birth", "obj": "august 14, 1906"}, {"sub": "john edward chevigny", "rel": "sport", "obj": "american football"}, {"sub": "john edward chevigny", "rel": "conflict", "obj": "world war ii"}]}
+{"id": "ont_5_military_test_122", "triples": [{"sub": "triton", "rel": "dissolved, abolished or demolished date", "obj": "15 march 1943"}]}
+{"id": "ont_5_military_test_123", "triples": [{"sub": "royal warwickshire regiment", "rel": "conflict", "obj": "first world war"}]}
+{"id": "ont_5_military_test_124", "triples": [{"sub": "james b. terrill", "rel": "date of death", "obj": "may 30, 1864"}]}
+{"id": "ont_5_military_test_125", "triples": [{"sub": "josef miner", "rel": "conflict", "obj": "world war ii"}]}
+{"id": "ont_5_military_test_126", "triples": [{"sub": "dan bullock", "rel": "date of birth", "obj": "december 21, 1953"}, {"sub": "dan bullock", "rel": "conflict", "obj": "vietnam war"}, {"sub": "dan bullock", "rel": "date of death", "obj": "june 7, 1969"}, {"sub": "united states marine", "rel": "conflict", "obj": "vietnam war"}]}
+{"id": "ont_5_military_test_127", "triples": [{"sub": "sheldon theo french", "rel": "date of death", "obj": "october 9, 1942"}]}
+{"id": "ont_5_military_test_128", "triples": [{"sub": "grigori nikitin", "rel": "conflict", "obj": "world war i"}]}
+{"id": "ont_5_military_test_129", "triples": [{"sub": "sergeant", "rel": "followed by", "obj": "sergeant"}]}
+{"id": "ont_5_military_test_130", "triples": [{"sub": "bill genaust", "rel": "date of death", "obj": "nine days later"}]}
+{"id": "ont_5_military_test_131", "triples": [{"sub": "charles courtenay tew", "rel": "conflict", "obj": "american civil war"}, {"sub": "battle of antietam", "rel": "part of", "obj": "american civil war"}, {"sub": "charles courtenay tew", "rel": "date of birth", "obj": "october 17, 1827"}, {"sub": "charles courtenay tew", "rel": "date of death", "obj": "september 17, 1862"}, {"sub": "battle of antietam", "rel": "point in time", "obj": "september 17, 1862"}, {"sub": "confederate states army", "rel": "conflict", "obj": "american civil war"}, {"sub": "charles courtenay tew", "rel": "military branch", "obj": "confederate states army"}]}
+{"id": "ont_5_military_test_132", "triples": [{"sub": "robert a. little", "rel": "military branch", "obj": "raf"}]}
+{"id": "ont_5_military_test_133", "triples": [{"sub": "united states navy", "rel": "conflict", "obj": "world war ii"}, {"sub": "harry l. corl", "rel": "conflict", "obj": "world war ii"}, {"sub": "harry l. corl", "rel": "award received", "obj": "navy cross"}]}
+{"id": "ont_5_military_test_134", "triples": [{"sub": "guadalcanal campaign", "rel": "location", "obj": "guadalcanal"}]}
+{"id": "ont_5_military_test_135", "triples": [{"sub": "tibor rubin", "rel": "award received", "obj": "medal of honor"}, {"sub": "tibor rubin", "rel": "conflict", "obj": "korean war"}]}
+{"id": "ont_5_military_test_136", "triples": [{"sub": "ulus-kert", "rel": "located in the administrative territorial entity", "obj": "chechnya"}]}
+{"id": "ont_5_military_test_137", "triples": [{"sub": "battle of wilson's creek", "rel": "part of", "obj": "american civil war"}, {"sub": "richard hanson weightman", "rel": "conflict", "obj": "american civil war"}, {"sub": "missouri state guard", "rel": "conflict", "obj": "american civil war"}]}
+{"id": "ont_5_military_test_138", "triples": [{"sub": "villadose", "rel": "point in time", "obj": "24 april 1945"}]}
+{"id": "ont_5_military_test_139", "triples": [{"sub": "77th division", "rel": "conflict", "obj": "world war i"}, {"sub": "harold ernest goettler", "rel": "conflict", "obj": "world war i"}, {"sub": "harold ernest goettler", "rel": "date of death", "obj": "october 6, 1918"}, {"sub": "harold ernest goettler", "rel": "date of birth", "obj": "july 21, 1890"}]}
+{"id": "ont_5_military_test_140", "triples": [{"sub": "daniel paul matthews", "rel": "military branch", "obj": "united states marine corps"}, {"sub": "daniel paul matthews", "rel": "date of birth", "obj": "december 31, 1931"}, {"sub": "daniel paul matthews", "rel": "award received", "obj": "medal of honor"}, {"sub": "daniel paul matthews", "rel": "date of death", "obj": "march 28, 1953"}]}
+{"id": "ont_5_military_test_141", "triples": [{"sub": "hero of the soviet union", "rel": "country", "obj": "soviet"}]}
+{"id": "ont_5_military_test_142", "triples": [{"sub": "tamon yamaguchi", "rel": "conflict", "obj": "battle of midway"}, {"sub": "uss\u00e2 enterprise", "rel": "conflict", "obj": "battle of midway"}]}
+{"id": "ont_5_military_test_143", "triples": [{"sub": "john edward kilmer", "rel": "conflict", "obj": "korean war"}, {"sub": "john edward kilmer", "rel": "date of birth", "obj": "august 15, 1930"}, {"sub": "united states navy", "rel": "conflict", "obj": "korean war"}, {"sub": "john edward kilmer", "rel": "date of death", "obj": "august 13, 1952"}, {"sub": "battle of bunker hill (1952)", "rel": "part of", "obj": "korean war"}]}
+{"id": "ont_5_military_test_144", "triples": [{"sub": "francis ledwidge", "rel": "conflict", "obj": "world war i"}, {"sub": "battle of passchendaele", "rel": "conflict", "obj": "world war i"}]}
+{"id": "ont_5_military_test_145", "triples": [{"sub": "naval battle of guadalcanal", "rel": "end time", "obj": "13 november 1942"}]}
+{"id": "ont_5_military_test_146", "triples": [{"sub": "michael murach", "rel": "conflict", "obj": "world war ii"}]}
+{"id": "ont_5_military_test_147", "triples": [{"sub": "shamsulla aliyev", "rel": "place of death", "obj": "kerch"}]}
+{"id": "ont_5_military_test_148", "triples": [{"sub": "james b. mcpherson", "rel": "military branch", "obj": "union"}]}
+{"id": "ont_5_military_test_149", "triples": [{"sub": "jack llewellyn knight", "rel": "conflict", "obj": "world war ii"}, {"sub": "jack llewellyn knight", "rel": "date of birth", "obj": "may 29, 1917"}, {"sub": "jack llewellyn knight", "rel": "date of death", "obj": "february 2, 1945"}, {"sub": "american national guard", "rel": "conflict", "obj": "world war ii"}]}
+{"id": "ont_5_military_test_150", "triples": [{"sub": "army of the potomac", "rel": "conflict", "obj": "civil war"}]}
+{"id": "ont_5_military_test_151", "triples": [{"sub": "john m. jones", "rel": "conflict", "obj": "battle of gettysburg"}]}
+{"id": "ont_5_military_test_152", "triples": [{"sub": "heinz jost", "rel": "replaces", "obj": "franz walter stahlecker"}]}
+{"id": "ont_5_military_test_153", "triples": [{"sub": "alexander kolchak", "rel": "member of political party", "obj": "white army"}]}
+{"id": "ont_5_military_test_154", "triples": [{"sub": "samuel w. preston", "rel": "conflict", "obj": "second battle of fort fisher"}]}
+{"id": "ont_5_military_test_155", "triples": [{"sub": "lesley j. mcnair", "rel": "conflict", "obj": "world war ii"}]}
+{"id": "ont_5_military_test_156", "triples": [{"sub": "richard edward kraus", "rel": "conflict", "obj": "world war ii"}, {"sub": "battle of peleliu", "rel": "point in time", "obj": "october 3, 1944"}, {"sub": "richard edward kraus", "rel": "date of birth", "obj": "november 24, 1925"}, {"sub": "united states marine", "rel": "conflict", "obj": "world war ii"}, {"sub": "richard edward kraus", "rel": "date of death", "obj": "october 3, 1944"}, {"sub": "battle of peleliu", "rel": "part of", "obj": "world war ii"}]}
+{"id": "ont_5_military_test_157", "triples": [{"sub": "donald ralph walters", "rel": "date of birth", "obj": "september 16, 1969"}, {"sub": "nasiriyah", "rel": "country", "obj": "iraq"}, {"sub": "jessica lynch", "rel": "date of death", "obj": "march 23, 2003"}, {"sub": "donald ralph walters", "rel": "date of death", "obj": "march 23, 2003"}]}
+{"id": "ont_5_military_test_158", "triples": [{"sub": "robert allen owens", "rel": "date of death", "obj": "november 1, 1943"}, {"sub": "world war ii", "rel": "has part", "obj": "pacific campaign"}, {"sub": "robert allen owens", "rel": "date of birth", "obj": "september 13, 1920"}, {"sub": "pacific campaign", "rel": "part of", "obj": "world war ii"}, {"sub": "united states marine", "rel": "conflict", "obj": "world war ii"}, {"sub": "robert allen owens", "rel": "conflict", "obj": "world war ii"}]}
+{"id": "ont_5_military_test_159", "triples": [{"sub": "stonewall jackson", "rel": "conflict", "obj": "battle of antietam"}]}
+{"id": "ont_5_military_test_160", "triples": [{"sub": "john g. sproston", "rel": "place of death", "obj": "florida"}]}
+{"id": "ont_5_military_test_161", "triples": [{"sub": "battle of debrecen", "rel": "point in time", "obj": "october of that year"}]}
+{"id": "ont_5_military_test_162", "triples": [{"sub": "howard e. woodford", "rel": "country of citizenship", "obj": "filipino"}]}
+{"id": "ont_5_military_test_163", "triples": [{"sub": "rupert lonsdale", "rel": "conflict", "obj": "prisoner of war"}]}
+{"id": "ont_5_military_test_164", "triples": [{"sub": "john basilone", "rel": "date of death", "obj": "february 1945"}]}
+{"id": "ont_5_military_test_165", "triples": [{"sub": "abdullayev", "rel": "date of death", "obj": "four months later"}]}
+{"id": "ont_5_military_test_166", "triples": [{"sub": "special activities division", "rel": "parent organization", "obj": "cia"}, {"sub": "united states marine corps", "rel": "conflict", "obj": "operation iraqi freedom"}, {"sub": "douglas alexander zembiec", "rel": "date of death", "obj": "may 11, 2007"}, {"sub": "douglas alexander zembiec", "rel": "conflict", "obj": "operation iraqi freedom"}, {"sub": "douglas alexander zembiec", "rel": "date of birth", "obj": "april 14, 1973"}]}
+{"id": "ont_5_military_test_167", "triples": [{"sub": "john raymond rice", "rel": "date of death", "obj": "september 6, 1950"}, {"sub": "john raymond rice", "rel": "date of birth", "obj": "april 25, 1914"}]}
+{"id": "ont_5_military_test_168", "triples": [{"sub": "oliver mitchell", "rel": "date of death", "obj": "1942"}]}
+{"id": "ont_5_military_test_169", "triples": [{"sub": "franklin runyon sousley", "rel": "date of birth", "obj": "september 19, 1925"}, {"sub": "franklin runyon sousley", "rel": "date of death", "obj": "march 21, 1945"}, {"sub": "battle of iwo jima", "rel": "conflict", "obj": "world war ii"}, {"sub": "united states marine", "rel": "conflict", "obj": "world war ii"}, {"sub": "franklin runyon sousley", "rel": "conflict", "obj": "world war ii"}]}
+{"id": "ont_5_military_test_170", "triples": [{"sub": "konstantin pankov", "rel": "date of death", "obj": "1942"}]}
+{"id": "ont_5_military_test_171", "triples": [{"sub": "denis avey", "rel": "date of birth", "obj": "11 january 1919"}, {"sub": "denis avey", "rel": "date of death", "obj": "16 july 2015"}]}
+{"id": "ont_5_military_test_172", "triples": [{"sub": "battle of peachtree creek", "rel": "part of", "obj": "atlanta campaign"}]}
+{"id": "ont_5_military_test_173", "triples": [{"sub": "william cavendish, marquess of hartington", "rel": "conflict", "obj": "second world war"}, {"sub": "coldstream guards", "rel": "conflict", "obj": "second world war"}]}
+{"id": "ont_5_military_test_174", "triples": [{"sub": "mikhail kirponos", "rel": "date of death", "obj": "20 september 1941"}]}
+{"id": "ont_5_military_test_175", "triples": [{"sub": "richard david de wert", "rel": "date of death", "obj": "april 5, 1951"}, {"sub": "united states navy", "rel": "conflict", "obj": "korean war"}, {"sub": "richard david de wert", "rel": "conflict", "obj": "korean war"}, {"sub": "richard david de wert", "rel": "date of birth", "obj": "november 17, 1931"}]}
+{"id": "ont_5_military_test_176", "triples": [{"sub": "donald w. wolf", "rel": "conflict", "obj": "battle of guadalcanal"}]}
+{"id": "ont_5_military_test_177", "triples": [{"sub": "samad abdullayev", "rel": "date of death", "obj": "four days later"}]}
+{"id": "ont_5_military_test_178", "triples": [{"sub": "jabron hashmi", "rel": "date of death", "obj": "1 july 2006"}, {"sub": "jabron hashmi", "rel": "military rank", "obj": "lance corporal"}, {"sub": "jabron hashmi", "rel": "date of birth", "obj": "23 april 1982"}]}
+{"id": "ont_5_military_test_179", "triples": [{"sub": "james m. scribner", "rel": "conflict", "obj": "world war ii"}, {"sub": "united states navy", "rel": "conflict", "obj": "world war ii"}, {"sub": "james m. scribner", "rel": "date of death", "obj": "1941"}, {"sub": "james m. scribner", "rel": "award received", "obj": "air medal"}]}
+{"id": "ont_5_military_test_180", "triples": [{"sub": "king's norton", "rel": "located in the administrative territorial entity", "obj": "birmingham"}]}
+{"id": "ont_5_military_test_181", "triples": [{"sub": "benelli argo el", "rel": "manufacturer", "obj": "benelli armi spa"}]}
+{"id": "ont_5_military_test_182", "triples": [{"sub": "aam-n-5 meteor", "rel": "operator", "obj": "united states navy"}, {"sub": "aam-n-5 meteor", "rel": "manufacturer", "obj": "massachusetts institute of technology"}, {"sub": "aam-n-5 meteor", "rel": "manufacturer", "obj": "bell aircraft"}, {"sub": "aam-n-5 meteor", "rel": "instance of", "obj": "air-to-air missile"}]}
+{"id": "ont_5_military_test_183", "triples": [{"sub": "obuzierul krupp", "rel": "service entry", "obj": "1912"}]}
+{"id": "ont_5_military_test_184", "triples": [{"sub": "remington woodsmaster model 740", "rel": "manufacturer", "obj": "remington arms"}]}
+{"id": "ont_5_military_test_185", "triples": [{"sub": "uralvagonzavod", "rel": "country", "obj": "russia"}, {"sub": "nizhny tagil", "rel": "country", "obj": "russia"}]}
+{"id": "ont_5_military_test_186", "triples": [{"sub": "convair", "rel": "parent organization", "obj": "general dynamics corporation"}, {"sub": "general dynamics corporation", "rel": "subsidiary", "obj": "convair"}]}
+{"id": "ont_5_military_test_187", "triples": [{"sub": "stridsvagn m / 42", "rel": "manufacturer", "obj": "ab landsverk"}]}
+{"id": "ont_5_military_test_188", "triples": [{"sub": "area u19ac", "rel": "located in the administrative territorial entity", "obj": "nevada"}]}
+{"id": "ont_5_military_test_189", "triples": [{"sub": "m-71", "rel": "instance of", "obj": "towed howitzer"}, {"sub": "m-71", "rel": "manufacturer", "obj": "soltam systems"}]}
+{"id": "ont_5_military_test_190", "triples": [{"sub": "talha", "rel": "country of origin", "obj": "pakistan"}]}
+{"id": "ont_5_military_test_191", "triples": [{"sub": "type 38 10 cm cannon", "rel": "manufacturer", "obj": "krupp"}]}
+{"id": "ont_5_military_test_192", "triples": [{"sub": "t-55agm", "rel": "manufacturer", "obj": "kharkiv morozov machine building design bureau"}, {"sub": "t-54/t-55", "rel": "manufacturer", "obj": "kharkiv morozov machine building design bureau"}]}
+{"id": "ont_5_military_test_193", "triples": [{"sub": "tigr", "rel": "manufacturer", "obj": "gaz"}]}
+{"id": "ont_5_military_test_194", "triples": [{"sub": "mbt-2000", "rel": "manufacturer", "obj": "norinco"}]}
+{"id": "ont_5_military_test_195", "triples": [{"sub": "daewoo precision industries k1/k1a", "rel": "manufacturer", "obj": "daewoo precision industries"}]}
+{"id": "ont_5_military_test_196", "triples": [{"sub": "fgm-172 sraw", "rel": "manufacturer", "obj": "lockheed martin"}]}
+{"id": "ont_5_military_test_197", "triples": [{"sub": "swarm remote weapon system", "rel": "manufacturer", "obj": "thales group"}, {"sub": "swarm remote weapon system", "rel": "instance of", "obj": "remote weapon system"}]}
+{"id": "ont_5_military_test_198", "triples": [{"sub": "benelli m4 super 90", "rel": "manufacturer", "obj": "benelli armi spa"}]}
+{"id": "ont_5_military_test_199", "triples": [{"sub": "land systems omc", "rel": "parent organization", "obj": "bae systems"}, {"sub": "rg41", "rel": "country of origin", "obj": "south africa"}, {"sub": "bae systems", "rel": "subsidiary", "obj": "land systems omc"}, {"sub": "rg41", "rel": "instance of", "obj": "armored fighting vehicle"}, {"sub": "rg41", "rel": "manufacturer", "obj": "land systems omc"}]}
+{"id": "ont_5_military_test_200", "triples": [{"sub": "btr-t", "rel": "manufacturer", "obj": "omsktransmash"}, {"sub": "btr-t", "rel": "instance of", "obj": "infantry combat vehicle"}]}
+{"id": "ont_5_military_test_201", "triples": [{"sub": "mgm-166 losat", "rel": "manufacturer", "obj": "lockheed martin"}]}
+{"id": "ont_5_military_test_202", "triples": [{"sub": "hamas", "rel": "military branch", "obj": "izz ad-din al-qassam brigades"}, {"sub": "izz ad-din al-qassam brigades", "rel": "part of", "obj": "hamas"}]}
+{"id": "ont_5_military_test_203", "triples": [{"sub": "hornady", "rel": "founded by", "obj": "mitch mittelstaedt"}]}
+{"id": "ont_5_military_test_204", "triples": [{"sub": "50r6 vityaz", "rel": "manufacturer", "obj": "gskb almaz-antey"}]}
+{"id": "ont_5_military_test_205", "triples": [{"sub": "rg-32 scout", "rel": "manufacturer", "obj": "bae systems land systems south africa"}]}
+{"id": "ont_5_military_test_206", "triples": [{"sub": "umtas", "rel": "manufacturer", "obj": "roketsan"}, {"sub": "umtas", "rel": "instance of", "obj": "air-to-surface anti-tank missile"}]}
+{"id": "ont_5_military_test_207", "triples": [{"sub": "marlin firearms co.", "rel": "headquarters location", "obj": "new haven, connecticut"}]}
+{"id": "ont_5_military_test_208", "triples": [{"sub": "vidhwansak", "rel": "instance of", "obj": "sniper rifle"}, {"sub": "vidhwansak", "rel": "manufacturer", "obj": "ordnance factory tiruchirappalli"}]}
+{"id": "ont_5_military_test_209", "triples": [{"sub": "defence research and development organisation", "rel": "country", "obj": "india"}]}
+{"id": "ont_5_military_test_211", "triples": [{"sub": "australian defence industries", "rel": "replaced by", "obj": "thales australia"}, {"sub": "thales australia", "rel": "replaces", "obj": "australian defence industries"}]}
+{"id": "ont_5_military_test_214", "triples": [{"sub": "tai h\u00fcrku\u015f", "rel": "manufacturer", "obj": "turkish aerospace industries"}]}
+{"id": "ont_5_military_test_215", "triples": [{"sub": "bionix afv", "rel": "manufacturer", "obj": "st kinetics"}]}
+{"id": "ont_5_military_test_217", "triples": [{"sub": "gskb almaz-antey", "rel": "subsidiary", "obj": "mniire altair"}, {"sub": "mniire altair", "rel": "parent organization", "obj": "gskb almaz-antey"}]}
+{"id": "ont_5_military_test_219", "triples": [{"sub": "rg-35", "rel": "country of origin", "obj": "south africa"}]}
+{"id": "ont_5_military_test_220", "triples": [{"sub": "lieutenant general", "rel": "opposite of", "obj": "major general"}, {"sub": "major general", "rel": "opposite of", "obj": "lieutenant general"}]}
+{"id": "ont_5_military_test_221", "triples": [{"sub": "corps general", "rel": "followed by", "obj": "lieutenant colonel general"}]}
+{"id": "ont_5_military_test_222", "triples": [{"sub": "united kingdom", "rel": "member of", "obj": "united nations"}, {"sub": "pakistan", "rel": "member of", "obj": "united nations"}, {"sub": "india", "rel": "member of", "obj": "united nations"}, {"sub": "united states", "rel": "member of", "obj": "united nations"}, {"sub": "australia", "rel": "member of", "obj": "united nations"}, {"sub": "united arab emirates", "rel": "member of", "obj": "united nations"}, {"sub": "canada", "rel": "member of", "obj": "united nations"}, {"sub": "russia", "rel": "member of", "obj": "united nations"}]}
+{"id": "ont_5_military_test_223", "triples": [{"sub": "united kingdom", "rel": "member of", "obj": "united nations"}, {"sub": "pakistan", "rel": "member of", "obj": "united nations"}, {"sub": "malaysia", "rel": "member of", "obj": "united nations"}, {"sub": "european union", "rel": "diplomatic relation", "obj": "united nations"}, {"sub": "china", "rel": "member of", "obj": "united nations"}, {"sub": "kazakhstan", "rel": "member of", "obj": "united nations"}, {"sub": "united arab emirates", "rel": "member of", "obj": "united nations"}, {"sub": "turkey", "rel": "member of", "obj": "united nations"}, {"sub": "kyrgyzstan", "rel": "member of", "obj": "united nations"}, {"sub": "russia", "rel": "member of", "obj": "united nations"}]}
+{"id": "ont_5_military_test_224", "triples": [{"sub": "real irish republican army", "rel": "country", "obj": "republic of ireland"}]}
+{"id": "ont_5_military_test_227", "triples": [{"sub": "terrorism act 2000", "rel": "country", "obj": "united kingdom"}]}
+{"id": "ont_5_military_test_228", "triples": [{"sub": "aero a.200", "rel": "instance of", "obj": "monoplane"}]}
+{"id": "ont_5_military_test_229", "triples": [{"sub": "ab-4", "rel": "operator", "obj": "imperial japanese navy"}]}
+{"id": "ont_5_military_test_230", "triples": [{"sub": "levasseur pl.4", "rel": "country", "obj": "france"}]}
+{"id": "ont_5_military_unseen_test_1", "triples": [{"sub": "taizhong", "rel": "military rank", "obj": "admiral"}]}
+{"id": "ont_5_military_unseen_test_2", "triples": [{"sub": "vasily zavoyko", "rel": "position held", "obj": "commandant"}]}
+{"id": "ont_5_military_unseen_test_3", "triples": [{"sub": "li tianyou", "rel": "military branch", "obj": "royal navy"}]}
+{"id": "ont_5_military_unseen_test_4", "triples": [{"sub": "nehemiah tamari", "rel": "instance of", "obj": "infantry"}]}
+{"id": "ont_5_military_unseen_test_5", "triples": [{"sub": "sergey gorshkov", "rel": "conflict", "obj": "world war ii"}]}
+{"id": "ont_5_military_unseen_test_6", "triples": [{"sub": "bob kerrey", "rel": "conflict", "obj": "first world war"}]}
+{"id": "ont_5_military_unseen_test_7", "triples": [{"sub": "benelli armi spa", "rel": "country", "obj": "italian"}]}
+{"id": "ont_5_military_unseen_test_8", "triples": [{"sub": "soltam m-71", "rel": "manufacturer", "obj": "bell aircraft"}, {"sub": "soltam m-71", "rel": "instance of", "obj": "air-to-air missile"}]}
+{"id": "ont_5_military_unseen_test_9", "triples": [{"sub": "lieutenant general", "rel": "follows", "obj": "colonel general"}, {"sub": "colonel general", "rel": "followed by", "obj": "lieutenant general"}]}
+{"id": "ont_5_military_unseen_test_10", "triples": [{"sub": "colonel general", "rel": "followed by", "obj": "major general"}, {"sub": "major general", "rel": "follows", "obj": "colonel general"}]}
+{"id": "ont_5_military_unseen_test_11", "triples": [{"sub": "designated as terrorist", "rel": "country", "obj": "canada"}]}
+{"id": "ont_5_military_unseen_test_12", "triples": [{"sub": "designated as terrorist", "rel": "country", "obj": "kyrgyzstan"}]}
+{"id": "ont_5_military_unseen_test_13", "triples": [{"sub": "aero a.400", "rel": "instance of", "obj": "biplane"}]}
+{"id": "ont_5_military_unseen_test_14", "triples": [{"sub": "ab-7", "rel": "operator", "obj": "imperial japanese navy"}]}

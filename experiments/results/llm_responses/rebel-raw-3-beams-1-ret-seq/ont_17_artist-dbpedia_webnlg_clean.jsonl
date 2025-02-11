@@ -1,0 +1,84 @@
+{"id": "ont_17_artist_test_1", "triples": [{"sub": "new wave music", "rel": "instance of", "obj": "music genre"}, {"sub": "indie rock", "rel": "instance of", "obj": "music genre"}]}
+{"id": "ont_17_artist_test_2", "triples": [{"sub": "aaron deer", "rel": "genre", "obj": "indie rock"}]}
+{"id": "ont_17_artist_test_3", "triples": [{"sub": "aaron deer", "rel": "genre", "obj": "indie rock"}]}
+{"id": "ont_17_artist_test_4", "triples": [{"sub": "indie rock", "rel": "instance of", "obj": "musical genre"}]}
+{"id": "ont_17_artist_test_5", "triples": [{"sub": "garage rock", "rel": "instance of", "obj": "music genre"}, {"sub": "indie rock", "rel": "instance of", "obj": "music genre"}]}
+{"id": "ont_17_artist_test_6", "triples": [{"sub": "aaron deer", "rel": "genre", "obj": "indie rock"}, {"sub": "aaron deer", "rel": "instrument", "obj": "guitar"}]}
+{"id": "ont_17_artist_test_7", "triples": [{"sub": "aaron deer", "rel": "genre", "obj": "indie rock"}]}
+{"id": "ont_17_artist_test_8", "triples": [{"sub": "aaron deer", "rel": "genre", "obj": "indie rock"}]}
+{"id": "ont_17_artist_test_9", "triples": [{"sub": "aaron deer", "rel": "genre", "obj": "indie rock"}]}
+{"id": "ont_17_artist_test_10", "triples": [{"sub": "aaron deer", "rel": "genre", "obj": "indie rock"}]}
+{"id": "ont_17_artist_test_11", "triples": [{"sub": "aaron deer", "rel": "genre", "obj": "indie rock"}]}
+{"id": "ont_17_artist_test_12", "triples": [{"sub": "aaron deer", "rel": "genre", "obj": "indie rock"}]}
+{"id": "ont_17_artist_test_13", "triples": [{"sub": "aaron deer", "rel": "place of birth", "obj": "indianapolis, indiana"}]}
+{"id": "ont_17_artist_test_14", "triples": [{"sub": "aaron deer", "rel": "place of birth", "obj": "indianapolis"}]}
+{"id": "ont_17_artist_test_15", "triples": [{"sub": "agust\u00edn barboza", "rel": "date of birth", "obj": "5th, may 1913"}]}
+{"id": "ont_17_artist_test_16", "triples": [{"sub": "agustin barboza", "rel": "place of birth", "obj": "asunci\u00f3n"}]}
+{"id": "ont_17_artist_test_17", "triples": [{"sub": "paraguay", "rel": "capital", "obj": "asuncion"}, {"sub": "agustin barboza", "rel": "place of birth", "obj": "asuncion"}, {"sub": "agustin barboza", "rel": "record label", "obj": "philips records"}, {"sub": "asuncion", "rel": "country", "obj": "paraguay"}]}
+{"id": "ont_17_artist_test_18", "triples": [{"sub": "paraguay", "rel": "capital", "obj": "asuncion"}, {"sub": "asuncion", "rel": "country", "obj": "paraguay"}]}
+{"id": "ont_17_artist_test_19", "triples": [{"sub": "paraguay", "rel": "capital", "obj": "asuncion"}, {"sub": "asuncion", "rel": "country", "obj": "paraguay"}]}
+{"id": "ont_17_artist_test_20", "triples": [{"sub": "agustin barboza", "rel": "place of birth", "obj": "asuncion"}]}
+{"id": "ont_17_artist_test_21", "triples": [{"sub": "al anderson", "rel": "date of birth", "obj": "march 13th, 1947"}]}
+{"id": "ont_17_artist_test_22", "triples": [{"sub": "the wildweeds", "rel": "has part", "obj": "al anderson"}]}
+{"id": "ont_17_artist_test_23", "triples": [{"sub": "al anderson", "rel": "place of birth", "obj": "windsor, connecticut"}]}
+{"id": "ont_17_artist_test_24", "triples": [{"sub": "al anderson", "rel": "genre", "obj": "country music"}]}
+{"id": "ont_17_artist_test_25", "triples": [{"sub": "the wildweeds", "rel": "genre", "obj": "rock music"}]}
+{"id": "ont_17_artist_test_26", "triples": [{"sub": "nrbq", "rel": "genre", "obj": "rock music"}]}
+{"id": "ont_17_artist_test_27", "triples": [{"sub": "nrbq", "rel": "genre", "obj": "country music"}]}
+{"id": "ont_17_artist_test_28", "triples": [{"sub": "nrbq", "rel": "genre", "obj": "rock music"}]}
+{"id": "ont_17_artist_test_29", "triples": [{"sub": "the wildweeds", "rel": "has part", "obj": "al anderson"}]}
+{"id": "ont_17_artist_test_30", "triples": [{"sub": "nrbq", "rel": "has part", "obj": "al anderson"}]}
+{"id": "ont_17_artist_test_31", "triples": [{"sub": "alan frew", "rel": "genre", "obj": "rock music"}]}
+{"id": "ont_17_artist_test_32", "triples": [{"sub": "the blues", "rel": "performer", "obj": "alan frew"}]}
+{"id": "ont_17_artist_test_33", "triples": [{"sub": "alan frew", "rel": "genre", "obj": "rock music"}]}
+{"id": "ont_17_artist_test_34", "triples": [{"sub": "alan frew", "rel": "genre", "obj": "folk music"}]}
+{"id": "ont_17_artist_test_35", "triples": [{"sub": "alan frew", "rel": "country of citizenship", "obj": "canada"}, {"sub": "newmarket, ontario", "rel": "country", "obj": "canada"}]}
+{"id": "ont_17_artist_test_36", "triples": [{"sub": "alan frew", "rel": "member of", "obj": "glass tiger"}]}
+{"id": "ont_17_artist_test_37", "triples": [{"sub": "alan frew", "rel": "work period (start)", "obj": "1983"}]}
+{"id": "ont_17_artist_test_38", "triples": [{"sub": "montevideo", "rel": "country", "obj": "uruguay"}, {"sub": "alfredo zitarrosa", "rel": "place of death", "obj": "montevideo"}, {"sub": "alfredo zitarrosa", "rel": "country of citizenship", "obj": "uruguay"}, {"sub": "uruguay", "rel": "capital", "obj": "montevideo"}]}
+{"id": "ont_17_artist_test_39", "triples": [{"sub": "alfredo zitarrosa", "rel": "record label", "obj": "odeon records"}]}
+{"id": "ont_17_artist_test_40", "triples": [{"sub": "alfredo zitarrosa", "rel": "record label", "obj": "orfeo"}]}
+{"id": "ont_17_artist_test_41", "triples": [{"sub": "alfredo zitarrosa", "rel": "record label", "obj": "odeon records"}]}
+{"id": "ont_17_artist_test_42", "triples": [{"sub": "alfredo zitarrosa", "rel": "record label", "obj": "odeon records"}]}
+{"id": "ont_17_artist_test_43", "triples": [{"sub": "alfredo zitarrosa", "rel": "record label", "obj": "rca records"}]}
+{"id": "ont_17_artist_test_44", "triples": [{"sub": "alfredo zitarrosa", "rel": "record label", "obj": "rca records"}]}
+{"id": "ont_17_artist_test_45", "triples": [{"sub": "christian alternative rock", "rel": "subclass of", "obj": "alternative rock"}, {"sub": "nu metal", "rel": "subclass of", "obj": "alternative rock"}, {"sub": "andrew white", "rel": "genre", "obj": "alternative rock"}]}
+{"id": "ont_17_artist_test_46", "triples": [{"sub": "nu metal", "rel": "subclass of", "obj": "alternative rock"}]}
+{"id": "ont_17_artist_test_47", "triples": [{"sub": "andrew white", "rel": "genre", "obj": "alternative rock"}]}
+{"id": "ont_17_artist_test_48", "triples": [{"sub": "anders osborne", "rel": "genre", "obj": "rock music"}]}
+{"id": "ont_17_artist_test_49", "triples": [{"sub": "anders osborne", "rel": "genre", "obj": "rock music"}]}
+{"id": "ont_17_artist_test_50", "triples": [{"sub": "anders osborne", "rel": "record label", "obj": "shanachie records"}]}
+{"id": "ont_17_artist_test_51", "triples": [{"sub": "anders osborne", "rel": "record label", "obj": "rabadash records"}]}
+{"id": "ont_17_artist_test_52", "triples": [{"sub": "anders osborne", "rel": "record label", "obj": "okeh records"}]}
+{"id": "ont_17_artist_test_53", "triples": [{"sub": "anders osborne", "rel": "record label", "obj": "shanachie records"}]}
+{"id": "ont_17_artist_test_54", "triples": [{"sub": "kaiser chiefs", "rel": "genre", "obj": "alternative rock"}]}
+{"id": "ont_17_artist_test_55", "triples": [{"sub": "kaiser chiefs", "rel": "record label", "obj": "b-unique records"}]}
+{"id": "ont_17_artist_test_56", "triples": [{"sub": "kaiser chiefs", "rel": "record label", "obj": "fiction"}]}
+{"id": "ont_17_artist_test_57", "triples": [{"sub": "andrew white", "rel": "work period (start)", "obj": "2003"}]}
+{"id": "ont_17_artist_test_58", "triples": [{"sub": "agustin barboza", "rel": "place of birth", "obj": "asunci\u00f3n"}]}
+{"id": "ont_17_artist_test_59", "triples": [{"sub": "asunci\u00f3n", "rel": "country", "obj": "paraguay"}, {"sub": "paraguay", "rel": "capital", "obj": "asunci\u00f3n"}]}
+{"id": "ont_17_artist_test_60", "triples": [{"sub": "montevideo", "rel": "country", "obj": "uruguay"}, {"sub": "daniel mart\u00ednez", "rel": "country of citizenship", "obj": "uruguay"}, {"sub": "daniel mart\u00ednez", "rel": "place of birth", "obj": "montevideo"}, {"sub": "alfredo zitarrosa", "rel": "place of birth", "obj": "montevideo"}, {"sub": "alfredo zitarrosa", "rel": "country of citizenship", "obj": "uruguay"}, {"sub": "uruguay", "rel": "capital", "obj": "montevideo"}]}
+{"id": "ont_17_artist_test_61", "triples": [{"sub": "andrew white", "rel": "record label", "obj": "polydor records"}]}
+{"id": "ont_17_artist_test_62", "triples": [{"sub": "andrew white", "rel": "record label", "obj": "fiction"}]}
+{"id": "ont_17_artist_test_63", "triples": [{"sub": "andrew white", "rel": "record label", "obj": "polydor"}]}
+{"id": "ont_17_artist_test_64", "triples": [{"sub": "al anderson", "rel": "genre", "obj": "rock music"}]}
+{"id": "ont_17_artist_test_65", "triples": [{"sub": "al anderson", "rel": "genre", "obj": "rock music"}]}
+{"id": "ont_17_artist_test_66", "triples": [{"sub": "bhangra", "rel": "instance of", "obj": "fusion genre"}]}
+{"id": "ont_17_artist_test_67", "triples": [{"sub": "al anderson", "rel": "instrument", "obj": "guitar"}]}
+{"id": "ont_17_artist_test_68", "triples": [{"sub": "nrbq", "rel": "genre", "obj": "rock music"}]}
+{"id": "ont_17_artist_test_69", "triples": [{"sub": "alfredo zitarrosa", "rel": "place of birth", "obj": "montevideo"}]}
+{"id": "ont_17_artist_test_70", "triples": [{"sub": "montevideo", "rel": "country", "obj": "uruguay"}, {"sub": "alfredo zitarrosa", "rel": "place of death", "obj": "montevideo"}, {"sub": "alfredo zitarrosa", "rel": "country of citizenship", "obj": "uruguay"}]}
+{"id": "ont_17_artist_test_71", "triples": [{"sub": "montevideo", "rel": "country", "obj": "uruguay"}, {"sub": "uruguay", "rel": "capital", "obj": "montevideo"}]}
+{"id": "ont_17_artist_test_72", "triples": [{"sub": "montevideo", "rel": "country", "obj": "uruguay"}, {"sub": "uruguay", "rel": "capital", "obj": "montevideo"}]}
+{"id": "ont_17_artist_test_73", "triples": [{"sub": "alfredo zitarrosa", "rel": "place of birth", "obj": "montevideo"}]}
+{"id": "ont_17_artist_test_74", "triples": [{"sub": "montevideo", "rel": "country", "obj": "uruguay"}, {"sub": "uruguay", "rel": "capital", "obj": "montevideo"}]}
+{"id": "ont_17_artist_test_75", "triples": [{"sub": "alfredo zitarrosa", "rel": "place of death", "obj": "montevideo"}]}
+{"id": "ont_17_artist_test_76", "triples": [{"sub": "alfredo zitarrosa", "rel": "place of birth", "obj": "montevideo"}]}
+{"id": "ont_17_artist_test_77", "triples": [{"sub": "aaron deer", "rel": "genre", "obj": "indie rock"}]}
+{"id": "ont_17_artist_test_78", "triples": [{"sub": "agustin barboza", "rel": "record label", "obj": "philips records"}]}
+{"id": "ont_17_artist_test_79", "triples": [{"sub": "paraguay", "rel": "capital", "obj": "asuncion"}, {"sub": "agustin barboza", "rel": "date of birth", "obj": "5th may, 1913"}, {"sub": "agustin barboza", "rel": "place of birth", "obj": "asuncion"}, {"sub": "asuncion", "rel": "country", "obj": "paraguay"}]}
+{"id": "ont_17_artist_test_80", "triples": [{"sub": "al aderson", "rel": "work period (start)", "obj": "1966"}]}
+{"id": "ont_17_artist_test_81", "triples": [{"sub": "alan frews", "rel": "genre", "obj": "country music"}]}
+{"id": "ont_17_artist_test_82", "triples": [{"sub": "alfredo zitarrosa", "rel": "record label", "obj": "rca records"}]}
+{"id": "ont_17_artist_test_83", "triples": [{"sub": "voice of the wetlands all-stars", "rel": "has part", "obj": "billy iuso"}]}
+{"id": "ont_17_artist_test_84", "triples": [{"sub": "anders osborne", "rel": "record label", "obj": "alligator records"}]}

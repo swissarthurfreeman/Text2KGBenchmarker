@@ -442,9 +442,9 @@ class BaseLightningModule(pl.LightningModule):
                 output_file_path = output_dir_path + "_".join(self.test_ids[idx].split("_")[:3]) 
                 onto_name = "_".join(self.test_ids[idx].split("_")[:3])
 
-                if onto_name in "".join(DBPEDIA_WEBNLG_ONT_NAMES):
-                    output_file_path += '-dbpedia_webnlg.jsonl'
-                elif onto_name in "".join(WIKIDATA_TEKGEN_ONT_NAMES):
+                if onto_name in DBPEDIA_WEBNLG_ONT_NAMES:
+                    output_file_path += '-dbpedia_webnlg_clean.jsonl'
+                elif onto_name in WIKIDATA_TEKGEN_ONT_NAMES:
                     output_file_path += '-wikidata_tekgen.jsonl'
                 else:
                     print("ERROR, ", onto_name, "is not recognized, aborting...")

@@ -1,0 +1,135 @@
+{"id": "ont_6_politician_test_1", "triples": [{"sub": "erasmus university", "rel": "location", "obj": "rotterdam"}]}
+{"id": "ont_6_politician_test_2", "triples": [{"sub": "rotterdam", "rel": "country", "obj": "netherlands"}, {"sub": "erasmus university", "rel": "location", "obj": "rotterdam"}, {"sub": "erasmus university", "rel": "country", "obj": "netherlands"}]}
+{"id": "ont_6_politician_test_3", "triples": [{"sub": "erasmus university", "rel": "location", "obj": "rotterdam"}]}
+{"id": "ont_6_politician_test_4", "triples": [{"sub": "ab klink", "rel": "educated at", "obj": "erasmus university rotterdam"}]}
+{"id": "ont_6_politician_test_5", "triples": [{"sub": "ab klink", "rel": "educated at", "obj": "erasmus university rotterdam"}]}
+{"id": "ont_6_politician_test_6", "triples": [{"sub": "erasmus university rotterdam", "rel": "country", "obj": "netherlands"}]}
+{"id": "ont_6_politician_test_7", "triples": [{"sub": "erasmus university", "rel": "location", "obj": "rotterdam"}]}
+{"id": "ont_6_politician_test_8", "triples": [{"sub": "ab klink", "rel": "educated at", "obj": "erasmus university in rotterdam"}]}
+{"id": "ont_6_politician_test_9", "triples": [{"sub": "ab klink", "rel": "educated at", "obj": "erasmus university rotterdam"}]}
+{"id": "ont_6_politician_test_10", "triples": [{"sub": "ab klink", "rel": "member of political party", "obj": "christian democratic appeal"}, {"sub": "ab klink", "rel": "educated at", "obj": "leiden university"}]}
+{"id": "ont_6_politician_test_11", "triples": [{"sub": "netherlands", "rel": "head of government", "obj": "mark rutte"}]}
+{"id": "ont_6_politician_test_12", "triples": [{"sub": "ab klink", "rel": "member of political party", "obj": "christian democratic appeal"}, {"sub": "ab klink", "rel": "educated at", "obj": "leiden university"}]}
+{"id": "ont_6_politician_test_13", "triples": [{"sub": "us army", "rel": "conflict", "obj": "world war ii"}, {"sub": "abner w sibal", "rel": "conflict", "obj": "world war ii"}, {"sub": "franklin d roosevelt", "rel": "conflict", "obj": "world war ii"}]}
+{"id": "ont_6_politician_test_14", "triples": [{"sub": "virginia", "rel": "contains administrative territorial entity", "obj": "alexandria"}, {"sub": "alexandria", "rel": "located in the administrative territorial entity", "obj": "virginia"}]}
+{"id": "ont_6_politician_test_15", "triples": [{"sub": "donald j. irwin", "rel": "member of political party", "obj": "republican"}, {"sub": "abner w. sibal", "rel": "member of political party", "obj": "republican"}]}
+{"id": "ont_6_politician_test_16", "triples": [{"sub": "abner w. sibal", "rel": "member of political party", "obj": "republican party of the us"}]}
+{"id": "ont_6_politician_test_17", "triples": [{"sub": "ridgewood", "rel": "located in the administrative territorial entity", "obj": "queens"}]}
+{"id": "ont_6_politician_test_18", "triples": [{"sub": "ridgewood", "rel": "located in the administrative territorial entity", "obj": "queens"}, {"sub": "queens", "rel": "contains administrative territorial entity", "obj": "ridgewood"}]}
+{"id": "ont_6_politician_test_19", "triples": [{"sub": "adam holloway", "rel": "conflict", "obj": "gulf war"}]}
+{"id": "ont_6_politician_test_20", "triples": [{"sub": "colin powell", "rel": "conflict", "obj": "gulf war"}]}
+{"id": "ont_6_politician_test_21", "triples": [{"sub": "adam holloway", "rel": "place of birth", "obj": "faversham"}, {"sub": "adam holloway", "rel": "educated at", "obj": "magdalene college, cambridge"}]}
+{"id": "ont_6_politician_test_22", "triples": [{"sub": "adam holloway", "rel": "place of birth", "obj": "faversham"}, {"sub": "adam holloway", "rel": "educated at", "obj": "magdalene college, cambridge"}]}
+{"id": "ont_6_politician_test_23", "triples": [{"sub": "adam holloway", "rel": "educated at", "obj": "magdalene college cambridge"}]}
+{"id": "ont_6_politician_test_24", "triples": [{"sub": "adam holloway", "rel": "member of political party", "obj": "tory"}]}
+{"id": "ont_6_politician_test_25", "triples": [{"sub": "adam holloway", "rel": "place of birth", "obj": "faversham"}, {"sub": "adam holloway", "rel": "member of political party", "obj": "conservative party"}, {"sub": "adam holloway", "rel": "educated at", "obj": "magdalene college, cambridge"}]}
+{"id": "ont_6_politician_test_26", "triples": [{"sub": "adam holloway", "rel": "member of political party", "obj": "tories"}, {"sub": "england", "rel": "country", "obj": "united kingdom"}, {"sub": "adam holloway", "rel": "country of citizenship", "obj": "united kingdom"}, {"sub": "kent", "rel": "country", "obj": "united kingdom"}, {"sub": "united kingdom", "rel": "contains administrative territorial entity", "obj": "england"}, {"sub": "kent", "rel": "located in the administrative territorial entity", "obj": "england"}, {"sub": "tories", "rel": "country", "obj": "united kingdom"}, {"sub": "adam holloway", "rel": "place of birth", "obj": "faversham"}, {"sub": "faversham", "rel": "country", "obj": "united kingdom"}]}
+{"id": "ont_6_politician_test_27", "triples": [{"sub": "adam holloway", "rel": "country of citizenship", "obj": "united kingdom"}, {"sub": "adam holloway", "rel": "member of political party", "obj": "conservative party"}, {"sub": "conservative party", "rel": "country", "obj": "united kingdom"}]}
+{"id": "ont_6_politician_test_28", "triples": [{"sub": "adam holloway", "rel": "member of political party", "obj": "conservative party"}]}
+{"id": "ont_6_politician_test_29", "triples": [{"sub": "agnes kant", "rel": "educated at", "obj": "radboud university nijmegen"}]}
+{"id": "ont_6_politician_test_30", "triples": [{"sub": "agnes kant", "rel": "educated at", "obj": "radboud university nijmegen"}, {"sub": "agnes kant", "rel": "member of political party", "obj": "socialist party"}]}
+{"id": "ont_6_politician_test_31", "triples": [{"sub": "agnes kant", "rel": "educated at", "obj": "radboud university nijmegen"}]}
+{"id": "ont_6_politician_test_32", "triples": [{"sub": "agnes kant", "rel": "educated at", "obj": "radboud university nijmegen"}]}
+{"id": "ont_6_politician_test_33", "triples": [{"sub": "netherlands house of representatives", "rel": "country", "obj": "netherlands"}]}
+{"id": "ont_6_politician_test_34", "triples": [{"sub": "emile roemer", "rel": "member of political party", "obj": "socialist party"}]}
+{"id": "ont_6_politician_test_35", "triples": [{"sub": "netherlands", "rel": "head of government", "obj": "mark rutte"}, {"sub": "mark rutte", "rel": "country of citizenship", "obj": "netherlands"}]}
+{"id": "ont_6_politician_test_36", "triples": [{"sub": "agnes kant", "rel": "member of political party", "obj": "socialist party of the netherlands"}]}
+{"id": "ont_6_politician_test_37", "triples": [{"sub": "socialist party", "rel": "country", "obj": "netherlands"}, {"sub": "agnes kant", "rel": "country of citizenship", "obj": "netherlands"}, {"sub": "agnes kant", "rel": "member of political party", "obj": "socialist party"}, {"sub": "mark rutte", "rel": "country of citizenship", "obj": "netherlands"}]}
+{"id": "ont_6_politician_test_38", "triples": [{"sub": "emile roemer", "rel": "member of political party", "obj": "netherlands socialist party"}]}
+{"id": "ont_6_politician_test_39", "triples": [{"sub": "agnes kant", "rel": "educated at", "obj": "radboud university nijmegen"}]}
+{"id": "ont_6_politician_test_40", "triples": [{"sub": "jefferson davis", "rel": "conflict", "obj": "american civil war"}]}
+{"id": "ont_6_politician_test_41", "triples": [{"sub": "jefferson davis", "rel": "conflict", "obj": "american civil war"}]}
+{"id": "ont_6_politician_test_42", "triples": [{"sub": "albert jennings fountain", "rel": "place of birth", "obj": "new york"}]}
+{"id": "ont_6_politician_test_43", "triples": [{"sub": "abraham lincoln", "rel": "conflict", "obj": "american civil war"}]}
+{"id": "ont_6_politician_test_44", "triples": [{"sub": "staten island", "rel": "located in the administrative territorial entity", "obj": "new york city"}, {"sub": "albert jennings fountain", "rel": "place of birth", "obj": "staten island"}, {"sub": "new york city", "rel": "contains administrative territorial entity", "obj": "staten island"}]}
+{"id": "ont_6_politician_test_45", "triples": [{"sub": "albert jennings fountain", "rel": "place of birth", "obj": "new york city"}]}
+{"id": "ont_6_politician_test_46", "triples": [{"sub": "albert jennings fountain", "rel": "place of birth", "obj": "new york city"}]}
+{"id": "ont_6_politician_test_47", "triples": [{"sub": "albert jennings fountain", "rel": "place of birth", "obj": "staten island"}]}
+{"id": "ont_6_politician_test_48", "triples": [{"sub": "albert jennings fountain", "rel": "place of birth", "obj": "staten island (new york)"}]}
+{"id": "ont_6_politician_test_49", "triples": [{"sub": "staten island", "rel": "located in the administrative territorial entity", "obj": "new york city"}, {"sub": "new york city", "rel": "contains administrative territorial entity", "obj": "staten island"}]}
+{"id": "ont_6_politician_test_50", "triples": [{"sub": "albert jennings fountain", "rel": "place of birth", "obj": "staten island"}]}
+{"id": "ont_6_politician_test_51", "triples": [{"sub": "albert jennings fountain", "rel": "place of death", "obj": "dona ana county, new mexico"}]}
+{"id": "ont_6_politician_test_52", "triples": [{"sub": "albert jennings fountain", "rel": "place of birth", "obj": "staten island, new york"}]}
+{"id": "ont_6_politician_test_53", "triples": [{"sub": "staten island", "rel": "located in the administrative territorial entity", "obj": "new york city"}, {"sub": "albert jennings fountain", "rel": "place of birth", "obj": "staten island"}, {"sub": "new york city", "rel": "contains administrative territorial entity", "obj": "staten island"}]}
+{"id": "ont_6_politician_test_54", "triples": [{"sub": "albert jennings fountain", "rel": "ethnic group", "obj": "african americans"}]}
+{"id": "ont_6_politician_test_55", "triples": [{"sub": "albert jennings fountain", "rel": "place of birth", "obj": "staten island"}]}
+{"id": "ont_6_politician_test_56", "triples": [{"sub": "abraham lincoln", "rel": "conflict", "obj": "american civil war"}]}
+{"id": "ont_6_politician_test_57", "triples": [{"sub": "jefferson davis", "rel": "conflict", "obj": "american civil war"}, {"sub": "union army", "rel": "conflict", "obj": "american civil war"}]}
+{"id": "ont_6_politician_test_58", "triples": [{"sub": "abraham lincoln", "rel": "conflict", "obj": "american civil war"}, {"sub": "union army", "rel": "conflict", "obj": "american civil war"}]}
+{"id": "ont_6_politician_test_59", "triples": [{"sub": "albert jennings fountain", "rel": "member of political party", "obj": "republican party"}, {"sub": "albert jennings fountain", "rel": "place of birth", "obj": "new york city"}]}
+{"id": "ont_6_politician_test_60", "triples": [{"sub": "united states army", "rel": "conflict", "obj": "world war ii"}, {"sub": "allan shivers", "rel": "conflict", "obj": "world war ii"}, {"sub": "joseph stalin", "rel": "conflict", "obj": "world war ii"}]}
+{"id": "ont_6_politician_test_61", "triples": [{"sub": "allan shivers", "rel": "member of political party", "obj": "democrat"}, {"sub": "ben ramsey", "rel": "member of political party", "obj": "democrat"}]}
+{"id": "ont_6_politician_test_62", "triples": [{"sub": "allan shivers", "rel": "member of political party", "obj": "democratic party"}]}
+{"id": "ont_6_politician_test_63", "triples": [{"sub": "allan shivers", "rel": "member of political party", "obj": "democratic party"}]}
+{"id": "ont_6_politician_test_64", "triples": [{"sub": "abraham lincoln", "rel": "conflict", "obj": "american civil war"}]}
+{"id": "ont_6_politician_test_65", "triples": [{"sub": "abraham lincoln", "rel": "conflict", "obj": "american civil war"}]}
+{"id": "ont_6_politician_test_66", "triples": [{"sub": "abraham lincoln", "rel": "conflict", "obj": "american civil war"}]}
+{"id": "ont_6_politician_test_67", "triples": [{"sub": "abraham lincoln", "rel": "conflict", "obj": "american civil war"}]}
+{"id": "ont_6_politician_test_68", "triples": [{"sub": "abraham lincoln", "rel": "conflict", "obj": "american civil war"}]}
+{"id": "ont_6_politician_test_69", "triples": [{"sub": "jefferson davis", "rel": "conflict", "obj": "american civil war"}, {"sub": "battle of fredericksburg", "rel": "part of", "obj": "american civil war"}]}
+{"id": "ont_6_politician_test_70", "triples": [{"sub": "jefferson davis", "rel": "conflict", "obj": "american civil war"}, {"sub": "siege of petersburg", "rel": "part of", "obj": "american civil war"}]}
+{"id": "ont_6_politician_test_71", "triples": [{"sub": "battle of antietam", "rel": "part of", "obj": "american civil war"}, {"sub": "jefferson davis", "rel": "conflict", "obj": "american civil war"}]}
+{"id": "ont_6_politician_test_72", "triples": [{"sub": "jefferson davis", "rel": "conflict", "obj": "american civil war"}, {"sub": "battle of salem church", "rel": "part of", "obj": "american civil war"}]}
+{"id": "ont_6_politician_test_73", "triples": [{"sub": "battle of antietam", "rel": "part of", "obj": "american civil war"}, {"sub": "robert e lee", "rel": "conflict", "obj": "american civil war"}]}
+{"id": "ont_6_politician_test_74", "triples": [{"sub": "robert e. lee", "rel": "conflict", "obj": "american civil war"}, {"sub": "battle of salem church", "rel": "part of", "obj": "american civil war"}]}
+{"id": "ont_6_politician_test_75", "triples": [{"sub": "abraham lincoln", "rel": "conflict", "obj": "american civil war"}, {"sub": "battle of chancellorsville", "rel": "part of", "obj": "american civil war"}]}
+{"id": "ont_6_politician_test_76", "triples": [{"sub": "battle of chancellorsville", "rel": "part of", "obj": "american civil war"}]}
+{"id": "ont_6_politician_test_77", "triples": [{"sub": "battle of cold harbour", "rel": "part of", "obj": "american civil war"}, {"sub": "abraham lincoln", "rel": "conflict", "obj": "american civil war"}, {"sub": "aaron s daggett", "rel": "conflict", "obj": "american civil war"}]}
+{"id": "ont_6_politician_test_78", "triples": [{"sub": "battle of cold harbor", "rel": "part of", "obj": "american civil war"}]}
+{"id": "ont_6_politician_test_79", "triples": [{"sub": "abraham lincoln", "rel": "conflict", "obj": "american civil war"}]}
+{"id": "ont_6_politician_test_80", "triples": [{"sub": "jefferson davis", "rel": "conflict", "obj": "american civil war"}, {"sub": "battle of fredericksburg", "rel": "part of", "obj": "american civil war"}]}
+{"id": "ont_6_politician_test_81", "triples": [{"sub": "abraham lincoln", "rel": "conflict", "obj": "american civil war"}]}
+{"id": "ont_6_politician_test_82", "triples": [{"sub": "jefferson davis", "rel": "conflict", "obj": "american civil war"}]}
+{"id": "ont_6_politician_test_83", "triples": [{"sub": "robert e lee", "rel": "conflict", "obj": "american civil war"}, {"sub": "battle of gettysburg", "rel": "part of", "obj": "american civil war"}]}
+{"id": "ont_6_politician_test_84", "triples": [{"sub": "robert e lee", "rel": "conflict", "obj": "american civil war"}, {"sub": "battle of salem church", "rel": "part of", "obj": "american civil war"}]}
+{"id": "ont_6_politician_test_85", "triples": [{"sub": "euro", "rel": "country", "obj": "netherlands"}, {"sub": "netherlands", "rel": "head of government", "obj": "mark rutte"}]}
+{"id": "ont_6_politician_test_86", "triples": [{"sub": "euro", "rel": "country", "obj": "netherlands"}, {"sub": "netherlands", "rel": "head of government", "obj": "mark rutte"}, {"sub": "mark rutte", "rel": "country of citizenship", "obj": "netherlands"}]}
+{"id": "ont_6_politician_test_87", "triples": [{"sub": "native americans", "rel": "instance of", "obj": "ethnic group"}]}
+{"id": "ont_6_politician_test_88", "triples": [{"sub": "abraham a ribicoff", "rel": "place of birth", "obj": "new britain, connecticut"}]}
+{"id": "ont_6_politician_test_89", "triples": [{"sub": "native americans", "rel": "country", "obj": "united states"}, {"sub": "united states", "rel": "ethnic group", "obj": "native americans"}]}
+{"id": "ont_6_politician_test_90", "triples": [{"sub": "abraham a ribicoff", "rel": "ethnic group", "obj": "native americans"}]}
+{"id": "ont_6_politician_test_91", "triples": [{"sub": "benito mussolini", "rel": "conflict", "obj": "world war ii"}]}
+{"id": "ont_6_politician_test_92", "triples": [{"sub": "benito mussolini", "rel": "conflict", "obj": "world war ii"}]}
+{"id": "ont_6_politician_test_93", "triples": [{"sub": "franklin d. roosevelt", "rel": "conflict", "obj": "world war ii"}]}
+{"id": "ont_6_politician_test_94", "triples": [{"sub": "african americans", "rel": "country", "obj": "united states"}, {"sub": "united states", "rel": "ethnic group", "obj": "african americans"}]}
+{"id": "ont_6_politician_test_95", "triples": [{"sub": "african americans", "rel": "country", "obj": "united states"}, {"sub": "united states", "rel": "ethnic group", "obj": "african americans"}]}
+{"id": "ont_6_politician_test_96", "triples": [{"sub": "casey ribicoff", "rel": "spouse", "obj": "abraham a. ribicoff"}, {"sub": "abraham a. ribicoff", "rel": "spouse", "obj": "casey ribicoff"}]}
+{"id": "ont_6_politician_test_97", "triples": [{"sub": "abraham a. ribicoff", "rel": "member of political party", "obj": "democratic party"}]}
+{"id": "ont_6_politician_test_98", "triples": [{"sub": "american", "rel": "contains administrative territorial entity", "obj": "connecticut"}, {"sub": "abraham a. ribicoff", "rel": "country of citizenship", "obj": "american"}, {"sub": "connecticut", "rel": "country", "obj": "american"}]}
+{"id": "ont_6_politician_test_99", "triples": [{"sub": "abraham a. ribicoff", "rel": "country of citizenship", "obj": "united states of america"}]}
+{"id": "ont_6_politician_test_100", "triples": [{"sub": "united states", "rel": "contains administrative territorial entity", "obj": "connecticut"}, {"sub": "abraham a. ribicoff", "rel": "country of citizenship", "obj": "united states"}, {"sub": "connecticut", "rel": "country", "obj": "united states"}]}
+{"id": "ont_6_politician_test_101", "triples": [{"sub": "casey ribicoff", "rel": "spouse", "obj": "abraham a. ribicoff"}, {"sub": "abraham a. ribicoff", "rel": "spouse", "obj": "casey ribicoff"}]}
+{"id": "ont_6_politician_test_102", "triples": [{"sub": "ruth ribicoff", "rel": "spouse", "obj": "abraham a. ribicoff"}, {"sub": "abraham a. ribicoff", "rel": "spouse", "obj": "ruth ribicoff"}]}
+{"id": "ont_6_politician_test_103", "triples": [{"sub": "abraham ribicoff", "rel": "country of citizenship", "obj": "usa"}]}
+{"id": "ont_6_politician_test_104", "triples": [{"sub": "abraham a. ribicoff", "rel": "place of death", "obj": "new york"}]}
+{"id": "ont_6_politician_test_105", "triples": [{"sub": "casey ribicoff", "rel": "spouse", "obj": "abraham a. ribicoff"}, {"sub": "abraham a. ribicoff", "rel": "position held", "obj": "us secretary of health, education, and welfare"}, {"sub": "abraham a. ribicoff", "rel": "spouse", "obj": "casey ribicoff"}]}
+{"id": "ont_6_politician_test_106", "triples": [{"sub": "abraham a. ribicoff", "rel": "country of citizenship", "obj": "us"}]}
+{"id": "ont_6_politician_test_107", "triples": [{"sub": "abraham a. ribicoff", "rel": "member of political party", "obj": "united states democratic party"}]}
+{"id": "ont_6_politician_test_108", "triples": [{"sub": "casey ribicoff", "rel": "spouse", "obj": "abraham a. ribicoff"}, {"sub": "abraham a. ribicoff", "rel": "spouse", "obj": "casey ribicoff"}]}
+{"id": "ont_6_politician_test_109", "triples": [{"sub": "abraham a. ribicoff", "rel": "member of political party", "obj": "united states democratic party"}]}
+{"id": "ont_6_politician_test_110", "triples": [{"sub": "ruth ribicoff", "rel": "spouse", "obj": "abraham a. ribicoff"}, {"sub": "abraham a. ribicoff", "rel": "spouse", "obj": "ruth ribicoff"}]}
+{"id": "ont_6_politician_test_111", "triples": [{"sub": "ruth ribicoff", "rel": "spouse", "obj": "abraham a ribicoff"}, {"sub": "abraham a ribicoff", "rel": "spouse", "obj": "ruth ribicoff"}]}
+{"id": "ont_6_politician_test_112", "triples": [{"sub": "abraham a. ribicoff", "rel": "place of death", "obj": "new york city"}]}
+{"id": "ont_6_politician_test_113", "triples": [{"sub": "ruth ribicoff", "rel": "spouse", "obj": "abraham a. ribicoff"}, {"sub": "abraham a. ribicoff", "rel": "spouse", "obj": "ruth ribicoff"}]}
+{"id": "ont_6_politician_test_114", "triples": [{"sub": "ruth ribicoff", "rel": "spouse", "obj": "abraham a. ribicoff"}, {"sub": "abraham a. ribicoff", "rel": "spouse", "obj": "ruth ribicoff"}]}
+{"id": "ont_6_politician_test_115", "triples": [{"sub": "united states", "rel": "contains administrative territorial entity", "obj": "connecticut"}, {"sub": "connecticut", "rel": "country", "obj": "united states"}]}
+{"id": "ont_6_politician_test_116", "triples": [{"sub": "abraham a. ribicoff", "rel": "position held", "obj": "united states secretary of health, education, and welfare"}]}
+{"id": "ont_6_politician_test_117", "triples": [{"sub": "abraham a. ribicoff", "rel": "country of citizenship", "obj": "united states"}]}
+{"id": "ont_6_politician_test_118", "triples": [{"sub": "ruth ribicoff", "rel": "spouse", "obj": "abraham a. ribicoff"}, {"sub": "abraham a. ribicoff", "rel": "spouse", "obj": "ruth ribicoff"}]}
+{"id": "ont_6_politician_test_119", "triples": [{"sub": "abraham a. ribicoff", "rel": "country of citizenship", "obj": "usa"}, {"sub": "united states secretary of health, education, and welfare", "rel": "country", "obj": "usa"}]}
+{"id": "ont_6_politician_test_120", "triples": [{"sub": "ruth ribicoff", "rel": "spouse", "obj": "abraham a. ribicoff"}, {"sub": "abraham a. ribicoff", "rel": "spouse", "obj": "ruth ribicoff"}]}
+{"id": "ont_6_politician_test_121", "triples": [{"sub": "aaron s. daggett", "rel": "award received", "obj": "purple heart"}]}
+{"id": "ont_6_politician_test_122", "triples": [{"sub": "rotterdam", "rel": "country", "obj": "netherlands"}, {"sub": "erasmus university", "rel": "location", "obj": "rotterdam"}, {"sub": "erasmus university", "rel": "country", "obj": "netherlands"}]}
+{"id": "ont_6_politician_test_123", "triples": [{"sub": "united states army", "rel": "conflict", "obj": "world war ii"}, {"sub": "chiang kai-shek", "rel": "conflict", "obj": "world war ii"}]}
+{"id": "ont_6_politician_test_124", "triples": [{"sub": "casey ribicoff", "rel": "spouse", "obj": "abraham a. ribicoff"}, {"sub": "abraham a. ribicoff", "rel": "spouse", "obj": "casey ribicoff"}]}
+{"id": "ont_6_politician_test_125", "triples": [{"sub": "adam holloway", "rel": "member of political party", "obj": "conservative party"}, {"sub": "adam holloway", "rel": "educated at", "obj": "magdalene college, cambridge"}]}
+{"id": "ont_6_politician_test_126", "triples": [{"sub": "agnes kant", "rel": "educated at", "obj": "radboud university nijmegen"}, {"sub": "agnes kant", "rel": "member of political party", "obj": "socialist party"}]}
+{"id": "ont_6_politician_test_127", "triples": [{"sub": "agnes kant", "rel": "educated at", "obj": "radboud university nijmegen"}]}
+{"id": "ont_6_politician_test_128", "triples": [{"sub": "mark rutte", "rel": "country of citizenship", "obj": "netherlands"}]}
+{"id": "ont_6_politician_test_129", "triples": [{"sub": "airey neave", "rel": "date of death", "obj": "30th march 1979"}]}
+{"id": "ont_6_politician_test_130", "triples": [{"sub": "airey neave", "rel": "conflict", "obj": "battle of france"}]}
+{"id": "ont_6_politician_test_131", "triples": [{"sub": "airey neave", "rel": "date of death", "obj": "30 march 1979"}]}
+{"id": "ont_6_politician_test_132", "triples": [{"sub": "albert jennings fountain", "rel": "place of birth", "obj": "staten island"}]}
+{"id": "ont_6_politician_test_133", "triples": [{"sub": "allan shivers", "rel": "member of political party", "obj": "democratic party"}, {"sub": "price daniel", "rel": "member of political party", "obj": "democratic party"}]}
+{"id": "ont_6_politician_test_134", "triples": [{"sub": "abraham lincoln", "rel": "conflict", "obj": "american civil war"}, {"sub": "battle of fredericksburg", "rel": "part of", "obj": "american civil war"}]}
+{"id": "ont_6_politician_test_135", "triples": [{"sub": "battle of cold harbor", "rel": "part of", "obj": "american civil war"}, {"sub": "robert e lee", "rel": "conflict", "obj": "american civil war"}]}

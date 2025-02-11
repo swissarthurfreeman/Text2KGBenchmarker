@@ -1,0 +1,209 @@
+{"id": "ont_7_space_test_1", "triples": [{"sub": "purple mountain observatory", "rel": "located in the administrative territorial entity", "obj": "nanking"}]}
+{"id": "ont_7_space_test_2", "triples": [{"sub": "4949 akasofu", "rel": "site of astronomical discovery", "obj": "ygco chiyoda station"}]}
+{"id": "ont_7_space_test_3", "triples": [{"sub": "hendrik van gent", "rel": "employer", "obj": "leiden southern station"}]}
+{"id": "ont_7_space_test_4", "triples": [{"sub": "gy\u00e3\u00b6rgy kulin", "rel": "employer", "obj": "konkoly observatory"}]}
+{"id": "ont_7_space_test_5", "triples": [{"sub": "9971 ishihara", "rel": "site of astronomical discovery", "obj": "kitami observatory"}]}
+{"id": "ont_7_space_test_6", "triples": [{"sub": "paul wild", "rel": "employer", "obj": "zimmerwald observatory"}]}
+{"id": "ont_7_space_test_7", "triples": [{"sub": "la plata astronomical observatory", "rel": "country", "obj": "argentina"}]}
+{"id": "ont_7_space_test_8", "triples": [{"sub": "2260 neoptolemus", "rel": "site of astronomical discovery", "obj": "purple mountain observatory"}]}
+{"id": "ont_7_space_test_9", "triples": [{"sub": "masaru arai", "rel": "employer", "obj": "yorii observatory"}]}
+{"id": "ont_7_space_test_10", "triples": [{"sub": "paul wild", "rel": "employer", "obj": "zimmerwald observatory"}, {"sub": "2151 hadwiger", "rel": "site of astronomical discovery", "obj": "zimmerwald observatory"}]}
+{"id": "ont_7_space_test_11", "triples": [{"sub": "andrea boattini", "rel": "employer", "obj": "pistoia mountains astronomical observatory"}, {"sub": "luciano tesi", "rel": "employer", "obj": "pistoia mountains astronomical observatory"}]}
+{"id": "ont_7_space_test_12", "triples": [{"sub": "james gibson", "rel": "employer", "obj": "leoncito astronomical complex"}]}
+{"id": "ont_7_space_test_13", "triples": [{"sub": "1582 martir", "rel": "discoverer or inventor", "obj": "miguel itzigsohn"}, {"sub": "miguel itzigsohn", "rel": "employer", "obj": "la plata astronomical observatory"}, {"sub": "1582 martir", "rel": "site of astronomical discovery", "obj": "la plata astronomical observatory"}]}
+{"id": "ont_7_space_test_14", "triples": [{"sub": "965 angelica", "rel": "site of astronomical discovery", "obj": "la plata astronomical observatory"}]}
+{"id": "ont_7_space_test_15", "triples": [{"sub": "10476 los molinos", "rel": "discoverer or inventor", "obj": "schelte bus"}, {"sub": "schelte bus", "rel": "employer", "obj": "siding spring observatory"}, {"sub": "10476 los molinos", "rel": "site of astronomical discovery", "obj": "siding spring observatory"}]}
+{"id": "ont_7_space_test_16", "triples": [{"sub": "hendrik van gent", "rel": "employer", "obj": "leiden southern station"}]}
+{"id": "ont_7_space_test_17", "triples": [{"sub": "christian peters", "rel": "employer", "obj": "litchfield observatory"}, {"sub": "144 vibilia", "rel": "site of astronomical discovery", "obj": "litchfield observatory"}]}
+{"id": "ont_7_space_test_18", "triples": [{"sub": "6144 kondojiro", "rel": "instance of", "obj": "asteroid"}, {"sub": "hokkaid\u014d", "rel": "country", "obj": "japan"}, {"sub": "6144 kondojiro", "rel": "site of astronomical discovery", "obj": "kitami observatory"}, {"sub": "kitami observatory", "rel": "country", "obj": "japan"}]}
+{"id": "ont_7_space_test_19", "triples": [{"sub": "4183 cuno", "rel": "site of astronomical discovery", "obj": "boyden observatory"}]}
+{"id": "ont_7_space_test_20", "triples": [{"sub": "paul wild", "rel": "employer", "obj": "zimmerwald observatory"}]}
+{"id": "ont_7_space_test_21", "triples": [{"sub": "gy\u00e3\u00b6rgy kulin", "rel": "employer", "obj": "konkoly observatory"}, {"sub": "1441 bolyai", "rel": "site of astronomical discovery", "obj": "konkoly observatory"}]}
+{"id": "ont_7_space_test_22", "triples": [{"sub": "9084 achristou", "rel": "site of astronomical discovery", "obj": "siding spring observatory"}]}
+{"id": "ont_7_space_test_23", "triples": [{"sub": "astronomical observatory of mallorca", "rel": "has part", "obj": "la sagra observatory"}, {"sub": "la sagra observatory", "rel": "part of", "obj": "astronomical observatory of mallorca"}]}
+{"id": "ont_7_space_test_24", "triples": [{"sub": "6247 amanogawa", "rel": "site of astronomical discovery", "obj": "kitami observatory"}]}
+{"id": "ont_7_space_test_25", "triples": [{"sub": "robert mcnaught", "rel": "employer", "obj": "siding spring observatory"}]}
+{"id": "ont_7_space_test_26", "triples": [{"sub": "1383 limburgia", "rel": "site of astronomical discovery", "obj": "leiden southern station"}, {"sub": "hendrik van gent", "rel": "employer", "obj": "leiden southern station"}, {"sub": "1383 limburgia", "rel": "discoverer or inventor", "obj": "hendrik van gent"}]}
+{"id": "ont_7_space_test_27", "triples": [{"sub": "2456 palamedes", "rel": "site of astronomical discovery", "obj": "purple mountain observatory"}]}
+{"id": "ont_7_space_test_28", "triples": [{"sub": "paul wild", "rel": "employer", "obj": "zimmerwald observatory"}]}
+{"id": "ont_7_space_test_29", "triples": [{"sub": "paul wild", "rel": "employer", "obj": "zimmerwald observatory"}]}
+{"id": "ont_7_space_test_30", "triples": [{"sub": "hendrik van gent", "rel": "employer", "obj": "leiden southern station"}]}
+{"id": "ont_7_space_test_31", "triples": [{"sub": "31179 gongju", "rel": "site of astronomical discovery", "obj": "chichibu observatory"}, {"sub": "naoto sato", "rel": "employer", "obj": "chichibu observatory"}, {"sub": "31179 gongju", "rel": "discoverer or inventor", "obj": "naoto sato"}]}
+{"id": "ont_7_space_test_32", "triples": [{"sub": "31192 aigoual", "rel": "site of astronomical discovery", "obj": "pises observatory"}]}
+{"id": "ont_7_space_test_33", "triples": [{"sub": "carl wirtanen", "rel": "employer", "obj": "lick observatory"}]}
+{"id": "ont_7_space_test_34", "triples": [{"sub": "1444 pannonia", "rel": "site of astronomical discovery", "obj": "konkoly observatory"}, {"sub": "gy\u00e3\u00b6rgy kulin", "rel": "employer", "obj": "konkoly observatory"}]}
+{"id": "ont_7_space_test_35", "triples": [{"sub": "nanking", "rel": "country", "obj": "china"}]}
+{"id": "ont_7_space_test_36", "triples": [{"sub": "takuo kojima", "rel": "employer", "obj": "ygco chiyoda station"}]}
+{"id": "ont_7_space_test_37", "triples": [{"sub": "leoncito astronomical complex", "rel": "has part", "obj": "f\u00e3\u00a9lix aguilar observatory"}, {"sub": "f\u00e3\u00a9lix aguilar observatory", "rel": "part of", "obj": "leoncito astronomical complex"}]}
+{"id": "ont_7_space_test_38", "triples": [{"sub": "2001 einstein", "rel": "discoverer or inventor", "obj": "paul wild"}, {"sub": "paul wild", "rel": "employer", "obj": "zimmerwald observatory"}, {"sub": "2001 einstein", "rel": "site of astronomical discovery", "obj": "zimmerwald observatory"}]}
+{"id": "ont_7_space_test_39", "triples": [{"sub": "5331 erimomisaki", "rel": "site of astronomical discovery", "obj": "kitami observatory"}]}
+{"id": "ont_7_space_test_40", "triples": [{"sub": "5474 gingasen", "rel": "site of astronomical discovery", "obj": "kitami observatory"}]}
+{"id": "ont_7_space_test_41", "triples": [{"sub": "3494 purple mountain", "rel": "site of astronomical discovery", "obj": "purple mountain observatory"}]}
+{"id": "ont_7_space_test_42", "triples": [{"sub": "2014 aa", "rel": "site of astronomical discovery", "obj": "mount lemmon observatory"}]}
+{"id": "ont_7_space_test_43", "triples": [{"sub": "7317 cabot", "rel": "site of astronomical discovery", "obj": "konkoly observatory"}, {"sub": "gy\u00e3\u00b6rgy kulin", "rel": "employer", "obj": "konkoly observatory"}]}
+{"id": "ont_7_space_test_44", "triples": [{"sub": "carl wirtanen", "rel": "employer", "obj": "lick observatory"}]}
+{"id": "ont_7_space_test_45", "triples": [{"sub": "7517 alisondoane", "rel": "site of astronomical discovery", "obj": "ygco chiyoda station"}]}
+{"id": "ont_7_space_test_46", "triples": [{"sub": "schelte bus", "rel": "employer", "obj": "siding spring observatory"}, {"sub": "4923 clarke", "rel": "discoverer or inventor", "obj": "schelte bus"}, {"sub": "4923 clarke", "rel": "site of astronomical discovery", "obj": "siding spring observatory"}]}
+{"id": "ont_7_space_test_47", "triples": [{"sub": "nanking", "rel": "country", "obj": "china"}, {"sub": "purple mountain observatory", "rel": "country", "obj": "china"}]}
+{"id": "ont_7_space_test_48", "triples": [{"sub": "27270 guidotti", "rel": "site of astronomical discovery", "obj": "pistoia mountains astronomical observatory"}]}
+{"id": "ont_7_space_test_49", "triples": [{"sub": "canada-france-hawaii telescope", "rel": "part of", "obj": "mauna kea observatories"}]}
+{"id": "ont_7_space_test_50", "triples": [{"sub": "robert mcnaught", "rel": "employer", "obj": "siding spring observatory"}, {"sub": "(5645) 1990 sp", "rel": "site of astronomical discovery", "obj": "siding spring observatory"}, {"sub": "(5645) 1990 sp", "rel": "discoverer or inventor", "obj": "robert mcnaught"}]}
+{"id": "ont_7_space_test_51", "triples": [{"sub": "eric elst", "rel": "employer", "obj": "rozhen observatory"}]}
+{"id": "ont_7_space_test_52", "triples": [{"sub": "2085 henan", "rel": "site of astronomical discovery", "obj": "purple mountain observatory"}]}
+{"id": "ont_7_space_test_53", "triples": [{"sub": "takuo kojima", "rel": "employer", "obj": "ygco chiyoda station"}]}
+{"id": "ont_7_space_test_54", "triples": [{"sub": "miguel itzigsohn", "rel": "employer", "obj": "la plata astronomical observatory"}, {"sub": "1569 evita", "rel": "discoverer or inventor", "obj": "miguel itzigsohn"}, {"sub": "1569 evita", "rel": "site of astronomical discovery", "obj": "la plata astronomical observatory"}]}
+{"id": "ont_7_space_test_55", "triples": [{"sub": "kin endate", "rel": "employer", "obj": "kitami observatory"}]}
+{"id": "ont_7_space_test_56", "triples": [{"sub": "orlando naranjo", "rel": "employer", "obj": "llano del hato national astronomical observatory"}]}
+{"id": "ont_7_space_test_57", "triples": [{"sub": "5682 beresford", "rel": "site of astronomical discovery", "obj": "siding spring observatory"}, {"sub": "robert mcnaught", "rel": "employer", "obj": "siding spring observatory"}, {"sub": "5682 beresford", "rel": "discoverer or inventor", "obj": "robert mcnaught"}]}
+{"id": "ont_7_space_test_58", "triples": [{"sub": "hestia", "rel": "site of astronomical discovery", "obj": "radcliffe observatory"}]}
+{"id": "ont_7_space_test_59", "triples": [{"sub": "5475 hanskennedy", "rel": "site of astronomical discovery", "obj": "siding spring observatory"}, {"sub": "5475 hanskennedy", "rel": "discoverer or inventor", "obj": "robert mcnaught"}, {"sub": "robert mcnaught", "rel": "employer", "obj": "siding spring observatory"}]}
+{"id": "ont_7_space_test_60", "triples": [{"sub": "paul wild", "rel": "employer", "obj": "zimmerwald observatory"}]}
+{"id": "ont_7_space_test_61", "triples": [{"sub": "(277810) 2006 fv", "rel": "site of astronomical discovery", "obj": "kitt peak national observatory"}]}
+{"id": "ont_7_space_test_62", "triples": [{"sub": "1862 apollo", "rel": "instance of", "obj": "asteroid"}]}
+{"id": "ont_7_space_test_63", "triples": [{"sub": "2012 tv", "rel": "instance of", "obj": "asteroid"}]}
+{"id": "ont_7_space_test_64", "triples": [{"sub": "2135 aristaeus", "rel": "instance of", "obj": "asteroid"}]}
+{"id": "ont_7_space_test_65", "triples": [{"sub": "3361 orpheus", "rel": "instance of", "obj": "asteroid"}, {"sub": "3361 orpheus", "rel": "discoverer or inventor", "obj": "carlos torres"}, {"sub": "3361 orpheus", "rel": "site of astronomical discovery", "obj": "cerro el roble astronomical station"}]}
+{"id": "ont_7_space_test_66", "triples": [{"sub": "5786 talos", "rel": "instance of", "obj": "asteroid"}]}
+{"id": "ont_7_space_test_67", "triples": [{"sub": "2007 wd", "rel": "instance of", "obj": "asteroid"}]}
+{"id": "ont_7_space_test_68", "triples": [{"sub": "3551 verenia", "rel": "instance of", "obj": "asteroid"}]}
+{"id": "ont_7_space_test_69", "triples": [{"sub": "433\u00e2 eros", "rel": "instance of", "obj": "amor asteroid"}]}
+{"id": "ont_7_space_test_70", "triples": [{"sub": "eris", "rel": "instance of", "obj": "trans-neptunian object"}]}
+{"id": "ont_7_space_test_71", "triples": [{"sub": "ngc 340", "rel": "constellation", "obj": "cetus"}]}
+{"id": "ont_7_space_test_72", "triples": [{"sub": "ngc 197", "rel": "constellation", "obj": "cetus"}]}
+{"id": "ont_7_space_test_73", "triples": [{"sub": "ngc 3972", "rel": "constellation", "obj": "ursa major"}]}
+{"id": "ont_7_space_test_74", "triples": [{"sub": "ngc 4051", "rel": "constellation", "obj": "ursa major"}]}
+{"id": "ont_7_space_test_75", "triples": [{"sub": "ngc 275", "rel": "constellation", "obj": "cetus"}]}
+{"id": "ont_7_space_test_76", "triples": [{"sub": "triangulum", "rel": "instance of", "obj": "constellation"}, {"sub": "ngc 819", "rel": "constellation", "obj": "triangulum"}]}
+{"id": "ont_7_space_test_77", "triples": [{"sub": "ngc 166", "rel": "constellation", "obj": "cetus"}]}
+{"id": "ont_7_space_test_78", "triples": [{"sub": "ngc 47", "rel": "constellation", "obj": "cetus"}, {"sub": "ngc 47", "rel": "discoverer or inventor", "obj": "ernst wilhelm leberecht tempel"}]}
+{"id": "ont_7_space_test_79", "triples": [{"sub": "ngc 353", "rel": "constellation", "obj": "cetus"}]}
+{"id": "ont_7_space_test_80", "triples": [{"sub": "ngc 303", "rel": "constellation", "obj": "cetus"}]}
+{"id": "ont_7_space_test_81", "triples": [{"sub": "ngc 259", "rel": "constellation", "obj": "cetus"}]}
+{"id": "ont_7_space_test_82", "triples": [{"sub": "ngc 344", "rel": "constellation", "obj": "cetus"}]}
+{"id": "ont_7_space_test_83", "triples": [{"sub": "ngc 1073", "rel": "constellation", "obj": "cetus"}]}
+{"id": "ont_7_space_test_84", "triples": [{"sub": "ngc 7019", "rel": "constellation", "obj": "capricornus"}, {"sub": "capricornus", "rel": "instance of", "obj": "constellation"}]}
+{"id": "ont_7_space_test_85", "triples": [{"sub": "coma berenices", "rel": "instance of", "obj": "constellation"}, {"sub": "ngc 4506", "rel": "constellation", "obj": "coma berenices"}]}
+{"id": "ont_7_space_test_86", "triples": [{"sub": "ngc 413", "rel": "constellation", "obj": "cetus"}]}
+{"id": "ont_7_space_test_87", "triples": [{"sub": "coma berenices", "rel": "instance of", "obj": "constellation"}, {"sub": "ngc 4523", "rel": "constellation", "obj": "coma berenices"}]}
+{"id": "ont_7_space_test_88", "triples": [{"sub": "isohdfs 27", "rel": "constellation", "obj": "tucana"}]}
+{"id": "ont_7_space_test_89", "triples": [{"sub": "ngc 2460", "rel": "constellation", "obj": "camelopardalis"}]}
+{"id": "ont_7_space_test_90", "triples": [{"sub": "ngc 191", "rel": "constellation", "obj": "cetus"}]}
+{"id": "ont_7_space_test_91", "triples": [{"sub": "ngc 172", "rel": "constellation", "obj": "cetus"}]}
+{"id": "ont_7_space_test_92", "triples": [{"sub": "ngc 283", "rel": "constellation", "obj": "cetus"}]}
+{"id": "ont_7_space_test_93", "triples": [{"sub": "ngc 7040", "rel": "constellation", "obj": "equuleus"}, {"sub": "equuleus", "rel": "instance of", "obj": "constellation"}]}
+{"id": "ont_7_space_test_94", "triples": [{"sub": "ngc 124", "rel": "constellation", "obj": "cetus"}]}
+{"id": "ont_7_space_test_95", "triples": [{"sub": "ngc 341", "rel": "constellation", "obj": "cetus"}]}
+{"id": "ont_7_space_test_96", "triples": [{"sub": "ngc 806", "rel": "constellation", "obj": "cetus"}]}
+{"id": "ont_7_space_test_97", "triples": [{"sub": "ngc 377", "rel": "constellation", "obj": "cetus"}]}
+{"id": "ont_7_space_test_98", "triples": [{"sub": "ngc 6104", "rel": "constellation", "obj": "corona borealis"}]}
+{"id": "ont_7_space_test_99", "triples": [{"sub": "coma berenices", "rel": "instance of", "obj": "constellation"}, {"sub": "ngc 4725", "rel": "constellation", "obj": "coma berenices"}]}
+{"id": "ont_7_space_test_100", "triples": [{"sub": "ngc 6027b", "rel": "constellation", "obj": "serpens"}, {"sub": "seyfert's sextet", "rel": "constellation", "obj": "serpens"}, {"sub": "ngc 6027b", "rel": "part of", "obj": "seyfert's sextet"}]}
+{"id": "ont_7_space_test_101", "triples": [{"sub": "capricornus", "rel": "instance of", "obj": "constellation"}, {"sub": "ngc 7073", "rel": "constellation", "obj": "capricornus"}]}
+{"id": "ont_7_space_test_102", "triples": [{"sub": "ngc 345", "rel": "constellation", "obj": "cetus"}]}
+{"id": "ont_7_space_test_103", "triples": [{"sub": "ngc 336", "rel": "constellation", "obj": "cetus"}]}
+{"id": "ont_7_space_test_104", "triples": [{"sub": "ngc 2403", "rel": "constellation", "obj": "camelopardalis"}]}
+{"id": "ont_7_space_test_105", "triples": [{"sub": "ngc 291", "rel": "constellation", "obj": "cetus"}]}
+{"id": "ont_7_space_test_106", "triples": [{"sub": "ngc 3729", "rel": "constellation", "obj": "ursa major"}]}
+{"id": "ont_7_space_test_107", "triples": [{"sub": "ngc 6907", "rel": "constellation", "obj": "capricornus"}]}
+{"id": "ont_7_space_test_108", "triples": [{"sub": "coma berenices", "rel": "instance of", "obj": "constellation"}, {"sub": "ngc 4689", "rel": "constellation", "obj": "coma berenices"}]}
+{"id": "ont_7_space_test_109", "triples": [{"sub": "ngc 988", "rel": "constellation", "obj": "cetus"}]}
+{"id": "ont_7_space_test_110", "triples": [{"sub": "ngc 7025", "rel": "constellation", "obj": "delphinus"}]}
+{"id": "ont_7_space_test_111", "triples": [{"sub": "ngc 3021", "rel": "constellation", "obj": "leo minor"}]}
+{"id": "ont_7_space_test_112", "triples": [{"sub": "ngc 521", "rel": "constellation", "obj": "cetus"}]}
+{"id": "ont_7_space_test_113", "triples": [{"sub": "ngc 3938", "rel": "constellation", "obj": "ursa major"}]}
+{"id": "ont_7_space_test_114", "triples": [{"sub": "ngc 3631", "rel": "constellation", "obj": "ursa major"}]}
+{"id": "ont_7_space_test_115", "triples": [{"sub": "ngc 800", "rel": "constellation", "obj": "cetus"}, {"sub": "cetus", "rel": "instance of", "obj": "constellation"}]}
+{"id": "ont_7_space_test_116", "triples": [{"sub": "piscis austrinus", "rel": "instance of", "obj": "constellation"}, {"sub": "ngc 7259", "rel": "constellation", "obj": "piscis austrinus"}]}
+{"id": "ont_7_space_test_117", "triples": [{"sub": "coma berenices", "rel": "instance of", "obj": "constellation"}, {"sub": "ngc 4237", "rel": "constellation", "obj": "coma berenices"}]}
+{"id": "ont_7_space_test_118", "triples": [{"sub": "ngc 6120", "rel": "constellation", "obj": "corona borealis"}]}
+{"id": "ont_7_space_test_119", "triples": [{"sub": "ngc 4088", "rel": "constellation", "obj": "ursa major"}]}
+{"id": "ont_7_space_test_120", "triples": [{"sub": "ngc 320", "rel": "constellation", "obj": "cetus"}]}
+{"id": "ont_7_space_test_121", "triples": [{"sub": "ngc 1566", "rel": "part of", "obj": "dorado group"}, {"sub": "dorado group", "rel": "has part", "obj": "ngc 1566"}]}
+{"id": "ont_7_space_test_122", "triples": [{"sub": "ngc 132", "rel": "constellation", "obj": "cetus"}]}
+{"id": "ont_7_space_test_123", "triples": [{"sub": "coma berenices", "rel": "instance of", "obj": "constellation"}, {"sub": "ngc 4302", "rel": "constellation", "obj": "coma berenices"}]}
+{"id": "ont_7_space_test_124", "triples": [{"sub": "ngc 268", "rel": "constellation", "obj": "cetus"}]}
+{"id": "ont_7_space_test_125", "triples": [{"sub": "ngc 4516", "rel": "constellation", "obj": "coma berenices"}, {"sub": "coma berenices", "rel": "instance of", "obj": "constellation"}]}
+{"id": "ont_7_space_test_126", "triples": [{"sub": "ngc 217", "rel": "constellation", "obj": "cetus"}, {"sub": "cetus", "rel": "instance of", "obj": "constellation"}]}
+{"id": "ont_7_space_test_127", "triples": [{"sub": "ngc 329", "rel": "constellation", "obj": "cetus"}]}
+{"id": "ont_7_space_test_128", "triples": [{"sub": "ngc 293", "rel": "constellation", "obj": "cetus"}]}
+{"id": "ont_7_space_test_129", "triples": [{"sub": "ngc 4138", "rel": "constellation", "obj": "canes venatici"}, {"sub": "canes venatici", "rel": "instance of", "obj": "constellation"}]}
+{"id": "ont_7_space_test_130", "triples": [{"sub": "coma berenices", "rel": "instance of", "obj": "constellation"}, {"sub": "ngc 4540", "rel": "constellation", "obj": "coma berenices"}]}
+{"id": "ont_7_space_test_131", "triples": [{"sub": "wally schirra", "rel": "employer", "obj": "nasa"}]}
+{"id": "ont_7_space_test_132", "triples": [{"sub": "lunar module", "rel": "part of", "obj": "apollo 17"}]}
+{"id": "ont_7_space_test_133", "triples": [{"sub": "expedition 17", "rel": "instance of", "obj": "soyuz tma-12"}, {"sub": "expedition 45", "rel": "instance of", "obj": "soyuz tma-17m"}, {"sub": "expedition 44", "rel": "instance of", "obj": "soyuz tma-17m"}, {"sub": "expedition 58", "rel": "instance of", "obj": "soyuz tma-17m"}, {"sub": "expedition 31", "rel": "instance of", "obj": "soyuz tma-03m"}, {"sub": "expedition 30", "rel": "instance of", "obj": "soyuz tma-03m"}, {"sub": "expedition 59", "rel": "instance of", "obj": "soyuz tma-17m"}]}
+{"id": "ont_7_space_test_134", "triples": [{"sub": "international space station", "rel": "operator", "obj": "nasa"}]}
+{"id": "ont_7_space_test_135", "triples": [{"sub": "sts-122", "rel": "start time", "obj": "july 2006"}]}
+{"id": "ont_7_space_test_136", "triples": [{"sub": "space shuttle columbia", "rel": "operator", "obj": "nasa"}]}
+{"id": "ont_7_space_test_137", "triples": [{"sub": "expedition 35", "rel": "followed by", "obj": "36"}]}
+{"id": "ont_7_space_test_138", "triples": [{"sub": "gemini 6a", "rel": "followed by", "obj": "gemini 9"}]}
+{"id": "ont_7_space_test_140", "triples": [{"sub": "vladimir komarov", "rel": "occupation", "obj": "cosmonaut"}]}
+{"id": "ont_7_space_test_141", "triples": [{"sub": "sts-78", "rel": "part of", "obj": "space shuttle"}]}
+{"id": "ont_7_space_test_142", "triples": [{"sub": "expedition 28", "rel": "facet of", "obj": "international space station"}]}
+{"id": "ont_7_space_test_143", "triples": [{"sub": "gemini program", "rel": "has part", "obj": "gemini 6a"}, {"sub": "gemini program", "rel": "has part", "obj": "gemini 7"}, {"sub": "gemini 7", "rel": "part of", "obj": "gemini program"}, {"sub": "gemini 6a", "rel": "part of", "obj": "gemini program"}]}
+{"id": "ont_7_space_test_144", "triples": [{"sub": "expedition 29", "rel": "facet of", "obj": "international space station"}, {"sub": "expedition 30", "rel": "follows", "obj": "expedition 29"}, {"sub": "expedition 30", "rel": "facet of", "obj": "international space station"}, {"sub": "expedition 29", "rel": "followed by", "obj": "expedition 30"}]}
+{"id": "ont_7_space_test_145", "triples": [{"sub": "expedition 34", "rel": "facet of", "obj": "iss"}]}
+{"id": "ont_7_space_test_146", "triples": [{"sub": "gemini 11", "rel": "followed by", "obj": "apollo 12"}, {"sub": "apollo 12", "rel": "follows", "obj": "gemini 11"}]}
+{"id": "ont_7_space_test_147", "triples": [{"sub": "international space station", "rel": "significant event", "obj": "sts-123"}, {"sub": "sts-123", "rel": "facet of", "obj": "international space station"}]}
+{"id": "ont_7_space_test_148", "triples": [{"sub": "sts-134", "rel": "part of", "obj": "space shuttle program"}]}
+{"id": "ont_7_space_test_149", "triples": [{"sub": "sts-80", "rel": "followed by", "obj": "sts-98"}, {"sub": "sts-98", "rel": "follows", "obj": "sts-80"}]}
+{"id": "ont_7_space_test_150", "triples": [{"sub": "sts-2", "rel": "part of", "obj": "space shuttle"}]}
+{"id": "ont_7_space_test_151", "triples": [{"sub": "mercury-atlas 8", "rel": "operator", "obj": "wally schirra"}]}
+{"id": "ont_7_space_test_152", "triples": [{"sub": "mission specialist 2", "rel": "part of", "obj": "sts-132"}]}
+{"id": "ont_7_space_test_154", "triples": [{"sub": "georgy mikhaylovich grechko", "rel": "date of death", "obj": "8 april 2017"}, {"sub": "georgy mikhaylovich grechko", "rel": "date of birth", "obj": "25 may 1931"}]}
+{"id": "ont_7_space_test_156", "triples": [{"sub": "expedition 37", "rel": "followed by", "obj": "expedition 38"}]}
+{"id": "ont_7_space_test_157", "triples": [{"sub": "sts-134", "rel": "start time", "obj": "may 16, 2011"}]}
+{"id": "ont_7_space_test_158", "triples": [{"sub": "soyuz tm-34", "rel": "operator", "obj": "yuri gidzenko"}]}
+{"id": "ont_7_space_test_159", "triples": [{"sub": "expedition 33", "rel": "follows", "obj": "expedition 32"}, {"sub": "expedition 32", "rel": "followed by", "obj": "expedition 33"}]}
+{"id": "ont_7_space_test_160", "triples": [{"sub": "sts-131", "rel": "part of", "obj": "space shuttle"}, {"sub": "sts-122", "rel": "part of", "obj": "space shuttle"}]}
+{"id": "ont_7_space_test_161", "triples": [{"sub": "expedition 35", "rel": "participant", "obj": "chris hadfield"}]}
+{"id": "ont_7_space_test_162", "triples": [{"sub": "sts-124", "rel": "followed by", "obj": "sts-134"}]}
+{"id": "ont_7_space_test_163", "triples": [{"sub": "soyuz tm-27", "rel": "followed by", "obj": "soyuz tm-28"}]}
+{"id": "ont_7_space_test_164", "triples": [{"sub": "takao doi", "rel": "significant event", "obj": "spacewalk"}]}
+{"id": "ont_7_space_test_165", "triples": [{"sub": "zhai zhigang", "rel": "participant in", "obj": "shenzhou 7"}, {"sub": "shenzhou 7", "rel": "participant", "obj": "zhai zhigang"}]}
+{"id": "ont_7_space_test_166", "triples": [{"sub": "sts-110", "rel": "point in time", "obj": "2002"}]}
+{"id": "ont_7_space_test_167", "triples": [{"sub": "soyuz programme", "rel": "country", "obj": "soviet"}, {"sub": "soyuz 21", "rel": "part of", "obj": "soyuz programme"}, {"sub": "soyuz 5", "rel": "part of", "obj": "soyuz programme"}]}
+{"id": "ont_7_space_test_168", "triples": [{"sub": "apollo 13", "rel": "participant", "obj": "jack swigert"}]}
+{"id": "ont_7_space_test_169", "triples": [{"sub": "soyuz 10", "rel": "part of", "obj": "soyuz programme"}, {"sub": "soyuz programme", "rel": "has part", "obj": "soyuz 8"}, {"sub": "soyuz 4", "rel": "part of", "obj": "soyuz programme"}, {"sub": "soyuz programme", "rel": "has part", "obj": "soyuz 4"}, {"sub": "soyuz 8", "rel": "part of", "obj": "soyuz programme"}, {"sub": "soyuz programme", "rel": "has part", "obj": "soyuz 10"}]}
+{"id": "ont_7_space_test_170", "triples": [{"sub": "challenger disaster", "rel": "part of", "obj": "sts-41-b"}]}
+{"id": "ont_7_space_test_171", "triples": [{"sub": "apollo lunar module", "rel": "part of", "obj": "apollo 15"}, {"sub": "apollo 15", "rel": "has part", "obj": "apollo lunar module"}]}
+{"id": "ont_7_space_test_172", "triples": [{"sub": "space shuttle atlantis", "rel": "country", "obj": "united states"}]}
+{"id": "ont_7_space_test_173", "triples": [{"sub": "space shuttle columbia", "rel": "operator", "obj": "nasa"}]}
+{"id": "ont_7_space_test_174", "triples": [{"sub": "expedition 37", "rel": "follows", "obj": "expedition 36"}, {"sub": "expedition 36", "rel": "followed by", "obj": "expedition 37"}]}
+{"id": "ont_7_space_test_175", "triples": [{"sub": "expedition 29", "rel": "facet of", "obj": "international space station"}, {"sub": "international space station", "rel": "operator", "obj": "nasa"}, {"sub": "expedition 28", "rel": "facet of", "obj": "international space station"}]}
+{"id": "ont_7_space_test_176", "triples": [{"sub": "sts-61-a", "rel": "start time", "obj": "30 october 1985"}]}
+{"id": "ont_7_space_test_177", "triples": [{"sub": "sts-127", "rel": "part of", "obj": "space shuttle"}, {"sub": "sts-98", "rel": "part of", "obj": "space shuttle"}, {"sub": "sts-116", "rel": "part of", "obj": "space shuttle"}]}
+{"id": "ont_7_space_test_178", "triples": [{"sub": "sts-45", "rel": "operator", "obj": "nasa"}]}
+{"id": "ont_7_space_test_179", "triples": [{"sub": "stephanie wilson", "rel": "ethnic group", "obj": "african american"}]}
+{"id": "ont_7_space_test_180", "triples": [{"sub": "apollo 13", "rel": "participant", "obj": "fred haise"}]}
+{"id": "ont_7_space_test_181", "triples": [{"sub": "skylab 2", "rel": "part of", "obj": "skylab"}, {"sub": "skylab", "rel": "has part", "obj": "skylab 2"}]}
+{"id": "ont_7_space_test_182", "triples": [{"sub": "expedition 16", "rel": "participant", "obj": "peggy whitson"}]}
+{"id": "ont_7_space_test_184", "triples": [{"sub": "expedition 38", "rel": "followed by", "obj": "expedition 39"}]}
+{"id": "ont_7_space_test_185", "triples": [{"sub": "sts-110", "rel": "facet of", "obj": "international space station"}]}
+{"id": "ont_7_space_test_186", "triples": [{"sub": "soyuz 10", "rel": "part of", "obj": "soyuz programme"}, {"sub": "soyuz 5", "rel": "part of", "obj": "soyuz programme"}, {"sub": "soyuz programme", "rel": "has part", "obj": "soyuz 5"}, {"sub": "soyuz programme", "rel": "has part", "obj": "soyuz 8"}, {"sub": "soyuz 8", "rel": "part of", "obj": "soyuz programme"}, {"sub": "soyuz programme", "rel": "has part", "obj": "soyuz 10"}]}
+{"id": "ont_7_space_test_187", "triples": [{"sub": "expedition 27", "rel": "facet of", "obj": "international space station"}]}
+{"id": "ont_7_space_test_188", "triples": [{"sub": "jim lovell", "rel": "award received", "obj": "congressional space medal of honor"}, {"sub": "frank borman", "rel": "award received", "obj": "congressional space medal of honor"}, {"sub": "bill anders", "rel": "award received", "obj": "congressional space medal of honor"}]}
+{"id": "ont_7_space_test_189", "triples": [{"sub": "soyuz tm-5", "rel": "follows", "obj": "soyuz t-13"}]}
+{"id": "ont_7_space_test_190", "triples": [{"sub": "william c. mccool", "rel": "participant in", "obj": "sts-107"}]}
+{"id": "ont_7_space_test_191", "triples": [{"sub": "soyuz tma-18m", "rel": "part of", "obj": "soyuz"}, {"sub": "soyuz", "rel": "has part", "obj": "soyuz tma-18m"}]}
+{"id": "ont_7_space_test_192", "triples": [{"sub": "march 23rd, 2016", "rel": "point in time", "obj": "march 23rd, 2016"}]}
+{"id": "ont_7_space_test_193", "triples": [{"sub": "international space station", "rel": "operator", "obj": "roskosmos"}]}
+{"id": "ont_7_space_test_194", "triples": [{"sub": "soyuz", "rel": "country", "obj": "russia"}, {"sub": "soyuz tma-20m", "rel": "country", "obj": "russia"}]}
+{"id": "ont_7_space_test_195", "triples": [{"sub": "expedition 46", "rel": "facet of", "obj": "international space station"}]}
+{"id": "ont_7_space_test_196", "triples": [{"sub": "svetlana savitskaya", "rel": "significant event", "obj": "spacewalk"}]}
+{"id": "ont_7_space_test_197", "triples": [{"sub": "backup crew", "rel": "has part", "obj": "michael foale"}, {"sub": "backup crew", "rel": "has part", "obj": "alexander kaleri"}]}
+{"id": "ont_7_space_test_198", "triples": [{"sub": "successfully lifted off", "rel": "country", "obj": "kazakhstan"}]}
+{"id": "ont_7_space_test_199", "triples": [{"sub": "soyuz tma-19", "rel": "country", "obj": "kazakhstan"}]}
+{"id": "ont_7_space_test_200", "triples": [{"sub": "uss noa", "rel": "location", "obj": "north atlantic ocean"}]}
+{"id": "ont_7_space_test_201", "triples": [{"sub": "bahamas", "rel": "located in or next to body of water", "obj": "north atlantic ocean"}]}
+{"id": "ont_7_space_test_202", "triples": [{"sub": "baikonur cosmodrome", "rel": "country", "obj": "kazakhstan"}]}
+{"id": "ont_7_space_test_203", "triples": [{"sub": "baikonur cosmodrome", "rel": "country", "obj": "kazakhstan"}]}
+{"id": "ont_7_space_unseen_test_1", "triples": [{"sub": "purple mountain observatory", "rel": "located in the administrative territorial entity", "obj": "shanghai"}]}
+{"id": "ont_7_space_unseen_test_2", "triples": [{"sub": "4949 akasofu", "rel": "site of astronomical discovery", "obj": "purple mountain observatory"}]}
+{"id": "ont_7_space_unseen_test_3", "triples": [{"sub": "1862 apollo", "rel": "instance of", "obj": "asteroid"}]}
+{"id": "ont_7_space_unseen_test_4", "triples": [{"sub": "2012 tv", "rel": "instance of", "obj": "asteroid"}]}
+{"id": "ont_7_space_unseen_test_5", "triples": [{"sub": "ngc 340", "rel": "constellation", "obj": "ursa major"}]}
+{"id": "ont_7_space_unseen_test_6", "triples": [{"sub": "ngc 197", "rel": "constellation", "obj": "ursa major"}]}
+{"id": "ont_7_space_unseen_test_7", "triples": [{"sub": "apollo 7", "rel": "operator", "obj": "nasa"}]}
+{"id": "ont_7_space_unseen_test_8", "triples": [{"sub": "apollo 17", "rel": "part of", "obj": "apollo missions"}, {"sub": "apollo missions", "rel": "has part", "obj": "apollo 17"}]}
+{"id": "ont_7_space_unseen_test_9", "triples": [{"sub": "soyuz ms-01", "rel": "start point", "obj": "atlantic ocean"}]}
+{"id": "ont_7_space_unseen_test_10", "triples": [{"sub": "mercury-atlas 6", "rel": "country", "obj": "kazakhstan"}]}
