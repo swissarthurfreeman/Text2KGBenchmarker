@@ -135,13 +135,21 @@ as well as global averages, across every ontology, in median and mean form, loca
 
 ## Using REBEL
 
-The general principle for running an experiment using REBEL is simply to write an appropriate configuration file for the desired experiment placing it at `experiments/bench-rebel/conf/data/config_file.yaml` and running the test or train script overriding the hydra `data` parameter. Make sure to provide a `dataset_script_path` located in your `config_file.yaml`.  
+The general principle for running an experiment using REBEL is simply to write an appropriate configuration file for the desired experiment placing it at `experiments/bench-rebel/conf/data/config_file.yaml` and running the test or train script overriding the hydra `data` parameter. Make sure to provide a `dataset_script_path` located in your `config_file.yaml` and to update the `repo_path` key to the output of `cwd` at the root directory of the repository in the file `experiments/bench-rebel/conf/root.yaml` (we use absolute paths inside REBEL's codebase). 
 
 [Hydra](https://hydra.cc/docs/intro/) is a python library that allows the specification of structured configuration files in `.yaml` file, it's very useful for machine learning workflows to handle the vast amount of possible hyperparameters of our program. 
 
 
-### Evaluating REBEL on Test Data
+### Evaluating Raw REBEL on Test Data
 
+To evaluate REBEL on Text2KGBench, without fine-tuning, using their publicly available checkpoint downloaded under the [Downloading the REBEL Model](#downloading-the-rebel-model) section, we use the `test.py` script under `experiments/bench-rebel/src/test.py`. This script sets up the model and it's tokenizer as well as the lightning data module which is configured in test mode, hence only it's test data loader is configured and passed to a lightning trainer instance in test mode. 
+
+To evaluate, an array of test files must be specified inside the config file. This is done via the `test_files` key, the [*dataset script file*](https://huggingface.co/docs/datasets/en/dataset_script) must also be specified. This is the file in charge of reading the `.jsonl` files of Text2KGBench, we have just one of them, which works for the synthetic, Wikidata-TekGen or DBpedia-WebNLG by reading the files list from `test_files`. The script is under `experiments/bench-rebel/datasets/text2kgbench.py`. 
+
+```yaml
+
+
+```
 
 
 ### Fine-Tuning REBEL

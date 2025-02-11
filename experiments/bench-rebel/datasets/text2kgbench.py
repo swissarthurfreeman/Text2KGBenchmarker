@@ -4,15 +4,15 @@ import datasets
 from datasets import disable_caching
 disable_caching()
 
-class SyntheticWikidataConfig(datasets.BuilderConfig):
+class Text2KGBenchConfig(datasets.BuilderConfig):
     def __init__(self, **kwargs):
-        super(SyntheticWikidataConfig, self).__init__(**kwargs)
+        super(Text2KGBenchConfig, self).__init__(**kwargs)
 
-class SyntheticWikidata(datasets.GeneratorBasedBuilder):
+class Text2KGBenchData(datasets.GeneratorBasedBuilder):
     # https://huggingface.co/docs/datasets/en/dataset_script   
      
     BUILDER_CONFIGS = [
-        SyntheticWikidataConfig(
+        Text2KGBenchConfig(
             name = "wikidata_synthetic",
             version = datasets.Version("1.0.0")
         )

@@ -47,7 +47,11 @@ def test(conf: omegaconf.DictConfig):
     
     trainer = pl.Trainer(accelerator = device)
     
-    trainer.test(pl_module, dataloaders=pl_data_module.test_dataloader(), ckpt_path=conf.repo_path + conf.checkpoint_path)
+    trainer.test(
+        pl_module, 
+        dataloaders=pl_data_module.test_dataloader(), 
+        ckpt_path=conf.repo_path + conf.checkpoint_path if conf.checkpoint_path else None
+    )
 
 @hydra.main(config_path='../conf', config_name='root', version_base="1.1")
 def main(conf: omegaconf.DictConfig):
