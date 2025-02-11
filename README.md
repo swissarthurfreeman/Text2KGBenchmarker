@@ -6,8 +6,8 @@ This repository consists in the following main parts :
 
 - A cleaned and simplified version of the [Text2KGBench dataset](https://github.com/cenguix/Text2KGBench) located under `data/dbpedia_webnlg_clean` and `data/wikidata_tekgen`. The precise changes done to the original Text2KGBench dataset published alongside the [2023 paper](https://arxiv.org/abs/2308.02357) are detailed under `data/CHANGES.md`.  
 - A simplified, documented version of the [REBEL model repository](https://github.com/Babelscape/rebel) under `experiments/bench-rebel`, tailored for fine-tuning on Text2KGBench, stripped of any code not fitting our study's use cases. 
-- A suite of utility scripts located under `experiments/utils`, responding to various use-cases such as metrics, graphics, normalizations (relational mapping, sentence entailement), prompt tuning generation tasks. 
-- An `experiments/results` folder, containing all model variation answers for Text2KGBench, such as `experiments/results/Babelscape.rebel-large-6-beams-rel-map/` for 6 return sequences with relational mapping REBEL model directly evaluated on Text2KGBench's test data, where the folder contains `.jsonl` file for every test ontology samples file. 
+- A suite of utility scripts located under `experiments/utils`, responding to various use-cases such as metrics, graphics, normalizations (relational mapping, sentence entailement) and prompt tuning generation tasks. 
+- An `experiments/results` folder, containing all model variation answers for Text2KGBench, such as `experiments/results/Babelscape.rebel-large-6-beams-rel-map/` for 6 return sequences with relational mapping REBEL model directly evaluated on Text2KGBench's test data, where the folder contains a `.jsonl` file for every test ontology samples file. 
 - A synthetic dataset under `data/wikidata_synthetic`, generated using Wikidata and GPT-4o with the same ontologies as in `data/wikidata_tekgen/ontologies`.
 
 ## Installing the Environment
@@ -20,11 +20,11 @@ This repository consists in the following main parts :
 
 ```sudo apt install pipx && pipx ensurepath```
 
-Relaunch terminal, then run,
+Relaunch your terminal, then run,
 
 ```pipx install pipenv```
 
-Relaunch terminal again, then clone the repository, this takes a while, there's 500 MB of data in the repository.
+Relaunch your terminal again, then clone the repository, this takes a while, there's 500 MB of data in the repository.
 
 ```git clone https://github.com/swissarthurfreeman/Text2KGBenchmarker.git && cd Text2KGbenchmarker```
 
@@ -56,9 +56,7 @@ Note that the path provided above points towards the python interpeter that shou
 
 ```/home/vboxuser/.local/share/virtualenvs/Text2KGbenchmarker-ntCgD4G7/bin/python```
 
-Once this is done, you can successfully run any of the scripts of the repository, for example, to test the prompt tuning class, you can run the following commands,
-
-``
+Once this is done, you can successfully run any of the scripts of the repository.
 
 ### Downloading the REBEL Model
 
@@ -83,13 +81,68 @@ Text2KGBenchmarker
 				vocab.json
 ```
 
-Note that the zip file is 1.4GB large, so a decent connection is required. It can be dropped via ssh into Baobab using drag and drop.
+Note that the zip file is 1.4GB large, so a decent connection is required. It can be dropped via `ssh` into Baobab using drag and drop.
 
 ## Running Experiments 
 
 ### Evaluating Prompt Tuning
 
+To reproduce our results for prompt tuning using GPT-4o/GPT-3.5-Turbo, you need an [OpenAI API key](https://platform.openai.com/api-keys).
+To this end, you need to create an OpenAPI platform account and credit your account. 
+
+![alt text](image.png)
+
+An example (deactivated) key could be, 
+```
+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
+```
+
+This key should be included in the file `experiments/utils/run.py` inside the `OpenAIAdapter()` constructor at line 92.
+
+```python
+model_adapter = OpenAIAdapter(
+        "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", 
+        "gpt-4o"
+)
+```
+
+Note that the second argument specifies the OpenAI model to use, if just `gpt-4o`, it'll use the latest version of GPT-4o available. To reproduce our exact results, users should use the checkpoint we used at the time of running our experiments i.e. `gpt-4o-2024-11-20`.
+You can also use `gpt-3.5-turbo` to reproduce it's results. 
+
+You can then run the script via `python3 run.py`, to generate, using prompt tuning with 1 to 6 shots over `wikidata_tekgen` and `dbpedia_webnlg_clean` using GPT-4o the responses for ontology guided triple generation. The responses will be written to `experiments/results/llm_responses/gpt-4o-i-shot` where `i` is the number of training examples provided in the prompt. the file for Wikidata-TekGen's movie ontology GPT-4o responses using 6-shots will be at `experiments/results/llm_responses/gpt-4o-6-shot/ont_1_movie-wikidata_tekgen.jsonl`. 
+
+The querying can be interrupted and re-ran, and the script will pick up from where it left off.
+
+
+**Make sure that the `experiments/results/llm_responses/model_name/` folder doesn't exist, or else the new responses will be appended to the ones already present, if you're generating everything from scratch, the easiest approach is to empty the `experiments/results/llm_responses/` and `experiments/results/metrics/` folders.**
+
+### Generating Metrics
+
+One you have all the response folders generated under `experiments/results/llm_responses/`, you can compute the resulting metrics (Recall, Precision, F1, OC, RH, OH) for every ontology and the global average, in percentile and standard deviation form, using, from the `experiments/utils/` folder, the script `metrics.py` via `python3 metrics.py`. This will generate a folder for every model under `experiments/results/metrics/model_name/` with a `.jsonl` file containing the *metrics per sample* for every ontology and variant for DBpedia-WebNLG and Wikidata-TekGen in csv and `jsonl` format located in :
+
+- `dpedia_webnlg_clean_avg.jsonl`
+- `dbpedia_webnlg_clean_avg_per_ontology.csv`
+- `wikidata_tekgen_avg.jsonl`
+- `wikidata_tekgen_avg_per_ontology_all.csv`
+- `wikidata_tekgen_avg_per_ontology_unseen.csv`
+- `wikidata_tekgen_avg_per_ontology_verified.csv`
+
+as well as global averages, across every ontology, in median and mean form, located in :
+
+- `global_avg.csv`
+- `global_median.csv` 
+
+
+## Using REBEL
+
+The general principle for running an experiment using REBEL is simply to write an appropriate configuration file for the desired experiment placing it at `experiments/bench-rebel/conf/data/config_file.yaml` and running the test or train script overriding the hydra `data` parameter. Make sure to provide a `dataset_script_path` located in your `config_file.yaml`.  
+
+[Hydra](https://hydra.cc/docs/intro/) is a python library that allows the specification of structured configuration files in `.yaml` file, it's very useful for machine learning workflows to handle the vast amount of possible hyperparameters of our program. 
+
+
 ### Evaluating REBEL on Test Data
+
+
 
 ### Fine-Tuning REBEL
 

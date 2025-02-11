@@ -89,7 +89,10 @@ if __name__ == "__main__":
             runner.run()
     
     for i in [1, 2, 3, 4, 5, 6]:
-        model_adapter = OpenAIAdapter("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", "gpt-4o")
+        model_adapter = OpenAIAdapter(
+            "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", 
+            "gpt-4o-2024-11-20"
+        )
         
         for ontology_name in DPEDIA_WEBNLG_ONT_NAMES:
             run_inference_on("dpedia_webnlg_clean", ontology_name, model_adapter, i)
