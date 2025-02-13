@@ -67,7 +67,7 @@ def train(conf: DictConfig):
     pl_module = BaseLightningModule(conf=conf, config=model_config, tokenizer=tokenizer, model=model)
     
     wandb_run_name = conf.wandb_run_name
-    wandb_project_name = "wikidata-synthetic"
+    wandb_project_name = conf.wandb_project_name
     
     # TODO : use ontology name here instead of project
     wandb_logger = WandbLogger(project=wandb_project_name, name=wandb_run_name, config=OmegaConf.to_object(conf))
@@ -105,7 +105,7 @@ def train(conf: DictConfig):
         callbacks=callbacks_list
     )
     
-    if conf.checkpoint_path:
+    if "checkpoint_path" in conf:
         print("Resume training from checkpoint", conf.repo_path + conf.checkpoint_path)
         trainer.fit(pl_module, datamodule=pl_data_module, ckpt_path=conf.repo_path + conf.checkpoint_path)
     else:
@@ -117,12 +117,6 @@ def get_wandb_run_name(conf: DictConfig) -> str:
     res += "warm_steps=" + str(conf.warmup_steps) + "_"
     res += "tbs=" + str(conf.train_batch_size) + "_"
     res += "drop=" + str(conf.dropout) + "_"
-    
-    if conf.relation_mapping:
-        res += "rel_map_"
-    if conf.sentence_entailement:
-        res += "sent_entail_"
-        
     return res
     
 

@@ -109,16 +109,15 @@ model_adapter = OpenAIAdapter(
 Note that the second argument specifies the OpenAI model to use, if just `gpt-4o`, it'll use the latest version of GPT-4o available. To reproduce our exact results, users should use the checkpoint we used at the time of running our experiments i.e. `gpt-4o-2024-11-20`.
 You can also use `gpt-3.5-turbo` to reproduce it's results. 
 
-You can then run the script via `python3 run.py`, to generate, using prompt tuning with 1 to 6 shots over `wikidata_tekgen` and `dbpedia_webnlg_clean` using GPT-4o the responses for ontology guided triple generation. The responses will be written to `experiments/results/llm_responses/gpt-4o-i-shot` where `i` is the number of training examples provided in the prompt. the file for Wikidata-TekGen's movie ontology GPT-4o responses using 6-shots will be at `experiments/results/llm_responses/gpt-4o-6-shot/ont_1_movie-wikidata_tekgen.jsonl`. 
+You can then run the script via `python3 run.py`, to generate, using prompt tuning for ontology guided triple generation with 1 to 6 shots over `wikidata_tekgen` and `dbpedia_webnlg_clean` using the specified model. The responses will be written to `experiments/results/llm_responses/gpt-4o-i-shot` where `i` is the number of training examples provided in the prompt. the file for Wikidata-TekGen's movie ontology GPT-4o responses using 6-shots will be at `experiments/results/llm_responses/gpt-4o-6-shot/ont_1_movie-wikidata_tekgen.jsonl`. 
 
-The querying can be interrupted and re-ran, and the script will pick up from where it left off.
-
+The querying can be interrupted and re-ran, and the script will pick up from where it left off, note that this takes a couple of hours to deal with the whole dataset, as OpenAI applies API request limitations, the requests cannot be ran in parallel.
 
 **Make sure that the `experiments/results/llm_responses/model_name/` folder doesn't exist, or else the new responses will be appended to the ones already present, if you're generating everything from scratch, the easiest approach is to empty the `experiments/results/llm_responses/` and `experiments/results/metrics/` folders.**
 
 ### Generating Metrics
 
-One you have all the response folders generated under `experiments/results/llm_responses/`, you can compute the resulting metrics (Recall, Precision, F1, OC, RH, OH) for every ontology and the global average, in percentile and standard deviation form, using, from the `experiments/utils/` folder, the script `metrics.py` via `python3 metrics.py`. This will generate a folder for every model under `experiments/results/metrics/model_name/` with a `.jsonl` file containing the *metrics per sample* for every ontology and variant for DBpedia-WebNLG and Wikidata-TekGen in csv and `jsonl` format located in :
+One you have all the response folders generated under `experiments/results/llm_responses/`, you can compute the resulting metrics (Recall, Precision, F1, OC, RH, OH) for every ontology and the global average, in percentile and standard deviation form, using, from within the `experiments/utils/` folder, the script `metrics.py` via `python3 metrics.py`. This will generate a folder for every model under `experiments/results/metrics/model_name/` with a `.jsonl` file containing the *metrics per sample* for every ontology and variant for DBpedia-WebNLG and Wikidata-TekGen in csv and `jsonl` format located in :
 
 - `dbpedia_webnlg_clean_avg.jsonl`
 - `dbpedia_webnlg_clean_avg_per_ontology.csv`
@@ -135,7 +134,7 @@ as well as global averages, across every ontology, in median and mean form, loca
 
 ## Using REBEL
 
-The general principle for running an experiment using REBEL is simply to write an appropriate configuration file for the desired experiment placing it at `experiments/bench-rebel/conf/data/config_file.yaml` and running the test or train script overriding the hydra `data` parameter. Make sure to provide a `dataset_script_path` located in your `config_file.yaml` and to update the `repo_path` key to the output of `cwd` at the root directory of the repository in the file `experiments/bench-rebel/conf/root.yaml` (we use absolute paths inside REBEL's codebase). 
+The general principle for running an experiment using REBEL is simply to write an appropriate configuration file for the desired experiment placing it at `experiments/bench-rebel/conf/data/config_file.yaml` and running the test or train script overriding the hydra `data` parameter. **Make sure to update the `repo_path` key to the output of `cwd` at the root directory of the repository in the file `experiments/bench-rebel/conf/root.yaml` (we use absolute paths inside REBEL's codebase).** 
 
 [Hydra](https://hydra.cc/docs/intro/) is a python library that allows the specification of structured configuration files in `.yaml` file, it's very useful for machine learning workflows to handle the vast amount of possible hyperparameters of our program. 
 
@@ -144,20 +143,38 @@ The general principle for running an experiment using REBEL is simply to write a
 
 To evaluate REBEL on Text2KGBench, without fine-tuning, using their publicly available checkpoint downloaded under the [Downloading the REBEL Model](#downloading-the-rebel-model) section, we use the `test.py` script under `experiments/bench-rebel/src/test.py`. This script sets up the model and it's tokenizer as well as the lightning data module which is configured in test mode, hence only it's test data loader is configured and passed to a lightning trainer instance in test mode. 
 
-Evaluation is done on the array of test files must be specified inside the config file via the `test_files` key. The [*dataset script file*](https://huggingface.co/docs/datasets/en/dataset_script) must also be specified. This is the file in charge of reading the `.jsonl` files of Text2KGBench, we have just one of them, which works for the synthetic, Wikidata-TekGen or DBpedia-WebNLG by reading the files list from `test_files`. 
+Evaluation is done on the array of test files which must be specified inside the config file via the `test_files` key. The [*dataset script file*](https://huggingface.co/docs/datasets/en/dataset_script) must also be specified which is in charge of parsing the `.jsonl` files of Text2KGBench, we have just one of them, which works for the synthetic, Wikidata-TekGen and DBpedia-WebNLG. 
 
 
-We provide a configuration file for raw REBEL evaluation on the whole of Text2KGBench's test data inside `experiments/bench-rebel/conf/data/text2kgbench-raw-rebel-test.yaml`. Readers can re-use this configuration by running the script like so,
+We provide a configuration file for raw REBEL evaluation on the whole of Text2KGBench's test data inside `experiments/bench-rebel/conf/data/text2kgbench-raw-rebel-test.yaml`. Readers can re-use this configuration by running the test script like so,
 
-```
+```bash
 python3 test.py data=text2kgbench-raw-rebel-test
 ```
 
-Note that this takes about 10 minutes on a GPU such as the NVIDIA RTX A5500, using 3 evaluation beams and 1 return sequence and a batch size of 24 as in the config. The results will be written inside the `experiments/results/llm_responses/rebel-raw-12-beams-2-ret-seq` folder. 
-You can then compute the metrics for the model, using the script `metrics.py` under `experiments/utils/metrics.py`
+Note that this takes about 10 minutes on a GPU such as the NVIDIA RTX A5500, using 3 evaluation beams and 1 return sequence and a batch size of 24 as in the config. The results will be written inside the `experiments/results/llm_responses/rebel-raw-3-beams-2-ret-seq` folder. 
+You can then compute the metrics for the model, using the script `metrics.py` under `experiments/utils/metrics.py` from inside that directory.
 
+Once ran, the metrics will be available under `experiments/metrics/rebel-raw-3-beams-2-ret-seq`, the global averages file `global_avg.csv` should look like,
+```
+dataset,         subset,      P,    R,   F1,   OC,   SH,   RH,   OH
+wikidata_tekgen, unseen,   0.14, 0.29, 0.18, 0.47, 0.03, 0.53, 0.04
+wikidata_tekgen, verified, 0.18, 0.31, 0.21, 0.45, 0.01, 0.55, 0.02
+wikidata_tekgen, all,      0.15, 0.27, 0.18, 0.41, 0.01, 0.59, 0.01
+dbpedia_webnlg,  all,      0.07, 0.06, 0.06, 0.29, 0.01, 0.71, 0.01
+```
 
 ### Fine-Tuning REBEL
+
+In our work, we fine-tuned a seperate REBEL fine tune on every ontology's training data. This is by using the `train.py` script inside `experiments/bench-rebel/src/` and overriding the appropriate hydra parameters using the `text2kgbench-fine-tune.yaml` config file. 
+The parameters that must be overrided are : 
+- `wandb_run_name`
+- `ontology_paths`
+- `train_files`
+- `val_files`
+
+Bash scripts to this effect are provided under, `train_rebel_text2kgbench_raw.sh`, which fine-tunes REBEL on only Text2KGBench data can be ran via `bash train_wikidata_tekgen.sh`.
+This will submit a fine-tuning job for every ontology inside Text2KGBench, report performance metrics in wandb in two seperate projects : `Text2KGBench-Wikidata-TekGen-fine-tune` and `Text2KGBench-DBpedia-WebNLG-fine-tune`. The best checkpoints by validation F1 are saved into the `outputs/date/time/wandb_project_name-wandb_run_name` where `wandb_run_name` is, for example, `ont_1_movie-Wikidata-TekGen-train-val`.
 
 ### Evaluating Fine-Tuned REBEL
 

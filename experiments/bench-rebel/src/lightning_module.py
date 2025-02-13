@@ -291,7 +291,7 @@ class BaseLightningModule(pl.LightningModule):
         
         #print("outputs =", outputs)
         self.test_preds.append(outputs)
-        print("Test step, N°", len(self.test_preds))
+        #print("Test step, N°", len(self.test_preds))
         return outputs        
     
     def generate_triples(self, batch: dict[str, torch.Tensor]) -> tuple:

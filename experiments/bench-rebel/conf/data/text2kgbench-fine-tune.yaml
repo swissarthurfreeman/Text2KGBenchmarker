@@ -1,0 +1,58 @@
+# @package _global_
+
+wandb_run_name: ont_1_movie-wikidata-tekgen-validation
+wandb_project_name: Text2KGBench-Wikidata-TekGen-fine-tune
+
+# dataset configuration
+dataset_script_path: 'experiments/bench-rebel/datasets/text2kgbench.py'
+text_key:   'sent'
+target_key: 'triples'
+
+train_batch_size: 24
+val_batch_size:   24
+test_batch_size:  24
+
+# raw rebel weights (as provided by the REBEL repository)
+pretrained_model_name_or_path: 'experiments/bench-rebel/Rebel-large'
+
+# used to tell the lightning data module to only configure test data loader.
+do_test_predict:  false
+pl_seed: 42
+
+ontology_paths: 
+   - 'data/wikidata_tekgen/ontologies/ont_1_movie.json'
+
+train_files:
+   - 'data/wikidata_tekgen/train/ont_1_movie_train.jsonl'
+   
+val_files:
+   - 'data/wikidata_tekgen/validation/ont_1_movie_val.jsonl'
+
+test_files:
+   - 'data/wikidata_tekgen/test/ont_1_movie_test.jsonl'
+
+# generation hyperparameters
+max_target_length: 256        # maximum generated linearized triples output length
+eval_beams: 12                # number of beams to use during generation
+num_return_sequences: 1       # top likeliest number of beams kept in output (beams get folded into one predicted triple set)
+
+# trainer parameters
+val_check_interval: 0.25       # check validation metric at every training epoch (0.5 would mean every time a half of the train data is seen, check validation metrics)
+max_steps: 1000
+monitor_var: 'val_F1_micro'
+
+# optimization hyperparameters
+warmup_steps: 200
+gradient_acc_steps: 1
+gradient_clip_value: 10
+
+lr_scheduler: 'linear'
+learning_rate: 0.000025
+weight_decay: 0.1
+adam_beta1: 0.9
+adam_beta2: 0.999
+adam_epsilon: 0.00000001
+max_grad_norm: 1.0
+
+# model hyperparameters
+dropout: 0.1
