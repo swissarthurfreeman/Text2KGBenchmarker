@@ -82,7 +82,7 @@ def train(conf: DictConfig):
         mode='max',         
         verbose=True,                            # filename = ontology_name-validation_loss
         filename=conf.wandb_run_name.split("-")[0]+'-{val_F1_micro:.2f}',
-        dirpath=wandb_project_name + "-" + wandb_run_name
+        dirpath=wandb_project_name + "/" + wandb_run_name
     ))
     
     #callbacks_list.append(EarlyStopping(
