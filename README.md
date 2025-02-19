@@ -202,15 +202,6 @@ Since training is stochastic due to dropout, the top validation performance you'
 - `test_rebel_wikidata-synthetic.sh` evaluates checkpoints trained on Synthetic and Wikidata-TekGen+Synthetic data.
 
 
-
-
-#### Wikidata-TekGen
-
-#### Wikidata-Synthetic
-
-#### Wikidata-TekGen+Synthetic
-
-
 ## Slurm
 
 If you're running inside a Slurm environment, such as that of the University of Geneva's Baobab cluster, you'll have to use the Slurm CLI to request appropriate resources. To run REBEL, you need a GPU with at least 24GB of Vram. You connect to baobab using,
@@ -245,37 +236,4 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>> torch.ones((1, 10)).to('cuda')
 tensor([[1., 1., 1., 1., 1., 1., 1., 1., 1., 1.]], device='cuda:0')
 >>>
-```
-
-### Relational Mapping Issues
-
->>> from sentence_transformers import SentenceTransformer
->>> sent_embedder = SentenceTransformer('sentence-transformers/all-mpnet-base-v2', device="cpu")
->>> llm_triples = ["Hunt screenwriter Michael", "Hunt director Michael"]
->>> ont_relations = ["film director human", "film cost human"]
->>> llm_triples_embed = sent_embedder.encode(llm_triples)
->>> ont_relations_embed = sent_embedder.encode(ont_relations)
->>> sent_embedder.similarity(llm_triples_embed, ont_relations_embed)
-tensor([[0.4243, 0.2038],
-        [0.4454, 0.2597]])
->>> sent_embedder.similarity(llm_triples_embed[1], ont_relations_embed[0])
-tensor([[0.4454]])
->>> sent_embedder.similarity(llm_triples_embed[0], ont_relations_embed[1])
-tensor([[0.2038]])
->>> sent_embedder.similarity(llm_triples_embed[0], ont_relations_embed[0])
-tensor([[0.4243]])
->>> 
-
-Not sensitive enough, it seems sentence embeddings work better on longer sentences,
-
-```python
-from sentence_transformers import SentenceTransformer
-sent_embedder = SentenceTransformer('sentence-transformers/all-mpnet-base-v2', device="cpu")
-def sent_similarity(sent1, sent2): 
-    return sent_embedder.similarity(sent_embedder.encode(sent1), sent_embedder.encode(sent2))
-
->>> sent_similarity("film screenwriter human", "the film Hunt has as cast member Michael Bay")
-tensor([[0.2190]])
->>> sent_similarity("film screenwriter human", "the film Hunt has as screenwriter Michael Bay")
-tensor([[0.3998]])
 ```
